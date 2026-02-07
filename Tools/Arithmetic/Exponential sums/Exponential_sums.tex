@@ -13,7 +13,7 @@
   \date{}
   \maketitle
   \section{Ramanujan and Gauss Sums}
-    Let's begin with the Ramanujan sum. For \(m \ge 1\) and \(n \in \Z\), the \textbf{Ramanujan sum}\index{Ramanujan sum} \(r(n,m)\) is defined by
+    Let's begin with the Ramanujan sum. For \(m \ge 1\) and \(n \in \Z\), the \textit{Ramanujan sum} \(r(n,m)\) is defined by
     \[
       r(n,m) = \psum_{a \tmod{m}}e^{\frac{2\pi ian}{m}}.
     \]
@@ -40,11 +40,11 @@
       \]
       as desired.
     \end{proof}
-    We can also define a Ramanujan sum associated to Dirichlet characters. Let \(\chi\) be a Dirichlet character modulo \(m\). For any \(b \in \Z\), the \textbf{Ramanujan sum}\index{Ramanujan sum} \(\tau(b,\chi)\) associated to \(\chi\) is given by
+    We can also define a Ramanujan sum associated to Dirichlet characters. Let \(\chi\) be a Dirichlet character modulo \(m\). For any \(b \in \Z\), the \textit{Ramanujan sum} \(\tau(b,\chi)\) associated to \(\chi\) is given by
     \[
       \tau(b,\chi) = \sum_{a \tmod{m}}\chi(a)e^{\frac{2\pi iab}{m}}.
     \]
-    If \(b = 1\) we will write \(\tau(\chi)\) instead. That is, \(\tau(\chi) = \tau(1,\chi)\). We call \(\tau(\chi)\) the \textbf{Gauss sum}\index{Gauss sum} associated to \(\chi\). Observe that if \(m = 1\) then \(\chi\) is the trivial character and \(\tau(b,\chi) = 1\). So the interesting cases are when \(m \ge 2\). There are some basic properties of these sums which are very useful:
+    If \(b = 1\) we will write \(\tau(\chi)\) instead. That is, \(\tau(\chi) = \tau(1,\chi)\). We call \(\tau(\chi)\) the \textit{Gauss sum} associated to \(\chi\). Observe that if \(m = 1\) then \(\chi\) is the trivial character and \(\tau(b,\chi) = 1\). So the interesting cases are when \(m \ge 2\). There are some basic properties of these sums which are very useful:
 
     \begin{proposition}\label{prop:Gauss_sum_reduction}
       Let \(\chi\) and \(\psi\) be nontrivial Dirichlet characters modulo \(m\) and \(n\) respectively and let \(b \in \Z\). Then the following hold:
@@ -159,7 +159,7 @@
       If \(\chi\) is the trivial character this is obvious since \(\tau(n,\chi) = 1\). So assume \(\chi\) is nontrivial. If \((n,q) = 1\) then the first identity is \cref{prop:Gauss_sum_reduction} (ii). If \((n,q) > 1\) then the first identity follows from \cref{prop:Gauss_sum_reduction} (iii) and that \(\cchi(n) = 0\). This proves the first identity in full. For the second identity, first note that \(\tau(\chi) \neq 0\) by \cref{thm:Gauss_sum_modulus}. Replacing \(\chi\) with \(\cchi\), dividing the first identity by \(\tau(\chi)\), and expanding the Ramanujan sum, gives the second identity.
     \end{proof}
 
-    In light of \cref{thm:Gauss_sum_modulus} we define the \textbf{epsilon factor}\index{epsilon factor} \(\e_{\chi}\) for a Dirichlet character \(\chi\) modulo \(m\) by
+    In light of \cref{thm:Gauss_sum_modulus} we define the \textit{epsilon factor} \(\e_{\chi}\) for a Dirichlet character \(\chi\) modulo \(m\) by
     \[
       \e_{\chi} = \frac{\tau(\chi)}{\sqrt{m}}.
     \]
@@ -179,7 +179,7 @@
       from whence the statement follows.
     \end{proof}
   \section{Quadratic Gauss Sums}
-    Another important sum is the quadratic Gauss sum. For any \(m \ge 1\) and any \(b \in \Z\), the \textbf{quadratic Gauss sum}\index{quadratic Gauss sum} \(g(b,m)\) is defined by
+    Another important sum is the quadratic Gauss sum. For any \(m \ge 1\) and any \(b \in \Z\), the \textit{quadratic Gauss sum} \(g(b,m)\) is defined by
     \[
       g(b,m) = \sum_{a \tmod{m}}e^{\frac{2\pi ia^{2}b}{m}}.
     \]
@@ -325,7 +325,7 @@
       If \(r' = 0\) then \(2n = r\) so that \(p^{2n} = p^{r}\). Thus \(|g(p^{r})| = \sqrt{p^{r}}\). If \(r' = 1\) then \cref{thm:Gauss_sum_modulus,prop:Gauss_sum_equivalence_for_primes} together imply \(|g(p^{r'})|^{2} = p\) so that the right-hand side above is \(p^{2n+1} = p^{r}\) and again we have \(|g(p^{r})| = \sqrt{p^{r}}\).
     \end{proof}
 
-    Accordingly, we define the \textbf{epsilon factor}\index{epsilon factor} \(\e_{m}\) for any \(m \ge 1\) by
+    Accordingly, we define the \textit{epsilon factor} \(\e_{m}\) for any \(m \ge 1\) by
     \[
       \e_{m} = \frac{g(m)}{\sqrt{m}}.
     \]
@@ -409,11 +409,11 @@
       The statement follows immediately from \cref{thm:Gauss's_evaluation,prop:Gauss_sum_equivalence_for_primes}.
     \end{proof}
   \section{Kloosterman and Sali\'e Sums}
-    Our last class of sums generalize both types of Ramanujan sums. For any \(c \ge 1\) and \(m,n \in \Z\), the \textbf{Kloosterman sum}\index{Kloosterman sum} \(K(m,n,c)\) is defined by
+    Our last class of sums generalize both types of Ramanujan sums. For any \(c \ge 1\) and \(m,n \in \Z\), the \textit{Kloosterman sum} \(K(m,n,c)\) is defined by
     \[
       K(m,n,c) = \sum_{\substack{a \tmod{c} \\ (a,c) = 1}}e^{\frac{2\pi i(am+\conj{a}n)}{c}} = \psum_{a \tmod{c}}e^{\frac{2\pi i(am+\conj{a}n)}{c}}.
     \]
-    Notice that if either \(m = 0\) or \(n = 0\) then the Kloosterman sum reduces to a Ramanujan sum. Kloosterman sums have similar properties to those of Ramanujan sums, but we will not need them. The only result we will need is a famous bound, often called the \textbf{Weil bound}\index{Weil bound} for Kloosterman sums, proved by Weil (see \cite{weil1948some} for a proof):
+    Notice that if either \(m = 0\) or \(n = 0\) then the Kloosterman sum reduces to a Ramanujan sum. Kloosterman sums have similar properties to those of Ramanujan sums, but we will not need them. The only result we will need is a famous bound, often called the \textit{Weil bound} for Kloosterman sums, proved by Weil (see \cite{weil1948some} for a proof):
 
     \begin{theorem*}[Weil bound]
       Let \(c \ge 1\) and \(m,n \in \Z\). Then
@@ -422,7 +422,7 @@
       \]
     \end{theorem*}
 
-    Lastly, Sali\'e sums are Kloosterman sums with Dirichlet characters. To be precise, for any \(c \ge 1\), \(m,n \in \Z\), and a Dirichlet character \(\chi\) with conductor \(q \mid c\), the \textbf{Sali\'e sum}\index{Sali\'e sum} \(S_{\chi}(m,n,c)\) is defined by
+    Lastly, Sali\'e sums are Kloosterman sums with Dirichlet characters. To be precise, for any \(c \ge 1\), \(m,n \in \Z\), and a Dirichlet character \(\chi\) with conductor \(q \mid c\), the \textit{Sali\'e sum} \(S_{\chi}(m,n,c)\) is defined by
     \[
       S_{\chi}(m,n,c) = \sum_{\substack{a \tmod{c} \\ (a,c) = 1}}\chi(a)e^{\frac{2\pi i(am+\conj{a}n)}{c}} = \psum_{a \tmod{c}}\chi(a)e^{\frac{2\pi i(am+\conj{a}n)}{c}}.
     \]

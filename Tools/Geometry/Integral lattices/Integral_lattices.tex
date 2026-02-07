@@ -13,23 +13,23 @@
   \date{}
   \maketitle
   \section{Integral Lattices}
-    Integral Lattices are ubiquitous in number theory because they provide a way to study discrete points by geometric methods. Let \(F\) be a characteristic zero field and \(V\) be an \(n\)-dimensional \(F\)-vector space with nondegenerate symmetric inner product \(\<\cdot,\cdot\>\). We say that a subset \(\L\) of \(V\) is a \textbf{integral lattice}\index{integral lattice} if \(\L\) is a free abelian group. In particular, any integral lattice \(\L\) is of the form
+    Integral Lattices are ubiquitous in number theory because they provide a way to study discrete points by geometric methods. Let \(F\) be a characteristic zero field and \(V\) be an \(n\)-dimensional \(F\)-vector space with nondegenerate symmetric inner product \(\<\cdot,\cdot\>\). We say that a subset \(\L\) of \(V\) is a \textit{integral lattice} if \(\L\) is a free abelian group. In particular, any integral lattice \(\L\) is of the form
     \[
       \L = \Z v_{1}+\cdots+\Z v_{m},
     \]
-    for some linearly independent vectors \(v_{1},\ldots,v_{m}\) of \(V\) with \(m \le n\). We say \(\L\) is \textbf{complete}\index{complete} if \(n = m\). Necessarily, \(v_{1},\ldots,v_{n}\) is a basis of \(V\). If \(e_{1},\ldots,e_{n}\) is an orthonormal basis for \(V\), write
+    for some linearly independent vectors \(v_{1},\ldots,v_{m}\) of \(V\) with \(m \le n\). We say \(\L\) is \textit{complete} if \(n = m\). Necessarily, \(v_{1},\ldots,v_{n}\) is a basis of \(V\). If \(e_{1},\ldots,e_{n}\) is an orthonormal basis for \(V\), write
     \[
       v_{i} = \sum_{1 \le i \le n}v_{i,j}e_{j},
     \]
-    with \(v_{i,j} \in F\) for \(1 \le i,j \le n\), and define the associated \textbf{generator matrix}\index{generator matrix} \(P\) by
+    with \(v_{i,j} \in F\) for \(1 \le i,j \le n\), and define the associated \textit{generator matrix} \(P\) by
     \[
       P = \begin{pmatrix} v_{1,1} & \cdots & v_{n,1} \\ \vdots & & \vdots \\ v_{1,n} & \cdots & v_{n,n} \end{pmatrix}.
     \]
-    Then \(P\) is the base change matrix from \(e_{1},\ldots,e_{n}\) to \(v_{1},\ldots,v_{n}\). The \textbf{covolume}\index{covolume} \(V_{\L}\) of a complete integral lattice \(\L\) is defined to be
+    Then \(P\) is the base change matrix from \(e_{1},\ldots,e_{n}\) to \(v_{1},\ldots,v_{n}\). The \textit{covolume} \(V_{\L}\) of a complete integral lattice \(\L\) is defined to be
     \[
       V_{\L} = |\det(P)|.
     \]
-    By \cref{prop:base_change_quotient_determinant} and that the base change matrix between any two orthonormal basses is an orthogonal matrix and hence has determinant \(\pm 1\), the covolume is independent of the choice of bases. In particular, if \(V\) is a real or complex vector space we will take \(e_{1},\ldots,e_{n}\) to be the standard basis. We now introduce the notion of dual integral lattices. If \(\L\) is a complete integral lattice in \(V\) then the \textbf{dual}\index{dual} \(\L^{\vee}\) of \(\L\) is defined by
+    By \cref{prop:base_change_quotient_determinant} and that the base change matrix between any two orthonormal basses is an orthogonal matrix and hence has determinant \(\pm 1\), the covolume is independent of the choice of bases. In particular, if \(V\) is a real or complex vector space we will take \(e_{1},\ldots,e_{n}\) to be the standard basis. We now introduce the notion of dual integral lattices. If \(\L\) is a complete integral lattice in \(V\) then the \textit{dual} \(\L^{\vee}\) of \(\L\) is defined by
     \[
       \L^{\vee} = \{v \in V:\<\l,v\> \in \Z \text{ for all } \l \in \L\}.
     \]
@@ -46,7 +46,7 @@
       with \(v_{j}^{\vee} \in \R\) for all \(j\). Since \(\<v_{i},v_{j}^{\vee}\> = \d_{i,j}\) for \(1 \le i,j \le n\), it follows that \(v \in \L^{\vee}\) if and only if \(v_{j}^{\vee} \in \Z\) for all \(j\). This means that \(v_{1}^{\vee},\ldots,v_{n}^{\vee}\) is a free abelian group of rank \(n\). Hence \(\L^{\vee}\) is a complete integral lattice.
     \end{proof}
 
-    Since the dual of the dual basis is the original basis, \((\L^{\vee})^{\vee} = \L\). We say that \(\L\) is \textbf{self-dual}\index{self-dual} if \(\L^{\vee} = \L\). For example, the integral lattice \(\Z^{n}\) is self-dual because the standard basis is self-dual. It also turns out that the covolume of the dual integral lattice is the inverse of the volume of the original integral lattice:
+    Since the dual of the dual basis is the original basis, \((\L^{\vee})^{\vee} = \L\). We say that \(\L\) is \textit{self-dual} if \(\L^{\vee} = \L\). For example, the integral lattice \(\Z^{n}\) is self-dual because the standard basis is self-dual. It also turns out that the covolume of the dual integral lattice is the inverse of the volume of the original integral lattice:
 
     \begin{proposition}\label{prop:covolume_of_dual_is_inverse}
       Let \(\L\) be a complete integral lattice in \(V\) and let \(\L^{\vee}\) be its dual. Then
@@ -62,7 +62,7 @@
     \[
       v = t_{1}v_{1}+\cdots+t_{n}v_{n},
     \]
-    with \(t_{i} \in \R\) for \(1 \le i \le n\), the Lebesgue measure \(d\l\) is \(dt_{1} \cdots dt_{n}\). For any measurable subset \(X \subseteq V\), we define the \textbf{volume}\index{volume} of \(X\) by
+    with \(t_{i} \in \R\) for \(1 \le i \le n\), the Lebesgue measure \(d\l\) is \(dt_{1} \cdots dt_{n}\). For any measurable subset \(X \subseteq V\), we define the \textit{volume} of \(X\) by
     \[
       \Vol(X) = \int_{X}\,d\l = \int_{X}\,dt_{1} \cdots dt_{n}.
     \]
@@ -128,7 +128,7 @@
       is an element of \(W\). Since \(v\) was arbitrary, \(V = W\) and hence \(\L\) is complete.
     \end{proof}
 
-    The most important result we will require about integral lattices is \textbf{Minkowski's lattice point theorem}\index{Minkowski's lattice point theorem} which states that, under some mild conditions, a set of sufficiently large volume in \(V\) contains a nonzero point of a complete integral lattice:
+    The most important result we will require about integral lattices is \textit{Minkowski's lattice point theorem} which states that, under some mild conditions, a set of sufficiently large volume in \(V\) contains a nonzero point of a complete integral lattice:
 
     \begin{theorem*}[Minkowski's lattice point theorem]
       Let \(\L\) be a integral lattice in an \(n\)-dimensional real inner product space \(V\). Suppose \(X \subset V\) is a compact convex symmetric set. If

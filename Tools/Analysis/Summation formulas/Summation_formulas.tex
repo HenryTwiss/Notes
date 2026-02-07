@@ -17,7 +17,7 @@
     \[
         A(X) = \sum_{n \le X}a_{n}.
     \]
-    Note that \(A(X) = 0\) unless \(X \ge 1\). The most well-known summation formula is (classical) \textbf{summation by parts}\index{summation by parts}:
+    Note that \(A(X) = 0\) unless \(X \ge 1\). The most well-known summation formula is (classical) \textit{summation by parts}:
 
     \begin{theorem*}[Summation by parts, classical]
       Let \((a_{n})_{n \ge 1}\) and \((b_{n})_{n \ge 1}\) be two sequences of complex numbers. Then for any positive integers \(N\) and \(M\) with \(1 \le M \le N\), we have
@@ -38,7 +38,7 @@
       \end{align*}
     \end{proof}
 
-    Replacing the sequences \((a_{n})_{n \ge 1}\) and \((b_{n})_{n \ge 1}\) with \((b_{n})_{n \ge 0}\) and \((A(n-1))_{n \ge 1}\) respectively gives (partial sum) \textbf{summation by parts}\index{summation by parts}:
+    Replacing the sequences \((a_{n})_{n \ge 1}\) and \((b_{n})_{n \ge 1}\) with \((b_{n})_{n \ge 0}\) and \((A(n-1))_{n \ge 1}\) respectively gives (partial sum) \textit{summation by parts}:
 
     \begin{theorem*}[Summation by parts, partial sum]
       Let \((a_{n})_{n \ge 1}\) and \((b_{n})_{n \ge 0}\) be two sequences of complex numbers. Then for any integers \(M\) and \(N\) with \(0 \le M \le N\), we have
@@ -74,7 +74,7 @@
       Taking \(M = 0\) in partial sum summation by parts and observing that \(A(M) = 0\) gives the result.
     \end{proof}
     
-    Both classical and partial sum summation by parts give ways of rewriting finite sums. If we want to express a finite sum in the form of an integral, we need to do more work. One of the most well-known results of this type is known as \textbf{Abel's summation formula}\index{Abel's summation formula}:
+    Both classical and partial sum summation by parts give ways of rewriting finite sums. If we want to express a finite sum in the form of an integral, we need to do more work. One of the most well-known results of this type is known as \textit{Abel's summation formula}:
 
     \begin{theorem*}[Abel's summation formula]
       Let \((a_{n})_{n \ge 1}\) be a sequence of complex numbers. For any \(X\) and \(Y\) with \(0 \le X < Y\) and continuously differentiable function \(\phi:[X,Y] \to \C\), we have
@@ -147,7 +147,7 @@
        This follows from \cref{cor:Abels_summation_formula_zero_version} upon taking the limit as \(Y \to \infty\).
     \end{proof}
 
-    Abel's summation formula and its corollaries are immensely useful for approximating finite or infinite sums by integrals. In the special case where \(a_{n} = 1\) for \(n \ge 1\), we are really estimating the sum of a continuously differentiable function at integer values. We can very well use Abel's summation formula here, but it's possible to improve the result by appealing to integration by parts. If we do this, we obtain a result known as the \textbf{Euler-Maclaurin summation formula}\index{Euler-Maclaurin summation formula}:
+    Abel's summation formula and its corollaries are immensely useful for approximating finite or infinite sums by integrals. In the special case where \(a_{n} = 1\) for \(n \ge 1\), we are really estimating the sum of a continuously differentiable function at integer values. We can very well use Abel's summation formula here, but it's possible to improve the result by appealing to integration by parts. If we do this, we obtain a result known as the \textit{Euler-Maclaurin summation formula}:
 
     \begin{theorem*}[Euler-Maclaurin summation formula]
       For any \(X\) and \(Y\) with \(0 \le X < Y\) and continuously differentiable function \(\phi:[X,Y] \to \C\), we have
