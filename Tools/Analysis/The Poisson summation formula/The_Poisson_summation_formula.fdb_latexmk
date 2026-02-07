@@ -1,11 +1,11 @@
 # Fdb version 3
-["makeindex The_Poisson_summation_formula.idx"] 1770500100 "The_Poisson_summation_formula.idx" "The_Poisson_summation_formula.ind" "The_Poisson_summation_formula" 1770503771
+["makeindex The_Poisson_summation_formula.idx"] 1770500100 "The_Poisson_summation_formula.idx" "The_Poisson_summation_formula.ind" "The_Poisson_summation_formula" 1770506047
   "The_Poisson_summation_formula.idx" 0 -1 0 "pdflatex"
   (generated)
   "The_Poisson_summation_formula.ilg"
   "The_Poisson_summation_formula.ind"
-["pdflatex"] 1770503770 "/Users/henrytwiss/Documents/Documents/LaTeX/Vignettes/Tools/Analysis/The Poisson summation formula/The_Poisson_summation_formula.tex" "The_Poisson_summation_formula.pdf" "The_Poisson_summation_formula" 1770503771
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Vignettes/Tools/Analysis/The Poisson summation formula/The_Poisson_summation_formula.tex" 1770503770 15273 87a3a0a8aae12414da513d43981b9bc6 ""
+["pdflatex"] 1770506047 "/Users/henrytwiss/Documents/Documents/LaTeX/Vignettes/Tools/Analysis/The Poisson summation formula/The_Poisson_summation_formula.tex" "The_Poisson_summation_formula.pdf" "The_Poisson_summation_formula" 1770506047
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Vignettes/Tools/Analysis/The Poisson summation formula/The_Poisson_summation_formula.tex" 1770506046 15308 c4c498944f6c09f911c16d9740930320 ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Vignettes/preamble.tex" 1770156051 5405 a09c92403f06ce9a0bf05bb0ba5a732b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -194,10 +194,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "The_Poisson_summation_formula.aux" 1770503771 2702 84299c76245887adcd4235fd1f5aceb3 "pdflatex"
+  "The_Poisson_summation_formula.aux" 1770506047 2702 e68977d60a1ab21a4038529179078810 "pdflatex"
   "The_Poisson_summation_formula.ind" 0 -1 0 "makeindex The_Poisson_summation_formula.idx"
-  "The_Poisson_summation_formula.out" 1770503771 401 635c140c189cc69ba9f12d03fda8d109 "pdflatex"
-  "The_Poisson_summation_formula.tex" 1770503770 15273 87a3a0a8aae12414da513d43981b9bc6 ""
+  "The_Poisson_summation_formula.out" 1770506047 401 635c140c189cc69ba9f12d03fda8d109 "pdflatex"
+  "The_Poisson_summation_formula.tex" 1770506046 15308 c4c498944f6c09f911c16d9740930320 ""
   (generated)
   "The_Poisson_summation_formula.aux"
   "The_Poisson_summation_formula.idx"
