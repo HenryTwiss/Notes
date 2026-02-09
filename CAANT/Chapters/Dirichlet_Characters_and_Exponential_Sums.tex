@@ -1,4 +1,9 @@
-\chapter{Dirichlet Characters and Character Sums}
+\chapter{Dirichlet Characters and Exponential Sums}
+  Throughout, we will use the notation
+  \[
+    \psum_{a \tmod{m}} = \sum_{\substack{a \tmod{m} \\ (a,m) = 1}},
+  \]
+  for any positive integer \(m\).
   \section{Dirichlet Characters}
     Let \(m\) be a positive integer. A multiplicative homomorphism
     \[
@@ -23,17 +28,17 @@
     \begin{proposition*}[Dirichlet orthogonality relations]
     Let \(\chi\) and \(\psi\) be Dirichlet characters modulo \(m\) and let \(a,b \in (\Z/m\Z)^{\ast}\). Then
     \[
-      \sum_{a \tmod{m}}(\chi\conj{\psi})(a) = \vphi(m)\d_{\chi,\psi} \quad \text{and} \quad \sum_{\chi \tmod{m}}\chi(a\conj{b}) = \vphi(m)\d_{a,b}.
+      \psum_{a \tmod{m}}(\chi\conj{\psi})(a) = \vphi(m)\d_{\chi,\psi} \quad \text{and} \quad \sum_{\chi \tmod{m}}\chi(a\conj{b}) = \vphi(m)\d_{a,b}.
     \]
     In particular,
     \[
-      \sum_{a \tmod{m}}\chi(a) = \vphi(m)\d_{\chi,\chi_{m,0}} \quad \text{and} \quad \sum_{\chi \tmod{m}}\chi(a) = \vphi(m)\d_{a,1}.
+      \psum_{a \tmod{m}}\chi(a) = \vphi(m)\d_{\chi,\chi_{m,0}} \quad \text{and} \quad \sum_{\chi \tmod{m}}\chi(a) = \vphi(m)\d_{a,1}.
     \]
     \end{proposition*}
     \begin{proof}
       If \(\chi = \psi\) then the first sum is clearly \(\phi(m)\). If not, let \(b \in (\Z/m\Z)^{\ast}\) be such that \((\chi\conj{\psi})(b) \neq 1\). A short computation shows
       \[
-        (\chi\conj{\psi})(b)\sum_{a \tmod{m}}(\chi\conj{\psi})(a) = \sum_{a \tmod{m}}(\chi\conj{\psi})(a),
+        (\chi\conj{\psi})(b)\psum_{a \tmod{m}}(\chi\conj{\psi})(a) = \psum_{a \tmod{m}}(\chi\conj{\psi})(a),
       \]
       in which case the sum vanishes. This proves the first identity. For the second, if \(a = b\) then the second sum is clearly \(\vphi(m)\). If \(a \neq b\), we claim that there exists a Dirichlet character \(\psi\) modulo \(m\) with \(\psi(a\conj{b}) \neq 1\). Set \(g = a\conj{b}\). The cyclic subgroup \(\<g\>\) of \((\Z/m\Z)^{\ast}\) has some order \(d > 1\). Consider the homomorphism
       \[
@@ -168,38 +173,43 @@
 
     It follows from \cref{thm:fundamental_discriminant_character_primitive} that all quadratic Dirichlet characters are induced from some \(\chi_{D}\) including \(D = 1\) since this corresponds to the trivial Dirichlet character. In particular, so too are the quadratic Dirichlet characters given by Jacobi symbols.
   \section{\todo{Ramanujan and Gauss Sums}}
-    Let's begin with the Ramanujan sum. For \(m \ge 1\) and \(n \in \Z\), the \textbf{Ramanujan sum}\index{Ramanujan sum} \(r(n,m)\) is defined by
+    For integers \(b\) and \(m\) with \(m\) positive, the \textit{Ramanujan sum} \(r(b,m)\) is defined by
     \[
-      r(n,m) = \psum_{a \tmod{m}}e^{\frac{2\pi ian}{m}}.
+      r(b,m) = \psum_{a \tmod{m}}e^{\frac{2\pi iab}{m}}.
     \]
-    Note that the Ramanujan sum is a finite sum of \(m\)-th roots of unity on the unit circle. Clearly we have \(r(0,m) = \vphi(m)\). Ramanujan sums can be computed explicitly by means of the M\"obius function:
+    We call \(b\) the \textit{index} and \(m\) the \textit{modulus}. The Ramanujan sum is a finite sum of \(m\)-th roots of unity. When the index is zero the Ramanujan sum has the simple evaluation \(r(0,m) = \vphi(m)\). For a general idex the Ramanujan sums can be computed explicitly by means of the M\"obius function.
 
     \begin{proposition}\label{prop:Ramanujan_sum_evaluation}
-      For any \(m \ge 1\) and any nonzero \(n \in \Z\),
+      For any index \(b\) and frequency \(m\), we have
       \[
-        r(n,m) = \sum_{d \mid (n,m)}d\mu\left(\frac{m}{d}\right).
+        r(b,m) = \sum_{d \mid (b,m)}d\mu\left(\frac{m}{d}\right).
       \]
     \end{proposition}
     \begin{proof}
-      Summing \(r(n,d)\) over the divisors \(d\) of \(m\) yields
+      Every \(a\) modulo \(m\) is of the form \(a = a'd\) for some divisor \(d\) of \(m\) and \(a'\) modulo \(\frac{m}{d}\). So summing \(r(b,d)\) over the divisors \(d\) of \(m\) gives
       \[
-        \sum_{d \mid m}r(n,d) = \sum_{d \mid m}\psum_{a \tmod{d}}e^{\frac{2\pi ian}{d}} = \sum_{d \mid m}\psum_{a \tmod{\frac{m}{d}}}e^{\frac{2\pi iadn}{m}} = \sum_{b \tmod{m}}e^{\frac{2\pi ibn}{m}} ,
+        \sum_{d \mid m}r(b,d) = \sum_{a \tmod{m}}e^{\frac{2\pi iab}{m}},
       \]
-      where the second equality follows by making the change of variables \(d \mapsto \frac{m}{d}\) and the third equality holds by observing that every integer \(b\) modulo \(m\) is of the form \(b = ad\) for some \(d \mid m\) and \(a\) taken modulo \(\frac{m}{d}\) with \(\left(a,\frac{m}{d}\right) = 1\). Indeed, this is seen upon taking \(d = (b,m)\). If \(m \mid n\) the inner sum is \(m\) and otherwise it is zero because it is the sum of all the \(m\)-th roots of unity. Thus
+      If \(m \mid b\) the latter sum is \(m\) and if \(m \nmid b\) the sum is zero because it is the sum of all \(m\)-th roots of unity. Thus
       \[
-        \sum_{d \mid m}r(n,d) = \begin{cases} m & \text{if \(m \mid n\)}, \\ 0 & \text{if \(m \nmid n\)}. \end{cases}
+        \sum_{d \mid m}r(b,d) = \begin{cases} m & \text{if \(m \mid b\)}, \\ 0 & \text{if \(m \nmid b\)}. \end{cases}
       \]
-      By the M\"obius inversion formula, we have
-      \[
-        r(n,m) = \sum_{d \mid (n,m)}d\mu\left(\frac{m}{d}\right),
-      \]
-      as desired.
+      Now apply the M\"obius inversion formula.
     \end{proof}
-    We can also define a Ramanujan sum associated to Dirichlet characters. Let \(\chi\) be a Dirichlet character modulo \(m\). For any \(b \in \Z\), the \textbf{Ramanujan sum}\index{Ramanujan sum} \(\tau(b,\chi)\) associated to \(\chi\) is given by
+
+    More general Ramanujan sums can be constructed by introducing a Dirichlet character. Let \(\chi\) be a Dirichlet character modulo \(m\). For any integer \(b\), the \textit{Ramanujan sum} \(\tau(n,\chi)\) associated to \(\chi\) is given by
     \[
       \tau(b,\chi) = \sum_{a \tmod{m}}\chi(a)e^{\frac{2\pi iab}{m}}.
     \]
-    If \(b = 1\) we will write \(\tau(\chi)\) instead. That is, \(\tau(\chi) = \tau(1,\chi)\). We call \(\tau(\chi)\) the \textbf{Gauss sum}\index{Gauss sum} associated to \(\chi\). Observe that if \(m = 1\) then \(\chi\) is the trivial character and \(\tau(b,\chi) = 1\). So the interesting cases are when \(m \ge 2\). There are some basic properties of these sums which are very useful:
+    Again we call \(b\) the \textit{index}. This generalizes the previous Ramanujan sum as
+    \[
+      r(b,d) = \tau(b,\chi_{m,0}).
+    \]
+    In any case, when the index is \(1\) we simply write \(\tau(\chi) = \tau(1,\chi)\) and call \(\tau(\chi)\) the \textit{Gauss sum} associated to \(\chi\). When \(\chi\) is the principal Dirichlet character modulo \(m\), the Dirichlet orthogonality relations imply
+    \[
+      \tau(\chi) = \vphi(m)\d_{\chi,\chi_{m,0}}.
+    \]
+    The following proposition develops the basic properties of these Ramanujan sums:
 
     \begin{proposition}\label{prop:Gauss_sum_reduction}
       Let \(\chi\) and \(\psi\) be nontrivial Dirichlet characters modulo \(m\) and \(n\) respectively and let \(b \in \Z\). Then the following hold:
@@ -314,7 +324,7 @@
       If \(\chi\) is the trivial character this is obvious since \(\tau(n,\chi) = 1\). So assume \(\chi\) is nontrivial. If \((n,q) = 1\) then the first identity is \cref{prop:Gauss_sum_reduction} (ii). If \((n,q) > 1\) then the first identity follows from \cref{prop:Gauss_sum_reduction} (iii) and that \(\cchi(n) = 0\). This proves the first identity in full. For the second identity, first note that \(\tau(\chi) \neq 0\) by \cref{thm:Gauss_sum_modulus}. Replacing \(\chi\) with \(\cchi\), dividing the first identity by \(\tau(\chi)\), and expanding the Ramanujan sum, gives the second identity.
     \end{proof}
 
-    In light of \cref{thm:Gauss_sum_modulus} we define the \textbf{epsilon factor}\index{epsilon factor} \(\e_{\chi}\) for a Dirichlet character \(\chi\) modulo \(m\) by
+    In light of \cref{thm:Gauss_sum_modulus} we define the \textit{epsilon factor} \(\e_{\chi}\) for a Dirichlet character \(\chi\) modulo \(m\) by
     \[
       \e_{\chi} = \frac{\tau(\chi)}{\sqrt{m}}.
     \]
@@ -334,7 +344,7 @@
       from whence the statement follows.
     \end{proof}
   \section{\todo{Quadratic Gauss Sums}}
-    Another important sum is the quadratic Gauss sum. For any \(m \ge 1\) and any \(b \in \Z\), the \textbf{quadratic Gauss sum}\index{quadratic Gauss sum} \(g(b,m)\) is defined by
+    Another important sum is the quadratic Gauss sum. For any \(m \ge 1\) and any \(b \in \Z\), the \textit{quadratic Gauss sum} \(g(b,m)\) is defined by
     \[
       g(b,m) = \sum_{a \tmod{m}}e^{\frac{2\pi ia^{2}b}{m}}.
     \]
@@ -480,7 +490,7 @@
       If \(r' = 0\) then \(2n = r\) so that \(p^{2n} = p^{r}\). Thus \(|g(p^{r})| = \sqrt{p^{r}}\). If \(r' = 1\) then \cref{thm:Gauss_sum_modulus,prop:Gauss_sum_equivalence_for_primes} together imply \(|g(p^{r'})|^{2} = p\) so that the right-hand side above is \(p^{2n+1} = p^{r}\) and again we have \(|g(p^{r})| = \sqrt{p^{r}}\).
     \end{proof}
 
-    Accordingly, we define the \textbf{epsilon factor}\index{epsilon factor} \(\e_{m}\) for any \(m \ge 1\) by
+    Accordingly, we define the \textit{epsilon factor} \(\e_{m}\) for any \(m \ge 1\) by
     \[
       \e_{m} = \frac{g(m)}{\sqrt{m}}.
     \]
