@@ -953,7 +953,6 @@ INPUT ./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
 INPUT Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
 INPUT ./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
 INPUT Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss17.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./Chapters/Dirichlet_Series.tex
 INPUT ./Chapters/Dirichlet_Series.tex
@@ -1021,7 +1020,6 @@ INPUT ./CAANT.out
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
