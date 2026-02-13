@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex CAANT.idx"] 1770954719 "CAANT.idx" "CAANT.ind" "CAANT" 1770989187
+["makeindex CAANT.idx"] 1770954719 "CAANT.idx" "CAANT.ind" "CAANT" 1771009862
   "CAANT.idx" 0 -1 0 "pdflatex"
   (generated)
   "CAANT.ilg"
   "CAANT.ind"
-["pdflatex"] 1770989186 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1770989187
+["pdflatex"] 1771009861 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1771009862
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" 1770915934 1083 87542d81a5ef8880abd118bcf0ee6f7d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -55,7 +55,6 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1336858727 21098 d4aee7c0aac232caac5688b586b9363c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -199,18 +198,18 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "CAANT.aux" 1770989187 3302 2596c45197e53e193eebaac2f1cf6f55 "pdflatex"
+  "CAANT.aux" 1771009862 3302 2596c45197e53e193eebaac2f1cf6f55 "pdflatex"
   "CAANT.ind" 0 -1 0 "makeindex CAANT.idx"
-  "CAANT.out" 1770989187 6254 55e0d02c989d3de18fad1a25e496efc1 "pdflatex"
+  "CAANT.out" 1771009862 6254 55e0d02c989d3de18fad1a25e496efc1 "pdflatex"
   "CAANT.tex" 1770915934 1083 87542d81a5ef8880abd118bcf0ee6f7d ""
-  "CAANT.toc" 1770989187 2948 5108191c3ad8e43b58253fb0318eb47c "pdflatex"
-  "Chapters/Analytic_L-functions.aux" 1770989187 8795 ee42ca9ca276031a749c7962ed67cf41 "pdflatex"
-  "Chapters/Analytic_L-functions.tex" 1770989186 83703 f675c76aacea2917411c808c481265bd ""
-  "Chapters/Arithmetic_Functions.aux" 1770989186 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a "pdflatex"
+  "CAANT.toc" 1771009862 2948 6391e565516c557e2aaeae5082144027 "pdflatex"
+  "Chapters/Analytic_L-functions.aux" 1771009862 8795 fa0dee39419bcdc98e94d8ed322942d8 "pdflatex"
+  "Chapters/Analytic_L-functions.tex" 1771009861 84067 55419786cc7db3540e892bb18162784f ""
+  "Chapters/Arithmetic_Functions.aux" 1771009861 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a "pdflatex"
   "Chapters/Arithmetic_Functions.tex" 1770668182 7460 c04e19d7a24911156af40baa75bda93e ""
-  "Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1770989186 9218 4d8f16edc8a6ca6be44b1306e7dd906e "pdflatex"
+  "Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1771009862 9218 4d8f16edc8a6ca6be44b1306e7dd906e "pdflatex"
   "Chapters/Dirichlet_Characters_and_Exponential_Sums.tex" 1770824105 42457 2281a48575ba0c6befce6e59ea521047 ""
-  "Chapters/Dirichlet_Series.aux" 1770989187 10728 550adcbbccced0f5bb0280dd81bc58b1 "pdflatex"
+  "Chapters/Dirichlet_Series.aux" 1771009862 10728 550adcbbccced0f5bb0280dd81bc58b1 "pdflatex"
   "Chapters/Dirichlet_Series.tex" 1770954817 40778 0e84a1394059ba6bbd350a9d92998754 ""
   "preamble.tex" 1770570082 5405 a09c92403f06ce9a0bf05bb0ba5a732b ""
   (generated)

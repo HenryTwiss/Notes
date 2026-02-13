@@ -101,9 +101,13 @@
     \[
       \mf{q}_{\infty}(s,L) = \prod_{j}(|s+\mu_{j}|+3).
     \]
-    The choice of \(3\) in \(|s+\mu_{j}|+3\) is a matter of convenience as could use any positive constant. In particular, it is useful when taking logarithms as \(\log(|s+\mu_{j}|+3) \ge 1\). For legibility, we write also write
+    The choice of \(3\) in \(|s+\mu_{j}|+3\) is a matter of convenience as could use any positive constant. In particular, it is useful when taking logarithms as \(\log(|s+\mu_{j}|+3) \ge 1\). For legibility, we will also write
     \[
-      \mf{q}(L) = \mf{q}(0,L) \quad \text{and} \quad \mf{q}_{\infty}(L) = \mf{q}_{\infty}(0,L).
+      \mf{q}(t,L) = \mf{q}\left(\frac{1}{2}+it,L\right) \quad \text{and} \quad \mf{q}_{\infty}(t,L) = \mf{q}_{\infty}\left(\frac{1}{2}+it,L\right).
+    \]
+    as well as
+    \[
+      \mf{q}(L) = \mf{q}\left(\frac{1}{2},L\right) \quad \text{and} \quad \mf{q}_{\infty}(L) = \mf{q}_{\infty}\left(\frac{1}{2},L\right),
     \]
     Estimates for the analytic conductor follow from those of the gamma function. Recall from Stirling's formula that
     \begin{equation}\label{equ:vertical_strip_gamma_estimates}
@@ -194,7 +198,11 @@
     \[
       V_{s}(y) = \frac{1}{2\pi i}\int_{(a)}\frac{\g_{L}(s+u)}{\g_{L}(s)}\Phi(u)y^{-u}\frac{du}{u},
     \]
-    defined for \(y > 0\). Stirling's formula implies
+    defined for \(y > 0\). For legibility, we will write
+    \[
+      V_{t}(y) = V_{\frac{1}{2}+it}(y).
+    \]
+    Stirling's formula implies
     \[
       \frac{\G(s+u)}{\G(s)} \ll_{\e} \frac{(|t+r|+3)^{\s+\tau-\frac{1}{2}}}{(|t|+3)^{\s-\frac{1}{2}}}e^{-\frac{\pi}{2}(|t+r|-|t|)},
     \]
@@ -205,6 +213,10 @@
     for \(s\) in the critical strip and bounded \(\tau\) provided \(s+u\) is at least distance \(\e\) away from the poles of the gamma factor. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded and hence \(V_{s}(y)\) is smooth. The function \(V_{s}(y)\) is the smooth cutoff function mentioned previously. We will also let \(\e_{L}(s)\) be given by
     \[
       \e_{L}(s) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g_{L}(1-s)}{\g_{L}(s)}.
+    \]
+    For legibility, we let
+    \[
+      \e_{L}(t) = \e_{L}\left(\frac{1}{2}+it\right).
     \]
     This term appears as a factor in the dual sum accounting for the functional equation data. We now prove the \textit{approximate function equation}:
 
@@ -429,14 +441,14 @@
     
     At the critical line this theorem produces the bound
     \[
-      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e}.
+      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(t,L\right)^{\frac{1}{4}+\e}.
     \]
     This is known as the \textit{convexity bound} for \(L(s)\). The \textit{Lindel\"of hypothesis} for \(L(s)\) says that the exponent can be reduced to \(\e\):
 
     \begin{conjecture*}[Lindel\"of hypothesis, \(L(s)\)]
       The analytic \(L\)-function \(L(s)\) satisfies
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}.
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(t,L\right)^{\e}.
       \]
     \end{conjecture*}
 
@@ -445,13 +457,13 @@
     \begin{conjecture*}[Selberg class Lindel\"of hypothesis]
       Any Selberg class \(L\)-function \(L(s)\) satisfies
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}.
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(t,L\right)^{\e}.
       \]
     \end{conjecture*}
 
     Like the Riemann hypothesis, we have been unable to prove the Lindel\"of hypothesis for any analytic \(L\)-function. However, in practice the Lindel\"of hypothesis is more tractable. Generally speaking, any improvement upon the exponent in the convexity bound in any aspect of the analytic conductor is called a \textit{subconvexity estimate} (or a \textit{convexity breaking bound}). In the uniform case, we would like to prove bounds of the form
     \[
-      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\d+\e},
+      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(t,L\right)^{\d+\e},
     \]
     for some \(0 \le \d \le \frac{1}{4}\). The convexity bound says that we may take \(\d = \frac{1}{4}\) while the Lindel\"of hypothesis for \(L(s)\) implies that we may take \(\d = 0\). Any uniform subconvexity estimate would give a \(\d\) strictly less than \(\frac{1}{4}\). Subconvexity estimates are viewed with great interest. This is primarily because of their connection to the Lindel\"of hypothesis, but also because any improvement upon the convexity bound in any aspect of the analytic conductor often has drastic consequences in applications.
 
@@ -461,7 +473,7 @@
     
     With a little more work, we can obtain a a similar bound for the derivatives of analytic \(L\)-functions. First observe that \cref{thm:convexity_bound_for_L_function_in_critial_strip} gives the estimate
     \[
-      L(s) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e},
+      L(s) \ll_{\e} \mf{q}\left(t,L\right)^{\frac{1}{4}+\e},
     \]
     in the vertical strip \(\left|\s-\frac{1}{2}\right| \le \frac{\e}{2}\). This is just slightly stronger than the convexity bound. By Cauchy's integral formula, we may write
     \[
@@ -469,7 +481,7 @@
     \]
     where \(\eta\) is the circle about \(\frac{1}{2}+it\) of radius \(\frac{\e}{2}\). The parameterization \(u \mapsto \frac{1}{2}+it+\frac{\e}{2}e^{i\t}\) for \(\eta\) shows that
     \[
-      L^{(k)}\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e}.
+      L^{(k)}\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(t,L\right)^{\frac{1}{4}+\e}.
     \]
     This is known as the \textit{convexity bound} for \(L^{(k)}(s)\).
 
@@ -489,37 +501,45 @@
     \[
       A_{\w}(t,X,L) = \sum_{n \ge 1}a_{L}(n)n^{-it}\w\left(\frac{n}{X}\right).
     \]
+    and write
+    \[
+      A_{\w}(X,L) = A_{\w}(0,X,L).
+    \]
     Our result estimates \(L(s)\) at \(s = \frac{1}{2}+it\) in terms of \(A_{\w}(t,X,L)\).
 
     \begin{theorem}\label{thm:critical_line_estimate}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\w(y)\) be a smooth dyadic weight. Then
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(t,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(t,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
     \end{theorem}
     \begin{proof}
       Take \(s = \frac{1}{2}+it\), \(X = 1\), and \(\Phi(u) = \cos^{-4d_{L}M}\left(\frac{\pi u}{4M}\right)\) for some large positive integer \(M\) in the approximate functional equation. This permits us to write
       \begin{align*}
-        L\left(\frac{1}{2}+it\right) &= \sum_{n \ge 1}\frac{a_{L}(n)}{n^{\frac{1}{2}+it}}V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}}\right) \\
-        &+ \e_{L}\left(\frac{1}{2}+it\right)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{\frac{1}{2}-it}}V_{\frac{1}{2}-it}\left(\frac{n}{\sqrt{q_{L}}}\right)+\frac{R\left(\frac{1}{2}+it,1,L\right)}{q_{L}^{\frac{1}{4}+i\frac{t}{2}}\g_{L}\left(\frac{1}{2}+it\right)}.
+        L\left(\frac{1}{2}+it\right) &= \sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{t}\left(\frac{n}{\sqrt{q_{L}}}\right) \\
+        &+ \e_{L}(t)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{t}\left(\frac{n}{\sqrt{q_{L}}}\right)+\frac{R\left(\frac{1}{2}+it,1,L\right)}{q_{L}^{\frac{1}{4}+i\frac{t}{2}}\g_{L}\left(\frac{1}{2}+it\right)}.
       \end{align*}
-      \cref{equ:gamma_factor_analytic_conductor_estimate} implies \(\e_{L}\left(\frac{1}{2}+it\right) \ll 1\) while \cref{equ:vertical_strip_gamma_estimates,equ:choice_for_V_decay_estimate} together imply that the residue term exhibits exponential decay. Whence
+      \cref{equ:gamma_factor_analytic_conductor_estimate} implies \(\e_{L}(t) \ll 1\) while \cref{equ:vertical_strip_gamma_estimates,equ:choice_for_V_decay_estimate} together imply that the residue term exhibits exponential decay. This implies that right-hand side of the approximate functional equation is
       \begin{align*}
-        L\left(\frac{1}{2}+it\right) &\ll \left|\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}}\right)\right|+\left|\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{\frac{1}{2}-it}\left(\frac{n}{\sqrt{q_{L}}}\right)\right|+e^{-|t|}.
+        O\left(\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{t}\left(\frac{n}{\sqrt{q_{L}}}\right)\right)+O\left(\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{-t}\left(\frac{n}{\sqrt{q_{L}}}\right)\right)+O(e^{-|t|}).
       \end{align*}
-      We now turn to estimating the remaining sums which will be accomplished by applying the smooth dyadic weight. Consider the first sum. By our choice of \(\Phi(u)\), the estimates in \cref{prop:V_function_decay} are valid which implies that the sum converges absolutely. Now write 
+      We now turn to estimating the remaining sums which will be accomplished by applying the smooth dyadic weight. Consider the first sum. By our choice of \(\Phi(u)\), the estimates in \cref{prop:V_function_decay} are valid which implies that the summands exhibit rapid decay for \(n \gg \sqrt{\mf{q}\left(t,L\right)}\). Whence the sum is say
+      \[
+        \sum_{n \ll \sqrt{\mf{q}\left(t,L\right)}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{t}\left(\frac{n}{\sqrt{q_{L}}}\right)+O_{\e}\left(\mf{q}\left(t,L\right)^{\e}\right)
+      \]
+      Now write 
       \[
         V_{s}(y) = \sum_{k \in \Z}\w\left(\frac{y}{2^{k}}\right)V_{s}(y).
       \]
-      Apply this identity to the sum and interchange the resulting two sums by absolute convergence to obtain
+      Apply this identity to the sum and interchange the resulting two sums by local finiteness to obtain
       \[
-        \sum_{k \in \Z}\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{2^{k}\sqrt{q_{L}}}\right)V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}}\right).
+        \sum_{k \in \Z}\sum_{n \ll \sqrt{\mf{q}\left(t,L\right)}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{2^{k}\sqrt{q_{L}}}\right)V_{t}\left(\frac{n}{\sqrt{q_{L}}}\right).
       \]
-      By compact support of the smooth dyadic weight, for each \(k\) the inner sum over \(n\) is supported on the dyadic block \(n \asymp X_{k}\) where \(X_{k} = 2^{k}\sqrt{q_{L}}\) and the summands are zero for sufficiently negative \(k\). Therefore the summands which contribute must satisfy \(k \ll \log\mf{q}_{\infty}\left(\frac{1}{2}+it,L\right)\). Whence our double sum is
+      By compact support of the smooth dyadic weight, for each \(k\) the inner sum over \(n\) is supported on the dyadic block \(n \asymp X_{k}\) where \(X_{k} = 2^{k}\sqrt{q_{L}}\). As \(n \ll \sqrt{\mf{q}\left(t,L\right)}\), the summands which contribute must satisfy \(k \ll \log\mf{q}_{\infty}\left(t,L\right)\). Therefore our double sum can be expressed as
       \[
-        \sum_{k \ll \log\mf{q}_{\infty}\left(\frac{1}{2}+it,L\right)}\sum_{n \asymp X_{k}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{X_{k}}\right)V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}}\right).
+        \sum_{k \ll \log\mf{q}_{\infty}\left(t,L\right)}\sum_{n \asymp X_{k}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{X_{k}}\right)V_{t}\left(\frac{n}{\sqrt{q_{L}}}\right).
       \]
-      Now set \(V_{k}(y) = \frac{1}{\sqrt{y}}V_{\frac{1}{2}+it}\left(\frac{y}{\sqrt{q_{L}}}\right)\). By Abel summation, the inner sum is \(O\) of
+      Let \(V_{k}(y) = \frac{1}{\sqrt{y}}V_{t}\left(\frac{y}{\sqrt{q_{L}}}\right)\). By Abel summation, the inner sum is \(O\) of
       \[
         \sup_{n \asymp X_{k}}|A_{\w}(X_{k},t,L)|\left|V_{k}(n)\right|+\int_{u \asymp X_{k}}|A_{\w}(u,t,L)||V_{k}'(u)|\,du.
       \]
@@ -527,19 +547,19 @@
       \[
         V_{k}(y) = O\left(\frac{1}{\sqrt{y}}\right) \quad \text{and} \quad V'_{k}(y) = O\left(\frac{1}{y^{\frac{3}{2}}}\right),
       \]
-      for \(y \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}\). Whence our previous expression is \(O\) of
+      for \(y \ll \sqrt{\mf{q}\left(t,L\right)}\). Whence our previous expression is \(O\) of
       \[
         \sup_{X \asymp X_{k}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
-      As there are \(O_{\e}\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\right)\) many such \(k\), the bound above implies that our sum is \(O_{\e}\) of
+      As there are \(O_{\e}\left(\mf{q}\left(t,L\right)^{\e}\right)\) many such \(k\), the bound above implies that our sum is \(O_{\e}\) of
       \[
-        \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
+        \mf{q}\left(t,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(t,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
       The estimate for the second sum is treated analogously. Thus
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right),
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(t,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(t,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right),
       \]
-      upon absorbing the exponential decay term.
+      upon absorbing smaller order error terms.
     \end{proof}
 
     As any useful estimate for the sum \(A_{\w}(t,X,L)\) will be in terms of powers of \(X\), the supremum in \cref{thm:central_value_estimate} will automatically pick out the largest possible bound when \(X\) is the square root of the analytic conductor. This means that the savings of \(\sqrt{X}\) in the denominator is essentially as large as possible. For example, we obtain the convexity bound as an application. Since the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s < 1\), we have a bound of shape
@@ -548,9 +568,9 @@
     \]
     Then \(A_{\w}(t,X,L) \ll_{\e} X^{1+\e}\) as well and we obtain
     \begin{equation}\label{equ:coefficient_sum_trivial_bound}
-      \sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\frac{|A_{\w}(t,X,L)|}{\sqrt{X}} \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e},
+      \sup_{X \ll \sqrt{\mf{q}\left(t,L\right)}}\frac{|A_{\w}(t,X,L)|}{\sqrt{X}} \ll_{\e} \mf{q}\left(t,L\right)^{\frac{1}{4}+\e},
     \end{equation}
-    which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{\w}(t,X,L)\). In fact, the expected cancellation should be \(O\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}\right)\) in light of the aforementioned bound. This means we expect \(A_{\w}(t,X,L)\) to exhibit square-root cancellation in the sense
+    which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{\w}(t,X,L)\). In fact, the expected cancellation should be \(O\left(\mf{q}\left(t,L\right)^{\frac{1}{4}}\right)\) in light of the aforementioned bound. This means we expect \(A_{\w}(t,X,L)\) to exhibit square-root cancellation in the sense
     \[
       A_{\w}(t,X,L) \ll_{\e} X^{\frac{1}{2}+\e}.
     \]
@@ -561,7 +581,7 @@
     \begin{theorem}\label{thm:central_value_estimate}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\w(y)\) be a smooth dyadic weight. Then
       \[
-        L\left(\frac{1}{2}\right) \ll_{\e} \mf{q}\left(\frac{1}{2},L\right)^{\e}\max_{X \ll \sqrt{\mf{q}\left(\frac{1}{2},L\right)}}\left(\frac{|A_{\w}(0,X,L)|}{\sqrt{X}}\right).
+        L\left(\frac{1}{2}\right) \ll_{\e} \mf{q}\left(L\right)^{\e}\max_{X \ll \sqrt{\mf{q}\left(L\right)}}\left(\frac{|A_{\w}(X,L)|}{\sqrt{X}}\right).
       \]
     \end{theorem}
     \begin{proof}
