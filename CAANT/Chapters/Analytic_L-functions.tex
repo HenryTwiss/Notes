@@ -494,7 +494,7 @@
     \begin{theorem}\label{thm:critical_line_estimate}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\w(y)\) be a smooth dyadic weight. Then
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}}\right).
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
     \end{theorem}
     \begin{proof}
@@ -529,35 +529,39 @@
       \]
       for \(y \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}\). Whence our previous expression is \(O\) of
       \[
-        \sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}}\right).
+        \sup_{X \asymp X_{k}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
-      As \(q_{L} \asymp \mf{q}\left(\frac{1}{2}+it,L\right)\) and there are \(O_{\e}\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\right)\) many such \(k\), this bound implies that our sum is \(O_{\e}\) of
+      As there are \(O_{\e}\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\right)\) many such \(k\), the bound above implies that our sum is \(O_{\e}\) of
       \[
-        \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}}\right).
+        \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
       The estimate for the second sum is treated analogously. Thus
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}}\right),
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right),
       \]
       upon absorbing the exponential decay term.
     \end{proof}
 
-    As an interesting observation, we obtain the convexity bound as an application of \cref{thm:central_value_estimate}. Since the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s < 1\), we have a bound of shape
+    As any useful estimate for the sum \(A_{\w}(t,X,L)\) will be in terms of powers of \(X\), the supremum in \cref{thm:central_value_estimate} will automatically pick out the largest possible bound when \(X\) is the square root of the analytic conductor. This means that the savings of \(\sqrt{X}\) in the denominator is essentially as large as possible. For example, we obtain the convexity bound as an application. Since the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s < 1\), we have a bound of shape
     \[
       \sum_{n \le X}|a_{L}(n)| \ll_{\e} X^{1+\e}.
     \]
-    Estimating \(A_{\w}(t,X,L)\) trivially by this bound, we obtain
+    Then \(A_{\w}(t,X,L) \ll_{\e} X^{1+\e}\) as well and we obtain
     \begin{equation}\label{equ:coefficient_sum_trivial_bound}
-      \sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}} \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e},
+      \sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\frac{|A_{\w}(t,X,L)|}{\sqrt{X}} \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e},
     \end{equation}
-    which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{\w}(t,X,L)\). In fact, the expected cancellation should be \(O\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}\right)\) in light of \cref{equ:coefficient_sum_trivial_bound}. As the coefficients \(a_{L}(n)\) may very well be real, this expected cancellation should come from the terms \(n^{-it} = e^{-it\log(n)}\) which acts on \(a_{L}(n)\) by rotation.
+    which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{\w}(t,X,L)\). In fact, the expected cancellation should be \(O\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}\right)\) in light of the aforementioned bound. This means we expect \(A_{\w}(t,X,L)\) to exhibit square-root cancellation in the sense
+    \[
+      A_{\w}(t,X,L) \ll_{\e} X^{\frac{1}{2}+\e}.
+    \]
+    As the coefficients \(a_{L}(n)\) may very well be real, the expected cancellation must come from the terms \(n^{-it} = e^{-it\log(n)}\) which acts on the coefficients \(a_{L}(n)\) by rotation. In effect, we should think of the terms \(a_{L}(n)n^{-it}\) as modeling identically distributed random variables. 
 
-    Sometimes, however, we are only concerned with the size of \(L(s)\) at the central point. The value of \(L(s)\) at the central point is called the \textit{central value} of \(L(s)\). Many important properties about \(L(s)\) can be connected to its central value. Any argument used to estimate the central value of an \(L\)-function is called a \textit{central value estimate}. Taking \(t = 0\) in \cref{thm:critical_line_estimate} gives a way to obtain central value estimates.
+    The case when \(t = 0\) is deserving of unique importance. In this case, we are estimating the value of \(L(s)\) at the central point. The value of \(L(s)\) at the central point is called the \textit{central value} of \(L(s)\). Many important properties about \(L(s)\) can be connected to its central value. Any argument used to estimate the central value of an \(L\)-function is called a \textit{central value estimate}. Taking \(t = 0\) in \cref{thm:critical_line_estimate} gives a way to obtain central value estimates.
 
     \begin{theorem}\label{thm:central_value_estimate}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\w(y)\) be a smooth dyadic weight. Then
       \[
-        L\left(\frac{1}{2}\right) \ll_{\e} \mf{q}\left(\frac{1}{2},L\right)^{\e}\max_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2},L\right)}}\left(\frac{|A_{\w}(0,X,L)|}{\mf{q}\left(\frac{1}{2},L\right)^{\frac{1}{4}}}\right).
+        L\left(\frac{1}{2}\right) \ll_{\e} \mf{q}\left(\frac{1}{2},L\right)^{\e}\max_{X \ll \sqrt{\mf{q}\left(\frac{1}{2},L\right)}}\left(\frac{|A_{\w}(0,X,L)|}{\sqrt{X}}\right).
       \]
     \end{theorem}
     \begin{proof}
