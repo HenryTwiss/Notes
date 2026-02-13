@@ -487,14 +487,14 @@
     \]
     This shows that smooth dyadic weights exist. For any \(t \in \R\) and \(X > 0\), set
     \[
-      A_{\w}(X,t,L) = \sum_{n \ge 1}a_{L}(n)n^{-it}\w\left(\frac{n}{X}\right).
+      A_{\w}(t,X,L) = \sum_{n \ge 1}a_{L}(n)n^{-it}\w\left(\frac{n}{X}\right).
     \]
-    Our result estimates \(L(s)\) at \(s = \frac{1}{2}+it\) in terms of \(A_{\w}(X,t,L)\).
+    Our result estimates \(L(s)\) at \(s = \frac{1}{2}+it\) in terms of \(A_{\w}(t,X,L)\).
 
     \begin{theorem}\label{thm:critical_line_estimate}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\w(y)\) be a smooth dyadic weight. Then
       \[
-        L\left(\frac{1}{2}+it\right) \ll \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(X,t,L)|}{\sqrt{X}}\right).
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}}\right).
       \]
     \end{theorem}
     \begin{proof}
@@ -505,35 +505,39 @@
       \end{align*}
       \cref{equ:gamma_factor_analytic_conductor_estimate} implies \(\e_{L}\left(\frac{1}{2}+it\right) \ll 1\) while \cref{equ:vertical_strip_gamma_estimates,equ:choice_for_V_decay_estimate} together imply that the residue term exhibits exponential decay. Whence
       \begin{align*}
-        L\left(\frac{1}{2}+it\right) &\ll \left|\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}}\right)\right|+\left|\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{\frac{1}{2}-it}\left(\frac{n}{\sqrt{q_{L}}}\right)\right|+e^{-c|t|},
+        L\left(\frac{1}{2}+it\right) &\ll \left|\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}}\right)\right|+\left|\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{\frac{1}{2}-it}\left(\frac{n}{\sqrt{q_{L}}}\right)\right|+e^{-|t|}.
       \end{align*}
-      for some \(c > 0\) say. Note that by our choice of \(\Phi(u)\), the estimates in \cref{prop:V_function_decay} for \(V_{\frac{1}{2}+it}(y)\) and \(V_{\frac{1}{2}-it}(y)\) are valid and they show that the two sums are absolutely convergent. We turn to estimating these sums which will be accomplished by applying the smooth dyadic weight. Indeed, write 
+      We now turn to estimating the remaining sums which will be accomplished by applying the smooth dyadic weight. Consider the first sum. By our choice of \(\Phi(u)\), the estimates in \cref{prop:V_function_decay} are valid which implies that the sum converges absolutely. Now write 
       \[
         V_{s}(y) = \sum_{k \in \Z}\w\left(\frac{y}{2^{k}}\right)V_{s}(y).
       \]
-      Apply this identity to the first sum to be estimated and interchange sums by absolute convergence to obtain
+      Apply this identity to the sum and interchange the resulting two sums by absolute convergence to obtain
       \[
         \sum_{k \in \Z}\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{2^{k}\sqrt{q_{L}}}\right)V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}}\right).
       \]
-      By definition of the partition of unity, for each \(k\) the inner sum over \(n\) is supported on the dyadic block \(n \asymp X_{k}\) where \(X_{k} = 2^{k}\sqrt{q_{L}}\). Taking absolute values and applying \cref{prop:V_function_decay}, our sum is \(O\) of
+      By compact support of the smooth dyadic weight, for each \(k\) the inner sum over \(n\) is supported on the dyadic block \(n \asymp X_{k}\) where \(X_{k} = 2^{k}\sqrt{q_{L}}\) and the summands are zero for sufficiently negative \(k\). Therefore the summands which contribute must satisfy \(k \ll \log\mf{q}_{\infty}\left(\frac{1}{2}+it,L\right)\). Whence our double sum is
       \[
-        \sum_{k \in \Z}\left(1+\frac{X_{k}}{\sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\right)^{-(2M-1)}\frac{|A_{\w}(X_{k},t,L)|}{\sqrt{X_{k}}}.
+        \sum_{k \ll \log\mf{q}_{\infty}\left(\frac{1}{2}+it,L\right)}\sum_{n \asymp X_{k}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{X_{k}}\right)V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}}\right).
       \]
-      In the range \(X_{k} \gg \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}\), using trivial bound \(A_{\w}(X_{k},t,L) \ll_{\e} X_{k}^{2+\e}\) (as \(a_{L}(n) \ll_{\e} n^{1+\e}\) by absolute convergence for \(\s > 1\)) shows that the corresponding contribution has rapid decay. While in the range \(X_{k} \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}\) all but finitely many of the \(k\) are such that \(A_{\w}(X_{k},t,L) = 0\). There are at most \(O_{\e}\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\right)\) exceptions and each contributes a term \(O\) of
+      Now set \(V_{k}(y) = \frac{1}{\sqrt{y}}V_{\frac{1}{2}+it}\left(\frac{y}{\sqrt{q_{L}}}\right)\). By Abel summation, the inner sum is \(O\) of
       \[
-        \sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(X,t,L)|}{\sqrt{X}}\right).
+        \sup_{n \asymp X_{k}}|A_{\w}(X_{k},t,L)|\left|V_{k}(n)\right|+\int_{u \asymp X_{k}}|A_{\w}(u,t,L)||V_{k}'(u)|\,du.
       \]
-      All together this shows that the sum is \(O_{\e}\) of
+      In view of \cref{prop:V_function_decay}, we have the estimates
       \[
-        \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(X,t,L)|}{\sqrt{X}}\right).
+        V_{k}(y) = O\left(\frac{1}{\sqrt{y}}\right) \quad \text{and} \quad V'_{k}(y) = O\left(\frac{1}{y^{\frac{3}{2}}}\right),
       \]
-      The estimate for the second sum is handled analogously in view of the identity
+      for \(y \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}\). Whence our previous expression is \(O\) of
       \[
-        \left|\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{\frac{1}{2}-it}\left(\frac{n}{\sqrt{q_{L}}}\right)\right| = \left|\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\conj{V_{\frac{1}{2}-it}\left(\frac{n}{\sqrt{q_{L}}}\right)}\right|.
+        \sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}}\right).
       \]
-      Whence
+      As \(q_{L} \asymp \mf{q}\left(\frac{1}{2}+it,L\right)\) and there are \(O_{\e}\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\right)\) many such \(k\), this bound implies that our sum is \(O_{\e}\) of
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(X,t,L)|}{\sqrt{X}}\right),
+        \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}}\right).
+      \]
+      The estimate for the second sum is treated analogously. Thus
+      \[
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}}\right),
       \]
       upon absorbing the exponential decay term.
     \end{proof}
@@ -542,18 +546,18 @@
     \[
       \sum_{n \le X}|a_{L}(n)| \ll_{\e} X^{1+\e}.
     \]
-    Estimating \(A_{\w}(X,t,L)\) trivially by this bound, we obtain
+    Estimating \(A_{\w}(t,X,L)\) trivially by this bound, we obtain
     \begin{equation}\label{equ:coefficient_sum_trivial_bound}
-      \sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\frac{|A_{\w}(X,t,L)|}{\sqrt{X}} \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e},
+      \sup_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\frac{|A_{\w}(t,X,L)|}{\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}} \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e},
     \end{equation}
-    which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{\w}(X,t,f)\). In fact, the expected cancellation should be \(O\left(\mf{q}\left(\frac{1}{2}+it,f\right)^{\frac{1}{4}}\right)\) in light of \cref{equ:coefficient_sum_trivial_bound}. As the coefficients \(a_{L}(n)\) may very well be real, this expected cancellation should come from the terms \(n^{-it} = e^{-it\log(n)}\) which acts on \(a_{L}(n)\) by rotation.
+    which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{\w}(t,X,L)\). In fact, the expected cancellation should be \(O\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}\right)\) in light of \cref{equ:coefficient_sum_trivial_bound}. As the coefficients \(a_{L}(n)\) may very well be real, this expected cancellation should come from the terms \(n^{-it} = e^{-it\log(n)}\) which acts on \(a_{L}(n)\) by rotation.
 
     Sometimes, however, we are only concerned with the size of \(L(s)\) at the central point. The value of \(L(s)\) at the central point is called the \textit{central value} of \(L(s)\). Many important properties about \(L(s)\) can be connected to its central value. Any argument used to estimate the central value of an \(L\)-function is called a \textit{central value estimate}. Taking \(t = 0\) in \cref{thm:critical_line_estimate} gives a way to obtain central value estimates.
 
     \begin{theorem}\label{thm:central_value_estimate}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\w(y)\) be a smooth dyadic weight. Then
       \[
-        L\left(\frac{1}{2}\right) \ll \max_{X \ll \sqrt{\mf{q}\left(\frac{1}{2},L\right)}}\left(\frac{|A_{\w}(0,X,L)|}{\sqrt{X}}\right).
+        L\left(\frac{1}{2}\right) \ll_{\e} \mf{q}\left(\frac{1}{2},L\right)^{\e}\max_{X \asymp \sqrt{\mf{q}\left(\frac{1}{2},L\right)}}\left(\frac{|A_{\w}(0,X,L)|}{\mf{q}\left(\frac{1}{2},L\right)^{\frac{1}{4}}}\right).
       \]
     \end{theorem}
     \begin{proof}
@@ -1048,7 +1052,7 @@
       \[
         \frac{1}{2\pi i}\int_{(-\d)}-\frac{L'}{L}(s)\Phi(s)\,ds = \frac{1}{2\pi i}\int_{(-\d)}\left(\log{q_{L}}+\frac{\g_{L}'}{\g_{L}}(s)+\frac{\g_{L}'}{\g_{L}}(1-s,L)+\frac{L'}{L}(1-s,L)\right)\Psi(s)\,ds.
       \]
-      The integral over the first term on the right-hand side is \(\psi(1)\log{q_{L}}\) by the Mellin inversion formula. As for the last term, smoothed Perron's formula and that \(\Phi(s) = \Psi(1-s)\) together give
+      The integral over the first term on the right-hand side is \(\psi(1)\log{q_{L}}\) by Mellin inversion. As for the last term, smoothed Perron's formula and that \(\Phi(s) = \Psi(1-s)\) together give
       \[
         \frac{1}{2\pi i}\int_{(-\d)}-\frac{L'}{L}(1-s,L)\Psi(s)\,ds = \sum_{n \ge 1}\L_{\conj{f}}(n)\phi(n).
       \]

@@ -160,7 +160,11 @@
       Suppose \(D(s)\) is a Dirichlet series and that \(A(X) \ll 1\). Then \(\s_{c} \le 0\).
     \end{proposition}
     \begin{proof}
-      Let \(\s > 0\). Since \(A(X) \ll 1\), we have \(A(X)X^{-s} \to 0\) as \(X \to \infty\). Abel's summation formula then gives
+      Let \(\s > 0\). Abel summation gives
+      \[
+        \sum_{n \le X}\frac{a(n)}{n^{s}} = \frac{A(X)}{X^{s}}+\int_{1}^{X}A(u)u^{-(s-1)}\,du.
+      \]
+      As \(A(X) \ll 1\), take the limit as \(X \to \infty\) to obtain
       \[
         D(s) = s\int_{1}^{\infty}A(u)u^{-(s+1)}\,du.
       \]
@@ -177,11 +181,15 @@
       \[
         \sum_{n \ge 1}\frac{|a(n)|}{n^{\s}}.
       \]
-      The bound \(|A|(X) \ll_{\a} X^{\a}\) implies \(a(X) \ll_{\a} X^{\a}\). This means \(|a(X)|X^{-\s} \to 0\) as \(X \to \infty\). Abel's summation formula then gives
+      Abel summation gives
+      \[
+        \sum_{n \le X}\frac{|a(n)|}{n^{\s}} = \frac{|A|(X)}{X^{\s}}+\s\int_{1}^{X}|A|(u)u^{-(\s+1)}\,du.
+      \]
+      In view of the bound \(|A|(X) \ll_{\a} X^{\a}\), take the limit as \(X \to \infty\) to obtain
       \[
         \sum_{n \ge 1}\frac{|a(n)|}{n^{\s}} = \s\int_{1}^{\infty}|A|(u)u^{-(\s+1)}\,du.
       \]
-      The bound \(|A|(X) \ll_{\a} X^{\a}\) and direct evaluation show that the integral is bounded. Therefore our series is bounded and hence must converge.
+      Direct evaluation shows that the integral is bounded. Therefore our series is bounded and hence must converge.
     \end{proof}
 
     Unfortunately, \cref{prop:Dirichlet_series_convergence_polynomial_bound_average} does not immediately imply a sharper upper bound for the abscissa of absolute convergence than that of \cref{prop:Dirichlet_series_convergence_polynomial_bound}. This is because if \(a(n) \ll_{\a} n^{\a}\) then the trivial bounds for \(A(X)\) and \(|A(X)|\) are
@@ -316,11 +324,11 @@
     \]
     These identities can be used to compute the Dirichlet series for many types of arithmetic functions.
   \section{Perron Formulas}
-    With the Mellin inversion formula, it is possible to relate the sums of coefficients of a Dirichlet series to an integral of its associated Dirichlet series. Such formulas are desirable because they allow for the examination of these sums by methods in complex analysis. First, we setup some general notation. Let \(D(s)\) be a Dirichlet series with coefficients \(a(n)\). For \(X > 0\), we set
+    With Mellin inversion, it is possible to relate the sums of coefficients of a Dirichlet series to an integral of its associated Dirichlet series. Such formulas are desirable because they allow for the examination of these sums by methods in complex analysis. First, we setup some general notation. Let \(D(s)\) be a Dirichlet series with coefficients \(a(n)\). For \(X > 0\), we set
     \[
       A^{\ast}(X) = \asum_{n \le X}a(n),
     \]
-    where the \(\ast\) indicates that the last term is multiplied by \(\frac{1}{2}\) if \(X\) is an integer. This slight modification of \(A(X)\) accounts for the fact that Mellin inversion returns the average at a jump discontinuity. We would like to relate \(A^{\ast}(X)\) to the inverse Mellin transform of \(D(s)\). We will prove several variants of this basic idea. The first being \textit{(classical) Perron's formula} which is a consequence of Abel's summation formula and the Mellin inversion formula applied to Dirichlet series.
+    where the \(\ast\) indicates that the last term is multiplied by \(\frac{1}{2}\) if \(X\) is an integer. This slight modification of \(A(X)\) accounts for the fact that Mellin inversion returns the average at a jump discontinuity. We would like to relate \(A^{\ast}(X)\) to the inverse Mellin transform of \(D(s)\). We will prove several variants of this basic idea. The first being \textit{(classical) Perron's formula} which is a consequence of Abel summation and Mellin inversion applied to Dirichlet series.
 
     \begin{theorem*}[Perron's formula, classical]
       Let \(D(s)\) be a Dirichlet series with coefficient \(a(n)\) and finite and nonnegative abscissa of absolute convergence \(\s_{a}\). Then for any \(c > \s_{a}\), we have
@@ -329,7 +337,7 @@
       \]
     \end{theorem*}
     \begin{proof}
-      Let \(\s > \s_{a}\). By \cref{prop:Dirichlet_series_coefficient_size_on_average}, \(A(X) \ll_{\e} X^{\s_{a}+\e}\). Taking \(\e\) sufficiently small, we find that \(A(X)X^{-s} \to 0\) as \(X \to \infty\). Abel's summation formula then gives
+      Let \(\s > \s_{a}\). By \cref{prop:Dirichlet_series_coefficient_size_on_average}, \(A(X) \ll_{\e} X^{\s_{a}+\e}\). Taking \(\e\) sufficiently small, we find that \(A(X)X^{-s} \to 0\) as \(X \to \infty\). Abel summation then gives
       \begin{equation}\label{equ:integral_rep_for_Dirichlet_series}
         D(s) = s\int_{1}^{\infty}A(u)u^{-(s+1)}\,du.
       \end{equation}
@@ -337,7 +345,7 @@
       \[
         \frac{D(s)}{s} = \int_{0}^{\infty}A(u)u^{-(s+1)}\,du.
       \]
-      The Mellin inversion formula immediately gives the result.
+      Mellin inversion immediately gives the result.
     \end{proof}
 
     In the proof of classical Perron's formula, we obtained a useful integral representation for a Dirichlet series. We collect this in the following corollary:
@@ -608,7 +616,7 @@
     \[
       \Psi(s) = \int_{0}^{\infty}\psi(y)y^{s}\,\frac{dy}{y}.
     \]
-    As \(\psi(y)\) has compact support, the integral defining \(\Psi(s)\) is a locally absolutely uniformly bounded on \(\C\). In particular, \(\Psi(s)\) is holomorphic and the Mellin inversion formula implies that \(\psi(y)\) is the Mellin inverse of \(\Psi(s)\). As for nice properties, \(\Psi(s)\) exhibit rapid decay.
+    As \(\psi(y)\) has compact support, the integral defining \(\Psi(s)\) is a locally absolutely uniformly bounded on \(\C\). In particular, \(\Psi(s)\) is holomorphic and Mellin inversion implies that \(\psi(y)\) is the Mellin inverse of \(\Psi(s)\). As for nice properties, \(\Psi(s)\) exhibit rapid decay.
 
     \begin{proposition}\label{prop:smoothing_function_Mellin_inverse_vertical_strips}
       Suppose \(\psi(y)\) is smooth weight and let \(\Psi(s)\) be its Mellin transform. Then for bounded \(\s\), we have
@@ -654,7 +662,7 @@
       \]
     \end{theorem*}
     \begin{proof}
-      By the Mellin inversion formula, we may write
+      By Mellin inversion, we may write
       \[
         A_{\psi}(X) = \sum_{n \ge 1}\frac{a(n)}{2\pi i}\int_{(c)}\Psi(s)\left(\frac{n}{X}\right)^{-s}\,ds.
       \]
