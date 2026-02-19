@@ -14,7 +14,7 @@
       \[
         g(x) = q(x)f(x)+r(x),
       \]
-      with \(q(x),r(x) \in A[x]\) where the degree of \(r(x)\) is strictly less than \(n\). Then $g(\b) = r(\b)$. Letting
+      with \(q(x),r(x) \in A[x]\) where the degree of \(r(x)\) is strictly less than \(n\). Then \(g(\b) = r(\b)\). Letting
       \[
         r(x) = \a_{n-1}x^{n-1}+\cdots+\a_{1}x+a_{0},
       \]
@@ -22,15 +22,15 @@
       \[
         g(\b) = \a_{n-1}\b^{n-1}+\cdots+\a_{1}\b+\a_{0}.
       \]
-      As \(g(x)\) was arbitrary, we see that \(1,\b,\ldots,\b^{n-1}\) generate \(A[\b]\) as an \(A\)-module. Now assume by induction \(R = A[\b_{1},\ldots,\b_{n-1}]\) is a finitely generated \(A\)-module. Then \(R[\b_{n}] = A[\b_{1},\ldots,\b_{n}]\) is a finitely generated \(R\)-module and hence a finitely generated \(A\)-module. This proves the forward implication of the first statement. For the reverse implication, suppose \(A[\b_{1},\ldots,\b_{n}]\) is a finitely generated \(A\)-module and let \(\w_{1},\ldots,\w_{r}\) be a basis of \(A[\b_{1},\ldots,\b_{n}]\). Then for any \(\b \in A[\b_{1},\ldots,\b_{n}]\), we have
+      As \(g(x)\) was arbitrary, we see that \(1,\b,\ldots,\b^{n-1}\) generate \(A[\b]\) as an \(A\)-module. Now assume by induction \(R = A[\b_{1},\ldots,\b_{n-1}]\) is a finitely generated \(A\)-module. Then \(R[\b_{n}] = A[\b_{1},\ldots,\b_{n}]\) is a finitely generated \(R\)-module and hence a finitely generated \(A\)-module. This proves the forward implication of the first statement. For the reverse implication, suppose \(A[\b_{1},\ldots,\b_{n}]\) is a finitely generated \(A\)-module and let \(\w_{1},\ldots,\w_{r}\) be generators. Then for any \(\b \in A[\b_{1},\ldots,\b_{n}]\), we have
       \[
         \b\w_{i} = \sum_{j}\a_{i,j}\w_{j},
       \]
-      with \(\a_{ij} \in A\). These \(r\) equations are equivalent to the identity
+      with \(\a_{i,j} \in A\). These \(r\) equations are equivalent to the identity
       \[
         \begin{pmatrix} \b-\a_{1,1} & \a_{1,2} & \cdots & -\a_{1,r} \\ -\a_{2,1} & \b-\a_{2,2} & & \\ \vdots & & \ddots & \\ -\a_{r,1} & & & \b-\a_{r,r} \end{pmatrix}\begin{pmatrix} \w_{1} \\ \w_{2} \\ \vdots \\ \w_{r} \end{pmatrix} = \mathbf{0}.
       \]
-      The determinant of the matrix on the left-hand side must be zero. This shows that \(\b\) is the root of the characteristic polynomial \(\det(xI-(\a_{ij}))\) which is a monic polynomial with coefficients in \(A\). Hence \(\b\) is integral over \(A\). As \(\b\) was arbitrary, the elements \(\b_{1},\ldots,\b_{n}\) are all integral over \(A\) and that the sum and product of elements that are integral over \(A\) are also integral over \(A\). This proves the reverse implication and the second statement.
+      The determinant of the matrix on the left-hand side must be zero. This shows that \(\b\) is the root of the characteristic polynomial \(\det(xI-(\a_{i,j}))\) which is a monic polynomial with coefficients in \(A\). Hence \(\b\) is integral over \(A\). As \(\b\) was arbitrary, the elements \(\b_{1},\ldots,\b_{n}\) are all integral over \(A\) and that the sum and product of elements that are integral over \(A\) are also integral over \(A\). This proves the reverse implication and the second statement.
     \end{proof}
 
     Integrality is also transitive.
@@ -107,36 +107,46 @@
       \k = \frac{\a}{a},
     \]
     for some algebraic integer \(\a\) and nonzero integer \(a\). Moreover, \(\k\) is an algebraic integer if and only if the minimal polynomial \(m_{\k}(x)\) of \(\k\) over \(\Q\) has coefficients in \(\Z\).
-  \iffalse\section{\todo{Traces and Norms}}
-    We will now introduce norms and traces of free modules. Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). Then the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(B\) over \(A\), denoted \(\Trace_{B/A}\) and \(\Norm_{B/A}\) respectively, are defined by
+  \section{Traces and Norms}
+    Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). Recall that by fixing a basis for \(B/A\), there is an isomorphism
     \[
-      \Trace_{B/A}(\b) = \tr(T_{\b}) \quad \text{and} \quad \Norm_{B/A}(\b) = \det(T_{\b}),
+      \End_{A}(B) \cong \Mat_{n}(A)
     \]
-    for any \(\b \in B\), where \(T_{\b}:B \to B\) is the linear operator defined by
+    This permits us to view \(A\)-linear operators from \(B\) to itself as \(n \x n\) matrices with coefficients in \(A\). To any \(\b \in B\), we associate the \(A\)-linear operator \(T_{\b}\) defined by
     \[
-      T_{\b}(x) = \b x,
+      T_{\b}:B \to B \qquad x \mapsto \b x.
     \]
-    for all \(x \in B\). That is, \(T_{\b}\) is the multiplication by \(\b\) map. Letting \(f_{\b}(x)\) denote the characteristic polynomial of \(T_{\b}\), we have
+    This is simply multiplication by \(\b\). The trace and determinant of \(T_{\b}\) are deserving of special interest. For instance, let \(f_{\b}(x)\) denote the characteristic polynomial of \(T_{\b}\) so that
     \[
       f_{\b}(x) = \det(xI-T_{\b}) = x^{n}-\a_{n-1}x^{n-1}+\cdots+(-1)^{n}\a_{0},
     \]
-    with \(\a_{i} \in A\) for \(0 \le i \le n-1\). Then the trace and the norm are given by
-    \begin{equation}\label{equ:trace_and_norm_characteristic_polynomial}
-      \Trace_{B/A}(\b) = \a_{n-1} \quad \text{and} \quad \Norm_{B/A}(\b) = \a_{0},
-    \end{equation}
-    and therefore take values in \(A\). Moreover, we have
+    with \(\a_{i} \in A\). Then the trace and determinant have the alternative representations
+    \[
+      \tr(T_{\b}) = \a_{n-1} \quad \text{and} \quad \det(T_{\b}) = \a_{0},
+    \]
+    We define the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(B\) over \(A\), denoted \(\Trace_{B/A}\) and \(\Norm_{B/A}\), by
+    \[
+      \Trace_{B/A}:B \to A \qquad \b \mapsto \tr(T_{\b}) \quad \text{and} \quad \Norm_{B/A}:B \to A \qquad \b \mapsto \det(T_{\b})
+    \]
+    Our primary aim will be to develop a sufficient understanding of the trace and norm. The trace is additive while the norm is multiplicative because they correspond to the trace and determinant of matrices. Whence
+    \[
+      \Trace_{B/A}(\b+\b') = \Trace_{B/A}(\b)+\Trace_{B/A}(\b') \quad \text{and} \quad \Norm_{B/A}(\b\b') = \Norm_{B/A}(\b)\Norm_{B/A}(\b'),
+    \]
+    for all \(\b,\b' \in B\). In fact, we have the additional relations
     \[
       \Trace_{B/A}(\a\b) = \a\Trace_{B/A}(\b) \quad \text{and} \quad \Norm_{B/A}(\a\b) = \a^{n}\Norm_{B/A}(\b),
     \]
-    for all \(\a \in A\) because \(T_{\a\l} = \a T_{\l}\). Also note that \(T_{\b+\g} = T_{\b}+T_{\g}\) and \(T_{\b\g} = T_{\b}T_{\g}\) for all \(\b,\g \in B\). Moreover, recall that the trace and determinant of a linear map are additive and multiplicative respectively with respect to direct sums (since any matrix representation of the linear map becomes block upper triangular). Then if \(B = B_{1} \op B_{2}\) and \(\b = \b_{1}+\b_{2}\) with \(\b_{1} \in B_{1}\) and \(\b_{2} \in B_{2}\), we have
-    \begin{equation}\label{equ:trace_and_norm_direct_sums}
-      \Trace_{B/A}(\b) = \Trace_{B_{1}/A}(\b_{1})+\Trace_{B_{2}/A}(\b_{2}) \quad \text{and} \quad \Norm_{B/A}(\b) = \Norm_{B_{1}/A}(\b_{1})\Norm_{B_{2}/A}(\b_{2}).
-    \end{equation}
-    In the case of a degree \(n\) extension \(L/K\), we call \(\Trace_{L/K}\) and \(\Norm_{L/K}\) the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(L/K\). Moreover, \(\Norm_{L/K}(\l) = 0\) if and only if \(\l = 0\) because otherwise \(T_{\l}\) has inverse \(T_{\l^{-1}}\) and hence nonzero determinant. Therefore we obtain homomorphisms
+    for all \(\a \in A\) by scalar multiplication of matrices. The trace and norm also behave well with respect to direct sums. If \(B = B_{1} \op B_{2}\) and we have a decomposition \(\b = \b_{1}+\b_{2}\) with \(\b_{1} \in B_{1}\) and \(\b_{2} \in B_{2}\) then
+    \[
+      \Trace_{B/A}(\b) = \Trace_{B_{1}/A}(\b_{1})+\Trace_{B_{2}/A}(\b_{2}) \quad \text{and} \quad \Norm_{B/A}(\b) = \Norm_{B_{1}/A}(\b_{1})\Norm_{B_{2}/A}(\b_{2}),
+    \]
+    because the corresponding matrix for \(\b\) is block diagonal.
+
+    In the case of a degree \(n\) extension \(L/K\), we call \(\Trace_{L/K}\) and \(\Norm_{L/K}\) the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(L/K\). For any \(\l \in L\), the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(\l\) are \(\Trace_{L/K}(\l)\) and \(\Norm_{L/K}(\l)\). In this case, \(\Norm_{L/K}(\l) = 0\) if and only if \(\l = 0\) because otherwise \(T_{\l}\) has inverse \(T_{\l^{-1}}\) and hence a nonzero determinant. Therefore we obtain homomorphisms
     \[
       \Trace_{L/K}:L \to K \quad \text{and} \quad \Norm_{L/K}:L^{\ast} \to K^{\ast}.
     \]
-    When \(L/K\) is also separable, we can derive alternative descriptions of the trace and norm of \(L/K\). This additional assumption is weak because we are mostly interested in finite extensions of \(\Q\) and \(\F_{p}\) which are always separable (because both \(\Q\) and \(\F_{p}\) are perfect). In any case, to do this we need to work in the algebraic closure \(\conj{K}\) of \(K\). As \(L/K\) is a degree \(n\) separable extension, there are exactly \(n\) distinct \(K\)-embeddings \(\s_{1},\ldots,\s_{n}\) of \(L\) into \(\conj{K}\) (each given by letting \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\) and sending \(\t\) to one of its conjugate roots in the minimal polynomial \(m_{\t}(x)\) of \(\t\) over \(K\)). In other words, there are \(n\) elements of \(\Hom_{K}(L,\conj{K})\). Moreover, we prove the following proposition:
+    When \(L/K\) is also separable, we can derive alternative descriptions of the trace and norm of \(L/K\). This additional assumption is weak because we are mostly interested in finite extensions of \(\Q\) and \(\F_{p}\) which are always separable as these fields are perfect. In any case, to do this we need to work in the algebraic closure \(\conj{K}\) of \(K\). As \(L/K\) is a degree \(n\) separable extension, there are exactly \(n\) distinct \(K\)-embeddings \(\s_{1},\ldots,\s_{n}\) of \(L\) into \(\conj{K}\). That is, there are \(n\) elements of \(\Hom_{K}(L,\conj{K})\). These \(K\)-embeddings are constructed by letting \(\t\) be a primitive element for \(L/K\) and sending \(\t\) to one of its conjugate roots in the minimal polynomial \(m_{\t}(x)\) of \(\t\) over \(K\). These \(K\)-embeddings are deeply connected to the trace and norm.
 
     \begin{proposition}\label{prop:formulas_for_trace_and_norm}
       Let \(L/K\) be a degree \(n\) separable extension and let \(\s\) run over the elements of \(\Hom_{K}(L,\conj{K})\). For any \(\l \in L\), the characteristic polynomial \(f_{\l}(x)\) of \(T_{\l}\) over \(K\) is a power of the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) and satisfies
@@ -149,162 +159,149 @@
       \]
       Moreover, if \(L/K\) is Galois and \(\l_{1},\ldots,\l_{n}\) are the conjugates of \(\l\) then
       \[
-        \Trace_{L/K}(\l) = \sum_{1 \le i \le n}\l_{i} \quad \text{and} \quad \Norm_{L/K}(\l) = \prod_{1 \le i \le n}\l_{i}.
+        \Trace_{L/K}(\l) = \sum_{i}\l_{i} \quad \text{and} \quad \Norm_{L/K}(\l) = \prod_{i}\l_{i}.
       \]
     \end{proposition}
     \begin{proof}
-      Write
+      Let $m$ and $d$ be the degrees of \(K(\l)/K\) and \(L/K(\l)\) respectively. Write
       \[
         m_{\l}(x) = x^{m}+\k_{m-1}x^{m-1}+\cdots+\k_{0},
       \]
-      with \(\k_{i} \in K\) for \(0 \le i \le m-1\) (necessarily \(m\) is the degree of \(K(\l)/K\)) and let \(d\) be the degree of \(L/K(\l)\). We first show that \(f_{\l}(x)\) is a power of \(m_{\l}(x)\). In particular, we claim
+      with \(\k_{i} \in K\). We claim
       \[
         f_{\l}(x) = m_{\l}(x)^{d}.
       \]
-      To see this, recall that \(1,\l,\ldots,\l^{n-1}\) is a basis of \(K(\l)/K\). If \(\a_{1},\ldots,\a_{d}\) is a basis for \(L/K(\l)\) then
+      Indeed, recall that \(1,\l,\ldots,\l^{m-1}\) is a basis of \(K(\l)/K\). If \(\a_{1},\ldots,\a_{d}\) is a basis for \(L/K(\l)\) then
       \[
         \a_{1},\a_{1}\l,\ldots,\a_{1}\l^{m-1},\ldots,\a_{d},\a_{d}\l,\ldots,\a_{d}\l^{m-1},
       \]
-      is a basis for \(L/K\). Because \(m_{\l}(x)\) gives the linear relation
-      \[
-        \l^{m} = -\k_{0}-k_{1}\l-\cdots-\k_{m-1}\l^{m-1},
-      \]
-      the matrix of \(T_{\l}\) is block diagonal with \(d\) blocks each of the form
+      is a basis for \(L/K\). The matrix of \(T_{\l}\) with respect to this basis is block diagonal with \(d\) blocks each of the form
       \[
         \begin{pmatrix} & 1 & & \\ & & \ddots & \\ & & & 1 \\ -\k_{0} & -\k_{1} & \cdots & -\k_{m-1} \\ \end{pmatrix}.
       \]
-      This is the companion matrix to \(m_{\l}(x)\) and hence the characteristic polynomial is \(m_{\l}(x)\) as well. Our claim follows since the matrix of \(T_{\l}\) is block diagonal. Since \(\l\) is algebraic over \(K\) of degree \(m\), \(K(\l)\) is the splitting field of \(m_{\l}(x)\) and there are \(m\) elements of \(\Hom_{K}(K(\l),\conj{K})\). Then the elements of \(\Hom_{K}(L,\conj{K})\) are partitioned into \(m\) many equivalence classes each of size \(d\) (because \(L/K(\l)\) is degree \(d\)) where \(\s\) and \(\s'\) are in the same class if and only if \(\s(\l) = \s'(\l)\). In particular, a complete set of representatives is given by the \(\tau\). But then
+      This matrix is the companion matrix to \(m_{\l}(x)\) and hence the characteristic polynomial is \(m_{\l}(x)\) as well. Our claim follows since the characteristic polynomial of a block diagonal matrix is the product of the characteristic polynomials of the blocks. Since \(\l\) is algebraic over \(K\) of degree \(m\), \(K(\l)\) is the splitting field of \(m_{\l}(x)\) and there are \(m\) elements of \(\Hom_{K}(K(\l),\conj{K})\). Then the elements of \(\Hom_{K}(L,\conj{K})\) are partitioned into \(m\) many equivalence classes each of size \(d\) where two \(K\)-embeddings are equivalent if and only if they take the same value at \(\l\). If \(\tau\) runs over the elements of \(\Hom_{K}(K(\l),\conj{K})\), then this a complete set of representatives. As
       \[
-        f_{\l}(x) = m_{\l}(x)^{d} = \left(\prod_{\tau}(x-\tau(\l))\right)^{d} = \prod_{\s}(x-\s(\l)),
+        m_{\l}(x) = \prod_{\tau}(x-\tau(\l))
       \]
-      which proves the first statement. The formulas for the trace and norm follow from Vieta's formulas and \cref{equ:trace_and_norm_characteristic_polynomial} which proves the second statement. Now suppose \(L/K\) is Galois. Then \(\Gal(L/K) = \Hom_{K}(L,\conj{K})\). Therefore the conjugates of \(\l\) are exactly the images of \(\l\) under these \(K\)-embeddings and the last claim follows.
+      it follows that
+      \[
+        f_{\l}(x) = \prod_{\s}(x-\s(\l)).
+      \]
+      The formulas for the trace and norm follow from Vieta's formulas applied to this product for \(f_{\l}(x)\). Now suppose \(L/K\) is Galois. Then \(\Hom_{K}(L,\conj{K}) = \Gal(L/K)\). Therefore the conjugates of \(\l\) are exactly the images of \(\l\) under these \(K\)-embeddings and the last statement follows.
     \end{proof}
 
-    As an application of \cref{prop:formulas_for_trace_and_norm}, we can show how the field trace and field norm act when \(A\) is an integrally closed integral domain with field of fractions \(K\), \(L/K\) is a finite separable extension, and \(B\) is the integral closure of \(A\) in \(L\):
+    As an application of this result, we can show how the trace and norm act when \(A\) is an integrally closed integral domain with field of fractions \(K\), \(L/K\) is a finite separable extension, and \(B\) is the integral closure of \(A\) in \(L\).
 
     \begin{proposition}\label{prop:trace_and_norm_AKBL}
       Let \(A\) be an integrally closed integral domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(B\) be the integral closure of \(A\) in \(L\). If \(\b \in B\) then the trace and norm of \(\b\) are in \(A\).
     \end{proposition}
     \begin{proof}
-      By \cref{prop:field_of_fractions_AKBL}, the minimal polynomial \(m_{\b}(x)\) of \(\b\) over \(K\) has coefficients in \(A\). By \cref{prop:formulas_for_trace_and_norm}, the characteristic polynomial \(f_{\b}(x)\) is a power of \(m_{\b}(x)\) and hence \(f_{\b}(x)\) has coefficients in \(A\) too. From \cref{equ:trace_and_norm_characteristic_polynomial} we conclude that the trace and norm of \(\b\) are in \(A\).
+      By \cref{prop:field_of_fractions_AKBL}, the minimal polynomial \(m_{\b}(x)\) of \(\b\) over \(K\) has coefficients in \(A\). By \cref{prop:formulas_for_trace_and_norm}, the characteristic polynomial \(f_{\b}(x)\) is a power of \(m_{\b}(x)\) and hence \(f_{\b}(x)\) has coefficients in \(A\) too. Whence trace and norm of \(\b\) are in \(A\) as they are coefficients of \(f_{\b}(x)\) up to sign.
     \end{proof}
 
-    We can also classify the units of \(B\) in terms of the units of \(A\):
+    In this setting it is also easy to classify the units of \(B\) in terms of the units of \(A\).
 
     \begin{proposition}\label{prop:unit_if_and_only_if_AKBL}
-      Let \(A\) be an integrally closed integral domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(B\) be the integral closure of \(A\) in \(L\). Then \(\b \in B\) is a unit if and only if \(\Norm_{L/K}(\b) \in A\) is a unit
+      Let \(A\) be an integrally closed integral domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(B\) be the integral closure of \(A\) in \(L\). Then \(\b \in B\) is a unit if and only if \(\Norm_{L/K}(\b) \in A\) is a unit.
     \end{proposition}
     \begin{proof}
-      First suppose \(\b \in B\) is a unit. Then \(\frac{1}{\b} \in B\) and so
+      For the forward implication, if \(\b \in B\) is a unit then \(\frac{1}{\b} \in B\). Whence
       \[
-        \Norm_{L/K}(\b)\Norm_{L/K}\left(\frac{1}{\b}\right) = \Norm_{L/K}(1) = 1.
+        \Norm_{L/K}(\b)\Norm_{L/K}\left(\frac{1}{\b}\right) = 1.
       \]
-      By \cref{prop:trace_and_norm_AKBL}, \(\Norm_{L/K}(\b),\Norm_{L/K}\left(\frac{1}{\b}\right) \in A\) and hence \(\Norm_{L/K}(\b)\) is a unit. Now suppose \(\Norm_{L/K}(\b) \in A\) is a unit. By \cref{prop:field_of_fractions_AKBL}, the minimal polynomial \(m_{\b}(x)\) of \(\b\) over \(K\) has coefficients in \(A\). Moreover, \cref{equ:trace_and_norm_characteristic_polynomial,prop:formulas_for_trace_and_norm} together imply that the constant term is a unit because \(\Norm_{L/K}(\b)\) is. Letting the degree of \(m_{\b}(x)\) be \(m\), we have shown that
+      By \cref{prop:trace_and_norm_AKBL}, both of the norms on the left-hand side are in \(A\). This proves \(\Norm_{L/K}(\b) \in A\) is a unit. For the reverse implication, we know by assumption that \(\b\) is nonzero. Also, \cref{prop:field_of_fractions_AKBL} implies that the minimal polynomial \(m_{\b}(x)\) of \(\b\) over \(K\) has coefficients in \(A\). The constant term is a unit since it is \(\Norm_{L/K}(\b)\) up to sign. Letting the degree of \(m_{\b}(x)\) be \(m\), we have shown that
       \[
         m_{\b}(x) = x^{m}+\a_{m-1}x^{m-1}+\cdots+\a,
       \]
-      with \(\a_{i} \in A\) for \(1 \le i \le m-1\) and \(\a \in A\) a unit. Dividing \(m_{\b}(\b)\) by \(\b^{m}\), we find that \(\frac{1}{\b}\) is a root of the polynomial
+      with \(\a,\a_{i} \in A\) where \(\a\) is a unit. Dividing this relation by \(\a\b^{m}\), we find that \(\frac{1}{\b}\) is a root of the monic polynomial
       \[
-        f(x) = \a x^{m}+\a_{1}x^{m-1}+\cdots+1.
+        f(x) = x^{m}+\frac{\a_{1}}{\a}x^{m-1}+\cdots+\frac{1}{\a},
       \]
-      Multiplying by \(\frac{1}{\a}\), it follows that \(\frac{1}{\b}\) is a root of a monic polynomial with coefficients in \(A\). Hence \(\frac{1}{\b} \in B\) and thus \(\b\) is a unit.
+      whose coefficients are in \(A\). Hence \(\frac{1}{\b} \in B\) and thus \(\b\) is a unit.
     \end{proof}
 
-    Having introduced traces and norms, we discuss discriminants of free modules. Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). If \(\b_{1},\ldots,\b_{n}\) is a basis for \(B\), we define its \textbf{trace matrix}\index{trace matrix} \(\Trace_{B/A}(\b_{1},\ldots,\b_{n})\) by
+    Having introduced traces and norms, we turn to discussing discriminants of free modules. Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). If \(\b_{1},\ldots,\b_{n}\) is a basis for \(B/A\), we define its \textbf{trace matrix}\index{trace matrix} \(\Trace_{B/A}(\b_{1},\ldots,\b_{n})\) by
     \[
       \Trace_{B/A}(\b_{1},\ldots,\b_{n}) = \begin{pmatrix} \Trace_{B/A}(\b_{1}\b_{1}) & \cdots & \Trace_{B/A}(\b_{1}\b_{n}) \\ \vdots & & \vdots \\ \Trace_{B/A}(\b_{n}\b_{1}) & \cdots & \Trace_{B/A}(\b_{n}\b_{n}) \end{pmatrix}.
     \]
-    The trace matrix will play a prominent role in the theory. Most importantly is the \textbf{discriminant}\index{discriminant} \(d_{B/A}(\b_{1},\ldots,\b_{n})\) of \(\b_{1},\ldots,\b_{n}\) defined by
+    The \textbf{discriminant}\index{discriminant} \(d_{B/A}(\b_{1},\ldots,\b_{n})\) of \(\b_{1},\ldots,\b_{n}\) is defined to be the determinant of the trace matrix. That is,
     \[
       d_{B/A}(\b_{1},\ldots,\b_{n}) = \det(\Trace_{B/A}(\b_{1},\ldots,\b_{n})).
     \]
-    Equivalently, the discriminant is the determinant of the trace matrix. In particular, the discriminant \(d_{B/A}(\b_{1},\ldots,\b_{n})\) is an element of \(A\). It is also independent of the choice of basis up to elements of \((A^{\ast})^{2}\). For if \(\b_{1}',\ldots,\b_{n}'\) is another basis, we have
+    In particular, the discriminant \(d_{B/A}(\b_{1},\ldots,\b_{n})\) is an element of \(A\) since the entries of the trace matrix are. It is also independent of the choice of basis up to elements of \((A^{\ast})^{2}\). For if \(\b_{1}',\ldots,\b_{n}'\) is another basis for \(B/A\), we have
     \[
-      \b_{i}' = \sum_{1 \le j \le m}\a_{i,j}\b_{j},
+      \b_{i}' = \sum_{j}\a_{i,j}\b_{j},
     \]
-    with \(\a_{i,j} \in A\) for \(1 \le i,j \le n\). Then \((\a_{ij})\) is the base change matrix from \(\b_{1},\ldots,\b_{n}\) to \(\b_{1}',\ldots,\b_{n}'\) and so has nonzero determinant. Thus \(\det((\a_{ij})) \in A^{\ast}\). Moreover,
+    with \(\a_{i,j} \in A\). Then \((\a_{i,j})\) is the base change matrix from \(\b_{1},\ldots,\b_{n}\) to \(\b_{1}',\ldots,\b_{n}'\) and so has nonzero determinant. Thus \(\det((\a_{i,j})) \in A^{\ast}\). Moreover,
     \[
-      \Trace_{B/A}(\b_{1}',\ldots,\b_{n}') = (\a_{ij})\Trace_{B/A}(\b_{1},\ldots,\b_{n})(\a_{ij})^{t},
+      \Trace_{B/A}(\b_{1}',\ldots,\b_{n}') = (\a_{i,j})\Trace_{B/A}(\b_{1},\ldots,\b_{n})(\a_{i,j})^{t},
     \]
-    which, upon taking the determinant, shows that
-    \begin{equation}\label{equ:discriminant_base_change}
-      d_{B/A}(\b_{1}',\ldots,\b_{n}') = \det((\a_{ij}))^{2}d_{B/A}(\b_{1},\ldots,\b_{n}),
-    \end{equation}
-    as claimed. Accordingly, we define the \textbf{discriminant}\index{discriminant} \(d_{A}(B)\) of \(B/A\) to be the coset in \(A/(A^{\ast})^{2}\) represented by any discriminant \(d_{B/A}(\b_{1},\ldots,\b_{n})\). In other words,
+    which, upon taking the determinant, shows
+    \[
+      d_{B/A}(\b_{1}',\ldots,\b_{n}') = \det((\a_{i,j}))^{2}d_{B/A}(\b_{1},\ldots,\b_{n}).
+    \]
+    Accordingly, we define the \textbf{discriminant}\index{discriminant} \(d_{A}(B)\) of \(B/A\) to be the coset in \(A/(A^{\ast})^{2}\) represented by any discriminant \(d_{B/A}(\b_{1},\ldots,\b_{n})\). In other words,
     \[
       d_{A}(B) = d_{B/A}(\b_{1},\ldots,\b_{n})(A^{\ast})^{2}.
     \]
-    This is well-defined by \cref{equ:discriminant_base_change}. In particular, \(d_{A}(B) = 0\) is independent of the choice of representative. The discriminant is also multiplicative with respect to direct sums:
+    In particular, \(d_{A}(B) = 0\) is independent of the choice of representative. The discriminant is also multiplicative with respect to direct sums.
 
     \begin{proposition}\label{prop:discriminant_and_direct_sums}
       Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). Suppose we have a direct sum decomposition
       \[
         B = B_{1} \op B_{2},
       \]
-      for free \(A\)-modules \(B_{1}\) and \(B_{2}\) of ranks \(n_{1}\) and \(n_{2}\) respectively. Also let \(\b_{1,1},\ldots,\b_{n_{1},1}\) and \(\b_{1,2},\ldots,\b_{n_{2},2}\) be bases of \(B_{1}\) and \(B_{2}\) respectively. Then \(\b_{1,1},\ldots,\b_{n_{1},1},\b_{1,2},\ldots,\b_{n_{2},2}\) is a basis of \(B\) with
+      for free \(A\)-modules \(B_{1}\) and \(B_{2}\) of ranks \(n_{1}\) and \(n_{2}\) with bases \(\b_{1,1},\ldots,\b_{n_{1},1}\) and \(\b_{1,2},\ldots,\b_{n_{2},2}\) over \(A\) respectively. Then \(\b_{1,1},\ldots,\b_{n_{1},1},\b_{1,2},\ldots,\b_{n_{2},2}\) is a basis of \(B\) over \(A\) and
       \[
         d_{B/A}(\b_{1,1},\ldots,\b_{n_{1},1},\b_{1,2},\ldots,\b_{n_{2},2}) = d_{B_{1}/A}(\b_{1,1},\ldots,\b_{n_{1},1})d_{B_{2}/A}(\b_{1,2},\ldots,\b_{n_{2},2}).
       \]
     \end{proposition}
     \begin{proof}
-      Clearly \(\b_{1,1},\ldots,\b_{n_{1},1},\b_{1,2},\ldots,\b_{n_{2},2}\) is a basis for \(B\). We also have \(\b_{i,1}\b_{j,2} = 0\) for all \(1 \le i \le n_{1}\) and \(1 \le j \le n_{2}\). It follows that \(d_{B/A}(\b_{1,1},\ldots,\b_{n_{1},1},\b_{1,2},\ldots,\b_{n_{2},2})\) is the determinant of the block diagonal matrix
+      Clearly \(\b_{1,1},\ldots,\b_{n_{1},1},\b_{1,2},\ldots,\b_{n_{2},2}\) is a basis for \(B/A\) and \(\b_{i,1}\b_{j,2} = 0\). It follows that \(d_{B/A}(\b_{1,1},\ldots,\b_{n_{1},1},\b_{1,2},\ldots,\b_{n_{2},2})\) is the determinant of the block diagonal matrix
       \[
         \begin{pmatrix} \Trace_{B/A}(\b_{1,1},\ldots,\b_{n_{1},1}) & \\ & \Trace_{B/A}(\b_{1,2},\ldots,\b_{n_{2},2}) \end{pmatrix}.
       \]
-      Moreover, \cref{equ:trace_and_norm_direct_sums} implies
+      Recall that
       \[
-        \Trace_{B/A}(\b_{1}) = \Trace_{B_{1}/A}(\b_{1}) \quad \text{and} \quad \Trace_{B/A}(\b_{2}) = \Trace_{B_{2}/A}(\b_{2})
+        \Trace_{B/A}(\b_{1}) = \Trace_{B_{1}/A}(\b_{1}) \quad \text{and} \quad \Trace_{B/A}(\b_{2}) = \Trace_{B_{2}/A}(\b_{2}),
       \]
-      for any \(\b_{1} \in B_{1}\) and \(\b_{2} \in B_{2}\) since multiplication by \(\b_{1}\) and \(\b_{2}\) annihilate \(B_{2}\) and \(B_{1}\) respectively. But then the block diagonal matrix above is equal to
+      for any \(\b_{1} \in B_{1}\) and \(\b_{2} \in B_{2}\). Whence the block diagonal matrix above is
       \[
         \begin{pmatrix} \Trace_{B_{1}/A}(\b_{1,1},\ldots,\b_{n_{1},1}) & \\ & \Trace_{B_{2}/A}(\b_{1,2},\ldots,\b_{n_{2},2}) \end{pmatrix}.
       \]
       The determinant of this matrix is \(d_{B_{1}/A}(\b_{1,1},\ldots,\b_{n_{1},1})d_{B_{2}/A}(\b_{1,2},\ldots,\b_{n_{2},2})\) which completes the proof.
     \end{proof}
     
-    We now specialize to the setting of a degree \(n\) separable extension \(L/K\). In this case, it turns out that the discriminant of a basis is nonzero. To see this, we require a lemma:
-
-    \begin{lemma}\label{lem:trace_is_nondegenerate}
-      Let \(L/K\) be a finite separable extension. Then the map
-      \[
-        \Trace_{L/K}:L \x L \to K \qquad (\l,\eta) \mapsto \Trace_{L/K}(\l\eta),
-      \]
-      is a nondegenerate symmetric bilinear form.
-    \end{lemma}
-    \begin{proof}
-      From the definition of the trace, it is clear that the map is a symmetric bilinear form. To see that is is nondegenerate, suppose \(L/K\) is degree \(n\). Then for any nonzero \(\l \in L\), \cref{prop:formulas_for_trace_and_norm} implies that
-      \[
-        \Trace_{L/K}(\l\l^{-1}) = \Trace_{L/K}(1) = n.
-      \]
-      Hence the symmetric bilinear form is nondegenerate.
-    \end{proof}
-
-    We can now show that the discriminant of any basis for \(L/K\) never vanishes:
+    We now specialize to the setting of a degree \(n\) separable extension \(L/K\). In this case, it turns out that the discriminant of a basis is nonzero. To see this will require some work. First, we define the \textbf{trace form}\index{trace form} of \(L/K\) to be the map
+    \[
+      \Trace_{L/K}:L \x L \to K \qquad (\l,\eta) \mapsto \Trace_{L/K}(\l\eta).
+    \]
+    In other words, this is just the trace of \(L/K\) considered as a pairing. Clearly this is a symmetric bilinear form. In fact, the trace form is also nondegenerate as \cref{prop:formulas_for_trace_and_norm} implies
+    \[
+      \Trace_{L/K}(1) = n,
+    \]
+    and we can pair any \(\l \in L\) with its inverse. Using the trace form, we can show that the discriminant of any basis for \(L/K\) is nonzero.
 
     \begin{proposition}\label{prop:discriminant_not_zero}
       Let \(L/K\) be a degree \(n\) separable extension and let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). Then \(d_{L/K}(\l_{1},\ldots,\l_{n}) \neq 0\).
     \end{proposition}
     \begin{proof}
-      Suppose by contradiction that \(d_{L/K}(\l_{1},\ldots,\l_{n}) = 0\). Then the matrix \(\Trace_{L/K}(\l_{1},\ldots,\l_{n})\) is not invertible. Hence there exists \(\k_{i} \in K\) for \(1 \le i \le n\) such that
+      Suppose by contradiction that \(d_{L/K}(\l_{1},\ldots,\l_{n}) = 0\). Then the trace matrix \(\Trace_{L/K}(\l_{1},\ldots,\l_{n})\) is not invertible. Therefore
       \[
-        \Trace_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \k_{1} \\ \vdots \\ \k_{n} \end{pmatrix} = \mathbf{0}.
+        \Trace_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \k_{1} \\ \vdots \\ \k_{n} \end{pmatrix} = \mathbf{0},
       \]
-      This is equivalent to the \(n\) equations
+      for some \(\k_{i} \in K\) not all of which are zero. Then the element
       \[
-        \sum_{1 \le j \le n}\k_{j}\Trace_{L/K}(\l_{i}\l_{j}) = 0,
+        \l = \sum_{j}\k_{j}\l_{j}.
       \]
-      for all \(i\). Setting
-      \[
-        \l = \sum_{1 \le j \le n}\k_{j}\l_{j},
-      \]
-      linearity of the trace implies that these \(n\) equations are equivalent to the fact that \(\Trace_{L/K}(\l\l_{i}) = 0\) for all \(i\). As \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\), it follows that \(\l \in L\) is a nonzero element for which \(\Trace_{L/K}(\l\eta) = 0\) for all \(\eta \in L\). This is impossible by \cref{lem:trace_is_nondegenerate}. Hence \(d_{L/K}(\l_{1},\ldots,\l_{n}) \neq 0\) as desired.
+      is nonzero. Moreover, the previous identity is equivalent to the fact that \(\Trace_{L/K}(\l\l_{i}) = 0\). As \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\), it follows that the trace form is degenerate which is a contradiction. Hence \(d_{L/K}(\l_{1},\ldots,\l_{n}) \neq 0\).
     \end{proof}
 
-    In addition to the discriminant \(d_{L/K}(\l_{1},\ldots,\l_{n})\) never vanishing, we can also write it in an alternative form. To do this, we define the \textbf{embedding matrix}\index{embedding matrix} \(M(\l_{1},\ldots,\l_{n})\) of the basis \(\l_{1},\ldots,\l_{n}\) by
+    In addition to the discriminant \(d_{L/K}(\l_{1},\ldots,\l_{n})\) being nonzero, we can also write it in a more useful form. To do this, we define the \textbf{embedding matrix}\index{embedding matrix} \(M(\l_{1},\ldots,\l_{n})\) of the basis \(\l_{1},\ldots,\l_{n}\) by
     \[
       M(\l_{1},\ldots,\l_{n}) = \begin{pmatrix} \s_{1}(\l_{1}) & \cdots & \s_{1}(\l_{n}) \\ \vdots & & \vdots \\ \s_{n}(\l_{1}) & \cdots & \s_{n}(\l_{n}) \end{pmatrix},
     \]
-    where \(\s_{1},\ldots,\s_{n}\) are the elements of \(\Hom_{K}(L,\conj{K})\). Then we have the following result:
+    where \(\s_{1},\ldots,\s_{n}\) are the elements of \(\Hom_{K}(L,\conj{K})\). The discriminant turns out to be the square of the determinant of the embedding matrix.
 
     \begin{proposition}\label{disc_as_square_of_embedding_matrix}
       Let \(L/K\) be a degree \(n\) separable extension. Then for any basis \(\l_{1},\ldots,\l_{n}\) of \(L/K\), we have
@@ -313,26 +310,24 @@
       \]
     \end{proposition}
     \begin{proof}
-      Recalling that the \((i,j)\)-entry of \(M(\l_{1},\ldots,\l_{n})^{t}M(\l_{1},\ldots,\l_{n})\) is the dot product of the \(i\)-th and \(j\)-th columns of \(M(\l_{1},\ldots,\l_{n})\), we compute
-      \begin{align*}
-        \det(M(\l_{1},\ldots,\l_{n}))^{2} &= \det(M(\l_{1},\ldots,\l_{n})^{t}M(\l_{1},\ldots,\l_{n})) \\
-        &= \det\left(\left(\sum_{\s \in \Hom_{K}(L,\conj{K})}\s(\l_{i})\s(\l_{j})\right)_{i,j}\right) \\
-        &= \det\left(\left(\sum_{\s \in \Hom_{K}(L,\conj{K})}\s(\l_{i}\l_{j})\right)_{i,j}\right) \\
-        &= \det(\Trace_{L/K}(\l_{1},\ldots,\l_{n})) \\
-        &= d_{L/K}(\l_{1},\ldots,\l_{n}),
-      \end{align*}
-      where the second to last equality follows by \cref{prop:formulas_for_trace_and_norm}, as desired.
+      Recall that the \(ij\)-entry of \(M(\l_{1},\ldots,\l_{n})^{t}M(\l_{1},\ldots,\l_{n})\) is the dot product of the \(i\)-th and \(j\)-th columns of \(M(\l_{1},\ldots,\l_{n})\). Then a straightforward computation shows
+      \[
+        \det(M(\l_{1},\ldots,\l_{n})^{t}M(\l_{1},\ldots,\l_{n})) = \det\left(\left(\sum_{\s \in \Hom_{K}(L,\conj{K})}\s(\l_{i}\l_{j})\right)_{i,j}\right).
+      \]
+      By \cref{prop:formulas_for_trace_and_norm}, this identity is equivalent to the claim.
     \end{proof}
 
-    When the degree \(n\) separable extension \(L/K\) admits a basis of the form \(1,\l,\ldots,\l^{n-1}\) (in fact such a basis always exists by choosing \(\l\) to be a primitive element for \(L/K\)) \(d_{L/K}(1,\l,\ldots,\l^{n-1})\) can be easily computed. Indeed, the embedding matrix becomes
+    In general, it is difficult to compute the discriminant of a basis for \(L/K\). However, if the basis is of the form \(1,\l,\ldots,\l^{n-1}\) (take \(\l = \t\) for a primitive element \(\t\) of \(L/K\)), then the discriminant of this basis can be easily computed. Indeed, the embedding matrix becomes
     \[
       M(1,\l,\ldots,\l^{n-1}) = \begin{pmatrix} 1 & \s_{1}(\l) & \cdots & \s_{1}(\l)^{n-1} \\ \vdots & \vdots & & \vdots \\ 1 & \s_{n}(\l) & \cdots & \s_{n}(\l)^{n-1} \end{pmatrix},
     \]
-    which is a Vandermonde matrix. Then
+    which is a Vandermonde matrix. By \cref{disc_as_square_of_embedding_matrix}, we have
     \begin{equation}\label{equ:Vandermonde_determinant_for_discriminant}
-      d_{L/K}(1,\l,\ldots,\l^{n-1}) = \prod_{1 \le i < j \le n}(\s_{i}(\l)-\s_{j}(\l))^{2},
+      d_{L/K}(1,\l,\ldots,\l^{n-1}) = \prod_{i \le j}(\s_{i}(\l)-\s_{j}(\l))^{2},
     \end{equation}
-    which is the square of the Vandermonde determinant of \(M(1,\l,\ldots,\l^{n-1})\), by \cref{disc_as_square_of_embedding_matrix}. In any case, discriminants of bases are useful because of the following lemma:
+    which is the square of the Vandermonde determinant of \(M(1,\l,\ldots,\l^{n-1})\).
+
+    Let us now consider the situation when \(A\) is an integrally closed integral domain with field of fractions \(K\), \(L/K\) be a degree \(n\) separable extension, and \(B\) is the integral closure of \(A\) in \(L\). The discriminant relates containment of \(B\) relative to \(A\) when the underlying basis is contained in \(B\).
 
     \begin{lemma}\label{lem:lemma_for_integral_basis_AKBL}
       Let \(A\) be an integrally closed integral domain with field of fractions \(K\), \(L/K\) be a degree \(n\) separable extension, and \(B\) be the integral closure of \(A\) in \(L\). If \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\) that is contained in \(B\) then
@@ -341,74 +336,71 @@
       \]
     \end{lemma}
     \begin{proof}
-      Since \(\l_{1},\ldots,\l_{n}\) is a basis, we may write \(\b = \k_{1}\l_{1}+\cdots+\k_{n}\l_{n}\) for any \(\b \in B\). Linearity of the trace implies
+      Let \(\b \in B\) and write \(\b = \k_{1}\l_{1}+\cdots+\k_{n}\l_{n}\) for some \(\k_{i} \in K\). Linearity of the trace implies
       \[
-        \sum_{1 \le j \le n}\k_{j}\Trace_{L/K}(\l_{i}\l_{j}) = \Trace_{L/K}(\l_{i}\b),
+        \sum_{j}\k_{j}\Trace_{L/K}(\l_{i}\l_{j}) = \Trace_{L/K}(\l_{i}\b),
       \]
-      for \(1 \le i \le n\). These \(n\) equations are equivalent to the identity
+      These \(n\) equations are equivalent to the identity
       \[
         \Trace_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \k_{1} \\ \vdots \\ \k_{n} \end{pmatrix} = \begin{pmatrix} \Trace_{L/K}(\b\l_{1}) \\ \vdots \\ \Trace_{L/K}(\b\l_{n}) \end{pmatrix}.
       \]
-      Multiplying on the left by the adjugate \(\adj(\Trace_{L/K}(\l_{1},\ldots,\l_{n}))\) of \(\Trace_{L/K}(\l_{1},\ldots,\l_{n})\) and recalling that a matrix times its adjugate is its determinant times the identity, we see that
-      \[
-       d_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \k_{1} \\ \vdots \\ \k_{n} \end{pmatrix} = \adj(\Trace_{L/K}(\l_{1},\ldots,\l_{n}))\begin{pmatrix} \Trace_{L/K}(\b\l_{1}) \\ \vdots \\ \Trace_{L/K}(\b\l_{n}) \end{pmatrix}.
-      \]
-      Since \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\) that is contained in \(B\), the matrix \(\Trace_{L/K}(\l_{1},\ldots,\l_{n})\) has entries in \(A\) by \cref{prop:trace_and_norm_AKBL} and therefore \(\adj(\Trace_{L/K}(\l_{1},\ldots,\l_{n}))\) does too. Moreover, \cref{prop:trace_and_norm_AKBL} again implies \(\Trace_{L/K}(\b\l_{i}) \in A\) for all \(i\). So the right-hand side has entires in \(A\) and hence the left-hand side must as well. This means \(d_{L/K}(\l_{1},\ldots,\l_{n})\k_{i} \in A\) for all \(i\). But then
-      \[
-        d_{L/K}(\l_{1},\ldots,\l_{n})B \subseteq A\l_{1}+\cdots+A\l_{n},
-      \]
-      as desired.
-    \end{proof}
-
-    Again suppose \(A\) is an integrally closed integral domain with field of fractions \(K\), \(L/K\) is a degree \(n\) separable extension, and \(B\) is the integral closure of \(A\) in \(L\). We say that \(\b_{1},\ldots,\b_{n}\) is an \textbf{integral basis}\index{integral basis} for \(B/A\) if \(\b_{1},\ldots,\b_{n}\) is such that
-    \[
-      B = A\b_{1}+\cdots+A\b_{n}.
-    \]
-    Equivalently, \(B\) is a free \(A\)-module of rank \(n\). An integral basis is necessarily a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. However, an integral basis need not always exist. For if \(\l_{1},\ldots,\l_{n}\) is a basis of \(L/K\), \cref{prop:field_of_fractions_AKBL} implies that we can multiply by a nonzero element of \(A\) to ensure that this basis is contained in \(B\). However, \(\l_{1},\ldots,\l_{n}\) need not also be a basis of \(B\) as an \(A\)-module. Nevertheless, if \(A\) is a principal ideal domain then we can ensure the existence of an integral basis:
-    
-    \begin{theorem}\label{thm:integral_basis_AKBL}
-      Let \(A\) be a principal ideal domain with field of fractions \(K\), let \(L/K\) be a degree \(n\) separable extension, and let \(B\) be the integral closure of \(A\) in \(L\). Then \(B\) admits an integral basis over \(A\). Moreover, every finitely generated nonzero \(B\)-submodule of \(L\) is a free \(A\)-module of rank \(n\).
-    \end{theorem}
-    \begin{proof}
-      \(A\) is integrally closed by \cref{lemma:unique_factorization_domains_are_integrally_closed}. Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(A\), if necessary, to ensure that this basis belongs to \(B\). Then \cref{lem:lemma_for_integral_basis_AKBL} implies
+      By \cref{prop:trace_and_norm_AKBL}, the trace matrix and the column vector on the right-hand side have entries in \(A\). Cramer's rule then implies \(d_{L/K}(\l_{1},\ldots,\l_{n})\k_{i} \in A\). As \(\b\) was arbitrary, this means
       \[
         d_{L/K}(\l_{1},\ldots,\l_{n})B \subseteq A\l_{1}+\cdots+A\l_{n}.
       \]
-      Since \(A\l_{1}+\cdots+A\l_{n}\) is a free \(A\)-module of rank \(n\) and \(A\) is a principal ideal domain, it follows from the structure theorem of finitely generated modules over principal ideal domains that \(B\) is also a free \(A\)-module of rank at most \(n\). But any basis for \(B\) as an \(A\)-module must also be a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. Hence the rank is exactly \(n\) and \(B\) admits an integral basis over \(A\) which proves the first statement. Now suppose \(M\) is a nonzero \(B\)-submodule of \(L\) and let \(\w_{1},\ldots,\w_{r}\) be generators. By \cref{prop:field_of_fractions_AKBL} again we may multiply by a nonzero element of \(A\), if necessary, to ensure that these generators belong to \(B\). But then
+    \end{proof}
+
+    In this situation, we say that \(\b_{1},\ldots,\b_{n}\) is an \textbf{integral basis}\index{integral basis} for \(B/A\) if
+    \[
+      B = A\b_{1}+\cdots+A\b_{n}.
+    \]
+    This implies \(B\) is a free \(A\)-module of rank \(n\). An integral basis is necessarily a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. However, an integral basis need not always exist. For if \(\l_{1},\ldots,\l_{n}\) is a basis of \(L/K\), \cref{prop:field_of_fractions_AKBL} implies that we can multiply by a nonzero element of \(A\) to ensure that this basis is contained in \(B\). However, \(\l_{1},\ldots,\l_{n}\) need not also be a basis of \(B\) over \(A\). Nevertheless, if \(A\) is a principal ideal domain then we can ensure the existence of an integral basis.
+    
+    \begin{theorem}\label{thm:integral_basis_AKBL}
+      Let \(A\) be a principal ideal domain with field of fractions \(K\), let \(L/K\) be a degree \(n\) separable extension, and let \(B\) be the integral closure of \(A\) in \(L\). Then \(B/A\) admits an integral basis. Moreover, every finitely generated nonzero \(B\)-submodule of \(L\) is a free \(A\)-module of rank \(n\).
+    \end{theorem}
+    \begin{proof}
+      Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). From \cref{lemma:unique_factorization_domains_are_integrally_closed} we see that \(A\) is integrally closed. Then by \cref{prop:field_of_fractions_AKBL}, we may multiply by a nonzero element of \(A\), if necessary, to ensure that this basis belongs to \(B\). Then \cref{lem:lemma_for_integral_basis_AKBL} implies
+      \[
+        d_{L/K}(\l_{1},\ldots,\l_{n})B \subseteq A\l_{1}+\cdots+A\l_{n}.
+      \]
+      Since \(A\l_{1}+\cdots+A\l_{n}\) is a free \(A\)-module of rank \(n\) and \(A\) is a principal ideal domain, it follows from the structure theorem of finitely generated modules over principal ideal domains that \(B\) is also a free \(A\)-module of rank at most \(n\). But any basis for \(B/A\) must also be a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. Hence the rank is exactly \(n\) and \(B\) admits an integral basis over \(A\) which proves the first statement.
+      
+      Now suppose \(M\) is a nonzero \(B\)-submodule of \(L\) and let \(\w_{1},\ldots,\w_{r}\) be generators. By \cref{prop:field_of_fractions_AKBL} again we may multiply by a nonzero element of \(A\), if necessary, to ensure that these generators belong to \(B\). Then
       \[
         d_{L/K}(\w_{1},\ldots,\w_{n})M \subseteq d_{L/K}(\w_{1},\ldots,\w_{n})B.
       \]
-      By the structure theorem of finitely generated modules over principal ideal domains again, \(M\) is a free \(A\)-module of rank at most \(n\). To see that the rank is at least \(n\), let \(\a \in M\) be nonzero and, as before, let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) that is contained in \(B\). Then \(\a\l_{1},\ldots,\a\l_{n}\) is a basis for \(L/K\) contained in \(M\). Thus the rank of \(M\) is at least \(n\), and in particular it must be \(n\). This completes the proof.
+      By the structure theorem of finitely generated modules over principal ideal domains again, \(M\) is a free \(A\)-module of rank at most \(n\). To see that the rank is at least \(n\), let \(\a \in M\) be nonzero and, as before, let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) that is contained in \(B\). Then \(\a\l_{1},\ldots,\a\l_{n}\) is a basis for \(L/K\) contained in \(M\). Thus the rank of \(M\) is at least \(n\), and in particular it must be \(n\). This proves the second statement.
     \end{proof}
 
-    Recall that if \(L_{1}/K\) and \(L_{2}/K\) are finite separable extensions then the composite \(L\) of \(L_{1}\) and \(L_{2}\) is such that \(L/K\) is also a finite separable extension. Integral bases behave well with respect to composite fields provided the fields are linearly disjoint:
+    Recall that if \(L_{1}/K\) and \(L_{2}/K\) are finite separable extensions then the composite \(L\) of \(L_{1}\) and \(L_{2}\) is such that \(L/K\) is also a finite separable extension. Integral bases behave well with respect to composite fields provided the fields are linearly disjoint.
 
     \begin{proposition}\label{prop:linearly_disjoint_integral_basis}
-      Let \(A\) be an integrally closed integral domain with field of fractions \(K\), \(L_{1}/K\) and \(L_{2}/K\) be degree \(n_{1}\) and \(n_{2}\) separable extensions respectively, and \(B_{1}\) and \(B_{2}\) be the integral closures of \(A\) in \(L_{1}\) and \(L_{2}\) respectively. Suppose \(L_{1}\) and \(L_{2}\) are linearly disjoint over \(K\) in \(\conj{K}\) and that \(B_{1}\) and \(B_{2}\) admit integral bases \(\b_{1,1},\ldots,\b_{n_{1},1}\) and \(\b_{1,2},\ldots,\b_{n_{2},2}\) over \(A\) with
+      Let \(A\) be an integrally closed integral domain with field of fractions \(K\), \(L_{1}/K\) and \(L_{2}/K\) be degree \(n_{1}\) and \(n_{2}\) separable extensions, and \(B_{1}\) and \(B_{2}\) be the integral closures of \(A\) in \(L_{1}\) and \(L_{2}\) respectively. Suppose \(L_{1}\) and \(L_{2}\) are linearly disjoint over \(K\) in \(\conj{K}\) and that \(B_{1}/A\) and \(B_{2}/A\) admit integral bases \(\b_{1,1},\ldots,\b_{n_{1},1}\) and \(\b_{1,2},\ldots,\b_{n_{2},2}\) with
       \[
         \a_{1}d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})+\a_{2}d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2}) = 1,
       \]
-      for some \(\a_{1},\a_{2} \in A\). Let \(L\) be the composite of \(L_{1}\) and \(L_{2}\) and let \(B\) be the integral closure of \(A\) in \(L\). Then \(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}\) is an integral basis for \(B\) over \(A\) with
-      \[
-        \d_{L/K}(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}) = d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})^{n_{2}}d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})^{n_{1}}.
-      \]
-      In particular,
+      for some \(\a_{1},\a_{2} \in A\). Let \(L\) be the composite of \(L_{1}\) and \(L_{2}\) and let \(B\) be the integral closure of \(A\) in \(L\). Then \(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}\) is an integral basis for \(B/A\) and
       \[
         B = B_{1}B_{2}.
       \]
+      In particular,
+      \[
+        d_{L/K}(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}) = d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})^{n_{2}}d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})^{n_{1}}.
+      \]
     \end{proposition}
     \begin{proof}
-      The last statement clearly follows from the first so we will start by proving that \(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}\) is an integral basis for \(B\) over \(A\). Since \(L_{1}\) and \(L_{2}\) are linearly disjoint over \(K\) in \(\conj{K}\), it must be that \(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}\) is a basis for \(L\) as a \(K\)-vector space. Therefore any \(\l \in B\) is of the form
+      We will start by proving \(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}\) is an integral basis for \(B/A\). Since \(L_{1}\) and \(L_{2}\) are linearly disjoint over \(K\) in \(\conj{K}\), it must be that \(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}\) is a basis for \(L/K\). Therefore any \(\b \in B\) is of the form
       \[
-        \l = \sum_{\substack{1 \le i \le n_{1} \\ 1 \le j \le n_{i}}}\k_{i,j}\b_{i,1}\b_{j,2},
+        \b = \sum_{i,j}\k_{i,j}\b_{i,1}\b_{j,2},
       \]
-      for some \(\k_{i,j} \in K\) for \(1 \le i \le n_{1}\) and \(1 \le j \le n_{2}\). Then we need to show that \(\k_{i,j} \in A\) for all \(i\) and \(j\). Now let
+      for some \(\k_{i,j} \in K\). We need to show that \(\k_{i,j} \in A\). To this end, let
       \[
-        \a_{i,2} = \sum_{1 \le j \le n_{2}}\k_{i,j}\b_{j,2} \quad \text{and} \quad \a_{j,1} = \sum_{1 \le i \le n_{1}}\k_{i,j}\b_{i,1},
+        \a_{i,2} = \sum_{j}\k_{i,j}\b_{j,2} \quad \text{and} \quad \a_{j,1} = \sum_{i}\k_{i,j}\b_{i,1},
       \]
-      for all \(i\) and \(j\) so that
+      so that
       \[
-        \l = \sum_{1 \le i \le n_{1}}\a_{i,2}\b_{i,1} \quad \text{and} \quad \l = \sum_{1 \le j \le n_{2}}\a_{j,1}\b_{j,2}.
+        \b = \sum_{i}\a_{i,2}\b_{i,1} \quad \text{and} \quad \b = \sum_{j}\a_{j,1}\b_{j,2}.
       \]
       In particular, \(\a_{i,2} \in L_{2}\) and \(\a_{j,1} \in L_{1}\). By linear disjointness, we have
       \[
@@ -416,44 +408,46 @@
       \]
       So letting \(\s_{1,1},\ldots,\s_{n_{1},1}\) and \(\s_{1,2},\ldots,\s_{n_{2},2}\) be the elements of \(\Hom_{K}(L_{1},\conj{K})\) and \(\Hom_{K}(L_{2},\conj{K})\) respectively, \(\s_{1,1}\s_{1,2},\ldots,\s_{n_{1},1}\s_{n_{2},2}\) are the elements of \(\Hom_{K}(L,\conj{K})\). In particular, we may view \(\s_{1,1},\ldots,\s_{n_{1},1}\) and \(\s_{1,2},\ldots,\s_{n_{2},2}\) as elements of \(\Hom_{K}(L,\conj{K})\) that act as the identity on \(L_{2}\) and \(L_{1}\) respectively. Then the \(n_{1}\) and \(n_{2}\) equations
       \[
-        \sum_{1 \le k \le n_{1}}\s_{i,1}(\b_{k,1})\a_{k,2} = \s_{i,1}(\l) \quad \text{and} \quad \sum_{1 \le k \le n_{2}}\s_{j,2}(\b_{k,2})\a_{k,1} = \s_{j,2}(\l),
+        \sum_{i}\s_{i,1}(\b_{i,1})\a_{i,2} = \s_{i,1}(\b) \quad \text{and} \quad \sum_{j}\s_{j,2}(\b_{j,2})\a_{j,1} = \s_{j,2}(\b),
       \]
-      respectively are equivalent to the identities
+      are equivalent to the identities
       \[
-        M(\b_{1,1},\ldots,\b_{n_{1},1})\begin{pmatrix} \a_{1,2} \\ \vdots \\ \a_{n_{1},2} \end{pmatrix} = \begin{pmatrix} \s_{1,1}(\l) \\ \vdots \\ \s_{n_{1},1}(\l) \end{pmatrix} \quad \text{and} \quad M(\b_{1,2},\ldots,\b_{n_{2},2})\begin{pmatrix} \a_{1,1} \\ \vdots \\ \a_{n_{2},1} \end{pmatrix} = \begin{pmatrix} \s_{1,2}(\l) \\ \vdots \\ \s_{n_{2},2}(\l) \end{pmatrix},
-      \]
-      respectively. Multiplying on the left by the adjugates \(\adj(M(\b_{1,1},\ldots,\b_{n_{1},1}))\) and \(\adj(M(\b_{1,2},\ldots,\b_{n_{2},2}))\) of \(M(\b_{1,1},\ldots,\b_{n_{1},1})\) and \(M(\b_{1,2},\ldots,\b_{n_{2},2})\) respectively and recalling that a matrix times its adjugate is its determinant times the identity, we obtain
-      \[
-        \det(M(\b_{1,1},\ldots,\b_{n_{1},1}))\begin{pmatrix} \a_{1,2} \\ \vdots \\ \a_{n_{1},2} \end{pmatrix} = \adj(M(\b_{1,1},\ldots,\b_{n_{1},1}))\begin{pmatrix} \s_{1,1}(\l) \\ \vdots \\ \s_{n_{1},1}(\l) \end{pmatrix},
+        M(\b_{1,1},\ldots,\b_{n_{1},1})\begin{pmatrix} \a_{1,2} \\ \vdots \\ \a_{n_{1},2} \end{pmatrix} = \begin{pmatrix} \s_{1,1}(\b) \\ \vdots \\ \s_{n_{1},1}(\b) \end{pmatrix},
       \]
       and
       \[
-        \det(M(\b_{1,2},\ldots,\b_{n_{2},2}))\begin{pmatrix} \a_{1,1} \\ \vdots \\ \a_{n_{2},1} \end{pmatrix} = \adj(M(\b_{1,2},\ldots,\b_{n_{2},2}))\begin{pmatrix} \s_{1,2}(\l) \\ \vdots \\ \s_{n_{2},2}(\l) \end{pmatrix}.
+        M(\b_{1,2},\ldots,\b_{n_{2},2})\begin{pmatrix} \a_{1,1} \\ \vdots \\ \a_{n_{2},1} \end{pmatrix} = \begin{pmatrix} \s_{1,2}(\b) \\ \vdots \\ \s_{n_{2},2}(\b) \end{pmatrix},
       \]
-      Since \(\l \in B\), we have \(\s_{i,1}(\l) \in B\) and \(\s_{j,2}(\b) \in B\) for all \(i\) and \(j\). Moreover, \(M(\b_{1,1},\ldots,\b_{n_{1},1})\) and \(M(\b_{1,2},\ldots,\b_{n_{2},2})\) have entries in \(B\) and thus \(\adj(M(\b_{1,1},\ldots,\b_{n_{1},1}))\) and \(\adj(M(\b_{1,2},\ldots,\b_{n_{2},2}))\) do too. This means the two right-hand sides have entries in \(B\) and so the two left-hand sides must as well. It follows from this fact and \cref{disc_as_square_of_embedding_matrix} that \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\a_{i,2} \in B\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\a_{j,1} \in B\) for all \(i\) and \(j\). But as \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\) are in \(A\), \(\a_{i,2} \in L_{2}\), and \(\a_{j,1} \in L_{1}\), we find that \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\a_{i,2} \in B_{2}\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\a_{j,1} \in B_{1}\). Expanding \(\a_{i,2}\) and \(\a_{j,1}\) shows that \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\k_{i,j} \in A\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\k_{i,j} \in A\). From the identity
+      respectively. The embedding matrices and column vectors on the right-hand sides all have entries in \(B\). Cramer's rule together with \cref{disc_as_square_of_embedding_matrix} imply that \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\a_{i,2} \in B\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\a_{j,1} \in B\). As \(B_{1} = L_{1} \cap B\) and \(B_{2} = L_{2} \cap B\), we have \(\a_{i,2} \in B_{2}\) and \(\a_{j,1} \in B_{1}\). Expanding \(\a_{i,2}\) and \(\a_{j,1}\) show that \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\k_{i,j} \in A\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\k_{i,j} \in A\). From the identity
       \[
         k_{i,j} = k_{i,j}(\a_{1}d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})+\a_{2}d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})),
       \]
-      we conclude \(k_{i,j}\) is in \(A\) as desired. This proves \(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}\) is an integral basis for \(B\) over \(A\). We will now compute the discriminant of this basis. As \(\s_{1,1}\s_{1,2},\ldots,\s_{n_{1},1}\s_{n_{2},2}\) are the elements of \(\Hom_{K}(L,\conj{K})\), we have
+      we conclude \(k_{i,j} \in A\). This proves \(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}\) is an integral basis for \(B/A\). The fact that
+      \[
+        B = B_{1}B_{2},
+      \]
+      follows at once. It remains to prove the discriminant formula which will be achieved by decomposing the embedding matrix into blocks. Recall that \(\s_{1,1}\s_{1,2},\ldots,\s_{n_{1},1}\s_{n_{2},2}\) are the elements of \(\Hom_{K}(L,\conj{K})\), we have
       \[
         M(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}) = \begin{pmatrix} \s_{1,1}(\b_{1,1})\s_{1,2}(\b_{1,2}) & \cdots & \s_{1,1}(\b_{n_{1},1})\s_{1,2}(\b_{n_{2},2}) \\ \vdots & & \vdots \\ \s_{n_{1},1}(\b_{1,1})\s_{n_{2},2}(\b_{1,2}) & \cdots & \s_{n_{1},1}(\b_{n_{1},1})\s_{n_{2},2}(\b_{n_{2},2}) \end{pmatrix}.
       \]
-      This latter matrix admits the block factorization
+      This left-hand side admits the block factorization
       \[
         \begin{pmatrix} M(\b_{1,1},\ldots,\b_{n_{1},1}) & & \\ & \ddots & \\ & & M(\b_{1,1},\ldots,\b_{n_{1},1}) \end{pmatrix}\begin{pmatrix} I\s_{1,2}(\b_{1,2}) & \cdots & I\s_{1,2}(\b_{n_{2},2}) \\ \vdots & & \vdots \\ I\s_{n_{2},2}(\b_{1,2}) & \cdots & I\s_{n_{2},2}(\b_{n_{2},2}) \end{pmatrix},
       \]
-      where the second matrix is the Kronecker product \(M(\b_{1,2},\ldots,\b_{n_{2},2}) \ox I\). As \(M(\b_{1,2},\ldots,\b_{n_{2},2}) \ox I\) is \((I \ox M(\b_{1,2},\ldots,\b_{n_{2},2}))P\) for some permutation matrix \(P\), it takes the form
+      where the second matrix is the Kronecker product \(M(\b_{1,2},\ldots,\b_{n_{2},2}) \ox I\). As this Kronecker product can be expressed as \((I \ox M(\b_{1,2},\ldots,\b_{n_{2},2}))P\) for some permutation matrix \(P\), it takes the form
       \[
         \begin{pmatrix} M(\b_{1,2},\ldots,\b_{n_{2},2}) & & \\ & \ddots & \\ & & M(\b_{1,2},\ldots,\b_{n_{2},2}) \end{pmatrix}P,
       \]
       with \(\det(P) = \pm 1\). Putting these decompositions together and applying \cref{disc_as_square_of_embedding_matrix} shows
       \[
-        \d_{L/K}(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}) = d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})^{n_{2}}d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})^{n_{1}}.
+        d_{L/K}(\b_{1,1}\b_{1,2},\ldots,\b_{n_{1},1}\b_{n_{2},2}) = d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})^{n_{2}}d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})^{n_{1}}.
       \]
-      This completes the proof.
+      This proves the discriminant formula.
     \end{proof}
 
-    It is generally very difficult to write down an integral basis explicitly. However, there is one instance in which this is possible. We say that \(B\) is \textbf{monogenic}\index{monogenic} over \(A\) if \(B = A[\b]\) for some \(\b \in B\). It follows immediately that \(1,\b,\ldots,\b^{n-1}\) is an integral basis for \(B/A\) since \(B\) is of rank \(n\). The discriminant of this basis is then given by \cref{equ:Vandermonde_determinant_for_discriminant}. In addition, the traces \(\Trace_{L/K}\) and \(\Trace_{B/A}\) and norms \(\Norm_{L/K}\) and \(\Norm_{B/A}\) agree:
+    It is generally a difficult problem to write down an integral basis explicitly. However, there is one instance in which this is possible. We say that \(B/A\) is \textbf{monogenic}\index{monogenic} if \(B = A[\b]\) for some \(\b \in B\). It follows immediately that \(1,\b,\ldots,\b^{n-1}\) is an integral basis for \(B/A\). The discriminant of this basis is then given by \cref{equ:Vandermonde_determinant_for_discriminant}.
+    
+    Regardless of if \(B/A\) is monogenic or not, if an integral basis exists then the traces \(\Trace_{L/K}\) and \(\Trace_{B/A}\) and norms \(\Norm_{L/K}\) and \(\Norm_{B/A}\) agree.
 
     \begin{proposition}\label{prop:trace_and_norm_reduce_for_integral_basis}
       Let \(A\) be an integrally closed integral domain with field of fractions \(K\), \(L/K\) be a degree \(n\) separable extension, and \(B\) be the integral closure of \(A\) in \(L\). If \(B\) admits an integral basis over \(A\) then
@@ -463,23 +457,26 @@
       for all \(\b \in B\).
     \end{proposition}
     \begin{proof}
-      Let \(\b_{1},\ldots,\b_{n}\) be an integral basis for \(B/A\). Then \(\b_{1},\ldots,\b_{n}\) is also a basis for \(L/K\). It follows that the multiplication by \(\b\) map in \(L\) has the same matrix representation as it does in \(B\). Therefore
+      Let \(\b_{1},\ldots,\b_{n}\) be an integral basis for \(B/A\). Then \(\b_{1},\ldots,\b_{n}\) is also a basis for \(L/K\). It follows that the multiplication by \(\b\) map in \(L\) has the same matrix representation as it does in \(B\). Whence
       \[
-        \Trace_{L/K}(\b) = \Trace_{B/A}(\b) \quad \text{and} \quad \Norm_{L/K}(\b) = \Norm_{B/A}(\b),
+        \Trace_{L/K}(\b) = \Trace_{B/A}(\b) \quad \text{and} \quad \Norm_{L/K}(\b) = \Norm_{B/A}(\b).
       \]
-      as desired.
     \end{proof}
 
-    We now turn to the case of a number field \(K\) of degree \(n\). We write \(\Trace_{K} = \Trace_{K/\Q}\) and \(\Norm_{K} = \Norm_{K/\Q}\) and call these the \textbf{field trace}\index{field trace} and \textbf{field norm}\index{field norm} of \(K\) respectively. Moreover, for any \(\k \in K\) we call \(\Trace_{K}(\k)\) and \(\Norm_{K}(\k)\) the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(\k\) respectively. Then from \cref{prop:trace_and_norm_AKBL,prop:unit_if_and_only_if_AKBL} we see that the trace and norm of algebraic integers are themselves integers and \(\k \in \mc{O}_{K}\) is a unit if and only if \(\Norm_{K}(\k) = \pm 1\) (as these are the only units in \(\Z\)). Moreover, since \(\Z\) is a principal ideal domain \cref{thm:integral_basis_AKBL} implies that \(\mc{O}_{K}\) admits an integral basis over \(\Z\) of degree \(n\). That is, \(\mc{O}_{K}\) is a free abelian group of rank \(n\). Accordingly, we say that \(\a_{1},\ldots,\a_{n}\) is an \textbf{integral basis}\index{integral basis} for \(K\) if it is an integral basis of \(\mc{O}_{K}\) over \(\Z\). Accordingly, we define the \textbf{discriminant}\index{discriminant} \(\D_{K}\) of \(K\) to be the discriminant of \(\mc{O}/\smc{O}\). As \((\Z^{\ast})^{2} = \{1\}\), \(\D_{K}\) is a well-defined integer and satisfies
+    We now turn to the case of a number field \(K\) of degree \(n\). We write \(\Trace_{K} = \Trace_{K/\Q}\) and \(\Norm_{K} = \Norm_{K/\Q}\) and call these the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(K\). Moreover, for any \(\k \in K\) we call \(\Trace_{K}(\k)\) and \(\Norm_{K}(\k)\) the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(\k\). Observe from \cref{prop:trace_and_norm_AKBL,prop:unit_if_and_only_if_AKBL} that the trace and norm of algebraic integers are themselves integers and \(\k \in \mc{O}_{K}\) is a unit if and only if \(\Norm_{K}(\k) = \pm 1\). We also call the nondegenerate symmetric bilinear form
+    \[
+      \Trace_{K/\Q}:K \x K \to \Q \qquad (\k,\l) \mapsto \Trace_{K/\Q}(\k\l),
+    \]
+    the \textbf{trace form}\index{trace form} of \(K\). Moreover, since \(\Z\) is a principal ideal domain \cref{thm:integral_basis_AKBL} implies that \(\mc{O}_{K}/\Z\) admits an integral basis. Whence \(\mc{O}_{K}\) is a free abelian group of rank \(n\). Accordingly, we say that \(\a_{1},\ldots,\a_{n}\) is an \textbf{integral basis}\index{integral basis} for \(K\) if it is an integral basis for \(\mc{O}_{K}/\Z\). Accordingly, we define the \textbf{discriminant}\index{discriminant} \(\D_{K}\) of \(K\) to be the discriminant of \(\mc{O}_{K}/\Z\). As \((\Z^{\ast})^{2} = \{1\}\), \(\D_{K}\) is an integer and satisfies
     \[
       \D_{K} = d_{L/K}(\a_{1},\ldots,\a_{n}),
     \]
-    for any integral basis \(\a_{1},\ldots,\a_{n}\) for \(K\). Moreover, \(\D_{K}\) is nonzero by \cref{prop:trace_and_norm_AKBL,lem:trace_is_nondegenerate} and may very well be negative. In light of \cref{disc_as_square_of_embedding_matrix}, we also have
+    for any integral basis \(\a_{1},\ldots,\a_{n}\) for \(K\). Moreover, \(\D_{K}\) is nonzero since the trace form is nondegenerate and may very well be negative. In light of \cref{disc_as_square_of_embedding_matrix}, we also have
     \[
       |\det(M(\a_{1},\ldots,\a_{n}))| = \sqrt{|\D_{K}|}.
     \]
     Lastly, we say \(K\) is \textbf{monogenic}\index{monogenic} if \(\mc{O}_{K}\) is monogenic over \(\Z\).
-  \fi\iffalse\section{\todo{Dedekind Domains}}
+  \iffalse\section{\todo{Dedekind Domains}}
     Let \(\smc{O}\) be a noetherian integral domain and denote its field of fractions by \(K\). Any nonzero ideal \(\mf{a}\) of \(\smc{O}\) is said to be an \textbf{integral ideal}\index{integral ideal} of \(\smc{O}\). We call any prime integral ideal \(\mf{p}\) of \(\smc{O}\) a \textbf{prime}\index{prime} of \(\smc{O}\) and if \(\mf{p}\) is principal with \(\mf{p} = \a\smc{O}\), with \(\a \in K\) nonzero, we will simply refer to \(\a\) as the prime instead of \(\mf{p}\). In any case, an integral ideal \(\mf{a}\) is just a \(\smc{O}\)-submodule of \(\smc{O}\). Moreover, it is finitely generated since \(\smc{O}\) is noetherian and is therefore a finitely generated \(\smc{O}\)-submodule of \(K\). More generally, we say \(\mf{f}\) is a \textbf{fractional ideal}\index{fractional ideal} of \(\smc{O}\) if \(\mf{f}\) a nonzero finitely generated \(\smc{O}\)-submodule of \(K\). Moreover, we say that a fractional ideal is \textbf{principal}\index{principal} if it is generated by a single element. That is, if \(\mf{f} = \k\smc{O}\) for some nonzero \(\k \in K\). In particular, all integral ideals are fractional ideals and all principal integral ideals are principal fractional ideals. Now let \(\k_{1},\ldots,\k_{r} \in K\) be generators for the fractional ideal \(\mf{f}\). Since \(K\) is the field of fractions of \(\smc{O}\), \(\k_{i} = \frac{\a_{i}}{\d_{i}}\) with \(\a_{i},\d_{i} \in \smc{O}\) and where \(\d_{i}\) is nonzero for \(1 \le i \le r\). Setting \(\d = \d_{1} \cdots \d_{r}\), we have that \(\d\k_{i} \in \smc{O}\) for all \(i\) and hence \(\d\mf{f}\) is an integral ideal. Conversely, if there exists some nonzero \(\d \in \smc{O}\) such that \(\d\mf{f} = \mf{a}\) is an integral ideal then \(\mf{f}\) is a fractional ideal because \(\mf{a}\) is a finitely generated \(\smc{O}\)-submodule of \(K\) and hence \(\mf{f}\) is too. Thus for any fractional ideal \(\mf{f}\), there exists a nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\) such that
     \[
       \mf{f} = \frac{1}{\d}\mf{a}.
@@ -1325,9 +1322,9 @@
       \]
       for some \(\a_{i,j} \in \mf{p}\) for \(1 \le i,j \le r\). These \(r\) equations are equivalent to the identity
       \[
-        ((\a_{ij})-I)\begin{pmatrix} \w_{1} \\ \vdots \\ \w_{r} \end{pmatrix} = \mathbf{0}.
+        ((\a_{i,j})-I)\begin{pmatrix} \w_{1} \\ \vdots \\ \w_{r} \end{pmatrix} = \mathbf{0}.
       \]
-      Let \(d = \det((\a_{ij})-I)\). Then \(d \neq 0\) because expanding the determinant shows \(d \equiv (-1)^{r} \tmod{\mf{p}}\) as \(\a_{i,j} \in \mf{p}\) for all \(i\) and \(j\). Multiplying on the left by the adjugate \(\adj(\a_{ij})-I)\) of \((\a_{ij})-I\) and recalling that a matrix times its adjugate is its determinant times the identity, we obtain
+      Let \(d = \det((\a_{i,j})-I)\). Then \(d \neq 0\) because expanding the determinant shows \(d \equiv (-1)^{r} \tmod{\mf{p}}\) as \(\a_{i,j} \in \mf{p}\) for all \(i\) and \(j\). Multiplying on the left by the adjugate \((\adj(\a_{i,j})-I)\) of \((\a_{i,j})-I\) and recalling that a matrix times its adjugate is its determinant times the identity, we obtain
       \[
         d\begin{pmatrix} \w_{1} \\ \vdots \\ \w_{r} \end{pmatrix} = \mathbf{0}.
       \]

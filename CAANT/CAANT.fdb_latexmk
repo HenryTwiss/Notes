@@ -1,11 +1,11 @@
 # Fdb version 3
-["makeindex CAANT.idx"] 1771337029 "CAANT.idx" "CAANT.ind" "CAANT" 1771337029
-  "CAANT.idx" 1771337029 4627 8fadf20f96e9f0177ab0a5114cf35bf3 "pdflatex"
+["makeindex CAANT.idx"] 1771476372 "CAANT.idx" "CAANT.ind" "CAANT" 1771476437
+  "CAANT.idx" 1771476437 5390 e29e7f6127a03fb4b7a91b342808f5a7 "pdflatex"
   (generated)
   "CAANT.ilg"
   "CAANT.ind"
-["pdflatex"] 1771337029 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1771337029
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" 1771336963 1098 d08c9dea10281cdccd6befdc13e638bd ""
+["pdflatex"] 1771476436 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1771476437
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" 1771337135 1098 d08c9dea10281cdccd6befdc13e638bd ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -199,20 +199,20 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "CAANT.aux" 1771337029 3111 61deb22b9a817a4f885b5bb1152cd5ff "pdflatex"
-  "CAANT.ind" 1771337029 4403 e972728d2d75558d0847cc9aed0d39a7 "makeindex CAANT.idx"
-  "CAANT.out" 1771337029 6321 9c76d25165514d8926e8e9939fd9715b "pdflatex"
-  "CAANT.tex" 1771336963 1098 d08c9dea10281cdccd6befdc13e638bd ""
-  "CAANT.toc" 1771337029 2982 efd2e8027e390fcff4d32e599306ca35 "pdflatex"
-  "Chapters/Algebraic_Integers.aux" 1771337029 4251 f641d0788c0868af45b8b4ea0b22fc4c "pdflatex"
-  "Chapters/Algebraic_Integers.tex" 1771336748 223118 81dfc3c9dbd5b29383749b965881cd26 ""
-  "Chapters/Analytic_L-functions.aux" 1771337029 8795 8a592117c200e8d39fbe13819db76c89 "pdflatex"
+  "CAANT.aux" 1771476437 3111 14bc861ceba294cbde93d2006bc28c1a "pdflatex"
+  "CAANT.ind" 1771476372 4781 c49b5e6d763bbdfc09c0893e802c0ec8 "makeindex CAANT.idx"
+  "CAANT.out" 1771476437 6462 8fedd9b089d0f02ca30ff058bb568cd3 "pdflatex"
+  "CAANT.tex" 1771337135 1098 d08c9dea10281cdccd6befdc13e638bd ""
+  "CAANT.toc" 1771476437 3059 77812e7d9eabb861894a4f65728e9eb5 "pdflatex"
+  "Chapters/Algebraic_Integers.aux" 1771476437 8638 39f3f01861ec965e36f62b92a2337013 "pdflatex"
+  "Chapters/Algebraic_Integers.tex" 1771476435 219709 bb2542ee6f4eb8455eecfaa1e78c97b3 ""
+  "Chapters/Analytic_L-functions.aux" 1771476437 8794 b1cde11a4377bb9c7c766606589b1de5 "pdflatex"
   "Chapters/Analytic_L-functions.tex" 1771297545 85083 b483b032cb3fffa6d24bcb6b0645f96e ""
-  "Chapters/Arithmetic_Functions.aux" 1771337029 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a "pdflatex"
+  "Chapters/Arithmetic_Functions.aux" 1771476436 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a "pdflatex"
   "Chapters/Arithmetic_Functions.tex" 1771297556 8089 282103bc14c7cbc7221ff292366ce485 ""
-  "Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1771337029 9218 4d8f16edc8a6ca6be44b1306e7dd906e "pdflatex"
-  "Chapters/Dirichlet_Characters_and_Exponential_Sums.tex" 1771337028 42890 a0c6022857bf96338dd8708bc4a4b9db ""
-  "Chapters/Dirichlet_Series.aux" 1771337029 10728 33339c4f8cd75e3859aa9d9d2d479d20 "pdflatex"
+  "Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1771476436 9218 4d8f16edc8a6ca6be44b1306e7dd906e "pdflatex"
+  "Chapters/Dirichlet_Characters_and_Exponential_Sums.tex" 1771337127 42890 a0c6022857bf96338dd8708bc4a4b9db ""
+  "Chapters/Dirichlet_Series.aux" 1771476437 10728 4a9b4ba91a663b1d9c0b898a290a6707 "pdflatex"
   "Chapters/Dirichlet_Series.tex" 1771297669 41075 bd42f59b385052483cfd144662255202 ""
   "preamble.tex" 1771336960 5426 a2b02306eac33baa813849fc50f69b21 ""
   (generated)
