@@ -978,6 +978,13 @@ INPUT ./Chapters/Algebraic_Integers.tex
 INPUT Chapters/Algebraic_Integers.tex
 INPUT ./Chapters/Algebraic_Integers.tex
 INPUT Chapters/Algebraic_Integers.tex
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT ./Chapters/Dirichlet_Series.tex
 INPUT ./Chapters/Dirichlet_Series.tex
 INPUT ./Chapters/Dirichlet_Series.tex
@@ -988,6 +995,7 @@ INPUT ./Chapters/Dirichlet_Series.tex
 INPUT Chapters/Dirichlet_Series.tex
 INPUT ./Chapters/Dirichlet_Series.tex
 INPUT Chapters/Dirichlet_Series.tex
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT ./Chapters/Analytic_L-functions.tex
 INPUT ./Chapters/Analytic_L-functions.tex
 INPUT ./Chapters/Analytic_L-functions.tex
@@ -1014,14 +1022,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam1
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm

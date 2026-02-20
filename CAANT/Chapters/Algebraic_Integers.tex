@@ -46,13 +46,13 @@
       for some positive integer \(n\) and \(\b_{i} \in B\). Set \(R = A[\b_{0},\ldots,\b_{n-1}]\). Then \(R[\g]\) is a finitely generated \(R\)-module. As \(B\) is integral over \(A\), \cref{prop:integral_if_finitely_generated} implies that \(R[\g]\) is also a finitely generated \(A\)-module whence \(\g\) is integral over \(A\). As \(\g\) was arbitrary, this proves \(C\) is integral over \(A\).
     \end{proof}
 
-    In light of this result, we define the \textbf{integral closure}\index{integral closure} \(\overline{A}\) of \(A\) in \(B\) by
+    In light of this result, we define the \textbf{integral closure}\index{integral closure} \(\conj{A}\) of \(A\) in \(B\) by
     \[
-      \overline{A} = \{\b \in B:\b \text{ is integral over } A\}.
+      \conj{A} = \{\b \in B:\b \text{ is integral over } A\}.
     \]
-    Clearly \(A \subseteq \overline{A}\). Moreover, we say that \(A\) is \textbf{integrally closed}\index{integrally closed} in \(B\) if \(A = \overline{A}\). As \(A \subseteq \overline{A} \subseteq \overline{\overline{A}}\), \cref{prop:integrality_is_transitive} implies that \(\overline{A}\) is automatically integrally closed in \(B\). It will often be more fruitful to work with the integral closure rather than a generic ring.
+    Then \(\conj{A}\) is a subring of \(B\) by \cref{prop:integral_if_finitely_generated}. Clearly \(A \subseteq \conj{A}\). Moreover, we say that \(A\) is \textbf{integrally closed}\index{integrally closed} in \(B\) if \(A = \conj{A}\). As \(A \subseteq \conj{A} \subseteq \conj{\conj{A}}\), \cref{prop:integrality_is_transitive} implies that \(\conj{A}\) is automatically integrally closed in \(B\). It will often be more fruitful to work with the integral closure rather than a generic ring.
     
-    There is a particular situation of integrally closed rings which is deserving of additional interest. Suppose \(A\) is an integral domain with field of fractions \(K\). We call the integral closure \(\overline{A}\) of \(A\) in \(K\) the \textbf{normalization}\index{normalization} of \(A\) and simply say that \(A\) is \textbf{integrally closed}\index{integrally closed} if \(A\) is equal to its normalization. It turns out that every unique factorization domain is integrally closed.
+    There is a particular situation of integrally closed rings which is deserving of additional interest. Suppose \(A\) is an integral domain with field of fractions \(K\). We call the integral closure \(\conj{A}\) of \(A\) in \(K\) the \textbf{normalization}\index{normalization} of \(A\) and simply say that \(A\) is \textbf{integrally closed}\index{integrally closed} if \(A\) is equal to its normalization. It turns out that every unique factorization domain is integrally closed.
 
     \begin{lemma}\label{lemma:unique_factorization_domains_are_integrally_closed}
       Let \(A\) be a unique factorization domain with field of fractions \(K\). Then \(A\) is integrally closed. In particular, every principal ideal domain is integrally closed.
@@ -69,14 +69,14 @@
       As \(\b\) divides the right-hand side it divides the left-hand side as well. But then \(\b\) is a unit in \(A\) since \((\a,\b) = 1\). This means \(\k \in A\) whence \(A\) is integrally closed. This proves the first statement. The second statement is immediate since every principal ideal domain is a unique factorization domain.
     \end{proof}
     
-    We will often consider the more refined setting: \(A\) is an integrally closed integral domain with field of fractions \(K\), \(L/K\) is a finite separable extension, and \(B\) is the integral closure of \(A\) in \(L\). In this setting, \(L\) is the field of fractions of \(B\) and the elements of \(L\) which are integral over \(A\) have a simple description.
+    We will often consider the more refined setting where \(A\) is an integrally closed integral domain with field of fractions \(K\), \(L/K\) is a finite separable extension, and \(B\) is the integral closure of \(A\) in \(L\). In this setting, \(L\) is the field of fractions of \(B\) and the elements of \(L\) which are integral over \(A\) have a simple description.
 
     \begin{proposition}\label{prop:field_of_fractions_AKBL}
       Let \(A\) be an integrally closed integral domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(B\) be the integral closure of \(A\) in \(L\). Then every \(\l \in L\) is of the form
       \[
         \l = \frac{\b}{\a},
       \]
-      for some \(\b \in B\) and nonzero \(\a \in A\). In particular, \(L\) is the field of fractions of \(B\). Moreover, \(\l \in L\) is integral over \(A\) if and only if the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) has coefficients in \(A\).
+      for some \(\b \in B\) and nonzero \(\a \in A\). In particular, \(L\) is the field of fractions of \(B\) and \(B\) is an integrally closed integral domain. Moreover, \(\l \in L\) is integral over \(A\) if and only if the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) has coefficients in \(A\).
     \end{proposition}
     \begin{proof}
       As \(L/K\) is finite, it is necessarily algebraic so that any \(\l \in L\) satisfies
@@ -87,9 +87,7 @@
       \[
         (\a\l)^{n}+\a'_{n-1}(\a\l)^{n-1}+\cdots+\a'_{0} = 0,
       \]
-      where \(\a'_{i} = \a_{i}\a^{n-1-i}\). Whence \(\a\l\) is integral over \(A\) and thus \(\a\l \in B\). Then \(\a\l = \b\) for some \(\b \in B\) which is equivalent to \(\l = \frac{\b}{\a}\). As \(A \subseteq B\), this also implies that \(L\) is the field of fractions of \(B\).
-      
-      We now prove the last statement. For the forward implication, suppose \(\l\) is integral over \(A\). Then \(\l\) is a root of a monic polynomial \(f(x) \in A[x]\). As \(m_{\l}(x)\) divides \(f(x)\) in \(A[x]\), all of the roots of \(m_{\l}(x)\) are integral over \(A\) too. By Vieta's formulas, the coefficients of \(m_{\l}(x)\) integral over \(A\) as well whence \(m_{\l}(x) \in A[x]\). For the reverse implication, if the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) has coefficients in \(A\) then \(\l\) is automatically integral over \(A\).
+      where \(\a'_{i} = \a_{i}\a^{n-1-i}\). Whence \(\a\l\) is integral over \(A\) and thus \(\a\l \in B\). Then \(\a\l = \b\) for some \(\b \in B\) which is equivalent to \(\l = \frac{\b}{\a}\). It follows at once that \(L\) is the field of fractions of \(B\). As \(B\) is a subring of a field it is an integral domain. It is also integrally closed since \(B\) is the integral closure of \(A\) in \(L\). Whence \(B\) is an integrally closed integral domain. It remains to prove the last statement. For the forward implication, suppose \(\l\) is integral over \(A\). Then \(\l\) is a root of a monic polynomial \(f(x) \in A[x]\). As \(m_{\l}(x)\) divides \(f(x)\) in \(A[x]\), all of the roots of \(m_{\l}(x)\) are integral over \(A\) too. By Vieta's formulas, the coefficients of \(m_{\l}(x)\) integral over \(A\) as well whence \(m_{\l}(x) \in A[x]\). For the reverse implication, if the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) has coefficients in \(A\) then \(\l\) is automatically integral over \(A\).
     \end{proof}
 
     Number fields are a particular instance of the aforementioned setting. A \textbf{number field}\index{number field} \(K\) is a finite extension of \(\Q\). That is, \(K\) is a finite dimensional \(\Q\)-vector space. In particular, \(K/\Q\) is a finite separable extension since \(\Q\) is perfect whence the primitive element theorem applies. Moreover, \(K/\Q\) is Galois if and only if it is normal. We say that the \textbf{degree}\index{degree} of \(K\) is \([K:\Q]\) which is simply the degree of \(K\) as a \(\Q\)-vector space. In the cases of small degrees we will often use the latin derived names \textbf{quadratic}\index{quadratic}, \textbf{cubic}\index{cubic}, etc. Any \(\k \in K\) is called an \textbf{algebraic number}\index{algebraic number}. We define the \textbf{ring of integers}\index{ring of integers} \(\mc{O}_{K}\) of \(K\) to be the integral closure of \(\Z\) in \(K\). In other words,
@@ -99,14 +97,14 @@
     Any \(\a \in \mc{O}_{K}\) is called an \textbf{algebraic integer}\index{algebraic integer}. Note that \(\a\) is an algebraic integer if and only if it is the root of a monic polynomial \(f(x) \in \Z[x]\).
 
     \begin{remark}\label{rem:integers_are_integrally_closed}
-      By \cref{lemma:unique_factorization_domains_are_integrally_closed}, \(\Z\) is integrally closed and therefore the ring of integers for the number field \(\Q\) is exactly \(\Z\).
+      By \cref{lemma:unique_factorization_domains_are_integrally_closed}, \(\Z\) is integrally closed and therefore the ring of integers of \(\Q\) is exactly \(\Z\).
     \end{remark}
 
-    Let \(K\) be a number field of degree \(n\). It follows from \cref{prop:field_of_fractions_AKBL} that \(K\) is the field of fractions of \(\mc{O}_{K}\) and every \(\k \in K\) is of the form
+    It follows from \cref{prop:field_of_fractions_AKBL} that every \(\k \in K\) is of the form
     \[
       \k = \frac{\a}{a},
     \]
-    for some algebraic integer \(\a\) and nonzero integer \(a\). Moreover, \(\k\) is an algebraic integer if and only if the minimal polynomial \(m_{\k}(x)\) of \(\k\) over \(\Q\) has coefficients in \(\Z\).
+    for some algebraic integer \(\a\) and nonzero integer \(a\). In particular, \(K\) is the field of fractions of \(\mc{O}_{K}\) and \(\mc{O}_{K}\) is an integrally closed integral domain. Moreover, \(\k\) is an algebraic integer if and only if the minimal polynomial \(m_{\k}(x)\) of \(\k\) over \(\Q\) has coefficients in \(\Z\).
   \section{Traces and Norms}
     Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). Recall that by fixing a basis for \(B/A\), there is an isomorphism
     \[
@@ -354,7 +352,7 @@
     \[
       B = A\b_{1}+\cdots+A\b_{n}.
     \]
-    This implies \(B\) is a free \(A\)-module of rank \(n\). An integral basis is necessarily a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. However, an integral basis need not always exist. For if \(\l_{1},\ldots,\l_{n}\) is a basis of \(L/K\), \cref{prop:field_of_fractions_AKBL} implies that we can multiply by a nonzero element of \(A\) to ensure that this basis is contained in \(B\). However, \(\l_{1},\ldots,\l_{n}\) need not also be a basis of \(B\) over \(A\). Nevertheless, if \(A\) is a principal ideal domain then we can ensure the existence of an integral basis.
+    Equivalently, \(B\) is a free \(A\)-module of rank \(n\). An integral basis is necessarily a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. However, an integral basis need not always exist. For if \(\l_{1},\ldots,\l_{n}\) is a basis of \(L/K\), \cref{prop:field_of_fractions_AKBL} implies that we can multiply by a nonzero element of \(A\) to ensure that this basis is contained in \(B\). However, \(\l_{1},\ldots,\l_{n}\) need not also be a basis of \(B\) over \(A\). Nevertheless, if \(A\) is a principal ideal domain then we can ensure the existence of an integral basis.
     
     \begin{theorem}\label{thm:integral_basis_AKBL}
       Let \(A\) be a principal ideal domain with field of fractions \(K\), let \(L/K\) be a degree \(n\) separable extension, and let \(B\) be the integral closure of \(A\) in \(L\). Then \(B/A\) admits an integral basis. Moreover, every finitely generated nonzero \(B\)-submodule of \(L\) is a free \(A\)-module of rank \(n\).
@@ -476,109 +474,110 @@
       |\det(M(\a_{1},\ldots,\a_{n}))| = \sqrt{|\D_{K}|}.
     \]
     Lastly, we say \(K\) is \textbf{monogenic}\index{monogenic} if \(\mc{O}_{K}\) is monogenic over \(\Z\).
-  \iffalse\section{\todo{Dedekind Domains}}
-    Let \(\smc{O}\) be a noetherian integral domain and denote its field of fractions by \(K\). Any nonzero ideal \(\mf{a}\) of \(\smc{O}\) is said to be an \textbf{integral ideal}\index{integral ideal} of \(\smc{O}\). We call any prime integral ideal \(\mf{p}\) of \(\smc{O}\) a \textbf{prime}\index{prime} of \(\smc{O}\) and if \(\mf{p}\) is principal with \(\mf{p} = \a\smc{O}\), with \(\a \in K\) nonzero, we will simply refer to \(\a\) as the prime instead of \(\mf{p}\). In any case, an integral ideal \(\mf{a}\) is just a \(\smc{O}\)-submodule of \(\smc{O}\). Moreover, it is finitely generated since \(\smc{O}\) is noetherian and is therefore a finitely generated \(\smc{O}\)-submodule of \(K\). More generally, we say \(\mf{f}\) is a \textbf{fractional ideal}\index{fractional ideal} of \(\smc{O}\) if \(\mf{f}\) a nonzero finitely generated \(\smc{O}\)-submodule of \(K\). Moreover, we say that a fractional ideal is \textbf{principal}\index{principal} if it is generated by a single element. That is, if \(\mf{f} = \k\smc{O}\) for some nonzero \(\k \in K\). In particular, all integral ideals are fractional ideals and all principal integral ideals are principal fractional ideals. Now let \(\k_{1},\ldots,\k_{r} \in K\) be generators for the fractional ideal \(\mf{f}\). Since \(K\) is the field of fractions of \(\smc{O}\), \(\k_{i} = \frac{\a_{i}}{\d_{i}}\) with \(\a_{i},\d_{i} \in \smc{O}\) and where \(\d_{i}\) is nonzero for \(1 \le i \le r\). Setting \(\d = \d_{1} \cdots \d_{r}\), we have that \(\d\k_{i} \in \smc{O}\) for all \(i\) and hence \(\d\mf{f}\) is an integral ideal. Conversely, if there exists some nonzero \(\d \in \smc{O}\) such that \(\d\mf{f} = \mf{a}\) is an integral ideal then \(\mf{f}\) is a fractional ideal because \(\mf{a}\) is a finitely generated \(\smc{O}\)-submodule of \(K\) and hence \(\mf{f}\) is too. Thus for any fractional ideal \(\mf{f}\), there exists a nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\) such that
+  \section{Dedekind Domains}
+    Let \(\smc{O}\) be a noetherian integral domain and denote its field of fractions by \(K\). Any nonzero ideal \(\mf{a}\) of \(\smc{O}\) is said to be an \textbf{integral ideal}\index{integral ideal} of \(\smc{O}\). We call any prime integral ideal \(\mf{p}\) of \(\smc{O}\) a \textbf{prime}\index{prime} of \(\smc{O}\). If \(\mf{p}\) is principal with \(\mf{p} = \a\smc{O}\) for some nonzero \(\a \in K\) we will simply refer to \(\a\) as the prime instead of \(\mf{p}\). In any case, an integral ideal is just a \(\smc{O}\)-submodule of \(\smc{O}\). Integral ideals are necessarily finitely generated as \(\smc{O}\) is noetherian. In particular, they are finitely generated \(\smc{O}\)-submodules of \(K\).
+    
+    More generally, we say \(\mf{f}\) is a \textbf{fractional ideal}\index{fractional ideal} of \(\smc{O}\) if it is a nonzero finitely generated \(\smc{O}\)-submodule of \(K\). The fractional ideal \(\mf{f}\) is said to be \textbf{principal}\index{principal} if it is generated by a single element. That is, if \(\mf{f} = \k\smc{O}\) for some nonzero \(\k \in K\). In particular, all integral ideals are fractional ideals and all principal integral ideals are principal fractional ideals.
+    
+    Let \(\k_{1},\ldots,\k_{r} \in K\) be generators for the fractional ideal \(\mf{f}\). Since \(K\) is the field of fractions of \(\smc{O}\), \(\k_{i} = \frac{\a_{i}}{\d_{i}}\) with \(\a_{i},\d_{i} \in \smc{O}\) where \(\d_{i}\) is nonzero. Setting \(\d = \d_{1} \cdots \d_{r}\), we have that \(\d\k_{i} \in \smc{O}\) whence \(\d\mf{f}\) is an integral ideal. Conversely, if there exists some nonzero \(\d \in \smc{O}\) such that \(\d\mf{f} = \mf{a}\) is an integral ideal then \(\mf{f}\) is a fractional ideal because \(\mf{a}\) is a finitely generated \(\smc{O}\)-submodule of \(K\) and hence \(\mf{f}\) is too. So for any fractional ideal \(\mf{f}\), there exists a nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\) such that
     \[
-      \mf{f} = \frac{1}{\d}\mf{a}.
+      \mf{f} = \frac{1}{\d}\mf{a},
     \]
-    Every fractional ideal is of this form, and integral ideals are precisely those for which \(\d = 1\), and fractional ideals need not be a subgroup of \(\smc{O}\). We will be able to show that an fractional ideal of \(\smc{O}\) factors into a product of primes provided that \(\smc{O}\) satisfies a few more restrictive conditions. Accordingly, we say that a ring is a \textbf{Dedekind domain}\index{Dedekind domain} if it satisfies the following properties:
+    every fractional ideal is of this form, and integral ideals are precisely those for which \(\d = 1\).
+
+    We will now consider a slightly more restrictive setting. This will allow for integral ideals to factor uniquely into a product of primes and for the fractional ideals to form a group. Accordingly, we say that a ring \(\smc{O}\) is a \textbf{Dedekind domain}\index{Dedekind domain} if the following properties are satisfied:
     \begin{enumerate}[label*=(\roman*)]
-      \item It is an integrally closed integral domain.
-      \item It is noetherian.
-      \item Every nonzero prime ideal is maximal.
+      \item \(\smc{O}\) is an integrally closed integral domain.
+      \item \(\smc{O}\) is noetherian.
+      \item Every nonzero prime ideal of \(\smc{O}\) is maximal.
     \end{enumerate}
     In other words, a noetherian integral domain is a Dedekind domain if and only if it is integrally closed and every nonzero prime is maximal.
     
     \begin{remark}
-      \(\Z\) is an integrally closed integral domain by \cref{lemma:unique_factorization_domains_are_integrally_closed}. It is also noetherian since \(\Z\) is a principal ideal domain. Every prime is of the form \(p\Z\) for some prime \(p\) and therefore is maximal because \(\Z/p\Z\) is a field. It follows that \(\Z\) is a Dedekind domain and the primes of \(\Z\) are exactly the primes \(p\).
+      Continuing from \cref{rem:integers_are_integrally_closed}, \(\Z\) is a Dedekind domain as it is an integrally closed principal ideal domain. The primes of \(\Z\) are exactly the primes \(p\).
     \end{remark}
     
-    With this setup, property (ii) can be rephrased as saying that every integral ideal is finitely generated while property (iii) is equivalent to the fact that every prime is maximal. One should think of Dedekind domains as generalizations of \(\Z\). Note that we have not assumed \(\smc{O}\) is a principal ideal domain. In fact, the most interesting Dedekind domains are not principal ideal domains. Our primary concern regarding Dedekind domains will be to show that, while there need not be prime factorization of elements, fractional ideals admit a factorization into a product of primes. We first show containment in one direction for integral ideals:
+    A Dedekind domain \(\smc{O}\) should be thought of as a generalization of \(\Z\) where we have relaxed the condition of being a principal ideal domain. In fact, we have not assumed \(\smc{O}\) is a principal ideal domain and the most interesting Dedekind domains are those which are not principal ideal domains. For Dedekind domains, we will show that being a principal ideal domain is equivalent to being a unique factorization domain. So if \(\smc{O}\) is not a principal ideal domain then unique factorization does not hold. However, it will be possible to remedy most of this as one of our primary aims is to show that integral ideals factor uniquely into a product of primes. This clearly generalizes unique factorization in \(\Z\) which will be enough. We first show containment in one direction for integral ideals:
 
     \begin{lemma}\label{lem:integral_ideal_prime_containment}
-      Let \(\smc{O}\) be a Dedekind domain. For every integral ideal \(\mf{a}\), there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) such that
+      Let \(\smc{O}\) be a Dedekind domain. For every integral ideal \(\mf{a}\) of \(\smc{O}\), there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) of \(\smc{O}\) such that
       \[
         \mf{p}_{1}\cdots\mf{p}_{k} \subseteq \mf{a}.
       \]
     \end{lemma}
     \begin{proof}
-      Let \(\mc{S}\) be the set of integral ideals which do not contain a product of prime integral. Then it suffices to show \(\mc{S}\) is empty. Assuming otherwise and ordering \(\mc{S}\) by inclusion, the fact that \(\smc{O}\) is noetherian implies that there exists a maximal integral ideal \(\mf{a} \in \mc{S}\). Moreover \(\mf{a}\) cannot be prime for otherwise \(\mf{a}\) contains a product of primes (namely itself). Since \(\mf{a}\) is not prime, there exist \(\a_{1},\a_{2} \in \smc{O}\) with \(\a_{1}\a_{2} \in \mf{a}\) and such that \(\a_{1},\a_{2} \notin \mf{a}\). Now define integral ideals
+      Let \(\mc{S}\) be the set of integral ideals which do not contain a product of primes. It suffices to show \(\mc{S}\) is empty. Assuming otherwise and ordering \(\mc{S}\) by inclusion, there exists a maximal integral ideal \(\mf{a} \in \mc{S}\) as \(\smc{O}\) is noetherian. Moreover \(\mf{a}\) cannot be prime. Then there exist \(\a_{1},\a_{2} \in \smc{O}\) with \(\a_{1}\a_{2} \in \mf{a}\) and such that \(\a_{1},\a_{2} \notin \mf{a}\). Define integral ideals
       \[
         \mf{b}_{1} = \mf{a}+\a_{1}\smc{O} \quad \text{and} \quad \mf{b}_{2} = \mf{a}+\a_{2}\smc{O}.
       \]
-      Note that \(\mf{b}_{1}\) and \(\mf{b}_{2}\) strictly contain \(\mf{a}\) because \(\a_{1},\a_{2} \notin \mf{a}\). Moreover, \(\mf{b}_{1}\mf{b}_{2} \subseteq \mf{a}\) because
+      Note that \(\mf{b}_{1}\) and \(\mf{b}_{2}\) strictly contain \(\mf{a}\). Moreover, \(\mf{b}_{1}\mf{b}_{2} \subseteq \mf{a}\) because
       \[
-        \mf{b}_{1}\mf{b}_{2} = (\mf{a}+\a_{1}\smc{O})(\mf{a}+\a_{2}\smc{O}) = \mf{a}^{2}+\a_{1}\smc{O}+\a_{2}\smc{O}+\a_{1}\a_{2}\smc{O},
+        \mf{b}_{1}\mf{b}_{2} = \mf{a}^{2}+\a_{1}\mf{a}+\a_{2}\mf{a}+\a_{1}\a_{2}\smc{O}.
       \]
-      and \(\a_{1}\a_{2} \in \mf{a}\). Maximality of \(\mf{a}\) implies that there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) and \(\mf{q}_{1},\ldots,\mf{q}_{\ell}\) such that
+      Maximality of \(\mf{a}\) implies that there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) and \(\mf{q}_{1},\ldots,\mf{q}_{\ell}\) such that
       \[
         \mf{p}_{1}\cdots\mf{p}_{k} \subseteq \mf{b}_{1} \quad \text{and} \quad \mf{q}_{1}\cdots\mf{q}_{\ell} \subseteq \mf{b}_{2}.
       \]
       But then
       \[
-        \mf{p}_{1}\cdots\mf{p}_{k}\mf{q}_{1}\cdots\mf{q}_{\ell} \subseteq \b_{1}\b_{2} \subseteq \mf{a},
+        \mf{p}_{1}\cdots\mf{p}_{k}\mf{q}_{1}\cdots\mf{q}_{\ell} \subseteq \mf{a},
       \]
-      which contradicts the fact that \(\mf{a} \in \mc{S}\). Hence \(\mc{S}\) is empty as desired.
+      which contradicts the fact that \(\mf{a} \in \mc{S}\). Hence \(\mc{S}\) is empty.
     \end{proof}
 
-    In order to obtain the reverse containment in \cref{lem:integral_ideal_prime_containment}, we need to do more work. Precisely, we want to show that every integral ideal factors into a product of primes. Let \(\mf{p}\) be a prime. We define \(\mf{p}^{-1}\) by
+    More work will be necessary obtain reverse containment. To this end, we being by constructing a fractional ideal associated to every prime which will turn out to be the inverse. Let \(\mf{p}\) be a prime. We define \(\mf{p}^{-1}\) by
     \[
       \mf{p}^{-1} = \{\k \in K:\k\mf{p} \subseteq \smc{O}\}.
     \]
-    It turns out that \(\mf{p}^{-1}\) is a fractional ideal. Indeed, since \(\mf{p}\) is an integral ideal there exists a nonzero \(\a \in \mf{p}\). By definition of \(\mf{p}^{-1}\), we have that \(\a\mf{p}^{-1} \subseteq \smc{O}\). Hence \(\a\mf{p}^{-1}\) is an integral ideal and therefore \(\mf{p}^{-1}\) is a fractional ideal. Unlike integral ideals, \(1 \in \mf{p}^{-1}\) so that \(\mf{p}^{-1}\) contains units. The following proposition proves a stronger version of this and more:
+    Then \(\mf{p}^{-1}\) is a fractional ideal. Indeed, since \(\mf{p}\) is an integral ideal there exists a nonzero \(\a \in \mf{p}\). The definition of \(\mf{p}^{-1}\) implies \(\a\mf{p}^{-1} \subseteq \smc{O}\). Hence \(\a\mf{p}^{-1}\) is an integral ideal and therefore \(\mf{p}^{-1}\) is a fractional ideal. Unlike integral ideals, \(1 \in \mf{p}^{-1}\) so that \(\mf{p}^{-1}\) contains units.
 
     \begin{lemma}\label{lem:inverse_for_prime_ideals}
-      Let \(\smc{O}\) be a Dedekind domain and \(\mf{p}\) be a prime. Then the following hold:
-      \begin{enumerate}[label*=(\roman*)]
-        \item
-        \[
-          \smc{O} \subset \mf{p}^{-1}.
-        \]
-        \item
-        \[
-          \mf{p}^{-1}\mf{p} = \smc{O}.
-        \]
-      \end{enumerate}
+      Let \(\smc{O}\) be a Dedekind domain and \(\mf{p}\) be a prime of \(\smc{O}\). Then
+      \[
+        \smc{O} \subset \mf{p}^{-1} \quad \text{and} \quad \mf{p}^{-1}\mf{p} = \smc{O}.
+      \]
     \end{lemma}
     \begin{proof}
-      We will prove the latter two statement separately:
-      \begin{enumerate}[label*=(\roman*)]
-        \item Clearly \(\smc{O} \subseteq \mf{p}^{-1}\) so it suffices to show that \(\mf{p}^{-1}-\smc{O}\) is nonempty. To this end, let \(\a \in \mf{p}\) be nonzero. By \cref{lem:integral_ideal_prime_containment} let \(k \ge 1\) be the minimal integer such that there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) with
-        \[
-          \mf{p}_{1} \cdots \mf{p}_{k} \subseteq \a\smc{O}.
-        \]
-        As \(\a \in \mf{p}\), we have \(\a\smc{O} \subseteq \mf{p}\). Since \(\mf{p}\) is prime, there must be some \(i\) with \(1 \le i \le k\) such that \(\mf{p}_{i} \subseteq \mf{p}\). Without loss of generality, we may assume \(\mf{p}_{1} \subseteq \mf{p}\). As primes are maximal since \(\smc{O}\) is noetherian, we conclude \(\mf{p}_{1} = \mf{p}\). Moreover, since \(k\) is minimal we must have
-        \[
-          \mf{p}_{2} \cdots \mf{p}_{k} \not\subseteq \a\smc{O}.
-        \]
-        Hence there exists \(\b \in \mf{p}_{2} \cdots \mf{p}_{k}\) with \(\b \notin \a\smc{O}\). We will now show that \(\b\a^{-1}\) is an element in \(\mf{p}^{-1}-\smc{O}\). Since \(\mf{p}_{1} = \mf{p}\), what we have previously shown implies \(\b\mf{p} \subseteq \a\smc{O}\) and hence \(\b\a^{-1}\mf{p} \in \smc{O}\) which means \(\b\a^{-1} \in \mf{p}^{-1}\). But as \(\b \notin \a\smc{O}\), we also have \(\b\a^{-1} \notin \smc{O}\). Hence \(\b\a^{-1} \in \mf{p}^{-1}-\smc{O}\) which proves (i).
-        \item By (i) and the definition of \(\mf{p}^{-1}\), we have \(\mf{p} \subseteq \mf{p}^{-1}\mf{p} \subseteq \smc{O}\). Since \(\mf{p}\) is maximal because \(\smc{O}\) is noetherian, it follows that \(\mf{p}^{-1}\mf{p}\) is either \(\mf{p}\) or \(\smc{O}\). So it suffices to show that the first case cannot hold. Assume by contradiction that \(\mf{p}^{-1}\mf{p} = \mf{p}\). Let \(\w_{1},\ldots,\w_{r}\) generate \(\mf{p}\) and let \(\a \in \mf{p}^{-1}-\smc{O}\) which exists by (i). Then \(\a\w_{i} \in \mf{p}^{-1}\mf{p}\) for \(1 \le i \le r\) and hence \(\a\mf{p} \subseteq \mf{p}^{-1}\mf{p}\). By our assumption, this further implies that \(\a\mf{p} \subseteq \mf{p}\). But then
-        \[
-          \a\w_{i} = \sum_{1 \le j \le r}\a_{i,j}\w_{j},
-        \]
-        with \(\a_{i,j} \in \smc{O}\) for \(1 \le i,j \le r\). We can rewrite this as,
-        \[
-          (\a-\a_{i,i})\w_{i}-\sum_{\substack{1 \le j \le r \\ j \neq i}}\a_{i,j}\w_{j} = 0,
-        \]
-        for all \(i\). These \(r\) equations are equivalent to the identity
-        \[
-          \begin{pmatrix} \a-\a_{1,1} & \a_{1,2} & \cdots & -\a_{1,r} \\ -\a_{2,1} & \a-\a_{2,2} & & \\ \vdots & & \ddots & \\ -\a_{r,1} & & & \a-\a_{r,r} \end{pmatrix}\begin{pmatrix} \w_{1} \\ \w_{2} \\ \vdots \\ \w_{r} \end{pmatrix} = \mathbf{0}.
-        \]
-        Thus the determinant of the matrix on the left-hand side must be zero. But this means \(\a\) is a root of the characteristic polynomial \(\det(xI-(\a_{i,j}))\) which is a monic polynomial with coefficients \(\smc{O}\). As \(\smc{O}\) is integrally closed, \(\a \in \smc{O}\) which is a contraction. Thus \(\mf{p}^{-1}\mf{p} = \smc{O}\) proving (ii).
-      \end{enumerate}
+      We will first prove the containment. As \(\smc{O} \subseteq \mf{p}^{-1}\), it suffices to show \(\mf{p}^{-1}-\smc{O}\) is nonempty. To this end, let \(\a \in \mf{p}\) be nonzero. By \cref{lem:integral_ideal_prime_containment} let \(k\) be the smallest positive integer such that there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) with
+      \[
+        \mf{p}_{1} \cdots \mf{p}_{k} \subseteq \a\smc{O}.
+      \]
+      As \(\a\smc{O} \subseteq \mf{p}\) and \(\mf{p}\) is prime, there must be some \(\mf{p}_{i}\) such that \(\mf{p}_{i} \subseteq \mf{p}\). Without loss of generality, we may assume \(\mf{p}_{1} \subseteq \mf{p}\). As primes are maximal in \(\smc{O}\), we conclude \(\mf{p}_{1} = \mf{p}\). Minimality of \(k\) forces
+      \[
+        \mf{p}_{2} \cdots \mf{p}_{k} \not\subseteq \a\smc{O}.
+      \]
+      Hence there exists \(\b \in \mf{p}_{2} \cdots \mf{p}_{k}\) with \(\b \notin \a\smc{O}\). We claim \(\b\a^{-1} \in \mf{p}^{-1}-\smc{O}\). Since \(\mf{p}_{1} = \mf{p}\), what we have previously shown implies \(\b\mf{p} \subseteq \a\smc{O}\) whence \(\b\a^{-1}\mf{p} \in \smc{O}\) which means \(\b\a^{-1} \in \mf{p}^{-1}\). But as \(\b \notin \a\smc{O}\), we also have \(\b\a^{-1} \notin \smc{O}\). Hence \(\b\a^{-1} \in \mf{p}^{-1}-\smc{O}\) as desired.
+        
+      Now let us prove the identity. Observe that
+      \[
+        \mf{p} \subseteq \mf{p}^{-1}\mf{p} \subseteq \smc{O}.
+      \]
+      Since \(\mf{p}\) is maximal, it follows that \(\mf{p}^{-1}\mf{p}\) is either \(\mf{p}\) or \(\smc{O}\). So it suffices to show that the first case cannot hold. Assume by contradiction that \(\mf{p}^{-1}\mf{p} = \mf{p}\). Let \(\w_{1},\ldots,\w_{r}\) be generators of \(\mf{p}\) and let \(\a \in \mf{p}^{-1}-\smc{O}\). Then \(\a\w_{i} \in \mf{p}^{-1}\mf{p}\) whence \(\a\mf{p} \subseteq \mf{p}^{-1}\mf{p}\) and \(\a\mf{p} \subseteq \mf{p}\). But then
+      \[
+        \a\w_{i} = \sum_{j}\a_{i,j}\w_{j},
+      \]
+      with \(\a_{i,j} \in \smc{O}\). These \(r\) equations are equivalent to the identity
+      \[
+        \begin{pmatrix} \a-\a_{1,1} & \a_{1,2} & \cdots & -\a_{1,r} \\ -\a_{2,1} & \a-\a_{2,2} & & \\ \vdots & & \ddots & \\ -\a_{r,1} & & & \a-\a_{r,r} \end{pmatrix}\begin{pmatrix} \w_{1} \\ \w_{2} \\ \vdots \\ \w_{r} \end{pmatrix} = \mathbf{0}.
+      \]
+      Thus the determinant of the matrix on the left-hand side must be zero. But this means \(\a\) is a root of the characteristic polynomial \(\det(xI-(\a_{i,j}))\) which is a monic polynomial with coefficients \(\smc{O}\). As \(\smc{O}\) is integrally closed, \(\a \in \smc{O}\) which is a contraction. Thus \(\mf{p}^{-1}\mf{p} = \smc{O}\).
     \end{proof}
 
-    We can now show that every integral ideal factors uniquely into a product of primes (up to reordering of the factors):
+    We can now show that every integral ideal factors uniquely into a product of primes.
 
     \begin{theorem}\label{thm:unique_product_prime_ideals}
-      Let \(\smc{O}\) be a Dedekind domain. Then for every integral ideal \(\mf{a}\) there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) such that \(\mf{a}\) factors as
+      Let \(\smc{O}\) be a Dedekind domain. Then for every integral ideal \(\mf{a}\) of \(\smc{O}\) there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) of \(\smc{O}\) such that \(\mf{a}\) factors as
       \[
         \mf{a} = \mf{p}_{1} \cdots \mf{p}_{k}.
       \]
       Moreover, this factorization is unique up to reordering of the factors.
     \end{theorem}
     \begin{proof}
-      We first prove existence and then uniqueness. For existence, let \(\mc{S}\) be the set of integral ideals that are not a product of primes. We will show that \(\mc{S}\) is empty. Assuming otherwise and ordering \(\mc{S}\) by inclusion, the fact that \(\smc{O}\) is noetherian implies that there exists a maximal integral ideal \(\mf{a} \in \mc{S}\). Necessarily \(\mf{a}\) is not prime and since primes are maximal in \(\smc{O}\), there is some prime \(\mf{p}_{1}\) for which \(\mf{a} \subset \mf{p}_{1}\). Then by \cref{lem:inverse_for_prime_ideals} (ii), we have \(\mf{p}_{1}^{-1}\mf{a} \subset \smc{O}\) so that \(\mf{p}_{1}^{-1}\mf{a}\) is also an integral ideal. Also, \cref{lem:inverse_for_prime_ideals} (i) implies that \(\mf{a} \subset \mf{a}\mf{p}_{1}^{-1}\). By maximality of \(\mf{a}\), \(\mf{a}\mf{p}_{1}^{-1}\) factors into a product of primes. That is, there exist primes \(\mf{p}_{2},\ldots,\mf{p}_{k}\) such that
+      We first prove existence and then uniqueness. For existence, let \(\mc{S}\) be the set of integral ideals that are not a product of primes. We will show that \(\mc{S}\) is empty. Assuming otherwise and ordering \(\mc{S}\) by inclusion, there exists a maximal integral ideal \(\mf{a} \in \mc{S}\) as \(\smc{O}\) is noetherian. Necessarily \(\mf{a}\) is not prime. Since primes are maximal in \(\smc{O}\), there is some prime \(\mf{p}_{1}\) for which \(\mf{a} \subset \mf{p}_{1}\). Then \cref{lem:inverse_for_prime_ideals} implies
+      \[
+        \mf{a} \subset \mf{a}\mf{p}_{1}^{-1} \subset \smc{O}.
+      \]
+      In particular, \(\mf{a}\mf{p}_{1}^{-1}\) is an integral ideal. By maximality of \(\mf{a}\), \(\mf{a}\mf{p}_{1}^{-1}\) factors into a product of primes. That is, there exist primes \(\mf{p}_{2},\ldots,\mf{p}_{k}\) such that
       \[
         \mf{a}\mf{p}_{1}^{-1} = \mf{p}_{2},\ldots,\mf{p}_{k}.
       \]
@@ -586,80 +585,75 @@
       \[
         \mf{a} = \mf{p}_{1},\ldots,\mf{p}_{k},
       \]
-      so that \(\mf{a}\) factors into a product of primes which contradicts the fact that \(\mf{a} \in \mc{S}\). Hence \(\mc{S}\) is empty thus proving the existence of such a factorization. Now we prove uniqueness. Suppose that \(\mf{a}\) admits factorizations
+      which is a contradiction. Therefore \(\mc{S}\) is empty thus proving the existence of such a factorization.
+      
+      Now we prove uniqueness. Suppose \(\mf{a}\) admits factorizations
       \[
         \mf{a} = \mf{p}_{1},\ldots,\mf{p}_{k} \quad \text{and} \quad \mf{a} = \mf{q}_{1},\ldots,\mf{q}_{\ell},
       \]
-      for primes \(\mf{p}_{i}\) and \(\mf{q}_{j}\) with \(1 \le i \le k\) and \(1 \le j \le \ell\). Since \(\mf{p}_{1}\) is prime, there is some \(j\) for which \(\mf{q}_{j} \subseteq \mf{p}_{1}\). Without loss of generality, we may assume \(\mf{q}_{1} \subseteq \mf{p}_{1}\) and since primes are maximal in \(\smc{O}\) we have \(\mf{q}_{1} = \mf{p}_{1}\). Then
+      for primes \(\mf{p}_{i}\) and \(\mf{q}_{j}\). Since \(\mf{p}_{1}\) is prime, there is some \(j\) for which \(\mf{q}_{j} \subseteq \mf{p}_{1}\). Without loss of generality, we may assume \(\mf{q}_{1} \subseteq \mf{p}_{1}\) and since primes are maximal in \(\smc{O}\) we have \(\mf{q}_{1} = \mf{p}_{1}\). Then
       \[
         \mf{p}_{2},\ldots,\mf{p}_{k} = \mf{q}_{2},\ldots,\mf{q}_{\ell}.
       \]
-      Repeating this process, we see that \(k = \ell\) and \(\mf{q}_{i} = \mf{p}_{i}\) for all \(i\). This proves uniqueness of the factorization.
+      Repeating this process, we see that the factorizations are the same. This proves uniqueness of the factorization.
     \end{proof}
 
-    As a near immediate corollary of \cref{thm:unique_product_prime_ideals}, all fractional ideal admits a factorization into a product of primes and their inverses (up to reordering of the factors):
+    As a near immediate corollary, fractional ideal admits analogous factorizations.
 
     \begin{corollary}\label{cor:fractional_ideal_prime_factorization}
-      Let \(\smc{O}\) be a Dedekind domain. Then for every fractional ideal \(\mf{f}\) there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) and \(\mf{q}_{1},\ldots,\mf{q}_{\ell}\) such that \(\mf{f}\) factors as
+      Let \(\smc{O}\) be a Dedekind domain. Then for every fractional ideal \(\mf{f}\) of \(\smc{O}\) there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) and \(\mf{q}_{1},\ldots,\mf{q}_{\ell}\) of \(\smc{O}\) such that \(\mf{f}\) factors as
       \[
         \mf{f} = \mf{p}_{1} \cdots \mf{p}_{k}\mf{q}_{1}^{-1},\ldots,\mf{q}_{\ell}^{-1}.
       \]
       Moreover, this factorization is unique up to reordering of the factors.
     \end{corollary}
     \begin{proof}
-      If \(\mf{f}\) is a fractional ideal then there exists a nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\) such that \(\mf{f} = \frac{1}{\d}\mf{a}\). In particular, \(\mf{a}\) and \(\d\smc{O}\) are integral ideals such that \(\d\smc{O}\mf{f} = \mf{a}\). By \cref{thm:unique_product_prime_ideals}, \(\mf{a}\) and \(\d\smc{O}\) admit unique factorizations
+      Write \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\). By \cref{thm:unique_product_prime_ideals}, \(\mf{a}\) and \(\d\smc{O}\) admit unique factorizations
       \[
         \mf{a} = \mf{p}_{1} \cdots \mf{p}_{k} \quad \text{and} \quad \d\smc{O} = \mf{q}_{1},\ldots,\mf{q}_{\ell},
       \]
       for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) and \(\mf{q}_{1},\ldots,\mf{q}_{\ell}\) up to reordering of the factors. Hence
       \[
-        \mf{q}_{1},\ldots,\mf{q}_{\ell}\mf{f} = \mf{p}_{1} \cdots \mf{p}_{k},
+        \mf{f} = \mf{p}_{1} \cdots \mf{p}_{k}\mf{q}_{1}^{-1},\ldots,\mf{q}_{\ell}^{-1}.
       \]
-      which is equivalent to the factorization for \(\mf{f}\).
     \end{proof}
 
-    By \cref{cor:fractional_ideal_prime_factorization}, for any fractional ideal \(\mf{f}\) there exist distinct prime \(\mf{p}_{1},\ldots,\mf{p}_{r}\) such that \(\mf{f}\) admits a factorization
+    So for any fractional ideal \(\mf{f}\) there exist distinct prime \(\mf{p}_{1},\ldots,\mf{p}_{r}\) such that \(\mf{f}\) admits a factorization
     \[
       \mf{f} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}},
     \]
-    with \(e_{i} \in \Z-\{0\}\) for all \(i\), called the \textbf{prime factorization}\index{prime factorization} of \(\mf{f}\) with \textbf{prime factors}\index{prime factors} \(\mf{p}_{1},\ldots,\mf{p}_{r}\). In particular, the prime factorization of an integral ideal \(\mf{a}\) is of the form
+    for some nonzero integers \(e_{i}\). This is called the \textbf{prime factorization}\index{prime factorization} of \(\mf{f}\) with \textbf{prime factors}\index{prime factors} \(\mf{p}_{1},\ldots,\mf{p}_{r}\). In particular, the prime factorization of an integral ideal \(\mf{a}\) is of the form
     \[
       \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}},
     \]
-    with \(e_{i} \ge 1\) for all \(i\). Accordingly, for any two integral ideal \(\mf{a}\) and \(\mf{b}\) we say that \(\mf{a}\) \textbf{divides}\index{divides} \(\mf{b}\) and write \(\mf{a} \mid \mf{b}\) if \(\mf{b} \subseteq \mf{a}\). Sometimes this condition is expressed as \textit{to contain is to divide} or \textit{to divide is to contain}. By the prime factorization of fractional ideals, this is equivalent to the fact that every prime power factor of \(\mf{a}\) appears in the prime factorization of \(\mf{b}\). We also say that \(\mf{a}\) \textbf{exactly divides}\index{exactly divides} \(\mf{b}\) and write \(\mf{a} \mid\mid \mf{b}\) if \(\mf{a}\) divides \(\mf{b}\) but no power of \(\mf{a}\) divides \(\mf{b}\). This is equivalent to the fact that every prime power factor of \(\mf{a}\) appears in the prime factorization of \(\mf{b}\) but not for any power of \(\mf{a}\). In the case of a prime \(\mf{p}\) and an integral ideal \(\mf{a}\), \(\mf{p} \mid \mf{a}\) if and only if \(\mf{p}\) is a prime factor of \(\mf{a}\) and \(\mf{p}^{e} \mid\mid \mf{a}\), for some \(e \ge 1\), if and only if \(\mf{p}^{e}\) is exactly the power of \(\mf{p}\) appearing in the prime factorization of \(\mf{a}\). Moreover, if \(\mf{a} \mid \mf{p}\) then \(\mf{a} = \mf{p}\). The \textbf{greatest common divisor}\index{greatest common divisor} \((\mf{a},\mf{b})\) of \(\mf{a}\) and \(\mf{b}\) is defined to be the integral ideal that all other common integral ideal divisors divide. Since to divide is to contain, \((\mf{a},\mf{b})\) is the smallest ideal that contains both \(\mf{a}\) and \(\mf{b}\). This is \(\mf{a}+\mf{b}\) and so \((\mf{a},\mf{b}) = \mf{a}+\mf{b}\). The \textbf{least common multiple}\index{least common multiple} \([\mf{a},\mf{b}]\) of \(\mf{a}\) and \(\mf{b}\) is defined to be the integral ideal that divides all other common multiples. Since to divide is to contain, \([\mf{a},\mf{b}]\) is the largest integral ideal that is contained in both \(\mf{a}\) and \(\mf{b}\). This is \(\mf{a} \cap \mf{b}\) and so \([\mf{a},\mf{b}] = \mf{a} \cap \mf{b}\). Moreover, we say that \(\mf{a}\) and \(\mf{b}\) are \textbf{relatively prime}\index{relatively prime} if \((\mf{a},\mf{b}) = \smc{O}\). In other words, we have
+    for some positive integers \(e_{i}\). Accordingly, for any two integral ideal \(\mf{a}\) and \(\mf{b}\) we say that \(\mf{a}\) \textbf{divides}\index{divides} \(\mf{b}\) and write \(\mf{a} \mid \mf{b}\) if \(\mf{b} \subseteq \mf{a}\). Sometimes this condition is expressed as \textit{to contain is to divide} or \textit{to divide is to contain}. By the prime factorization of fractional ideals, this is equivalent to the fact that every prime power factor of \(\mf{a}\) appears in the prime factorization of \(\mf{b}\). We also say that \(\mf{a}\) \textbf{exactly divides}\index{exactly divides} \(\mf{b}\) and write \(\mf{a} \mid\mid \mf{b}\) if \(\mf{a}\) divides \(\mf{b}\) but no power of \(\mf{a}\) divides \(\mf{b}\). This is equivalent to the fact that every prime power factor of \(\mf{a}\) appears in the prime factorization of \(\mf{b}\) but not for any power of \(\mf{a}\). In the case of a prime \(\mf{p}\) and an integral ideal \(\mf{a}\), \(\mf{p} \mid \mf{a}\) if and only if \(\mf{p}\) is a prime factor of \(\mf{a}\) and \(\mf{p}^{e} \mid\mid \mf{a}\) for some positive integer \(e\) if and only if \(\mf{p}^{e}\) is exactly the power of \(\mf{p}\) appearing in the prime factorization of \(\mf{a}\). Moreover, if \(\mf{a} \mid \mf{p}\) then \(\mf{a} = \mf{p}\). The \textbf{greatest common divisor}\index{greatest common divisor} \((\mf{a},\mf{b})\) of \(\mf{a}\) and \(\mf{b}\) is defined to be the integral ideal that all other common integral ideal divisors divide. Since to divide is to contain, \((\mf{a},\mf{b})\) is the smallest ideal that contains both \(\mf{a}\) and \(\mf{b}\). This is \(\mf{a}+\mf{b}\) and so \((\mf{a},\mf{b}) = \mf{a}+\mf{b}\). The \textbf{least common multiple}\index{least common multiple} \([\mf{a},\mf{b}]\) of \(\mf{a}\) and \(\mf{b}\) is defined to be the integral ideal that divides all other common multiples. Since to divide is to contain, \([\mf{a},\mf{b}]\) is the largest integral ideal that is contained in both \(\mf{a}\) and \(\mf{b}\). This is \(\mf{a} \cap \mf{b}\) and so \([\mf{a},\mf{b}] = \mf{a} \cap \mf{b}\). Lastly, we say that \(\mf{a}\) and \(\mf{b}\) are \textbf{relatively prime}\index{relatively prime} if \((\mf{a},\mf{b}) = \smc{O}\). In other words, \(\mf{a}\) and \(\mf{b}\) are comaximal which is to say
     \[
       \mf{a}+\mf{b} = \smc{O}.
     \]
-    This is equivalent to the prime factorizations of \(\mf{a}\) and \(\mf{b}\) containing distinct primes. In particular, distinct primes and their powers are relatively prime. Moreover, if \(\mf{a}\) and \(\mf{b}\) and relatively prime then we also have
-    \[
-      \mf{a} \cap \mf{b} = \mf{a}\mf{b}.
-    \]
-    The reverse containment is obvious. For the forward containment, since \(\mf{a}+\mf{b} = \smc{O}\) there exists \(\a \in \mf{a}\) and \(\b \in \mf{b}\) such that \(\a+\b = 1\). Now let \(\g \in \mf{a} \cap \mf{b}\). Then \(\g = \g\a+\g\b\) and hence \(\g \in \mf{a}\mf{b}\). The reverse containment follows which proves equality. Just as it is common to suppress the fundamental theorem of arithmetic and just state the prime factorization of an integer, we suppress referencing \cref{thm:unique_product_prime_ideals} and simply state the prime factorization of a fractional ideal. We can now show that for a Dedekind domain, being a principal ideal domain is equivalent to being a unique factorization domain:
+    This is equivalent to the prime factorizations of \(\mf{a}\) and \(\mf{b}\) containing distinct primes. In particular, distinct primes and their powers are relatively prime. As these integral ideals are comaximal, we also have \(\mf{a} \cap \mf{b} = \mf{a}\mf{b}\). In terms of the least common multiple, this means \([\mf{a},\mf{b}] = \mf{a}\mf{b}\).
+    
+    Just as it is common to suppress the fundamental theorem of arithmetic and just state the prime factorization of an integer, we suppress referencing \cref{thm:unique_product_prime_ideals} and simply state the prime factorization of a fractional ideal. We can now show that for a Dedekind domain, being a principal ideal domain is equivalent to being a unique factorization domain.
 
     \begin{proposition}\label{prop:UDF_PID_equivalence_for_Dedekind}
       Let \(\smc{O}\) be a Dedekind domain. Then \(\smc{O}\) is a principal ideal domain if and only if it is a unique factorization domain.
     \end{proposition}
     \begin{proof}
-      The forward implication is trivial since every principal ideal domain is a unique factorization domain. For the reverse implication, suppose \(\smc{O}\) is a unique factorization domain. Since every integral ideal factors into a product of primes by \cref{thm:unique_product_prime_ideals} and the product of principal integral ideals is principal, it suffices to show that primes are principal. So let \(\mf{p}\) be a prime. Then there exists nonzero \(\a \in \mf{p}\) and \(\a\) is not a unit since \(\mf{p}\) is prime (primes are necessarily proper). Since \(\smc{O}\) is a unique factorization domain, we may write
-      \[
-        \a = \mu\rho_{1}^{e_{1}} \cdots \rho_{r}^{e_{r}},
-      \]
-      for some unit \(\mu\) and primes \(\rho_{i} \in \smc{O}\) and integers \(e_{i} \ge 1\) for \(1 \le i \le r\) with \(r \ge 1\). Since \(\mf{p}\) is prime, it follows that there is some \(i\) such that \(\rho_{i} \in \mf{p}\). Without loss of generality, we may assume \(\rho_{1} \in \mf{p}\). Then the integral ideal \(\rho_{1}\smc{O}\) satisfies \(\rho_{1}\smc{O} \subseteq \mf{p}\). As \(\rho_{1}\) is prime and \(\smc{O}\) is a unique factorization domain, \(\rho_{1}\smc{O}\) is a prime and hence maximal since \(\smc{O}\) is also a Dedekind domain. Thus \(\rho_{1}\smc{O} = \mf{p}\) and hence \(\mf{p}\) is principal completing the proof.
+      The forward implication is immediate as every principal ideal domain is a unique factorization domain. For the reverse implication, suppose \(\smc{O}\) is a unique factorization domain. As every integral ideal factors into a product of primes by \cref{thm:unique_product_prime_ideals} and the product of principal integral ideals is principal, it suffices to show that primes are principal. Let \(\mf{p}\) be a prime. Then there exists nonzero \(\a \in \mf{p}\) and \(\a\) is not a unit since \(\mf{p}\) a proper ideal. Since \(\smc{O}\) is a unique factorization domain, let \(\a = \mu\rho_{1}^{e_{1}} \cdots \rho_{r}^{e_{r}}\) be the prime factorization of \(\a\). Since \(\mf{p}\) is prime, it follows that there is some \(i\) such that \(\rho_{i} \in \mf{p}\). Without loss of generality, we may assume \(\rho_{1} \in \mf{p}\). Then the integral ideal \(\rho_{1}\smc{O}\) satisfies \(\rho_{1}\smc{O} \subseteq \mf{p}\). As \(\rho_{1}\) is prime, \(\rho_{1}\smc{O}\) is a prime and hence maximal since prime ideals are maximal in \(\smc{O}\). Whence \(\rho_{1}\smc{O} = \mf{p}\) proving \(\mf{p}\) is principal.
     \end{proof}
 
-    With the prime factorization in hand, we will discuss the group structure of the fractional ideals of \(\smc{O}\). Let \(I_{\smc{O}}\) denote the set of fractional ideals of \(\smc{O}\). We call \(I_{\smc{O}}\) the \textbf{ideal group}\index{ideal group} of \(\smc{O}\). The following theorem shows that \(I_{\smc{O}}\) is indeed a group:
+    With the prime factorization in hand, we will discuss the group structure of the fractional ideals of \(\smc{O}\). Let \(I_{\smc{O}}\) denote the set of fractional ideals of \(\smc{O}\). We call \(I_{\smc{O}}\) the \textbf{ideal group}\index{ideal group} of \(\smc{O}\). This is indeed a group as the following theorem demonstrates:
 
     \begin{theorem}\label{thm:ideal_group_is_a_group}
       Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\). Then \(I_{\smc{O}}\) is an abelian group with identity \(\smc{O}\).
     \end{theorem}
     \begin{proof}
-      It is clear that the product of fractional ideals is a fractional ideal. Associativity and commutativity of \(I_{\smc{O}}\) are also obvious. The identity is \(\smc{O}\) because every fractional ideal is a finitely generated \(\smc{O}\)-submodule of \(K\). It follows that \(\mf{p}^{-1}\) is the inverse of any prime \(\mf{p}\) by \cref{lem:inverse_for_prime_ideals} (ii). Therefore every prime is invertible. If \(\mf{a}\) is a integral ideal then it admits a prime factorization \(\mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}\) and then \(\mf{b} = \mf{p}_{1}^{-e_{1}} \cdots \mf{p}_{r}^{-e_{r}}\) is its inverse. Hence every integral ideal is invertible. If \(\mf{f}\) is a fractional ideal, there exists a nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\) such that \(\mf{f} = \frac{1}{\d}\mf{a}\) and hence \(\mf{f}\) is invertible because \(\d\) and \(\mf{a}\) are. It follows that every fractional ideal is invertible which completes the proof.
+      It is clear that the product of fractional ideals is a fractional ideal. Associativity and commutativity of \(I_{\smc{O}}\) are also obvious. The identity is \(\smc{O}\) because every fractional ideal is a finitely generated \(\smc{O}\)-submodule of \(K\). By \cref{lem:inverse_for_prime_ideals}, we see that \(\mf{p}^{-1}\) is the inverse of any prime \(\mf{p}\). Therefore every prime is invertible. If \(\mf{f}\) is a fractional ideal then it admits a prime factorization \(\mf{f} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}\) and then \(\mf{f}^{-1} = \mf{p}_{1}^{-e_{1}} \cdots \mf{p}_{r}^{-e_{r}}\) is its inverse. This completes the proof.
     \end{proof}
 
-    Now that we have proved that the ideal group \(I_{\smc{O}}\) of \(K\) is indeed a group, we can also deduce the explicit form for the inverse \(\mf{f}^{-1}\) of any fractional ideal \(\mf{f}\):
+    It is possible to deduce an explicit description for the inverse \(\mf{f}^{-1}\) of any fractional ideal \(\mf{f}\).
 
     \begin{proposition}\label{prop:explicit_inverse_ideal}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and let \(\mf{f}\) be a fractional ideal. Then
+      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and let \(\mf{f}\) be a fractional ideal of \(\smc{O}\). Then
       \[
         \mf{f}^{-1} = \{\k \in K:\k\mf{f} \subseteq \smc{O}\}.
       \]
@@ -670,70 +664,70 @@
       \[
         \mf{a}^{-1} = \{\k \in K:\k\mf{a} \subseteq \smc{O}\},
       \]
-      by the prime factorization of \(\mf{a}\) and the definition of the inverse of a prime. If \(\mf{f}\) is a fractional ideal, there exists a nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\) such that \(\mf{f} = \frac{1}{\d}\mf{a}\). But then \(\d\mf{f} = \mf{a}\) so that
+      by the prime factorization of \(\mf{a}\) and the definition of \(\mf{p}^{-1}\) for a prime \(\mf{p}\). Write \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\). Whence
       \[
         \frac{1}{\d}\mf{f}^{-1} = \{\k \in K:\k\d\mf{f} \subseteq \smc{O}\},
       \]
-      which is equivalent to the first statement. For the second statement, if \(\smc{O} \subseteq \mf{f}\) then multiplying by \(\mf{f}^{-1}\) shows \(\mf{f}^{-1} \subseteq \smc{O}\) and hence \(\mf{f}^{-1}\) is an integral ideal. Running this argument backwards by multiplying by \(\mf{f}\) proves the converse.
+      which is equivalent to the first statement. For the second statement, if \(\smc{O} \subseteq \mf{f}\) then multiplying by \(\mf{f}^{-1}\) shows \(\mf{f}^{-1} \subseteq \smc{O}\) whence \(\mf{f}^{-1}\) is an integral ideal. Running this argument backwards by multiplying by \(\mf{f}\) proves the converse.
     \end{proof}
 
     We will now discuss applications of the Chinese remainder theorem in the context of integral ideals. With it we can prove some interesting results. First, we recall a useful fact. Suppose \(\mf{a}\) is an integral ideal with prime factorization
     \[
       \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}.
     \]
-    As powers of distinct primes are relatively prime, the integral ideals \(\mf{p}_{1}^{e_{1}},\ldots,\mf{p}_{r}^{e_{r}}\) are pairwise relatively prime so that the Chinese remainder theorem gives an isomorphism
+    As powers of distinct primes are relatively prime, the integral ideals \(\mf{p}_{1}^{e_{1}},\ldots,\mf{p}_{r}^{e_{r}}\) are pairwise relatively prime. Whence they are pairwise comaximal so that the Chinese remainder theorem gives an isomorphism
     \[
-      \smc{O}/\mf{a} \cong \bigop_{1 \le i \le r}\smc{O}/\mf{p}_{i}^{e_{i}}.
+      \smc{O}/\mf{a} \cong \bigop_{i}\smc{O}/\mf{p}_{i}^{e_{i}}.
     \]
-    In particular, for any \(\a_{i} \in \smc{O}\) for all \(i\), there exists a unique \(\a \in \smc{O}\) such that
+    In particular, for any choice of \(\a_{i} \in \smc{O}\) there exists a \(\a \in \smc{O}\) such that
     \[
-      \a \equiv \a_{i} \pmod{\mf{p}_{i}^{e_{i}}},
+      \a \equiv \a_{i} \pmod{\mf{p}_{i}^{e_{i}}}.
     \]
-    for all \(i\). We will use the Chinese remainder theorem to prove a few useful lemmas about Dedekind domains. For convenience, if \(\smc{O}\) is a Dedekind domain with prime \(\mf{p}\) we will let \(\F_{\mf{p}} = \smc{O}/\mf{p}\) be the residue class field of \(\smc{O}\) by \(\mf{p}\) (recall \(\mf{p}\) is maximal). The first lemma is an isomorphism between the residue class field and quotients by powers of primes:
+    We will use the Chinese remainder theorem to prove a few useful lemmas about Dedekind domains. If \(\smc{O}\) is a Dedekind domain with prime \(\mf{p}\), we call \(\F_{\mf{p}} = \smc{O}/\mf{p}\) the \textbf{residue class field}\index{residue class field} of \(\smc{O}\) by \(\mf{p}\). This is field as primes are maximal in Dedekind domains. Our first lemma is an isomorphism between the residue class field and quotients by powers of a prime.
 
     \begin{lemma}\label{lem:isomorphism_of_quotient_by_prime_integral_ideals}
-      Let \(\smc{O}\) be a Dedekind domain. Then for any prime \(\mf{p}\) and \(n \ge 0\), we have an isomorphism
+      Let \(\smc{O}\) be a Dedekind domain. Then for any prime \(\mf{p}\) of \(\smc{O}\) and nonnegative integer \(n\), we have an isomorphism
       \[
         \F_{\mf{p}} \cong \mf{p}^{n}/\mf{p}^{n+1}.
       \]
     \end{lemma}
     \begin{proof}
-      By uniqueness of prime factorizations of fractional ideals, there exists \(\b \in \mf{p}^{n}-\mf{p}^{n+1}\). Now consider the homomorphism
+      By uniqueness of prime factorizations of fractional ideals, there exists \(\b \in \mf{p}^{n}-\mf{p}^{n+1}\). Consider the homomorphism
       \[
         \phi:\smc{O} \to \mf{p}^{n}/\mf{p}^{n+1} \qquad \a \mapsto \a\b+\mf{p}^{n+1}.
       \]
-      By the first isomorphism theorem, it suffices to show \(\ker\phi = \mf{p}\) and that \(\phi\) is surjective. Let us first show \(\ker\phi = \mf{p}\). As \(\b \in \mf{p}^{n}\), it is obvious that \(\mf{p} \subseteq \ker\phi\). Conversely, suppose \(\a \in \smc{O}\) is such that \(\phi(\a) = 0\). Then \(\a\b \in \mf{p}^{n+1}\) and as \(\b \in \mf{p}^{n}-\mf{p}^{n+1}\), we must have \(\a \in \mf{p}\). It follows that \(\ker\phi = \mf{p}\). We now show that \(\phi\) is surjective. Let \(\g\) be a representative of a coset in \(\mf{p}^{n}/\mf{p}^{n+1}\). As \(\b \in \mf{p}^{n}\), we have \(\b\smc{O} \subseteq \mf{p}^{n}\). But since \(\b \notin \mf{p}^{n+1}\), we see that \(\b\smc{O}\mf{p}^{-n}\) is necessarily an integral ideal relatively prime to \(\mf{p}^{n+1}\). As \(\mf{p}^{n+1}\) and \(\b\smc{O}\mf{p}^{-n}\) are relatively prime, the Chinese remainder theorem implies that we can find a unique \(\a \in \smc{O}\) such that
+      By the first isomorphism theorem, it suffices to show \(\ker\phi = \mf{p}\) and that \(\phi\) is surjective. Let us first show \(\ker\phi = \mf{p}\). As \(\b \in \mf{p}^{n}\), it is obvious that \(\mf{p} \subseteq \ker\phi\). Conversely, suppose \(\a \in \ker\phi \). Then \(\a\b \in \mf{p}^{n+1}\) and as \(\b \in \mf{p}^{n}-\mf{p}^{n+1}\), we must have \(\a \in \mf{p}\). Whence \(\ker\phi = \mf{p}\). We now show that \(\phi\) is surjective. Let \(\g\) be a representative of a coset in \(\mf{p}^{n}/\mf{p}^{n+1}\). As \(\b \in \mf{p}^{n}\), we have \(\b\smc{O} \subseteq \mf{p}^{n}\). Since \(\b \notin \mf{p}^{n+1}\), it must be the case that \(\b\smc{O}\mf{p}^{-n}\) is an integral ideal relatively prime to \(\mf{p}^{n+1}\). By the Chinese remainder theorem, we can find a \(\a \in \smc{O}\) such that
       \[
         \a \equiv \g \pmod{\mf{p}^{n+1}} \quad \text{and} \quad \a \equiv 0 \pmod{\b\smc{O}\mf{p}^{-n}}.
       \]
-      The second condition means \(\a \in \b\smc{O}\mf{p}^{-n}\). As \(\g \in \mf{p}^{n}\) and \(\a\) and \(\g\) differ by an element in \(\mf{p}^{n+1} \subset \mf{p}^{n}\), we have that \(\a \in \b\smc{O}\mf{p}^{-n} \cap \mf{p}^{n} = \b\smc{O}\) where the equality holds because the intersection of ideals is equal to their product provided the ideals are relatively prime. Thus \(\a\b^{-1} \in \smc{O}\) and hence
+      The second congruence means \(\a \in \b\smc{O}\mf{p}^{-n}\) whence \(\a \in \b\smc{O}\) by relative primality of the aforementioned integral ideals. Thus \(\a\b^{-1} \in \smc{O}\) and the first congruence implies
       \[
-        \phi(\a\b^{-1}) = \a+\mf{p}^{n+1} = \g+\mf{p}^{n+1}.
+        \phi(\a\b^{-1}) = \g+\mf{p}^{n+1}.
       \]
-      This shows \(\phi\) is surjective completing the proof.
+      This shows \(\phi\) is surjective.
     \end{proof}
 
-    Our second lemma shows that given two integral ideals, we can multiply by a relatively prime integral ideal and produce a principal integral ideal:
+    Our second lemma shows that given two integral ideals, we can multiply by a relatively prime integral ideal and produce a principal integral ideal.
 
     \begin{lemma}\label{lem:relatively_prime_and_principal}
-      Let \(\smc{O}\) be a Dedekind domain and \(\mf{a}\) and \(\mf{b}\) be integral ideals. Then there exists an integral ideal \(\mf{c}\) relatively prime to \(\mf{b}\) such that \(\mf{a}\mf{c}\) is principal.
+      Let \(\smc{O}\) be a Dedekind domain and \(\mf{a}\) and \(\mf{b}\) be integral ideals of \(\smc{O}\). Then there exists an integral ideal \(\mf{c}\) of \(\smc{O}\) relatively prime to \(\mf{b}\) such that \(\mf{a}\mf{c}\) is principal.
     \end{lemma}
     \begin{proof}
       Let \(\mf{p}_{1},\ldots,\mf{p}_{r}\) be the prime factors of both \(\mf{a}\) and \(\mf{b}\) so that
       \[
         \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}} \quad \text{and} \quad \mf{b} = \mf{p}_{1}^{f_{1}} \cdots \mf{p}_{r}^{f_{r}},
       \]
-      with \(e_{i} \ge 0\) and \(f_{i} \ge 0\) for all \(1 \le i \le r\). By the prime factorization of fractional ideals, there exists \(\a_{i} \in \mf{p}_{i}^{e_{i}}-\mf{p}_{i}^{e_{i}+1}\) for all \(i\). Since \(\mf{p}_{1}^{e_{1}+1},\ldots,\mf{p}_{r}^{e_{r}+1}\) are pairwise relatively prime, the Chinese remainder theorem implies the existence of an \(\a \in \smc{O}\) such that \(\a \equiv \a_{i} \tmod{\mf{p}_{i}^{e_{i}+1}}\) for all \(i\). But then
+      for some nonnegative integers \(e_{i}\) and \(f_{i}\). By the prime factorization of fractional ideals, there exists \(\a_{i} \in \mf{p}_{i}^{e_{i}}-\mf{p}_{i}^{e_{i}+1}\). As \(\mf{p}_{1}^{e_{1}+1},\ldots,\mf{p}_{r}^{e_{r}+1}\) are pairwise relatively prime, the Chinese remainder theorem implies the existence of an \(\a \in \smc{O}\) such that \(\a \equiv \a_{i} \tmod{\mf{p}_{i}^{e_{i}+1}}\). But then
       \[
-        \a \equiv 0 \tmod{\mf{p}_{i}^{e_{i}}} \quad \text{and} \quad \a \equiv \a_{i} \tmod{\mf{p}_{i}^{e_{i}+1}},
+        \a \equiv 0 \tmod{\mf{p}_{i}^{e_{i}}} \quad \text{and} \quad \a \equiv \a_{i} \tmod{\mf{p}_{i}^{e_{i}+1}}.
       \]
-      since \(\a_{i} \in \mf{p}_{i}^{e_{i}}\) for all \(i\). Hence \(\a \in \mf{p}_{i}^{e_{i}}-\mf{p}_{i}^{e_{i}+1}\) and so \(\mf{p}_{i}^{e_{i}} \mid\mid \a\smc{O}\) for all \(i\). It follows that \((\a\smc{O},\mf{a}\mf{b}) = \mf{a}\). Letting \(\mf{c}\) be the integral ideal such that \(\a\smc{O} = \mf{a}\mf{c}\), we have \((\mf{a}\mf{c},\mf{a}\mf{b}) = \mf{a}\). Thus \((\mf{c},\mf{b}) = \smc{O}\) which is to say that \(\mf{c}\) must be relatively prime to \(\mf{b}\).
+      Whence \(\mf{p}_{i}^{e_{i}} \mid\mid \a\smc{O}\). It follows that \((\a\smc{O},\mf{a}\mf{b}) = \mf{a}\). Then there exists an integral ideal \(\mf{c}\) such that \(\a\smc{O} = \mf{a}\mf{c}\) and necessarily \((\mf{a}\mf{c},\mf{a}\mf{b}) = \mf{a}\). Thus \((\mf{c},\mf{b}) = \smc{O}\) which is to say that \(\mf{c}\) must be relatively prime to \(\mf{b}\).
     \end{proof}
 
-    Our last lemma shows that multiplying by fractional ideals does not affect quotients:
+    Our last lemma shows that multiplying by fractional ideals does not affect quotients.
 
     \begin{lemma}\label{lem:cancellation_isomorphism}
-      Let \(\smc{O}\) be a Dedekind domain and \(\mf{f}\), \(\mf{g}\), \(\mf{h}\) be fractional ideals with \(\mf{g} \subseteq \mf{f}\). Then we have an isomorphism
+      Let \(\smc{O}\) be a Dedekind domain where \(\mf{f}\), \(\mf{g}\), and \(\mf{h}\) be fractional ideals of \(\smc{O}\) with \(\mf{g} \subseteq \mf{f}\). Then we have an isomorphism
       \[
         \mf{f}/\mf{g} \cong \mf{f}\mf{h}/\mf{g}\mf{h}.
       \]
@@ -741,10 +735,10 @@
       \[
         \mf{a}^{-1}/\smc{O} \cong \smc{O}/\mf{a},
       \]
-      for any integral ideal \(\mf{a}\).
+      for any integral ideal \(\mf{a}\) of \(\smc{O}\).
     \end{lemma}
     \begin{proof}
-      We have \(\mf{f} = \frac{\mf{a}}{\a}\), \(\mf{g} = \frac{\mf{b}}{\b}\), and \(\mf{h} = \frac{\mf{c}}{\g}\) for nonzero \(\a,\b,\g \in \smc{O}\) and integral ideals \(\mf{a}\), \(\mf{b}\), and \(\mf{c}\) with \(\mf{b} \subseteq \mf{a}\). In view of the isomorphisms,
+      Write \(\mf{f} = \frac{\mf{a}}{\a}\), \(\mf{g} = \frac{\mf{b}}{\b}\), and \(\mf{h} = \frac{\mf{c}}{\g}\) for some nonzero \(\a,\b,\g \in \smc{O}\) and integral ideals \(\mf{a}\), \(\mf{b}\), and \(\mf{c}\) with \(\mf{b} \subseteq \mf{a}\). In view of the isomorphisms,
       \[
         \mf{f}/\mf{g} \cong \b\mf{a}/\a\mf{b} \quad \text{and} \quad \mf{f}\mf{h}/\mf{g}\mf{h} \cong \b\mf{a}\mf{c}/\a\mf{b}\mf{c},
       \]
@@ -752,90 +746,62 @@
       \[
         \mf{a}/\mf{b} \cong \mf{a}\mf{c}/\mf{b}\mf{c}.
       \]
-      As to contain is to divide, we know \(\mf{a} \mid \mf{b}\). Therefore \(\mf{b}\mf{a}^{-1}\) is an integral ideal. By \cref{lem:relatively_prime_and_principal}, there exists an integral ideal \(\mf{d}\) relatively prime to \(\mf{b}\mf{a}^{-1}\) such that \(\mf{c}\mf{d} = \d\smc{O}\) for some \(\d \in \smc{O}\). But then \(\mf{d}+\mf{b} = \smc{O}\) and hence
+      Consider the homomorphism
       \[
-        \d\mf{c}^{-1}+\mf{b}\mf{a}^{-1} = \smc{O}.
+        \phi:\mf{a} \to \mf{a}\mf{c}/\mf{b}\mf{c} \qquad \a \mapsto \d\a+\mf{b}\mf{c}.
       \]
-      Multiplying by \(\mf{a}\mf{c}\) yields
+      By the first isomorphism theorem, it suffices to show \(\ker\phi = \mf{b}\) and that \(\phi\) is surjective. To this end, we know \(\mf{a} \mid \mf{b}\) since to contain is to divide. Therefore \(\mf{b}\mf{a}^{-1}\) is an integral ideal and \cref{lem:relatively_prime_and_principal} implies the existence of an integral ideal \(\mf{d}\) relatively prime to \(\mf{b}\mf{a}^{-1}\) such that \(\mf{c}\mf{d} = \d\smc{O}\) for some nonzero \(\d \in \smc{O}\). Whence
       \[
-        \d\mf{a}+\mf{b}\mf{c} = \mf{a}\mf{c}.
+        \mf{d}+\mf{b}\mf{a}^{-1} = \smc{O} \quad \text{and} \quad \mf{d} \cap \mf{b}\mf{a}^{-1} = \mf{d}\mf{a}^{-1}.
       \]
-      As \(\mf{c}\mf{d} = \d\smc{O}\), we have \(\d\smc{O} \subseteq \mf{c}\) so that \(\d \in \mf{c}\). Therefore we may consider the homomorphism
+      Writing \(\mf{d} = \d\mf{c}^{-1}\), a short computation shows that these identities imply
       \[
-        \phi:\mf{a} \to \mf{a}\mf{c}/\mf{b}\mf{c} \qquad \a \mapsto \a\d+\mf{b}\mf{c}.
+        \d\mf{a}+\mf{b}\mf{c} = \mf{a}\mf{c} \quad \text{and} \quad \mf{a} \cap \d^{-1}\mf{b}\mf{c} = \mf{b}.
       \]
-      It is surjective by what we have just proved. Moreover, \(\ker\phi = \mf{a} \cap \d^{-1}\mf{b}\mf{c}\). But observe that
-      \[
-        \mf{a} \cap \d^{-1}\mf{b}\mf{c} = \d^{-1}\mf{a}\mf{c}(\d\mf{c}^{-1} \cap \mf{b}\mf{a}^{-1}) = \d^{-1}\mf{a}\mf{c}(\mf{d} \cap \mf{b}\mf{a}^{-1}) = \mf{b},
-      \]
-      where the last equality follows since \(\mf{d}\) and \(\mf{b}\mf{a}^{-1}\) are relatively prime so that their intersection is equal to their product. Hence \(\ker\phi = \mf{b}\) and the first statement now follows upon applying the first isomorphism theorem. For the second statement, take \(\mf{f} = \mf{a}^{-1}\), \(\mf{g} = \smc{O}\), and \(\mf{h} = \mf{a}\) (note that \(\smc{O} \subseteq \mf{a}^{-1}\) by \cref{prop:explicit_inverse_ideal}).
+      As \(\ker\phi = \mf{a} \cap \d^{-1}\mf{b}\mf{c}\), the second identity shows \(\ker\phi = \mf{b}\). Surjectivity follows from the first identity. This proves the first statement. For the second statement, take \(\mf{f} = \mf{a}^{-1}\), \(\mf{g} = \smc{O}\), and \(\mf{h} = \mf{a}\).
     \end{proof}
 
-    We now state two additional interesting facts about Dedekind domains. The first is that any Dedekind domains with only finitely many primes is a principal ideal domain:
+    We now state two additional interesting facts about Dedekind domains. The first is that any Dedekind domains with only finitely many primes is a principal ideal domain.
 
     \begin{proposition}\label{prop:Dedekind_with_finite_primes_is_PID}
-      Let \(\smc{O}\) be a Dedekind domain. If there are only finitely many primes then \(\smc{O}\) is a principal ideal domain.
+      Let \(\smc{O}\) be a Dedekind domain. If there are only finitely many primes of \(\smc{O}\) then \(\smc{O}\) is a principal ideal domain.
     \end{proposition}
     \begin{proof}
-      Let \(\mf{p}_{1},\ldots,\mf{p}_{r}\) be the primes of \(\smc{O}\). Then for any integral ideal \(\mf{a}\), the prime factorization is
-      \[
-        \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}},
-      \]
-      with \(e_{i} \ge 0\) for \(1 \le i \le r\). By uniqueness of prime factorizations of fractional ideals, there exists \(\a_{i} \in \mf{p}_{i}^{e_{i}}-\mf{p}_{i}^{e_{i}+1}\) for all \(i\). Since \(\mf{p}_{1}^{e_{1}+1},\ldots,\mf{p}_{r}^{e_{r}+1}\) are pairwise relatively prime, the Chinese remainder theorem implies that there exists \(\a \in \smc{O}\) with 
-      \[
-        \a \equiv \a_{i} \tmod{\mf{p}_{i}^{e_{i}+1}},
-      \]
-      for all \(i\). As \(\a_{i} \in \mf{p}_{i}^{e_{i}}\) for all \(i\), we have that \(\a \in \mf{a}\) and hence \(\a\smc{O} \subseteq \mf{a}\). But as \(\a \notin \mf{p}_{i}^{e_{i}+1}\) for all \(i\), we see that \(\a\smc{O}\mf{a}^{-1}\) is necessarily an integral ideal relatively prime to all primes of \(\smc{O}\). This means \(\a\smc{O}\mf{a}^{-1} = \smc{O}\) and hence \(\mf{a} = \a\smc{O}\) so that \(\mf{a}\) is principal. As \(\mf{a}\) was arbitrary, \(\smc{O}\) is a principal ideal domain.
+      Let \(\mf{p}_{1},\ldots,\mf{p}_{r}\) be the primes of \(\smc{O}\). Then for any integral ideal \(\mf{a}\), \cref{lem:relatively_prime_and_principal} implies the existence of an integral ideal \(\mf{b}\) relatively prime to \(\mf{p}_{1} \cdots \mf{p}_{r}\) such that \(\mf{a}\mf{b} = \a\smc{O}\) for some nonzero \(\a \in \smc{O}\). As \(\mf{b}\) is relatively prime to all of the primes of \(\smc{O}\) we must have \(\mf{b} = \smc{O}\). Then \(\mf{a} = \a\smc{O}\). As \(\mf{a}\) was arbitrary, \(\smc{O}\) is a principal ideal domain.
     \end{proof}
     
-    The second fact is that any fractional ideal is generated by at most two elements:
+    The second is that any fractional ideal is generated by at most two elements.
 
     \begin{proposition}\label{prop:fractional_ideal_generated_by_two_elements}
-      Let \(\smc{O}\) be a Dedekind domain. Then every fractional ideal is generated by at most two elements.
+      Let \(\smc{O}\) be a Dedekind domain. Then every fractional ideal \(\mf{f}\) of \(\smc{O}\) is generated by at most two elements.
     \end{proposition}
     \begin{proof}
-      We first prove the claim for an integral ideal \(\mf{a}\). Let \(\a \in \mf{a}\) be nonzero and let \(\mf{p}_{1},\ldots,\mf{p}_{r}\) be the prime factors of \(\a\smc{O}\). As \(\a\smc{O} \subseteq \mf{a}\), the prime factorization of \(\mf{a}\) is
+      Writing \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), it suffices to prove the claim \(\mf{a}\). Let \(\a \in \mf{a}\) be nonzero. By \cref{lem:relatively_prime_and_principal}, there exists an integral ideal \(\mf{b}\) relatively prime to \(\a\smc{O}\) such that \(\mf{a}\mf{b} = \b\smc{O}\) for some nonzero \(\b \in \smc{O}\). Whence
       \[
-        \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}},
+        \a\smc{O}+\mf{b} = \smc{O}.
       \]
-      with \(e_{i} \ge 0\) for \(1 \le i \le r\). By uniqueness of prime factorizations of fractional ideals, there exists \(\b_{i} \in \mf{p}_{i}^{e_{i}}-\mf{p}_{i}^{e_{i}+1}\) for all \(i\). Since \(\mf{p}_{1}^{e_{1}+1},\ldots,\mf{p}_{r}^{e_{r}+1}\) are pairwise relatively prime, the Chinese remainder theorem implies that there exists \(\b \in \smc{O}\) with 
+      Upon multiplying by \(\mf{a}\), a short computation shows
       \[
-        \b \equiv \b_{i} \tmod{\mf{p}_{i}^{e_{i}+1}},
+        \a\smc{O}+\b\smc{O} = \mf{a}. 
       \]
-      for all \(i\). As \(\b_{i} \in \mf{p}_{i}^{e_{i}}\) for all \(i\), we have that \(\b \in \mf{a}\) and hence \(\b\smc{O} \subseteq \mf{a}\). But as \(\b \notin \mf{p}_{i}^{e_{i}+1}\) for all \(i\), we see that \(\b\smc{O}\mf{a}^{-1}\) is necessarily an integral ideal relatively prime to \(\mf{p}_{1},\ldots,\mf{p}_{r}\) and hence to \(\a\smc{O}\). This means
-      \[
-        \b\smc{O}\mf{a}^{-1}+\a\smc{O} = \smc{O},
-      \]
-      and hence
-      \[
-        \b\smc{O}+\a\mf{a} = \mf{a}.
-      \]
-      But as \(\a,\b \in \mf{a}\), we have \(\b\smc{O}+\a\mf{a} \subseteq \b\smc{O}+\a\smc{O} \subseteq \mf{a}\) and so
-      \[
-        \b\smc{O}+\a\smc{O} = \mf{a}.
-      \]
-      This shows that \(\mf{a}\) is generated by at most two elements. Now suppose \(\mf{f}\) is a fractional ideal. Then there exists a nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\) such that \(\mf{f} = \frac{1}{\d}\mf{a}\). Since \(\mf{a}\) is generated by at most two elements, say \(\a\) and \(\b\), we have
-      \[
-        \mf{f} = \frac{\a}{\d}\smc{O}+\frac{\b}{\d}\smc{O},
-      \]
-      and so \(\mf{f}\) is also generated by at most two elements as well.
+      Therefore \(\mf{a}\) is generated by at most two elements.
     \end{proof}
 
-    \cref{prop:fractional_ideal_generated_by_two_elements} shows that while a Dedekind domain \(\smc{O}\) may not be a principal ideal domain, it is not far off from one since every integral ideal needs at most two generators. We can give a more refined interpretation of this using the ideal group \(I_{\smc{O}}\). Let \(P_{\smc{O}}\) denote the subgroup of principal fractional ideals of \(I_{\smc{O}}\). Since \(I_{\smc{O}}\) is abelian by \cref{thm:ideal_group_is_a_group}, \(P_{\smc{O}}\) is normal. The \textbf{ideal class group}\index{ideal class group} \(\Cl(\smc{O})\) of \(\smc{O}\) is defined to be the quotient group
+    This result shows that while a Dedekind domain \(\smc{O}\) may not be a principal ideal domain, it is not far off from one since every integral ideal needs at most two generators. We can give a more refined interpretation of the degree to which \(\smc{O}\) fails to be a principal ideal domain using the ideal group \(I_{\smc{O}}\). Let \(P_{\smc{O}}\) denote the subgroup of principal fractional ideals of \(I_{\smc{O}}\). Since \(I_{\smc{O}}\) is abelian by \cref{thm:ideal_group_is_a_group}, \(P_{\smc{O}}\) is normal. The \textbf{ideal class group}\index{ideal class group} \(\Cl(\smc{O})\) of \(\smc{O}\) is defined to be the quotient group
     \[
       \Cl(\smc{O}) = I_{\smc{O}}/P_{\smc{O}},
     \]
-    We call an element of \(\Cl(\smc{O})\) an \textbf{ideal class}\index{ideal class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and hence every ideal class can be represented by an integral ideal \(\mf{a}\). The \textbf{class number}\index{class number} \(h_{\smc{O}}\) of \(\smc{O}\) is defined by
+    An element of \(\Cl(\smc{O})\) is called an \textbf{ideal class}\index{ideal class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. The \textbf{class number}\index{class number} \(h_{\smc{O}}\) of \(\smc{O}\) is defined by
     \[
       h_{\smc{O}} = |\Cl(\smc{O})|.
     \]
-    The ideal class group is an object which encodes how much \(\smc{O}\) fails to be a principal ideal domain (equivalently a unique factorization domain by \cref{prop:UDF_PID_equivalence_for_Dedekind}) while the class number \(h_{\smc{O}}\) is a measure of the degree of failure. For example, \(\smc{O}\) is a principal ideal domain if and only if \(h_{\smc{O}} = 1\). Indeed, if \(\smc{O}\) is a principal ideal domain then every integral ideal is principal and hence every fractional ideal is too (because every fractional ideal is of the form \(\frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\)). But then \(\Cl(\smc{O})\) is the trivial group and hence \(h_{\smc{O}} = 1\). Conversely, if \(h_{\smc{O}} = 1\) then every integral ideal is principal so that \(\smc{O}\) is a principal ideal domain.
+    The ideal class group encodes how much \(\smc{O}\) fails to be a principal ideal domain and the class number is a measure of the degree of failure. Indeed, \(\smc{O}\) is a principal ideal domain if and only if \(h_{\smc{O}} = 1\).
 
     \begin{remark}\label{rem:general_class_number_not_finite}
       The class number \(h_{\smc{O}}\) need not be finite for a general Dedekind domain \(\smc{O}\).
     \end{remark}
     
-    The \textbf{unit group}\index{unit group} of \(\smc{O}\) is defined to be \(\smc{O}^{\ast}\). That is, the unit group is the group of units in \(\smc{O}\). The ideal class group and unit group of \(\smc{O}\) are related via the following exact sequence:
+    The \textbf{unit group}\index{unit group} of \(\smc{O}\) is defined to be \(\smc{O}^{\ast}\). That is, the unit group is the group of units in \(\smc{O}\). The ideal class group and unit group of \(\smc{O}\) fit into an exact sequence.
 
     \begin{proposition}\label{prop:ideal_class_group_exact_sequence}
       Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\). Then the sequence
@@ -849,22 +815,22 @@
       where the middle map takes any \(\k \in K^{\ast}\) to its associated principal fractional ideal \(\k\smc{O}\), is exact.
     \end{proposition}
     \begin{proof}
-      The sequence is exact at \(\smc{O}^{\ast}\) because the second map is injective. For exactness at \(K^{\ast}\), the image of the second map is contained in the kernel of the third map since \(\smc{O}\) is the identity in \(I_{\smc{O}}\) by \cref{thm:ideal_group_is_a_group}. So suppose \(\k \in K^{\ast}\) is contained in the kernel of the third map. Then \(\k\smc{O} = \smc{O}\) which implies \(\k \in \smc{O}^{\ast}\) because \(1 \in \smc{O}\). This proves exactness at \(K^{\ast}\). Exactness at \(I_{\smc{O}}\) follows by the definition of \(\Cl(\smc{O})\). Lastly, the sequence is exact at \(\Cl(\smc{O})\) since the fourth map is surjective which completes the proof.
+      The sequence is exact at \(\smc{O}^{\ast}\) because the second map is injective. For exactness at \(K^{\ast}\), the image of the second map is contained in the kernel of the third map since \(\smc{O}\) is the identity in \(I_{\smc{O}}\) by \cref{thm:ideal_group_is_a_group}. Now suppose \(\k \in K^{\ast}\) is contained in the kernel of the third map. Then \(\k\smc{O} = \smc{O}\) which implies \(\k \in \smc{O}^{\ast}\). This proves exactness at \(K^{\ast}\). Exactness at \(I_{\smc{O}}\) follows by the definition of \(\Cl(\smc{O})\). Lastly, the sequence is exact at \(\Cl(\smc{O})\) since the fourth map is surjective.
     \end{proof}
 
-    Thinking of the third map in \cref{prop:ideal_class_group_exact_sequence} as passing from numbers in \(K^{\ast}\) to fractional ideals in \(I_{\smc{O}}\), exactness means that unit group is measuring the contraction (how many numbers are annihilated) taking place during this process while the class group is measuring the expansion (how many fractional ideal are created).
+    Thinking of the third map in this exact sequence as passing from numbers in \(K^{\ast}\) to fractional ideals in \(I_{\smc{O}}\), exactness means that unit group is measuring the contraction (how many numbers are annihilated) taking place during this process while the class group is measuring the expansion (how many fractional ideals are created).
     
     \begin{remark}
-      The class number \(h_{\smc{O}}\) and unit group \(\smc{O}^{\ast}\) of \(\smc{O}\) are generally two of the most difficult pieces of algebraic data of \(\smc{O}\) to compute.
+      The class number \(h_{\smc{O}}\) and unit group \(\smc{O}^{\ast}\) are two of the most difficult pieces of algebraic data of \(\smc{O}\) to compute.
     \end{remark}
     
-    We now turn to the case of a number field \(K\) for which our developments so far can be refined. However, in order to apply our results on Dedekind domains, we need to show that \(\mc{O}_{K}\) is one:
+    We now turn to the case of a number field \(K\) for which our developments so far can be refined. However, in order to apply our results on Dedekind domains, we need to show that \(\mc{O}_{K}\) is one.
 
     \begin{theorem}\label{thm:ring_of_integers_is_Dedekind}
       Let \(K\) be a number field. Then \(\mc{O}_{K}\) is a Dedekind domain.
     \end{theorem}
     \begin{proof}
-      Since \(\mc{O}_{K}\) is the integral closure of \(\Z\) in \(K\), \(\mc{O}_{K}\) is automatically an integrally closed integral domain. As \(\mc{O}_{K}\) is a free abelian group of finite rank, any ideal is a finitely generated \(\Z\)-module and hence a finitely generated \(\mc{O}_{K}\)-module. This proves that \(\mc{O}_{K}\) is noetherian. It remains to prove that every prime of \(\mc{O}_{K}\) is maximal. Letting \(\mf{p}\) be a prime, it suffices to show \(\mc{O}_{K}/\mf{p}\) is a field. To this end, consider the homomorphism
+      \(\mc{O}_{K}\) is already an integrally closed integral domain. As \(\mc{O}_{K}/\Z\) admits an integral basis, \(\mc{O}_{K}\) is a free \(\Z\)-module of finite rank. Whence any ideal is a finitely generated \(\Z\)-module and hence a finitely generated \(\mc{O}_{K}\)-module. This proves \(\mc{O}_{K}\) is noetherian. It remains to prove that every prime \(\mf{p}\) of \(\mc{O}_{K}\) is maximal. It suffices to to show that \(\mc{O}_{K}/\mf{p}\) is a field. To this end, consider the homomorphism
       \[
         \phi:\Z \to \mc{O}_{K}/\mf{p} \qquad a \mapsto a+\mf{p}.
       \]
@@ -872,10 +838,10 @@
       \[
         \a^{n}+a_{n-1}\a^{n-1}+\cdots+a_{0} = 0,
       \]
-      for some positive integer \(n\) and \(a_{i} \in \Z\) for \(0 \le i \le n-1\). Taking \(n\) minimal, we have \(a_{0} \neq 0\). Isolating \(a_{0}\) shows that \(a_{0} \in \mf{p}\) and hence \(a_{0} \in \mf{p} \cap \Z\). Therefore \(\mf{p} \cap \Z = p\Z\) for some prime \(p\). Hence \(\ker\phi = p\Z\) and by the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{p} \to \mc{O}_{K}/\mf{p}\). As \(\mc{O}_{K}\) is the integral closure of \(\Z\) in \(K\), it is obtained from \(\Z\) by forming a polynomial ring with algebraic elements in \(K\). The latter injection then shows that \(\mc{O}_{K}/\mf{p}\) is obtained from \(\F_{p}\) by adjoining these algebraic elements reduced modulo \(\mf{p}\). Their reductions are seen to be algebraic over \(\F_{p}\) by reducing their minimal polynomials over \(\Q\), viewed as elements of \(\smc{O}[x]\), modulo \(\mf{p}\) upon recalling that the coefficients of which are in \(\Z\) by \cref{prop:field_of_fractions_AKBL}. Hence \(\mc{O}_{K}/\mf{p}\) is obtained from \(\F_{p}\) by adjoining algebraic elements to \(\F_{p}\) (since \(\F_{p}[\conj{\a}] = \F_{p}(\conj{\a})\) if \(\conj{\a}\) is algebraic over \(\F_{p}\)) and is therefore a field.
+      for some positive integer \(n\) and \(a_{i} \in \Z\). Taking \(n\) minimal ensures \(a_{0} \neq 0\). Isolating \(a_{0}\) shows \(a_{0} \in \mf{p}\) and hence \(a_{0} \in \mf{p} \cap \Z\). Therefore \(\mf{p} \cap \Z = p\Z\) for some prime \(p\). Then \(\ker\phi = p\Z\), and by the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{p} \to \mc{O}_{K}/\mf{p}\). Whence \(\mc{O}_{K}/\mf{p}\) is a finite dimensional \(\F_{p}\)-vector space as \(\mc{O}_{K}\) is a free \(\Z\)-module of finite rank. By primality of \(\mf{p}\), \(\mc{O}_{K}/\mf{p}\) is a finite integral domain and thus must be a field.
     \end{proof}
 
-    In view of the fact that \(\mc{O}_{K}\) is a Dedekind domain by \cref{thm:ring_of_integers_is_Dedekind}, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). The \textbf{ideal group}\index{ideal group} \(I_{K}\) of \(K\) is the ideal group of \(\mc{O}_{K}\), we write \(P_{K}\) for the subgroup of principal fractional ideals of \(K\), and the \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). In particular,
+    In view of the fact that \(\mc{O}_{K}\) is a Dedekind domain, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). The \textbf{ideal group}\index{ideal group} \(I_{K}\) of \(K\) is the ideal group of \(\mc{O}_{K}\), we write \(P_{K}\) for the subgroup of principal fractional ideals of \(K\), and the \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). In particular,
     \[
       \Cl(K) = I_{K}/P_{K}.
     \]
@@ -883,8 +849,8 @@
     \[
       h_{K} = |\Cl(K)|.
     \]
-    The \textbf{unit group}\index{unit group} of \(K\) is the unit group of \(\mc{O}_{K}\) and we call any element of \(\mc{O}_{K}^{\ast}\) a \textbf{unit}\index{unit} of \(K\) (with the understanding that every element of \(K\) is invertible in \(K\)). It follows from \cref{thm:ring_of_integers_is_Dedekind,thm:unique_product_prime_ideals} that integral ideals \(\mf{a}\) of \(K\) admit prime factorizations. One of our core investigations will be to understand how the principal integral ideal \(p\mc{O}_{K}\) factors into a product of primes of \(K\) for any prime \(p\). Moreover, we will be able to leverage geometric tools to show that the class number \(h_{K}\) is finite and completely describe the unit group \(\mc{O}_{K}^{\ast}\).
-  \fi\iffalse\section{\todo{Localization}}
+    The \textbf{unit group}\index{unit group} of \(K\) is the unit group of \(\mc{O}_{K}\) and we call any element of \(\mc{O}_{K}^{\ast}\) a \textbf{unit}\index{unit} of \(K\) (with the understanding that every element of \(K\) is invertible in \(K\)). It follows from \cref{thm:unique_product_prime_ideals} that integral ideals \(\mf{a}\) of \(K\) admit prime factorizations. One of our core investigations will be to understand how the principal integral ideal \(p\mc{O}_{K}\) factors into a product of primes of \(K\) for any prime \(p\). We will also leverage geometric ideas to show that the class number is finite and completely describe the unit group.
+  \iffalse\section{\todo{Localization}}
     Let \(\smc{O}\) be a noetherian integral domain with field of fractions \(K\). If \(D \subseteq \smc{O}-\{0\}\) is a multiplicative subset (recall that necessarily \(1 \in D\)) then the \textbf{localization}\index{localization} \(\smc{O}D^{-1}\) of \(\smc{O}\) at \(D\) is defined by
     \[
       \smc{O}D^{-1} = \left\{\frac{\a}{\d} \in K:\a \in \smc{O} \text{ and } \d \in D\right\}.
