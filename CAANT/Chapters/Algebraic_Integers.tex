@@ -1103,18 +1103,11 @@
       \mc{O}_{K}^{S} = \mc{O}_{K}(X).
     \]
     We call any \(\a \in \mc{O}_{K}^{S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl^{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}^{S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K}^{S}\) of \(K\) is the class number of \(\Cl^{S}(K)\). The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \((\mc{O}_{K}^{S})^{\ast}\) of \(\mc{O}_{K}^{S}\) and we call any element of \((\mc{O}_{K}^{S})^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
-  \iffalse\section{\todo{Dedekind Extensions}}
-    A ring extension \(\mc{O}/\smc{O}\) is said to be a \textbf{Dedekind extension}\index{Dedekind extension} of a finite separable extension \(L/K\) if \(\mc{O}\) and \(\smc{O}\) are Dedekind domains whose field of fractions are \(L\) and \(K\) respectively and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). These Dedekind domains are related via the identity
-    \[
-      \mc{O} \cap K = \smc{O}.
-    \]
-    It also follows from \cref{prop:field_of_fractions_AKBL} that \(L\) is the field of fractions of \(\mc{O}\).
-
-  \fi\iffalse
-    If we merely assume \(\smc{O}\) is a Dedekind domain with field of fractions \(K\) and \(L/K\) is a finite separable extension then \(\mc{O}\) is also a Dedekind domain. The argument is similar to \cref{thm:ring_of_integers_is_Dedekind}.
+  \section{\todo{Dedekind Extensions}}
+    Let \(\smc{O}\) be integrally closed with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). It turns out that \(\mc{O}\) will be Dedekind whenever \(\smc{O}\) is and the argument is similar to that of \cref{thm:ring_of_integers_is_Dedekind}.
 
     \begin{proposition}\label{prop:integral_closure_of_Dedekind_is_Dedekind}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}\) is a Dedekind domain. That is, \(\mc{O}/\smc{O}\) is a Dedekind extension of \(L/K\).
+      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}\) is a Dedekind domain.
     \end{proposition}
     \begin{proof}
       \(\mc{O}\) is integrally closed as it is the integral closure of \(\smc{O}\). To show \(\mc{O}\) is noetherian, let the degree of \(L/K\) be \(n\) and \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Being a basis, we find that \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero}. As this basis is contained \(\mc{O}\), \cref{lem:lemma_for_integral_basis_AKBL} implies
@@ -1132,7 +1125,11 @@
       for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). This means \(\ker\phi = \mf{p}\), and by the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{\mf{p}} \to \mc{O}/\mf{P}\). Therefore \(\mc{O}/\mf{P}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space as \(\mc{O}\) is a free \(\smc{O}\)-module of finite rank. By primality of \(\mf{P}\), \(\mc{O}/\mf{P}\) is a finite integral domain and thus must be a field. This proves the first statement and the second is equivalent.
     \end{proof}
 
-    In light of this result, \(\mc{O}D^{-1}/\smc{O}D^{-1}\) is also a Dedekind extension of \(L/K\) for any multiplicative subset \(D\) of \(\smc{O}\). We call \(\mc{O}D^{-1}/\smc{O}D^{-1}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(D\). In the case of localizing at a prime \(\mf{p}\) of \(\smc{O}\), we call \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(\mf{p}\). The Dedekind extension \(\mc{O}/\smc{O}\) is said to be \textbf{local}\index{local} if \(\smc{O}\) is local. Equivalently, \(\smc{O}\) is a discrete valuation ring because it is a Dedekind domain. Whence \(\smc{O}\) is a principal ideal domain and \cref{thm:integral_basis_AKBL} implies that \(\mc{O}/\smc{O}\) admits an integral basis. In addition, as \(\smc{O}\) has a unique prime we see that \(\mc{O}\) has finitely many primes since they all must be above the prime of \(\smc{O}\). By \cref{prop:Dedekind_with_finite_primes_is_PID} this forces \(\mc{O}\) to be a principal ideal domain as well. In particular, localizing the Dedekind extension \(\mc{O}/\smc{O}\) at \(\mf{p}\) produces the local Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\). With this phrasing, the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind} gives the following corollary:
+    Accordingly, a ring extension \(\mc{O}/\smc{O}\) is said to be a \textbf{Dedekind extension}\index{Dedekind extension} of a finite separable extension \(L/K\) if \(\mc{O}\) and \(\smc{O}\) are Dedekind domains whose field of fractions are \(L\) and \(K\) respectively and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). These Dedekind domains are related via the identity
+    \[
+      \mc{O} \cap K = \smc{O}.
+    \]
+    With this phrasing, the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind} gives another important result.
 
     \begin{corollary}\label{cor:integral_closure_of_Dedekind_is_Dedekind}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Then \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\) and every prime \(\mf{P}\) of \(\mc{O}\) satisfies
@@ -1142,23 +1139,24 @@
       for some prime \(\mf{p}\) of \(\smc{O}\). Moreover, \(\F_{\mf{P}}/\F_{\mf{p}}\) is a finite extension of degree at most \(n\).
     \end{corollary}
     \begin{proof}
-      The first statement was deduced in the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind} along with the fact that there is an injection \(\F_{\mf{p}} \to \F_{\mf{P}}\). From this injection it follows that \(\F_{\mf{P}}/\F_{\mf{p}}\) is an extension and since \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\), \(\F_{\mf{P}}/\F_{\mf{p}}\) has degree at most \(n\).
+      The first statement was deduced in the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind} along with the fact that there is an injection \(\F_{\mf{p}} \to \F_{\mf{P}}\). From this injection it follows that \(\F_{\mf{P}}/\F_{\mf{p}}\) is a field extension and since \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\), \(\F_{\mf{P}}/\F_{\mf{p}}\) has degree at most \(n\).
     \end{proof}
-  \fi\iffalse
 
-    If \(\mf{f}\) is a fractional ideal of \(\smc{O}\) then \(\mf{f}\mc{O}\) is a fractional ideal of \(\mc{O}\) because \(\mf{f}\) is a finitely generated \(\smc{O}\)-module and hence a finitely generated \(\mc{O}\)-module. In particular, \(\mf{a}\mc{O}\) is an integral ideal of \(\mc{O}\) for any integral ideal \(\mf{a}\) of \(\smc{O}\). Now let \(\mf{P}\) and \(\mf{p}\) be primes of \(\mc{O}\) and \(\smc{O}\) respectively. We say that \(\mf{P}\) is \textbf{above}\index{above} \(\mf{p}\), or equivalently, \(\mf{p}\) is \textbf{below}\index{below} \(\mf{P}\) if
+    In view of this result, if \(\mf{f}\) is a fractional ideal of \(\smc{O}\) then \(\mf{f}\mc{O}\) is a fractional ideal of \(\mc{O}\) because \(\mf{f}\) is a finitely generated \(\smc{O}\)-module and hence a finitely generated \(\mc{O}\)-module. In particular, \(\mf{a}\mc{O}\) is an integral ideal of \(\mc{O}\) for any integral ideal \(\mf{a}\) of \(\smc{O}\).
+    
+    We can say more in the case of primes. Suppose \(\mf{P}\) and \(\mf{p}\) are primes of \(\mc{O}\) and \(\smc{O}\) respectively. We say that \(\mf{P}\) is \textbf{above}\index{above} \(\mf{p}\), or equivalently, \(\mf{p}\) is \textbf{below}\index{below} \(\mf{P}\) if
     \[
       \mf{P} \cap \smc{O} = \mf{p}.
     \]
-    Then \cref{cor:integral_closure_of_Dedekind_is_Dedekind} implies that every prime of \(\mc{O}\) is above exactly one prime of \(\smc{O}\). If \(\mf{P}\) is above \(\mf{p}\) then \(\mf{P} \mid \mf{p}\mc{O}\). Indeed, since \(\mf{p} \subseteq \mf{P}\) we have \(\mf{p}\mc{O} \subseteq \mf{P}\) which is to say that \(\mf{P}\) divides \(\mf{p}\mc{O}\). This implies that only finitely many primes \(\mf{P}\) can lie above a prime \(\mf{p}\) and they are exactly the prime factors of \(\mf{p}\mc{O}\). Moreover, every prime of \(\smc{O}\) is below at least one prime of \(\mc{O}\). To see this, it suffices to show that the integral ideal \(\mf{p}\mc{O}\) satisfies
+    \cref{cor:integral_closure_of_Dedekind_is_Dedekind} implies that every prime of \(\mc{O}\) is above exactly one prime of \(\smc{O}\). If \(\mf{P}\) is above \(\mf{p}\) then \(\mf{P} \mid \mf{p}\mc{O}\). Indeed, since \(\mf{p} \subseteq \mf{P}\) we have \(\mf{p}\mc{O} \subseteq \mf{P}\) which is to say that \(\mf{P}\) divides \(\mf{p}\mc{O}\). This implies that only finitely many primes \(\mf{P}\) can lie above a prime \(\mf{p}\) and they are exactly the prime factors of \(\mf{p}\mc{O}\). Moreover, every prime of \(\smc{O}\) is below at least one prime of \(\mc{O}\). This is equivalent to the fact that any integral ideal of the form \(\mf{p}\mc{O}\) satisfies
     \[
       \mf{p}\mc{O} \neq \mc{O}.
     \]
-    By the prime factorization of fractional ideals, choosing \(\a \in \mf{p}-\mf{p}^{2}\) we can write \(\a\smc{O} = \mf{p}\mf{a}\) for some integral ideal \(\mf{a}\) relatively prime to \(\mf{p}\). Then \(\mf{a}+\mf{p} = \smc{O}\) and so there exist \(\b \in \mf{a}\) and \(\g \in \mf{p}\) such that \(\b+\g = 1\). Then \(\b\mf{p} \subseteq \a\smc{O}\) and \(\b \notin \mf{p}\) because otherwise \(1 \in \mf{p}\) which is absurd since \(\mf{p}\) is proper. Now if \(\mf{p}\mc{O} = \mc{O}\), it would follow that \(\b\mc{O} \subseteq \a\mc{O}\) which would imply \(\b = \a\d\) for some \(\d \in \mc{O}\). Hence \(\d = \frac{\b}{\a} \in K\) because \(K\) is the field of fractions of \(\smc{O}\). As \(\mc{O} \cap K = \smc{O}\), we also find that \(\d \in \smc{O}\). But since \(\a \in \mf{p}\), it follows that \(\b \in \mf{p}\) which is a contraction. Therefore \(\mf{p}\mc{O} \neq \mc{O}\). In addition, we have
+    Indeed, by the prime factorization of fractional ideals, choose \(\a \in \mf{p}-\mf{p}^{2}\) so that \(\a\smc{O} = \mf{p}\mf{a}\) for some integral ideal \(\mf{a}\) relatively prime to \(\mf{p}\). Then \(\mf{a}+\mf{p} = \smc{O}\) so there exist \(\b \in \mf{a}\) and \(\g \in \mf{p}\) with \(\b+\g = 1\). It follows that \(\b\mf{p} \subseteq \a\smc{O}\) and \(\b \notin \mf{p}\). Now if \(\mf{p}\mc{O} = \mc{O}\), it would follow that \(\b\mc{O} \subseteq \a\mc{O}\) which would imply \(\b = \a\d\) for some \(\d \in \mc{O}\). Then \(\a\d+\g = 1\) whence \(1 \in \mf{p}\) contradicting the fact that \(\mf{p}\) is proper. Equivalently, \(\mf{p}\mc{O}\) has at least one prime factor \(\mf{P}\). This also implies
     \[
-      \mf{p}\mc{O} \cap \smc{O} = \mf{p}.
+      \mf{p}\mc{O} \cap \smc{O} = \mf{p},
     \]
-    The reverse inclusion is obvious. For the forward inclusion, as \(\mf{p}\mc{O} \neq \mc{O}\) there exists a prime factor \(\mf{P}\) of \(\mf{p}\mc{O}\) so that \(\mf{p}\mc{O} \subseteq \mf{P}\). But then \(\mf{P}\) is above \(\mf{p}\) so that \(\mf{P} \cap \smc{O} = \mf{p}\) and the forward inclusion follows since \(\mf{p}\mc{O} \subseteq \mf{P}\). We illustrate the relationship between \(\mf{P}\) and \(\mf{p}\) via the following extension:
+    as the prime \(\mf{P}\) is above \(\mf{p}\) and \(\mf{P} \mid \mf{p}\mc{O}\). We illustrate the relationship between \(\mf{P}\) and \(\mf{p}\) via the following extension:
 
     \begin{center}
       \begin{tikzcd}[row sep=large, column sep=large]
@@ -1167,15 +1165,24 @@
       \end{tikzcd}
     \end{center}
 
-    We have the residue class fields \(\F_{\mf{P}}\) and \(\F_{\mf{p}}\). The former is a finite extension of the latter of degree at most \(n\) by \cref{cor:integral_closure_of_Dedekind_is_Dedekind}. Accordingly, we call \(\F_{\mf{P}}/\F_{\mf{p}}\) the \textbf{residue class extension}\index{residue class extension} of \(\mc{O}/\smc{O}\) for \(\mf{P}\). Actually since \cref{cor:integral_closure_of_Dedekind_is_Dedekind} implies \(\mc{O}\) is at finitely generated \(\smc{O}\)-module of rank at most \(n\), the quotient ring \(\mf{B}/\mf{A}\) is a \(\F_{\mf{p}}\)-vector space of dimension at most \(n\) for any integral ideals \(\mf{A}\) and \(\mf{B}\) with \(\mf{p} \subseteq \mf{A} \subseteq \mf{B}\). In any case, we define the \textbf{inertia degree}\index{inertia degree} \(f_{\mf{p}}(\mf{P})\) of \(\mf{P}\) relative to \(\mf{p}\) by
-    \[
-      f_{\mf{p}}(\mf{P}) = [\F_{\mf{P}}:\F_{\mf{p}}].
-    \]
-    That is, \(f_{\mf{p}}(\mf{P})\) is the dimension of the residue field \(\F_{\mf{P}}\) as a \(\F_{\mf{p}}\)-vector space. The \textbf{ramification index}\index{ramification index} \(e_{\mf{p}}(\mf{P})\) is the power of \(\mf{P}\) appearing in the prime factorization of \(\mf{p}\mc{O}\). If \(\mf{p}\mc{O}\) has prime factors \(\mf{P}_{1},\ldots,\mf{P}_{r}\) then the prime factorization of \(\mf{p}\mc{O}\) is
+    The \textbf{ramification index}\index{ramification index} \(e_{\mf{p}}(\mf{P})\) is the power of \(\mf{P}\) appearing in the prime factorization of \(\mf{p}\mc{O}\). If \(\mf{p}\mc{O}\) has prime factors \(\mf{P}_{1},\ldots,\mf{P}_{r}\) then the prime factorization of \(\mf{p}\mc{O}\) is
     \[
       \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})}.
     \]
-    All of this is preserved under localization as the following proposition shows:
+
+    Something can also be said about the residue class fields \(\F_{\mf{P}}\) and \(\F_{\mf{p}}\). The former is a finite extension of the latter of degree at most \(n\) by \cref{cor:integral_closure_of_Dedekind_is_Dedekind}. Accordingly, we call \(\F_{\mf{P}}/\F_{\mf{p}}\) the \textbf{residue class extension}\index{residue class extension} of \(\mc{O}/\smc{O}\) for \(\mf{P}\). We define the \textbf{inertia degree}\index{inertia degree} \(f_{\mf{p}}(\mf{P})\) of \(\mf{P}\) relative to \(\mf{p}\) by
+    \[
+      f_{\mf{p}}(\mf{P}) = [\F_{\mf{P}}:\F_{\mf{p}}].
+    \]
+    That is, \(f_{\mf{p}}(\mf{P})\) is the dimension of the residue field \(\F_{\mf{P}}\) as a \(\F_{\mf{p}}\)-vector space. More generally, recall from \cref{cor:integral_closure_of_Dedekind_is_Dedekind} that \(\mc{O}\) is at finitely generated \(\smc{O}\)-module of rank at most \(n\). Therefore the quotient ring \(\mf{B}/\mf{A}\) is a \(\F_{\mf{p}}\)-vector space of dimension at most \(n\) for any integral ideals \(\mf{A}\) and \(\mf{B}\) with \(\mf{p} \subseteq \mf{A} \subseteq \mf{B}\). We obtain the residue class field \(\F_{\mf{P}}\) when \(\mf{A} = \mf{P}\) and \(\mf{B} = \mc{O}\).
+
+    \todo{xxx}
+
+    All of this is preserved under localization.
+
+    In light of this result, \(\mc{O}D^{-1}/\smc{O}D^{-1}\) is also a Dedekind extension of \(L/K\) for any multiplicative subset \(D\) of \(\smc{O}\). We call \(\mc{O}D^{-1}/\smc{O}D^{-1}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(D\). In the case of localizing at a prime \(\mf{p}\) of \(\smc{O}\), we call \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(\mf{p}\). The Dedekind extension \(\mc{O}/\smc{O}\) is said to be \textbf{local}\index{local} if \(\smc{O}\) is local. Equivalently, \(\smc{O}\) is a discrete valuation ring because it is a Dedekind domain. Whence \(\smc{O}\) is a principal ideal domain and \cref{thm:integral_basis_AKBL} implies that \(\mc{O}/\smc{O}\) admits an integral basis. In addition, as \(\smc{O}\) has a unique prime we see that \(\mc{O}\) has finitely many primes since they all must be above the prime of \(\smc{O}\). By \cref{prop:Dedekind_with_finite_primes_is_PID} this forces \(\mc{O}\) to be a principal ideal domain as well. In particular, localizing the Dedekind extension \(\mc{O}/\smc{O}\) at \(\mf{p}\) produces the local Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\). 
+
+    \todo{xxx}
 
     \begin{proposition}\label{prop:ramification_setup_respects_localization}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then for the Dedekind extension \(\mc{O}D^{-1}/\smc{O}D^{-1}\), \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\) if and only if \(\mf{P}\) is above \(\mf{p}\). Moreover, there are isomorphisms
@@ -1385,7 +1392,7 @@
       \mf{Q}_{\mc{O}/\smc{O}} = \mc{O}.
     \]
     We now turn to the setting of a number field \(K\). Every prime \(\mf{p}\) of \(K\) is above some prime \(p\) (recall \(\Z\) is a principal ideal domain so we are referring to primes by their generator). Then the residue class extension of \(\mc{O}_{K}/\Z\) for \(\mf{p}\) is \(\F_{\mf{p}}/\F_{p}\). Also, we write \(f_{p}(\mf{p})\) and \(e_{p}(\mf{p})\) for the inertia degree and ramification index of \(\mf{p}\) relative to \(p\) respectively. Moreover, all of the residue class extensions are separable since \(\F_{p}\) is a perfect field. This implies \(\mf{p}\) is ramified in \(\mc{O}_{K}/\Z\) if and only if \(e_{p}(\mf{p}) = 1\). If \(\t\) is a primitive element for \(K/\Q\) contained in \(\mc{O}_{K}\), then the \textbf{conductor}\index{conductor} \(\mf{q}_{K}\) of \(K\) relative to \(\t\) is the conductor of \(\mc{O}_{K}/\Z\) relative to \(\t\). Even though \(K\) admits an integral basis, \(\mc{O}_{K}\) is not necessarily monogenic so that \(\mf{q}_{K}\) may not be \(\mc{O}_{K}\).
-  \fi\iffalse\section{\todo{Galois Extensions}}
+  \iffalse\section{\todo{Galois Extensions}}
     Much more can be said about the ramification of primes in a Dedekind extension \(\mc{O}/\smc{O}\) when the associated extension \(L/K\) is Galois. Since \(L/K\) is assumed to be finite and separable, this amounts to further assuming \(L/K\) is normal. In this case, the elements of the Galois group \(\Gal(L/K) = \Hom_{K}(L,\conj{K})\). Then by \cref{prop:formulas_for_trace_and_norm}, we have
     \[
       \Norm_{L/K}(\l) = \prod_{\s \in \Gal(L/K)}\s(\l) \quad \text{and} \quad \Trace_{L/K}(\l) = \sum_{\s \in \Gal(L/K)}\s(\l),
