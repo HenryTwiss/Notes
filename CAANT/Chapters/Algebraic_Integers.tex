@@ -1,14 +1,14 @@
 \chapter{Algebraic Integers}
   Throughout, all rings will be understood to be commutative and with unity.
   \section{Integrality}
-    Let \(B/A\) be an extension of rings. We say that \(\b \in B\) is \textit{integral}\index{integral} over \(A\) if \(\b\) is the root of a monic polynomial \(f(x) \in A[x]\). In other words, \(\b\) satisfies an equation of the form
+    Let \(B/A\) be a ring extension. We say that \(\b \in B\) is \textit{integral}\index{integral} over \(A\) if \(\b\) is the root of a monic polynomial \(f(x) \in A[x]\). In other words, \(\b\) satisfies an equation of the form
     \[
       \b^{n}+\a_{n-1}\b^{n-1}+\cdots+\a_{0} = 0,
     \]
     for some positive integer \(n\) and \(\a_{i} \in A\). We say that \(B\) is \textit{integral}\index{integral} over \(A\) if every element of \(B\) is integral over \(A\). As we may expect, the set of integral elements form a ring.
 
     \begin{proposition}\label{prop:integral_if_finitely_generated}
-      Let \(B/A\) be an extension of rings. Then \(\b_{1},\ldots,\b_{n} \in B\) are all integral over \(A\) if and only if \(A[\b_{1},\ldots,\b_{n}]\) is a finitely generated \(A\)-module. In particular, the elements of \(B\) that are integral over \(A\) form a ring.
+      Let \(B/A\) be a ring extension. Then \(\b_{1},\ldots,\b_{n} \in B\) are all integral over \(A\) if and only if \(A[\b_{1},\ldots,\b_{n}]\) is a finitely generated \(A\)-module. In particular, the elements of \(B\) that are integral over \(A\) form a ring.
     \end{proposition}
     \begin{proof}
       We will prove the forward implication by induction. First suppose \(\b \in B\) is integral over \(A\). Then there exists a monic polynomial \(f(x) \in A[x]\) of say degree \(n\) such that \(f(\b) = 0\). Let \(g(x) \in A[x]\) and write
@@ -37,7 +37,7 @@
     Integrality is also transitive.
 
     \begin{proposition}\label{prop:integrality_is_transitive}
-      Let \(C/B/A\) be an extension of rings. If \(C\) is integral over \(B\) and \(B\) is integral over \(A\) then \(C\) is integral over \(A\).
+      Let \(C/B/A\) be a ring extension. If \(C\) is integral over \(B\) and \(B\) is integral over \(A\) then \(C\) is integral over \(A\).
     \end{proposition}
     \begin{proof}
       Let \(\g \in C\). Since \(C\) is integral over \(B\), we have
@@ -107,7 +107,7 @@
     \]
     for some algebraic integer \(\a\) and nonzero integer \(a\). In particular, \(K\) is the field of fractions of \(\mc{O}_{K}\) and \(\mc{O}_{K}\) is integrally closed. Moreover, \(\k\) is an algebraic integer if and only if the minimal polynomial \(m_{\k}(x)\) of \(\k\) over \(\Q\) has coefficients in \(\Z\).
   \section{Traces and Norms}
-    Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). Recall that by fixing a basis for \(B/A\), there is an isomorphism
+    Let \(B/A\) be a ring extension such that \(B\) is a free \(A\)-module of rank \(n\). Recall that by fixing a basis for \(B/A\), there is an isomorphism
     \[
       \End_{A}(B) \cong \Mat_{n}(A)
     \]
@@ -219,7 +219,7 @@
       whose coefficients are in \(A\). Hence \(\frac{1}{\b} \in B\) and thus \(\b\) is a unit.
     \end{proof}
 
-    Having introduced traces and norms, we turn to discussing discriminants of free modules. Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). If \(\b_{1},\ldots,\b_{n}\) is a basis for \(B/A\), we define its \textbf{trace matrix}\index{trace matrix} \(\Trace_{B/A}(\b_{1},\ldots,\b_{n})\) by
+    Having introduced traces and norms, we turn to discussing discriminants of free modules. Let \(B/A\) be a ring extension such that \(B\) is a free \(A\)-module of rank \(n\). If \(\b_{1},\ldots,\b_{n}\) is a basis for \(B/A\), we define its \textbf{trace matrix}\index{trace matrix} \(\Trace_{B/A}(\b_{1},\ldots,\b_{n})\) by
     \[
       \Trace_{B/A}(\b_{1},\ldots,\b_{n}) = \begin{pmatrix} \Trace_{B/A}(\b_{1}\b_{1}) & \cdots & \Trace_{B/A}(\b_{1}\b_{n}) \\ \vdots & & \vdots \\ \Trace_{B/A}(\b_{n}\b_{1}) & \cdots & \Trace_{B/A}(\b_{n}\b_{n}) \end{pmatrix}.
     \]
@@ -246,7 +246,7 @@
     In particular, \(d_{A}(B) = 0\) is independent of the choice of representative. The discriminant is also multiplicative with respect to direct sums.
 
     \begin{proposition}\label{prop:discriminant_and_direct_sums}
-      Let \(B/A\) be an extension of rings such that \(B\) is a free \(A\)-module of rank \(n\). Suppose we have a direct sum decomposition
+      Let \(B/A\) be a ring extension such that \(B\) is a free \(A\)-module of rank \(n\). Suppose we have a direct sum decomposition
       \[
         B = B_{1} \op B_{2},
       \]
@@ -486,7 +486,7 @@
     \begin{enumerate}[label*=(\roman*)]
       \item \(\smc{O}\) is integrally closed.
       \item \(\smc{O}\) is noetherian.
-      \item Every nonzero prime ideal of \(\smc{O}\) is maximal.
+      \item Every prime of \(\smc{O}\) is maximal.
     \end{enumerate}
     
     Observe that \(\smc{o}\) being noetherian forces every integral ideal \(\mf{a}\) to be a finitely generated \(\smc{O}\)-module. In fact, as every fractional ideal \(\mf{f}\) is of the form \(\mf{f} = \frac{1}{\d}\mf{a}\), for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), \(\mf{f}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
@@ -495,7 +495,7 @@
       As \(\Z\) is a principal ideal domain which is integrally closed by \cref{rem:integers_are_integrally_closed}, \(\Z\) is a Dedekind domain. The primes of \(\Z\) are exactly the primes \(p\).
     \end{remark}
     
-    A Dedekind domain \(\smc{O}\) should be thought of as a generalization of \(\Z\) where we have relaxed the condition of being a principal ideal domain. We have not assumed \(\smc{O}\) is a principal ideal domain and the most interesting Dedekind domains are those which are not principal ideal domains. For Dedekind domains, we will show that being a principal ideal domain is equivalent to being a unique factorization domain. So if \(\smc{O}\) is not a principal ideal domain then unique factorization does not hold. However, it will be possible to remedy most of this as one of our primary aims is to show that integral ideals factor uniquely into a product of primes. This clearly generalizes unique factorization in \(\Z\) which will be enough. We first show containment in one direction for integral ideals.
+    In view of principal ideal domains being integrally closed by \cref{lemma:unique_factorization_domains_are_integrally_closed}, they are Dedekind domains. In fact, Dedekind domains should be thought of as generalizations of principal ideal domains. As \(\Z\) is a prototypical example of a principal ideal domain, a Dedekind domain \(\smc{O}\) should be thought of as a generalization of \(\Z\). In fact, we will show that being a principal ideal domain is equivalent to being a unique factorization domain for \(\smc{O}\). So if \(\smc{O}\) is not a principal ideal domain then unique factorization fails. However, it will be possible to remedy most of this as one of our primary aims is to prove that integral ideals factor uniquely into a product of primes. This clearly generalizes unique factorization in \(\Z\) which will be enough. To this end, we first show containment in one direction for integral ideals.
 
     \begin{lemma}\label{lem:integral_ideal_prime_containment}
       Let \(\smc{O}\) be a Dedekind domain. For every integral ideal \(\mf{a}\) of \(\smc{O}\), there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) of \(\smc{O}\) such that
@@ -826,7 +826,7 @@
       Let \(K\) be a number field. Then \(\mc{O}_{K}\) is a Dedekind domain.
     \end{theorem}
     \begin{proof}
-      \(\mc{O}_{K}\) is already integrally closed. As \(\mc{O}_{K}/\Z\) admits an integral basis, \(\mc{O}_{K}\) is a free \(\Z\)-module of finite rank. Whence any ideal is a finitely generated \(\Z\)-module and hence a finitely generated \(\mc{O}_{K}\)-module. This proves \(\mc{O}_{K}\) is noetherian. It remains to prove that every prime \(\mf{p}\) of \(\mc{O}_{K}\) is maximal. It suffices to to show that \(\mc{O}_{K}/\mf{p}\) is a field. To this end, consider the homomorphism
+      \(\mc{O}_{K}\) is already integrally closed. As \(\mc{O}_{K}/\Z\) admits an integral basis, \(\mc{O}_{K}\) is a free \(\Z\)-module of finite rank. Whence any ideal is a finitely generated \(\Z\)-module and hence a finitely generated \(\mc{O}_{K}\)-module. This proves \(\mc{O}_{K}\) is noetherian. It remains to prove that every prime \(\mf{p}\) of \(\mc{O}_{K}\) is maximal. This is equivalent to showing \(\mc{O}_{K}/\mf{p}\) is a field. To this end, consider the homomorphism
       \[
         \phi:\Z \to \mc{O}_{K}/\mf{p} \qquad a \mapsto a+\mf{p}.
       \]
@@ -977,7 +977,7 @@
 
     As an immediate consequence of this result is that the localizations \(\smc{O}_{\mf{p}}\) and \(\smc{O}(X)\) are Dedekind domains if \(\smc{O}\) is. 
 
-    Returning to the general setting, an integral domain \(\smc{O}\) is said to be \textbf{local}\index{local} if it has a unique maximal ideal. As may be expected, localizing at a prime produces a local integral domain. In particular, \(\smc{O}_{\mf{p}}\) is local where the maximal ideal is \(\mf{p}_{\mf{p}}\). Indeed, recall from \cref{prop:localization_prime_bijection} that the map
+    Returning to the general setting, an integral domain \(\smc{O}\) is said to be a \textbf{local}\index{local} if it has a unique maximal ideal. As may be expected, the resulting integral domain after localizing at a prime will be local. In particular, \(\smc{O}_{\mf{p}}\) is local where the maximal ideal is \(\mf{p}_{\mf{p}}\). Indeed, recall from \cref{prop:localization_prime_bijection} that the map
     \[
       \mf{q} \to \mf{q}_{\mf{p}},
     \]
@@ -1010,7 +1010,7 @@
       Whence there is a \(\rho \in \mf{p}\) such that \(\frac{1}{\d} = \frac{\e}{1+\rho}\). Moreover, as \(\mf{p}\) is maximal \(1+\rho\) is a unit in \(\smc{O}\). Then \(\frac{\a}{\d} = \frac{\a\e}{1+\rho}\) is an element of \(\smc{O}\) proving surjectivity.
     \end{proof}
     
-    We wil now restrict to principal ideal domains rather than integral domains. An integral domain \(\smc{O}\) is said to be a \textbf{discrete valuation ring}\index{discrete valuation ring} if it is a principal ideal domain with a unique maximal ideal. Equivalently, \(\smc{O}\) is a local principal ideal domain. This is a particularly simple example of a local integral domain.
+    We wil now restrict to principal ideal domains rather than integral domains. An integral domain \(\smc{O}\) is said to be a \textbf{discrete valuation ring}\index{discrete valuation ring} if it is a principal ideal domain with a unique maximal ideal. Equivalently, \(\smc{O}\) is a local principal ideal domain or a Dedekind domain with exactly one prime.
     
     Let \(\mf{p}\) be the unique maximal ideal of \(\smc{O}\). In particular, \(\mf{p}\) is prime and of the form \(\mf{p} = \pi\smc{O}\) for some prime \(\pi \in \smc{O}\). We call \(\pi\) a \textbf{uniformizer}\index{uniformizer} of \(\smc{O}\) and it is uniquely defined up to multiplication by a unit. On the one hand, \(\smc{O}\) is local so every element not in \(\mf{p}\) is a unit. On the other hand, \(\smc{O}\) is a principal ideal domain so that \(\pi\) is the only prime of \(\smc{O}\). Since \(\smc{O}\) is necessarily a unique factorization domain, these facts together imply that every \(\a \in \smc{O}\) is of the form
     \[
@@ -1042,13 +1042,13 @@
     \]
     is a surjective homomorphism.
 
-    As principal ideal domains are integrally closed by \cref{lemma:unique_factorization_domains_are_integrally_closed}, discrete valuation rings are necessarily Dedekind domains. As every prime ideal is maximal, they are Dedekind domains with exactly one prime. This will allow us to establish a connection between Dedekind domains and discrete valuation rings. In particular, a noetherian integral domain is a Dedekind domain if and only if its localization at any prime is a discrete valuation ring.
+    If \(\smc{O}\) is a Dedekind domain then it is local if and only if it is a discrete valuation ring. Indeed, any Dedekind domain with finitely many primes is a principal ideal domain by \cref{prop:Dedekind_with_finite_primes_is_PID}. This will allow us to establish a connection between Dedekind domains and discrete valuation rings. In particular, a noetherian integral domain is a Dedekind domain if and only if its localization at any prime is a discrete valuation ring.
 
     \begin{theorem}\label{thm:Dedekind_if_and_only_if_all_localizations_are_discrete_valuation_rings}
       Let \(\smc{O}\) be a noetherian integral domain. Then \(\smc{O}\) is a Dedekind domain if and only if \(\smc{O}_{\mf{p}}\) is a discrete valuation ring for all primes \(\mf{p}\).
     \end{theorem}
     \begin{proof}
-      For the forward implication, suppose \(\smc{O}\) is a Dedekind domain and let \(\mf{p}\) be a prime. Then \(\smc{O}_{\mf{p}}\) is a local Dedekind domain as we have seen. By \cref{prop:Dedekind_with_finite_primes_is_PID}, \(\smc{O}_{\mf{p}}\) is a principal ideal domain whence a discrete valuation ring as well. This proves the forward implication. For the reverse implication, suppose \(\smc{O}\) is a noetherian integral domain and \(\smc{O}_{\mf{p}}\) is a discrete valuation ring for all primes \(\mf{p}\). As \(\smc{O}_{\mf{p}}\) is a principal ideal domain, \cref{lemma:unique_factorization_domains_are_integrally_closed} implies that \(\smc{O}_{\mf{p}}\) is integrally closed. Since the intersection of integrally closed rings is clearly integrally closed, \cref{prop:ring_is_intersection_of_all_localizations} shows that \(\smc{O}\) is integrally closed. As \(\smc{O}\) is noetherian by assumption, it remains to show that every prime is maximal. So let \(\mf{q}\) be prime. Zorn's lemma implies that \(\mf{q}\) is contained in some maximal ideal \(\mf{p}\). As maximal ideals are prime, the inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{q}_{\mf{p}}\) and \(\mf{p}_{\mf{p}}\) are primes of \(\smc{O}_{\mf{p}}\). As \(\smc{O}_{\mf{p}}\) is a discrete valuation ring it is a Dedekind domain with exactly one prime. Whence \(\mf{q}_{\mf{p}} = \mf{p}_{\mf{p}}\) and the aforementioned inclusion-preserving bijections imply that \(\mf{q} = \mf{p}\). Hence \(\mf{q}\) is maximal. This proves the reverse implication.
+      For the forward implication, suppose \(\smc{O}\) is a Dedekind domain and let \(\mf{p}\) be a prime. Then \(\smc{O}_{\mf{p}}\) is a local Dedekind domain and hence a discrete valuation ring as we have seen. This proves the forward implication. For the reverse implication, suppose \(\smc{O}\) is a noetherian integral domain and \(\smc{O}_{\mf{p}}\) is a discrete valuation ring for all primes \(\mf{p}\). As \(\smc{O}_{\mf{p}}\) is a principal ideal domain, \(\smc{O}_{\mf{p}}\) is integrally closed by \cref{lemma:unique_factorization_domains_are_integrally_closed}. Then \cref{prop:ring_is_intersection_of_all_localizations} implies \(\smc{O}\) is integrally closed too. As \(\smc{O}\) is noetherian by assumption, it remains to show that every prime is maximal. So let \(\mf{q}\) be prime. By Zorn's lemma, \(\mf{q}\) is contained in some maximal ideal \(\mf{p}\). As maximal ideals are prime, the inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{q}_{\mf{p}}\) and \(\mf{p}_{\mf{p}}\) are primes of \(\smc{O}_{\mf{p}}\). As \(\smc{O}_{\mf{p}}\) is a discrete valuation ring it is a Dedekind domain with exactly one prime. Whence \(\mf{q}_{\mf{p}} = \mf{p}_{\mf{p}}\) and the aforementioned inclusion-preserving bijections imply that \(\mf{q} = \mf{p}\). Hence \(\mf{q}\) is maximal. This proves the reverse implication.
     \end{proof}
 
     \begin{remark} 
@@ -1104,32 +1104,35 @@
     \]
     We call any \(\a \in \mc{O}_{K}^{S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl^{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}^{S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K}^{S}\) of \(K\) is the class number of \(\Cl^{S}(K)\). The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \((\mc{O}_{K}^{S})^{\ast}\) of \(\mc{O}_{K}^{S}\) and we call any element of \((\mc{O}_{K}^{S})^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
   \iffalse\section{\todo{Dedekind Extensions}}
-    Having discussed the prime factorization of fractional ideals in Dedekind domains, we now turn to discussing how primes factor when considered in a larger Dedekind domain. Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). We first show that \(\mc{O}\) is also a Dedekind domain:
-
-    \begin{proposition}\label{prop:integral_closure_of_Dedekind_is_Dedekind}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}\) is a Dedekind domain.
-    \end{proposition}
-    \begin{proof}
-      \(\mc{O}\) is an integral domain because it is a subring of \(L\) and is integrally closed since it is the integral closure of \(\smc{O}\). We now show \(\mc{O}\) is noetherian. Let the degree of \(L/K\) be \(n\) and let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis is contained in \(\mc{O}\). Then \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero} and \cref{lem:lemma_for_integral_basis_AKBL} implies that
-      \[
-        d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
-      \]
-      Thus \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\). In particular, every ideal of \(\mc{O}\) is also a finitely generated \(\smc{O}\)-module and therefore also a finitely generated \(\mc{O}\)-module. It remains to show that every nonzero prime ideal is maximal. Letting \(\mf{P}\) be a nonzero prime ideal, it suffices to show \(\mc{O}/\mf{P}\) is a field. To this end, consider the homomorphism
-      \[
-        \phi:\smc{O} \to \mc{O}/\mf{P} \qquad \a \mapsto \a+\mf{p}.
-      \]
-      Then \(\ker\phi = \mf{P} \cap \smc{O}\) and we claim \(\mf{P} \cap \smc{O}\) is a nonzero prime ideal of \(\smc{O}\). It is clearly an ideal of \(\smc{O}\) and is prime because \(\mf{P}\) is. To see that it is nonzero, let \(\a \in \mf{P}\) be nonzero. As \(\a\) is algebraic over \(\smc{O}\), we have
-      \[
-        \a^{n}+a_{n-1}\a^{n-1}+\cdots+a_{0} = 0,
-      \]
-      for some positive integer \(n\) and \(a_{i} \in \smc{O}\) for \(0 \le i \le n-1\). Taking \(n\) minimal, we have \(a_{0} \neq 0\). Isolating \(a_{0}\) shows that \(a_{0} \in \mf{P}\) and hence \(a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). Hence \(\ker\phi = \mf{p}\) and by the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{\mf{p}} \to \mc{O}/\mf{P}\). As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), it is obtained from \(\smc{O}\) by forming a polynomial ring with algebraic elements in \(L\). The latter injection then shows that \(\mc{O}/\mf{P}\) is obtained from \(\F_{\mf{p}}\) by adjoining these algebraic elements reduced modulo \(\mf{P}\). Their reductions are seen to be algebraic over \(\F_{\mf{p}}\) by reducing their minimal polynomials over \(K\), viewed as elements of \(\mc{O}[x]\), modulo \(\mf{P}\) upon recalling that the coefficients of which are in \(\smc{O}\) by \cref{prop:field_of_fractions_AKBL}. Hence \(\mc{O}/\mf{P}\) is obtained from \(\F_{\mf{p}}\) by adjoining algebraic elements to \(\F_{\mf{p}}\) (since \(\F_{\mf{p}}[\conj{\a}] = \F_{\mf{p}}(\conj{\a})\) if \(\conj{\a}\) is algebraic over \(\F_{\mf{p}}\)) and is therefore a field.
-    \end{proof}
-
-    Under the assumptions of \cref{prop:integral_closure_of_Dedekind_is_Dedekind}, it follows from \cref{prop:field_of_fractions_AKBL} that \(L\) is the field of fractions of \(\mc{O}\). We say that a ring extension \(\mc{O}/\smc{O}\) is a \textbf{Dedekind extension}\index{Dedekind extension} of a finite separable extension \(L/K\) if \(\mc{O}\) and \(\smc{O}\) are Dedekind domains whose field of fractions are \(L\) and \(K\) respectively and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). This immediately implies
+    A ring extension \(\mc{O}/\smc{O}\) is said to be a \textbf{Dedekind extension}\index{Dedekind extension} of a finite separable extension \(L/K\) if \(\mc{O}\) and \(\smc{O}\) are Dedekind domains whose field of fractions are \(L\) and \(K\) respectively and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). These Dedekind domains are related via the identity
     \[
       \mc{O} \cap K = \smc{O}.
     \]
-    Moreover, if \(\mc{O}\) is also a free \(\smc{O}\)-module then \(\mc{O}/\smc{O}\) admits an integral basis. In light of \cref{prop:localization_of_Dedekind_is_Dedekind}, \(\mc{O}D^{-1}/\smc{O}D^{-1}\) is also a Dedekind extension of \(L/K\) for any multiplicative subset \(D \subseteq \smc{O}-\{0\}\). We call \(\mc{O}D^{-1}/\smc{O}D^{-1}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(D\). In the case \(D = \smc{O}-\mf{p}\) for a prime \(\mf{p}\) of \(\smc{O}\), we call \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(\mf{p}\). We say that a Dedekind extension \(\mc{O}/\smc{O}\) is \textbf{local}\index{local} if \(\smc{O}\) is a discrete valuation ring. As \(\smc{O}\) is a principal ideal domain, \cref{thm:integral_basis_AKBL} implies that \(\mc{O}/\smc{O}\) admits an integral basis if it is local. In addition, as \(\smc{O}\) has a unique prime we see that \(\mc{O}\) has finitely many primes since they all must be above the prime of \(\smc{O}\). By \cref{prop:Dedekind_with_finite_primes_is_PID} this forces \(\mc{O}\) to be a principal ideal domain as well. In particular, localizing the Dedekind extension \(\mc{O}/\smc{O}\) at \(\mf{p}\) produces the local Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\). With this phrasing, the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind} gives the following corollary:
+    It also follows from \cref{prop:field_of_fractions_AKBL} that \(L\) is the field of fractions of \(\mc{O}\).
+
+  \fi\iffalse
+    If we merely assume \(\smc{O}\) is a Dedekind domain with field of fractions \(K\) and \(L/K\) is a finite separable extension then \(\mc{O}\) is also a Dedekind domain. The argument is similar to \cref{thm:ring_of_integers_is_Dedekind}.
+
+    \begin{proposition}\label{prop:integral_closure_of_Dedekind_is_Dedekind}
+      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}\) is a Dedekind domain. That is, \(\mc{O}/\smc{O}\) is a Dedekind extension of \(L/K\).
+    \end{proposition}
+    \begin{proof}
+      \(\mc{O}\) is integrally closed as it is the integral closure of \(\smc{O}\). To show \(\mc{O}\) is noetherian, let the degree of \(L/K\) be \(n\) and \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Being a basis, we find that \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero}. As this basis is contained \(\mc{O}\), \cref{lem:lemma_for_integral_basis_AKBL} implies
+      \[
+        d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
+      \]
+      Thus \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. In particular, every ideal of \(\mc{O}\) is also a finitely generated \(\smc{O}\)-module and therefore also a finitely generated \(\mc{O}\)-module. Whence \(\mc{O}\) is noetherian. It remains to show that every prime of \(\mc{O}\) is maximal. This is equivalent to showing \(\mc{O}/\mf{P}\) is a field. To this end, consider the homomorphism
+      \[
+        \phi:\smc{O} \to \mc{O}/\mf{P} \qquad \a \mapsto \a+\mf{p}.
+      \]
+      Then \(\ker\phi = \mf{P} \cap \smc{O}\) and we claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal of \(\smc{O}\) and is prime because \(\mf{P}\) is. To see that it is nonzero, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
+      \[
+        \l^{n}+\a_{n-1}\l^{n-1}+\cdots+\a_{0} = 0,
+      \]
+      for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). This means \(\ker\phi = \mf{p}\), and by the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{\mf{p}} \to \mc{O}/\mf{P}\). Therefore \(\mc{O}/\mf{P}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space as \(\mc{O}\) is a free \(\smc{O}\)-module of finite rank. By primality of \(\mf{P}\), \(\mc{O}/\mf{P}\) is a finite integral domain and thus must be a field. This proves the first statement and the second is equivalent.
+    \end{proof}
+
+    In light of this result, \(\mc{O}D^{-1}/\smc{O}D^{-1}\) is also a Dedekind extension of \(L/K\) for any multiplicative subset \(D\) of \(\smc{O}\). We call \(\mc{O}D^{-1}/\smc{O}D^{-1}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(D\). In the case of localizing at a prime \(\mf{p}\) of \(\smc{O}\), we call \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(\mf{p}\). The Dedekind extension \(\mc{O}/\smc{O}\) is said to be \textbf{local}\index{local} if \(\smc{O}\) is local. Equivalently, \(\smc{O}\) is a discrete valuation ring because it is a Dedekind domain. Whence \(\smc{O}\) is a principal ideal domain and \cref{thm:integral_basis_AKBL} implies that \(\mc{O}/\smc{O}\) admits an integral basis. In addition, as \(\smc{O}\) has a unique prime we see that \(\mc{O}\) has finitely many primes since they all must be above the prime of \(\smc{O}\). By \cref{prop:Dedekind_with_finite_primes_is_PID} this forces \(\mc{O}\) to be a principal ideal domain as well. In particular, localizing the Dedekind extension \(\mc{O}/\smc{O}\) at \(\mf{p}\) produces the local Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\). With this phrasing, the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind} gives the following corollary:
 
     \begin{corollary}\label{cor:integral_closure_of_Dedekind_is_Dedekind}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Then \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\) and every prime \(\mf{P}\) of \(\mc{O}\) satisfies
@@ -1141,8 +1144,9 @@
     \begin{proof}
       The first statement was deduced in the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind} along with the fact that there is an injection \(\F_{\mf{p}} \to \F_{\mf{P}}\). From this injection it follows that \(\F_{\mf{P}}/\F_{\mf{p}}\) is an extension and since \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\), \(\F_{\mf{P}}/\F_{\mf{p}}\) has degree at most \(n\).
     \end{proof}
+  \fi\iffalse
 
-    Continue to let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Note that if \(\mf{f}\) is a fractional ideal of \(\smc{O}\) then \(\mf{f}\mc{O}\) is a fractional ideal of \(\mc{O}\) because \(\mf{f}\) is a finitely generated \(\smc{O}\)-module and hence a finitely generated \(\mc{O}\)-module. In particular, \(\mf{a}\mc{O}\) is an integral ideal of \(\mc{O}\) for any integral ideal \(\mf{a}\) of \(\smc{O}\). Now let \(\mf{P}\) and \(\mf{p}\) be primes of \(\mc{O}\) and \(\smc{O}\) respectively. We say that \(\mf{P}\) is \textbf{above}\index{above} \(\mf{p}\), or equivalently, \(\mf{p}\) is \textbf{below}\index{below} \(\mf{P}\) if
+    If \(\mf{f}\) is a fractional ideal of \(\smc{O}\) then \(\mf{f}\mc{O}\) is a fractional ideal of \(\mc{O}\) because \(\mf{f}\) is a finitely generated \(\smc{O}\)-module and hence a finitely generated \(\mc{O}\)-module. In particular, \(\mf{a}\mc{O}\) is an integral ideal of \(\mc{O}\) for any integral ideal \(\mf{a}\) of \(\smc{O}\). Now let \(\mf{P}\) and \(\mf{p}\) be primes of \(\mc{O}\) and \(\smc{O}\) respectively. We say that \(\mf{P}\) is \textbf{above}\index{above} \(\mf{p}\), or equivalently, \(\mf{p}\) is \textbf{below}\index{below} \(\mf{P}\) if
     \[
       \mf{P} \cap \smc{O} = \mf{p}.
     \]
