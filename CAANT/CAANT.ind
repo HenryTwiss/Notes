@@ -48,8 +48,8 @@
   \indexspace
 
   \item Dedekind domain, \hyperpage{37}
-  \item Dedekind extension, \hyperpage{55}
-  \item Dedekind-Kummer theorem, \hyperpage{61}
+  \item Dedekind extension, \hyperpage{56}
+  \item Dedekind-Kummer theorem, \hyperpage{62}
   \item degree, \hyperpage{27}, \hyperpage{75}, \hyperpage{84}
   \item Dirichlet character, \hyperpage{7}
   \item Dirichlet convolution, \hyperpage{4}
@@ -70,7 +70,7 @@
   \item Euler's totient function, \hyperpage{3}
   \item even, \hyperpage{11}
   \item exactly divides, \hyperpage{41}
-  \item exponential valuation, \hyperpage{53}
+  \item exponential valuation, \hyperpage{54}
 
   \indexspace
 
@@ -78,7 +78,7 @@
   \item functional equation, \hyperpage{85}
   \item functional equation data, \hyperpage{85}
   \item fundamental discriminant, \hyperpage{11}
-  \item fundamental equality, \hyperpage{59}
+  \item fundamental equality, \hyperpage{60}
 
   \indexspace
 
@@ -91,7 +91,7 @@
   \indexspace
 
   \item ideal class, \hyperpage{46}
-  \item ideal class group, \hyperpage{45}, \hyperpage{47}
+  \item ideal class group, \hyperpage{46, 47}
   \item ideal group, \hyperpage{42}, \hyperpage{47}
   \item identity function, \hyperpage{2}
   \item imprimitive, \hyperpage{9}
@@ -111,8 +111,8 @@
   \item least common multiple, \hyperpage{41}
   \item Lindel\"of hypothesis, \hyperpage{95}
   \item Liouville's function, \hyperpage{3}
-  \item local, \hyperpage{51}, \hyperpage{57}
-  \item localization, \hyperpage{47--49}, \hyperpage{57}
+  \item local, \hyperpage{51}, \hyperpage{58}
+  \item localization, \hyperpage{48, 49}, \hyperpage{57}
   \item logarithm, \hyperpage{3}
 
   \indexspace
@@ -121,7 +121,7 @@
   \item M\"obius inversion, \hyperpage{5}
   \item modulus, \hyperpage{7}
   \item monogenic, \hyperpage{36, 37}
-  \item multiplicative, \hyperpage{2}, \hyperpage{47}
+  \item multiplicative, \hyperpage{2}, \hyperpage{48}
 
   \indexspace
 
@@ -158,9 +158,9 @@
   \item real, \hyperpage{10}
   \item relatively prime, \hyperpage{41}
   \item residue class extension, \hyperpage{57}
-  \item residue class field, \hyperpage{43}
+  \item residue class field, \hyperpage{44}
   \item Riemann hypothesis, \hyperpage{94}
-  \item ring of \(S\)-integers, \hyperpage{54}
+  \item ring of \(S\)-integers, \hyperpage{55}
   \item ring of integers, \hyperpage{27}
   \item root number, \hyperpage{84}
 
@@ -180,7 +180,7 @@
   \item total number of prime divisors function, \hyperpage{4}
   \item totally ramified, \hyperpage{61}
   \item totally split, \hyperpage{61}
-  \item tower, \hyperpage{58}
+  \item tower, \hyperpage{59}
   \item trace, \hyperpage{27, 28}, \hyperpage{37}
   \item trace form, \hyperpage{31}, \hyperpage{37}
   \item trace matrix, \hyperpage{30}

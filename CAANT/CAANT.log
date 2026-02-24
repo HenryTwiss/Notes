@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  23 FEB 2026 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  23 FEB 2026 23:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -764,17 +764,17 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 479.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61]
-Overfull \hbox (42.11143pt too wide) in paragraph at lines 1354--1356
+Overfull \hbox (42.11143pt too wide) in paragraph at lines 1356--1358
 \OT1/cmr/m/n/12 Since $\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ is the min-i-mal poly-no-mial for $\OML/cmm/m/it/12 ^^R$ \OT1/cmr/m/n/12 over $\OML/cmm/m/it/12 K$\OT1/cmr/m/n/12 , we have an iso-mor-phism $[][\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =m[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[][\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ] []
  []
 
 
-Overfull \hbox (69.68042pt too wide) detected at line 1358
+Overfull \hbox (69.68042pt too wide) detected at line 1360
 []\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =\U/euf/m/n/12 p[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 ] [] ([][\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =m[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[][\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ])\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 (\U/euf/m/n/12 p\OT1/cmr/m/n/12 ([][\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =m[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[][\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ])) [] [][\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 (\U/euf/m/n/12 p[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ] + \OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[][\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ]) [] \U/msb/m/n/12 F[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\U/msb/m/n/12 F[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ;
  []
 
 [62]
-Overfull \hbox (13.79428pt too wide) in paragraph at lines 1386--1388
+Overfull \hbox (13.79428pt too wide) in paragraph at lines 1388--1390
 \OT1/cmr/m/n/12 where the last equal-ity fol-lows by the prime fac-tor-iza-tion of $[](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ and that $[]([](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )) =
  []
 
@@ -849,10 +849,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2907b,1218s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on CAANT.pdf (111 pages, 611135 bytes).
+Output written on CAANT.pdf (111 pages, 609794 bytes).
 PDF statistics:
- 1420 PDF objects out of 1440 (max. 8388607)
- 1254 compressed objects within 13 object streams
+ 1419 PDF objects out of 1440 (max. 8388607)
+ 1253 compressed objects within 13 object streams
  389 named destinations out of 1000 (max. 500000)
  301 words of extra memory for PDF output out of 10000 (max. 10000000)
 

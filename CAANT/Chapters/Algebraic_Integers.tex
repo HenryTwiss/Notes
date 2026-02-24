@@ -681,31 +681,7 @@
     \[
       \a \equiv \a_{i} \pmod{\mf{p}_{i}^{e_{i}}}.
     \]
-    We will use the Chinese remainder theorem to prove a few useful lemmas about Dedekind domains. If \(\smc{O}\) is a Dedekind domain with prime \(\mf{p}\), we call \(\F_{\mf{p}} = \smc{O}/\mf{p}\) the \textbf{residue class field}\index{residue class field} of \(\smc{O}\) by \(\mf{p}\). This is field as primes are maximal in Dedekind domains. Our first lemma is an isomorphism between the residue class field and quotients by powers of a prime.
-
-    \begin{lemma}\label{lem:isomorphism_of_quotient_by_prime_integral_ideals}
-      Let \(\smc{O}\) be a Dedekind domain. Then for any prime \(\mf{p}\) of \(\smc{O}\) and nonnegative integer \(n\), we have an isomorphism
-      \[
-        \F_{\mf{p}} \cong \mf{p}^{n}/\mf{p}^{n+1}.
-      \]
-    \end{lemma}
-    \begin{proof}
-      By uniqueness of prime factorizations of fractional ideals, there exists \(\b \in \mf{p}^{n}-\mf{p}^{n+1}\). Consider the homomorphism
-      \[
-        \phi:\smc{O} \to \mf{p}^{n}/\mf{p}^{n+1} \qquad \a \mapsto \a\b+\mf{p}^{n+1}.
-      \]
-      By the first isomorphism theorem, it suffices to show \(\ker\phi = \mf{p}\) and that \(\phi\) is surjective. Let us first show \(\ker\phi = \mf{p}\). As \(\b \in \mf{p}^{n}\), it is obvious that \(\mf{p} \subseteq \ker\phi\). Conversely, suppose \(\a \in \ker\phi \). Then \(\a\b \in \mf{p}^{n+1}\) and as \(\b \in \mf{p}^{n}-\mf{p}^{n+1}\), we must have \(\a \in \mf{p}\). Whence \(\ker\phi = \mf{p}\). We now show that \(\phi\) is surjective. Let \(\g\) be a representative of a coset in \(\mf{p}^{n}/\mf{p}^{n+1}\). As \(\b \in \mf{p}^{n}\), we have \(\b\smc{O} \subseteq \mf{p}^{n}\). Since \(\b \notin \mf{p}^{n+1}\), it must be the case that \(\b\smc{O}\mf{p}^{-n}\) is an integral ideal relatively prime to \(\mf{p}^{n+1}\). By the Chinese remainder theorem, we can find a \(\a \in \smc{O}\) such that
-      \[
-        \a \equiv \g \pmod{\mf{p}^{n+1}} \quad \text{and} \quad \a \equiv 0 \pmod{\b\smc{O}\mf{p}^{-n}}.
-      \]
-      The second congruence means \(\a \in \b\smc{O}\mf{p}^{-n}\) whence \(\a \in \b\smc{O}\) by relative primality of the aforementioned integral ideals. Thus \(\a\b^{-1} \in \smc{O}\) and the first congruence implies
-      \[
-        \phi(\a\b^{-1}) = \g+\mf{p}^{n+1}.
-      \]
-      This shows \(\phi\) is surjective.
-    \end{proof}
-
-    Our second lemma shows that given two integral ideals, we can multiply by a relatively prime integral ideal and produce a principal integral ideal.
+    We will use the Chinese remainder theorem to prove a few useful lemmas about Dedekind domains. Our first lemma shows that given two integral ideals, we can multiply by a relatively prime integral ideal and produce a principal integral ideal.
 
     \begin{lemma}\label{lem:relatively_prime_and_principal}
       Let \(\smc{O}\) be a Dedekind domain and \(\mf{a}\) and \(\mf{b}\) be integral ideals of \(\smc{O}\). Then there exists an integral ideal \(\mf{c}\) of \(\smc{O}\) relatively prime to \(\mf{b}\) such that \(\mf{a}\mf{c}\) is principal.
@@ -722,7 +698,7 @@
       Whence \(\mf{p}_{i}^{e_{i}} \mid\mid \a\smc{O}\). It follows that \((\a\smc{O},\mf{a}\mf{b}) = \mf{a}\). Then there exists an integral ideal \(\mf{c}\) such that \(\a\smc{O} = \mf{a}\mf{c}\) and necessarily \((\mf{a}\mf{c},\mf{a}\mf{b}) = \mf{a}\). Thus \((\mf{c},\mf{b}) = \smc{O}\) which is to say that \(\mf{c}\) must be relatively prime to \(\mf{b}\).
     \end{proof}
 
-    Our last lemma shows that multiplying by fractional ideals does not affect quotients.
+    Our second lemma shows that multiplying by fractional ideals does not affect quotients.
 
     \begin{lemma}\label{lem:cancellation_isomorphism}
       Let \(\smc{O}\) be a Dedekind domain where \(\mf{f}\), \(\mf{g}\), and \(\mf{h}\) be fractional ideals of \(\smc{O}\) with \(\mf{g} \subseteq \mf{f}\). Then we have an isomorphism
@@ -736,7 +712,7 @@
       for any integral ideal \(\mf{a}\) of \(\smc{O}\).
     \end{lemma}
     \begin{proof}
-      Write \(\mf{f} = \frac{1}{\a}\mf{a}\), \(\mf{g} = \frac{1}{\b}\mf{b}\), and \(\mf{h} = \frac{1}{\g}\mf{c}\) for some nonzero \(\a,\b,\g \in \smc{O}\) and integral ideals \(\mf{a}\), \(\mf{b}\), and \(\mf{c}\) with \(\mf{b} \subseteq \mf{a}\). In view of the isomorphisms,
+      Write \(\mf{f} = \frac{1}{\a}\mf{a}\), \(\mf{g} = \frac{1}{\b}\mf{b}\), and \(\mf{h} = \frac{1}{\g}\mf{c}\) for some nonzero \(\a,\b,\g \in \smc{O}\) and integral ideals \(\mf{a}\), \(\mf{b}\), and \(\mf{c}\) with \(\mf{b} \subseteq \mf{a}\). In view of the isomorphisms
       \[
         \mf{f}/\mf{g} \cong \b\mf{a}/\a\mf{b} \quad \text{and} \quad \mf{f}\mf{h}/\mf{g}\mf{h} \cong \b\mf{a}\mf{c}/\a\mf{b}\mf{c},
       \]
@@ -744,22 +720,46 @@
       \[
         \mf{a}/\mf{b} \cong \mf{a}\mf{c}/\mf{b}\mf{c}.
       \]
+      To this end, as \(\mf{a} \mid \mf{b}\) we conclude \(\mf{b}\mf{a}^{-1}\) is an integral ideal. Then \cref{lem:relatively_prime_and_principal} implies the existence of an integral ideal \(\mf{d}\) relatively prime to \(\mf{b}\mf{a}^{-1}\) such that \(\mf{c}\mf{d} = \d\smc{O}\) for some nonzero \(\d \in \smc{O}\). Whence
+      \[
+        \mf{d}+\mf{b}\mf{a}^{-1} = \smc{O} \quad \text{and} \quad \mf{d} \cap \mf{b}\mf{a}^{-1} = \mf{d}\mf{b}\mf{a}^{-1}.
+      \]
+      Writing \(\mf{d} = \d\mf{c}^{-1}\), short computations show that these identities imply
+      \[
+        \d\mf{a}+\mf{b}\mf{c} = \mf{a}\mf{c} \quad \text{and} \quad \d^{-1}\mf{b}\mf{c} \cap \mf{a} = \mf{b}.
+      \]
       Consider the homomorphism
       \[
         \phi:\mf{a} \to \mf{a}\mf{c}/\mf{b}\mf{c} \qquad \a \mapsto \d\a+\mf{b}\mf{c}.
       \]
-      By the first isomorphism theorem, it suffices to show \(\ker\phi = \mf{b}\) and that \(\phi\) is surjective. To this end, we know \(\mf{a} \mid \mf{b}\) since to contain is to divide. Therefore \(\mf{b}\mf{a}^{-1}\) is an integral ideal and \cref{lem:relatively_prime_and_principal} implies the existence of an integral ideal \(\mf{d}\) relatively prime to \(\mf{b}\mf{a}^{-1}\) such that \(\mf{c}\mf{d} = \d\smc{O}\) for some nonzero \(\d \in \smc{O}\). Whence
-      \[
-        \mf{d}+\mf{b}\mf{a}^{-1} = \smc{O} \quad \text{and} \quad \mf{d} \cap \mf{b}\mf{a}^{-1} = \mf{d}\mf{a}^{-1}.
-      \]
-      Writing \(\mf{d} = \d\mf{c}^{-1}\), a short computation shows that these identities imply
-      \[
-        \d\mf{a}+\mf{b}\mf{c} = \mf{a}\mf{c} \quad \text{and} \quad \mf{a} \cap \d^{-1}\mf{b}\mf{c} = \mf{b}.
-      \]
-      As \(\ker\phi = \mf{a} \cap \d^{-1}\mf{b}\mf{c}\), the second identity shows \(\ker\phi = \mf{b}\). Surjectivity follows from the first identity. This proves the first statement. For the second statement, take \(\mf{f} = \mf{a}^{-1}\), \(\mf{g} = \smc{O}\), and \(\mf{h} = \mf{a}\).
+      By the first isomorphism theorem, it suffices to show \(\phi\) is surjective and \(\ker\phi = \mf{b}\). Surjectivity follows from the first above identity. As \(\ker\phi = \d^{-1}\mf{b}\mf{c} \cap \mf{a}\), the second identity above implies \(\ker\phi = \mf{b}\). This proves the first statement. For the second statement, take \(\mf{f} = \mf{a}^{-1}\), \(\mf{g} = \smc{O}\), and \(\mf{h} = \mf{a}\).
     \end{proof}
 
-    We now state two additional interesting facts about Dedekind domains. The first is that any Dedekind domains with only finitely many primes is a principal ideal domain.
+    Returning to the general case of a Dedekind domain \(\smc{O}\) and a prime \(\mf{p}\), we call \(\F_{\mf{p}} = \smc{O}/\mf{p}\) the \textbf{residue class field}\index{residue class field} of \(\smc{O}\) by \(\mf{p}\). This is field as primes are maximal in Dedekind domains. Our last lemma gives an isomorphism between the residue class field and quotients by powers of a prime.
+
+    \begin{lemma}\label{lem:isomorphism_of_quotient_by_prime_integral_ideals}
+      Let \(\smc{O}\) be a Dedekind domain. Then for any prime \(\mf{p}\) of \(\smc{O}\) and nonnegative integer \(n\), we have an isomorphism
+      \[
+        \F_{\mf{p}} \cong \mf{p}^{n}/\mf{p}^{n+1}.
+      \]
+    \end{lemma}
+    \begin{proof}
+      By uniqueness of prime factorizations of fractional ideals, there exists \(\b \in \mf{p}^{n}-\mf{p}^{n+1}\). Consider the homomorphism
+      \[
+        \phi:\smc{O} \to \mf{p}^{n}/\mf{p}^{n+1} \qquad \a \mapsto \b\a+\mf{p}^{n+1}.
+      \]
+      By the first isomorphism theorem, it suffices to show \(\phi\) is surjective and \(\ker\phi = \mf{p}\). By our choice of \(\b\), we find that \(\b\mf{p}^{-n}\) is an integral ideal relatively prime to \(\mf{p}\). Whence
+      \[
+        \b\mf{p}^{-n}+\mf{p} = \smc{O} \quad \text{and} \quad \b\mf{p}^{-n} \cap \mf{p} = \b\mf{p}^{1-n}.
+      \]
+      Short computations show that these identities imply
+      \[
+        \b\smc{O}+\mf{p}^{n+1} = \mf{p}^{n} \quad \text{and} \quad \b^{-1}\mf{p}^{n+1} \cap \smc{O} = \mf{p}.
+      \]
+       Surjectivity follows from the first identity. As \(\ker\phi = \b^{-1}\mf{p}^{n+1} \cap \smc{O}\), the second identity implies \(\ker\phi = \mf{p}\).
+    \end{proof}
+
+    We now state two additional interesting propositions about Dedekind domains. The first proposition is that any Dedekind domain with only finitely many primes is a principal ideal domain.
 
     \begin{proposition}\label{prop:Dedekind_with_finite_primes_is_PID}
       Let \(\smc{O}\) be a Dedekind domain. If there are only finitely many primes of \(\smc{O}\) then \(\smc{O}\) is a principal ideal domain.
@@ -768,7 +768,7 @@
       Let \(\mf{p}_{1},\ldots,\mf{p}_{r}\) be the primes of \(\smc{O}\). Then for any integral ideal \(\mf{a}\), \cref{lem:relatively_prime_and_principal} implies the existence of an integral ideal \(\mf{b}\) relatively prime to \(\mf{p}_{1} \cdots \mf{p}_{r}\) such that \(\mf{a}\mf{b} = \a\smc{O}\) for some nonzero \(\a \in \smc{O}\). As \(\mf{b}\) is relatively prime to all of the primes of \(\smc{O}\) we must have \(\mf{b} = \smc{O}\). Then \(\mf{a} = \a\smc{O}\). As \(\mf{a}\) was arbitrary, \(\smc{O}\) is a principal ideal domain.
     \end{proof}
     
-    The second is that any fractional ideal is generated by at most two elements.
+    The second proposition is that any fractional ideal is generated by at most two elements.
 
     \begin{proposition}\label{prop:fractional_ideal_generated_by_two_elements}
       Let \(\smc{O}\) be a Dedekind domain. Then every fractional ideal \(\mf{f}\) of \(\smc{O}\) is generated by at most two elements.
@@ -1003,11 +1003,15 @@
       \[
         \phi:\smc{O} \to \smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}^{n} \qquad \a \mapsto \a+\mf{p}_{\mf{p}}^{n}.
       \]
-      We have \(\ker\phi = \mf{p}_{\mf{p}}^{n} \cap \smc{O}\). By \cref{prop:localization_prime_bijection}, \(\mf{p} = \mf{p}_{\mf{p}} \cap \smc{O}\) and the first isomorphism theorem induces the desired embedding when \(n = 1\). As \(\mf{p}_{\mf{p}}\) is maximal, \(\smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}\) is a field and thus must be the field of fractions of \(\smc{O}/\mf{p}\) under this embedding. It remains to prove the last statement. So suppose \(\mf{p}\) is maximal. It suffices to prove \(\ker\phi = \mf{p}^{n}\) and that \(\phi\) is surjective for then the first isomorphism theorem completes the proof. Now \(\ker\phi = \mf{p}^{n}\) if and only if \(\mf{p}^{n} = \mf{p}_{\mf{p}}^{n} \cap \smc{O}\). This latter identity follows by induction and the aforementioned fact \(\mf{p} = \mf{p}_{\mf{p}} \cap \smc{O}\). For surjectivity, let \(\frac{\a}{\d}\) be a representative of a coset in \(\smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}^{n}\). As \(\d \notin \mf{p}\) and \(\mf{p}\) is maximal, \(\d\) is a representative of an invertible element in the field \(\smc{O}/\mf{p}\). Whence there exists an \(\e \in \smc{O}\) such that
+      Note that \(\ker\phi = \mf{p}_{\mf{p}}^{n} \cap \smc{O}\). By \cref{prop:localization_prime_bijection}, \(\mf{p}_{\mf{p}} \cap \smc{O} = \mf{p}\) and the first isomorphism theorem induces the desired embedding when \(n = 1\). As \(\mf{p}_{\mf{p}}\) is maximal, \(\smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}\) is a field and thus must be the field of fractions of \(\smc{O}/\mf{p}\) under this embedding. It remains to prove the last statement. So suppose \(\mf{p}\) is maximal. By the first isomorphism theorem again, it suffices to prove \(\phi\) is surjective and \(\ker\phi = \mf{p}^{n}\). Let \(\frac{\a}{\d}\) be a representative of a coset in \(\smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}^{n}\). As \(\d \notin \mf{p}\) and \(\mf{p}\) is maximal, \(\d\) is a representative of an invertible element in the field \(\smc{O}/\mf{p}\). Whence there exists an \(\e \in \smc{O}\) such that
       \[
         \d\e \equiv 1 \mod{\mf{p}}.
       \]
-      Whence there is a \(\rho \in \mf{p}\) such that \(\frac{1}{\d} = \frac{\e}{1+\rho}\). Moreover, as \(\mf{p}\) is maximal \(1+\rho\) is a unit in \(\smc{O}\). Then \(\frac{\a}{\d} = \frac{\a\e}{1+\rho}\) is an element of \(\smc{O}\) proving surjectivity.
+      Then there is a \(\rho \in \mf{p}\) such that \(\frac{1}{\d} = \frac{\e}{1+\rho}\). Moreover, as \(\mf{p}\) is maximal \(1+\rho\) is a unit in \(\smc{O}\). So \(\frac{\a}{\d} = \frac{\a\e}{1+\rho}\) is an element of \(\smc{O}\) proving surjectivity. Now the identity
+      \[
+        \mf{p}_{\mf{p}}^{n} \cap \smc{O} = \mf{p}^{n}.
+      \]
+      follow by induction as \(\mf{p}_{\mf{p}} \cap \smc{O} = \mf{p}\). This forces \(\ker\phi = \mf{p}^{n}\).
     \end{proof}
     
     We wil now restrict to principal ideal domains rather than integral domains. An integral domain \(\smc{O}\) is said to be a \textbf{discrete valuation ring}\index{discrete valuation ring} if it is a principal ideal domain with a unique maximal ideal. Equivalently, \(\smc{O}\) is a local principal ideal domain or a Dedekind domain with exactly one prime.
@@ -1095,7 +1099,7 @@
       \]
       Therefore \((v_{\mf{p}}(\k))_{\mf{p} \notin X}\) is a representative of a coset in \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) whose image under the fourth map is \(\mf{a}\) proving exactness at \(\Cl(\smc{O})\). 
       
-      The last statement follows from the first isomorphism theorem since the valuation \(v_{\mf{p}}\) restricted to \(K^{\ast}\) is a surjective homomorphism and the kernel is precisely the set of units of \(\smc{O}_{\mf{p}}\). This completes the proof.
+      The last statement follows from the first isomorphism theorem since the valuation \(v_{\mf{p}}\) restricted to \(K^{\ast}\) is a surjective homomorphism and the kernel is exactly \(\smc{O}_{\mf{p}}^{\ast}\). This completes the proof.
     \end{proof}
 
     We now turn to the setting of a number field \(K\). Let \(S\) denote a finite set of primes of \(\mc{O}_{K}\) and let \(X\) denote the set of all primes that do not belong to \(S\). The \textbf{ring of \(S\)-integers}\index{ring of \(S\)-integers} \(\mc{O}_{K}^{S}\) of \(K\) is defined by
@@ -1122,7 +1126,7 @@
       \[
         \l^{n}+\a_{n-1}\l^{n-1}+\cdots+\a_{0} = 0,
       \]
-      for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). This means \(\ker\phi = \mf{p}\), and by the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{\mf{p}} \to \mc{O}/\mf{P}\). Therefore \(\mc{O}/\mf{P}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space as \(\mc{O}\) is a free \(\smc{O}\)-module of finite rank. By primality of \(\mf{P}\), \(\mc{O}/\mf{P}\) is a finite integral domain and thus must be a field. This proves the first statement and the second is equivalent.
+      for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). This means \(\ker\phi = \mf{p}\). By the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{\mf{p}} \to \mc{O}/\mf{P}\). Therefore \(\mc{O}/\mf{P}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space as \(\mc{O}\) is a free \(\smc{O}\)-module of finite rank. By primality of \(\mf{P}\), \(\mc{O}/\mf{P}\) is a finite integral domain and thus must be a field. This proves the first statement and the second is equivalent.
     \end{proof}
 
     Accordingly, a ring extension \(\mc{O}/\smc{O}\) is said to be a \textbf{Dedekind extension}\index{Dedekind extension} of a finite separable extension \(L/K\) if \(\mc{O}\) and \(\smc{O}\) are Dedekind domains whose field of fractions are \(L\) and \(K\) respectively and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). These Dedekind domains are related via the identity
@@ -1176,51 +1180,49 @@
     \]
     That is, \(f_{\mf{p}}(\mf{P})\) is the dimension of the residue field \(\F_{\mf{P}}\) as a \(\F_{\mf{p}}\)-vector space. More generally, recall from \cref{cor:integral_closure_of_Dedekind_is_Dedekind} that \(\mc{O}\) is at finitely generated \(\smc{O}\)-module of rank at most \(n\). Therefore the quotient ring \(\mf{B}/\mf{A}\) is a \(\F_{\mf{p}}\)-vector space of dimension at most \(n\) for any integral ideals \(\mf{A}\) and \(\mf{B}\) with \(\mf{p} \subseteq \mf{A} \subseteq \mf{B}\). We obtain the residue class field \(\F_{\mf{P}}\) when \(\mf{A} = \mf{P}\) and \(\mf{B} = \mc{O}\).
 
-    \todo{xxx}
-
-    All of this is preserved under localization.
-
-    In light of this result, \(\mc{O}D^{-1}/\smc{O}D^{-1}\) is also a Dedekind extension of \(L/K\) for any multiplicative subset \(D\) of \(\smc{O}\). We call \(\mc{O}D^{-1}/\smc{O}D^{-1}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(D\). In the case of localizing at a prime \(\mf{p}\) of \(\smc{O}\), we call \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(\mf{p}\). The Dedekind extension \(\mc{O}/\smc{O}\) is said to be \textbf{local}\index{local} if \(\smc{O}\) is local. Equivalently, \(\smc{O}\) is a discrete valuation ring because it is a Dedekind domain. Whence \(\smc{O}\) is a principal ideal domain and \cref{thm:integral_basis_AKBL} implies that \(\mc{O}/\smc{O}\) admits an integral basis. In addition, as \(\smc{O}\) has a unique prime we see that \(\mc{O}\) has finitely many primes since they all must be above the prime of \(\smc{O}\). By \cref{prop:Dedekind_with_finite_primes_is_PID} this forces \(\mc{O}\) to be a principal ideal domain as well. In particular, localizing the Dedekind extension \(\mc{O}/\smc{O}\) at \(\mf{p}\) produces the local Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\). 
-
-    \todo{xxx}
+    Dedekind extensions are also well-behaved under localization. In view of \cref{prop:localization_of_Dedekind_is_Dedekind}, \(\mc{O}D^{-1}/\smc{O}D^{-1}\) is also a Dedekind extension of \(L/K\) for any multiplicative subset \(D\) of \(\smc{O}\). We call \(\mc{O}D^{-1}/\smc{O}D^{-1}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(D\). In the case of localizing at a prime \(\mf{p}\) of \(\smc{O}\), we call \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) the \textbf{localization}\index{localization} of \(\mc{O}/\smc{O}\) at \(\mf{p}\). We can also determine the ramification indices and inertia degrees of \(\mc{O}D^{-1}/\smc{O}D^{-1}\).
 
     \begin{proposition}\label{prop:ramification_setup_respects_localization}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then for the Dedekind extension \(\mc{O}D^{-1}/\smc{O}D^{-1}\), \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\) if and only if \(\mf{P}\) is above \(\mf{p}\). Moreover, there are isomorphisms
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then for the Dedekind extension \(\mc{O}D^{-1}/\smc{O}D^{-1}\) of \(L/K\), \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\) if and only if \(\mf{P}\) is above \(\mf{p}\). Moreover, there are isomorphisms
       \[
         \F_{\mf{P}D^{-1}} \cong \F_{\mf{P}} \quad \text{and} \quad \F_{\mf{p}D^{-1}} \cong \F_{\mf{p}}.
       \]
-      Lastly, we have equalities
+      Lastly, the ramification indices and inertia degrees satisfy
       \[
-        f_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = f_{\mf{p}}(\mf{P}) \quad \text{and} \quad e_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = e_{\mf{p}}(\mf{P}).
+        e_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = e_{\mf{p}}(\mf{P}) \quad \text{and} \quad f_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = f_{\mf{p}}(\mf{P}).
       \]
     \end{proposition}
     \begin{proof}
-      Note that \(\mf{P}\) and \(\mf{p}\) are primes disjoint from \(D\). On the one hand, suppose \(\mf{P}\) is above \(\mf{p}\). Then \(\mf{P} \cap \smc{O} = \mf{p}\) and applying the first bijection in \cref{prop:localization_prime_bijection} gives
+      For the first statement, the identities
       \[
-        \mf{P}D^{-1} \cap \smc{O}D^{-1} = \mf{p}D^{-1}.
+        \mf{P}D^{-1} \cap \smc{O}D^{-1} = \mf{p}D^{-1} \quad \text{and} \quad \mf{P} \cap \smc{O} = \mf{p},
       \]
-      Hence \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\). On the other hand, suppose \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\). Then \(\mf{P}D^{-1} \cap \smc{O}D^{-1} = \mf{p}D^{-1}\) and applying the second bijection in \cref{prop:localization_prime_bijection} gives
+      are equivalent by the inclusion-preserving bijections in \cref{prop:localization_prime_bijection}. Thus \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\) if and only if \(\mf{P}\) is above \(\mf{p}\). To prove the second statement, consider the homomorphisms
       \[
-        \mf{P} \cap \smc{O} = \mf{p}.
+        \Phi:\mc{O} \to \F_{\mf{P}D^{-1}} \qquad \a \mapsto \a+\mf{P}D^{-1} \quad \text{and} \quad \phi:\smc{O} \to \F_{\mf{p}D^{-1}} \qquad \a \mapsto \a+\mf{p}D^{-1}.
       \]
-      (recall \(\smc{O} \subseteq \mc{O}\)) so that \(\mf{P}\) is above \(\mf{p}\). This proves the first statement. For the second statement, consider the homomorphisms
+      By the first isomorphism theorem, it suffices to show \(\Phi\) and \(\phi\) are surjective, \(\ker\Phi = \mf{P}\), and \(\ker\phi = \mf{p}\).
+      
+      \todo{xxx}
+
+      Note that \(\ker\Phi = \mf{P}D^{-1} \cap \mc{O}\) and \(\ker\phi = \mf{p}D^{-1} \cap \smc{O}\). By \cref{prop:localization_prime_bijection}, we have
       \[
-        \Phi:\F_{\mf{P}} \to \F_{\mf{P}D^{-1}} \qquad \a+\mf{P} \mapsto \a+\mf{P}D^{-1},
+        \mf{P}D^{-1} \cap \mc{O} = \mf{P} \quad \text{and} \quad \mf{p}D^{-1} \cap \smc{O} = \mf{p}.
       \]
-      and
-      \[
-        \phi:\F_{\mf{p}} \to \F_{\mf{p}D^{-1}} \qquad \a+\mf{p} \mapsto \a+\mf{p}D^{-1}.
-      \]
-      Let \(\frac{\a}{\d}\) be a representative of a coset in \(\F_{\mf{P}D^{-1}}\) or \(\F_{\mf{p}D^{-1}}\) so that \(\a \in \mf{P}\) or \(\a \in \mf{p}\) respectively and \(\d \in D\). By \cref{prop:localization_prime_bijection}, \(D\) is disjoint from \(\mf{P}\) and \(\mf{p}\) and thus elements of \(D\) are invertible in \(\F_{\mf{P}}\) and \(\F_{\mf{p}}\). Then \(\frac{\a}{\d}\) represents a coset in \(\mf{P}\) or \(\mf{p}\) proving surjectivity. For injectivity, suppose \(\a\) is a representative of a coset in \(\F_{\mf{P}}\) or \(\F_{\mf{p}}\) that belongs to \(\ker\Phi\) or \(\ker\phi\) respectively. Then \(\a \in \mc{O} \cap \mf{P}D^{-1}\) or \(\a \in \smc{O} \cap \mf{p}D^{-1}\) which is to say that \(\a \in \mf{P}\) or \(\a \in \mf{p}\) by \cref{prop:localization_prime_bijection}. This means \(\a\) represents the zero class in \(\F_{\mf{P}}\) or \(\F_{\mf{p}}\) respectively and injectivity follows. Therefore \(\Phi\) and \(\phi\) are isomorphisms proving the second statement. In fact, these two isomorphisms together give
-      \[
-        f_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = f_{\mf{p}}(\mf{P}),
-      \]
-      by the definition of the inertia degrees. Finally, we have
+      Whence \(\ker\Phi = \mf{P}\) and \(\ker\phi = \mf{p}\). To prove the last statement, the identity
       \[
         e_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = e_{\mf{p}}(\mf{P}),
       \]
-      because the first statement implies that the prime factors of \(\mf{p}D^{-1}\mc{O}\) correspond to those of \(\mf{p}\mc{O}\) and hence their powers must be the same.
+      holds because the first statement implies that the prime factors of \(\mf{p}D^{-1}\mc{O}D^{-1}\) correspond to those of \(\mf{p}\mc{O}\) and hence their powers must be the same. Moreover,
+      \[
+        f_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = f_{\mf{p}}(\mf{P}),
+      \]
+      by the definition of the inertia degrees and the isomorphisms in the second statement.
     \end{proof}
+
+    The Dedekind extension \(\mc{O}/\smc{O}\) is said to be \textbf{local}\index{local} if \(\smc{O}\) is local. Equivalently, \(\smc{O}\) is a discrete valuation ring as it is a Dedekind domain. Whence \(\smc{O}\) is a principal ideal domain and \cref{thm:integral_basis_AKBL} implies that \(\mc{O}/\smc{O}\) admits an integral basis. In addition, as \(\smc{O}\) has a single prime \(\mc{O}\) has finitely many primes since they all must be above the prime of \(\smc{O}\). By \cref{prop:Dedekind_with_finite_primes_is_PID}, this forces \(\mc{O}\) to be a principal ideal domain as well. In particular, localizing the Dedekind extension \(\mc{O}/\smc{O}\) at \(\mf{p}\) produces the local Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\).
+
+    \todo{xxx}
 
     Let us now introduce towers of Dedekind extensions. We say that \(\mc{O}'/\mc{O}/\smc{O}\) is a \textbf{tower}\index{tower} of Dedekind extensions for a finite separable tower of extensions \(M/L/K\) if \(\mc{O}'/\mc{O}\) and \(\mc{O}/\smc{O}\) are Dedekind extensions for \(M/L\) and \(L/K\) respectively. Now let \(\mf{P}'\), \(\mf{P}\), and \(\mf{p}\) be primes of \(\mc{O}'\), \(\mc{O}\), and \(\smc{O}\) respectively with \(\mf{P}'\) above \(\mf{P}\) and \(\mf{P}\) above \(\mf{p}\). Then we have the residue class field extensions \(\F_{\mf{P}'}/\F_{\mf{P}}\) and \(\F_{\mf{P}}/\F_{\mf{p}}\). Moreover, \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid\mid \mf{p}\mc{O}\) and \(\mf{P}^{e_{\mf{P}}(\mf{P}')} \mid\mid \mf{P}\mc{O}'\). Then
     \begin{equation}\label{equ:ramification_and_interia_towers}

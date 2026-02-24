@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {4.1}Integrality}{24}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Traces and Norms}{27}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Dedekind Domains}{37}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Localization}{47}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Localization}{48}{section.4.4}%
 \contentsline {section}{\numberline {4.5}\leavevmode {\color {red}\sf Todo: [Dedekind Extensions]}}{55}{section.4.5}%
 \contentsline {chapter}{\numberline {5}\leavevmode {\color {red}\sf Todo: [Ramification]}}{65}{chapter.5}%
 \contentsline {chapter}{\numberline {6}\leavevmode {\color {red}\sf Todo: [Geometry of Numbers]}}{66}{chapter.6}%

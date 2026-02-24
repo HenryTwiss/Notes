@@ -90,8 +90,8 @@
 \indexentry{least common multiple|hyperpage}{41}
 \indexentry{relatively prime|hyperpage}{41}
 \indexentry{ideal group|hyperpage}{42}
-\indexentry{residue class field|hyperpage}{43}
-\indexentry{ideal class group|hyperpage}{45}
+\indexentry{residue class field|hyperpage}{44}
+\indexentry{ideal class group|hyperpage}{46}
 \indexentry{ideal class|hyperpage}{46}
 \indexentry{class number|hyperpage}{46}
 \indexentry{unit group|hyperpage}{46}
@@ -103,8 +103,8 @@
 \indexentry{class number|hyperpage}{47}
 \indexentry{unit group|hyperpage}{47}
 \indexentry{unit|hyperpage}{47}
-\indexentry{multiplicative|hyperpage}{47}
-\indexentry{localization|hyperpage}{47}
+\indexentry{multiplicative|hyperpage}{48}
+\indexentry{localization|hyperpage}{48}
 \indexentry{localization|hyperpage}{48}
 \indexentry{localization|hyperpage}{49}
 \indexentry{localization|hyperpage}{49}
@@ -116,14 +116,14 @@
 \indexentry{valuation|hyperpage}{52}
 \indexentry{valuation|hyperpage}{52}
 \indexentry{valulation|hyperpage}{53}
-\indexentry{exponential valuation|hyperpage}{53}
-\indexentry{ring of \(S\)-integers|hyperpage}{54}
+\indexentry{exponential valuation|hyperpage}{54}
+\indexentry{ring of \(S\)-integers|hyperpage}{55}
 \indexentry{algebraic \(S\)-integer|hyperpage}{55}
 \indexentry{\(S\)-class group|hyperpage}{55}
 \indexentry{\(S\)-class number|hyperpage}{55}
 \indexentry{\(S\)-unit group|hyperpage}{55}
 \indexentry{\(S\)-unit|hyperpage}{55}
-\indexentry{Dedekind extension|hyperpage}{55}
+\indexentry{Dedekind extension|hyperpage}{56}
 \indexentry{above|hyperpage}{56}
 \indexentry{below|hyperpage}{56}
 \indexentry{ramification index|hyperpage}{57}
@@ -131,9 +131,9 @@
 \indexentry{inertia degree|hyperpage}{57}
 \indexentry{localization|hyperpage}{57}
 \indexentry{localization|hyperpage}{57}
-\indexentry{local|hyperpage}{57}
-\indexentry{tower|hyperpage}{58}
-\indexentry{fundamental equality|hyperpage}{59}
+\indexentry{local|hyperpage}{58}
+\indexentry{tower|hyperpage}{59}
+\indexentry{fundamental equality|hyperpage}{60}
 \indexentry{inert|hyperpage}{61}
 \indexentry{totally split|hyperpage}{61}
 \indexentry{unramified|hyperpage}{61}
@@ -144,7 +144,7 @@
 \indexentry{unramified|hyperpage}{61}
 \indexentry{ramified|hyperpage}{61}
 \indexentry{conductor|hyperpage}{61}
-\indexentry{Dedekind-Kummer theorem|hyperpage}{61}
+\indexentry{Dedekind-Kummer theorem|hyperpage}{62}
 \indexentry{conductor|hyperpage}{64}
 \indexentry{Dirichlet series|hyperpage}{68}
 \indexentry{abscissa of convergence|hyperpage}{69}
