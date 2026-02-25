@@ -1,60 +1,58 @@
 \begin{theindex}
 
-  \item (classical) Perron's formula, \hyperpage{77}
-  \item \(S\)-class group, \hyperpage{55}
-  \item \(S\)-class number, \hyperpage{55}
-  \item \(S\)-unit, \hyperpage{55}
-  \item \(S\)-unit group, \hyperpage{55}
+  \item (classical) Perron's formula, \hyperpage{74}
+  \item \(S\)-class group, \hyperpage{56}
+  \item \(S\)-class number, \hyperpage{56}
+  \item \(S\)-unit, \hyperpage{56}
+  \item \(S\)-unit group, \hyperpage{56}
 
   \indexspace
 
-  \item above, \hyperpage{56}
-  \item abscissa of absolute convergence, \hyperpage{69}
-  \item abscissa of convergence, \hyperpage{69}
+  \item above, \hyperpage{57}
+  \item abscissa of absolute convergence, \hyperpage{66}
+  \item abscissa of convergence, \hyperpage{66}
   \item additive, \hyperpage{2}
-  \item algebraic \(S\)-integer, \hyperpage{55}
+  \item algebraic \(S\)-integer, \hyperpage{56}
   \item algebraic integer, \hyperpage{27}
   \item algebraic number, \hyperpage{27}
-  \item analytic \(L\)-function, \hyperpage{84}
-  \item analytic conductor, \hyperpage{87}
-  \item approximate function equation, \hyperpage{90}
+  \item analytic \(L\)-function, \hyperpage{81}
+  \item analytic conductor, \hyperpage{84}
+  \item approximate function equation, \hyperpage{87}
   \item arithmetic, \hyperpage{2}
 
   \indexspace
 
-  \item below, \hyperpage{56}
-  \item Burgess bound, \hyperpage{96}
+  \item below, \hyperpage{57}
+  \item Burgess bound, \hyperpage{93}
 
   \indexspace
 
-  \item central point, \hyperpage{88}
-  \item central value, \hyperpage{99}
-  \item central value estimate, \hyperpage{99}
+  \item central point, \hyperpage{85}
+  \item central value, \hyperpage{96}
+  \item central value estimate, \hyperpage{96}
   \item characteristic function of square-free integers, \hyperpage{3}
-  \item class number, \hyperpage{46, 47}
+  \item class number, \hyperpage{45}, \hyperpage{47}
   \item completely additive, \hyperpage{2}
   \item completely multiplicative, \hyperpage{2}
-  \item completion, \hyperpage{84}
+  \item completion, \hyperpage{81}
   \item complex, \hyperpage{10}
-  \item conductor, \hyperpage{9}, \hyperpage{61}, \hyperpage{64}, 
-		\hyperpage{84}
+  \item conductor, \hyperpage{9}, \hyperpage{81}
   \item constant function, \hyperpage{2}
-  \item convexity bound, \hyperpage{95}, \hyperpage{97}
-  \item convexity breaking bound, \hyperpage{96}
-  \item critical line, \hyperpage{88}
-  \item critical strip, \hyperpage{88}
+  \item convexity bound, \hyperpage{92}, \hyperpage{94}
+  \item convexity breaking bound, \hyperpage{93}
+  \item critical line, \hyperpage{85}
+  \item critical strip, \hyperpage{85}
   \item cubic, \hyperpage{11}, \hyperpage{27}
 
   \indexspace
 
-  \item Dedekind domain, \hyperpage{37}
-  \item Dedekind extension, \hyperpage{56}
-  \item Dedekind-Kummer theorem, \hyperpage{62}
-  \item degree, \hyperpage{27}, \hyperpage{75}, \hyperpage{84}
+  \item Dedekind domain, \hyperpage{38}
+  \item Dedekind extension, \hyperpage{57}
+  \item degree, \hyperpage{27}, \hyperpage{72}, \hyperpage{81}
   \item Dirichlet character, \hyperpage{7}
   \item Dirichlet convolution, \hyperpage{4}
   \item Dirichlet orthogonality relations, \hyperpage{8}
-  \item Dirichlet series, \hyperpage{68}
+  \item Dirichlet series, \hyperpage{65}
   \item discrete valuation ring, \hyperpage{52}
   \item discriminant, \hyperpage{30, 31}, \hyperpage{37}
   \item divides, \hyperpage{41}
@@ -64,9 +62,9 @@
 
   \item embedding matrix, \hyperpage{32}
   \item epsilon factor, \hyperpage{16}, \hyperpage{20}
-  \item Euler factor, \hyperpage{85}
-  \item Euler parameters, \hyperpage{85}
-  \item Euler product, \hyperpage{75}
+  \item Euler factor, \hyperpage{82}
+  \item Euler parameters, \hyperpage{82}
+  \item Euler product, \hyperpage{72}
   \item Euler's totient function, \hyperpage{3}
   \item even, \hyperpage{11}
   \item exactly divides, \hyperpage{41}
@@ -75,30 +73,30 @@
   \indexspace
 
   \item fractional ideal, \hyperpage{37}, \hyperpage{47}
-  \item functional equation, \hyperpage{85}
-  \item functional equation data, \hyperpage{85}
+  \item functional equation, \hyperpage{82}
+  \item functional equation data, \hyperpage{82}
   \item fundamental discriminant, \hyperpage{11}
-  \item fundamental equality, \hyperpage{60}
+  \item fundamental equality, \hyperpage{59}
 
   \indexspace
 
-  \item gamma factor, \hyperpage{84}
-  \item gamma parameters, \hyperpage{84}
+  \item gamma factor, \hyperpage{81}
+  \item gamma parameters, \hyperpage{81}
   \item Gauss sum, \hyperpage{14}
   \item generalized sum of divisors function, \hyperpage{3}
   \item greatest common divisor, \hyperpage{41}
 
   \indexspace
 
-  \item ideal class, \hyperpage{46}
-  \item ideal class group, \hyperpage{46, 47}
+  \item ideal class, \hyperpage{45}
+  \item ideal class group, \hyperpage{45}, \hyperpage{47}
   \item ideal group, \hyperpage{42}, \hyperpage{47}
   \item identity function, \hyperpage{2}
   \item imprimitive, \hyperpage{9}
   \item indicator function, \hyperpage{2}
   \item induced, \hyperpage{9}
-  \item inert, \hyperpage{61}
-  \item inertia degree, \hyperpage{57}
+  \item inert, \hyperpage{60}
+  \item inertia degree, \hyperpage{58}
   \item integral, \hyperpage{24}
   \item integral basis, \hyperpage{33}, \hyperpage{37}
   \item integral closure, \hyperpage{25}
@@ -107,12 +105,12 @@
 
   \indexspace
 
-  \item Landau's theorem, \hyperpage{73}
+  \item Landau's theorem, \hyperpage{70}
   \item least common multiple, \hyperpage{41}
-  \item Lindel\"of hypothesis, \hyperpage{95}
+  \item Lindel\"of hypothesis, \hyperpage{92}
   \item Liouville's function, \hyperpage{3}
-  \item local, \hyperpage{51}, \hyperpage{58}
-  \item localization, \hyperpage{48, 49}, \hyperpage{57}
+  \item local, \hyperpage{51}, \hyperpage{56}
+  \item localization, \hyperpage{47--49}, \hyperpage{55}
   \item logarithm, \hyperpage{3}
 
   \indexspace
@@ -121,11 +119,11 @@
   \item M\"obius inversion, \hyperpage{5}
   \item modulus, \hyperpage{7}
   \item monogenic, \hyperpage{36, 37}
-  \item multiplicative, \hyperpage{2}, \hyperpage{48}
+  \item multiplicative, \hyperpage{2}, \hyperpage{47}
 
   \indexspace
 
-  \item nontrivial zero, \hyperpage{94}
+  \item nontrivial zero, \hyperpage{91}
   \item norm, \hyperpage{27, 28}, \hyperpage{37}
   \item normalization, \hyperpage{25}
   \item number field, \hyperpage{27}
@@ -138,11 +136,11 @@
 
   \indexspace
 
-  \item Perron's formula, \hyperpage{81}, \hyperpage{83}
+  \item Perron's formula, \hyperpage{78}, \hyperpage{80}
   \item prime, \hyperpage{37}, \hyperpage{47}
   \item prime factorization, \hyperpage{41}
   \item prime factors, \hyperpage{41}
-  \item primitive, \hyperpage{9}, \hyperpage{86}
+  \item primitive, \hyperpage{9}, \hyperpage{83}
   \item principal, \hyperpage{7}, \hyperpage{37}
 
   \indexspace
@@ -153,39 +151,38 @@
   \indexspace
 
   \item Ramanujan sum, \hyperpage{13, 14}
-  \item ramification index, \hyperpage{57}
+  \item ramification index, \hyperpage{58}
   \item ramified, \hyperpage{61}
   \item real, \hyperpage{10}
   \item relatively prime, \hyperpage{41}
-  \item residue class extension, \hyperpage{57}
+  \item residue class extension, \hyperpage{58}
   \item residue class field, \hyperpage{44}
-  \item Riemann hypothesis, \hyperpage{94}
-  \item ring of \(S\)-integers, \hyperpage{55}
+  \item Riemann hypothesis, \hyperpage{91}
+  \item ring of \(S\)-integers, \hyperpage{56}
   \item ring of integers, \hyperpage{27}
-  \item root number, \hyperpage{84}
+  \item root number, \hyperpage{81}
 
   \indexspace
 
-  \item Selberg class, \hyperpage{85}
-  \item Selberg class Lindel\"of hypothesis, \hyperpage{96}
-  \item Selberg class Riemann hypothesis, \hyperpage{94}
-  \item Selberg's orthogonality conjecture, \hyperpage{86}
-  \item smooth dyadic weight, \hyperpage{97}
-  \item smooth weight, \hyperpage{82}
-  \item subconvexity estimate, \hyperpage{96}
+  \item Selberg class, \hyperpage{82}
+  \item Selberg class Lindel\"of hypothesis, \hyperpage{93}
+  \item Selberg class Riemann hypothesis, \hyperpage{91}
+  \item Selberg's orthogonality conjecture, \hyperpage{83}
+  \item smooth dyadic weight, \hyperpage{94}
+  \item smooth weight, \hyperpage{79}
+  \item subconvexity estimate, \hyperpage{93}
   \item sum of divisors function, \hyperpage{3}
 
   \indexspace
 
   \item total number of prime divisors function, \hyperpage{4}
   \item totally ramified, \hyperpage{61}
-  \item totally split, \hyperpage{61}
-  \item tower, \hyperpage{59}
+  \item totally split, \hyperpage{60}
   \item trace, \hyperpage{27, 28}, \hyperpage{37}
   \item trace form, \hyperpage{31}, \hyperpage{37}
   \item trace matrix, \hyperpage{30}
   \item trivial Dirichlet character, \hyperpage{7}
-  \item trivial zero, \hyperpage{94}
+  \item trivial zero, \hyperpage{91}
 
   \indexspace
 
@@ -193,19 +190,19 @@
   \item unit, \hyperpage{47}
   \item unit group, \hyperpage{46, 47}
   \item unramified, \hyperpage{61}
-  \item unweighted, \hyperpage{82}
+  \item unweighted, \hyperpage{79}
 
   \indexspace
 
   \item valuation, \hyperpage{52}
   \item valulation, \hyperpage{53}
-  \item Von Mangoldt coefficients, \hyperpage{100}
+  \item Von Mangoldt coefficients, \hyperpage{97}
   \item von Mangoldt function, \hyperpage{4}
 
   \indexspace
 
-  \item weighted, \hyperpage{82}
-  \item Weyl bound, \hyperpage{96}
+  \item weighted, \hyperpage{79}
+  \item Weyl bound, \hyperpage{93}
 
   \indexspace
 
