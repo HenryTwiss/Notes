@@ -48,7 +48,7 @@
 \indexentry{integral closure|hyperpage}{25}
 \indexentry{integrally closed|hyperpage}{25}
 \indexentry{normalization|hyperpage}{25}
-\indexentry{integrally closed|hyperpage}{25}
+\indexentry{integrally closed domain|hyperpage}{25}
 \indexentry{number field|hyperpage}{27}
 \indexentry{degree|hyperpage}{27}
 \indexentry{quadratic|hyperpage}{27}
@@ -111,12 +111,16 @@
 \indexentry{localization|hyperpage}{49}
 \indexentry{localization|hyperpage}{49}
 \indexentry{localization|hyperpage}{49}
+\indexentry{localization|hyperpage}{51}
+\indexentry{localization|hyperpage}{51}
+\indexentry{localization|hyperpage}{51}
+\indexentry{localization|hyperpage}{51}
 \indexentry{local|hyperpage}{51}
-\indexentry{discrete valuation ring|hyperpage}{52}
-\indexentry{uniformizer|hyperpage}{52}
-\indexentry{valuation|hyperpage}{52}
+\indexentry{discrete valuation ring|hyperpage}{53}
+\indexentry{uniformizer|hyperpage}{53}
 \indexentry{valuation|hyperpage}{53}
-\indexentry{valulation|hyperpage}{53}
+\indexentry{valuation|hyperpage}{53}
+\indexentry{valulation|hyperpage}{54}
 \indexentry{exponential valuation|hyperpage}{54}
 \indexentry{ring of \(S\)-integers|hyperpage}{55}
 \indexentry{algebraic \(S\)-integer|hyperpage}{55}
@@ -126,9 +130,9 @@
 \indexentry{\(S\)-unit|hyperpage}{55}
 \indexentry{above|hyperpage}{56}
 \indexentry{below|hyperpage}{56}
-\indexentry{ramification index|hyperpage}{56}
-\indexentry{residue class extension|hyperpage}{56}
-\indexentry{inertia degree|hyperpage}{56}
+\indexentry{ramification index|hyperpage}{57}
+\indexentry{residue class extension|hyperpage}{57}
+\indexentry{inertia degree|hyperpage}{57}
 \indexentry{fundamental equality|hyperpage}{58}
 \indexentry{inert|hyperpage}{59}
 \indexentry{totally split|hyperpage}{59}

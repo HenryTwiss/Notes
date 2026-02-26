@@ -15,8 +15,7 @@
 \contentsline {section}{\numberline {4.2}Traces and Norms}{27}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Dedekind Domains}{37}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Localization}{48}{section.4.4}%
-\contentsline {section}{\numberline {4.5}\leavevmode {\color {red}\sf Todo: [Orders]}}{55}{section.4.5}%
-\contentsline {section}{\numberline {4.6}\leavevmode {\color {red}\sf Todo: [Ramification]}}{55}{section.4.6}%
+\contentsline {section}{\numberline {4.5}\leavevmode {\color {red}\sf Todo: [Ramification]}}{56}{section.4.5}%
 \contentsline {chapter}{\numberline {5}\leavevmode {\color {red}\sf Todo: [Ramification]}}{60}{chapter.5}%
 \contentsline {chapter}{\numberline {6}\leavevmode {\color {red}\sf Todo: [Geometry of Numbers]}}{61}{chapter.6}%
 \contentsline {part}{III\hspace {1em}Analytic Number Theory}{62}{part.3}%

@@ -8,7 +8,7 @@
 
   \indexspace
 
-  \item above, \hyperpage{55}
+  \item above, \hyperpage{56}
   \item abscissa of absolute convergence, \hyperpage{64}
   \item abscissa of convergence, \hyperpage{64}
   \item additive, \hyperpage{2}
@@ -22,7 +22,7 @@
 
   \indexspace
 
-  \item below, \hyperpage{55}
+  \item below, \hyperpage{56}
   \item Burgess bound, \hyperpage{91}
 
   \indexspace
@@ -53,7 +53,7 @@
   \item Dirichlet convolution, \hyperpage{4}
   \item Dirichlet orthogonality relations, \hyperpage{8}
   \item Dirichlet series, \hyperpage{63}
-  \item discrete valuation ring, \hyperpage{52}
+  \item discrete valuation ring, \hyperpage{53}
   \item discriminant, \hyperpage{30, 31}, \hyperpage{37}
   \item divides, \hyperpage{41}
   \item divisor function, \hyperpage{3}
@@ -76,7 +76,7 @@
   \item functional equation, \hyperpage{80}
   \item functional equation data, \hyperpage{80}
   \item fundamental discriminant, \hyperpage{11}
-  \item fundamental equality, \hyperpage{57}
+  \item fundamental equality, \hyperpage{58}
 
   \indexspace
 
@@ -96,12 +96,13 @@
   \item indicator function, \hyperpage{2}
   \item induced, \hyperpage{9}
   \item inert, \hyperpage{59}
-  \item inertia degree, \hyperpage{56}
+  \item inertia degree, \hyperpage{57}
   \item integral, \hyperpage{24}
   \item integral basis, \hyperpage{33}, \hyperpage{37}
   \item integral closure, \hyperpage{25}
   \item integral ideal, \hyperpage{37}, \hyperpage{47}
   \item integrally closed, \hyperpage{25}
+  \item integrally closed domain, \hyperpage{25}
 
   \indexspace
 
@@ -110,7 +111,7 @@
   \item Lindel\"of hypothesis, \hyperpage{90}
   \item Liouville's function, \hyperpage{3}
   \item local, \hyperpage{51}
-  \item localization, \hyperpage{48, 49}
+  \item localization, \hyperpage{48, 49}, \hyperpage{51}
   \item logarithm, \hyperpage{3}
 
   \indexspace
@@ -151,11 +152,11 @@
   \indexspace
 
   \item Ramanujan sum, \hyperpage{13, 14}
-  \item ramification index, \hyperpage{56}
+  \item ramification index, \hyperpage{57}
   \item ramified, \hyperpage{59}
   \item real, \hyperpage{10}
   \item relatively prime, \hyperpage{41}
-  \item residue class extension, \hyperpage{56}
+  \item residue class extension, \hyperpage{57}
   \item residue class field, \hyperpage{44}
   \item Riemann hypothesis, \hyperpage{89}
   \item ring of \(S\)-integers, \hyperpage{55}
@@ -186,7 +187,7 @@
 
   \indexspace
 
-  \item uniformizer, \hyperpage{52}
+  \item uniformizer, \hyperpage{53}
   \item unit, \hyperpage{47}
   \item unit group, \hyperpage{46, 47}
   \item unramified, \hyperpage{59}
@@ -194,8 +195,8 @@
 
   \indexspace
 
-  \item valuation, \hyperpage{52, 53}
-  \item valulation, \hyperpage{53}
+  \item valuation, \hyperpage{53}
+  \item valulation, \hyperpage{54}
   \item Von Mangoldt coefficients, \hyperpage{95}
   \item von Mangoldt function, \hyperpage{4}
 
