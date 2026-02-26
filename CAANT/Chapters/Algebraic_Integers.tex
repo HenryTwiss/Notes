@@ -819,25 +819,35 @@
     \begin{remark}
       The class number \(h_{\smc{O}}\) and unit group \(\smc{O}^{\ast}\) are two of the most difficult pieces of algebraic data of \(\smc{O}\) to compute.
     \end{remark}
-    
-    We now turn to the case of a number field \(K\) for which our developments so far can be refined. However, in order to apply our results on Dedekind domains, we need to show that \(\mc{O}_{K}\) is one.
 
-    \begin{theorem}\label{thm:ring_of_integers_is_Dedekind}
-      Let \(K\) be a number field. Then \(\mc{O}_{K}\) is a Dedekind domain.
-    \end{theorem}
+   Now let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable field extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). It turns out that \(\mc{O}\) is also a Dedekind domain.
+
+    \begin{proposition}\label{prop:integral_closure_of_Dedekind_is_Dedekind}
+      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable field extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}\) is a Dedekind domain.
+    \end{proposition}
     \begin{proof}
-      \(\mc{O}_{K}\) is already integrally closed. As \(\mc{O}_{K}/\Z\) admits an integral basis, \(\mc{O}_{K}\) is a free \(\Z\)-module of finite rank. Whence any ideal is a finitely generated \(\Z\)-module and hence a finitely generated \(\mc{O}_{K}\)-module. This proves \(\mc{O}_{K}\) is noetherian. It remains to prove that every prime \(\mf{p}\) of \(\mc{O}_{K}\) is maximal. This is equivalent to showing \(\mc{O}_{K}/\mf{p}\) is a field. To this end, consider the homomorphism
+      \(\mc{O}\) is integrally closed as it is the integral closure of \(\smc{O}\) in \(L\). To show \(\mc{O}\) is noetherian, let the degree of \(L/K\) be \(n\) and \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Being a basis, we find that \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero}. As this basis is contained \(\mc{O}\), \cref{lem:lemma_for_integral_basis_AKBL} implies
       \[
-        \phi:\Z \to \mc{O}_{K}/\mf{p} \qquad a \mapsto a+\mf{p}.
+        d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
       \]
-      Then \(\ker\phi = \mf{p} \cap \Z\) and we claim \(\mf{p} \cap \Z\) is a prime of \(\Z\). It is obviously an ideal of \(\Z\) and is prime because \(\mf{p}\) is. To see that it is nonzero, let \(\a \in \mf{p}\) be nonzero. As \(\a\) is an algebraic integer, we have
+      Thus \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. In particular, every ideal of \(\mc{O}\) is also a finitely generated \(\smc{O}\)-module and therefore also a finitely generated \(\mc{O}\)-module. Whence \(\mc{O}\) is noetherian. It remains to show that every prime of \(\mc{O}\) is maximal. This is equivalent to showing \(\mc{O}/\mf{P}\) is a field. To this end, consider the homomorphism
       \[
-        \a^{n}+a_{n-1}\a^{n-1}+\cdots+a_{0} = 0,
+        \phi:\smc{O} \to \mc{O}/\mf{P} \qquad \a \mapsto \a+\mf{p}.
       \]
-      for some positive integer \(n\) and \(a_{i} \in \Z\). Taking \(n\) minimal ensures \(a_{0} \neq 0\). Isolating \(a_{0}\) shows \(a_{0} \in \mf{p}\) and hence \(a_{0} \in \mf{p} \cap \Z\). Therefore \(\mf{p} \cap \Z = p\Z\) for some prime \(p\). Then \(\ker\phi = p\Z\), and by the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{p} \to \mc{O}_{K}/\mf{p}\). Whence \(\mc{O}_{K}/\mf{p}\) is a finite dimensional \(\F_{p}\)-vector space as \(\mc{O}_{K}\) is a free \(\Z\)-module of finite rank. By primality of \(\mf{p}\), \(\mc{O}_{K}/\mf{p}\) is a finite integral domain and thus must be a field.
+      Then \(\ker\phi = \mf{P} \cap \smc{O}\) and we claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal of \(\smc{O}\) and is prime because \(\mf{P}\) is. To see that it is nonzero, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
+      \[
+        \l^{n}+\a_{n-1}\l^{n-1}+\cdots+\a_{0} = 0,
+      \]
+      for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). This means \(\ker\phi = \mf{p}\). By the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{\mf{p}} \to \mc{O}/\mf{P}\). Therefore \(\mc{O}/\mf{P}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space as \(\mc{O}\) is a free \(\smc{O}\)-module of finite rank. By primality of \(\mf{P}\), \(\mc{O}/\mf{P}\) is a finite integral domain and thus must be a field. This proves the first statement and the second is equivalent.
     \end{proof}
 
-    In view of the fact that \(\mc{O}_{K}\) is a Dedekind domain, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). The \textbf{ideal group}\index{ideal group} \(I_{K}\) of \(K\) is the ideal group of \(\mc{O}_{K}\), we write \(P_{K}\) for the subgroup of principal fractional ideals of \(K\), and the \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). In particular,
+    Accordingly, a ring extension \(\mc{O}/\smc{O}\) is said to be a \textbf{Dedekind extension}\index{Dedekind extension} of a finite separable field extension \(L/K\) if \(\mc{O}\) and \(\smc{O}\) are Dedekind domains whose field of fractions are \(L\) and \(K\) respectively and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). These Dedekind domains are related via the identity
+    \begin{equation}\label{equ:Dedekind_extension_intersection}
+      \mc{O} \cap K = \smc{O}.
+    \end{equation}
+    In general, it need not be true that \(\mc{O}/\smc{O}\) admits an integral basis as \(\mc{O}\) is not guaranteed to be a free \(\smc{O}\)-module of rank \(n\). However, an integral basis will exist if \(\smc{O}\) has finitely many primes for then it is a principal ideal domain by \cref{prop:Dedekind_with_finite_primes_is_PID} and we may appeal to \cref{thm:integral_basis_AKBL}.
+
+    We now turn to the case of a number field \(K\) for which our developments so far can be refined. By \cref{prop:integral_closure_of_Dedekind_is_Dedekind}, the ring of integers \(\mc{O}_{K}\) is a Dedekind domain as \(\Z\) is a principal ideal domain. In view of this fact, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). The \textbf{ideal group}\index{ideal group} \(I_{K}\) of \(K\) is the ideal group of \(\mc{O}_{K}\), we write \(P_{K}\) for the subgroup of principal fractional ideals of \(K\), and the \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). In particular,
     \[
       \Cl(K) = I_{K}/P_{K}.
     \]
@@ -908,7 +918,19 @@
     \]
     If \(X\) consists of a single prime \(\mf{p}\) then \(\smc{O}(X) = \smc{O}_{\mf{p}}\) and \(\mf{f}(X) = \mf{f}_{\mf{p}}\).
     
-    In order for localization to be a useful tool in algebraic investigations, it must behave well with respect to what we have already developed. To this end, we will collect some useful properties about localization. Our first property says that intersections of localizations behave well with respect to fractional ideals and units.
+    In order for localization to be a useful tool in algebraic investigations, it must behave well with respect to what we have already developed. To this end, we will collect some useful properties about localization. Our first property is a generalization of the Chinese remainder theorem.
+
+    \begin{proposition}
+      Let \(\smc{O}\) be an integral domain with field of fractions \(K\). Then for any integral ideal \(\mf{a}\) of \(\smc{O}\), we have an isomorphism
+      \[
+        \smc{O}/\mf{a} \cong \bigop_{\mf{p}}\smc{O}_{\mf{p}}/\mf{a}_{\mf{p}}.
+      \]
+    \end{proposition}
+    \begin{proof}
+      \todo{xxx}
+    \end{proof}
+    
+    Our second property says that intersections of localizations behave well with respect to fractional ideals and units.
 
     \begin{proposition}\label{prop:ring_is_intersection_of_all_localizations}
       Let \(\smc{O}\) be an integral domain with field of fractions \(K\). Then for every fractional ideal \(\mf{f}\) of \(\smc{O}\), we have
@@ -921,6 +943,7 @@
       \]
     \end{proposition}
     \begin{proof}
+      \todo{use chinese remainder theorem here}
       For the first identity, the forward inclusion is obvious. For the reverse inclusion, suppose \(\frac{\eta}{\d} \in \bigcap_{\mf{p}}\smc{O}_{\mf{p}}\) and set
       \[
         \mf{a} = \{\a \in \smc{O}:\eta\a \in \d\smc{O}\}.
@@ -930,13 +953,13 @@
        For the second statement, the forward inclusion is clear. For the reverse inclusion, suppose \(\frac{\eta}{\d} \in \bigcap_{\mf{p}}\smc{O}_{\mf{p}}^{\ast}\). We have already showed \(\frac{\eta}{\d} \in \smc{O}\) so it suffices to show \(\frac{\eta}{\d}\) is a unit. As \(\d\) is not contained in any prime of \(\smc{O}\), it cannot be contained in any maximal ideal as maximal ideals are prime. This means \(\d\) is a unit. Interchanging the roles of \(\eta\) and \(\d\) shows that \(\eta\) is a unit as well. Hence \(\frac{\eta}{\d}\) is a unit and the reverse inclusion follows.
     \end{proof}
 
-    Our second property is that localization behaves well with respect to integral closure.
+    Our third property is that that localization behaves well with respect to Dedekind extensions.
 
     \begin{proposition}\label{prop:localization_of_integral_closure_is_integral_closure}
-      Let \(\smc{O}\) be an integral domain with field of fractions \(K\), \(L/K\) be a finite separable field extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then for any multiplicative set \(D\) of \(\smc{O}\), \(\mc{O}D^{-1}\) is the integral closure of \(\smc{O}D^{-1}\) in \(L\).
+      Let \(\mc{O}/\smc{O}\) be Dedekind extension for a finite separable field extension \(L/K\). Then for any multiplicative set \(D\) of \(\smc{O}\), \(\mc{O}D^{-1}/\smc{O}D^{-1}\) is a Dedekind extension of \(L/K\).
     \end{proposition}
     \begin{proof}
-      We need to show \(\mc{O}D^{-1} = \conj{\smc{O}D^{-1}}\). For the forward inclusion, let \(\frac{\eta}{\d} \in \mc{O}D^{-1}\). As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), \(\eta\) is integral over \(\smc{O}\) so that
+      To show \(\mc{O}D^{-1}\) is integrally closed, we must prove \(\mc{O}D^{-1} = \conj{\smc{O}D^{-1}}\). For the forward inclusion, let \(\frac{\eta}{\d} \in \mc{O}D^{-1}\). As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), \(\eta\) is integral over \(\smc{O}\) so that
       \[
         \eta^{n}+\a_{n-1}\eta^{n-1}+\cdots+\a_{0} = 0,
       \]
@@ -944,7 +967,7 @@
       \[
         \left(\frac{\eta}{\d}\right)^{n}+\frac{\a_{n-1}}{\d}\left(\frac{\eta}{\d}\right)^{n-1}+\cdots+\frac{\a_{0}}{\d^{n}} = 0.
       \]
-      Thus \(\frac{\a}{\d}\) is the root of a monic polynomial with coefficients in \(\smc{O}D^{-1}\) whence \(\frac{\a}{\d} \in \conj{\smc{O}D^{-1}}\). This proves the forward inclusion. For the reverse inclusion, suppose \(\l \in \conj{\smc{O}D^{-1}}\). Then
+      Thus \(\frac{\eta}{\d}\) is the root of a monic polynomial with coefficients in \(\smc{O}D^{-1}\) whence \(\frac{\eta}{\d} \in \conj{\smc{O}D^{-1}}\). This proves the forward inclusion. For the reverse inclusion, suppose \(\l \in \conj{\smc{O}D^{-1}}\). Then
       \[
         \l^{n}+\frac{\a_{n-1}}{\d_{n-1}}\l^{n-1}+\cdots+\frac{\a_{0}}{\d_{0}} = 0,
       \]
@@ -952,47 +975,14 @@
       \[
         (\l\d)^{n}+\frac{\a_{n-1}\d}{\d_{n-1}}(\l\d)^{n-1}+\cdots+\frac{\a_{0}\d^{n}}{\d_{0}} = 0.
       \]
-      It follows that \(\l\d\) is the root of a monic polynomial with coefficients in \(\smc{O}\). As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), we have \(\l\d \in \smc{O}\) and thus \(\l \in \smc{O}D^{-1}\). This proves the reverse inclusion.
-    \end{proof}
-
-    Our third property is that localization behaves well with respect to the inverse of fractional ideals. Of course, this assumes \(\smc{O}\) is a Dedekind domain.
-
-    \begin{proposition}\label{prop:localization_of_inverse_is_inverse_of_localization}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and \(D\) be a multiplicative subset of \(\smc{O}\). Then for any fractional ideal \(\mf{f}\) of \(\smc{O}\), we have
-      \[
-        \mf{f}^{-1}D^{-1} = (\mf{f}D^{-1})^{-1}.
-      \]
-    \end{proposition}
-    \begin{proof}
-      As \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), it suffices to prove the claim for the integral ideal \(\mf{a}\). We will show
-      \[
-        \mf{a}^{-1}D^{-1} = (\mf{a}D^{-1})^{-1}.
-      \]
-      By \cref{prop:explicit_inverse_ideal}, these sets can be explicitly described as
-      \[
-        \mf{a}^{-1}D^{-1} = \{\k \in K:\k\mf{a}D^{-1} \subseteq \smc{O}D^{-1}\},
-      \]
-      and
-      \[
-        (\mf{a}D^{-1})^{-1} = \{\k \in K:\k\mf{a}D^{-1} \subseteq \smc{O}D^{-1}\}.
-      \]
-      Whence they are the same and the identity follows.
-    \end{proof}
-
-    Our third property is that that the localization of a Dedekind domain is again a Dedekind domain.
-
-    \begin{proposition}\label{prop:localization_of_Dedekind_is_Dedekind}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and \(D\) be a multiplicative subset of \(\smc{O}\). Then \(\smc{O}D^{-1}\) is a Dedekind domain.
-    \end{proposition}
-    \begin{proof}
-      By \cref{prop:localization_of_integral_closure_is_integral_closure}, \(\smc{O}D^{-1}\) is integrally closed. To show it is noetherian, let \(\mf{A}\) be an ideal of \(\smc{O}D^{-1}\) and set \(\mf{a} = \mf{A} \cap \smc{O}\). Then
+      It follows that \(\l\d\) is the root of a monic polynomial with coefficients in \(\smc{O}\). As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), we have \(\l\d \in \mc{O}\) and thus \(\l \in \mc{O}D^{-1}\). This proves the reverse inclusion. Whence \(\mc{O}D^{-1}\) is integrally closed. To show \(\mc{O}D^{-1}\) is noetherian, let \(\mf{A}\) be an ideal of \(\mc{O}D^{-1}\) and set \(\mf{a} = \mf{A} \cap \mc{O}\). Then
       \[
         \mf{A} = \mf{a}D^{-1}.
       \]
-      Since \(\smc{O}\) is a Dedekind domain, \(\mf{a}\) is a finitely generated \(\smc{O}\)-module and hence \(\mf{A}\) is a finitely generated \(\smc{O}D^{-1}\)-module by the identity we have just proved. Hence \(\smc{O}D^{-1}\) is noetherian. It remains to show that every prime of \(\smc{O}D^{-1}\) is maximal. By \cref{prop:localization_prime_bijection}, every prime is of the form \(\mf{p}D^{-1}\) for some prime \(\mf{p}\) of \(\smc{O}\). But then \(\mf{p}D^{-1}\) is maximal because \(\mf{p}\) is and the bijections in \cref{prop:localization_prime_bijection} are inclusion-preserving.
+      Since \(\smc{O}\) is a Dedekind domain, \(\mf{a}\) is a finitely generated \(\smc{O}\)-module and hence \(\mf{A}\) is a finitely generated \(\smc{O}D^{-1}\)-module by the identity above. Thus \(\smc{O}D^{-1}\) is noetherian. It remains to show that every prime of \(\smc{O}D^{-1}\) is maximal. By \cref{prop:localization_prime_bijection}, every prime is of the form \(\mf{p}D^{-1}\) for some prime \(\mf{p}\) of \(\smc{O}\). But then \(\mf{p}D^{-1}\) is maximal because \(\mf{p}\) is and the bijections in \cref{prop:localization_prime_bijection} are inclusion-preserving.
     \end{proof}
 
-    As an immediate consequence of this result is that the localizations \(\smc{O}_{\mf{p}}\) and \(\smc{O}(X)\) are Dedekind domains if \(\smc{O}\) is. 
+    An immediate consequence of this result is that the localizations \(\smc{O}_{\mf{p}}\) and \(\smc{O}(X)\) are Dedekind domains if \(\smc{O}\) is.
 
     Returning to the general setting, an integral domain \(\smc{O}\) is said to be a \textbf{local}\index{local} if it has a unique maximal ideal. As may be expected, the resulting integral domain after localizing at a prime will be local. In particular, \(\smc{O}_{\mf{p}}\) is local where the maximal ideal is \(\mf{p}_{\mf{p}}\). Indeed, recall from \cref{prop:localization_prime_bijection} that the map
     \[
@@ -1075,6 +1065,8 @@
       For the forward implication, suppose \(\smc{O}\) is a Dedekind domain and let \(\mf{p}\) be a prime. Then \(\smc{O}_{\mf{p}}\) is a local Dedekind domain and hence a discrete valuation ring as we have seen. This proves the forward implication. For the reverse implication, suppose \(\smc{O}\) is a noetherian integral domain and \(\smc{O}_{\mf{p}}\) is a discrete valuation ring for all primes \(\mf{p}\). As \(\smc{O}_{\mf{p}}\) is a principal ideal domain, \(\smc{O}_{\mf{p}}\) is integrally closed by \cref{lemma:unique_factorization_domains_are_integrally_closed}. Then \cref{prop:ring_is_intersection_of_all_localizations} implies \(\smc{O}\) is integrally closed too. As \(\smc{O}\) is noetherian by assumption, it remains to show that every prime is maximal. So let \(\mf{q}\) be prime. By Zorn's lemma, \(\mf{q}\) is contained in some maximal ideal \(\mf{p}\). As maximal ideals are prime, the inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{q}_{\mf{p}}\) and \(\mf{p}_{\mf{p}}\) are primes of \(\smc{O}_{\mf{p}}\). As \(\smc{O}_{\mf{p}}\) is a discrete valuation ring it is a Dedekind domain with exactly one prime. Whence \(\mf{q}_{\mf{p}} = \mf{p}_{\mf{p}}\) and the aforementioned inclusion-preserving bijections imply that \(\mf{q} = \mf{p}\). Hence \(\mf{q}\) is maximal. This proves the reverse implication.
     \end{proof}
 
+    It follows from this result that the Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) is an extension of principle ideal domains. Whence it admits an integral basis by \cref{thm:integral_basis_AKBL}. This is often a useful reduction for developing further results or applications in conjunction with \cref{prop:ring_is_intersection_of_all_localizations}.
+
     Let \(v_{\mf{p}}\) denote the valuation of \(\smc{O}_{\mf{p}}\). We call \(v_{\mf{p}}\) the \textbf{valuation}\index{valulation} associated to the prime \(\mf{p}\) of \(\smc{O}\). These valuations are intimately connected to prime factorizations. Indeed, prime factorization implies that for any \(\k \in K^{\ast}\), we have
     \[
       \k\smc{O} = \prod_{\mf{q}}\mf{q}^{e_{\mf{q}}},
@@ -1085,7 +1077,7 @@
     \]
     and we readily see that \(v_{\mf{p}}(\k) = e_{\mf{p}}\). In particular, \(v_{\mf{p}}(\k) = 0\) for all but finitely many primes \(\mf{p}\). In view of these properties, \(v_{\mf{p}}\) is also called an \textbf{exponential valuation}\index{exponential valuation}.
 
-    Continue to let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and let \(X\) be a set of all but finitely many primes of \(\smc{O}\). Then \(\smc{O}(X)\) is a Dedekind domain by \cref{prop:localization_of_Dedekind_is_Dedekind} and by \cref{prop:localization_prime_bijection} the primes \(\mf{p}_{X}\) of \(\smc{O}(X)\) are of the form \(\mf{p}_{X} = \mf{p}(X)\) for \(\mf{p} \in X\). Moreover, \(\smc{O}\) and \(\smc{O}(X)\) have the same localizations at \(\mf{p}\) and \(\mf{p}_{X}\) respectively because the only elements which are not inverted are those of \(\mf{p}\). In particular, this means
+    Continue to let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and let \(X\) be a set of all but finitely many primes of \(\smc{O}\). Then \(\smc{O}(X)\) is a Dedekind domain. By \cref{prop:localization_prime_bijection}, the primes \(\mf{p}_{X}\) of \(\smc{O}(X)\) are of the form \(\mf{p}_{X} = \mf{p}(X)\) for \(\mf{p} \in X\). Moreover, \(\smc{O}\) and \(\smc{O}(X)\) have the same localizations at \(\mf{p}\) and \(\mf{p}_{X}\) respectively because the only elements which are not inverted are those of \(\mf{p}\). In particular, this means
     \begin{equation}\label{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes} 
       \smc{O}_{\mf{p}} = \smc{O}(X)_{\mf{p}_{X}} \quad \text{and} \quad \mf{f}_{\mf{p}} = \mf{f}(X)_{\mf{p}_{X}}.
     \end{equation}
@@ -1123,33 +1115,9 @@
       \mc{O}_{K}^{S} = \mc{O}_{K}(X).
     \]
     We call any \(\a \in \mc{O}_{K}^{S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl^{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}^{S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K}^{S}\) of \(K\) is the class number of \(\Cl^{S}(K)\). The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \((\mc{O}_{K}^{S})^{\ast}\) of \(\mc{O}_{K}^{S}\) and we call any element of \((\mc{O}_{K}^{S})^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
-  \section{Dedekind Extensions}
-    Let \(\smc{O}\) be integrally closed with field of fractions \(K\), \(L/K\) be a finite separable field extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). It turns out that \(\mc{O}\) will be Dedekind whenever \(\smc{O}\) is and the argument is similar to that of \cref{thm:ring_of_integers_is_Dedekind}.
-
-    \begin{proposition}\label{prop:integral_closure_of_Dedekind_is_Dedekind}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable field extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}\) is a Dedekind domain.
-    \end{proposition}
-    \begin{proof}
-      \(\mc{O}\) is integrally closed as it is the integral closure of \(\smc{O}\). To show \(\mc{O}\) is noetherian, let the degree of \(L/K\) be \(n\) and \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Being a basis, we find that \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero}. As this basis is contained \(\mc{O}\), \cref{lem:lemma_for_integral_basis_AKBL} implies
-      \[
-        d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
-      \]
-      Thus \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. In particular, every ideal of \(\mc{O}\) is also a finitely generated \(\smc{O}\)-module and therefore also a finitely generated \(\mc{O}\)-module. Whence \(\mc{O}\) is noetherian. It remains to show that every prime of \(\mc{O}\) is maximal. This is equivalent to showing \(\mc{O}/\mf{P}\) is a field. To this end, consider the homomorphism
-      \[
-        \phi:\smc{O} \to \mc{O}/\mf{P} \qquad \a \mapsto \a+\mf{p}.
-      \]
-      Then \(\ker\phi = \mf{P} \cap \smc{O}\) and we claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal of \(\smc{O}\) and is prime because \(\mf{P}\) is. To see that it is nonzero, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
-      \[
-        \l^{n}+\a_{n-1}\l^{n-1}+\cdots+\a_{0} = 0,
-      \]
-      for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). This means \(\ker\phi = \mf{p}\). By the first isomorphism theorem, \(\phi\) induces an injection \(\phi:\F_{\mf{p}} \to \mc{O}/\mf{P}\). Therefore \(\mc{O}/\mf{P}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space as \(\mc{O}\) is a free \(\smc{O}\)-module of finite rank. By primality of \(\mf{P}\), \(\mc{O}/\mf{P}\) is a finite integral domain and thus must be a field. This proves the first statement and the second is equivalent.
-    \end{proof}
-
-    Accordingly, a ring extension \(\mc{O}/\smc{O}\) is said to be a \textbf{Dedekind extension}\index{Dedekind extension} of a finite separable field extension \(L/K\) if \(\mc{O}\) and \(\smc{O}\) are Dedekind domains whose field of fractions are \(L\) and \(K\) respectively and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). These Dedekind domains are related via the identity
-    \begin{equation}\label{equ:Dedekind_extension_intersection}
-      \mc{O} \cap K = \smc{O}.
-    \end{equation}
-    With this phrasing, the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind} gives another important result.
+  \section{\todo{Orders}}
+  \section{\todo{Ramification}}
+    We begin with an important claim regarding a Dedekind extension \(\mc{O}/\smc{O}\) of a finite separable field extension \(L/K\).
 
     \begin{corollary}\label{cor:integral_closure_of_Dedekind_is_Dedekind}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable field extension \(L/K\). Then \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\) and every prime \(\mf{P}\) of \(\mc{O}\) satisfies
@@ -1281,7 +1249,86 @@
     In terms of the inertia degrees, being inert or totally split in \(\mc{O}/\smc{O}\) are antithetical properties. In particular, the smaller the inertia degrees are the greater the tendency for \(\mf{p}\mc{O}\) to factor into distinct primes.
     
     Now let us introduce ramification of primes. If \(\mf{P}\) is a prime of \(\mc{O}\) above \(\mf{p}\), we say \(\mf{P}\) is \textbf{unramified}\index{unramified} in \(\mc{O}/\smc{O}\) if \(e_{\mf{p}}(\mf{P}) = 1\) and the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is separable. Otherwise, we say \(\mf{P}\) is \textbf{ramified}\index{ramified} in \(\mc{O}/\smc{O}\). Moreover, \(\mf{P}\) is \textbf{totally ramified}\index{totally ramified} in \(\mc{O}/\smc{O}\) if in addition to being ramified we have \(f_{\mf{p}}(\mf{P}) = 1\). Similarly, we say that a prime \(\mf{p}\) of \(\smc{O}\) is \textbf{unramified}\index{unramified} in \(\mc{O}/\smc{O}\) if every prime \(\mf{P}\) above it is unramified and is \textbf{ramified}\index{ramified} in \(\mc{O}/\smc{O}\) otherwise. The Dedekind extension \(\mc{O}/\smc{O}\) itself is said to be \textbf{unramified}\index{unramified} if every prime of \(\smc{O}\) is unramified in \(\mc{O}/\smc{O}\) and is said to be \textbf{ramified}\index{ramified} otherwise. We will see that it is an exceptional phenomena for a prime \(\mf{p}\) of \(\smc{O}\) to ramify in \(\mc{O}/\smc{O}\). Therefore it is typical that \(\mf{p}\) is either inert or totally split in \(\mc{O}/\smc{O}\).
-  \iffalse\section{\todo{Galois Extensions}}
+
+    \iffalse
+    It is desirable to understand how \(\mf{p}\mc{O}\) factors into primes. This is tractable for most primes if we know a sufficient amount of information about the minimal polynomial of certain primitive elements for \(L/K\). Let \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\). In view of \cref{prop:field_of_fractions_AKBL} we can multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure \(\t \in \mc{O}\) and hence its minimal polynomial \(m_{\t}(x)\) over \(K\) has coefficients in \(\smc{O}\). For such a primitive element \(\t\), we define the \textbf{conductor}\index{conductor} \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\) of \(\mc{O}/\smc{O}\) relative to \(\t\) by
+    \[
+      \mf{Q}_{\mc{O}/\smc{O}}(\t) = \{\a \in \mc{O}:\a\mc{O} \subseteq \smc{O}[\t]\}.
+    \]
+    This is an integral ideal of \(\mc{O}\) provided it is nonzero. To see that it is nonzero, recall that \(\mc{O}\) is a finitely generated \(\smc{O}\) module by \cref{cor:integral_closure_of_Dedekind_is_Dedekind}. Let \(\w_{1},\ldots,\w_{r}\) be generators. As \(L/K\) is algebraic, \(\t\) is algebraic over \(K\) and hence \(L = K[\t]\). Then
+    \[
+      \w_{i} = \sum_{j}\k_{i,j}\t^{j},
+    \]
+    with \(\k_{i,j} \in K\). As \(K\) is the field of fractions of \(\smc{O}\), \(\k_{i,j} = \frac{\a_{i,j}}{\d_{i,j}}\) with \(\a_{i,j},\d_{i,j} \in \smc{O}\) and \(\d_{i,j}\) nonzero. Setting \(\d = \prod_{i,j}\d_{i,j}\), we find that \(\d \in \smc{O}\) is nonzero and satisfies \(\d\w_{i} \in \smc{O}[\t]\). As \(\w_{1},\ldots,\w_{r}\) generate \(\mc{O}\) as a \(\smc{O}\)-module, we conclude \(\d \in \mf{Q}_{\mc{O}/\smc{O}}(\t)\). Therefore \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\) is nonzero and hence an integral ideal of \(\mc{O}\). The \textbf{Dedekind-Kummer theorem}\index{Dedekind-Kummer theorem} describes the factorization of \(\mf{p}\mc{O}\) provided it is relatively prime to the conductor \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\):
+
+    \begin{theorem*}[Dedekind-Kummer theorem]
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable field extension \(L/K\), \(\t\) be a primitive element of \(L/K\) contained in \(\mc{O}\) with minimal polynomial \(m_{\t}(x)\) over \(K\), and \(\mf{p}\) be a prime of \(\smc{O}\) such that \(\mf{p}\mc{O}\) is relatively prime to \(\mf{Q}_{\mc{O}/\smc{O}}\). Suppose
+      \[
+        \conj{m_{\t}}(x) = \conj{m_{1}}(x)^{e_{1}} \cdots \conj{m_{r}}(x)^{e_{r}},
+      \]
+      is the prime factorization of \(\conj{m_{\t}}(x)\) in \(\F_{\mf{p}}[x]\). Let \(m_{i}(x)\) be any lift of \(\conj{m_{i}}(x)\) to \(\smc{O}[x]\) and set
+      \[
+        \mf{P}_{i} = \mf{p}\mc{O}+m_{i}(\t)\mc{O},
+      \]
+      for \(1 \le i \le r\). Then \(\mf{P}_{i}\) is a prime of \(\mc{O}\) for all \(i\),
+      \[
+        \mf{p}\mc{O} = \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}},
+      \]
+      is the prime factorization of \(\mf{p}\mc{O}\), and \(f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\).
+    \end{theorem*}
+    \begin{proof}
+      First consider the homomorphism
+      \[
+        \phi:\smc{O}[\t] \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O}.
+      \]
+      We have \(\mf{p}\mc{O}+\mf{Q}_{\mc{O}/\smc{O}} = \mc{O}\) because \(\mf{p}\mc{O}\) is relatively prime to \(\mf{Q}_{\mc{O}/\smc{O}}\). As \(\mf{Q}_{\mc{O}/\smc{O}} \subseteq \smc{O}[\t]\), it follows that \(\mf{p}\mc{O}+\smc{O}[\t] = \mc{O}\) which shows \(\phi\) is surjective. Now \(\ker\phi = \smc{O}[\t] \cap \mf{p}\mc{O}\) and we claim \(\smc{O}[\t] \cap \mf{p}\mc{O} = \mf{p}\smc{O}[\t]\). The reverse inclusion is clear since \(\mf{p}\) is an integral ideal of \(\smc{O}\). For the forward inclusion, intersecting both sides of \(\mf{p}\mc{O}+\mf{Q}_{\mc{O}/\smc{O}} = \mc{O}\) with \(\smc{O}\) gives \(\mf{p} \cap \mf{Q}_{\mc{O}/\smc{O}} = \smc{O}\) because \(\mf{p}\mc{O} \cap \smc{O} = \mf{p}\). Hence
+      \[
+        \smc{O}[\t] \cap \mf{p}\mc{O} = (\mf{p} \cap \mf{Q}_{\mc{O}/\smc{O}})(\smc{O}[\t] \cap \mf{p}\mc{O}) = (\mf{p}\smc{O}[\t] \cap \mf{p}\mc{O})+(\mf{Q}_{\mc{O}/\smc{O}}\smc{O}[\t] \cap \mf{Q}_{\mc{O}/\smc{O}}\mf{p}\mc{O}) \subseteq \mf{p}\smc{O}[\t],
+      \]
+      where the inclusion follows by the definition of the conductor \(\mf{Q}_{\mc{O}/\smc{O}}\). This proves the reverse containment so that \(\ker\phi = \mf{p}\smc{O}[\t]\). By first isomorphism theorem, we obtain
+      \[
+        \smc{O}[\t]/\mf{p}\smc{O}[\t] \cong \mc{O}/\mf{p}\mc{O}.
+      \]
+      Since \(m_{\t}(x)\) is the minimal polynomial for \(\t\) over \(K\), we have an isomorphism \(\smc{O}[x]/m_{\t}(x)\smc{O}[x] \cong \smc{O}[\t]\) given by evaluation at \(\t\). Then we have the chain of isomorphism
+      \[
+        \smc{O}[\t]/\mf{p}\smc{O}[\t] \cong (\smc{O}[x]/m_{\t}(x)\smc{O}[x])/(\mf{p}(\smc{O}[x]/m_{\t}(x)\smc{O}[x])) \cong \smc{O}[x]/(\mf{p}\smc{O}[x]+m_{\t}(x)\smc{O}[x]) \cong \F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x],
+      \]
+      where the second and third isomorphisms follow by taking \(\smc{O}[x]/(\mf{p}\smc{O}[x]+m_{\t}(x)\smc{O}[x])\) and reducing elements of \(\smc{O}[x]\) modulo \(m_{\t}(x)\smc{O}[x]\) or their coefficients modulo \(\mf{p}\) respectively. Therefore the inverse isomorphism is given by sending any representative \(\conj{f}(x)\) of a coset in \(\F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x]\) to a lift \(f(x)\) in \(\smc{O}[x]\) and then to \(\conj{f(\t)}\) by reducing \(f(\t)\) modulo \(\mf{p}\mc{O}\). Now set \(A = \F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x]\). The Chinese remainder theorem gives an isomorphism
+      \[
+        A \cong \bigop_{1 \le i \le r}\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x].
+      \]
+      As \(\conj{m_{i}}(x)\) is irreducible, \(\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is maximal and hence \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is a field. By the third isomorphism theorem, \(\conj{m_{i}}(x)\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x]\) is a maximal ideal of \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x]\). It follows that the maximal ideals of \(\smc{O}\) are precisely the \(\conj{m_{i}}(x)A\) and we have an isomorphism
+      \[
+        A/\conj{m_{i}}(x)A \cong \F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x],
+      \]
+      for all \(i\). Via the isomorphism \(\mc{O}/\mf{p}\mc{O} \cong A\) described above, the maximal ideals of \(\mc{O}/\mf{p}\mc{O}\) are exactly \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). We now show that the \(\mf{P}_{i}\) are prime. To see this, consider the surjective homomorphism
+      \[
+        \pi:\mc{O} \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O}.
+      \]
+      Then the image of \(\mf{P}_{i}\) under \(\pi\) is \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). As this ideal is maximal and hence prime, the preimage \(\mf{P}_{i}\) is prime too. Moreover, the \(\mf{P}_{i}\) are all distinct since the \(\conj{m_{i}(\t)}\mc{O}/\mf{p}\mc{O}\) are which are all distinct because the \(\conj{m_{i}}(x)A\) are (using the isomorphism \(\mc{O}/\mf{p}\mc{O} \cong A\)). In particular, they are also relatively prime. By construction, \(\mf{P}_{i} \subseteq \mf{p}\mc{O}\) so that the \(\mf{P}_{i}\) are prime factors of \(\mf{p}\mc{O}\). These are the only prime factors of \(\mf{p}\mc{O}\) because the image of any prime under \(\pi\) contained in \(\mf{p}\mc{O}\) must be a maximal ideal of \(\mc{O}/\mf{p}\mc{O}\) (since primes are maximal and by the fourth isomorphism theorem) and every maximal ideal is one of the \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). Together, all of this means that \(\mf{p}\mc{O}\) admits the prime factorization
+      \[
+        \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})},
+      \]
+      for some ramification indices \(e_{\mf{p}}(\mf{P}_{i})\). We will be done if we can show \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\) and \(f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\). To accomplish this, observe that we have an isomorphism
+      \[
+        \F_{\mf{P}_{i}} \cong (\mc{O}/\mf{p}\mc{O})/(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})) \cong \F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x],
+      \]
+      where the first isomorphism follow by taking \(\F_{\mf{P}_{i}}\) and reducing \(\mc{O}\) modulo \(\mf{p}\) and the second isomorphism follows from \(\mc{O}/\mf{p}\mc{O} \cong A\) and that the image of the maximal ideal \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\) under this isomorphism is \(\conj{m_{i}}(x)A\). Now \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is a \(\F_{\mf{p}}\)-vector space of degree \(\deg(\conj{m_{i}}(x))\). Hence \(f_{p}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\) as desired. The ideal \(\conj{m_{i}}(x)^{e_{i}}A\) under the isomorphism \(A \cong \mc{O}/\mf{p}\mc{O}\) is the ideal \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\). As the image of \(\mf{P}_{i}\) under \(\pi\) is \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\), we have that \(\mf{P}_{i}^{e_{i}}\) is contained in the preimage of \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\) under \(\pi\). As \(\conj{m_{\t}(\t)}(\mc{O}/\mf{p}\mc{O}) = 0\), it follows that
+      \[
+        \mf{p}\mc{O} = \pi^{-1}(0) \supseteq \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}.
+      \]
+      Since the \(\mf{P}_{i}\) are prime, we have \(e_{\mf{p}}(\mf{P}_{i}) \le e_{i}\) for all \(i\). But the fundamental equality then gives
+      \[
+        n = \sum_{1 \le i \le r}e_{\mf{p}}(\mf{P}_{i})f_{p}(\mf{P}_{i}) \le \sum_{1 \le i \le r}e_{i}f_{p}(\mf{P}_{i}) \le \sum_{1 \le i \le r}e_{i}\deg(\conj{m_{i}}(x)) \le n,
+      \]
+      where the last equality follows by the prime factorization of \(\conj{m_{\t}}(x)\) and that \(\deg(\conj{m_{\t}}(x)) = \deg(m_{\t}(x))\) because \(m_{\t}(x)\) is monic. This shows \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\) for all \(i\) which completes the proof.
+    \end{proof}
+
+    Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable field extension \(L/K\). The Dedekind-Kummer theorem allows us to compute the prime factorization of \(\mf{p}\mc{O}\) provided this integral ideal is relatively prime to the conductor \(\mf{Q}_{\mc{O}/\smc{O}}\). By the prime factorization of fractional ideals, \(\mf{Q}_{\mc{O}/\smc{O}}\) has finitely many prime factors so we only have to avoid finitely many primes of \(\mc{O}\). In fact, if the conductor is \(\mc{O}\) then we do not have to avoid any primes at all. This occurs when \(\mc{O}/\smc{O}\) is monogenic. Indeed, Suppose \(\mc{O} = \smc{O}[\a]\) for some \(\a \in \mc{O}\). Then \(1,\a,\ldots,\a^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\) and is necessarily a basis for \(L/K\). But then \(\a\) is also a primitive element for \(L/K\) which implies
+    \[
+      \mf{Q}_{\mc{O}/\smc{O}} = \mc{O}.
+    \]
+
     Much more can be said about the ramification of primes in a Dedekind extension \(\mc{O}/\smc{O}\) when the associated extension \(L/K\) is Galois. Since \(L/K\) is assumed to be finite and separable, this amounts to further assuming \(L/K\) is normal. In this case, the elements of the Galois group \(\Gal(L/K) = \Hom_{K}(L,\conj{K})\). Then by \cref{prop:formulas_for_trace_and_norm}, we have
     \[
       \Norm_{L/K}(\l) = \prod_{\s \in \Gal(L/K)}\s(\l) \quad \text{and} \quad \Trace_{L/K}(\l) = \sum_{\s \in \Gal(L/K)}\s(\l),
@@ -1496,86 +1543,10 @@
     \end{center}
 
     The labels on left and right of the extensions represent the corresponding ramification indices and inertia degrees respectively which come from \cref{prop:decomposition_field_e_and_f,prop:inertia_field_e_and_f}. Then we see that the extension \(L^{D_{\mf{p}}(\mf{P})}/K\) contains all of the information about the distinct prime factors \(\mf{p}\mc{O}\) splits into in \(\mc{O}\), the extension \(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{p}}(\mf{P})}\) contains all of the information about the corresponding inertia degrees, and the extension \(L/L^{I_{\mf{p}}(\mf{P})}\) contains all of the information about the corresponding ramification indices. In particular, \(\mf{p}\) is unramified in \(\mc{O}/\smc{O}\) if and only if \(L^{I_{\mf{p}}(\mf{P})} = L\) which is equivalent to \(I_{\mf{p}}(\mf{P}) = \{\id\}\).
-  \fi\iffalse\section{\todo{Orders}}
-    This is tractable for most primes if we know a sufficient amount of information about the minimal polynomial of certain primitive elements for \(L/K\). Let \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\). In view of \cref{prop:field_of_fractions_AKBL} we can multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure \(\t \in \mc{O}\) and hence its minimal polynomial \(m_{\t}(x)\) over \(K\) has coefficients in \(\smc{O}\). For such a primitive element \(\t\), we define the \textbf{conductor}\index{conductor} \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\) of \(\mc{O}/\smc{O}\) relative to \(\t\) by
-    \[
-      \mf{Q}_{\mc{O}/\smc{O}}(\t) = \{\a \in \mc{O}:\a\mc{O} \subseteq \smc{O}[\t]\}.
-    \]
-    This is an integral ideal of \(\mc{O}\) provided it is nonzero. To see that it is nonzero, recall that \(\mc{O}\) is a finitely generated \(\smc{O}\) module by \cref{cor:integral_closure_of_Dedekind_is_Dedekind}. Let \(\w_{1},\ldots,\w_{r}\) be generators. As \(L/K\) is algebraic, \(\t\) is algebraic over \(K\) and hence \(L = K[\t]\). Then
-    \[
-      \w_{i} = \sum_{j}\k_{i,j}\t^{j},
-    \]
-    with \(\k_{i,j} \in K\). As \(K\) is the field of fractions of \(\smc{O}\), \(\k_{i,j} = \frac{\a_{i,j}}{\d_{i,j}}\) with \(\a_{i,j},\d_{i,j} \in \smc{O}\) and \(\d_{i,j}\) nonzero. Setting \(\d = \prod_{i,j}\d_{i,j}\), we find that \(\d \in \smc{O}\) is nonzero and satisfies \(\d\w_{i} \in \smc{O}[\t]\). As \(\w_{1},\ldots,\w_{r}\) generate \(\mc{O}\) as a \(\smc{O}\)-module, we conclude \(\d \in \mf{Q}_{\mc{O}/\smc{O}}(\t)\). Therefore \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\) is nonzero and hence an integral ideal of \(\mc{O}\). The \textbf{Dedekind-Kummer theorem}\index{Dedekind-Kummer theorem} describes the factorization of \(\mf{p}\mc{O}\) provided it is relatively prime to the conductor \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\):
 
-    \begin{theorem*}[Dedekind-Kummer theorem]
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable field extension \(L/K\), \(\t\) be a primitive element of \(L/K\) contained in \(\mc{O}\) with minimal polynomial \(m_{\t}(x)\) over \(K\), and \(\mf{p}\) be a prime of \(\smc{O}\) such that \(\mf{p}\mc{O}\) is relatively prime to \(\mf{Q}_{\mc{O}/\smc{O}}\). Suppose
-      \[
-        \conj{m_{\t}}(x) = \conj{m_{1}}(x)^{e_{1}} \cdots \conj{m_{r}}(x)^{e_{r}},
-      \]
-      is the prime factorization of \(\conj{m_{\t}}(x)\) in \(\F_{\mf{p}}[x]\). Let \(m_{i}(x)\) be any lift of \(\conj{m_{i}}(x)\) to \(\smc{O}[x]\) and set
-      \[
-        \mf{P}_{i} = \mf{p}\mc{O}+m_{i}(\t)\mc{O},
-      \]
-      for \(1 \le i \le r\). Then \(\mf{P}_{i}\) is a prime of \(\mc{O}\) for all \(i\),
-      \[
-        \mf{p}\mc{O} = \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}},
-      \]
-      is the prime factorization of \(\mf{p}\mc{O}\), and \(f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\).
-    \end{theorem*}
-    \begin{proof}
-      First consider the homomorphism
-      \[
-        \phi:\smc{O}[\t] \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O}.
-      \]
-      We have \(\mf{p}\mc{O}+\mf{Q}_{\mc{O}/\smc{O}} = \mc{O}\) because \(\mf{p}\mc{O}\) is relatively prime to \(\mf{Q}_{\mc{O}/\smc{O}}\). As \(\mf{Q}_{\mc{O}/\smc{O}} \subseteq \smc{O}[\t]\), it follows that \(\mf{p}\mc{O}+\smc{O}[\t] = \mc{O}\) which shows \(\phi\) is surjective. Now \(\ker\phi = \smc{O}[\t] \cap \mf{p}\mc{O}\) and we claim \(\smc{O}[\t] \cap \mf{p}\mc{O} = \mf{p}\smc{O}[\t]\). The reverse inclusion is clear since \(\mf{p}\) is an integral ideal of \(\smc{O}\). For the forward inclusion, intersecting both sides of \(\mf{p}\mc{O}+\mf{Q}_{\mc{O}/\smc{O}} = \mc{O}\) with \(\smc{O}\) gives \(\mf{p} \cap \mf{Q}_{\mc{O}/\smc{O}} = \smc{O}\) because \(\mf{p}\mc{O} \cap \smc{O} = \mf{p}\). Hence
-      \[
-        \smc{O}[\t] \cap \mf{p}\mc{O} = (\mf{p} \cap \mf{Q}_{\mc{O}/\smc{O}})(\smc{O}[\t] \cap \mf{p}\mc{O}) = (\mf{p}\smc{O}[\t] \cap \mf{p}\mc{O})+(\mf{Q}_{\mc{O}/\smc{O}}\smc{O}[\t] \cap \mf{Q}_{\mc{O}/\smc{O}}\mf{p}\mc{O}) \subseteq \mf{p}\smc{O}[\t],
-      \]
-      where the inclusion follows by the definition of the conductor \(\mf{Q}_{\mc{O}/\smc{O}}\). This proves the reverse containment so that \(\ker\phi = \mf{p}\smc{O}[\t]\). By first isomorphism theorem, we obtain
-      \[
-        \smc{O}[\t]/\mf{p}\smc{O}[\t] \cong \mc{O}/\mf{p}\mc{O}.
-      \]
-      Since \(m_{\t}(x)\) is the minimal polynomial for \(\t\) over \(K\), we have an isomorphism \(\smc{O}[x]/m_{\t}(x)\smc{O}[x] \cong \smc{O}[\t]\) given by evaluation at \(\t\). Then we have the chain of isomorphism
-      \[
-        \smc{O}[\t]/\mf{p}\smc{O}[\t] \cong (\smc{O}[x]/m_{\t}(x)\smc{O}[x])/(\mf{p}(\smc{O}[x]/m_{\t}(x)\smc{O}[x])) \cong \smc{O}[x]/(\mf{p}\smc{O}[x]+m_{\t}(x)\smc{O}[x]) \cong \F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x],
-      \]
-      where the second and third isomorphisms follow by taking \(\smc{O}[x]/(\mf{p}\smc{O}[x]+m_{\t}(x)\smc{O}[x])\) and reducing elements of \(\smc{O}[x]\) modulo \(m_{\t}(x)\smc{O}[x]\) or their coefficients modulo \(\mf{p}\) respectively. Therefore the inverse isomorphism is given by sending any representative \(\conj{f}(x)\) of a coset in \(\F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x]\) to a lift \(f(x)\) in \(\smc{O}[x]\) and then to \(\conj{f(\t)}\) by reducing \(f(\t)\) modulo \(\mf{p}\mc{O}\). Now set \(A = \F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x]\). The Chinese remainder theorem gives an isomorphism
-      \[
-        A \cong \bigop_{1 \le i \le r}\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x].
-      \]
-      As \(\conj{m_{i}}(x)\) is irreducible, \(\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is maximal and hence \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is a field. By the third isomorphism theorem, \(\conj{m_{i}}(x)\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x]\) is a maximal ideal of \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x]\). It follows that the maximal ideals of \(\smc{O}\) are precisely the \(\conj{m_{i}}(x)A\) and we have an isomorphism
-      \[
-        A/\conj{m_{i}}(x)A \cong \F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x],
-      \]
-      for all \(i\). Via the isomorphism \(\mc{O}/\mf{p}\mc{O} \cong A\) described above, the maximal ideals of \(\mc{O}/\mf{p}\mc{O}\) are exactly \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). We now show that the \(\mf{P}_{i}\) are prime. To see this, consider the surjective homomorphism
-      \[
-        \pi:\mc{O} \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O}.
-      \]
-      Then the image of \(\mf{P}_{i}\) under \(\pi\) is \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). As this ideal is maximal and hence prime, the preimage \(\mf{P}_{i}\) is prime too. Moreover, the \(\mf{P}_{i}\) are all distinct since the \(\conj{m_{i}(\t)}\mc{O}/\mf{p}\mc{O}\) are which are all distinct because the \(\conj{m_{i}}(x)A\) are (using the isomorphism \(\mc{O}/\mf{p}\mc{O} \cong A\)). In particular, they are also relatively prime. By construction, \(\mf{P}_{i} \subseteq \mf{p}\mc{O}\) so that the \(\mf{P}_{i}\) are prime factors of \(\mf{p}\mc{O}\). These are the only prime factors of \(\mf{p}\mc{O}\) because the image of any prime under \(\pi\) contained in \(\mf{p}\mc{O}\) must be a maximal ideal of \(\mc{O}/\mf{p}\mc{O}\) (since primes are maximal and by the fourth isomorphism theorem) and every maximal ideal is one of the \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). Together, all of this means that \(\mf{p}\mc{O}\) admits the prime factorization
-      \[
-        \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})},
-      \]
-      for some ramification indices \(e_{\mf{p}}(\mf{P}_{i})\). We will be done if we can show \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\) and \(f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\). To accomplish this, observe that we have an isomorphism
-      \[
-        \F_{\mf{P}_{i}} \cong (\mc{O}/\mf{p}\mc{O})/(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})) \cong \F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x],
-      \]
-      where the first isomorphism follow by taking \(\F_{\mf{P}_{i}}\) and reducing \(\mc{O}\) modulo \(\mf{p}\) and the second isomorphism follows from \(\mc{O}/\mf{p}\mc{O} \cong A\) and that the image of the maximal ideal \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\) under this isomorphism is \(\conj{m_{i}}(x)A\). Now \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is a \(\F_{\mf{p}}\)-vector space of degree \(\deg(\conj{m_{i}}(x))\). Hence \(f_{p}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\) as desired. The ideal \(\conj{m_{i}}(x)^{e_{i}}A\) under the isomorphism \(A \cong \mc{O}/\mf{p}\mc{O}\) is the ideal \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\). As the image of \(\mf{P}_{i}\) under \(\pi\) is \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\), we have that \(\mf{P}_{i}^{e_{i}}\) is contained in the preimage of \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\) under \(\pi\). As \(\conj{m_{\t}(\t)}(\mc{O}/\mf{p}\mc{O}) = 0\), it follows that
-      \[
-        \mf{p}\mc{O} = \pi^{-1}(0) \supseteq \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}.
-      \]
-      Since the \(\mf{P}_{i}\) are prime, we have \(e_{\mf{p}}(\mf{P}_{i}) \le e_{i}\) for all \(i\). But the fundamental equality then gives
-      \[
-        n = \sum_{1 \le i \le r}e_{\mf{p}}(\mf{P}_{i})f_{p}(\mf{P}_{i}) \le \sum_{1 \le i \le r}e_{i}f_{p}(\mf{P}_{i}) \le \sum_{1 \le i \le r}e_{i}\deg(\conj{m_{i}}(x)) \le n,
-      \]
-      where the last equality follows by the prime factorization of \(\conj{m_{\t}}(x)\) and that \(\deg(\conj{m_{\t}}(x)) = \deg(m_{\t}(x))\) because \(m_{\t}(x)\) is monic. This shows \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\) for all \(i\) which completes the proof.
-    \end{proof}
-
-    Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable field extension \(L/K\). The Dedekind-Kummer theorem allows us to compute the prime factorization of \(\mf{p}\mc{O}\) provided this integral ideal is relatively prime to the conductor \(\mf{Q}_{\mc{O}/\smc{O}}\). By the prime factorization of fractional ideals, \(\mf{Q}_{\mc{O}/\smc{O}}\) has finitely many prime factors so we only have to avoid finitely many primes of \(\mc{O}\). In fact, if the conductor is \(\mc{O}\) then we do not have to avoid any primes at all. This occurs when \(\mc{O}/\smc{O}\) is monogenic. Indeed, Suppose \(\mc{O} = \smc{O}[\a]\) for some \(\a \in \mc{O}\). Then \(1,\a,\ldots,\a^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\) and is necessarily a basis for \(L/K\). But then \(\a\) is also a primitive element for \(L/K\) which implies
-    \[
-      \mf{Q}_{\mc{O}/\smc{O}} = \mc{O}.
-    \]
-    We now turn to the setting of a number field \(K\). Every prime \(\mf{p}\) of \(K\) is above some prime \(p\) (recall \(\Z\) is a principal ideal domain so we are referring to primes by their generator). Then the residue class extension of \(\mc{O}_{K}/\Z\) for \(\mf{p}\) is \(\F_{\mf{p}}/\F_{p}\). Also, we write \(f_{p}(\mf{p})\) and \(e_{p}(\mf{p})\) for the inertia degree and ramification index of \(\mf{p}\) relative to \(p\) respectively. Moreover, all of the residue class extensions are separable since \(\F_{p}\) is a perfect field. This implies \(\mf{p}\) is ramified in \(\mc{O}_{K}/\Z\) if and only if \(e_{p}(\mf{p}) = 1\). If \(\t\) is a primitive element for \(K/\Q\) contained in \(\mc{O}_{K}\) then the \textbf{conductor}\index{conductor} \(\mf{q}_{K}\) of \(K\) relative to \(\t\) is the conductor of \(\mc{O}_{K}/\Z\) relative to \(\t\). Even though \(K\) admits an integral basis, \(\mc{O}_{K}\) is not necessarily monogenic so that \(\mf{q}_{K}\) may not be \(\mc{O}_{K}\).
-  \fi\iffalse\section{\todo{The Different and Discriminant}}
+    We now turn to the setting of a number field \(K\). Every prime \(\mf{p}\) of \(K\) is above some prime \(p\) (recall \(\Z\) is a principal ideal domain so we are referring to primes by their generator). Then the residue class extension of \(\mc{O}_{K}/\Z\) for \(\mf{p}\) is \(\F_{\mf{p}}/\F_{p}\). Also, we write \(f_{p}(\mf{p})\) and \(e_{p}(\mf{p})\) for the inertia degree and ramification index of \(\mf{p}\) relative to \(p\) respectively. Moreover, all of the residue class extensions are separable since \(\F_{p}\) is a perfect field. This implies \(\mf{p}\) is ramified in \(\mc{O}_{K}/\Z\) if and only if \(e_{p}(\mf{p}) = 1\). If \(\t\) is a primitive element for \(K/\Q\) contained in \(\mc{O}_{K}\) then the \textbf{conductor}\index{conductor} \(\mf{q}_{K}\) of \(K\) relative to \(\t\) is the conductor of \(\mc{O}_{K}/\Z\) relative to \(\t\). Even though \(K\) admits an integral basis, \(\mc{O}_{K}\) is not necessarily monogenic so that \(\mf{q}_{K}\) may not be \(\mc{O}_{K}\). \todo{say something about Galois number fields...}
+    \fi
+  \iffalse\section{\todo{The Different and Discriminant}}
     Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable field extension \(L/K\). It is exceptionally rare for a prime \(\mf{p}\) of \(K\) to ramify. We will construct two integral ideals, one of \(\mc{O}\) and the other of \(\smc{O}\) which will tell us which primes ramify in \(L\) or \(K\). These integral ideals are the different and discriminant respectively. To describe them, we will need the concept of lattices in Dedekind domains. We say that \(\mf{L}\) is a \textbf{\(\smc{O}\)-lattice}\index{\(\smc{O}\)-lattice} if it is a finitely generated \(\smc{O}\)-submodule of \(L\). Moreover, we say that \(\mf{L}\) is \textbf{complete}\index{complete} if it spans \(L/K\). That is, \(\mf{L}\) contains a basis of \(L/K\).
 
     \begin{remark}

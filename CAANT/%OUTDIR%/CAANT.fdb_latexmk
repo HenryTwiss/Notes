@@ -1,19 +1,19 @@
 # Fdb version 3
-["makeindex %OUTDIR%/CAANT.idx"] 1772053707 "%OUTDIR%/CAANT.idx" "%OUTDIR%/CAANT.ind" "%OUTDIR%/CAANT" 1772060896
-  "%OUTDIR%/CAANT.idx" 1772053707 8052 c6d119f98f1cc5a49f714d9828dee2ea ""
+["makeindex %OUTDIR%/CAANT.idx"] 1772078491 "%OUTDIR%/CAANT.idx" "%OUTDIR%/CAANT.ind" "%OUTDIR%/CAANT" 1772078833
+  "%OUTDIR%/CAANT.idx" 1772078492 7939 0f8f27248cbd2745fd7901d1aa176728 ""
   (generated)
   "%OUTDIR%/CAANT.ilg"
   "%OUTDIR%/CAANT.ind"
-["pdflatex"] 1772060895 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1772060896
-  "%OUTDIR%/CAANT.aux" 1772053707 3116 d1774f2520ecbe16580d5e0e6f824fcc ""
-  "%OUTDIR%/CAANT.ind" 1772053707 6624 7ce565482936b264db2db6476ee7ffed "makeindex %OUTDIR%/CAANT.idx"
-  "%OUTDIR%/CAANT.out" 1772053707 6911 779c46df1bfd5c55b5390ad4a6a962e4 ""
-  "%OUTDIR%/CAANT.toc" 1772053707 3331 4af22f96f2ab4575518241e4fe7428e6 ""
-  "%OUTDIR%/Chapters/Algebraic_Integers.aux" 1772053707 21232 9bcb69f4ddcbedb1437c808ff8d33be5 ""
-  "%OUTDIR%/Chapters/Analytic_L-functions.aux" 1772053707 8798 7ec6906886eb5fec19e7fb98471aeee7 ""
-  "%OUTDIR%/Chapters/Arithmetic_Functions.aux" 1772053707 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a ""
-  "%OUTDIR%/Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1772053707 9218 4d8f16edc8a6ca6be44b1306e7dd906e ""
-  "%OUTDIR%/Chapters/Dirichlet_Series.aux" 1772053707 10729 8a1a029d92773e4b0fe7e151ae21b459 ""
+["pdflatex"] 1772078832 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1772078833
+  "%OUTDIR%/CAANT.aux" 1772078492 3114 4ae83e2468374b2212bdee5146fe873d ""
+  "%OUTDIR%/CAANT.ind" 1772078491 6596 c745a2e83979a7e8f8901aec04614601 "makeindex %OUTDIR%/CAANT.idx"
+  "%OUTDIR%/CAANT.out" 1772078492 7001 2e37f4c943add18f334eff13d0d37fe9 ""
+  "%OUTDIR%/CAANT.toc" 1772078492 3427 b07702e891716a1800f7ce0e5fb3db79 ""
+  "%OUTDIR%/Chapters/Algebraic_Integers.aux" 1772078492 19872 42a6455c1b870cf02246f0030769af66 ""
+  "%OUTDIR%/Chapters/Analytic_L-functions.aux" 1772078492 8797 f9235b6450d3948ab493d918f5288d55 ""
+  "%OUTDIR%/Chapters/Arithmetic_Functions.aux" 1772078492 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a ""
+  "%OUTDIR%/Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1772078492 9218 4d8f16edc8a6ca6be44b1306e7dd906e ""
+  "%OUTDIR%/Chapters/Dirichlet_Series.aux" 1772078492 10729 c9d4af01b6e078a244f7179c13cb99ad ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" 1772052866 1098 d08c9dea10281cdccd6befdc13e638bd ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -210,7 +210,7 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "CAANT.tex" 1772052866 1098 d08c9dea10281cdccd6befdc13e638bd ""
-  "Chapters/Algebraic_Integers.tex" 1772060895 199086 9200998427ab1f8ccd5cf4aadeec0ddd ""
+  "Chapters/Algebraic_Integers.tex" 1772078831 196870 7ec5ef664637f97a96c68008c5d3a915 ""
   "Chapters/Analytic_L-functions.tex" 1772034438 85083 b483b032cb3fffa6d24bcb6b0645f96e ""
   "Chapters/Arithmetic_Functions.tex" 1771297556 8089 282103bc14c7cbc7221ff292366ce485 ""
   "Chapters/Dirichlet_Characters_and_Exponential_Sums.tex" 1771519876 42890 a0c6022857bf96338dd8708bc4a4b9db ""
