@@ -37,14 +37,14 @@
     Integrality is also transitive.
 
     \begin{proposition}\label{prop:integrality_is_transitive}
-      Let \(\mc{O}'/\mc{O}/\smc{O}\) be a tower of rings. If \(\mc{O}'\) is integral over \(\mc{O}\) and \(\mc{O}\) is integral over \(\smc{O}\) then \(\mc{O}'\) is integral over \(\smc{O}\).
+      Let \(\wtilde{\mc{O}}/\mc{O}/\smc{O}\) be a tower of rings. If \(\wtilde{\mc{O}}\) is integral over \(\mc{O}\) and \(\mc{O}\) is integral over \(\smc{O}\) then \(\wtilde{\mc{O}}\) is integral over \(\smc{O}\).
     \end{proposition}
     \begin{proof}
-      Let \(\g \in \mc{O}'\). Since \(\mc{O}'\) is integral over \(\mc{O}\), we have
+      Let \(\g \in \wtilde{\mc{O}}\). Since \(\wtilde{\mc{O}}\) is integral over \(\mc{O}\), we have
       \[
         \g^{n}+\b_{n-1}\g^{n-1}+\cdots+\b_{0} = 0,
       \]
-      for some positive integer \(n\) and \(\b_{i} \in \mc{O}\). Set \(R = \smc{O}[\b_{0},\ldots,\b_{n-1}]\). Then \(R[\g]\) is a finitely generated \(R\)-module. As \(\mc{O}\) is integral over \(\smc{O}\), \cref{prop:integral_if_finitely_generated} implies that \(R[\g]\) is also a finitely generated \(\smc{O}\)-module whence \(\g\) is integral over \(\smc{O}\). As \(\g\) was arbitrary, this proves \(\mc{O}'\) is integral over \(\smc{O}\).
+      for some positive integer \(n\) and \(\b_{i} \in \mc{O}\). Set \(R = \smc{O}[\b_{0},\ldots,\b_{n-1}]\). Then \(R[\g]\) is a finitely generated \(R\)-module. As \(\mc{O}\) is integral over \(\smc{O}\), \cref{prop:integral_if_finitely_generated} implies that \(R[\g]\) is also a finitely generated \(\smc{O}\)-module whence \(\g\) is integral over \(\smc{O}\). As \(\g\) was arbitrary, this proves \(\wtilde{\mc{O}}\) is integral over \(\smc{O}\).
     \end{proof}
 
     In light of this result, we define the \textbf{integral closure}\index{integral closure} \(\conj{\smc{O}}\) of \(\smc{O}\) in \(\mc{O}\) by
@@ -77,7 +77,7 @@
       \[
         \l = \frac{\b}{\a},
       \]
-      for some \(\b \in \mc{O}\) and nonzero \(\a \in \smc{O}\). In particular, is an integrally closed domain with field of fractions \(L\). Moreover, \(\l \in L\) is integral over \(\smc{O}\) if and only if the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) has coefficients in \(\smc{O}\).
+      for some \(\b \in \mc{O}\) and nonzero \(\a \in \smc{O}\). In particular, \(\mc{O}\) is an integrally closed domain with field of fractions \(L\). Moreover, \(\l \in L\) is integral over \(\smc{O}\) if and only if the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) has coefficients in \(\smc{O}\).
     \end{proposition}
     \begin{proof}
       As \(L/K\) is finite, it is necessarily algebraic so that any \(\l \in L\) satisfies
@@ -89,6 +89,15 @@
         (\a\l)^{n}+\a'_{n-1}(\a\l)^{n-1}+\cdots+\a'_{0} = 0,
       \]
       where \(\a'_{i} = \a_{i}\a^{n-1-i}\). Whence \(\a\l\) is integral over \(\smc{O}\) and thus \(\a\l \in \mc{O}\). Then \(\a\l = \b\) for some \(\b \in \mc{O}\) which is equivalent to \(\l = \frac{\b}{\a}\). Therefore \(L\) is the field of fractions of \(\mc{O}\). Now \(\mc{O}\) is an integral domain as it is a subring of a field. Being the integral closure of \(\smc{O}\) in \(L\), \(\mc{O}\) is an integrally closed domain with field of fractions \(L\). It remains to prove the last statement. For the forward implication, suppose \(\l\) is integral over \(\smc{O}\). Then \(\l\) is a root of a monic polynomial \(f(x) \in \smc{O}[x]\). As \(m_{\l}(x)\) divides \(f(x)\) in \(\smc{O}[x]\), all of the roots of \(m_{\l}(x)\) are integral over \(\smc{O}\) too. By Vieta's formulas, the coefficients of \(m_{\l}(x)\) integral over \(\smc{O}\) as well whence \(m_{\l}(x) \in \smc{O}[x]\). For the reverse implication, if the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) has coefficients in \(\smc{O}\) then \(\l\) is automatically integral over \(\smc{O}\).
+    \end{proof}
+
+    The previous result can also be generalized to towers in light of the fact that integral closure is transitive.
+
+    \begin{proposition}\label{prop:integral_closure_is_transitive}
+      Let \(\smc{O}\) be an integrally closed domains with field of fractions \(K\), let \(M/L/K\) be a finite separable tower, and suppose \(\mc{O}\) and \(\wtilde{\mc{O}}\) are the integral closures of \(\smc{O}\) in \(L\) and \(M\) respectively. Then \(\mc{O}\) and \(\wtilde{\mc{O}}\) are integrally closed domains. In particular, \(\wtilde{\mc{O}}\) is the integral closure of \(\mc{O}\) in \(L\).
+    \end{proposition}
+    \begin{proof}
+      The first statement follows from two applications of \cref{prop:field_of_fractions_AKBL}. To prove the second statement, we must show \(\wtilde{\mc{O}} = \conj{\mc{O}}\). The forward inclusion is obvious as \(\smc{O}\) is a subset of \(\mc{O}\). For the reverse inclusion, \cref{prop:integrality_is_transitive} implies that \(\conj{\mc{O}}\) is integral over \(\smc{O}\). As \(\wtilde{\mc{O}}\) is the integral closure of \(\smc{O}\) in \(M\), the reverse containment follows.
     \end{proof}
 
     Number fields are a particular instance of the aforementioned setting. A \textbf{number field}\index{number field} \(K\) is a field extension of \(\Q\) of finite degree. That is, \(K\) is a finite dimensional \(\Q\)-vector space. In particular, \(K/\Q\) is a finite separable extension since \(\Q\) is perfect whence the primitive element theorem applies. Moreover, \(K/\Q\) is Galois if and only if it is normal. We say that the \textbf{degree}\index{degree} of \(K\) is \([K:\Q]\) which is simply the degree of \(K\) as a \(\Q\)-vector space. In the cases of small degrees we will often use the latin derived names \textbf{quadratic}\index{quadratic}, \textbf{cubic}\index{cubic}, etc. Any \(\k \in K\) is called an \textbf{algebraic number}\index{algebraic number}. We define the \textbf{ring of integers}\index{ring of integers} \(\mc{O}_{K}\) of \(K\) to be the integral closure of \(\Z\) in \(K\). In other words,
@@ -1233,19 +1242,19 @@
     \]
     That is, \(f_{\mf{p}}(\mf{P})\) is the dimension of the residue field \(\F_{\mf{P}}\) as a \(\F_{\mf{p}}\)-vector space. More generally, recall from \cref{prop:Dedekind_extension_facts} that \(\mc{O}\) is at finitely generated \(\smc{O}\)-module of rank at most \(n\). Therefore the quotient ring \(\mf{B}/\mf{A}\) is a \(\F_{\mf{p}}\)-vector space of dimension at most \(n\) for any integral ideals \(\mf{A}\) and \(\mf{B}\) with \(\mf{p} \subseteq \mf{A} \subseteq \mf{B}\). We obtain the residue class field \(\F_{\mf{P}}\) when \(\mf{A} = \mf{P}\) and \(\mf{B} = \mc{O}\).
 
-    Suppose \(\mc{O}'/\mc{O}\) and \(\mc{O}/\smc{O}\) are Dedekind extensions for finite separable extensions \(M/L\) and \(L/K\) respectively. Let \(\mf{P}'\), \(\mf{P}\), and \(\mf{p}\) be primes of \(\mc{O}'\), \(\mc{O}\), and \(\smc{O}\) respectively with \(\mf{P}'\) above \(\mf{P}\) and \(\mf{P}\) above \(\mf{p}\). We illustrate this relationship via the diagram
+    Suppose \(\wtilde{\mc{O}}/\mc{O}/\smc{O}\) be a tower of Dedekind extensions for finite separable tower \(M/L/K\). Let \(\wtilde{\mf{P}}\), \(\mf{P}\), and \(\mf{p}\) be primes of \(\wtilde{\mc{O}}\), \(\mc{O}\), and \(\smc{O}\) respectively with \(\wtilde{\mf{P}}\) above \(\mf{P}\) and \(\mf{P}\) above \(\mf{p}\). We illustrate this relationship via the diagram
     \begin{center}
       \begin{tikzcd}[row sep=large, column sep=large]
-        \mf{P}' \subset \mc{O}' \subseteq M \arrow[dash]{d} \\
+        \wtilde{\mf{P}} \subset \wtilde{\mc{O}} \subseteq M \arrow[dash]{d} \\
         \mf{P} \subset \mc{O} \subseteq L \arrow[dash]{d} \\
         \mf{p} \subset \smc{O} \subseteq K.
       \end{tikzcd}
     \end{center} 
-    Then \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid\mid \mf{p}\mc{O}\) and \(\mf{P}^{e_{\mf{P}}(\mf{P}')} \mid\mid \mf{P}\mc{O}'\). We also have the residue class field extensions \(\F_{\mf{P}'}/\F_{\mf{P}}\) and \(\F_{\mf{P}}/\F_{\mf{p}}\). It follows that
+    Then \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid\mid \mf{p}\mc{O}\) and \(\mf{P}^{e_{\mf{P}}(\wtilde{\mf{P}})} \mid\mid \mf{P}\wtilde{\mc{O}}\). We also have the residue class field extensions \(\F_{\wtilde{\mf{P}}}/\F_{\mf{P}}\) and \(\F_{\mf{P}}/\F_{\mf{p}}\). It follows that
     \begin{equation}\label{equ:ramification_and_interia_towers}
-      e_{\mf{p}}(\mf{P}') = e_{\mf{p}}(\mf{P})e_{\mf{P}}(\mf{P}') \quad \text{and} \quad f_{\mf{p}}(\mf{P}') = f_{\mf{p}}(\mf{P})f_{\mf{P}}(\mf{P}').
+      e_{\mf{p}}(\wtilde{\mf{P}}) = e_{\mf{p}}(\mf{P})e_{\mf{P}}(\wtilde{\mf{P}}) \quad \text{and} \quad f_{\mf{p}}(\wtilde{\mf{P}}) = f_{\mf{p}}(\mf{P})f_{\mf{P}}(\wtilde{\mf{P}}).
     \end{equation}
-    In other words, the ramification indices and inertia degrees are multiplicative with respect to primes above other primes.
+    In other words, the ramification indices and inertia degrees are multiplicative with respect to towers.
 
     The ramification indices and inertia degrees satisfy a simple relationship to the degree of \(L/K\) that is fundamental to they study of Dedekind extensions. In order to state it, we will require a lemma.
 
@@ -1321,7 +1330,7 @@
     \]
     In terms of the inertia degrees, being inert or totally split in \(\mc{O}/\smc{O}\) are antithetical properties. In particular, the smaller the inertia degrees are the greater the tendency for \(\mf{p}\mc{O}\) to factor into distinct primes.
     
-    Now let us introduce ramification of primes. If \(\mf{P}\) is a prime of \(\mc{O}\) above \(\mf{p}\), we say \(\mf{P}\) is \textbf{unramified}\index{unramified} in \(\mc{O}/\smc{O}\) if \(e_{\mf{p}}(\mf{P}) = 1\) and the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is separable. Otherwise, we say \(\mf{P}\) is \textbf{ramified}\index{ramified} in \(\mc{O}/\smc{O}\). Moreover, \(\mf{P}\) is \textbf{totally ramified}\index{totally ramified} in \(\mc{O}/\smc{O}\) if in addition to being ramified we have \(f_{\mf{p}}(\mf{P}) = 1\). Similarly, we say that a prime \(\mf{p}\) of \(\smc{O}\) is \textbf{unramified}\index{unramified} in \(\mc{O}/\smc{O}\) if every prime \(\mf{P}\) above it is unramified and is \textbf{ramified}\index{ramified} in \(\mc{O}/\smc{O}\) otherwise. We will see that it is an exceptional phenomena for a prime \(\mf{p}\) to ramify. Therefore it is typical that \(\mf{p}\) is either inert or totally split.
+    Now let us introduce ramification of primes. If \(\mf{P}\) is a prime of \(\mc{O}\) above \(\mf{p}\), we say \(\mf{P}\) is \textbf{unramified}\index{unramified} in \(\mc{O}/\smc{O}\) if \(e_{\mf{p}}(\mf{P}) = 1\) and the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is separable. Otherwise, we say \(\mf{P}\) is \textbf{ramified}\index{ramified} in \(\mc{O}/\smc{O}\). Moreover, \(\mf{P}\) is \textbf{totally ramified}\index{totally ramified} in \(\mc{O}/\smc{O}\) if in addition to being ramified we have \(f_{\mf{p}}(\mf{P}) = 1\). Similarly, we say that a prime \(\mf{p}\) of \(\smc{O}\) is \textbf{unramified}\index{unramified} in \(\mc{O}/\smc{O}\) if every prime \(\mf{P}\) above it is unramified and is \textbf{ramified}\index{ramified} in \(\mc{O}/\smc{O}\) otherwise. We will see that it is an exceptional phenomena for a prime \(\mf{p}\) to ramify. Therefore the typical situation for a prime \(\mf{p}\) is that it is either inert or totally split.
     
     \iffalse
     The Dedekind extension \(\mc{O}/\smc{O}\) itself is said to be \textbf{unramified}\index{unramified} if every prime of \(\smc{O}\) is unramified in \(\mc{O}/\smc{O}\) and is said to be \textbf{ramified}\index{ramified} otherwise.
@@ -1406,7 +1415,7 @@
       \mf{Q}_{\mc{O}/\smc{O}} = \mc{O}.
     \]
     \fi
-  \section{Galois Extensions}
+
     Much more can be said about the ramification of primes in a Dedekind extension \(\mc{O}/\smc{O}\) when the associated extension \(L/K\) is Galois. Since \(L/K\) is assumed to be finite and separable, this amounts to further assuming \(L/K\) is normal. In this case, the Galois group is
     \[
       \Gal(L/K) = \Hom_{K}(L,\conj{K}),
@@ -1454,36 +1463,36 @@
       n = ref.
     \]
 
-    \iffalse
-    Continue to let \(\mf{P}\) be a prime above \(\mf{p}\). We define the \textbf{decomposition group}\index{decomposition group} \(D_{\mf{p}}(\mf{P})\) of \(\mf{P}\) by
+    We define the \textbf{decomposition group}\index{decomposition group} \(D_{\mf{P}}\) of \(\mf{P}\) is defined to by
     \[
-      D_{\mf{p}}(\mf{P}) = \{\tau \in \Gal(L/K):\tau(\mf{P}) = \mf{P}\}.
+      D_{\mf{P}} = \{\tau \in \Gal(L/K):\tau(\mf{P}) = \mf{P}\}.
     \]
-    Equivalently, \(D_{\mf{p}}(\mf{P})\) is the stabilizer subgroup of \(\mf{P}\) in \(\Gal(L/K)\). The associated \textbf{decomposition field}\index{decomposition field} \(L^{D_{\mf{p}}(\mf{P})}\) of \(\mf{P}\) is defined to be
+    Equivalently, the decomposition group is the stabilizer subgroup of \(\mf{P}\) in the Galois group. The associated \textbf{decomposition field}\index{decomposition field} \(L^{D_{\mf{P}}}\) of \(\mf{P}\) is defined by
     \[
-      L^{D_{\mf{p}}(\mf{P})} = \{\l \in L:\tau(\l) = \l \text{ for all } \tau \in D_{\mf{p}}(\mf{P})\}.
+      L^{D_{\mf{P}}} = \{\l \in L:\tau(\l) = \l \text{ for all } \tau \in D_{\mf{P}}\}.
     \]
-    In other words, the decomposition field of \(\mf{P}\) is the fixed field of \(L\) by \(D_{\mf{p}}(\mf{P})\). In particular, the fundamental theorem of Galois theory gives
+    In other words, the decomposition field of \(\mf{P}\) is the fixed field of \(L\) by the decomposition group of \(\mf{P}\) and hence an intermediate field of \(L/K\). In this case, the fundamental theorem of Galois theory says
     \[
-      \Gal(L/L^{D_{\mf{p}}(\mf{P})}) = D_{\mf{p}}(\mf{P}).
+      \Gal(L/L^{D_{\mf{P}}}) = D_{\mf{P}}.
     \]
-    We let \(\mc{O}^{D}\) denote the integral closure of \(\smc{O}\) in \(L^{D_{\mf{p}}(\mf{P})}\) so that \(\mc{O}/\mc{O}^{D}/\smc{O}\) is a tower of Dedekind extensions. Also, we will write \(\mf{P}^{D}\) for the prime of \(L^{D_{\mf{p}}(\mf{P})}\) below \(\mf{P}\). Then we can illustrate this relationship via the following tower of extensions:
+    We let \(\mc{O}^{D_{\mf{P}}}\) denote the integral closure of \(\smc{O}\) in \(L^{D_{\mf{P}}}\). Then \cref{prop:integral_closure_is_transitive,prop:integral_closure_of_Dedekind_is_Dedekind} together imply that \(\mc{O}/\mc{O}^{D_{\mf{P}}}/\smc{O}\) is a tower of Dedekind extensions for \(L/L^{D_{\mf{P}}}/K\). Also, we will write \(\mf{P}^{D}\) for the prime of \(L^{D_{\mf{P}}}\) below \(\mf{P}\). We illustrate this relationship via the diagram
     
     \begin{center}
       \begin{tikzcd}[row sep=large, column sep=large]
         \mf{P} \subset \mc{O} \subseteq L \arrow[dash]{d} \\
-        \mf{P}^{D} \subset \mc{O}^{D} \subseteq L^{D_{\mf{p}}(\mf{P})} \arrow[dash]{d} \\
+        \mf{P}^{D} \subset \mc{O}^{D} \subseteq L^{D_{\mf{P}}} \arrow[dash]{d} \\
         \mf{p} \subset \smc{O} \subseteq K.
       \end{tikzcd}
     \end{center}
 
-    Any of the decomposition groups \(D_{\mf{p}}(\mf{P})\) encode how \(\mf{p}\mc{O}\) splits into distinct prime factors in \(\mc{O}\). Indeed, by the orbit-stabilizer theorem the number of cosets in \(\Gal(L/K)/D_{\mf{p}}(\mf{P})\) is equal to the size of the orbit of \(\mf{P}\) under the action of \(\Gal(L/K)\). As the action is transitive by \cref{prop:Galois_action_on_primes_is_transitive}, \(\s(\mf{P})\) runs over the primes above \(\mf{p}\) as \(\s\) runs over a complete set of representatives for this coset space. It follows that the number of prime factors of \(\mf{p}\mc{O}\) is equal to the index \(|\Gal(L/K)/D_{\mf{p}}(\mf{P})|\). In particular, \(\mf{p}\) is inert in \(\mc{O}/\smc{O}\) if and only if \(D_{\mf{p}}(\mf{P}) = \Gal(L/K)\) which is equivalent to \(L^{D_{\mf{p}}(\mf{P})} = K\). Antithetically, \(\mf{p}\) is totally split in \(\mc{O}/\smc{O}\) if and only if \(D_{\mf{p}}(\mf{P}) = \{\id\}\) which is equivalent to \(L^{D_{\mf{p}}(\mf{P})} = L\). More generally, the fundamental equality implies \(n = ef|\Gal(L/K)/D_{\mf{p}}(\mf{P})|\) which is to say that
+    \iffalse
+    Any of the decomposition groups \(D_{\mf{P}}\) encode how \(\mf{p}\mc{O}\) splits into distinct prime factors in \(\mc{O}\). Indeed, by the orbit-stabilizer theorem the number of cosets in \(\Gal(L/K)/D_{\mf{P}}\) is equal to the size of the orbit of \(\mf{P}\) under the action of \(\Gal(L/K)\). As the action is transitive by \cref{prop:Galois_action_on_primes_is_transitive}, \(\s(\mf{P})\) runs over the primes above \(\mf{p}\) as \(\s\) runs over a complete set of representatives for this coset space. It follows that the number of prime factors of \(\mf{p}\mc{O}\) is equal to the index \(|\Gal(L/K)/D_{\mf{P}}|\). In particular, \(\mf{p}\) is inert in \(\mc{O}/\smc{O}\) if and only if \(D_{\mf{P}} = \Gal(L/K)\) which is equivalent to \(L^{D_{\mf{P}}} = K\). Antithetically, \(\mf{p}\) is totally split in \(\mc{O}/\smc{O}\) if and only if \(D_{\mf{P}} = \{\id\}\) which is equivalent to \(L^{D_{\mf{P}}} = L\). More generally, the fundamental equality implies \(n = ef|\Gal(L/K)/D_{\mf{P}}|\) which is to say that
     \begin{equation}\label{equ:decomposition_group_e_f_relation}
-      |D_{\mf{p}}(\mf{P})| = ef.
+      |D_{\mf{P}}| = ef.
     \end{equation}
-    Then \(L/L^{D_{\mf{p}}(\mf{P})}\) has degree \(ef\) and \(L^{D_{\mf{p}}(\mf{P})}/K\) has degree equal to the number of distinct prime factors of \(\mf{p}\mc{O}\) which is \(|\Gal(L/K)/D_{\mf{p}}(\mf{P})|\). If \(\mf{p}\) inert in \(\mc{O}/\smc{O}\) then \(n = ef\) implying \(e = 1\) and \(n = f\) as we have seen. If \(\mf{p}\) is totally split in \(\mc{O}/\smc{O}\) then \(1 = ef\) so that \(e = f = 1\) as we have also seen. Moreover, the decomposition group of a conjugate prime \(\s(\mf{P})\) to \(\mf{P}\) is the conjugate of decomposition group of \(\mf{P}\) by \(\s\). In other words,
+    Then \(L/L^{D_{\mf{P}}}\) has degree \(ef\) and \(L^{D_{\mf{P}}}/K\) has degree equal to the number of distinct prime factors of \(\mf{p}\mc{O}\) which is \(|\Gal(L/K)/D_{\mf{P}}|\). If \(\mf{p}\) inert in \(\mc{O}/\smc{O}\) then \(n = ef\) implying \(e = 1\) and \(n = f\) as we have seen. If \(\mf{p}\) is totally split in \(\mc{O}/\smc{O}\) then \(1 = ef\) so that \(e = f = 1\) as we have also seen. Moreover, the decomposition group of a conjugate prime \(\s(\mf{P})\) to \(\mf{P}\) is the conjugate of decomposition group of \(\mf{P}\) by \(\s\). In other words,
     \[
-      D_{\mf{p}}(\s(\mf{P})) = \s D_{\mf{p}}(\mf{P})\s^{-1}.
+      D_{\mf{p}}(\s(\mf{P})) = \s D_{\mf{P}}\s^{-1}.
     \]
     This is simply because \(\tau(\mf{P}) = \mf{P}\) if and only if \(\s\tau\s^{-1}(\s(\mf{P})) = \s(\mf{P})\). Also, the fundamental theorem of Galois theory implies that \(D_{\mf{p}}(\s(\mf{P}))\) is normal if and only if \(L^{D_{\mf{p}}(\s(\mf{P}))}/K\) is Galois in which case
     \[
@@ -1491,11 +1500,10 @@
     \]
     Regardless, \cref{prop:Galois_action_on_primes_is_transitive} shows that the prime factorization of \(\mf{p}\mc{O}\) takes the form
     \[
-      \mf{p}\mc{O} = \left(\prod_{\s \in \Gal(L/K)/D_{\mf{p}}(\mf{P})}\s(\mf{P})\right)^{e}.
+      \mf{p}\mc{O} = \left(\prod_{\s \in \Gal(L/K)/D_{\mf{P}}}\s(\mf{P})\right)^{e}.
     \]
     The decomposition field is aptly named because it contains all of the information about the different prime factors that \(\mf{p}\mc{O}\) splits into in \(\mc{O}\). In particular, the primes \(\mf{P}^{D}\) are inert in \(\mc{O}/\mc{O}^{D}\) as the following proposition shows:
 
-    \fi\iffalse
     \begin{proposition}\label{prop:decomposition_field_e_and_f}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) Galois extension \(L/K\), let \(\mf{p}\) be a prime of \(\smc{O}\) with inertia degree \(f\) and ramification index \(e\), and let \(\mf{P}\) be a prime of \(\mc{O}\) above \(\mf{p}\). Then the following hold:
       \begin{enumerate}[label*=(\roman*)]
@@ -1506,8 +1514,8 @@
     \begin{proof}
       We will prove the statements separately:
       \begin{enumerate}[label*=(\roman*)]
-        \item By the fundamental theorem of Galois theory, \(\Gal(L/L^{D_{\mf{p}}(\mf{P})}) = D_{\mf{p}}(\mf{P})\). It follows from \cref{prop:Galois_action_on_primes_is_transitive} that the primes of \(\mc{O}\) above \(\mf{P}^{D}\) are of the form \(\s(\mf{P})\) for \(\s \in D_{\mf{p}}(\mf{P})\). But for these \(\s\) we have \(\s(\mf{P}) = \mf{P}\). Therefore \(\mf{P}^{D}\) is inert \(\mc{O}/\mc{O}^{D}\). This proves (i).
-        \item Recall \(\Gal(L/L^{D_{\mf{p}}(\mf{P})}) = D_{\mf{p}}(\mf{P})\) by the fundamental theorem of Galois theory. On the one hand, since \(|\Gal(L/L^{D_{\mf{p}}(\mf{P})})|\) is the degree of \(L/L^{D_{\mf{p}}(\mf{P})}\) and \(\mf{P}^{D}\) is inert in \(\mc{O}/\mc{O}^{D}\), the fundamental equality gives \(|D_{\mf{p}}(\mf{P})| = e_{\mf{P}^{D}}(\mf{P})f_{\mf{P}^{D}}(\mf{P})\). Then \cref{equ:decomposition_group_e_f_relation} gives
+        \item By the fundamental theorem of Galois theory, \(\Gal(L/L^{D_{\mf{P}}}) = D_{\mf{P}}\). It follows from \cref{prop:Galois_action_on_primes_is_transitive} that the primes of \(\mc{O}\) above \(\mf{P}^{D}\) are of the form \(\s(\mf{P})\) for \(\s \in D_{\mf{P}}\). But for these \(\s\) we have \(\s(\mf{P}) = \mf{P}\). Therefore \(\mf{P}^{D}\) is inert \(\mc{O}/\mc{O}^{D}\). This proves (i).
+        \item Recall \(\Gal(L/L^{D_{\mf{P}}}) = D_{\mf{P}}\) by the fundamental theorem of Galois theory. On the one hand, since \(|\Gal(L/L^{D_{\mf{P}}})|\) is the degree of \(L/L^{D_{\mf{P}}}\) and \(\mf{P}^{D}\) is inert in \(\mc{O}/\mc{O}^{D}\), the fundamental equality gives \(|D_{\mf{P}}| = e_{\mf{P}^{D}}(\mf{P})f_{\mf{P}^{D}}(\mf{P})\). Then \cref{equ:decomposition_group_e_f_relation} gives
         \[
           ef = e_{\mf{P}^{D}}(\mf{P})f_{\mf{P}^{D}}(\mf{P}).
         \]
@@ -1519,13 +1527,13 @@
       \end{enumerate}
     \end{proof}
     
-    We can view \cref{prop:decomposition_field_e_and_f} (i) as a statement that \(\mf{p}\mc{O}^{D}\) encodes all of the information about the distinct prime factors \(\mf{p}\mc{O}\) splits into in \(\mc{O}\). Moreover, \cref{prop:decomposition_field_e_and_f} (ii) can be interpreted as the fact that \(\mc{O}^{D}/\smc{O}\) contains no information about the ramification index or inertia degree of \(\mf{p}\) in \(\mc{O}/\smc{O}\). All of that information is contained in \(\mc{O}/\mc{O}^{D}\) and we need to do more to unpack it. Since any \(\tau \in D_{\mf{p}}(\mf{P})\) leaves \(\mc{O}\) and \(\mf{P}\) invariant, it induces an automorphism \(\conj{\tau}\) of the residue class field \(\F_{\mf{P}}\) defined by
+    We can view \cref{prop:decomposition_field_e_and_f} (i) as a statement that \(\mf{p}\mc{O}^{D}\) encodes all of the information about the distinct prime factors \(\mf{p}\mc{O}\) splits into in \(\mc{O}\). Moreover, \cref{prop:decomposition_field_e_and_f} (ii) can be interpreted as the fact that \(\mc{O}^{D}/\smc{O}\) contains no information about the ramification index or inertia degree of \(\mf{p}\) in \(\mc{O}/\smc{O}\). All of that information is contained in \(\mc{O}/\mc{O}^{D}\) and we need to do more to unpack it. Since any \(\tau \in D_{\mf{P}}\) leaves \(\mc{O}\) and \(\mf{P}\) invariant, it induces an automorphism \(\conj{\tau}\) of the residue class field \(\F_{\mf{P}}\) defined by
     \[
       \conj{\tau}:\F_{\mf{P}}\to \F_{\mf{P}}\qquad \a \mapsto \tau(\a)+\mf{P}.
     \]
     We then obtain a homomorphism
     \[
-      T_{\mf{p}}^{\mf{P}}:D_{\mf{p}}(\mf{P}) \to \Aut(\F_{\mf{P}}/\F_{\mf{p}}) \qquad \tau \mapsto \conj{\tau}.
+      T_{\mf{p}}^{\mf{P}}:D_{\mf{P}} \to \Aut(\F_{\mf{P}}/\F_{\mf{p}}) \qquad \tau \mapsto \conj{\tau}.
     \]
     The following proposition shows that the residue class extensions \(\F_{\mf{P}}/\F_{\mf{p}}\) are normal and that \(T_{\mf{p}}^{\mf{P}}\) is surjective:
     
@@ -1533,14 +1541,14 @@
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite Galois extension \(L/K\), let \(\mf{p}\) be a prime of \(\smc{O}\), and let \(\mf{P}\) be a prime of \(\mc{O}\) above \(\mf{p}\). Then the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is normal. Moreover, the homomorphism \(T_{\mf{p}}^{\mf{P}}\) is surjective.
     \end{proposition}
     \begin{proof}
-      By \cref{prop:decomposition_field_e_and_f} (ii), \(f_{\mf{p}}(\mf{P}^{D}) = 1\) so that we have an isomorphism \(\F_{\mf{P}^{D}} \cong \F_{\mf{p}}\). Under this isomorphism we may assume \(L^{D_{\mf{p}}(\mf{P})} = K\) which is to say \(D_{\mf{p}}(\mf{P}) = \Gal(L/K)\). We will now prove that \(\F_{\mf{P}}/\F_{\mf{p}}\) is normal. So let \(\a \in \mc{O}\) and suppose \(m_{\a}(x)\) and \(m_{\conj{\a}}(x)\) are the minimal polynomials of \(\a\) and \(\conj{\a}\) over \(K\) and \(\F_{\mf{p}}\) respectively. Consider the reduction \(\conj{m_{\a}}(x)\) of \(m_{\a}(x)\), viewed as an element of \(\mc{O}[x]\), modulo \(\mf{P}\) upon recalling that the coefficients of which are in \(\smc{O}\) by \cref{prop:field_of_fractions_AKBL}. As \(\a\) is a representative of \(\conj{\a}\), we find that \(\conj{\a}\) is a root of \(\conj{m_{\a}}(x)\) and thus \(m_{\conj{\a}}(x)\) divides \(\conj{m_{\a}}(x)\) in \(\F_{\mf{P}}[x]\). Since \(L/K\) is normal (as it is Galois), \(m_{\a}(x)\) splits into linear factors over \(L\). These linear factors must also belong to \(\mc{O}[x]\) since their roots are elements of \(\mc{O}\) which itself is integrally closed. It follows that \(\conj{m_{\a}}(x)\) splits into linear factors over \(\F_{\mf{P}}\). As \(m_{\conj{\a}}(x)\) divides \(\conj{m_{\a}}(x)\) in \(\F_{\mf{P}}[x]\), the same is true for \(m_{\conj{\a}}(x)\). Thus \(\F_{\mf{P}}/\F_{\mf{p}}\) is normal. We now prove the surjectivity of \(T_{\mf{p}}^{\mf{P}}\). Consider the maximal separable subextension of \(\F_{\mf{P}}/\F_{\mf{p}}\). Since this extension is finite (because the residue class extension is), it is simple by the primitive element theorem. Letting \(\t \in \mc{O}\) be such that \(\conj{\t}\) is a primitive element, the maximal separable subextension is of the form \(\F_{\mf{p}}(\conj{\t})/\F_{\mf{p}}\). Now let \(\conj{\tau} \in \Aut(\F_{\mf{P}}/\F_{\mf{p}})\). Since \(\conj{\tau}\) fixes \(\F_{\mf{p}}\) pointwise, \(\conj{\tau}(\conj{\t})\) is a root of \(m_{\conj{\t}}(x)\). As \(m_{\conj{\t}}(x)\) divides \(\conj{m_{\t}}(x)\) in \(\F_{\mf{P}}[x]\), we find that \(\conj{\tau}(\conj{\t})\) is also a root of \(\conj{m_{\t}}(x)\). Therefore there is a root \(\t'\) of \(m_{\t}(x)\) that is also a representative of \(\conj{\tau}(\conj{\t})\). Because \(L/K\) is Galois, we can find \(\tau \in \Gal(L/K)\) such that \(\tau(\t) = \t'\). Moreover, \(\tau \in D_{\mf{p}}(\mf{P})\) since \(D_{\mf{p}}(\mf{P}) = \Gal(L/K)\). Then \(T_{\mf{p}}^{\mf{P}}(\tau) = \conj{\tau}\) because they both take \(\conj{\t}\) to the same element, hence act the same on \(\F_{\mf{p}}(\conj{\t})/\F_{\mf{p}}\), and \(\F_{\mf{P}}/\F_{\mf{p}}(\conj{\t})\) is purely inseparable so that it has trivial automorphism group. This proves \(T_{\mf{p}}^{\mf{P}}\) is surjective completing the proof.
+      By \cref{prop:decomposition_field_e_and_f} (ii), \(f_{\mf{p}}(\mf{P}^{D}) = 1\) so that we have an isomorphism \(\F_{\mf{P}^{D}} \cong \F_{\mf{p}}\). Under this isomorphism we may assume \(L^{D_{\mf{P}}} = K\) which is to say \(D_{\mf{P}} = \Gal(L/K)\). We will now prove that \(\F_{\mf{P}}/\F_{\mf{p}}\) is normal. So let \(\a \in \mc{O}\) and suppose \(m_{\a}(x)\) and \(m_{\conj{\a}}(x)\) are the minimal polynomials of \(\a\) and \(\conj{\a}\) over \(K\) and \(\F_{\mf{p}}\) respectively. Consider the reduction \(\conj{m_{\a}}(x)\) of \(m_{\a}(x)\), viewed as an element of \(\mc{O}[x]\), modulo \(\mf{P}\) upon recalling that the coefficients of which are in \(\smc{O}\) by \cref{prop:field_of_fractions_AKBL}. As \(\a\) is a representative of \(\conj{\a}\), we find that \(\conj{\a}\) is a root of \(\conj{m_{\a}}(x)\) and thus \(m_{\conj{\a}}(x)\) divides \(\conj{m_{\a}}(x)\) in \(\F_{\mf{P}}[x]\). Since \(L/K\) is normal (as it is Galois), \(m_{\a}(x)\) splits into linear factors over \(L\). These linear factors must also belong to \(\mc{O}[x]\) since their roots are elements of \(\mc{O}\) which itself is integrally closed. It follows that \(\conj{m_{\a}}(x)\) splits into linear factors over \(\F_{\mf{P}}\). As \(m_{\conj{\a}}(x)\) divides \(\conj{m_{\a}}(x)\) in \(\F_{\mf{P}}[x]\), the same is true for \(m_{\conj{\a}}(x)\). Thus \(\F_{\mf{P}}/\F_{\mf{p}}\) is normal. We now prove the surjectivity of \(T_{\mf{p}}^{\mf{P}}\). Consider the maximal separable subextension of \(\F_{\mf{P}}/\F_{\mf{p}}\). Since this extension is finite (because the residue class extension is), it is simple by the primitive element theorem. Letting \(\t \in \mc{O}\) be such that \(\conj{\t}\) is a primitive element, the maximal separable subextension is of the form \(\F_{\mf{p}}(\conj{\t})/\F_{\mf{p}}\). Now let \(\conj{\tau} \in \Aut(\F_{\mf{P}}/\F_{\mf{p}})\). Since \(\conj{\tau}\) fixes \(\F_{\mf{p}}\) pointwise, \(\conj{\tau}(\conj{\t})\) is a root of \(m_{\conj{\t}}(x)\). As \(m_{\conj{\t}}(x)\) divides \(\conj{m_{\t}}(x)\) in \(\F_{\mf{P}}[x]\), we find that \(\conj{\tau}(\conj{\t})\) is also a root of \(\conj{m_{\t}}(x)\). Therefore there is a root \(\t'\) of \(m_{\t}(x)\) that is also a representative of \(\conj{\tau}(\conj{\t})\). Because \(L/K\) is Galois, we can find \(\tau \in \Gal(L/K)\) such that \(\tau(\t) = \t'\). Moreover, \(\tau \in D_{\mf{P}}\) since \(D_{\mf{P}} = \Gal(L/K)\). Then \(T_{\mf{p}}^{\mf{P}}(\tau) = \conj{\tau}\) because they both take \(\conj{\t}\) to the same element, hence act the same on \(\F_{\mf{p}}(\conj{\t})/\F_{\mf{p}}\), and \(\F_{\mf{P}}/\F_{\mf{p}}(\conj{\t})\) is purely inseparable so that it has trivial automorphism group. This proves \(T_{\mf{p}}^{\mf{P}}\) is surjective completing the proof.
     \end{proof}
 
     Accordingly, we define the \textbf{inertia group}\index{inertia group} \(I_{\mf{p}}(\mf{P})\) of \(\mf{P}\) by
     \[
       I_{\mf{p}}(\mf{P}) = \ker{T_{\mf{p}}^{\mf{P}}}.
     \]
-    Then \(I_{\mf{p}}(\mf{P})\) is a normal subgroup of \(D_{\mf{p}}(\mf{P})\). The associated \textbf{inertia field}\index{inertia field} \(L^{I_{\mf{p}}(\mf{P})}\) of \(\mf{P}\) is defined to be
+    Then \(I_{\mf{p}}(\mf{P})\) is a normal subgroup of \(D_{\mf{P}}\). The associated \textbf{inertia field}\index{inertia field} \(L^{I_{\mf{p}}(\mf{P})}\) of \(\mf{P}\) is defined to be
     \[
       L^{I_{\mf{p}}(\mf{P})} = \{\l \in L:\tau(\l) = \l \text{ for all } \tau \in I_{\mf{p}}(\mf{P})\}.
     \]
@@ -1548,41 +1556,41 @@
     \[
       \Gal(L/L^{I_{\mf{p}}(\mf{P})}) = I_{\mf{p}}(\mf{P}).
     \]
-    Since \(I_{\mf{p}}(\mf{P})\) is a subgroup of \(D_{\mf{p}}(\mf{P})\), the fundamental theorem of Galois theory implies that \(L^{I_{\mf{p}}(\mf{P})}\) is an intermediate field of \(L/L^{D_{\mf{p}}(\mf{P})}\). We let \(\mc{O}^{I}\) denote the integral closure of \(\smc{O}\) in \(L^{I_{\mf{p}}(\mf{P})}\) so that \(\mc{O}/\mc{O}^{I}/\mc{O}^{D}\) is a tower of Dedekind extensions. Also, we will write \(\mf{P}^{I}\) for the prime of \(L^{I_{\mf{p}}(\mf{P})}\) below \(\mf{P}\). Then we can illustrate this relationship via the following tower of extensions:
+    Since \(I_{\mf{p}}(\mf{P})\) is a subgroup of \(D_{\mf{P}}\), the fundamental theorem of Galois theory implies that \(L^{I_{\mf{p}}(\mf{P})}\) is an intermediate field of \(L/L^{D_{\mf{P}}}\). We let \(\mc{O}^{I}\) denote the integral closure of \(\smc{O}\) in \(L^{I_{\mf{p}}(\mf{P})}\) so that \(\mc{O}/\mc{O}^{I}/\mc{O}^{D}\) is a tower of Dedekind extensions. Also, we will write \(\mf{P}^{I}\) for the prime of \(L^{I_{\mf{p}}(\mf{P})}\) below \(\mf{P}\). Then we can illustrate this relationship via the following tower of extensions:
     
     \begin{center}
       \begin{tikzcd}[row sep=large, column sep=large]
         \mf{P} \subset \mc{O} \subseteq L \arrow[dash]{d} \\
         \mf{P}^{I} \subset \mc{O}^{I} \subseteq L^{I_{\mf{p}}(\mf{P})} \arrow[dash]{d} \\
-        \mf{P}^{D} \subset \mc{O}^{D} \subseteq L^{D_{\mf{p}}(\mf{P})}.
+        \mf{P}^{D} \subset \mc{O}^{D} \subseteq L^{D_{\mf{P}}}.
       \end{tikzcd}
     \end{center}
 
-    The inertia group \(I_{\mf{p}}(\mf{P})\) is closely related to the automorphism group of the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\). To see this, first recall that \(\Gal(L/L^{D_{\mf{p}}(\mf{P})}) = D_{\mf{p}}(\mf{P})\) by the fundamental theorem of Galois theory. Then \(I_{\mf{p}}(\mf{P})\) is a normal subgroup of \(\Gal(L/L^{D_{\mf{p}}(\mf{P})})\) and the fundamental theorem of Galois theory again implies \(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{p}}(\mf{P})}\) is Galois with
+    The inertia group \(I_{\mf{p}}(\mf{P})\) is closely related to the automorphism group of the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\). To see this, first recall that \(\Gal(L/L^{D_{\mf{P}}}) = D_{\mf{P}}\) by the fundamental theorem of Galois theory. Then \(I_{\mf{p}}(\mf{P})\) is a normal subgroup of \(\Gal(L/L^{D_{\mf{P}}})\) and the fundamental theorem of Galois theory again implies \(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{P}}}\) is Galois with
     \[
-      \Gal(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{p}}(\mf{P})}) \cong D_{\mf{p}}(\mf{P})/I_{\mf{p}}(\mf{P}).
+      \Gal(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{P}}}) \cong D_{\mf{P}}/I_{\mf{p}}(\mf{P}).
     \]
     Since \(T_{\mf{p}}^{\mf{P}}\) is surjective by \cref{prop:T_map_is_surjective}, the first isomorphism theorem induces an isomorphism
     \[
-      \Gal(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{p}}(\mf{P})}) \cong \Aut(\F_{\mf{P}}/\F_{\mf{p}}).
+      \Gal(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{P}}}) \cong \Aut(\F_{\mf{P}}/\F_{\mf{p}}).
     \]
     Now let \(e\) and \(f\) be the ramification index and inertia degree of \(\mf{p}\) respectively. The inertia group \(I_{\mf{p}}(\mf{P})\) encodes \(e\) and \(f\) provided the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is separable. Indeed, \cref{prop:T_map_is_surjective} implies \(\F_{\mf{P}}/\F_{\mf{p}}\) is Galois. Then \(\Gal(\F_{\mf{P}}/\F_{\mf{p}}) = \Aut(\F_{\mf{P}}/\F_{\mf{p}})\) and it follows that \(|\Gal(\F_{\mf{P}}/\F_{\mf{p}})| = f\). Then \cref{equ:decomposition_group_e_f_relation} and our two isomorphisms together give
     \begin{equation}\label{equ:inertia_group_e_f_relation}
-      |\Gal(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{p}}(\mf{P})})| = f \quad \text{and} \quad |I_{\mf{p}}(\mf{P})| = e.
+      |\Gal(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{P}}})| = f \quad \text{and} \quad |I_{\mf{p}}(\mf{P})| = e.
     \end{equation}
-    Then \(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{p}}(\mf{P})}\) has degree \(f\) and \(L/L^{I_{\mf{p}}(\mf{P})}\) has degree \(e\). The decomposition and inertia groups fit into the follow exact sequence
+    Then \(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{P}}}\) has degree \(f\) and \(L/L^{I_{\mf{p}}(\mf{P})}\) has degree \(e\). The decomposition and inertia groups fit into the follow exact sequence
 
     \begin{proposition}\label{prop:inertia_group_exact_sequence}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite Galois extension \(L/K\), let \(\mf{p}\) be a prime of \(\smc{O}\), and let \(\mf{P}\) be a prime of \(\mc{O}\) above \(\mf{p}\). Then the sequence
       \begin{center}
         \begin{tikzcd}[row sep=large, column sep=large]
-          1 \arrow{r} & I_{\mf{p}}(\mf{P}) \arrow{r} & D_{\mf{p}}(\mf{P}) \arrow{r}{T_{\mf{p}}^{\mf{P}}} & \Aut(\F_{\mf{P}}/\F_{\mf{p}}) \arrow{r} & 1,
+          1 \arrow{r} & I_{\mf{p}}(\mf{P}) \arrow{r} & D_{\mf{P}} \arrow{r}{T_{\mf{p}}^{\mf{P}}} & \Aut(\F_{\mf{P}}/\F_{\mf{p}}) \arrow{r} & 1,
         \end{tikzcd}
       \end{center}
       is exact.
     \end{proposition}
     \begin{proof}
-      The sequence is exact at \(I_{\mf{p}}(\mf{P})\) because the second map is injective. Exactness at \(D_{\mf{p}}(\mf{P})\) follows by the definition of \(I_{\mf{p}}(\mf{P})\). Lastly, we have exactness at \(\Aut(\F_{\mf{P}}/\F_{\mf{p}})\) since \(T_{\mf{p}}^{\mf{P}}\) is surjective by \cref{prop:T_map_is_surjective}.
+      The sequence is exact at \(I_{\mf{p}}(\mf{P})\) because the second map is injective. Exactness at \(D_{\mf{P}}\) follows by the definition of \(I_{\mf{p}}(\mf{P})\). Lastly, we have exactness at \(\Aut(\F_{\mf{P}}/\F_{\mf{p}})\) since \(T_{\mf{p}}^{\mf{P}}\) is surjective by \cref{prop:T_map_is_surjective}.
     \end{proof}
 
     We can say more when the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is separable as the following proposition shows:
@@ -1616,12 +1624,12 @@
       \begin{tikzcd}[row sep=large, column sep=large]
         \mf{P} \subset \mc{O} \subseteq L \arrow[dash]{d}{1}[swap]{e} \\
         \mf{P}^{I} \subset \mc{O}^{I} \subseteq L^{I_{\mf{p}}(\mf{P})} \arrow[dash]{d}{f}[swap]{1} \\
-        \mf{P}^{D} \subset \mc{O}^{D} \subseteq L^{D_{\mf{p}}(\mf{P})} \arrow[dash]{d}{1}[swap]{1} \\
+        \mf{P}^{D} \subset \mc{O}^{D} \subseteq L^{D_{\mf{P}}} \arrow[dash]{d}{1}[swap]{1} \\
         \mf{p} \subset \smc{O} \subseteq K.
       \end{tikzcd}
     \end{center}
 
-    The labels on left and right of the extensions represent the corresponding ramification indices and inertia degrees respectively which come from \cref{prop:decomposition_field_e_and_f,prop:inertia_field_e_and_f}. Then we see that the extension \(L^{D_{\mf{p}}(\mf{P})}/K\) contains all of the information about the distinct prime factors \(\mf{p}\mc{O}\) splits into in \(\mc{O}\), the extension \(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{p}}(\mf{P})}\) contains all of the information about the corresponding inertia degrees, and the extension \(L/L^{I_{\mf{p}}(\mf{P})}\) contains all of the information about the corresponding ramification indices. In particular, \(\mf{p}\) is unramified in \(\mc{O}/\smc{O}\) if and only if \(L^{I_{\mf{p}}(\mf{P})} = L\) which is equivalent to \(I_{\mf{p}}(\mf{P}) = \{\id\}\).
+    The labels on left and right of the extensions represent the corresponding ramification indices and inertia degrees respectively which come from \cref{prop:decomposition_field_e_and_f,prop:inertia_field_e_and_f}. Then we see that the extension \(L^{D_{\mf{P}}}/K\) contains all of the information about the distinct prime factors \(\mf{p}\mc{O}\) splits into in \(\mc{O}\), the extension \(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{P}}}\) contains all of the information about the corresponding inertia degrees, and the extension \(L/L^{I_{\mf{p}}(\mf{P})}\) contains all of the information about the corresponding ramification indices. In particular, \(\mf{p}\) is unramified in \(\mc{O}/\smc{O}\) if and only if \(L^{I_{\mf{p}}(\mf{P})} = L\) which is equivalent to \(I_{\mf{p}}(\mf{P}) = \{\id\}\).
 
     We now turn to the setting of a number field \(K\). Every prime \(\mf{p}\) of \(K\) is above some prime \(p\) (recall \(\Z\) is a principal ideal domain so we are referring to primes by their generator). Then the residue class extension of \(\mc{O}_{K}/\Z\) for \(\mf{p}\) is \(\F_{\mf{p}}/\F_{p}\). Also, we write \(f_{p}(\mf{p})\) and \(e_{p}(\mf{p})\) for the inertia degree and ramification index of \(\mf{p}\) relative to \(p\) respectively. Moreover, all of the residue class extensions are separable since \(\F_{p}\) is a perfect field. This implies \(\mf{p}\) is ramified in \(\mc{O}_{K}/\Z\) if and only if \(e_{p}(\mf{p}) = 1\). If \(\t\) is a primitive element for \(K/\Q\) contained in \(\mc{O}_{K}\) then the \textbf{conductor}\index{conductor} \(\mf{q}_{K}\) of \(K\) relative to \(\t\) is the conductor of \(\mc{O}_{K}/\Z\) relative to \(\t\). Even though \(K\) admits an integral basis, \(\mc{O}_{K}\) is not necessarily monogenic so that \(\mf{q}_{K}\) may not be \(\mc{O}_{K}\). \todo{say something about Galois number fields...}
   \fi\iffalse\section{\todo{The Different and Discriminant}}
