@@ -13,26 +13,26 @@
 \contentsline {chapter}{\numberline {4}Algebraic Integers}{24}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Integrality}{24}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Traces and Norms}{27}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Dedekind Domains}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Dedekind Domains}{38}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Localization}{48}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Ramification}{56}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Galois Extensions}{60}{section.4.6}%
-\contentsline {chapter}{\numberline {5}\leavevmode {\color {red}\sf Todo: [Ramification]}}{62}{chapter.5}%
-\contentsline {chapter}{\numberline {6}\leavevmode {\color {red}\sf Todo: [Geometry of Numbers]}}{63}{chapter.6}%
-\contentsline {part}{III\hspace {1em}Analytic Number Theory}{64}{part.3}%
-\contentsline {chapter}{\numberline {7}Dirichlet Series}{65}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Convergence Properties}{65}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Euler Products}{71}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Dirichlet Convolution}{73}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Perron Formulas}{74}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Analytic \(L\)-functions}{81}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Analytic Data}{81}{section.8.1}%
-\contentsline {section}{\numberline {8.2}The Approximate Functional Equation}{85}{section.8.2}%
-\contentsline {section}{\numberline {8.3}The Riemann Hypothesis and Nontrivial Zeros}{91}{section.8.3}%
-\contentsline {section}{\numberline {8.4}The Lindel\"of Hypothesis and Estimates on the Critical Line}{92}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Logarithmic Derivatives}{97}{section.8.5}%
-\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Moments]}}{99}{chapter.9}%
-\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{100}{chapter.10}%
-\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{101}{chapter.11}%
-\contentsline {chapter}{\numberline {12}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{102}{chapter.12}%
-\contentsline {part}{IV\hspace {1em}Appendices}{103}{part.4}%
+\contentsline {section}{\numberline {4.6}Galois Extensions}{61}{section.4.6}%
+\contentsline {chapter}{\numberline {5}\leavevmode {\color {red}\sf Todo: [Ramification]}}{63}{chapter.5}%
+\contentsline {chapter}{\numberline {6}\leavevmode {\color {red}\sf Todo: [Geometry of Numbers]}}{64}{chapter.6}%
+\contentsline {part}{III\hspace {1em}Analytic Number Theory}{65}{part.3}%
+\contentsline {chapter}{\numberline {7}Dirichlet Series}{66}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Convergence Properties}{66}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Euler Products}{72}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Dirichlet Convolution}{74}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Perron Formulas}{75}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Analytic \(L\)-functions}{82}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Analytic Data}{82}{section.8.1}%
+\contentsline {section}{\numberline {8.2}The Approximate Functional Equation}{86}{section.8.2}%
+\contentsline {section}{\numberline {8.3}The Riemann Hypothesis and Nontrivial Zeros}{92}{section.8.3}%
+\contentsline {section}{\numberline {8.4}The Lindel\"of Hypothesis and Estimates on the Critical Line}{93}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Logarithmic Derivatives}{98}{section.8.5}%
+\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Moments]}}{100}{chapter.9}%
+\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{101}{chapter.10}%
+\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{102}{chapter.11}%
+\contentsline {chapter}{\numberline {12}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{103}{chapter.12}%
+\contentsline {part}{IV\hspace {1em}Appendices}{104}{part.4}%

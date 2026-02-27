@@ -227,7 +227,7 @@
     \[
       d_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n}) = \det(\Trace_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n})).
     \]
-    In particular, the discriminant \(d_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n})\) is an element of \(\smc{O}\) since the entries of the trace matrix are. It is also independent of the choice of basis up to elements of \((\smc{O}^{\ast})^{2}\). For if \(\b_{1}',\ldots,\b_{n}'\) is another basis for \(\mc{O}/\smc{O}\), we have
+    In particular, \(d_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n}) \in \smc{O}\) since the entries of the trace matrix belong to \(\smc{O}\). It is also independent of the choice of basis up to elements of \((\smc{O}^{\ast})^{2}\). For if \(\b_{1}',\ldots,\b_{n}'\) is another basis for \(\mc{O}/\smc{O}\), we have
     \[
       \b_{i}' = \sum_{j}\a_{i,j}\b_{j},
     \]
@@ -335,15 +335,19 @@
       \]
     \end{lemma}
     \begin{proof}
-      Let \(\b \in \mc{O}\) and write \(\b = \k_{1}\l_{1}+\cdots+\k_{n}\l_{n}\) for some \(\k_{i} \in K\). Linearity of the trace implies
+      Let \(\b \in \mc{O}\) and write
       \[
-        \sum_{j}\k_{j}\Trace_{L/K}(\l_{i}\l_{j}) = \Trace_{L/K}(\l_{i}\b),
+        \b =  \sum_{j}\k_{j}\l_{j}.
+      \]
+      for some \(\k_{j} \in K\). Linearity of the trace implies
+      \[
+        \Trace_{L/K}(\l_{i}\b) = \sum_{j}\k_{j}\Trace_{L/K}(\l_{i}\l_{j}),
       \]
       These \(n\) equations are equivalent to the identity
       \[
-        \Trace_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \k_{1} \\ \vdots \\ \k_{n} \end{pmatrix} = \begin{pmatrix} \Trace_{L/K}(\b\l_{1}) \\ \vdots \\ \Trace_{L/K}(\b\l_{n}) \end{pmatrix}.
+        \begin{pmatrix} \Trace_{L/K}(\b\l_{1}) \\ \vdots \\ \Trace_{L/K}(\b\l_{n}) \end{pmatrix} = \Trace_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \k_{1} \\ \vdots \\ \k_{n} \end{pmatrix}.
       \]
-      By \cref{prop:trace_and_norm_AKBL}, the trace matrix and the column vector on the right-hand side have entries in \(\smc{O}\). Cramer's rule then implies \(d_{L/K}(\l_{1},\ldots,\l_{n})\k_{i} \in \smc{O}\). As \(\b\) was arbitrary, this means
+      By \cref{prop:trace_and_norm_AKBL}, the column vector on the left-hand side and the trace matrix have entries in \(\smc{O}\). Cramer's rule implies \(d_{L/K}(\l_{1},\ldots,\l_{n})\k_{i} \in \smc{O}\). As \(\b\) was arbitrary, this means
       \[
         d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
       \]
@@ -359,13 +363,13 @@
       Let \(\smc{O}\) be a principal ideal domain with field of fractions \(K\), let \(L/K\) be a degree \(n\) separable extension, and let \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}/\smc{O}\) admits an integral basis. Moreover, every finitely generated nonzero \(\mc{O}\)-submodule of \(L\) is a free \(\smc{O}\)-module of rank \(n\).
     \end{theorem}
     \begin{proof}
-      Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). From \cref{lemma:unique_factorization_domains_are_integrally_closed} we see that \(\smc{O}\) is an integrally closed domain. Then by \cref{prop:field_of_fractions_AKBL}, we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Then \cref{lem:lemma_for_integral_basis_AKBL} implies
+      Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). From \cref{lemma:unique_factorization_domains_are_integrally_closed} we see that \(\smc{O}\) is an integrally closed domain. Using \cref{prop:field_of_fractions_AKBL}, we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Then \cref{lem:lemma_for_integral_basis_AKBL} implies
       \[
         d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
       \]
       Since \(\smc{O}\l_{1}+\cdots+\smc{O}\l_{n}\) is a free \(\smc{O}\)-module of rank \(n\) and \(\smc{O}\) is a principal ideal domain, it follows from the structure theorem of finitely generated modules over principal ideal domains that \(\mc{O}\) is also a free \(\smc{O}\)-module of rank at most \(n\). But any basis for \(\mc{O}/\smc{O}\) must also be a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. Hence the rank is exactly \(n\) and \(\mc{O}\) admits an integral basis over \(\smc{O}\) which proves the first statement.
       
-      Now suppose \(M\) is a nonzero \(\mc{O}\)-submodule of \(L\) and let \(\w_{1},\ldots,\w_{r}\) be generators. By \cref{prop:field_of_fractions_AKBL} again we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that these generators belong to \(\mc{O}\). Then
+      Now suppose \(M\) is a nonzero \(\mc{O}\)-submodule of \(L\) and let \(\w_{1},\ldots,\w_{r}\) be generators. By \cref{prop:field_of_fractions_AKBL} again, we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that these generators belong to \(\mc{O}\). Then
       \[
         d_{L/K}(\w_{1},\ldots,\w_{n})M \subseteq d_{L/K}(\w_{1},\ldots,\w_{n})\mc{O}.
       \]
@@ -825,7 +829,7 @@
       Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}\) is a Dedekind domain with field of fractions \(L\).
     \end{proposition}
     \begin{proof}
-      By \cref{prop:field_of_fractions_AKBL}, \(\mc{O}\) is an integrally closed domain with field of fractions \(L\). To show \(\mc{O}\) is noetherian, let the degree of \(L/K\) be \(n\) and \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Being a basis of \(L/K\), we find that \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero} and \cref{lem:lemma_for_integral_basis_AKBL} implies
+      By \cref{prop:field_of_fractions_AKBL}, \(\mc{O}\) is an integrally closed domain with field of fractions \(L\). To show \(\mc{O}\) is noetherian, let the degree of \(L/K\) be \(n\) and \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL}, we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Being a basis of \(L/K\), we find that \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero} and \cref{lem:lemma_for_integral_basis_AKBL} implies
       \[
         d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
       \]
@@ -1172,7 +1176,7 @@
       for some prime \(\mf{p}\) of \(\smc{O}\) and \(\F_{\mf{P}}/\F_{\mf{p}}\) is a field extension of degree at most \(n\).
     \end{proposition}
     \begin{proof}
-      Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Being a basis of \(L/K\), \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero} and \cref{lem:lemma_for_integral_basis_AKBL} implies
+      Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). By \cref{prop:field_of_fractions_AKBL}, we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). Being a basis of \(L/K\), \(d_{L/K}(\l_{1},\ldots,\l_{n})\) is nonzero by \cref{prop:discriminant_not_zero} and \cref{lem:lemma_for_integral_basis_AKBL} implies
       \[
         d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
       \]
@@ -1204,16 +1208,20 @@
       \mf{p}\mc{O} \neq \mc{O}.
     \]
     Assume by contradiction that \(\mf{p}\mc{O} = \mc{O}\). By prime factorization, let \(\a \in \mf{p}-\mf{p}^{2}\) so that \(\a\smc{O} = \mf{a}\mf{p}\) for some integral ideal \(\mf{a}\) relatively prime to \(\mf{p}\). Then \(\mf{a}+\mf{p} = \smc{O}\) and so there exist \(\b \in \mf{a}\) and \(\g \in \mf{p}\) both nonzero and satisfying \(\b+\g = 1\). As \(\b\mf{p} \subseteq \a\smc{O}\), it follows that \(\b\mc{O} \subseteq \a\mc{O}\) which implies \(\b = \a\d\) for some nonzero \(\d \in \mc{O}\). In view of \cref{equ:Dedekind_extension_intersection}, \(\d \in \smc{O}\). Whence \(\a\d+\g = 1\) and thus \(1 \in \mf{p}\) contradicting that \(\mf{p}\) is proper. Therefore \(\mf{p}\mc{O}\) is always a integral ideal of \(\mc{O}\). In fact, we have
-    \[
+    \begin{equation}\label{equ:contraction_for_primes}
       \mf{p}\mc{O} \cap \smc{O} = \mf{p}.
+    \end{equation}
+    The reverse inclusion is obvious. For the forward inclusion, as \(\mf{p}\mc{O} \neq \mc{O}\) there exists a prime factor \(\mf{P}\) of \(\mf{p}\mc{O}\) so that \(\mf{p}\mc{O} \subseteq \mf{P}\). But then \(\mf{P}\) is above \(\mf{p}\) so that \(\mf{P} \cap \smc{O} = \mf{p}\) and the forward inclusion follows. Whence the primes above \(\mf{p}\) are exactly the prime factors \(\mf{P}\) of \(\mf{p}\mc{O}\).
+
+    In fact, a more general identity holds. Let \(\mf{f}\) be a fractional ideal of \(\smc{O}\). Write \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\). Expressing \(\mf{a}\) as its prime factorization and repeatedly applying \cref{equ:contraction_for_primes} shows that
+    \[
+      \mf{f}\mc{O} \cap \smc{O} = \mf{f}.
     \]
-    The reverse inclusion is obvious. For the forward inclusion, as \(\mf{p}\mc{O} \neq \mc{O}\) there exists a prime factor \(\mf{P}\) of \(\mf{p}\mc{O}\) so that \(\mf{p}\mc{O} \subseteq \mf{P}\). But then \(\mf{P}\) is above \(\mf{p}\) so that \(\mf{P} \cap \smc{O} = \mf{p}\) and the forward inclusion follows. Whence the primes above \(\mf{p}\) are exactly the prime factors \(\mf{P}\) of \(\mf{p}\mc{O}\). We illustrate the relationship between \(\mf{P}\) and \(\mf{p}\) via the diagram
-    \begin{center}
-      \begin{tikzcd}[row sep=large, column sep=large]
-        \mf{P} \subset \mc{O} \subseteq L \arrow[dash]{d} \\
-        \mf{p} \subset \smc{O} \subseteq K.
-      \end{tikzcd}
-    \end{center}
+    This identity is called the \textbf{contraction}\index{contraction} of the fractional ideal \(\mf{f}\mc{O}\) to \(\smc{O}\). In practice, it is useful for relating information about the fractional ideal \(\mf{f}\mc{O}\) of \(\mc{O}\) to the fraction ideal \(\mf{f}\) of \(\smc{O}\). 
+
+
+
+
     The \textbf{ramification index}\index{ramification index} \(e_{\mf{p}}(\mf{P})\) is the power of \(\mf{P}\) appearing in the prime factorization of \(\mf{p}\mc{O}\). If \(\mf{p}\mc{O}\) has prime factors \(\mf{P}_{1},\ldots,\mf{P}_{r}\) then the prime factorization of \(\mf{p}\mc{O}\) is
     \[
       \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})}.
@@ -1239,7 +1247,7 @@
     \end{equation}
     In other words, the ramification indices and inertia degrees are multiplicative with respect to primes above other primes.
 
-    The inertia degrees and ramification indices satisfy a simple relationship to the degree of \(L/K\) that is fundamental to they study of Dedekind extensions. In order to state it, we will require a lemma.
+    The ramification indices and inertia degrees satisfy a simple relationship to the degree of \(L/K\) that is fundamental to they study of Dedekind extensions. In order to state it, we will require a lemma.
 
     \begin{lemma}\label{lem:quotient_by_prime_power_isomorphism}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Suppose \(\mf{P}\) is a prime above \(\mf{p}\). Then for any positive integer \(e\), we have
@@ -1264,7 +1272,7 @@
       This proves the first statement. Since the dimension of \(\F_{\mf{P}}\) as a \(\F_{\mf{p}}\)-vector space is \(f_{\mf{p}}(\mf{P})\) by definition, it follows that \(\mc{O}/\mf{P}^{e}\) is a \(\F_{\mf{p}}\)-vector space of dimension \(ef_{\mf{p}}(\mf{P})\). This proves the second statement.
     \end{proof}
     
-    We now describe the relationship between inertia degrees and ramification indices which is known as the \textbf{fundamental equality}\index{fundamental equality}.
+    We now describe the relationship between ramification indices and inertia degrees which is known as the \textbf{fundamental equality}\index{fundamental equality}.
 
     \begin{theorem*}[Fundamental equality]
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Suppose \(\mf{p}\) is a prime of \(\smc{O}\) and \(\mf{p}\mc{O}\) has prime factorization
@@ -1407,11 +1415,11 @@
     \[
       \Norm_{L/K}(\l) = \prod_{\s \in \Gal(L/K)}\s(\l) \quad \text{and} \quad \Trace_{L/K}(\l) = \sum_{\s \in \Gal(L/K)}\s(\l).
     \]
-    As \(\smc{O} \subseteq K\), \(\Gal(L/K)\) fixes \(\smc{O}\) pointwise and hence every fractional ideal of \(\smc{O}\) as well. In fact, \(\Gal(L/K)\) fixing \(\smc{O}\) pointwise implies that \(\Gal(L/K)\) permutes the roots of the monic polynomial in \(\smc{O}[x]\) which \(\a \in \mc{O}\) satisfies. Whence there is an action
+    As \(\smc{O} \subseteq K\), \(\Gal(L/K)\) fixes \(\smc{O}\) pointwise and hence every fractional ideal of \(\smc{O}\) as well. In fact, for any \(\a \in \mc{O}\), we see that \(\Gal(L/K)\) permutes the roots of the monic polynomial in \(\smc{O}[x]\) which \(\a\) satisfies. Whence there is an action
     \[
       \Gal(L/K) \x \mc{O} \to \mc{O} \qquad (\s,\a) \mapsto \s(\a).
     \]
-    In particular, each automorphism \(\s\) of \(\Gal(L/K)\) restricts to an automorphism of \(\mc{O}\) and therefore \(\s(\mf{P})\) is a prime of \(\mc{O}\) if \(\mf{P}\). Moreover, if \(\mf{P}\) is above \(\mf{p}\) then so is \(\s(\mf{P})\) as it is a prime containing \(\mf{p}\). Whence
+    In particular, each \(K\)-automorphism \(\s\) restricts to an automorphism of \(\mc{O}\) and therefore \(\s(\mf{P})\) is a prime of \(\mc{O}\) if \(\mf{P}\) is. Moreover, if \(\mf{P}\) is above \(\mf{p}\) then so is \(\s(\mf{P})\) as it is a prime containing \(\mf{p}\). Whence
     \[
       \s(\mf{P}) \cap \smc{O} = \mf{p}.
     \]
@@ -1427,27 +1435,26 @@
         f_{\mf{p}}(\mf{P}_{1}) = \cdots = f_{\mf{p}}(\mf{P}_{r}) \quad \text{and} \quad e_{\mf{p}}(\mf{P}_{1}) = \cdots = e_{\mf{p}}(\mf{P}_{r}).
       \]
     \end{proposition}
-    \iffalse
     \begin{proof}
-      Let \(\mf{P}_{i}\) and \(\mf{P}_{j}\) be distinct primes above \(\mf{p}\). Assume by contraction that \(\s(\mf{P}_{i}) \neq \mf{P}_{j}\) for any \(\s \in \Gal(L/K)\). As distinct primes are relatively prime, the Chinese remainder theorem implies the existence of an \(\a \in \mc{O}\) such that
+      Assume by contradiction that there exist distinct primes \(\mf{P}_{i}\) and \(\mf{P}_{j}\) above \(\mf{p}\) for which \(\mf{P}_{i} \neq \mf{P}_{j}\) for any \(K\)-automorphism \(\s\). As distinct primes are relatively prime, the Chinese remainder theorem implies the existence of an \(\a \in \mc{O}\) such that
       \[
         \a \equiv 1 \tmod{\s(\mf{P}_{i})} \quad \text{and} \quad \a \equiv 0 \tmod{\mf{P}_{j}},
       \]
-      for all \(\s \in \Gal(L/K)\). Now recall that \(\Norm_{L/K}(\a) = \prod_{\s \in \Gal(L/K)}\s(\a)\) by \cref{prop:formulas_for_trace_and_norm} and \(\Norm_{L/K}(\a) \in \smc{O}\) by \cref{prop:trace_and_norm_AKBL}. Moreover,
-      \[
-        \mf{P}_{i} \cap \smc{O} = \mf{p} = \mf{P}_{j} \cap \smc{O}.
-      \]
-      On the one hand, \(\a \notin \s(\mf{P}_{i})\) and hence \(\s(\a) \notin \mf{P}_{i}\) for all \(\s \in \Gal(L/K)\) (recall \(\Gal(L/K)\) is a group so \(\s\) has an inverse \(\s^{-1}\)). But then \(\Norm_{L/K}(\a) \notin \mf{P}_{i}\) for otherwise \(\s(\a) \in \mf{P}_{i}\) for some \(\s \in \Gal(L/K)\) by primality of \(\mf{P}_{i}\). It must be the case that \(\Norm_{L/K}(\a) \notin \mf{p}\) because \(\mf{P}_{i}\) is above \(\mf{p}\). On the other hand, \(\a \in \mf{P}_{j}\) and so \(\Norm_{L/K}(\a) \in \mf{P}_{j}\) since \(\s(\a) \in \mf{P}_{j}\) when \(\s\) is the identity and \(\mf{P}_{j}\) is an integral ideal. But then \(\Norm_{L/K}(\a) \in \mf{p}\) because \(\mf{P}_{j}\) is above \(\mf{p}\). This gives a contradiction and therefore the action is transitive. We now show that the inertia degrees and ramification indices of \(\mf{P}_{i}\) and \(\mf{P}_{j}\) are equal which will complete the proof. By what we have just proved, there exists a \(\s \in \Gal(L/K)\) such that \(\s(\mf{P}_{i}) = \mf{P}_{j}\). Since \(\s\) is an automorphism of \(\mc{O}\), it induces an isomorphism
+      Now recall As \(\Norm_{L/K}(\a) \in \smc{O}\) by \cref{prop:trace_and_norm_AKBL}. On the one hand, \(\a \notin \s(\mf{P}_{i})\) whence \(\s(\a) \notin \mf{P}_{i}\). Then \(\Norm_{L/K}(\a) \notin \mf{P}_{i}\) by primality of \(\mf{P}_{i}\) and hence \(\Norm_{L/K}(\a) \notin \mf{p}\) because \(\mf{P}_{i}\) is above \(\mf{p}\). On the other hand, \(\a \in \mf{P}_{j}\) which implies \(\a \in \s(\mf{P}_{j})\) when \(\s\) is the identity. Therefore \(\Norm_{L/K}(\a) \in \mf{P}_{j}\) and so \(\Norm_{L/K}(\a) \in \mf{p}\) because \(\mf{P}_{j}\) is above \(\mf{p}\). This gives a contradiction from which we conclude the action is transitive. 
+      
+      It remains to show that the ramification indices and inertia degrees of \(\mf{P}_{i}\) and \(\mf{P}_{j}\) are equal. As the action is transitive, there exists a \(K\)-automorphism \(\s\) satisfying \(\s(\mf{P}_{i}) = \mf{P}_{j}\). Now \(\s\) is an automorphism of \(\mc{O}\) fixing \(\smc{O}\), and hence \(\mf{p}\), pointwise. Thus \(\s(\mf{p}\mc{O}) = \mf{p}\mc{O}\) which implies \(\mf{P}_{i}^{e} \mid\mid \mf{p}\mc{O}\) if and only if \(\mf{P}_{j}^{e} \mid\mid \mf{p}\mc{O}\). Therefore the ramification indices of \(\mf{P}_{i}\) and \(\mf{P}_{j}\) are equal. Also, being an automorphism of \(\mc{O}\), \(\s\) induces an isomorphism
       \[
         \F_{\mf{P}_{i}} \cong \F_{\mf{P}_{j}}.
       \]
-      Therefore the inertia degrees of \(\mf{P}_{i}\) and \(\mf{P}_{j}\) are equal. For the ramification indices, recall that \(\s\) is an automorphism of \(\mc{O}\) fixing \(\smc{O}\), and hence \(\mf{p}\) too, pointwise. Thus \(\s(\mf{p}\mc{O}) = \mf{p}\mc{O}\) which implies that \(\mf{P}_{i}^{e} \mid\mid \mf{p}\mc{O}\) if and only if \(\mf{P}_{j}^{e} \mid\mid \mf{p}\mc{O}\). Therefore the ramification indices of \(\mf{P}_{i}\) and \(\mf{P}_{j}\) are equal as well. This completes the proof 
+      Therefore the inertia degrees of \(\mf{P}_{i}\) and \(\mf{P}_{j}\) are equal.
     \end{proof}
 
-    Another way to phrase \cref{prop:Galois_action_on_primes_is_transitive} is that the primes above \(\mf{p}\) are all conjugate to each other and their inertia degrees and ramification indices are all equal. We call the common inertia degree \(f\) the \textbf{inertia degree}\index{inertia degree} of \(\mf{p}\) and the common ramification index \(e\) the \textbf{ramification index}\index{ramification index} of \(\mf{p}\). If there are \(r\) primes above \(\mf{p}\), the fundamental equality takes the particularly simple form
+    Another way to phrase this result is that the primes above \(\mf{p}\) are all conjugate to each other and their ramification indices and inertia degrees are all equal. We call the common inertia degree \(f\) the \textbf{inertia degree}\index{inertia degree} of \(\mf{p}\) and the common ramification index \(e\) the \textbf{ramification index}\index{ramification index} of \(\mf{p}\). If there are \(r\) primes above \(\mf{p}\), the fundamental equality takes the particularly simple form
     \[
       n = ref.
     \]
+
+    \iffalse
     Continue to let \(\mf{P}\) be a prime above \(\mf{p}\). We define the \textbf{decomposition group}\index{decomposition group} \(D_{\mf{p}}(\mf{P})\) of \(\mf{P}\) by
     \[
       D_{\mf{p}}(\mf{P}) = \{\tau \in \Gal(L/K):\tau(\mf{P}) = \mf{P}\}.
@@ -1488,6 +1495,7 @@
     \]
     The decomposition field is aptly named because it contains all of the information about the different prime factors that \(\mf{p}\mc{O}\) splits into in \(\mc{O}\). In particular, the primes \(\mf{P}^{D}\) are inert in \(\mc{O}/\mc{O}^{D}\) as the following proposition shows:
 
+    \fi\iffalse
     \begin{proposition}\label{prop:decomposition_field_e_and_f}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) Galois extension \(L/K\), let \(\mf{p}\) be a prime of \(\smc{O}\) with inertia degree \(f\) and ramification index \(e\), and let \(\mf{P}\) be a prime of \(\mc{O}\) above \(\mf{p}\). Then the following hold:
       \begin{enumerate}[label*=(\roman*)]

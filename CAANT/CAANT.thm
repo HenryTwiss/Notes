@@ -65,29 +65,29 @@
 \contentsline {proof}{{\proofname }{32}{}}{34}{proof.32}%
 \contentsline {proposition}{{Proposition}{4.2.{9}}{}}{34}{theorem.4.2.9}%
 \contentsline {proof}{{\proofname }{33}{}}{35}{proof.33}%
-\contentsline {proposition}{{Proposition}{4.2.{10}}{}}{36}{theorem.4.2.10}%
+\contentsline {proposition}{{Proposition}{4.2.{10}}{}}{37}{theorem.4.2.10}%
 \contentsline {proof}{{\proofname }{34}{}}{37}{proof.34}%
 \contentsline {remark}{{Remark}{4.3.{1}}{}}{38}{theorem.4.3.1}%
-\contentsline {lemma}{{Lemma}{4.3.{2}}{}}{38}{theorem.4.3.2}%
-\contentsline {proof}{{\proofname }{35}{}}{38}{proof.35}%
+\contentsline {lemma}{{Lemma}{4.3.{2}}{}}{39}{theorem.4.3.2}%
+\contentsline {proof}{{\proofname }{35}{}}{39}{proof.35}%
 \contentsline {lemma}{{Lemma}{4.3.{3}}{}}{39}{theorem.4.3.3}%
 \contentsline {proof}{{\proofname }{36}{}}{39}{proof.36}%
 \contentsline {theorem}{{Theorem}{4.3.{4}}{}}{40}{theorem.4.3.4}%
 \contentsline {proof}{{\proofname }{37}{}}{40}{proof.37}%
-\contentsline {corollary}{{Corollary}{4.3.{5}}{}}{40}{theorem.4.3.5}%
+\contentsline {corollary}{{Corollary}{4.3.{5}}{}}{41}{theorem.4.3.5}%
 \contentsline {proof}{{\proofname }{38}{}}{41}{proof.38}%
 \contentsline {proposition}{{Proposition}{4.3.{6}}{}}{42}{theorem.4.3.6}%
 \contentsline {proof}{{\proofname }{39}{}}{42}{proof.39}%
 \contentsline {theorem}{{Theorem}{4.3.{7}}{}}{42}{theorem.4.3.7}%
-\contentsline {proof}{{\proofname }{40}{}}{42}{proof.40}%
-\contentsline {proposition}{{Proposition}{4.3.{8}}{}}{42}{theorem.4.3.8}%
-\contentsline {proof}{{\proofname }{41}{}}{42}{proof.41}%
-\contentsline {lemma}{{Lemma}{4.3.{9}}{}}{43}{theorem.4.3.9}%
-\contentsline {proof}{{\proofname }{42}{}}{43}{proof.42}%
-\contentsline {lemma}{{Lemma}{4.3.{10}}{}}{43}{theorem.4.3.10}%
+\contentsline {proof}{{\proofname }{40}{}}{43}{proof.40}%
+\contentsline {proposition}{{Proposition}{4.3.{8}}{}}{43}{theorem.4.3.8}%
+\contentsline {proof}{{\proofname }{41}{}}{43}{proof.41}%
+\contentsline {lemma}{{Lemma}{4.3.{9}}{}}{44}{theorem.4.3.9}%
+\contentsline {proof}{{\proofname }{42}{}}{44}{proof.42}%
+\contentsline {lemma}{{Lemma}{4.3.{10}}{}}{44}{theorem.4.3.10}%
 \contentsline {proof}{{\proofname }{43}{}}{44}{proof.43}%
-\contentsline {lemma}{{Lemma}{4.3.{11}}{}}{44}{theorem.4.3.11}%
-\contentsline {proof}{{\proofname }{44}{}}{44}{proof.44}%
+\contentsline {lemma}{{Lemma}{4.3.{11}}{}}{45}{theorem.4.3.11}%
+\contentsline {proof}{{\proofname }{44}{}}{45}{proof.44}%
 \contentsline {proposition}{{Proposition}{4.3.{12}}{}}{45}{theorem.4.3.12}%
 \contentsline {proof}{{\proofname }{45}{}}{45}{proof.45}%
 \contentsline {proposition}{{Proposition}{4.3.{13}}{}}{45}{theorem.4.3.13}%
@@ -95,86 +95,87 @@
 \contentsline {remark}{{Remark}{4.3.{14}}{}}{46}{theorem.4.3.14}%
 \contentsline {proposition}{{Proposition}{4.3.{15}}{}}{46}{theorem.4.3.15}%
 \contentsline {proof}{{\proofname }{47}{}}{46}{proof.47}%
-\contentsline {remark}{{Remark}{4.3.{16}}{}}{46}{theorem.4.3.16}%
-\contentsline {proposition}{{Proposition}{4.3.{17}}{}}{46}{theorem.4.3.17}%
-\contentsline {proof}{{\proofname }{48}{}}{46}{proof.48}%
-\contentsline {proposition}{{Proposition}{4.4.{1}}{}}{48}{theorem.4.4.1}%
-\contentsline {proof}{{\proofname }{49}{}}{48}{proof.49}%
-\contentsline {proposition}{{Proposition}{4.4.{2}}{}}{49}{theorem.4.4.2}%
+\contentsline {remark}{{Remark}{4.3.{16}}{}}{47}{theorem.4.3.16}%
+\contentsline {proposition}{{Proposition}{4.3.{17}}{}}{47}{theorem.4.3.17}%
+\contentsline {proof}{{\proofname }{48}{}}{47}{proof.48}%
+\contentsline {proposition}{{Proposition}{4.4.{1}}{}}{49}{theorem.4.4.1}%
+\contentsline {proof}{{\proofname }{49}{}}{49}{proof.49}%
+\contentsline {proposition}{{Proposition}{4.4.{2}}{}}{50}{theorem.4.4.2}%
 \contentsline {proof}{{\proofname }{50}{}}{50}{proof.50}%
-\contentsline {proposition}{{Proposition}{4.4.{3}}{}}{50}{theorem.4.4.3}%
-\contentsline {proof}{{\proofname }{51}{}}{50}{proof.51}%
+\contentsline {proposition}{{Proposition}{4.4.{3}}{}}{51}{theorem.4.4.3}%
+\contentsline {proof}{{\proofname }{51}{}}{51}{proof.51}%
 \contentsline {proposition}{{Proposition}{4.4.{4}}{}}{51}{theorem.4.4.4}%
 \contentsline {proof}{{\proofname }{52}{}}{51}{proof.52}%
 \contentsline {proposition}{{Proposition}{4.4.{5}}{}}{52}{theorem.4.4.5}%
-\contentsline {proof}{{\proofname }{53}{}}{52}{proof.53}%
+\contentsline {proof}{{\proofname }{53}{}}{53}{proof.53}%
 \contentsline {theorem}{{Theorem}{4.4.{6}}{}}{54}{theorem.4.4.6}%
 \contentsline {proof}{{\proofname }{54}{}}{54}{proof.54}%
-\contentsline {proposition}{{Proposition}{4.4.{7}}{}}{54}{theorem.4.4.7}%
+\contentsline {proposition}{{Proposition}{4.4.{7}}{}}{55}{theorem.4.4.7}%
 \contentsline {proof}{{\proofname }{55}{}}{55}{proof.55}%
 \contentsline {proposition}{{Proposition}{4.5.{1}}{}}{56}{theorem.4.5.1}%
-\contentsline {proof}{{\proofname }{56}{}}{56}{proof.56}%
-\contentsline {lemma}{{Lemma}{4.5.{2}}{}}{58}{theorem.4.5.2}%
-\contentsline {proof}{{\proofname }{57}{}}{58}{proof.57}%
+\contentsline {proof}{{\proofname }{56}{}}{57}{proof.56}%
+\contentsline {lemma}{{Lemma}{4.5.{2}}{}}{59}{theorem.4.5.2}%
+\contentsline {proof}{{\proofname }{57}{}}{59}{proof.57}%
 \contentsline {theorem*}{{Theorem}{2}{Fundamental equality}}{59}{theorem*.2}%
-\contentsline {proof}{{\proofname }{58}{}}{59}{proof.58}%
+\contentsline {proof}{{\proofname }{58}{}}{60}{proof.58}%
 \contentsline {proposition}{{Proposition}{4.6.{1}}{}}{61}{theorem.4.6.1}%
-\contentsline {theorem}{{Theorem}{7.1.{1}}{}}{65}{theorem.7.1.1}%
-\contentsline {proof}{{\proofname }{59}{}}{65}{proof.59}%
-\contentsline {theorem}{{Theorem}{7.1.{2}}{}}{66}{theorem.7.1.2}%
+\contentsline {proof}{{\proofname }{59}{}}{62}{proof.59}%
+\contentsline {theorem}{{Theorem}{7.1.{1}}{}}{66}{theorem.7.1.1}%
 \contentsline {proof}{{\proofname }{60}{}}{66}{proof.60}%
-\contentsline {proposition}{{Proposition}{7.1.{3}}{}}{67}{theorem.7.1.3}%
+\contentsline {theorem}{{Theorem}{7.1.{2}}{}}{67}{theorem.7.1.2}%
 \contentsline {proof}{{\proofname }{61}{}}{67}{proof.61}%
-\contentsline {proposition}{{Proposition}{7.1.{4}}{}}{68}{theorem.7.1.4}%
+\contentsline {proposition}{{Proposition}{7.1.{3}}{}}{68}{theorem.7.1.3}%
 \contentsline {proof}{{\proofname }{62}{}}{68}{proof.62}%
-\contentsline {proposition}{{Proposition}{7.1.{5}}{}}{68}{theorem.7.1.5}%
-\contentsline {proof}{{\proofname }{63}{}}{68}{proof.63}%
-\contentsline {proposition}{{Proposition}{7.1.{6}}{}}{68}{theorem.7.1.6}%
+\contentsline {proposition}{{Proposition}{7.1.{4}}{}}{69}{theorem.7.1.4}%
+\contentsline {proof}{{\proofname }{63}{}}{69}{proof.63}%
+\contentsline {proposition}{{Proposition}{7.1.{5}}{}}{69}{theorem.7.1.5}%
 \contentsline {proof}{{\proofname }{64}{}}{69}{proof.64}%
-\contentsline {proposition}{{Proposition}{7.1.{7}}{}}{69}{theorem.7.1.7}%
-\contentsline {proof}{{\proofname }{65}{}}{69}{proof.65}%
-\contentsline {proposition}{{Proposition}{7.1.{8}}{}}{69}{theorem.7.1.8}%
-\contentsline {proof}{{\proofname }{66}{}}{69}{proof.66}%
-\contentsline {theorem*}{{Theorem}{3}{Landau's theorem}}{70}{theorem*.3}%
+\contentsline {proposition}{{Proposition}{7.1.{6}}{}}{69}{theorem.7.1.6}%
+\contentsline {proof}{{\proofname }{65}{}}{70}{proof.65}%
+\contentsline {proposition}{{Proposition}{7.1.{7}}{}}{70}{theorem.7.1.7}%
+\contentsline {proof}{{\proofname }{66}{}}{70}{proof.66}%
+\contentsline {proposition}{{Proposition}{7.1.{8}}{}}{70}{theorem.7.1.8}%
 \contentsline {proof}{{\proofname }{67}{}}{70}{proof.67}%
-\contentsline {proposition}{{Proposition}{7.2.{1}}{}}{71}{theorem.7.2.1}%
+\contentsline {theorem*}{{Theorem}{3}{Landau's theorem}}{71}{theorem*.3}%
 \contentsline {proof}{{\proofname }{68}{}}{71}{proof.68}%
-\contentsline {remark}{{Remark}{7.2.{2}}{}}{72}{theorem.7.2.2}%
-\contentsline {theorem*}{{Theorem}{4}{Perron's formula, classical}}{74}{theorem*.4}%
-\contentsline {proof}{{\proofname }{69}{}}{74}{proof.69}%
-\contentsline {corollary}{{Corollary}{7.4.{1}}{}}{74}{theorem.7.4.1}%
-\contentsline {proof}{{\proofname }{70}{}}{74}{proof.70}%
-\contentsline {lemma}{{Lemma}{7.4.{2}}{}}{75}{theorem.7.4.2}%
+\contentsline {proposition}{{Proposition}{7.2.{1}}{}}{72}{theorem.7.2.1}%
+\contentsline {proof}{{\proofname }{69}{}}{72}{proof.69}%
+\contentsline {remark}{{Remark}{7.2.{2}}{}}{73}{theorem.7.2.2}%
+\contentsline {theorem*}{{Theorem}{4}{Perron's formula, classical}}{75}{theorem*.4}%
+\contentsline {proof}{{\proofname }{70}{}}{75}{proof.70}%
+\contentsline {corollary}{{Corollary}{7.4.{1}}{}}{75}{theorem.7.4.1}%
 \contentsline {proof}{{\proofname }{71}{}}{75}{proof.71}%
-\contentsline {theorem*}{{Theorem}{5}{Perron's formula, truncated}}{78}{theorem*.5}%
-\contentsline {proof}{{\proofname }{72}{}}{78}{proof.72}%
-\contentsline {corollary}{{Corollary}{7.4.{3}}{}}{79}{theorem.7.4.3}%
+\contentsline {lemma}{{Lemma}{7.4.{2}}{}}{76}{theorem.7.4.2}%
+\contentsline {proof}{{\proofname }{72}{}}{76}{proof.72}%
+\contentsline {theorem*}{{Theorem}{5}{Perron's formula, truncated}}{79}{theorem*.5}%
 \contentsline {proof}{{\proofname }{73}{}}{79}{proof.73}%
-\contentsline {proposition}{{Proposition}{7.4.{4}}{}}{79}{theorem.7.4.4}%
+\contentsline {corollary}{{Corollary}{7.4.{3}}{}}{80}{theorem.7.4.3}%
 \contentsline {proof}{{\proofname }{74}{}}{80}{proof.74}%
-\contentsline {theorem*}{{Theorem}{6}{Perron's formula, smoothed}}{80}{theorem*.6}%
-\contentsline {proof}{{\proofname }{75}{}}{80}{proof.75}%
-\contentsline {conjecture*}{{Conjecture}{1}{Selberg's orthogonality conjecture}}{83}{conjecture*.1}%
-\contentsline {proposition}{{Proposition}{8.1.{1}}{}}{83}{theorem.8.1.1}%
-\contentsline {proof}{{\proofname }{76}{}}{83}{proof.76}%
-\contentsline {proposition}{{Proposition}{8.2.{1}}{}}{85}{theorem.8.2.1}%
-\contentsline {proof}{{\proofname }{77}{}}{86}{proof.77}%
-\contentsline {theorem*}{{Theorem}{7}{Approximate functional equation}}{87}{theorem*.7}%
+\contentsline {proposition}{{Proposition}{7.4.{4}}{}}{80}{theorem.7.4.4}%
+\contentsline {proof}{{\proofname }{75}{}}{81}{proof.75}%
+\contentsline {theorem*}{{Theorem}{6}{Perron's formula, smoothed}}{81}{theorem*.6}%
+\contentsline {proof}{{\proofname }{76}{}}{81}{proof.76}%
+\contentsline {conjecture*}{{Conjecture}{1}{Selberg's orthogonality conjecture}}{84}{conjecture*.1}%
+\contentsline {proposition}{{Proposition}{8.1.{1}}{}}{84}{theorem.8.1.1}%
+\contentsline {proof}{{\proofname }{77}{}}{84}{proof.77}%
+\contentsline {proposition}{{Proposition}{8.2.{1}}{}}{86}{theorem.8.2.1}%
 \contentsline {proof}{{\proofname }{78}{}}{87}{proof.78}%
-\contentsline {proposition}{{Proposition}{8.2.{2}}{}}{88}{theorem.8.2.2}%
-\contentsline {proof}{{\proofname }{79}{}}{89}{proof.79}%
-\contentsline {theorem}{{Theorem}{8.2.{3}}{}}{90}{theorem.8.2.3}%
+\contentsline {theorem*}{{Theorem}{7}{Approximate functional equation}}{88}{theorem*.7}%
+\contentsline {proof}{{\proofname }{79}{}}{88}{proof.79}%
+\contentsline {proposition}{{Proposition}{8.2.{2}}{}}{89}{theorem.8.2.2}%
 \contentsline {proof}{{\proofname }{80}{}}{90}{proof.80}%
-\contentsline {conjecture*}{{Conjecture}{2}{Riemann hypothesis, \(L(s)\)}}{91}{conjecture*.2}%
-\contentsline {conjecture*}{{Conjecture}{3}{Selberg class Riemann hypothesis}}{92}{conjecture*.3}%
-\contentsline {theorem}{{Theorem}{8.4.{1}}{}}{92}{theorem.8.4.1}%
-\contentsline {proof}{{\proofname }{81}{}}{92}{proof.81}%
-\contentsline {conjecture*}{{Conjecture}{4}{Lindel\"of hypothesis, \(L(s)\)}}{93}{conjecture*.4}%
-\contentsline {conjecture*}{{Conjecture}{5}{Selberg class Lindel\"of hypothesis}}{93}{conjecture*.5}%
-\contentsline {remark}{{Remark}{8.4.{2}}{}}{93}{theorem.8.4.2}%
-\contentsline {theorem}{{Theorem}{8.4.{3}}{}}{94}{theorem.8.4.3}%
-\contentsline {proof}{{\proofname }{82}{}}{94}{proof.82}%
-\contentsline {theorem}{{Theorem}{8.4.{4}}{}}{96}{theorem.8.4.4}%
-\contentsline {proof}{{\proofname }{83}{}}{96}{proof.83}%
-\contentsline {proposition}{{Proposition}{8.5.{1}}{}}{98}{theorem.8.5.1}%
-\contentsline {proof}{{\proofname }{84}{}}{98}{proof.84}%
+\contentsline {theorem}{{Theorem}{8.2.{3}}{}}{91}{theorem.8.2.3}%
+\contentsline {proof}{{\proofname }{81}{}}{91}{proof.81}%
+\contentsline {conjecture*}{{Conjecture}{2}{Riemann hypothesis, \(L(s)\)}}{92}{conjecture*.2}%
+\contentsline {conjecture*}{{Conjecture}{3}{Selberg class Riemann hypothesis}}{93}{conjecture*.3}%
+\contentsline {theorem}{{Theorem}{8.4.{1}}{}}{93}{theorem.8.4.1}%
+\contentsline {proof}{{\proofname }{82}{}}{93}{proof.82}%
+\contentsline {conjecture*}{{Conjecture}{4}{Lindel\"of hypothesis, \(L(s)\)}}{94}{conjecture*.4}%
+\contentsline {conjecture*}{{Conjecture}{5}{Selberg class Lindel\"of hypothesis}}{94}{conjecture*.5}%
+\contentsline {remark}{{Remark}{8.4.{2}}{}}{94}{theorem.8.4.2}%
+\contentsline {theorem}{{Theorem}{8.4.{3}}{}}{95}{theorem.8.4.3}%
+\contentsline {proof}{{\proofname }{83}{}}{95}{proof.83}%
+\contentsline {theorem}{{Theorem}{8.4.{4}}{}}{97}{theorem.8.4.4}%
+\contentsline {proof}{{\proofname }{84}{}}{97}{proof.84}%
+\contentsline {proposition}{{Proposition}{8.5.{1}}{}}{99}{theorem.8.5.1}%
+\contentsline {proof}{{\proofname }{85}{}}{99}{proof.85}%

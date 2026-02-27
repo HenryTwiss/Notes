@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  27 FEB 2026 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  27 FEB 2026 07:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -590,7 +590,7 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
 
 Writing index file CAANT.idx
-(./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Algebraic_Integers.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux))
+No file CAANT.aux.
 \openout1 = `CAANT.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -611,7 +611,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -659,7 +658,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
 LaTeX Info: Redefining \nameref on input line 13.
- (./CAANT.out) (./CAANT.out)
 \@outlinefile=\write5
 \openout5 = `CAANT.out'.
 
@@ -692,18 +690,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./CAANT.toc
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.28 ...8}Analytic \(L\)-functions}{82}{chapter.8}
-                                                  % [1
-
-])
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \tf@toc=\write6
 \openout6 = `CAANT.toc'.
 
- [0]
+ [0
+
+]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -722,7 +715,13 @@ Chapter 1.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 79.
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 83.
  [4]
+
+LaTeX Warning: Reference `prop:Dirichlet_convolution_of_multiplicative_functions' on page 1 undefined on input line 107.
+
 Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 112.
+
+LaTeX Warning: Reference `prop:Mobius_indicator' on page 1 undefined on input line 123.
+
 ) [5]
 Chapter 2.
 [6
@@ -741,9 +740,102 @@ Chapter 3.
 Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 23.
  [8]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 59.
- [9] [10] [11] [12] [13] [14] [15]
+ [9]
+
+LaTeX Warning: Reference `thm:Dirichlet_character_conductor_existance' on page 1 undefined on input line 97.
+
+[10] [11]
+
+LaTeX Warning: Reference `prop:primitive_characters_multiplicative_relatively_prime' on page 1 undefined on input line 152.
+
+
+LaTeX Warning: Reference `prop:primitive_characters_multiplicative_relatively_prime' on page 1 undefined on input line 154.
+
+[12]
+
+LaTeX Warning: Reference `thm:fundamental_discriminant_character_primitive' on page 1 undefined on input line 169.
+
+[13] [14]
+
+LaTeX Warning: Reference `prop:Ramanujan_sum_evaluation' on page 1 undefined on input line 250.
+
+[15]
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 271.
+
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 284.
- [16] [17] [18] [19] [20] [21]) [22] [23
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 295.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 295.
+
+
+LaTeX Warning: Reference `thm:Gauss_sum_modulus' on page 1 undefined on input line 295.
+
+
+LaTeX Warning: Reference `thm:Gauss_sum_modulus' on page 1 undefined on input line 302.
+
+[16]
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 315.
+
+[17]
+
+LaTeX Warning: Reference `prop:Gauss_sum_equivalence_for_primes' on page 1 undefined on input line 374.
+
+[18]
+
+LaTeX Warning: Reference `prop:Ramanujan_sum_evaluation' on page 1 undefined on input line 395.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_equivalence_for_primes' on page 1 undefined on input line 401.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 401.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 414.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 414.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 414.
+
+[19]
+
+LaTeX Warning: Reference `prop:Gauss_sum_equivalence_for_primes' on page 1 undefined on input line 418.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 422.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 429.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `thm:Gauss_sum_modulus' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `thm:Gauss_sum_equivalence' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `thm:quadratic_Gauss_sum_modulus' on page 1 undefined on input line 445.
+
+[20] [21]
+
+LaTeX Warning: Reference `prop:Gauss_sum_equivalence_for_primes' on page 1 undefined on input line 498.
+
+
+LaTeX Warning: Reference `thm:Gauss's_evaluation' on page 1 undefined on input line 498.
+
+) [22] [23
 
 
 
@@ -756,14 +848,345 @@ Chapter 4.
 
 
 ]
+
+LaTeX Warning: Reference `prop:integral_if_finitely_generated' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Reference `prop:integral_if_finitely_generated' on page 1 undefined on input line 54.
+
+
+LaTeX Warning: Reference `prop:integrality_is_transitive' on page 1 undefined on input line 54.
+
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 58.
- [25] [26]
+[25] [26]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 100.
- [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 483.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
+
+
+LaTeX Warning: Reference `lemma:unique_factorization_domains_are_integrally_closed' on page 1 undefined on input line 101.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 104.
+
+[27] [28]
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 198.
+
+
+LaTeX Warning: Reference `prop:formulas_for_trace_and_norm' on page 1 undefined on input line 198.
+
+[29]
+
+LaTeX Warning: Reference `prop:trace_and_norm_AKBL' on page 1 undefined on input line 211.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 211.
+
+[30]
+
+LaTeX Warning: Reference `prop:formulas_for_trace_and_norm' on page 1 undefined on input line 278.
+
+[31]
+
+LaTeX Warning: Reference `prop:formulas_for_trace_and_norm' on page 1 undefined on input line 316.
+
+[32]
+
+LaTeX Warning: Reference `disc_as_square_of_embedding_matrix' on page 1 undefined on input line 323.
+
+
+LaTeX Warning: Reference `prop:trace_and_norm_AKBL' on page 1 undefined on input line 346.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 356.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 356.
+
+[33]
+
+LaTeX Warning: Reference `lemma:unique_factorization_domains_are_integrally_closed' on page 1 undefined on input line 362.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 362.
+
+
+LaTeX Warning: Reference `lem:lemma_for_integral_basis_AKBL' on page 1 undefined on input line 362.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 366.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 368.
+
+[34]
+
+LaTeX Warning: Reference `disc_as_square_of_embedding_matrix' on page 1 undefined on input line 420.
+
+
+Overfull \hbox (5.55753pt too wide) in paragraph at lines 419--421
+\OT1/cmr/m/n/12 have en-tries in $\OMS/cmsy/m/n/12 O$\OT1/cmr/m/n/12 . Cramer's rule to-gether with [] im-ply that $\OML/cmm/m/it/12 d[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^L[]; [] ; ^^L[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 [] \OMS/cmsy/m/n/12 2
+ []
+
+[35]
+
+LaTeX Warning: Reference `disc_as_square_of_embedding_matrix' on page 1 undefined on input line 440.
+
+
+LaTeX Warning: Reference `equ:Vandermonde_determinant_for_discriminant' on page 1 undefined on input line 447.
+
+
+LaTeX Warning: Reference `prop:unit_if_and_only_if_AKBL' on page 1 undefined on input line 465.
+
+
+LaTeX Warning: Reference `prop:trace_and_norm_AKBL' on page 1 undefined on input line 465.
+
+[36]
+
+LaTeX Warning: Reference `thm:integral_basis_AKBL' on page 1 undefined on input line 469.
+
+
+LaTeX Warning: Reference `disc_as_square_of_embedding_matrix' on page 1 undefined on input line 473.
+
+LaTeX Font Info:    Trying to load font information for U+euf on input line 479.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61]) [62]
+) [37]
+
+LaTeX Warning: Reference `rem:integers_are_integrally_closed' on page 1 undefined on input line 494.
+
+
+LaTeX Warning: Reference `lemma:unique_factorization_domains_are_integrally_closed' on page 1 undefined on input line 497.
+
+[38]
+
+LaTeX Warning: Reference `lem:integral_ideal_prime_inclusion' on page 1 undefined on input line 538.
+
+[39]
+
+LaTeX Warning: Reference `lem:inverse_for_prime_ideals' on page 1 undefined on input line 573.
+
+
+LaTeX Warning: Reference `thm:unique_product_prime_ideals' on page 1 undefined on input line 608.
+
+[40]
+
+LaTeX Warning: Reference `thm:unique_product_prime_ideals' on page 1 undefined on input line 632.
+
+
+LaTeX Warning: Reference `thm:unique_product_prime_ideals' on page 1 undefined on input line 638.
+
+[41]
+
+LaTeX Warning: Reference `lem:inverse_for_prime_ideals' on page 1 undefined on input line 647.
+
+
+LaTeX Warning: Reference `thm:ideal_group_is_a_group' on page 1 undefined on input line 660.
+
+[42] [43]
+
+LaTeX Warning: Reference `lem:relatively_prime_and_principal' on page 1 undefined on input line 722.
+
+[44]
+
+LaTeX Warning: Reference `lem:relatively_prime_and_principal' on page 1 undefined on input line 767.
+
+
+LaTeX Warning: Reference `lem:relatively_prime_and_principal' on page 1 undefined on input line 776.
+
+
+LaTeX Warning: Reference `thm:ideal_group_is_a_group' on page 1 undefined on input line 787.
+
+[45]
+
+LaTeX Warning: Reference `thm:ideal_group_is_a_group' on page 1 undefined on input line 813.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 828.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 828.
+
+
+LaTeX Warning: Reference `prop:discriminant_not_zero' on page 1 undefined on input line 828.
+
+
+LaTeX Warning: Reference `lem:lemma_for_integral_basis_AKBL' on page 1 undefined on input line 828.
+
+[46]
+
+LaTeX Warning: Reference `prop:Dedekind_with_finite_primes_is_PID' on page 1 undefined on input line 847.
+
+
+LaTeX Warning: Reference `thm:integral_basis_AKBL' on page 1 undefined on input line 847.
+
+
+LaTeX Warning: Reference `prop:integral_closure_of_Dedekind_is_Dedekind' on page 1 undefined on input line 849.
+
+
+LaTeX Warning: Reference `thm:unique_product_prime_ideals' on page 1 undefined on input line 857.
+
+[47] [48] [49]
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 962.
+
+[50]
+
+LaTeX Warning: Reference `prop:localization_of_integral_closure_is_integral_closure' on page 1 undefined on input line 971.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 975.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 975.
+
+
+LaTeX Warning: Reference `prop:localization_of_Dedekind_is_Dedekind' on page 1 undefined on input line 978.
+
+
+LaTeX Warning: Reference `prop:localization_of_integral_closure_is_integral_closure' on page 1 undefined on input line 978.
+
+
+LaTeX Warning: Reference `prop:integral_closure_of_Dedekind_is_Dedekind' on page 1 undefined on input line 978.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 996.
+
+[51]
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 1022.
+
+[52]
+
+LaTeX Warning: Reference `prop:Dedekind_with_finite_primes_is_PID' on page 1 undefined on input line 1069.
+
+
+LaTeX Warning: Reference `lemma:unique_factorization_domains_are_integrally_closed' on page 1 undefined on input line 1075.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1075.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 1075.
+
+[53]
+
+LaTeX Warning: Reference `thm:integral_basis_AKBL' on page 1 undefined on input line 1078.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1078.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 1090.
+
+[54]
+
+LaTeX Warning: Reference `equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes' on page 1 undefined on input line 1106.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1106.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1110.
+
+
+LaTeX Warning: Reference `equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes' on page 1 undefined on input line 1110.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1114.
+
+
+LaTeX Warning: Reference `equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes' on page 1 undefined on input line 1114.
+
+
+LaTeX Warning: Reference `prop:integral_closure_of_Dedekind_is_Dedekind' on page 1 undefined on input line 1165.
+
+[55]
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 1175.
+
+
+LaTeX Warning: Reference `prop:discriminant_not_zero' on page 1 undefined on input line 1175.
+
+
+LaTeX Warning: Reference `lem:lemma_for_integral_basis_AKBL' on page 1 undefined on input line 1175.
+
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 1202.
+
+
+LaTeX Warning: Reference `equ:Dedekind_extension_intersection' on page 1 undefined on input line 1206.
+
+[56]
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 1222.
+
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 1226.
+
+[57]
+
+LaTeX Warning: Reference `lem:isomorphism_of_quotient_by_prime_integral_ideals' on page 1 undefined on input line 1256.
+
+[58]
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 1284.
+
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 1284.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 1296.
+
+
+LaTeX Warning: Reference `lem:quotient_by_prime_power_isomorphism' on page 1 undefined on input line 1300.
+
+[59]
+
+LaTeX Warning: Reference `prop:formulas_for_trace_and_norm' on page 1 undefined on input line 1406.
+
+[60]
+
+./Chapters/Algebraic_Integers.tex:1431: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1431 ...n there exist at least two distinct \(\(
+                                                  \Gal(L/K)\)\)-orbits of pr...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./Chapters/Algebraic_Integers.tex:1431: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1431 ... at least two distinct \(\(\Gal(L/K)\)\)
+                                                  -orbits of primes above \(...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Reference `prop:Galois_action_on_primes_is_transitive' on page 1 undefined on input line 1445.
+
+[61]
+
+LaTeX Warning: Reference `prop:Galois_action_on_primes_is_transitive' on page 1 undefined on input line 1471.
+
+
+Overfull \hbox (39.20424pt too wide) in paragraph at lines 1471--1472
+\OT1/cmr/m/n/12 fac-tors in $\OMS/cmsy/m/n/12 O$\OT1/cmr/m/n/12 . In-deed, by the orbit-stabilizer the-o-rem the num-ber of cosets in $[](\OML/cmm/m/it/12 L=K\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 =D[]\OT1/cmr/m/n/12 (\U/euf/m/n/12 P\OT1/cmr/m/n/12 )$
+ []
+
+
+LaTeX Warning: Reference `prop:Galois_action_on_primes_is_transitive' on page 1 undefined on input line 1483.
+
+) [62]
 Chapter 5.
 [63
 
@@ -783,7 +1206,66 @@ Chapter 7.
 [66
 
 
-] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]) [81]
+] [67] [68]
+
+LaTeX Warning: Reference `prop:Dirichlet_series_polynomial_bound_from_absolute_convergence' on page 1 undefined on input line 137.
+
+[69]
+
+LaTeX Warning: Reference `prop:Dirichlet_series_convergence_polynomial_bound' on page 1 undefined on input line 174.
+
+
+LaTeX Warning: Reference `prop:Dirichlet_series_convergence_polynomial_bound_average' on page 1 undefined on input line 195.
+
+
+LaTeX Warning: Reference `prop:Dirichlet_series_convergence_polynomial_bound' on page 1 undefined on input line 195.
+
+[70]
+
+LaTeX Warning: Reference `prop:Dirichlet_series_convergence_polynomial_bound_average' on page 1 undefined on input line 199.
+
+[71] [72]
+
+LaTeX Warning: Reference `prop:Dirichlet_series_Euler_product' on page 1 undefined on input line 270.
+
+
+LaTeX Warning: Reference `prop:Dirichlet_series_Euler_product' on page 1 undefined on input line 285.
+
+[73] [74]
+
+LaTeX Warning: Reference `prop:Dirichlet_series_coefficient_size_on_average' on page 1 undefined on input line 340.
+
+
+LaTeX Warning: Reference `equ:integral_rep_for_Dirichlet_series' on page 1 undefined on input line 360.
+
+[75]
+
+LaTeX Warning: Reference `fig:discontinuous_integral_contour_1' on page 1 undefined on input line 390.
+
+[76]
+
+LaTeX Warning: Reference `fig:discontinuous_integral_contour_2' on page 1 undefined on input line 447.
+
+[77]
+
+LaTeX Warning: Reference `fig:discontinuous_integral_contour_3' on page 1 undefined on input line 489.
+
+
+LaTeX Warning: Reference `fig:discontinuous_integral_contour_4' on page 1 undefined on input line 553.
+
+[78]
+
+LaTeX Warning: Reference `lem:delta_truncation_estimate' on page 1 undefined on input line 571.
+
+[79]
+
+LaTeX Warning: Reference `prop:Dirichlet_series_polynomial_bound_from_absolute_convergence' on page 1 undefined on input line 600.
+
+[80]
+
+LaTeX Warning: Reference `prop:smoothing_function_Mellin_inverse_vertical_strips' on page 1 undefined on input line 669.
+
+) [81]
 \openout2 = `Chapters/Analytic_L-functions.aux'.
 
  (./Chapters/Analytic_L-functions.tex
@@ -795,7 +1277,75 @@ Chapter 8.
 
 ] [83]
 Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 64.
- [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]) [99]
+ [84]
+
+LaTeX Warning: Reference `fig:critical_strip' on page 1 undefined on input line 165.
+
+[85] [86]
+
+LaTeX Warning: Reference `equ:gamma_factor_analytic_conductor_estimate' on page 1 undefined on input line 182.
+
+[87]
+
+LaTeX Warning: Reference `prop:L_function_bounded_in_vertical_strips' on page 1 undefined on input line 238.
+
+[88] [89]
+
+LaTeX Warning: Reference `equ:choice_for_V_decay_estimate' on page 1 undefined on input line 295.
+
+
+LaTeX Warning: Reference `equ:gamma_factor_s_and_u_estimate' on page 1 undefined on input line 295.
+
+[90]
+
+LaTeX Warning: Reference `prop:L_function_bounded_in_vertical_strips' on page 1 undefined on input line 319.
+
+
+LaTeX Warning: Reference `prop:L_function_bounded_in_vertical_strips' on page 1 undefined on input line 337.
+
+[91]
+
+LaTeX Warning: Reference `fig:symmetric_nontrivial_zeros' on page 1 undefined on input line 366.
+
+[92]
+
+LaTeX Warning: Reference `prop:L_function_bounded_in_vertical_strips' on page 1 undefined on input line 417.
+
+
+LaTeX Warning: Reference `equ:gamma_factor_analytic_conductor_estimate' on page 1 undefined on input line 431.
+
+[93]
+
+LaTeX Warning: Reference `thm:convexity_bound_for_L_function_in_critial_strip' on page 1 undefined on input line 474.
+
+[94]
+
+LaTeX Warning: Reference `equ:gamma_factor_analytic_conductor_estimate' on page 1 undefined on input line 522.
+
+
+LaTeX Warning: Reference `equ:choice_for_V_decay_estimate' on page 1 undefined on input line 522.
+
+
+LaTeX Warning: Reference `equ:vertical_strip_gamma_estimates' on page 1 undefined on input line 522.
+
+[95]
+
+LaTeX Warning: Reference `prop:V_function_decay' on page 1 undefined on input line 526.
+
+
+LaTeX Warning: Reference `prop:V_function_decay' on page 1 undefined on input line 546.
+
+[96]
+
+LaTeX Warning: Reference `thm:central_value_estimate' on page 1 undefined on input line 565.
+
+
+LaTeX Warning: Reference `thm:critical_line_estimate' on page 1 undefined on input line 579.
+
+
+LaTeX Warning: Reference `thm:critical_line_estimate' on page 1 undefined on input line 588.
+
+[97] [98]) [99]
 Chapter 9.
 [100
 
@@ -815,29 +1365,40 @@ Chapter 12.
 
 ] [104
 
-] (./CAANT.ind [105
-
-] [106])
+]
+No file CAANT.ind.
 \tf@thm=\write7
 \openout7 = `CAANT.thm'.
 
- (./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Algebraic_Integers.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux))
-Package rerunfilecheck Info: File `CAANT.out' has not changed.
-(rerunfilecheck)             Checksum: 7F9481B3EFC6395570D8E716F1F4D785;6973.
+(./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Algebraic_Integers.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `CAANT.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `CAANT.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  7F9481B3EFC6395570D8E716F1F4D785;6973.
  ) 
 Here is how much of TeX's memory you used:
- 26442 strings out of 478268
- 529445 string characters out of 5846347
- 778987 words of memory out of 5000000
- 43811 multiletter control sequences out of 15000+600000
- 487913 words of font info for 99 fonts, out of 8000000 for 9000
+ 26433 strings out of 478268
+ 529741 string characters out of 5846347
+ 760585 words of memory out of 5000000
+ 43825 multiletter control sequences out of 15000+600000
+ 487299 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2907b,1218s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on CAANT.pdf (109 pages, 600872 bytes).
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on CAANT.pdf (106 pages, 569497 bytes).
 PDF statistics:
- 1413 PDF objects out of 1440 (max. 8388607)
- 1249 compressed objects within 13 object streams
- 384 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 911 PDF objects out of 1000 (max. 8388607)
+ 757 compressed objects within 8 object streams
+ 382 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
