@@ -120,7 +120,7 @@
 \indexentry{uniformizer|hyperpage}{54}
 \indexentry{valuation|hyperpage}{54}
 \indexentry{valuation|hyperpage}{54}
-\indexentry{valulation|hyperpage}{55}
+\indexentry{valuation|hyperpage}{55}
 \indexentry{exponential valuation|hyperpage}{55}
 \indexentry{ring of \(S\)-integers|hyperpage}{56}
 \indexentry{algebraic \(S\)-integer|hyperpage}{56}
@@ -128,30 +128,39 @@
 \indexentry{\(S\)-class number|hyperpage}{56}
 \indexentry{\(S\)-unit group|hyperpage}{56}
 \indexentry{\(S\)-unit|hyperpage}{56}
-\indexentry{above|hyperpage}{57}
-\indexentry{below|hyperpage}{57}
+\indexentry{above|hyperpage}{58}
+\indexentry{below|hyperpage}{58}
 \indexentry{contraction|hyperpage}{58}
-\indexentry{ramification index|hyperpage}{58}
-\indexentry{residue class extension|hyperpage}{58}
-\indexentry{inertia degree|hyperpage}{58}
-\indexentry{fundamental equality|hyperpage}{59}
+\indexentry{ramification index|hyperpage}{59}
+\indexentry{residue class extension|hyperpage}{59}
+\indexentry{inertia degree|hyperpage}{59}
+\indexentry{fundamental equality|hyperpage}{60}
 \indexentry{inert|hyperpage}{61}
 \indexentry{nonsplit|hyperpage}{61}
 \indexentry{split|hyperpage}{61}
 \indexentry{totally split|hyperpage}{61}
 \indexentry{unramified|hyperpage}{61}
-\indexentry{ramified|hyperpage}{61}
-\indexentry{totally ramified|hyperpage}{61}
-\indexentry{unramified|hyperpage}{61}
-\indexentry{ramified|hyperpage}{61}
-\indexentry{totally ramified|hyperpage}{61}
+\indexentry{ramified|hyperpage}{62}
+\indexentry{totally ramified|hyperpage}{62}
+\indexentry{unramified|hyperpage}{62}
+\indexentry{ramified|hyperpage}{62}
+\indexentry{totally ramified|hyperpage}{62}
+\indexentry{inert|hyperpage}{62}
+\indexentry{nonsplit|hyperpage}{62}
+\indexentry{split|hyperpage}{62}
+\indexentry{totally split|hyperpage}{62}
+\indexentry{unramified|hyperpage}{62}
+\indexentry{ramified|hyperpage}{62}
+\indexentry{totally ramified|hyperpage}{62}
 \indexentry{conjugate|hyperpage}{62}
-\indexentry{ramification index|hyperpage}{62}
-\indexentry{inertia degree|hyperpage}{62}
-\indexentry{decomposition group|hyperpage}{62}
+\indexentry{ramification index|hyperpage}{63}
+\indexentry{inertia degree|hyperpage}{63}
+\indexentry{decomposition group|hyperpage}{63}
 \indexentry{decomposition field|hyperpage}{63}
-\indexentry{inertia group|hyperpage}{65}
-\indexentry{inertia field|hyperpage}{65}
+\indexentry{inertia group|hyperpage}{66}
+\indexentry{inertia field|hyperpage}{66}
+\indexentry{ramification index|hyperpage}{68}
+\indexentry{inertia degree|hyperpage}{68}
 \indexentry{Dirichlet series|hyperpage}{71}
 \indexentry{abscissa of convergence|hyperpage}{72}
 \indexentry{abscissa of absolute convergence|hyperpage}{72}

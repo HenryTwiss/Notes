@@ -8,7 +8,7 @@
 
   \indexspace
 
-  \item above, \hyperpage{57}
+  \item above, \hyperpage{58}
   \item abscissa of absolute convergence, \hyperpage{72}
   \item abscissa of convergence, \hyperpage{72}
   \item additive, \hyperpage{2}
@@ -22,7 +22,7 @@
 
   \indexspace
 
-  \item below, \hyperpage{57}
+  \item below, \hyperpage{58}
   \item Burgess bound, \hyperpage{99}
 
   \indexspace
@@ -49,7 +49,7 @@
   \indexspace
 
   \item decomposition field, \hyperpage{63}
-  \item decomposition group, \hyperpage{62}
+  \item decomposition group, \hyperpage{63}
   \item Dedekind domain, \hyperpage{38}
   \item Dedekind extension, \hyperpage{48}
   \item degree, \hyperpage{27}, \hyperpage{78}, \hyperpage{87}
@@ -80,7 +80,7 @@
   \item functional equation, \hyperpage{88}
   \item functional equation data, \hyperpage{88}
   \item fundamental discriminant, \hyperpage{11}
-  \item fundamental equality, \hyperpage{59}
+  \item fundamental equality, \hyperpage{60}
 
   \indexspace
 
@@ -99,10 +99,10 @@
   \item imprimitive, \hyperpage{9}
   \item indicator function, \hyperpage{2}
   \item induced, \hyperpage{9}
-  \item inert, \hyperpage{61}
-  \item inertia degree, \hyperpage{58}, \hyperpage{62}
-  \item inertia field, \hyperpage{65}
-  \item inertia group, \hyperpage{65}
+  \item inert, \hyperpage{61, 62}
+  \item inertia degree, \hyperpage{59}, \hyperpage{63}, \hyperpage{68}
+  \item inertia field, \hyperpage{66}
+  \item inertia group, \hyperpage{66}
   \item integral, \hyperpage{24}
   \item integral basis, \hyperpage{34}, \hyperpage{38}
   \item integral closure, \hyperpage{25}
@@ -130,7 +130,7 @@
 
   \indexspace
 
-  \item nonsplit, \hyperpage{61}
+  \item nonsplit, \hyperpage{61, 62}
   \item nontrivial zero, \hyperpage{97}
   \item norm, \hyperpage{28}, \hyperpage{37}
   \item normalization, \hyperpage{25}
@@ -159,11 +159,12 @@
   \indexspace
 
   \item Ramanujan sum, \hyperpage{13, 14}
-  \item ramification index, \hyperpage{58}, \hyperpage{62}
-  \item ramified, \hyperpage{61}
+  \item ramification index, \hyperpage{59}, \hyperpage{63}, 
+		\hyperpage{68}
+  \item ramified, \hyperpage{62}
   \item real, \hyperpage{10}
   \item relatively prime, \hyperpage{42}
-  \item residue class extension, \hyperpage{58}
+  \item residue class extension, \hyperpage{59}
   \item residue class field, \hyperpage{45}
   \item Riemann hypothesis, \hyperpage{97}
   \item ring of \(S\)-integers, \hyperpage{56}
@@ -178,15 +179,15 @@
   \item Selberg's orthogonality conjecture, \hyperpage{89}
   \item smooth dyadic weight, \hyperpage{100}
   \item smooth weight, \hyperpage{85}
-  \item split, \hyperpage{61}
+  \item split, \hyperpage{61, 62}
   \item subconvexity estimate, \hyperpage{99}
   \item sum of divisors function, \hyperpage{3}
 
   \indexspace
 
   \item total number of prime divisors function, \hyperpage{4}
-  \item totally ramified, \hyperpage{61}
-  \item totally split, \hyperpage{61}
+  \item totally ramified, \hyperpage{62}
+  \item totally split, \hyperpage{61, 62}
   \item trace, \hyperpage{28}, \hyperpage{37}
   \item trace form, \hyperpage{32}, \hyperpage{38}
   \item trace matrix, \hyperpage{31}
@@ -198,13 +199,12 @@
   \item uniformizer, \hyperpage{54}
   \item unit, \hyperpage{48}
   \item unit group, \hyperpage{47, 48}
-  \item unramified, \hyperpage{61}
+  \item unramified, \hyperpage{61, 62}
   \item unweighted, \hyperpage{85}
 
   \indexspace
 
-  \item valuation, \hyperpage{54}
-  \item valulation, \hyperpage{55}
+  \item valuation, \hyperpage{54, 55}
   \item Von Mangoldt coefficients, \hyperpage{103}
   \item von Mangoldt function, \hyperpage{4}
 

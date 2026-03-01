@@ -1,0 +1,2035 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  1 MAR 2026 10:17
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex
+(/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+) (./preamble.tex (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count194
+\Gm@cntv=\count195
+\c@Gm@tempcnt=\count196
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks18
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen147
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen148
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count197
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count198
+\leftroot@=\count199
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count266
+\DOTSCASE@=\count267
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen149
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count268
+\c@MaxMatrixCols=\count269
+\dotsspace@=\muskip16
+\c@parentequation=\count270
+\dspbrk@lvl=\count271
+\tag@help=\toks20
+\row@=\count272
+\column@=\count273
+\maxfields@=\count274
+\andhelp@=\toks21
+\eqnshift@=\dimen150
+\alignsep@=\dimen151
+\tagshift@=\dimen152
+\tagwidth@=\dimen153
+\totwidth@=\dimen154
+\lineht@=\dimen155
+\@envbody=\toks22
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip52
+\enit@outerparindent=\dimen156
+\enit@toks=\toks24
+\enit@inbox=\box52
+\enit@count@id=\count275
+\enitdp@description=\count276
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen157
+\Hy@linkcounter=\count277
+\Hy@pagecounter=\count278
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count279
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count280
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen158
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count281
+\Field@Width=\dimen159
+\Fld@charsize=\dimen160
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count282
+\c@Item=\count283
+\c@Hfootnote=\count284
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count285
+\c@bookmark@seq@number=\count286
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip53
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\theorem@style=\toks25
+\theorem@@style=\toks26
+\theorembodyfont=\toks27
+\theoremnumbering=\toks28
+\theorempreskipamount=\skip54
+\theorempostskipamount=\skip55
+\theoremframepreskipamount=\skip56
+\theoremframepostskipamount=\skip57
+\theoreminframepreskipamount=\skip58
+\theoreminframepostskipamount=\skip59
+\theorem@preskip=\toks29
+\theorem@postskip=\toks30
+\theorem@framepreskip=\toks31
+\theorem@framepostskip=\toks32
+\theorem@inframepreskip=\toks33
+\theorem@inframepostskip=\toks34
+\theoremindent=\dimen161
+\theorem@indent=\dimen162
+\theoremrightindent=\dimen163
+\theorem@rightindent=\dimen164
+\theoremheaderfont=\toks35
+\theoremseparator=\toks36
+\theoremprework=\toks37
+\theorempostwork=\toks38
+\theoremsymbol=\toks39
+\qedsymbol=\toks40
+\theoremkeyword=\toks41
+\qedsymbol=\toks42
+\thm@topsep=\skip60
+\thm@topsepadd=\skip61
+Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
+\c@endNonectr=\count287
+\c@currNonectr=\count288
+\mysavskip=\skip62
+Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input line 1175.
+\thm@amstmpdepth=\dimen165
+\tagwidth=\dimen166
+Package ntheorem Info: Option `amsthm' loaded on input line 1175.
+\c@proof=\count289
+\c@currproofctr=\count290
+\c@endproofctr=\count291
+\shadecolor=\toks43
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `ntheorem' support loaded on input line 3055.
+Package cleveref Info: always capitalise cross-reference names on input line 7825.
+Package cleveref Info: always capitalise cross-reference names on input line 7852.
+Package cleveref Info: no abbreviation of names on input line 7852.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks44
+\pgfutil@tempdima=\dimen167
+\pgfutil@tempdimb=\dimen168
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box53
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen169
+\Gin@req@width=\dimen170
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks45
+\pgfkeys@temptoks=\toks46
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks47
+))
+\pgf@x=\dimen171
+\pgf@y=\dimen172
+\pgf@xa=\dimen173
+\pgf@ya=\dimen174
+\pgf@xb=\dimen175
+\pgf@yb=\dimen176
+\pgf@xc=\dimen177
+\pgf@yc=\dimen178
+\pgf@xd=\dimen179
+\pgf@yd=\dimen180
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count292
+\c@pgf@countb=\count293
+\c@pgf@countc=\count294
+\c@pgf@countd=\count295
+\t@pgf@toka=\toks48
+\t@pgf@tokb=\toks49
+\t@pgf@tokc=\toks50
+\pgf@sys@id@count=\count296
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count297
+\pgfsyssoftpath@bigbuffer@items=\count298
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen181
+\pgfmath@count=\count299
+\pgfmath@box=\box54
+\pgfmath@toks=\toks51
+\pgfmath@stack@operand=\toks52
+\pgfmath@stack@operation=\toks53
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count300
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen182
+\pgf@picmaxx=\dimen183
+\pgf@picminy=\dimen184
+\pgf@picmaxy=\dimen185
+\pgf@pathminx=\dimen186
+\pgf@pathmaxx=\dimen187
+\pgf@pathminy=\dimen188
+\pgf@pathmaxy=\dimen189
+\pgf@xx=\dimen190
+\pgf@xy=\dimen191
+\pgf@yx=\dimen192
+\pgf@yy=\dimen193
+\pgf@zx=\dimen194
+\pgf@zy=\dimen195
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen196
+\pgf@path@lasty=\dimen197
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen198
+\pgf@shorten@start@additional=\dimen199
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count301
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen256
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen257
+\pgf@pt@y=\dimen258
+\pgf@pt@temp=\dimen259
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen260
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen261
+\pgf@sys@shading@range@num=\count302
+\pgf@shadingcount=\count303
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box58
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box59
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen262
+\pgf@nodesepend=\dimen263
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen264
+\pgffor@skip=\dimen265
+\pgffor@stack=\toks54
+\pgffor@toks=\toks55
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count304
+\pgfplotmarksize=\dimen266
+)
+\tikz@lastx=\dimen267
+\tikz@lasty=\dimen268
+\tikz@lastxsaved=\dimen269
+\tikz@lastysaved=\dimen270
+\tikz@lastmovetox=\dimen271
+\tikz@lastmovetoy=\dimen272
+\tikzleveldistance=\dimen273
+\tikzsiblingdistance=\dimen274
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count305
+\tikznumberofchildren=\count306
+\tikznumberofcurrentchild=\count307
+\tikz@fig@count=\count308
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count309
+\pgfmatrixcurrentcolumn=\count310
+\pgf@matrix@numberofcolumns=\count311
+)
+\tikz@expandcount=\count312
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowinset=\dimen275
+\pgfarrowlength=\dimen276
+\pgfarrowwidth=\dimen277
+\pgfarrowlinewidth=\dimen278
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/braids/tikzlibrarybraids.code.tex
+File: tikzlibrarybraids.code.tex 2019/03/20 v2.0 Tikz/PGF library for drawing braid diagrams
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-02-24 L3 programming layer (loader) 
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count313
+\l__pdf_internal_box=\box64
+))
+\l__braid_tmpa_int=\count314
+\l__braid_length_int=\count315
+\l__braid_strands_int=\count316
+\l__braid_crossing_int=\count317
+\l__braid_anchor_level_int=\count318
+\l__braid_floor_int=\count319
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\arrowsize=\dimen279
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen280
+\pgfdecoratedremainingdistance=\dimen281
+\pgfdecoratedinputsegmentcompleteddistance=\dimen282
+\pgfdecoratedinputsegmentremainingdistance=\dimen283
+\pgf@decorate@distancetomove=\dimen284
+\pgf@decorate@repeatstate=\count320
+\pgfdecorationsegmentamplitude=\dimen285
+\pgfdecorationsegmentlength=\dimen286
+)
+\tikz@lib@dec@box=\box65
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+\c@currtheoremctr=\count321
+\c@endtheoremctr=\count322
+\c@theorem=\count323
+\c@currpropositionctr=\count324
+\c@endpropositionctr=\count325
+\c@currcorollaryctr=\count326
+\c@endcorollaryctr=\count327
+\c@currlemmactr=\count328
+\c@endlemmactr=\count329
+\c@currtheorem*ctr=\count330
+\c@endtheorem*ctr=\count331
+\c@theorem*=\count332
+\c@currproposition*ctr=\count333
+\c@endproposition*ctr=\count334
+\c@proposition*=\count335
+\c@currcorollary*ctr=\count336
+\c@endcorollary*ctr=\count337
+\c@corollary*=\count338
+\c@currlemma*ctr=\count339
+\c@endlemma*ctr=\count340
+\c@lemma*=\count341
+\c@currconjecturectr=\count342
+\c@endconjecturectr=\count343
+\c@currremarkctr=\count344
+\c@endremarkctr=\count345
+\c@currproblemctr=\count346
+\c@endproblemctr=\count347
+\c@currheuristicctr=\count348
+\c@endheuristicctr=\count349
+\c@currconjecture*ctr=\count350
+\c@endconjecture*ctr=\count351
+\c@conjecture*=\count352
+\c@currremark*ctr=\count353
+\c@endremark*ctr=\count354
+\c@remark*=\count355
+\c@currproblem*ctr=\count356
+\c@endproblem*ctr=\count357
+\c@problem*=\count358
+\c@currheuristic*ctr=\count359
+\c@endheuristic*ctr=\count360
+\c@heuristic*=\count361
+\pgf@layerbox@background=\box66
+\pgf@layerboxsaved@background=\box67
+)
+\@indexfile=\write4
+\openout4 = `CAANT.idx'.
+
+
+Writing index file CAANT.idx
+No file CAANT.aux.
+\openout1 = `CAANT.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=433.62001pt
+* \textheight=650.43001pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=-31.8738pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=47.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 13.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count362
+)
+LaTeX Info: Redefining \ref on input line 13.
+LaTeX Info: Redefining \pageref on input line 13.
+LaTeX Info: Redefining \nameref on input line 13.
+\@outlinefile=\write5
+\openout5 = `CAANT.out'.
+
+ (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count363
+\scratchdimen=\dimen287
+\scratchbox=\box68
+\nofMPsegments=\count364
+\nofMParguments=\count365
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count366
+\MPscratchDim=\dimen288
+\MPnumerator=\count367
+\makeMPintoPDFobject=\count368
+\everyMPtoPDFconversion=\toks57
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+\tf@toc=\write6
+\openout6 = `CAANT.toc'.
+
+ [0
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \part{Multiplicative Number Theory}
+                                         [1
+
+]
+\openout2 = `Chapters/Arithmetic_Functions.aux'.
+
+ (./Chapters/Arithmetic_Functions.tex
+Chapter 1.
+[2
+
+
+] [3]
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 79.
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 83.
+ [4]
+
+LaTeX Warning: Reference `prop:Dirichlet_convolution_of_multiplicative_functions' on page 1 undefined on input line 107.
+
+Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 112.
+
+LaTeX Warning: Reference `prop:Mobius_indicator' on page 1 undefined on input line 123.
+
+) [5]
+Chapter 2.
+[6
+
+
+
+]
+\openout2 = `Chapters/Dirichlet_Characters_and_Exponential_Sums.aux'.
+
+ (./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
+Chapter 3.
+[7
+
+
+]
+Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 23.
+ [8]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 59.
+ [9]
+
+LaTeX Warning: Reference `thm:Dirichlet_character_conductor_existance' on page 1 undefined on input line 97.
+
+[10] [11]
+
+LaTeX Warning: Reference `prop:primitive_characters_multiplicative_relatively_prime' on page 1 undefined on input line 152.
+
+
+LaTeX Warning: Reference `prop:primitive_characters_multiplicative_relatively_prime' on page 1 undefined on input line 154.
+
+[12]
+
+LaTeX Warning: Reference `thm:fundamental_discriminant_character_primitive' on page 1 undefined on input line 169.
+
+[13] [14]
+
+LaTeX Warning: Reference `prop:Ramanujan_sum_evaluation' on page 1 undefined on input line 250.
+
+[15]
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 271.
+
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 284.
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 295.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 295.
+
+
+LaTeX Warning: Reference `thm:Gauss_sum_modulus' on page 1 undefined on input line 295.
+
+
+LaTeX Warning: Reference `thm:Gauss_sum_modulus' on page 1 undefined on input line 302.
+
+[16]
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 315.
+
+[17]
+
+LaTeX Warning: Reference `prop:Gauss_sum_equivalence_for_primes' on page 1 undefined on input line 374.
+
+[18]
+
+LaTeX Warning: Reference `prop:Ramanujan_sum_evaluation' on page 1 undefined on input line 395.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_equivalence_for_primes' on page 1 undefined on input line 401.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 401.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 414.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 414.
+
+
+LaTeX Warning: Reference `prop:Gauss_sum_reduction' on page 1 undefined on input line 414.
+
+[19]
+
+LaTeX Warning: Reference `prop:Gauss_sum_equivalence_for_primes' on page 1 undefined on input line 418.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 422.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 429.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `thm:Gauss_sum_modulus' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `thm:Gauss_sum_equivalence' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `prop:quadratic_Gauss_sum_reduction' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `thm:quadratic_Gauss_sum_modulus' on page 1 undefined on input line 445.
+
+[20] [21]
+
+LaTeX Warning: Reference `prop:Gauss_sum_equivalence_for_primes' on page 1 undefined on input line 498.
+
+
+LaTeX Warning: Reference `thm:Gauss's_evaluation' on page 1 undefined on input line 498.
+
+) [22] [23
+
+
+
+]
+\openout2 = `Chapters/Integrality_and_Dedekind_Domains.aux'.
+
+ (./Chapters/Integrality_and_Dedekind_Domains.tex
+Chapter 4.
+[24
+
+
+]
+
+LaTeX Warning: Reference `prop:integral_if_finitely_generated' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Reference `prop:integral_if_finitely_generated' on page 1 undefined on input line 54.
+
+
+LaTeX Warning: Reference `prop:integrality_is_transitive' on page 1 undefined on input line 54.
+
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 58.
+[25] [26]
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 100.
+
+
+LaTeX Warning: Reference `prop:integrality_is_transitive' on page 1 undefined on input line 100.
+
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 109.
+
+LaTeX Warning: Reference `lemma:unique_factorization_domains_are_integrally_closed' on page 1 undefined on input line 110.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 113.
+
+[27] [28] [29]
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 207.
+
+
+LaTeX Warning: Reference `prop:formulas_for_trace_and_norm' on page 1 undefined on input line 207.
+
+
+LaTeX Warning: Reference `prop:trace_and_norm_AKBL' on page 1 undefined on input line 220.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 220.
+
+[30] [31]
+
+LaTeX Warning: Reference `prop:formulas_for_trace_and_norm' on page 1 undefined on input line 287.
+
+[32]
+
+LaTeX Warning: Reference `prop:formulas_for_trace_and_norm' on page 1 undefined on input line 325.
+
+
+LaTeX Warning: Reference `disc_as_square_of_embedding_matrix' on page 1 undefined on input line 332.
+
+[33]
+
+LaTeX Warning: Reference `prop:trace_and_norm_AKBL' on page 1 undefined on input line 359.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 369.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 369.
+
+
+LaTeX Warning: Reference `lemma:unique_factorization_domains_are_integrally_closed' on page 1 undefined on input line 375.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 375.
+
+
+LaTeX Warning: Reference `lem:lemma_for_integral_basis_AKBL' on page 1 undefined on input line 375.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 379.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 381.
+
+[34] [35]
+
+LaTeX Warning: Reference `disc_as_square_of_embedding_matrix' on page 1 undefined on input line 433.
+
+
+Overfull \hbox (5.55753pt too wide) in paragraph at lines 432--434
+\OT1/cmr/m/n/12 have en-tries in $\OMS/cmsy/m/n/12 O$\OT1/cmr/m/n/12 . Cramer's rule to-gether with [] im-ply that $\OML/cmm/m/it/12 d[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^L[]; [] ; ^^L[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 [] \OMS/cmsy/m/n/12 2
+ []
+
+[36]
+
+LaTeX Warning: Reference `disc_as_square_of_embedding_matrix' on page 1 undefined on input line 453.
+
+
+LaTeX Warning: Reference `equ:Vandermonde_determinant_for_discriminant' on page 1 undefined on input line 460.
+
+
+LaTeX Warning: Reference `prop:unit_if_and_only_if_AKBL' on page 1 undefined on input line 478.
+
+
+LaTeX Warning: Reference `prop:trace_and_norm_AKBL' on page 1 undefined on input line 478.
+
+
+LaTeX Warning: Reference `thm:integral_basis_AKBL' on page 1 undefined on input line 482.
+
+[37]
+
+LaTeX Warning: Reference `disc_as_square_of_embedding_matrix' on page 1 undefined on input line 486.
+
+LaTeX Font Info:    Trying to load font information for U+euf on input line 492.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+
+LaTeX Warning: Reference `rem:integers_are_integrally_closed' on page 1 undefined on input line 507.
+
+
+LaTeX Warning: Reference `lemma:unique_factorization_domains_are_integrally_closed' on page 1 undefined on input line 510.
+
+[38]
+
+LaTeX Warning: Reference `lem:integral_ideal_prime_inclusion' on page 1 undefined on input line 551.
+
+[39]
+
+LaTeX Warning: Reference `lem:inverse_for_prime_ideals' on page 1 undefined on input line 586.
+
+[40]
+
+LaTeX Warning: Reference `thm:unique_product_prime_ideals' on page 1 undefined on input line 621.
+
+[41]
+
+LaTeX Warning: Reference `thm:unique_product_prime_ideals' on page 1 undefined on input line 645.
+
+
+LaTeX Warning: Reference `thm:unique_product_prime_ideals' on page 1 undefined on input line 651.
+
+[42]
+
+LaTeX Warning: Reference `lem:inverse_for_prime_ideals' on page 1 undefined on input line 660.
+
+
+LaTeX Warning: Reference `thm:ideal_group_is_a_group' on page 1 undefined on input line 673.
+
+[43]
+
+LaTeX Warning: Reference `lem:relatively_prime_and_principal' on page 1 undefined on input line 735.
+
+[44] [45]
+
+LaTeX Warning: Reference `lem:relatively_prime_and_principal' on page 1 undefined on input line 780.
+
+
+LaTeX Warning: Reference `lem:relatively_prime_and_principal' on page 1 undefined on input line 789.
+
+
+LaTeX Warning: Reference `thm:ideal_group_is_a_group' on page 1 undefined on input line 800.
+
+[46]
+
+LaTeX Warning: Reference `thm:ideal_group_is_a_group' on page 1 undefined on input line 826.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 841.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 841.
+
+
+LaTeX Warning: Reference `prop:discriminant_not_zero' on page 1 undefined on input line 841.
+
+
+LaTeX Warning: Reference `lem:lemma_for_integral_basis_AKBL' on page 1 undefined on input line 841.
+
+[47]
+
+LaTeX Warning: Reference `prop:Dedekind_with_finite_primes_is_PID' on page 1 undefined on input line 860.
+
+
+LaTeX Warning: Reference `thm:integral_basis_AKBL' on page 1 undefined on input line 860.
+
+
+LaTeX Warning: Reference `prop:integral_closure_of_Dedekind_is_Dedekind' on page 1 undefined on input line 862.
+
+
+LaTeX Warning: Reference `thm:unique_product_prime_ideals' on page 1 undefined on input line 870.
+
+[48] [49] [50]
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 975.
+
+[51]
+
+LaTeX Warning: Reference `prop:localization_of_integral_closure_is_integral_closure' on page 1 undefined on input line 984.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 988.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 988.
+
+
+LaTeX Warning: Reference `prop:localization_of_Dedekind_is_Dedekind' on page 1 undefined on input line 991.
+
+
+LaTeX Warning: Reference `prop:localization_of_integral_closure_is_integral_closure' on page 1 undefined on input line 991.
+
+
+LaTeX Warning: Reference `prop:integral_closure_of_Dedekind_is_Dedekind' on page 1 undefined on input line 991.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 1009.
+
+[52]
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 1035.
+
+[53]
+
+LaTeX Warning: Reference `prop:Dedekind_with_finite_primes_is_PID' on page 1 undefined on input line 1082.
+
+
+LaTeX Warning: Reference `lemma:unique_factorization_domains_are_integrally_closed' on page 1 undefined on input line 1088.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1088.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 1088.
+
+[54]
+
+LaTeX Warning: Reference `thm:integral_basis_AKBL' on page 1 undefined on input line 1091.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1091.
+
+
+LaTeX Warning: Reference `prop:localization_prime_bijection' on page 1 undefined on input line 1103.
+
+[55]
+
+LaTeX Warning: Reference `equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes' on page 1 undefined on input line 1119.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1119.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1123.
+
+
+LaTeX Warning: Reference `equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes' on page 1 undefined on input line 1123.
+
+
+LaTeX Warning: Reference `prop:ring_is_intersection_of_all_localizations' on page 1 undefined on input line 1127.
+
+
+LaTeX Warning: Reference `equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes' on page 1 undefined on input line 1127.
+
+) [56]
+\openout2 = `Chapters/Splitting_of_Primes_and_Ramification.aux'.
+
+ (./Chapters/Splitting_of_Primes_and_Ramification.tex
+Chapter 5.
+
+LaTeX Warning: Reference `prop:integral_closure_of_Dedekind_is_Dedekind' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Reference `prop:discriminant_not_zero' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Reference `lem:lemma_for_integral_basis_AKBL' on page 1 undefined on input line 14.
+
+[57
+
+
+
+
+]
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 41.
+
+
+LaTeX Warning: Reference `equ:Dedekind_extension_intersection' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Reference `equ:contraction_for_primes' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 65.
+
+[58]
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 69.
+
+
+LaTeX Warning: Reference `lem:isomorphism_of_quotient_by_prime_integral_ideals' on page 1 undefined on input line 99.
+
+[59]
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 127.
+
+
+LaTeX Warning: Reference `prop:Dedekind_extension_facts' on page 1 undefined on input line 127.
+
+[60]
+
+LaTeX Warning: Reference `prop:field_of_fractions_AKBL' on page 1 undefined on input line 139.
+
+
+LaTeX Warning: Reference `lem:quotient_by_prime_power_isomorphism' on page 1 undefined on input line 143.
+
+[61]
+
+LaTeX Warning: Reference `prop:formulas_for_trace_and_norm' on page 1 undefined on input line 260.
+
+[62]
+
+LaTeX Warning: Reference `prop:trace_and_norm_AKBL' on page 1 undefined on input line 289.
+
+
+LaTeX Warning: Reference `prop:integral_closure_of_Dedekind_is_Dedekind' on page 1 undefined on input line 315.
+
+
+LaTeX Warning: Reference `prop:integral_closure_is_transitive' on page 1 undefined on input line 315.
+
+
+Overfull \hbox (12.37572pt too wide) in paragraph at lines 314--316
+\OMS/cmsy/m/n/12 O\OML/cmm/m/it/12 =\OMS/cmsy/m/n/12 O[]\OML/cmm/m/it/12 =[]$ \OT1/cmr/m/n/12 is a tower of Dedekind ex-ten-sions for the fi-nite sep-a-ra-ble tower $\OML/cmm/m/it/12 L=L[]=K$\OT1/cmr/m/n/12 .
+ []
+
+[63]
+
+LaTeX Warning: Reference `prop:Galois_action_on_primes_is_transitive' on page 1 undefined on input line 323.
+
+[64]
+
+LaTeX Warning: Reference `prop:Galois_action_on_primes_is_transitive' on page 1 undefined on input line 352.
+
+
+LaTeX Warning: Reference `equ:ramification_and_interia_towers' on page 1 undefined on input line 356.
+
+
+LaTeX Warning: Reference `prop:Galois_action_on_primes_is_transitive' on page 1 undefined on input line 364.
+
+
+LaTeX Warning: Reference `prop:decomposition_field_e_and_f' on page 1 undefined on input line 381.
+
+[65]
+
+LaTeX Warning: Reference `prop:integral_closure_of_Dedekind_is_Dedekind' on page 1 undefined on input line 404.
+
+
+LaTeX Warning: Reference `prop:integral_closure_is_transitive' on page 1 undefined on input line 404.
+
+[66]
+
+LaTeX Warning: Reference `prop:T_map_is_surjective' on page 1 undefined on input line 412.
+
+
+LaTeX Warning: Reference `prop:T_map_is_surjective' on page 1 undefined on input line 428.
+
+
+LaTeX Warning: Reference `prop:T_map_is_surjective' on page 1 undefined on input line 431.
+
+
+LaTeX Warning: Reference `equ:decomposition_group_e_f_relation' on page 1 undefined on input line 435.
+
+
+LaTeX Warning: Reference `prop:Galois_action_on_primes_is_transitive' on page 1 undefined on input line 445.
+
+
+LaTeX Warning: Reference `prop:inertia_group_exact_sequence' on page 1 undefined on input line 449.
+
+
+LaTeX Warning: Reference `prop:decomposition_field_e_and_f' on page 1 undefined on input line 449.
+
+[67]
+
+LaTeX Warning: Reference `equ:ramification_and_interia_towers' on page 1 undefined on input line 453.
+
+
+LaTeX Warning: Reference `prop:inertia_field_e_and_f' on page 1 undefined on input line 469.
+
+
+LaTeX Warning: Reference `prop:decomposition_field_e_and_f' on page 1 undefined on input line 469.
+
+./Chapters/Splitting_of_Primes_and_Ramification.tex:471: Argument of \@wrindex has an extra }.
+<inserted text> 
+                \par 
+l.471 ...cation index}\index{ramification}{\index}
+                                                   \(e\) and \textbf{inertia...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+./Chapters/Splitting_of_Primes_and_Ramification.tex:471: Paragraph ended before \@wrindex was complete.
+<to be read again> 
+                   \par 
+l.471 ...cation index}\index{ramification}{\index}
+                                                   \(e\) and \textbf{inertia...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Chapters/Splitting_of_Primes_and_Ramification.tex:471: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.471 ...cation index}\index{ramification}{\index}
+                                                   \(e\) and \textbf{inertia...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (196.03041pt too wide) in paragraph at lines 471--472
+[]\OT1/cmr/m/n/12  \(e\) and \textbfinertia degree\indexinertia degree\index \(f\) of \(\mfp\) in \(L/K\) is that of \(\mcO_L/\mcO_K\), 
+ []
+
+
+Overfull \hbox (1614.91013pt too wide) in paragraph at lines 473--476
+[]\OT1/cmr/m/n/12     \iffalse If \(\t\) is a primitive element for \(K/\Q\) contained in \(\mcO_K\) then the \textbfconductor\indexconductor \(\mfq_K\) of \(K\) relative to \(\t\) is the conductor of \(\mcO_K/\Z\) relative to \(\t\). Even though \(K\) admits an integral basis, \(\mcO_K\) is not necessarily monogenic so that \(\mfq_K\) may not be \(\mcO_K\). \todosay something about Galois number fields...
+ []
+
+
+Overfull \hbox (2344.56645pt too wide) in paragraph at lines 473--476
+\OT1/cmr/m/n/12   \fi\iffalse\section\todoThe Different and Discriminant     Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). It is exceptionally rare for a prime \(\mfp\) of \(K\) to ramify. We will construct two integral ideals, one of \(\mcO\) and the other of \(\smcO\) which will tell us which primes ramify in \(L\) or \(K\). These integral ideals are the different and discriminant respectively. To describe them, we will need the concept of lattices in Dedekind domains. We say that \(\mfL\) is a \textbf\(\smcO\)-
+ []
+
+
+Overfull \hbox (705.73625pt too wide) in paragraph at lines 473--476
+\OT1/cmr/m/n/12 lattice\index\(\smcO\)-lattice if it is a finitely generated \(\smcO\)-submodule of \(L\). Moreover, we say that \(\mfL\) is \textbfcomplete\indexcomplete if it spans \(L/K\). That is, \(\mfL\) contains a basis of \(L/K\). 
+ []
+
+
+Overfull \hbox (171.95148pt too wide) in paragraph at lines 477--480
+[]\OT1/cmr/m/n/12     \beginremark       A \(\Z\)-lattice is an integral lattice and a complete \(\Z\)-lattice is a complete integral lattice.
+ []
+
+[68]
+Overfull \hbox (182.03471pt too wide) in paragraph at lines 481--482
+[]\OT1/cmr/m/n/12     A \(\smcO\)-lattice \(\mfL\) need not be a fractional ideal of \(\smcO\) since it does not need to be a \(\mcO\)-
+ []
+
+
+Overfull \hbox (78.66635pt too wide) in paragraph at lines 481--482
+\OT1/cmr/m/n/12 submodule of \(L\). However, every fractional ideal \(\mfF\) of \(\mcO\) is a complete \(\smcO\)-
+ []
+
+
+Overfull \hbox (68.45256pt too wide) in paragraph at lines 481--482
+\OT1/cmr/m/n/12 lattice. Indeed, by \crefprop:Dedekind_extension_facts \(\mcO\) is a finitely generated \(\smcO\)-
+ []
+
+
+Overfull \hbox (1763.0392pt too wide) in paragraph at lines 481--482
+\OT1/cmr/m/n/12 module and so \(\mfF\) is a finitely generated \(\smcO\)-module as well. Moreover, \(\mfF\) contains a basis of \(L/K\). For if \(\l_1,\ldots,\l_n\) is a basis for \(L/K\) we may use \crefprop:field_of_fractions_AKBL to multiply by a nonzero element of \(\smcO\), if necessary, to ensure that this basis is contained in \(\mcO\). Choosing any nonzero \(\a \in \mfF\), \(\a\l_1,\ldots,\a\l_n\) is a basis for \(L/K\) inside \(\mfF\). 
+ []
+
+
+Overfull \hbox (1.0866pt too wide) in paragraph at lines 483--486
+[]\OT1/cmr/m/n/12     \beginremark       A \(\smcO\)-lattice \(\mcL\) need not be a free \(\smcO\)-
+ []
+
+
+Overfull \hbox (82.25659pt too wide) in paragraph at lines 483--486
+\OT1/cmr/m/n/12 submodule of \(L\). Indeed, we are only guaranteed that \(\mcL\) is a finitely generated \(\smcO\)-
+ []
+
+
+Overfull \hbox (21.29195pt too wide) in paragraph at lines 483--486
+\OT1/cmr/m/n/12 submodule of \(L\) not that it is a free finitely generated \(\smcO\)-submodule of \(L\).
+ []
+
+
+Overfull \hbox (178.70558pt too wide) in paragraph at lines 487--500
+[]\OT1/cmr/m/n/12     Recall by \creflem:trace_is_nondegenerate that there is a nondegenerate symmetric bilinear form on \(K\) given by
+ []
+
+
+Overfull \hbox (1.87918pt too wide) in paragraph at lines 487--500
+\OT1/cmr/m/n/12     \[       \Trace_L/K:L \x L \to K \qquad (\l,\eta) \mapsto \Trace_L/K(\l\eta).     \]
+ []
+
+
+Overfull \hbox (1052.03125pt too wide) in paragraph at lines 487--500
+\OT1/cmr/m/n/12     We call this bilinear form the \textbftrace form\indextrace form of \(L/K\). The trace form makes \(L\) into a nondegenerate inner product space over \(K\) and so every basis \(\l_1,\ldots,\l_n\) admits a dual basis \(\l_1^\vee,\ldots,\l_n^\vee\) with respect to \(\Trace_L/K\) defined by
+ []
+
+
+Overfull \hbox (780.38686pt too wide) in paragraph at lines 487--500
+\OT1/cmr/m/n/12     \[       \Trace_L/K(\l_i\l_j^\vee) = \d_i,j,     \]     for \(1 \le i,j \le n\). The trace form will allow us to introduce duals. Indeed, if \(\mfF\) is a fractional ideal \(\mcO\), the \textbfdual\indexdual \(\mfF^\vee\) of \(\mfF\) is defined by
+ []
+
+
+Overfull \hbox (156.4248pt too wide) in paragraph at lines 487--500
+\OT1/cmr/m/n/12     \[       \mfF^\vee = \\l \in L:\Trace_L/K(\l\mfF) \subseteq \smcO\.     \]     We say that \(\mfF\) is \textbfself-
+ []
+
+
+Overfull \hbox (255.21036pt too wide) in paragraph at lines 487--500
+\OT1/cmr/m/n/12 dual\indexself-dual if \(\mfF^\vee = \mfF\). The following proposition shows that the dual \(\mfF^\vee\) is indeed a fractional ideal: 
+ []
+
+
+Overfull \hbox (942.27821pt too wide) in paragraph at lines 501--526
+[]\OT1/cmr/m/n/12     \beginproposition\labelprop:dual_lattice_is_fractional       Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(\mfF\) be a fractional ideal of \(\mcO\). Then \(\mfF^\vee\) is also a fractional ideal of \(\mcO\) and
+ []
+
+
+Overfull \hbox (3513.19324pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12 proof       We will first show that \(\mfF^\vee\) is a finitely generated \(\smcO\)-submodule of \(L\). Let \(\l_1,\ldots,\l_n\) be a basis for \(L/K\). Using \crefprop:field_of_fractions_AKBL to multiply by a nonzero element of \(\smcO\), if necessary, we can ensure that this basis is contained in \(\mcO\). Now choose some nonzero \(\a \in \mfF \cap \smcO\) (such an element exists since every prime \(\mfP\) of \(\mcO\) is above a prime \(\mfp\) of \(\smcO\) and \(\mfF\) is of the form \(\mfF = \frac1\d\mfA\) for some nonzero \(\d \in \mcO\) and integral ideal \(\mfA\) so that \(\mfA \subseteq \mfF\)). Now suppose \(\l \in \mfF^\vee\) and write \(\l = \k_1\l_1+\cdots+\k_n\l_n\) with \(\k_i \in K\) for \(1 \le i \le n\). Then linearity of the trace implies
+ []
+
+
+Overfull \hbox (889.36488pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12       for \(1 \le i \le n\). These \(n\) equations are equivalent to the identity       \[         \Trace_L/K(\l_1,\ldots,\l_n)\beginpmatrix \a\k_1 \\ \vdots \\ \a\k_n \endpmatrix = \beginpmatrix \Trace_L/K(\a\l_1\l) \\ \vdots \\ \Trace_L/K(\a\l_n\l) \endpmatrix.
+ []
+
+
+Overfull \hbox (672.35324pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12       \]       Mul-ti-ply-ing on the left by the adjugate \(\adj(\Trace_L/K(\l_1,\ldots,\l_n))\) of \(\Trace_L/K(\l_1,\ldots,\l_n)\) and recalling that a matrix times its adjugate is its determinant times the identity, we see that
+ []
+
+
+Overfull \hbox (648.91045pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12       \[         d_L/K(\l_1,\ldots,\l_n)\beginpmatrix \a\k_1 \\ \vdots \\ \a\k_n \endpmatrix = \adj(\Trace_L/K(\l_1,\ldots,\l_n))\beginpmatrix \Trace_L/K(\a\l_1\l) \\ \vdots \\ \Trace_L/K(\a\l_n\l) \endpmatrix.
+ []
+
+
+Overfull \hbox (1885.6171pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12       \]       Since \(\l_1,\ldots,\l_n\) is a basis for \(L/K\) that is contained in \(\mcO\), the matrix \(\Trace_L/K(\l_1,\ldots,\l_n)\) has entries in \(\smcO\) by \crefprop:trace_and_norm_AKBL and therefore \(\adj(\Trace_L/K(\l_1,\ldots,\l_n))\) does too. As \(\a\l_i \in \mfF\) (because \(\l_j \in \mcO\) for all \(j\)) and \(\l \in \mfF^\vee\), \crefprop:trace_and_norm_AKBL again implies \(\Trace_L/K(\a\l_i\l) \in \smcO\) for all \(i\). So the right-
+ []
+
+
+Overfull \hbox (564.58908pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12 hand side has entires in \(\smcO\) and hence the left-hand side must as well. This means \(d_L/K(\l_1,\ldots,\l_n)\a\k_i \in \smcO\) for all \(i\). Since \(\l \in \mfF^\vee\) was arbitrary, we have
+ []
+
+
+Overfull \hbox (194.72487pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12       \[         \a d_L/K(\l_1,\ldots,\l_n)\mfF^\vee \subseteq \mcO.       \]       As \(\mcO\) is a finitely generated \(\smcO\)-
+ []
+
+
+Overfull \hbox (132.0019pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12 module by \crefprop:Dedekind_extension_facts, it follows that \(\mfF^\vee\) is a finitely generated \(\smcO\)-
+ []
+
+
+Overfull \hbox (4828.39778pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12 submodule of \(L\). Therefore \(\mfF^\vee\) is also a finitely generated \(\mcO\)-submodule of \(L\) if it is preserved under multiplication by \(\mcO\). Let \(\a \in \mcO\) and \(\b \in \mfF^\vee\). Then we must show \(\a\b \in \mfF^\vee\). To see this, observe that \(\Trace_L/K(\a\b\mfF) \subseteq \Trace_L/K(\b\mfF) \subseteq \smcO\) by \crefprop:trace_and_norm_AKBL since \(\a\mfF \subseteq \mfF\) and \(\b \in \mfF^\vee\). Therefore \(\a\b \in \mfF^\vee\) and hence \(\mfF^\vee\) is a fractional ideal proving the first statement. To prove the second statement we will show containment in both directions. For the forward containment, first suppose \(\a \in \mfF^\vee\) and \(\b \in \mfF\). Then \(\Trace_L/K(\a\b\mcO) \subseteq \Trace_L/K(\a\mfF) \subseteq \smcO\) by \crefprop:trace_and_norm_AKBL since \(\b\mcO \subseteq \mfF\) and \(\a \in \mfF^\vee\). Hence \(\a\b \in \mcO^\vee\) so that \(\mfF^\vee\mfF \subseteq \mcO^\vee\) and therefore \(\mfF^\vee \subseteq \mfF^-
+ []
+
+
+Overfull \hbox (114.0507pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12 1\mcO^\vee\). This proves the forward containment. For the reverse containment, suppose \(\a \in \mfF^-
+ []
+
+
+Overfull \hbox (914.25356pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12 1\) and \(\b \in \mcO^\vee\). Then \(\Trace_L/K(\a\b\mfF) \subseteq \Trace_L/K(\b\mcO) \subseteq \smcO\) by \crefprop:trace_and_norm_AKBL since \(\a\mfF \subseteq \mcO\) and \(\b \in \mcO^\vee\). Thus \(\a\b \in \mfF^\vee\) implying \(\mfF^-
+ []
+
+
+Overfull \hbox (76.35526pt too wide) in paragraph at lines 501--526
+\OT1/cmr/m/n/12 1\mcO^\vee \subseteq \mfF^\vee\) and proving the reverse containment. This completes the proof.
+ []
+
+
+Overfull \hbox (194.24153pt too wide) in paragraph at lines 527--528
+[]\OT1/cmr/m/n/12     As the dual \(\mfF^\vee\) is a fractional ideal by \crefprop:dual_lattice_is_fractional, it is also a complete \(\smcO\)-
+ []
+
+
+Overfull \hbox (1037.32167pt too wide) in paragraph at lines 529--538
+[]\OT1/cmr/m/n/12     \beginproposition\labelprop:localization_of_dual_is_dual_of_localization       Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smcO\). Then for any fractional ideal \(\mfF\) of \(\mcO\), we have
+ []
+
+
+Overfull \hbox (134.07831pt too wide) in paragraph at lines 529--538
+\OT1/cmr/m/n/12 gin-proof       For the forward containment, suppose \(\l \in (\mfFD^-1)^\vee\). Then \(\Trace_L/K(\l\mfFD^-
+ []
+
+
+Overfull \hbox (322.75551pt too wide) in paragraph at lines 529--538
+\OT1/cmr/m/n/12 1) \subseteq \smcOD^-1\). As \(D \subset K\), linearity of the trace implies \(\l = \frac\a\d\) with \(\Trace_L/K(\a\mfF)\d \subseteq \smcOD^-
+ []
+
+
+Overfull \hbox (558.08363pt too wide) in paragraph at lines 529--538
+\OT1/cmr/m/n/12 1\) so that \(\a \in \mfF^\vee\) and \(\d \in D\). Hence \(\l \in (\mfF^\vee)D^-1\) and the forward containment follows. For the reverse containment, suppose \(\frac\a\d \in (\mfF^\vee)D^-
+ []
+
+
+Overfull \hbox (560.90862pt too wide) in paragraph at lines 529--538
+\OT1/cmr/m/n/12 1\). Then \(\a \in \mfF^\vee\) so that \(\Trace_L/K(\a\mfF) \subseteq \smcO\) and \(\d \in D\). As \(D \subset K\), linearity of the trace implies \(\Trace_L/K(\l\mfF) \subseteq \smcOD^-
+ []
+
+
+Overfull \hbox (109.28131pt too wide) in paragraph at lines 529--538
+\OT1/cmr/m/n/12 1\) with \(\l = \frac\a\d\). Hence \(\frac\a\d \in (\mfFD^-1)^\vee\) and the reverse containment holds.
+ []
+
+
+Overfull \hbox (405.7046pt too wide) in paragraph at lines 539--568
+[]\OT1/cmr/m/n/12     We will now introduce the different and the discriminant. We define the \textbfcomplement\indexcomplement \(\mfC_\mcO/\smcO\) of \(\mcO/\smcO\) by
+ []
+
+
+Overfull \hbox (928.04733pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12     \[       \mfC_\mcO/\smcO = \mcO^\vee.     \]     This is a fractional ideal by \crefprop:dual_lattice_is_fractional. The \textbfdifferent\indexdifferent \(\mfD_\mcO/\smcO\) of \(\mcO/\smcO\) is defined to be the inverse of the complement \(\mfC_\mcO/\smcO\):
+ []
+
+
+Overfull \hbox (730.33691pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12     \[       \mfD_\mcO/\smcO = (\mcO^\vee)^-1.     \]     As \(\mcO \subseteq \mcO^\vee\) by \crefprop:trace_and_norm_AKBL, it follows from \crefprop:explicit_inverse_ideal that \(\mfD_\mcO/\smcO\) is an integral ideal and
+ []
+
+
+Overfull \hbox (439.18295pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12     \[       \mfD_\mcO/\smcO = \\l \in L: \l\mcO^\vee \subseteq \mcO\.     \]     Also, \creflem:cancellation_isomorphism gives the first isomorphism in the following chain:
+ []
+
+
+Overfull \hbox (157.3947pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12     \be-ginequa-tion\labelequ:different_isomorphism_chain       \mcO/\mfD_\mcO/\smcO \cong \mfD_\mcO/\smcO^-
+ []
+
+
+Overfull \hbox (70.08865pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12 1/\mcO \cong \mcO^\vee/\mcO.     \en-d-e-qua-tion     From this chain of isomorphisms we find that
+ []
+
+
+Overfull \hbox (463.1744pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12     \[       \mfD_\mcO/\smcO \subseteq \mcO \subseteq \mcO^\vee.     \]     Therefore the different \(\mfD_\mcO/\smcO\) is a measure of how much \(\mcO\) fails to be self-
+ []
+
+
+Overfull \hbox (876.25252pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12 dual for if \(\mfD_\mcO/\smcO = \mcO^\vee\) then \(\mcO\) must be self-dual. Moreover, by \crefprop:dual_lattice_is_fractional we can express the dual fractional ideal \(\mfF^\vee\) of a fractional ideal \(\mfF\) of \(\smcO\) in terms of the different as
+ []
+
+
+Overfull \hbox (2140.89728pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12     \[       \mfF^\vee = \mfF^-1\mfD_\mcO/\smcO^-1.     \]     Now for the discriminant. We define the \textbfdiscriminant\indexdiscriminant \(\mfd_\mcO/\smcO\) of \(\mcO/\smcO\) to be the ideal of \(\smcO\) generated by all discriminants \(d_L/K(\a_1,\ldots,\a_n)\) as \(\a_1,\ldots,\a_n\) run over all bases of \(L/K\) contained in \(\mcO\). Note that \(\mfd_\mcO/\smcO\) is necessarily an integral ideal. Recall that if \(\mcO/\smcO\) admits an integral then \(\mcO\) is a free \(\smcO\)-
+ []
+
+
+Overfull \hbox (248.8743pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12 module of rank \(n\). In this case, bases of \(L/K\) contained in \(\mcO\) are precisely the integral bases of \(\mcO/\smcO\). Then
+ []
+
+
+Overfull \hbox (1862.32005pt too wide) in paragraph at lines 539--568
+\OT1/cmr/m/n/12     \[       \mfd_\mcO/\smcO = d_\smcO(\mcO)\smcO,     \]     so that the discriminant \(\mfd_\mcO/\smcO\) is generated by the discriminant \(d_\smcO(\mcO)\). In particular, \(\mfd_\mcO/\smcO\) is a principal integral ideal if \(\mcO/\smcO\) admits an integral basis. By \crefthm:integral_basis_AKBL this will hold if \(\smcO\) is a principal ideal domain but not necessarily in general. The different and discriminant also respect localization: 
+ []
+
+[69]
+Overfull \hbox (780.03406pt too wide) in paragraph at lines 569--582
+[]\OT1/cmr/m/n/12     \beginproposition\labelprop:different_and_discriminant_respect_localization       Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smcO\). Then
+ []
+
+
+Overfull \hbox (115.80489pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12       \[         \mfD_\mcOD^-1/\smcOD^-1 = \mfD_\mcO/\smcOD^-1 \quad \textand \quad \mfd_\mcOD^-
+ []
+
+
+Overfull \hbox (229.49118pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12 1/\smcOD^-1 = \mfd_\mcO/\smcOD^-1       \]     \end-propo-si-tion     \be-gin-proof       For the first identity, it is equivalent to show
+ []
+
+
+Overfull \hbox (755.98154pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12       \[         ((\mcOD^-1)^\vee)^-1 = (\mcO^\vee)^-1D^-1,       \]       by definition of the different. Applying \crefprop:localization_of_inverse_is_inverse_of_localization,prop:localization_of_dual_is_dual_of_localization, we see that the right-
+ []
+
+
+Overfull \hbox (789.5951pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12 had side is equal to the left-hand side as desired. For the second identity, we will show containment in both directions. For the forward containment, suppose \(\frac\a_1\d_1,\ldots,\frac\a_n\d_n\) is a basis of \(L/K\) contained in \(\mcOD^-
+ []
+
+
+Overfull \hbox (1409.872pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12 1\). Setting \(\d = \d_1 \cdots \d_n\), we see that \(\frac\a_1\d\d_1,\ldots,\frac\a_n\d\d_n\) is a basis of \(L/K\) contained in \(\mcO\). As \(D \subset K\) and \(d_L/K\left(\frac\a_1\d\d_1,\ldots,\frac\a_n\d\d_n\right) \in \mfd_\mcO/\smcO\), linearity of the trace implies \(d_L/K\left(\frac\a_1\d_1,\ldots,\frac\a_n\d_n\right) \in \mfd_\mcO/\smcOD^-
+ []
+
+
+Overfull \hbox (402.73244pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12 1\). This shows the forward containment. For the reverse containment, suppose \(\a_1,\ldots,\a_n\) is a basis of \(L/K\) contained in \(\mcO\) and let \(\d \in D^-
+ []
+
+
+Overfull \hbox (35.32236pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12 1\). Then \(\frac\a_1\d,\ldots,\frac\a_n\d\) is a basis for \(L/K\) contained in \(\mcOD^-
+ []
+
+
+Overfull \hbox (85.73851pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12 1\). As \(D \subseteq K\) and \(d_L/K\left(\frac\a_1\d,\ldots,\frac\a_n\d\right) \in \mfd_\mcOD^-
+ []
+
+
+Overfull \hbox (55.98048pt too wide) in paragraph at lines 569--582
+\OT1/cmr/m/n/12 1/\smcOD^-1\), linearity of the trace again implies \(d_L/K(\a_1\ldots,\a_n) \in \mfd_\mcOD^-
+ []
+
+
+Overfull \hbox (719.29164pt too wide) in paragraph at lines 583--584
+[]\OT1/cmr/m/n/12     We want to show that a prime \(\mfP\) of \(\mcO\) ramifies in \(\mcO/\smcO\) if and only if it divides the different \(\mfD_\mcO/\smcO\) provided the residue class extensions are separable. We first require a lemma: 
+ []
+
+
+Overfull \hbox (1015.82884pt too wide) in paragraph at lines 585--591
+[]\OT1/cmr/m/n/12     \beginlemma\labellem:different_containment_lemma       Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(\mfA\) be an integral ideal of \(\mcO\). Then \(\mfA \mid \mfD_\mcO/\smcO\) if and only if \(\Trace_L/K(\mfA^-
+ []
+
+
+Overfull \hbox (536.21114pt too wide) in paragraph at lines 585--591
+\OT1/cmr/m/n/12 1) \subseteq \smcO\).     \endlemma     \be-gin-proof       \(\mfA\) divides \(\mfD_\mcO/\smcO\) if and only if \(\mfD_\mcO/\smcO \subseteq \mfA\). This equivalent to \((\mcO^\vee)^-
+ []
+
+
+Overfull \hbox (382.7493pt too wide) in paragraph at lines 585--591
+\OT1/cmr/m/n/12 1 \subseteq \mfA\) and inverting shows the further equivalence \(\mfA^-1 \subseteq \mcO^\vee\). This last containment is equivalent to \(\Trace_L/K(\mfA^-
+ []
+
+
+Overfull \hbox (10.58649pt too wide) in paragraph at lines 592--593
+[]\OT1/cmr/m/n/12     With \creflem:different_containment_lemma in hand, we can now prove our claim: 
+ []
+
+
+Overfull \hbox (1709.3411pt too wide) in paragraph at lines 594--644
+[]\OT1/cmr/m/n/12     \begintheorem\labelthm:ramifies_if_and_only_if_divides_the_different       Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Then a prime \(\mfP\) of \(\mcO\) ramifies in \(\mcO/\smcO\) if and only if \(\mfP\) divides \(\mfD_\mcO/\smcO\). In particular, if \(\mfP\) is above \(\mfp\) then the following hold:
+ []
+
+
+Overfull \hbox (365.10228pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12       \be-gi-nenu-mer-ate[label*=(\roman*)]         \item \(\mfP^e_\mfp(\mfP) \mid \mfD_\mcO/\smcO\) if and only if \(e_\mfp(\mfP) \equiv 0 \tmod\mfp\).
+ []
+
+
+Overfull \hbox (214.63857pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \item \(\mfP^e_\mfp(\mfP)-1 \mid\mid \mfD_\mcO/\smcO\) if and only if \(e_\mfp(\mfP) \not\equiv 0 \tmod\mfp\).
+ []
+
+
+Overfull \hbox (4394.21463pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12       \en-de-nu-mer-ate     \endthe-o-rem     \be-gin-proof       We first show that (i) and (ii) together imply that \(\mfP\) ramifies in \(\mcO/\smcO\) if and only if \(\mfP \mid \mfD_\mcO/\smcO\). Since the residue class extensions are separable by assumption, \(\mfP\) ramifies in \(\mcO/\smcO\) if and only if \(e_\mfp(\mfP) \ge 2\). Therefore (i) and (ii) together show that \(\mfP\) ramifies in \(\mcO/\smcO\) if and only if \(\mfP \mid \mfD_\mcO/\smcO\) (note that \(1 \not\equiv 0 \tmod\mfp\) for any prime \(\mfp\)). Therefore it remains to prove (i) and (ii). In view of \crefprop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization, it suffices to assume \(\mcO/\smcO\) is a local Dedekind extension. Therefore \(\smcO\) is a discrete valuation ring, \(\mcO\) is a principal ideal domain, and \(\mcO/\smcO\) admits an integral basis \(\a_1,\ldots,\a_n\) making \(\mcO\) a free \(\smcO\)-
+ []
+
+
+Overfull \hbox (832.93494pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12 module of rank \(n\). We will first show \(\mfP^e_\mfp(\mfP)-1 \mid \mfD_\mcO/\smcO\) independent of \(e_\mfp(\mfP)\) modulo \(\mfp\) (note that this is satisfied by both (i) and (ii)). To this end, write \(\mfp\mcO = \mfP^e_\mfp(\mfP)-
+ []
+
+
+Overfull \hbox (362.21759pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12 1\mfA\) for some integral ideal \(\mfA\) of \(\mcO\) so that \(\mfP \mid\mid \mfA\). By \creflem:different_containment_lemma, \(\mfP^e_\mfp(\mfP)-
+ []
+
+
+Overfull \hbox (171.58208pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12 1 \mid \mfD_\mcO/\smcO\) if and only if \(\Trace_L/K(\mfP^1-e_\mfp(\mfP)) \subseteq \smcO\). Since \(\mfP^1-
+ []
+
+
+Overfull \hbox (965.95299pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12 e_\mfp(\mfP) = \mfp^-1\mfA\), linearity of the trace implies that this is equivalent to \(\Trace_L/K(\mfA) \subseteq \mfp\). By \crefprop:trace_and_norm_reduce_for_integral_basis, \(\Trace_K/L(\mfA) = \Trace_\mcO/\smcO(\mfA)\) and so it is further equivalent to show
+ []
+
+
+Overfull \hbox (439.97507pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12       \[         \Trace_\mcO/\smcO(\mfA) \subseteq \mfp,       \]       Let \(\a \in \mfA\) and \(T_\a\) be the multiplication by \(\a\) map. Then \(\mfp\mcO\) is \(T_\a\)-
+ []
+
+
+Overfull \hbox (345.2969pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12 invariant because it is an ideal of \(\mcO\). This induces a multiplication by \(\conj\a\) map \(T_\conj\a\) on \(\mcO/\mfp\mcO\) as a \(\F_\mfp\)-
+ []
+
+
+Overfull \hbox (145.80592pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12 vector space. As the classes \(\conj\a_1,\ldots,\conj\a_n\) are a basis for \(\mcO/\mfp\mcO\) as a \(\F_\mfp\)-
+ []
+
+
+Overfull \hbox (234.52167pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12 vector space, it follows that       \[         \Trace_\mcO/\smcO(\a) \equiv \Trace_(\mcO/\mfp\mcO)/\F_\mfp(\conj\a) \tmod\mfp.
+ []
+
+
+Overfull \hbox (249.79651pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12       \]       There-fore it is yet further equivalent to show       \[         \Trace_(\mcO/\mfp\mcO)/\F_\mfp(\conj\a) \equiv 0 \tmod\mfp,
+ []
+
+
+Overfull \hbox (2744.68451pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12       \]       for all \(\a \in \mfA\). To prove this, observe that \(\conj\a\) runs over to the subring \(\mfA/\mfp\mcO\) of \(\mcO/\mfp\mcO\) as \(\a\) runs over \(\mfA\). By construction, \(\mfA\) is divisible by every prime factor of \(\mfp\mcO\) and so a power, say \(k\), of \(\mfA\) is divisible by \(\mfp\mcO\). But this means \(T_\conj\a^k\) is the zero operator so that it is nilpotent. As nilpotent maps have trace zero, \(\Trace_(\mcO/\mfp\mcO)/\F_\mfp(\conj\a) = 0\). But then \(\Trace_\mcO/\smcO(\a) \equiv 0 \tmodp\) and, as \(\a\) was arbitrary, the claim is justified. We now prove (i) and (ii):
+ []
+
+
+Overfull \hbox (1123.6972pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12       \be-gi-nenu-mer-ate[label*=(\roman*)]         \item Begin by writing \(\mfp\mcO = \mfP^e_\mfp(\mfP)\mfA\) for some integral ideal \(\mfA\) of \(\mcO\) so that \(\mfA\) is relatively prime to \(\mfP\). Arguing as before, we find that \(\mfP^e_\mfp(\mfP) \mid \mfD_\mcO/\smcO\) if and only if
+ []
+
+
+Overfull \hbox (622.1246pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \[           \Trace_(\mcO/\mfp\mcO)/\F_\mfp(\conj\a) = 0,         \]         for all \(\a \in \mfA\). Since \(\mfP^e_\mfp(\mfP)\) and \(\mfA\) are relatively prime, the Chinese remainder theorem implies
+ []
+
+
+Overfull \hbox (14.49896pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \[           \mcO/\mfp\mcO \cong (\mcO/\mfP^e_\mfp(\mfP)) \op (\mcO/\mfA).
+ []
+
+
+Overfull \hbox (521.11453pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \]         So there exists \(\b,\g \in \mcO\) such that \(\b \equiv \a \tmod\mfP^e_\mfp(\mfP)\) and \(\g \equiv \a \tmod\mfA\). Then \crefequ:trace_and_norm_direct_sums implies
+ []
+
+
+Overfull \hbox (390.32564pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \[           \Trace_(\mcO/\mfp\mcO)/\F_\mfp(\conj\a) = \Trace_(\mcO/\mfP^e_\mfp(\mfP))/\F_\mfp(\conj\b)+\Trace_(\mcO/\mfA)/\F_\mfp(\conj\g).
+ []
+
+
+Overfull \hbox (320.74022pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \]         As \(\a \in \mfA\), \(\conj\g = 0\) and so \(\Trace_(\mcO/\mfA)/\F_\mfp(\conj\g) = 0\). Therefore it is further equivalent to show
+ []
+
+
+Overfull \hbox (1069.59914pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \[           \Trace_(\mcO/\mfP^e_\mfp(\mfP))/\F_\mfp(\conj\b) = 0,         \]         for all \(\b \in \mcO\). We will show that this occurs if and only if \(e_\mfp(\mfP) \equiv 0 \tmod\mfp\). So let \(\b \in \mcO\). By \creflem:quotient_by_prime_power_isomorphism, we have an isomorphism
+ []
+
+
+Overfull \hbox (49.42223pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \[           \mcO/\mfP^e_\mfp(\mfP) \cong \bigop_0 \le e \le e_\mfp(\mfP)-1\mcO/\mfP.
+ []
+
+
+Overfull \hbox (955.52534pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \]         There-fore there exists \(\b_e \in \mcO\) such that \(\b \equiv \b_e \tmod\mfP\) for all \(e\). But then \(\Trace_\F_\mfP/\F_\mfp(\conj\b_e) = \Trace_\F_\mfP/\F_\mfp(\conj\b)\) for all \(e\), and combining with \crefequ:trace_and_norm_direct_sums gives
+ []
+
+
+Overfull \hbox (188.61942pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \[           \Trace_(\mcO/\mfP^e_\mfp(\mfP))/\F_\mfp(\conj\b) = e_\mfp(\mfP)\Trace_\F_\mfP/\F_\mfp(\conj\b),
+ []
+
+
+Overfull \hbox (1743.08939pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \]         which we recall is an element of \(\F_\mfp\). As the residue class extensions are assumed to be separable, \creflem:trace_is_nondegenerate implies that \(\Trace_\F_\mfP/\F_\mfp(\conj\b)\) cannot be zero for all \(\b \in \mcO\). So it must be the case that \(\Trace_(\mcO/\mfP^e_\mfp(\mfP))/\F_\mfp(\conj\b) = 0\) for all \(\b \in \mcO\) if and only if \(e_\mfp(\mfP) \equiv 0 \tmod\mfp\). This proves (i).
+ []
+
+
+Overfull \hbox (134.70467pt too wide) in paragraph at lines 594--644
+\OT1/cmr/m/n/12         \item As we have already shown \(\mfP^e_\mfp(\mfP)-1 \mid \mfD_\mcO/\smcO\), (ii) follows from (i).
+ []
+
+[70]
+Overfull \hbox (1468.76027pt too wide) in paragraph at lines 645--646
+[]\OT1/cmr/m/n/12     Note that \crefthm:ramifies_if_and_only_if_divides_the_different does not tell us the degree to which \(\mfP\) divides \(\mfD_\mcO/\smcO\) in the case \(e_\mfp(\mfP) \equiv 0 \tmodp\). It only tells us that the degree is at least \(e_\mfp(\mfP)\). Also, only finitely many primes can ramify in \(L\) as a corollary of \crefthm:ramifies_if_and_only_if_divides_the_different: 
+ []
+
+
+Overfull \hbox (878.69702pt too wide) in paragraph at lines 647--653
+[]\OT1/cmr/m/n/12     \begincorollary\labelcor:finitely_many_primes_ramify_L       Let \(\mcO/\smcO\) be a Dedekind extension of a finite separable extension \(L/K\) and assume that all residue class extensions are separable. Then only finitely many primes ramify in \(L\).
+ []
+
+
+Overfull \hbox (904.94804pt too wide) in paragraph at lines 647--653
+\OT1/cmr/m/n/12     \end-corol-lary     \be-gin-proof       There are only finitely many prime factors of \(\mfD_\mcO/\smcO\) by the prime factorization of fractional ideals. Therefore only finitely many primes can ramify in \(L\) by \crefthm:ramifies_if_and_only_if_divides_the_different.
+ []
+
+
+Overfull \hbox (549.91005pt too wide) in paragraph at lines 654--655
+[]\OT1/cmr/m/n/12     Similarly, a prime \(\mfp\) of \(\smcO\) ramifies in \(\mcO/\smcO\) if and only if it divides the discriminant \(\mfd_\mcO/\smcO\) provided the residue class extensions are separable: 
+ []
+
+
+Overfull \hbox (1380.42226pt too wide) in paragraph at lines 656--686
+[]\OT1/cmr/m/n/12     \begintheorem\labelthm:ramifies_if_and_only_if_divides_the_discriminant       Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Then a prime \(\mfp\) of \(\smcO\) ramifies in \(\mcO/\smcO\) if and only if \(\mfp\) divides \(\mfd_\mcO/\smcO\).
+ []
+
+
+Overfull \hbox (2556.4809pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12     \endthe-o-rem     \be-gin-proof       As the residue class extensions are assumed to be separable, \(\mfp\) ramifies in \(\mcO/\smcO\) if and only if \(e_\mfp(\mfP) \ge 2\) for some prime \(\mfP\) above \(\mfp\). In view of \crefprop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization, it suffices to assume \(\mcO/\smcO\) is a local Dedekind extension. Therefore \(\smcO\) is a discrete valuation ring, \(\mcO\) is a principal ideal domain, and \(\mcO/\smcO\) admits an integral basis \(\a_1,\ldots,\a_n\) making \(\mcO\) a free \(\smcO\)-
+ []
+
+
+Overfull \hbox (25.53911pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12 module of rank \(n\). Then, as we have see, \(\mfd_\mcO/\smcO\) is principal and       \[
+ []
+
+
+Overfull \hbox (894.34259pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12         \mfd_\mcO/\smcO = d_\smcO(\mcO)\smcO.       \]       Therefore \(\mfp\) divides \(\mfd_\mcO/\smcO\) if and only if \(d_\smcO(\mcO) \equiv 0 \tmod\mfp\). Since \(\conj\a_1,\ldots,\conj\a_n\) is a basis for \(\mcO/\mfp\mcO\) as a \(\F_\mfp\)-
+ []
+
+
+Overfull \hbox (109.51602pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12 vector space, it follows that       \[         d_\smcO(\mcO) \equiv d_\F_\mfp(\mcO/\mfp\mcO) \pmod\mfp.
+ []
+
+
+Overfull \hbox (382.1743pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12       \]       So \(\mfp\) divides \(\mfd_\mcO/\smcO\) if and only if \(d_\F_\mfp(\mcO/\mfp\mcO) = 0\). Now suppose \(\mfp\mcO\) has prime factorization
+ []
+
+
+Overfull \hbox (12.82353pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12       \[         \mfp\mcO = \mfP_1^e_\mfp(\mfP_1) \cdots \mfP_r^e_\mfp(\mfP_r).       \]
+ []
+
+
+Overfull \hbox (263.20056pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12       As the \(\mfP_1^e_\mfp(\mfP_1),\ldots,\mfP_r^e_\mfp(\mfP_r)\) are pairwise relatively prime, the Chinese remainder theorem gives
+ []
+
+
+Overfull \hbox (3.40602pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12       \[         \mcO/\mfp\mcO \cong \bigop_1 \le i \le r \mcO/\mfP_i^e_\mfp(\mfP_i).
+ []
+
+
+Overfull \hbox (458.97075pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12       \]       Then \crefprop:discriminant_and_direct_sums further implies       \[         d_\F_\mfp(\mcO/\mfp\mcO) = \prod_1 \le i \le rd_\F_\mfp(\mcO/\mfP_i^e_\mfp(\mfP_i)),
+ []
+
+
+Overfull \hbox (2299.14198pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12       \]       Therefore \(d_\F_\mfp(\mcO/\mfp\mcO) = 0\) if and only if \(d_\F_\mfp(\mcO/\mfP_i^e_\mfp(\mfP_i)) = 0\) for some \(i\). We will prove that this occurs if and only if \(e_\mfp(\mfP_i) \ge 2\) which will complete the proof because this is exactly when \(\mfp\) ramifies. So let \(\mfP\) be above \(\mfp\) and first suppose \(e_\mfp(\mfP) \ge 2\). Then we need to show \(d_\F_\mfp(\mcO/\mfP^e_\mfp(\mfP)) = 0\). By uniqueness of prime factorizations of fractional ideals, there exists \(\b_1 \in \mfP^e_\mfp(\mfP)-
+ []
+
+
+Overfull \hbox (1120.56812pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12 1-\mfP^e_\mfp(\mfP)\). Then \(\b_1^2 \in \mfP^2(e_\mfp(\mfP)-1) \subseteq \mfP^e_\mfp(\mfP)\) because \(e_\mfp(\mfP) \ge 2\). By construction, \(\conj\b_1\) in \(\mcO/\mfP^e_\mfp(\mfP)\) is nonzero and such that \(\conj\b_1^2 = 0\). Since \(\mcO/\mfP^e_\mfp(\mfP)\) is a \(\F_\mfp\)-
+ []
+
+
+Overfull \hbox (201.6484pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12 vector space of dimension \(f_\mfp(\mfP)\), there exists a basis of the form \(\conj\b_1,\ldots,\conj\b_f_\mfp(\mfP)\). Now
+ []
+
+
+Overfull \hbox (3149.586pt too wide) in paragraph at lines 656--686
+\OT1/cmr/m/n/12       \[         \Trace_(\mcO/\mfP^e_\mfp(\mfP))/\F_\mfp(\conj\b_1\b_j) = 0,       \]       for \(1 \le j \le f_\mfp(\mfP)\) since \(T_\conj\b_1\conj\b_j\) is nilpotent because \(T_\conj\b_1\conj\b_j^2\) is the zero operator as \(\conj\b_1^2 = 0\). But then the first row of \(\Trace_(\mcO/\mfP^e_\mfp(\mfP))/\F_\mfp(\conj\b_1,\ldots,\conj\b_f_\mfp(\mfP))\) is zero and hence \(d_\F_\mfp(\mcO/\mfP^e_\mfp(\mfP)) = 0\). Now suppose \(e_\mfp(\mfP) = 1\). Then it remains to show \(d_\F_\mfp(\F_\mfP) \neq 0\). Since the residue class extension \(\F_\mfP/\F_\mfp\) is separable by assumption, \crefprop:discriminant_not_zero implies \(d_\F_\mfp(\F_\mfP) \neq 0\). This completes the proof.
+ []
+
+
+Overfull \hbox (264.57552pt too wide) in paragraph at lines 687--688
+[]\OT1/cmr/m/n/12     As a corollary of \crefthm:ramifies_if_and_only_if_divides_the_discriminant we see that only finitely many primes can ramify in \(K\): 
+ []
+
+
+Overfull \hbox (919.49103pt too wide) in paragraph at lines 689--695
+[]\OT1/cmr/m/n/12     \begincorollary\labelcor:finitely_many_primes_ramify_K       Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Then only finitely many primes ramify in \(K\).
+ []
+
+
+Overfull \hbox (925.57559pt too wide) in paragraph at lines 689--695
+\OT1/cmr/m/n/12     \end-corol-lary     \be-gin-proof       There are only finitely many prime factors of \(\mfd_\mcO/\smcO\) by the prime factorization of fractional ideals. Therefore only finitely many primes can ramify in \(K\) by \crefthm:ramifies_if_and_only_if_divides_the_discriminant.
+ []
+
+
+Overfull \hbox (1964.6676pt too wide) in paragraph at lines 696--715
+[]\OT1/cmr/m/n/12     Now consider the case of a number field \(K\) of degree \(n\). The \textbfcomplement\indexcomplement \(\mfC_K\) of \(K\) is the complement of \(\mcO_K/\Z\), the \textbfdifferent\indexdifferent \(\mfD_K\) of \(K\) is the different of \(\mcO_K/\Z\), and the \textbfdiscriminant\indexdiscriminant \(\mfd_K\) of \(K\) is the discriminant of \(\mcO_K/\Z\). Since \(\Z\) is a principal ideal domain, the \(\mfd_K\) is related to the discriminant \(\D_K\) by
+ []
+
+
+Overfull \hbox (2222.44688pt too wide) in paragraph at lines 696--715
+\OT1/cmr/m/n/12     \[       \mfd_K = \D_K\mcO_K.     \]     As all of the residue class extensions are separable, it follows from \crefthm:ramifies_if_and_only_if_divides_the_different,thm:ramifies_if_and_only_if_divides_the_discriminant that a prime of \(K\) ramifies in \(\mcO_K/\Z\) if and only if it divides \(\mfD_K\) and a prime of \(\Q\) ramifies in \(\mcO_K/\Z\) if and only if it divides \(|\D_K|\). Moreover, finitely many primes of \(K\) and \(\Q\) ramify by \crefcor:finitely_many_primes_ramify_L,cor:finitely_many_primes_ramify_K.
+ []
+
+
+Overfull \hbox (1001.59012pt too wide) in paragraph at lines 696--715
+\OT1/cmr/m/n/12   \fi\iffalse\section\todoThe Ideal Norm     Let \(\mcO/\smcO\) be a Dedekind extension of a degree \(n\) extension \(L/K\). If \(\mfP\) a prime of \(L\) is above the prime \(\mfp\) of \(K\), we define the \textbfnorm\indexnorm \(\Norm_\mcO/\smcO(\mfP)\) of \(\mfP\) by
+ []
+
+
+Overfull \hbox (679.86427pt too wide) in paragraph at lines 696--715
+\OT1/cmr/m/n/12     \[       \Norm_\mcO/\smcO(\mfP) = \mfp^f_\mfp(\mfP).     \]     Set-ting \(\Norm_\mcO/\smcO(\mcO) = \smcO\), we extend this multiplicatively to all fractional ideals of \(\mcO\). This induces a homomorphism
+ []
+
+
+Overfull \hbox (390.80896pt too wide) in paragraph at lines 696--715
+\OT1/cmr/m/n/12     \[       \Norm_\mcO/\smcO:I_\mcO \to I_\smcO \qquad \mfP_1^e_1 \cdots \mfP_r^e_r \mapsto \mfp_1^e_1f_\mfp_1(\mfP_1) \cdots \mfp_r^e_rf_\mfp_r(\mfP_r),
+ []
+
+
+Overfull \hbox (373.33133pt too wide) in paragraph at lines 696--715
+\OT1/cmr/m/n/12     \]     called the \textbfideal norm\indexideal norm of \(\mcO/\smcO\). It follows from the fundamental equality and multiplicatively of the ideal norm that
+ []
+
+
+Overfull \hbox (113.13681pt too wide) in paragraph at lines 696--715
+\OT1/cmr/m/n/12     \[       \Norm_\mcO/\smcO(\mff\mcO) = \mff^n,     \]     for any fractional ideal \(\mff\) of \(\smcO\). 
+ []
+
+
+Overfull \hbox (563.22658pt too wide) in paragraph at lines 716--719
+[]\OT1/cmr/m/n/12     \beginremark       The ideal norm can be though of as an almost inverse to the mapping that sends a fractional ideal \(\mff\) of \(\smcO\) to the fractional ideal \(\mff\mcO\) of \(\mcO\).
+ []
+
+
+Overfull \hbox (1727.12839pt too wide) in paragraph at lines 720--729
+[]\OT1/cmr/m/n/12     In the case of a degree \(n\) number field \(K\), the \textbfideal norm\indexideal norm \(\Norm_K\) of \(K\) is the ideal norm of \(\mcO_K/\Z\). As \(\Z\) is a principal ideal domain, every fractional ideal is principal. Therefore, \(\Norm_K(\mff)\) is generated by an \(r_\mff \in \Q^\ast\) for every fractional ideal \(\mff\) of \(\mcO_K\). We define the \textbfnorm\indexnorm \(\Norm_K(\mff)\) of \(\mff\) by
+ []
+
+
+Overfull \hbox (141.48466pt too wide) in paragraph at lines 720--729
+\OT1/cmr/m/n/12     \[       \Norm_K(\mff) = |r_\mff|.     \]     Since the ideal norm is multiplicative, we obtain a homomorphism
+ []
+
+
+Overfull \hbox (821.40308pt too wide) in paragraph at lines 720--729
+\OT1/cmr/m/n/12     \[       \Norm_K:I_K \to \Q^\ast \qquad \mff \mapsto |r_\mff|,     \]     called the \textbfnorm\indexnorm of \(K\). For an integral ideal \(\mfa\), there is a simple relationship between the norm \(\mfa\) and the quotient \(\mcO_K/\mfa\): 
+ []
+
+[71]
+Overfull \hbox (396.50468pt too wide) in paragraph at lines 730--763
+[]\OT1/cmr/m/n/12     \beginproposition\labelprop:norm_and_field_norms_are_identical       Let \(K\) be a number field of degree \(n\). Then for any integral ideal \(\mfa\), we have
+ []
+
+
+Overfull \hbox (92.57962pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12       \[         \Norm_K(\mfa) = |\mcO_K/\mfa|.       \]       More-over, any \(\a \in \mcO_K\) satisfies
+ []
+
+
+Overfull \hbox (13.79016pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12       \[         \Norm_K(\a\mcO_K) = |\Norm_K(\a)|.       \]     \end-propo-si-tion     \be-
+ []
+
+
+Overfull \hbox (652.89648pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12 gin-proof       Since \(K\) admits an integral basis, \(\mcO_K\) is a free abelian group of rank \(n\) as is any fractional ideal. In particular, \(|\mcO_K/\mfa|\) is finite. As the Chinese remainder theorem implies
+ []
+
+
+Overfull \hbox (1936.78871pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12       \[         |\mcO_K/\mfa\mfb| = |\mcO_K/\mfa||\mcO_K/\mfb|,       \]       whenever \(\mfa\) and \(\mfb\) are relatively prime, it suffices to prove the claim in the case of a prime power. So let \(\mfp\) be a prime of \(\mcO_K\) above \(p\) and \(e \ge 1\). On the one hand, \(\Norm_K(\mfp^e) = p^ef_p(\mfp)\) by definition of the norm. On the other hand, \creflem:quotient_by_prime_power_isomorphism implies \(\mcO_K/\mfp^e\) is an \(\F_p\)-
+ []
+
+
+Overfull \hbox (125.01724pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12 vector space of dimension \(ef_p(\mfp)\) so that \(|\mcO_K/\mfp^e| = p^ef_p(\mfp)\). Together, we have
+ []
+
+
+Overfull \hbox (961.80162pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12       \[         \Norm_K(\mfp^e) = |\mcO_K/\mfp^e|,       \]       and the first statement follows. For the second statement, we just have to show that \(|\Norm_K(\a)| = |\mcO_K/\a\mcO_K|\). To this end, let \(\a_1,\ldots,\a_n\) be an integral basis for \(K\). Writing
+ []
+
+
+Overfull \hbox (2269.74913pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12       \[         \a = \sum_1 \le i \le na_i\a_i,       \]       with \(a_i \in \Z\), we see that \(a_1\a_1,\ldots,a_n\a_n\) is a basis for \(\a\mcO_K\). In particular, the base change matrix from \(\a_1,\ldots,\a_n\)  to this basis is a diagonal matrix with the \(a_i\) on the diagonal. Then on the one hand, we have \(|\mcO_K/\a\mcO_K| = |a_1 \cdots a_n|\) by \crefprop:base_change_quotient_determinant again. On the other hand, the multiplication by \(\a\) map in terms of the basis \(a_1\a_1,\ldots,a_n\a_n\) has matrix representation
+ []
+
+
+Overfull \hbox (250.60205pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12       \[         \be-ginpma-trix a_1 & & \\ & \ddots & \\ & & a_n \endpmatrix,       \]       and so \(\Norm_K(\a) = a_1 \cdots a_n\). Hence
+ []
+
+
+Overfull \hbox (13.14156pt too wide) in paragraph at lines 730--763
+\OT1/cmr/m/n/12       \[         |\mcO_K/\a\mcO_K| = |\Norm_K(\a)|,       \]       as desired.     \end-
+ []
+
+
+Overfull \hbox (1617.98784pt too wide) in paragraph at lines 764--765
+[]\OT1/cmr/m/n/12     As a consequence of \crefprop:norm_and_field_norms_are_identical and Lagrange's theorem, \(\Norm_K(\mfa) \in \mfa\) for any integral ideal \(\mfa\) and therefore for every fractional ideal as well (recall every such fractional ideal is of the form \(\frac1\d\mfa\) for some nonzero \(\d \in \Z\) and integral ideal \(\mfa\)). Computing the norm of the discriminant \(\D_K\) is also an easy matter: 
+ []
+
+
+Overfull \hbox (181.8083pt too wide) in paragraph at lines 766--783
+[]\OT1/cmr/m/n/12     \beginproposition\labelprop:norm_of_different_is_discriminant       Let \(K\) be a number field of degree \(n\). Then
+ []
+
+
+Overfull \hbox (236.36333pt too wide) in paragraph at lines 766--783
+\OT1/cmr/m/n/12       From \crefequ:different_isomorphism_chain we have an isomorphism       \[         \mcO_K/\mfD_K \cong \mcO_K^\vee/\mcO_K.
+ []
+
+
+Overfull \hbox (1013.70108pt too wide) in paragraph at lines 766--783
+\OT1/cmr/m/n/12       \]       There-fore \(\Norm_K(\mfD_K) = |\mcO_K^\vee/\mcO_K|\) by \crefprop:norm_and_field_norms_are_identical. Now let \(\a_1,\ldots,\a_n\) be an integral basis for \(\mcO_K\). Then the dual basis \(\a_1^\vee,\ldots,\a_n^\vee\) is a basis for \(\mcO_K^\vee\) and we have
+ []
+
+
+Overfull \hbox (1083.81656pt too wide) in paragraph at lines 766--783
+\OT1/cmr/m/n/12       \[         \a_i^\vee = \sum_1 \le j \le n\Trace_K(\a_i\a_j)\a_j.       \]       But then the base change matrix from \(\a_1,\ldots,\a_n\) to \(\a_1^\vee,\ldots,\a_n^\vee\) is \(\Trace_K(\a_1,\ldots,\a_n)\). The claim follows by \crefprop:base_change_quotient_determinant and the definition of \(\D_K\).
+ []
+
+
+Overfull \hbox (176.3903pt too wide) in paragraph at lines 786--795
+[]\OT1/cmr/m/n/12     \begincorollary\labelcor:norm_of_different       Let \(K\) be a number field and \(\mff\) be a fractional ideal. Then
+ []
+
+
+Overfull \hbox (32.74599pt too wide) in paragraph at lines 786--795
+\OT1/cmr/m/n/12 corol-lary     \be-gin-proof       This follows immediately from \(\mff^\vee = \mff^-1\mfD_K^-
+ []
+
+
+Overfull \hbox (23.01506pt too wide) in paragraph at lines 786--795
+\OT1/cmr/m/n/12 1\), multiplicativity of the norm, and \crefprop:norm_of_different_is_discriminant.     \end-
+ []
+
+
+Overfull \hbox (464.21927pt too wide) in paragraph at lines 796--797
+[]\OT1/cmr/m/n/12     Lastly, let \(a_K(m)\) denote the number of integral ideals of norm \(m\). Because the ideal norm is multiplicative so is \(a_K(m)\). Moreover, we have the following result: 
+ []
+
+
+Overfull \hbox (284.28918pt too wide) in paragraph at lines 798--812
+[]\OT1/cmr/m/n/12     \beginproposition\labelequ:ideals_of_fixed_norm_bound       Let \(K\) be a number field of degree \(n\). Then \(a_K(m) \le \s_0(m)^n\).
+ []
+
+
+Overfull \hbox (1096.10992pt too wide) in paragraph at lines 798--812
+\OT1/cmr/m/n/12     \end-propo-si-tion     \be-gin-proof       Let \(\mfa\) be an integral ideal of norm \(m\). First suppose \(m = p^k\) for some prime \(p\) and \(k \ge 0\). As there are at most \(n\) primes \(\mfp_1,\ldots,\mfp_n\) above \(p\) with inertia degrees \(f_p(\mfp_1),\ldots,f_p(\mfp_n)\) respectively, we have
+ []
+
+
+Overfull \hbox (657.02144pt too wide) in paragraph at lines 798--812
+\OT1/cmr/m/n/12       \[         \Norm_K(\mfa) = p^e_1f_p(\mfp_1) \cdots p^e_nf_p(\mfp_n),       \]       for some integers \(0 \le e_i \le k\) for \(1 \le i \le n\). Therefore the number of possibilities is equivalent to the number of solutions
+ []
+
+
+Overfull \hbox (1205.31853pt too wide) in paragraph at lines 798--812
+\OT1/cmr/m/n/12       \[         e_1f_p(\mfp_1)+\cdots+e_nf_p(\mfp_n) = k,       \]       which is at most \(\s_0(p^k)^n = (k+1)^n\). This proves the claim in the case \(m\) is a prime power. By multiplicativity of \(a_K(m)\) and the divisor function, it follows that the number of integral ideals of norm \(m\) is at most \(\s_0(m)^n\) as desired.
+ []
+
+)
+Overfull \hbox (200.01646pt too wide) in paragraph at lines 813--27
+[]\OT1/cmr/m/n/12     As a consequence of \crefprop:sum_of_divisors_growth_rate, we have the slightly weaker estimate \(a_K(n) \ll_\e n^\e\).
+ []
+
+[72]
+Overfull \hbox (83.22742pt too wide) in paragraph at lines 30--37
+[]\OT1/cmr/m/n/12 \partAnalytic Number Theory   \in-cludeChap-ters/Dirichlet_Series   \includeChapters/Analytic_L-
+ []
+
+
+Overfull \hbox (64.56233pt too wide) in paragraph at lines 30--37
+\OT1/cmr/m/n/12 functions   \chap-ter\todoMoments   \chap-ter\todoAnalytic Theory of the Riemann Zeta Function
+ []
+
+
+Overfull \hbox (1.40883pt too wide) in paragraph at lines 30--37
+\OT1/cmr/m/n/12   \chapter\todoAnalytic Theory of Dirichlet \texorpdfstring\(L\)L-functions   \chap-
+ []
+
+)
+! Emergency stop.
+<*> ...ments/Documents/LaTeX/Notes/CAANT/CAANT.tex
+                                                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 26126 strings out of 478268
+ 521468 string characters out of 5846347
+ 765507 words of memory out of 5000000
+ 43642 multiletter control sequences out of 15000+600000
+ 483697 words of font info for 85 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 105i,21n,107p,2378b,1105s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
