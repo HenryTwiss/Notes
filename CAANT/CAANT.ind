@@ -50,14 +50,14 @@
 
   \item decomposition field, \hyperpage{63}
   \item decomposition group, \hyperpage{63}
-  \item Dedekind domain, \hyperpage{38}
+  \item Dedekind domain, \hyperpage{39}
   \item Dedekind extension, \hyperpage{48}
   \item degree, \hyperpage{27}, \hyperpage{78}, \hyperpage{87}
   \item Dirichlet character, \hyperpage{7}
   \item Dirichlet convolution, \hyperpage{4}
   \item Dirichlet orthogonality relations, \hyperpage{8}
   \item Dirichlet series, \hyperpage{71}
-  \item discrete valuation ring, \hyperpage{54}
+  \item discrete valuation ring, \hyperpage{53}
   \item discriminant, \hyperpage{31}, \hyperpage{38}
   \item divides, \hyperpage{42}
   \item divisor function, \hyperpage{3}
@@ -94,7 +94,7 @@
 
   \item ideal class, \hyperpage{46}
   \item ideal class group, \hyperpage{46}, \hyperpage{48}
-  \item ideal group, \hyperpage{43}, \hyperpage{48}
+  \item ideal group, \hyperpage{42}, \hyperpage{48}
   \item identity function, \hyperpage{2}
   \item imprimitive, \hyperpage{9}
   \item indicator function, \hyperpage{2}
@@ -109,6 +109,8 @@
   \item integral ideal, \hyperpage{38}, \hyperpage{48}
   \item integrally closed, \hyperpage{25}
   \item integrally closed domain, \hyperpage{25}
+  \item inverse, \hyperpage{38}
+  \item invertible, \hyperpage{38}
 
   \indexspace
 
@@ -117,7 +119,7 @@
   \item Lindel\"of hypothesis, \hyperpage{98}
   \item Liouville's function, \hyperpage{3}
   \item local, \hyperpage{52}
-  \item localization, \hyperpage{49, 50}, \hyperpage{52}
+  \item localization, \hyperpage{48--50}, \hyperpage{52}
   \item logarithm, \hyperpage{3}
 
   \indexspace
@@ -126,7 +128,7 @@
   \item M\"obius inversion, \hyperpage{5}
   \item modulus, \hyperpage{7}
   \item monogenic, \hyperpage{37, 38}
-  \item multiplicative, \hyperpage{2}, \hyperpage{49}
+  \item multiplicative, \hyperpage{2}, \hyperpage{48}
 
   \indexspace
 
@@ -196,9 +198,9 @@
 
   \indexspace
 
-  \item uniformizer, \hyperpage{54}
+  \item uniformizer, \hyperpage{53}
   \item unit, \hyperpage{48}
-  \item unit group, \hyperpage{47, 48}
+  \item unit group, \hyperpage{46}, \hyperpage{48}
   \item unramified, \hyperpage{61, 62}
   \item unweighted, \hyperpage{85}
 

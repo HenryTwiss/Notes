@@ -81,7 +81,9 @@
 \indexentry{prime|hyperpage}{38}
 \indexentry{fractional ideal|hyperpage}{38}
 \indexentry{principal|hyperpage}{38}
-\indexentry{Dedekind domain|hyperpage}{38}
+\indexentry{inverse|hyperpage}{38}
+\indexentry{invertible|hyperpage}{38}
+\indexentry{Dedekind domain|hyperpage}{39}
 \indexentry{prime factorization|hyperpage}{42}
 \indexentry{prime factors|hyperpage}{42}
 \indexentry{divides|hyperpage}{42}
@@ -89,12 +91,12 @@
 \indexentry{greatest common divisor|hyperpage}{42}
 \indexentry{least common multiple|hyperpage}{42}
 \indexentry{relatively prime|hyperpage}{42}
-\indexentry{ideal group|hyperpage}{43}
+\indexentry{ideal group|hyperpage}{42}
 \indexentry{residue class field|hyperpage}{45}
 \indexentry{ideal class group|hyperpage}{46}
 \indexentry{ideal class|hyperpage}{46}
 \indexentry{class number|hyperpage}{46}
-\indexentry{unit group|hyperpage}{47}
+\indexentry{unit group|hyperpage}{46}
 \indexentry{Dedekind extension|hyperpage}{48}
 \indexentry{integral ideal|hyperpage}{48}
 \indexentry{prime|hyperpage}{48}
@@ -104,8 +106,8 @@
 \indexentry{class number|hyperpage}{48}
 \indexentry{unit group|hyperpage}{48}
 \indexentry{unit|hyperpage}{48}
-\indexentry{multiplicative|hyperpage}{49}
-\indexentry{localization|hyperpage}{49}
+\indexentry{multiplicative|hyperpage}{48}
+\indexentry{localization|hyperpage}{48}
 \indexentry{localization|hyperpage}{49}
 \indexentry{localization|hyperpage}{50}
 \indexentry{localization|hyperpage}{50}
@@ -116,8 +118,8 @@
 \indexentry{localization|hyperpage}{52}
 \indexentry{localization|hyperpage}{52}
 \indexentry{local|hyperpage}{52}
-\indexentry{discrete valuation ring|hyperpage}{54}
-\indexentry{uniformizer|hyperpage}{54}
+\indexentry{discrete valuation ring|hyperpage}{53}
+\indexentry{uniformizer|hyperpage}{53}
 \indexentry{valuation|hyperpage}{54}
 \indexentry{valuation|hyperpage}{54}
 \indexentry{valuation|hyperpage}{55}

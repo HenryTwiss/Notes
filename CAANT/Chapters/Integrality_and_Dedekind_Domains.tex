@@ -104,17 +104,15 @@
     \[
       \mc{O}_{K} = \{\k \in K:\k \text{ is integral over } \Z\}.
     \]
-    Any \(\a \in \mc{O}_{K}\) is called an \textbf{algebraic integer}\index{algebraic integer}. Note that \(\a\) is an algebraic integer if and only if it is the root of a monic polynomial \(f(x) \in \Z[x]\).
-
-    \begin{remark}\label{rem:integers_are_integrally_closed}
-      By \cref{lemma:unique_factorization_domains_are_integrally_closed}, \(\Z\) is an integrally closed domain and therefore the ring of integers of \(\Q\) is exactly \(\Z\).
-    \end{remark}
-
-    It follows from \cref{prop:field_of_fractions_AKBL} that every \(\k \in K\) is of the form
+    Any \(\a \in \mc{O}_{K}\) is called an \textbf{algebraic integer}\index{algebraic integer}. Note that \(\a\) is an algebraic integer if and only if it is the root of a monic polynomial \(f(x) \in \Z[x]\). It follows from \cref{prop:field_of_fractions_AKBL} that every \(\k \in K\) is of the form
     \[
       \k = \frac{\a}{a},
     \]
     for some algebraic integer \(\a\) and nonzero integer \(\smc{O}\). In particular, \(K\) is the field of fractions of \(\mc{O}_{K}\) and \(\mc{O}_{K}\) is an integrally closed domain. Moreover, \(\k\) is an algebraic integer if and only if the minimal polynomial \(m_{\k}(x)\) of \(\k\) over \(\Q\) has coefficients in \(\Z\).
+
+    \begin{remark}\label{rem:integers_are_integrally_closed}
+      By \cref{lemma:unique_factorization_domains_are_integrally_closed}, \(\Z\) is an integrally closed domain and therefore the ring of integers of \(\Q\) is exactly \(\Z\).
+    \end{remark}
   \section{Traces and Norms}
     Let \(\mc{O}/\smc{O}\) be a ring extension such that \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\). Recall that by fixing a basis for \(\mc{O}/\smc{O}\), there is an isomorphism
     \[
@@ -475,7 +473,7 @@
       \]
     \end{proof}
 
-    We now turn to the case of a number field \(K\) of degree \(n\). We write \(\Trace_{K} = \Trace_{K/\Q}\) and \(\Norm_{K} = \Norm_{K/\Q}\) and call these the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(K\). Moreover, for any \(\k \in K\) we call \(\Trace_{K}(\k)\) and \(\Norm_{K}(\k)\) the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(\k\). Observe from \cref{prop:trace_and_norm_AKBL,prop:unit_if_and_only_if_AKBL} that the trace and norm of algebraic integers are themselves integers and \(\k \in \mc{O}_{K}\) is a unit if and only if \(\Norm_{K}(\k) = \pm 1\). We also call the nondegenerate symmetric bilinear form
+    We now turn to the case of a number field \(K\) of degree \(n\). We write \(\Trace_{K} = \Trace_{K/\Q}\) and \(\Norm_{K} = \Norm_{K/\Q}\) and call these the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(K\). Moreover, for any \(\k \in K\) we call \(\Trace_{K}(\k)\) and \(\Norm_{K}(\k)\) the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(\k\). Observe from \cref{prop:trace_and_norm_AKBL,prop:unit_if_and_only_if_AKBL} that the trace and norm of algebraic integers are themselves integers and any \(\k \in \mc{O}_{K}\) is a unit if and only if \(\Norm_{K}(\k) = \pm 1\). We also call the nondegenerate symmetric bilinear form
     \[
       \Trace_{K/\Q}:K \x K \to \Q \qquad (\k,\l) \mapsto \Trace_{K/\Q}(\k\l),
     \]
@@ -489,13 +487,21 @@
     \]
     Lastly, we say \(K\) is \textbf{monogenic}\index{monogenic} if \(\mc{O}_{K}\) is monogenic over \(\Z\).
   \section{Dedekind Domains}
-    Let \(\smc{O}\) be an integral domain with field of fractions \(K\). Any nonzero ideal \(\mf{a}\) of \(\smc{O}\) is said to be an \textbf{integral ideal}\index{integral ideal} of \(\smc{O}\). We call any prime integral ideal \(\mf{p}\) of \(\smc{O}\) a \textbf{prime}\index{prime} of \(\smc{O}\). If \(\mf{p}\) is principal with \(\mf{p} = \a\smc{O}\) for some nonzero \(\a \in K\) we will also refer to \(\a\) as the prime instead of \(\mf{p}\). In any case, an integral ideal is just a \(\smc{O}\)-submodule of \(\smc{O}\). More generally, we say \(\mf{f}\) is a \textbf{fractional ideal}\index{fractional ideal} of \(\smc{O}\) if it is \(\smc{O}\)-submodule of \(K\) such that there is a nonzero \(\d \in \smc{O}\) with \(\d\mf{f} \in \smc{O}\). This simply means \(\d\mf{f}\) is an integral ideal. Conversely, if \(\mf{a}\) is an integral ideal and \(\d \in \smc{O}\) is nonzero then  
+    Let \(\smc{O}\) be an integral domain with field of fractions \(K\). Any nonzero ideal \(\mf{a}\) of \(\smc{O}\) is said to be an \textbf{integral ideal}\index{integral ideal} of \(\smc{O}\). We call any prime integral ideal \(\mf{p}\) of \(\smc{O}\) a \textbf{prime}\index{prime} of \(\smc{O}\). If \(\mf{p}\) is principal with \(\mf{p} = \a\smc{O}\) for some nonzero \(\a \in K\) we will also refer to \(\a\) as the prime instead of \(\mf{p}\). In any case, an integral ideal is just a \(\smc{O}\)-submodule of \(\smc{O}\). More generally, we say \(\mf{f}\) is a \textbf{fractional ideal}\index{fractional ideal} of \(\smc{O}\) if it is a nonzero \(\smc{O}\)-submodule of \(K\) such that there is a nonzero \(\d \in \smc{O}\) with \(\d\mf{f} \in \smc{O}\). This simply means \(\d\mf{f}\) is an integral ideal. Conversely, if \(\mf{a}\) is an integral ideal and \(\d \in \smc{O}\) is nonzero then  
     \[
       \mf{f} = \frac{1}{\d}\mf{a},
     \]
-    is a fractional ideal. So every fractional ideal is of this form. The fractional ideal \(\mf{f}\) is said to be \textbf{principal}\index{principal} if it is generated by a single element. That is, if \(\mf{f} = \k\smc{O}\) for some nonzero \(\k \in K\). In particular, all integral ideals are fractional ideals by taking \(\d = 1\) and all principal integral ideals are principal fractional ideals.
-
-    We will need to consider a more restrictive setting in order to develop a useful theory of integral and fractional ideals. This will allow for integral ideals to factor uniquely into a product of primes and for the fractional ideals to form a group in which \(\smc{O}\) will act as the identity. This will essentially permit us to treat integral ideas as we would integers. Accordingly, a ring \(\smc{O}\) is said to be a \textbf{Dedekind domain}\index{Dedekind domain} if the following properties are satisfied:
+    is a fractional ideal. So every fractional ideal is of this form. Clearly fractional ideals are closed under multiplication. The fractional ideal \(\mf{f}\) is said to be \textbf{principal}\index{principal} if it is generated by a single element. That is, if \(\mf{f} = \k\smc{O}\) for some nonzero \(\k \in K\). In particular, all integral ideals are fractional ideals by taking \(\d = 1\) and all principal integral ideals are principal fractional ideals. The \textbf{inverse}\index{inverse} \(\mf{f}^{-1}\) of \(\mf{f}\) is defined by
+    \[
+      \mf{f}^{-1} = \{\k \in K:\k\mf{f} \subseteq \smc{O}\}.
+    \]
+    Note that  \(\d \in \mf{f}^{-1}\) whence \(\d\mf{f}^{-1}\) is an integral ideal so that \(\mf{f}^{-1}\) is a fractional ideal. We say that \(\mf{f}\) is \textbf{invertible}\index{invertible} if
+    \[
+      \mf{f}\mf{f}^{-1} = \smc{O}.
+    \]
+    A priori, a fractional ideal need not be invertible nor should we expect it to be. In order to guarantee invertibility, we need to consider a more restrictive setting than mere integral domains. This will allow for integral ideals to factor uniquely into a product of primes and for the fractional ideals to form a group under multiplication in which every fractional ideal is invertible and \(\smc{O}\) is the identity. This will essentially permit us to treat integral ideas as we would integers.
+    
+    Accordingly, a ring \(\smc{O}\) is said to be a \textbf{Dedekind domain}\index{Dedekind domain} if the following properties are satisfied:
     \begin{enumerate}[label*=(\roman*)]
       \item \(\smc{O}\) is an integrally closed domain.
       \item \(\smc{O}\) is noetherian.
@@ -535,11 +541,7 @@
       which contradicts the fact that \(\mf{a} \in \mc{S}\). Hence \(\mc{S}\) is empty.
     \end{proof}
 
-    More work will be necessary obtain reverse inclusion. To this end, we being by constructing a fractional ideal associated to every prime which will turn out to be the inverse. Let \(\mf{p}\) be a prime. We define \(\mf{p}^{-1}\) by
-    \[
-      \mf{p}^{-1} = \{\k \in K:\k\mf{p} \subseteq \smc{O}\}.
-    \]
-    Then \(\mf{p}^{-1}\) is a fractional ideal. Indeed, since \(\mf{p}\) is an integral ideal there exists a nonzero \(\a \in \mf{p}\). The definition of \(\mf{p}^{-1}\) implies \(\a\mf{p}^{-1} \subseteq \smc{O}\). Hence \(\a\mf{p}^{-1}\) is an integral ideal and therefore \(\mf{p}^{-1}\) is a fractional ideal. Unlike integral ideals, \(1 \in \mf{p}^{-1}\) so that \(\mf{p}^{-1}\) contains units.
+    More work will be necessary obtain reverse inclusion. We being by showing that every prime \(\mf{p}\) is invertible. Note that unlike integral ideals, \(1 \in \mf{p}^{-1}\) so that \(\mf{p}^{-1}\) contains units.
 
     \begin{lemma}\label{lem:inverse_for_prime_ideals}
       Let \(\smc{O}\) be a Dedekind domain and \(\mf{p}\) be a prime of \(\smc{O}\). Then
@@ -608,7 +610,7 @@
       Repeating this process, we see that the factorizations are the same. This proves uniqueness of the factorization.
     \end{proof}
 
-    As a near immediate corollary, fractional ideal admits analogous factorizations.
+    As a near immediate corollary, fractional ideal admits analogous factorizations which implies that they are invertible.
 
     \begin{corollary}\label{cor:fractional_ideal_prime_factorization}
       Let \(\smc{O}\) be a Dedekind domain. Then for every fractional ideal \(\mf{f}\) of \(\smc{O}\) there exist primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\) and \(\mf{q}_{1},\ldots,\mf{q}_{\ell}\) of \(\smc{O}\) such that \(\mf{f}\) factors as
@@ -642,7 +644,28 @@
     \]
     This is equivalent to the prime factorizations of \(\mf{a}\) and \(\mf{b}\) containing distinct primes. In particular, distinct primes and their powers are relatively prime. As these integral ideals are comaximal, we also have \(\mf{a} \cap \mf{b} = \mf{a}\mf{b}\). In terms of the least common multiple, this means \([\mf{a},\mf{b}] = \mf{a}\mf{b}\).
     
-    Just as it is common to suppress the fundamental theorem of arithmetic and just state the prime factorization of an integer, we suppress referencing \cref{thm:unique_product_prime_ideals} and simply state the prime factorization of a fractional ideal. We can now show that for a Dedekind domain, being a principal ideal domain is equivalent to being a unique factorization domain.
+    Just as it is common to suppress the fundamental theorem of arithmetic and just state the prime factorization of an integer, we suppress referencing \cref{thm:unique_product_prime_ideals} and simply state the prime factorization of a fractional ideal.
+
+    With the prime factorization in hand, we will discuss the group structure of the fractional ideals of \(\smc{O}\). Let \(I_{\smc{O}}\) denote the set of fractional ideals of \(\smc{O}\). We call \(I_{\smc{O}}\) the \textbf{ideal group}\index{ideal group} of \(\smc{O}\). This is indeed a group as the following theorem demonstrates:
+
+    \begin{theorem}\label{thm:ideal_group_is_a_group}
+      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\). Then \(I_{\smc{O}}\) is an abelian group with identity \(\smc{O}\).
+    \end{theorem}
+    \begin{proof}
+      Associativity and commutativity of \(I_{\smc{O}}\) are obvious. The identity is \(\smc{O}\) because every fractional ideal is a finitely generated \(\smc{O}\)-submodule of \(K\). It remains to show that every fractional ideal \(\mf{f}\) is invertible. Write \(\mf{f} = \frac{1}{\d}\mf{a}\) for some integral ideal \(\mf{a}\). Then we must show \(\mf{a}\) is invertible. In view of \cref{lem:inverse_for_prime_ideals}, if
+      \[
+        \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}},
+      \]
+      is the prime factorization of \(\mf{a}\) then let
+      \[
+        \mf{b} = \mf{p}_{1}^{-e_{1}} \cdots \mf{p}_{r}^{-e_{r}}.
+      \]
+      We must show \(\mf{b} = \mf{a}^{-1}\). For the forward inclusion, \(\mf{a}\mf{b} = \smc{O}\) implies \(\mf{b} \subseteq \mf{a}^{-1}\) by the definition of \(\mf{a}^{-1}\). For the reverse inclusion, suppose \(\k \in \mf{a}^{-1}\). Then \(\k\mf{a} \subseteq \smc{O}\) and multiplying by \(\mf{b}\) shows \(\k\smc{O} \subseteq \mf{b}\) whence \(\k \in \mf{b}\).
+    \end{proof}
+
+    It follows from this result that every fractional ideal is invertible in a Dedekind domain. We will use this fact so often that, rather than reference it, we will suppress it for legibility.
+    
+    It is an interesting fact that for a Dedekind domain, being a principal ideal domain is equivalent to being a unique factorization domain.
 
     \begin{proposition}\label{prop:UDF_PID_equivalence_for_Dedekind}
       Let \(\smc{O}\) be a Dedekind domain. Then \(\smc{O}\) is a principal ideal domain if and only if it is a unique factorization domain.
@@ -651,37 +674,7 @@
       The forward implication is immediate as every principal ideal domain is a unique factorization domain. For the reverse implication, suppose \(\smc{O}\) is a unique factorization domain. As every integral ideal factors into a product of primes by \cref{thm:unique_product_prime_ideals} and the product of principal integral ideals is principal, it suffices to show that primes are principal. Let \(\mf{p}\) be a prime. Then there exists nonzero \(\a \in \mf{p}\) and \(\a\) is not a unit since \(\mf{p}\) a proper ideal. Since \(\smc{O}\) is a unique factorization domain, let \(\a = \e\rho_{1}^{e_{1}} \cdots \rho_{r}^{e_{r}}\) be the prime factorization of \(\a\). Since \(\mf{p}\) is prime, it follows that there is some \(i\) such that \(\rho_{i} \in \mf{p}\). Without loss of generality, we may assume \(\rho_{1} \in \mf{p}\). Then the integral ideal \(\rho_{1}\smc{O}\) satisfies \(\rho_{1}\smc{O} \subseteq \mf{p}\). As \(\rho_{1}\) is prime, \(\rho_{1}\smc{O}\) is a prime and hence maximal since prime ideals are maximal in \(\smc{O}\). Whence \(\rho_{1}\smc{O} = \mf{p}\) proving \(\mf{p}\) is principal.
     \end{proof}
 
-    With the prime factorization in hand, we will discuss the group structure of the fractional ideals of \(\smc{O}\). Let \(I_{\smc{O}}\) denote the set of fractional ideals of \(\smc{O}\). We call \(I_{\smc{O}}\) the \textbf{ideal group}\index{ideal group} of \(\smc{O}\). This is indeed a group as the following theorem demonstrates:
-
-    \begin{theorem}\label{thm:ideal_group_is_a_group}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\). Then \(I_{\smc{O}}\) is an abelian group with identity \(\smc{O}\).
-    \end{theorem}
-    \begin{proof}
-      It is clear that the product of fractional ideals is a fractional ideal. Associativity and commutativity of \(I_{\smc{O}}\) are also obvious. The identity is \(\smc{O}\) because every fractional ideal is a finitely generated \(\smc{O}\)-submodule of \(K\). By \cref{lem:inverse_for_prime_ideals}, we see that \(\mf{p}^{-1}\) is the inverse of any prime \(\mf{p}\). Therefore every prime is invertible. If \(\mf{f}\) is a fractional ideal it admits a prime factorization \(\mf{f} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}\) and then \(\mf{f}^{-1} = \mf{p}_{1}^{-e_{1}} \cdots \mf{p}_{r}^{-e_{r}}\) is its inverse. This completes the proof.
-    \end{proof}
-
-    It is possible to deduce an explicit description for the inverse \(\mf{f}^{-1}\) of any fractional ideal \(\mf{f}\).
-
-    \begin{proposition}\label{prop:explicit_inverse_ideal}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and let \(\mf{f}\) be a fractional ideal of \(\smc{O}\). Then
-      \[
-        \mf{f}^{-1} = \{\k \in K:\k\mf{f} \subseteq \smc{O}\}.
-      \]
-      In particular, \(\smc{O} \subseteq \mf{f}\) if and only if \(\mf{f}^{-1}\) is an integral ideal.
-    \end{proposition}
-    \begin{proof}
-      Let \(\mf{f}\) be a fractional ideal. Then the inverse \(\mf{f}^{-1}\) exists by \cref{thm:ideal_group_is_a_group}. In the case of an integral ideal \(\mf{a}\), we have
-      \[
-        \mf{a}^{-1} = \{\k \in K:\k\mf{a} \subseteq \smc{O}\},
-      \]
-      by the prime factorization of \(\mf{a}\) and the definition of \(\mf{p}^{-1}\) for a prime \(\mf{p}\). Write \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\). Whence
-      \[
-        \frac{1}{\d}\mf{f}^{-1} = \{\k \in K:\k\d\mf{f} \subseteq \smc{O}\},
-      \]
-      which is equivalent to the first statement. For the second statement, if \(\smc{O} \subseteq \mf{f}\) then multiplying by \(\mf{f}^{-1}\) shows \(\mf{f}^{-1} \subseteq \smc{O}\) whence \(\mf{f}^{-1}\) is an integral ideal. Running this argument backwards by multiplying by \(\mf{f}\) proves the converse.
-    \end{proof}
-
-    We will now discuss applications of the Chinese remainder theorem in the context of integral ideals. With it we can prove some interesting results. First, we recall a useful fact. Suppose \(\mf{a}\) is an integral ideal with prime factorization
+    We will now discuss applications of the Chinese remainder theorem in the context of integral ideals. With it we can prove some other interesting results. Suppose \(\mf{a}\) is an integral ideal with prime factorization
     \[
       \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}.
     \]
@@ -868,6 +861,8 @@
       h_{K} = |\Cl(K)|.
     \]
     The \textbf{unit group}\index{unit group} of \(K\) is the unit group of \(\mc{O}_{K}\) and we call any element of \(\mc{O}_{K}^{\ast}\) a \textbf{unit}\index{unit} of \(K\) (with the understanding that every element of \(K\) is invertible in \(K\)). It follows from \cref{thm:unique_product_prime_ideals} that integral ideals \(\mf{a}\) of \(K\) admit prime factorizations. One of our core investigations will be to understand how the principal integral ideal \(p\mc{O}_{K}\) factors into a product of primes of \(K\) for any prime \(p\). We will also leverage geometric ideas to show that the class number is finite and completely describe the unit group.
+
+    Now suppose \(L/K/\Q\) is an extension of number fields. Then \(L/K/\Q\) is a finite separable tower. Moreover, \(\mc{O}_{L}/\mc{O}_{K}/\Z\) is a tower of Dedekind extension for \(L/K/\Q\) by \cref{prop:integral_closure_is_transitive,prop:integral_closure_of_Dedekind_is_Dedekind}. In particular, \(\mc{O}_{L}/\mc{O}_{K}\) is a Dedekind extension for \(L/K\) and we will always assume this is the associated Dedekind extension. 
   \section{Localization}
     Let \(\smc{O}\) be an integral domain with field of fractions \(K\). A subset \(D\) of \(\smc{O}\) is said to be \textbf{multiplicative}\index{multiplicative} if it is closed under multiplication, \(1 \in D\), and \(0 \notin D\). The set \(\smc{O}-\{0\}\) is always multiplicative but more interesting examples are when we consider strict subsets. In any case, we define the \textbf{localization}\index{localization} \(\smc{O}D^{-1}\) of \(\smc{O}\) at \(D\) by
     \[
