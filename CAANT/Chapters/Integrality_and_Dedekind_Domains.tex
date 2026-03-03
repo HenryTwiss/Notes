@@ -839,11 +839,11 @@
       \[
         \phi:\smc{O} \to \mc{O}/\mf{P} \qquad \a \mapsto \a+\mf{p},
       \]
-      induced by natural inclusion. Then \(\ker\phi = \mf{P} \cap \smc{O}\) and we claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal of \(\smc{O}\) and is prime because \(\mf{P}\) is. To see that it is nonzero, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
+      induced by natural inclusion. Then \(\ker\phi = \mf{P} \cap \smc{O}\) and we claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal of \(\smc{O}\) and is prime because \(\mf{P}\) is. To see that it is not the zero ideal, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
       \[
         \l^{n}+\a_{n-1}\l^{n-1}+\cdots+\a_{0} = 0,
       \]
-      for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). This means \(\ker\phi = \mf{p}\). By the first isomorphism theorem, \(\phi\) induces an embedding \(\F_{\mf{p}} \to \mc{O}/\mf{P}\). Therefore \(\mc{O}/\mf{P}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space as \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. By primality of \(\mf{P}\), \(\mc{O}/\mf{P}\) is a finite integral domain and thus must be a field. This proves the first statement and the second is equivalent.
+      for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\) and isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Therefore \(\mf{P} \cap \smc{O} = \mf{p}\) for some prime \(\mf{p}\). This means \(\ker\phi = \mf{p}\). By the first isomorphism theorem, \(\phi\) induces an embedding \(\F_{\mf{p}} \to \mc{O}/\mf{P}\). Therefore \(\mc{O}/\mf{P}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space as \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. By primality of \(\mf{P}\), \(\mc{O}/\mf{P}\) is a finite integral domain and thus must be a field. This proves the first statement and the second is equivalent.
     \end{proof}
 
     Accordingly, a ring extension \(\mc{O}/\smc{O}\) is said to be a \textbf{Dedekind extension}\index{Dedekind extension} of a finite separable extension \(L/K\) if \(\mc{O}\) and \(\smc{O}\) are Dedekind domains whose field of fractions are \(L\) and \(K\) respectively and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). By the preceding result, it is enough to show that \(\smc{O}\) is a Dedekind domain and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). These Dedekind domains are related via the identity
@@ -976,7 +976,7 @@
       Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and \(D\) be a multiplicative subset of \(\smc{O}\). Then \(\smc{O}D^{-1}\) is a Dedekind domain.
     \end{proposition}
     \begin{proof}
-      We see from \cref{prop:localization_of_integral_closure_is_integral_closure} that \(\smc{O}D^{-1}\) is an integrally closed domain. To show it is noetherian, let \(\mf{A}\) be an ideal of \(\smc{O}D^{-1}\) and set \(\mf{a} = \mf{A} \cap \smc{O}\). Then
+      We see from \cref{prop:localization_of_integral_closure_is_integral_closure} that \(\smc{O}D^{-1}\) is an integrally closed domain. To show it is noetherian, let \(\mf{A}\) be an integral ideal of \(\smc{O}D^{-1}\) and set \(\mf{a} = \mf{A} \cap \smc{O}\). Then
       \[
         \mf{A} = \mf{a}D^{-1}.
       \]
@@ -1133,10 +1133,23 @@
       \mc{O}_{K}^{S} = \mc{O}_{K}(X).
     \]
     We call any \(\a \in \mc{O}_{K}^{S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl^{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}^{S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K}^{S}\) of \(K\) is the class number of \(\Cl^{S}(K)\). The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \((\mc{O}_{K}^{S})^{\ast}\) of \(\mc{O}_{K}^{S}\) and we call any element of \((\mc{O}_{K}^{S})^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
-  \iffalse\section{\todo{Orders}}
-    We will often consider generalizations of Dedekind domains by relaxing the condition that they are integrally closed in their field of fractions. As every prime of \(\smc{O}\) being maximal is equivalent to \(\smc{O}\) having Krull dimension one, these generalizations are one-dimensional noetherian domains.
+  \section{\todo{Orders}}
+    Let \(\mc{O}/\smc{O}\) be a Dedekind extension for a degree \(n\) separable extension \(L/K\). We will often consider integral domains that are in-between \(\smc{O}\) and \(\mc{O}\) but which are not themselves Dedekind domains as they need not be integrally closed domains. An \textbf{order}\index{order} \(\L\) of a Dedekind extension \(\mc{O}/\smc{O}\) for a degree \(n\) separable extension \(L/K\) is a finitely generated \(\smc{O}\)-module of \(\mc{O}\) which contains a basis for \(L/K\). Accordingly, we call \(\mc{O}\) the \textbf{maximal order}\index{maximal order} of \(\mc{O}/\smc{O}\). Necessarily, the order \(\L\) satisfies
+    \[
+      \smc{O} \subseteq \L \subseteq \mc{O}.
+    \]
+    A few useful facts about \(\L\) are also immediate. As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), \(\L\) is integral over \(\smc{O}\). Moreover, the field of fractions of \(\L\) contains \(K\) and as \(\L\) contains a basis of \(L/K\), the field of fractions must be \(L\) itself. Also, \(\L\) is noetherian and every prime is maximal. Indeed, any integral ideal of \(\mf{A}\) of \(\L\) is a finitely generated \(\smc{O}\)-module, as \(\L\) itself is, whence a finitely generated \(\L\)-module. This shows \(\L\) is noetherian. Now suppose \(\mf{P}\) is a prime of \(\L\). We claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal and is prime because \(\mf{P}\) is. To see that it is not the zero ideal, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
+    \[
+      \l^{n}+\a_{n-1}\l^{n-1}+\cdots+\a_{0} = 0,
+    \]
+    for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Moreover, it follows that \(\a_{0}\L \subset \mf{P} \subseteq \L\). Therefore \(\mf{P}\) has the same rank as \(\L\) as \(\smc{O}\)-modules. Then the integral domain \(\L/\mf{P}\) is necessarily finite and thus a field proving \(\mf{P}\) is maximal. These facts show that while orders need not be integrally closed domains, they satisfy every other property of being a Dedekind domain. In practice, orders generally arise in the form
+    \[
+      \L = \smc{O}[\a_{1},\ldots,\a_{n}],
+    \]
+    where \(\a_{1},\ldots,\a_{n}\) satisfy \(L = K(\a_{1},\ldots,\a_{n})\).
     
-    An important fact about one-dimensional noetherian domains is that a generalization of the Chinese remainder theorem holds.
+    \iffalse
+    Another important fact about orders which we will see is that their localizations at primes behave much the same as for Dedekind domains for almost all primes. To begin to describe the similarity, we will prove a generalization of the Chinese remainder theorem.
 
     \begin{proposition}\label{prop:localized_Chinese_remainder_theorem}
       Let \(\smc{O}\) be a one-dimensional noetherian domain. Then for any integral ideal \(\mf{a}\) of \(\smc{O}\), we have an isomorphism
