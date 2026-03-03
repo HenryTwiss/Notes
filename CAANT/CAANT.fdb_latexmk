@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex CAANT.idx"] 1772506826 "CAANT.idx" "CAANT.ind" "CAANT" 1772507942
-  "CAANT.idx" 1772507942 8990 26528639d77f5061d084df49e1da74fd "pdflatex"
+["makeindex CAANT.idx"] 1772571302 "CAANT.idx" "CAANT.ind" "CAANT" 1772572247
+  "CAANT.idx" 1772572247 8996 335cc020d1df2770b92792eaa20d7b61 "pdflatex"
   (generated)
   "CAANT.ilg"
   "CAANT.ind"
-["pdflatex"] 1772507941 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1772507942
+["pdflatex"] 1772572246 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1772572247
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" 1772376065 1138 e67de277de0f98d42f5090e7c9c1acc2 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -206,22 +206,22 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "CAANT.aux" 1772507942 2964 bfbc4887712ce63a6bb198b471fadf44 "pdflatex"
-  "CAANT.ind" 1772506826 7141 1fc17d3f9393bb3466a4c4c3ebe8f5c9 "makeindex CAANT.idx"
-  "CAANT.out" 1772507942 7279 cf29aef1b12aba235db8f1f595021cd0 "pdflatex"
+  "CAANT.aux" 1772572247 2964 a96f4056b765a400c50381cbfa150e88 "pdflatex"
+  "CAANT.ind" 1772571302 7139 101c3d44219bf465dd73fa8415a9b912 "makeindex CAANT.idx"
+  "CAANT.out" 1772572247 7279 cf29aef1b12aba235db8f1f595021cd0 "pdflatex"
   "CAANT.tex" 1772376065 1138 e67de277de0f98d42f5090e7c9c1acc2 ""
-  "CAANT.toc" 1772507942 3473 79dd2bfd697a4da02f65fcfcebee1f87 "pdflatex"
-  "Chapters/Analytic_L-functions.aux" 1772507942 8821 996ab35b90f86bd1504e0a554893de02 "pdflatex"
+  "CAANT.toc" 1772572247 3475 15f4406ce8e2ebb2c508262abe8a3945 "pdflatex"
+  "Chapters/Analytic_L-functions.aux" 1772572247 8833 7ec2b0606a5dd48a0a3dec35436b9bf5 "pdflatex"
   "Chapters/Analytic_L-functions.tex" 1772034438 85083 b483b032cb3fffa6d24bcb6b0645f96e ""
-  "Chapters/Arithmetic_Functions.aux" 1772507941 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a "pdflatex"
+  "Chapters/Arithmetic_Functions.aux" 1772572246 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a "pdflatex"
   "Chapters/Arithmetic_Functions.tex" 1771297556 8089 282103bc14c7cbc7221ff292366ce485 ""
-  "Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1772507941 9218 4d8f16edc8a6ca6be44b1306e7dd906e "pdflatex"
+  "Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1772572246 9218 4d8f16edc8a6ca6be44b1306e7dd906e "pdflatex"
   "Chapters/Dirichlet_Characters_and_Exponential_Sums.tex" 1772317904 42890 a0c6022857bf96338dd8708bc4a4b9db ""
-  "Chapters/Dirichlet_Series.aux" 1772507942 10729 39d8cc0233e50794f28c263be377b6e4 "pdflatex"
+  "Chapters/Dirichlet_Series.aux" 1772572246 10729 d8c135ef2807b9ec7658ec5503232a86 "pdflatex"
   "Chapters/Dirichlet_Series.tex" 1771297669 41075 bd42f59b385052483cfd144662255202 ""
-  "Chapters/Integrality_and_Dedekind_Domains.aux" 1772507941 18680 c1869c747742f7ac66266a5af4aa27b3 "pdflatex"
-  "Chapters/Integrality_and_Dedekind_Domains.tex" 1772507941 117929 e73aeaf637752c75da32b604eded7a3e ""
-  "Chapters/Splitting_of_Primes_and_Ramification.aux" 1772507942 6086 d4119bd158182051add84f3e48f5e1f8 "pdflatex"
+  "Chapters/Integrality_and_Dedekind_Domains.aux" 1772572246 19094 dfc7557ed09eabbeb27ffbd71b88ddbe "pdflatex"
+  "Chapters/Integrality_and_Dedekind_Domains.tex" 1772572245 119623 070066b245335921cba47132a7d035e2 ""
+  "Chapters/Splitting_of_Primes_and_Ramification.aux" 1772572246 6084 38fc1257b5528f3cb417a8e9234f0361 "pdflatex"
   "Chapters/Splitting_of_Primes_and_Ramification.tex" 1772486277 89540 b53cfd23e8aa78cee2afac593d715aeb ""
   "preamble.tex" 1772379594 5447 1848eb21c9b772a19e24311161e9737e ""
   (generated)
