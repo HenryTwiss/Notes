@@ -57,7 +57,7 @@
   \item Dirichlet convolution, \hyperpage{4}
   \item Dirichlet orthogonality relations, \hyperpage{8}
   \item Dirichlet series, \hyperpage{74}
-  \item discrete valuation ring, \hyperpage{55}
+  \item discrete valuation ring, \hyperpage{56}
   \item discriminant, \hyperpage{31}, \hyperpage{38}
   \item divides, \hyperpage{42}
   \item divisor function, \hyperpage{3}
@@ -126,7 +126,7 @@
 
   \item M\"obius function, \hyperpage{3}
   \item M\"obius inversion, \hyperpage{5}
-  \item maximal order, \hyperpage{58}
+  \item maximal order, \hyperpage{59}
   \item modulus, \hyperpage{7}
   \item monogenic, \hyperpage{37, 38}
   \item multiplicative, \hyperpage{2}, \hyperpage{49}
@@ -143,7 +143,7 @@
   \indexspace
 
   \item odd, \hyperpage{11}
-  \item order, \hyperpage{10}, \hyperpage{58}
+  \item order, \hyperpage{10}, \hyperpage{59}
 
   \indexspace
 
@@ -199,7 +199,7 @@
 
   \indexspace
 
-  \item uniformizer, \hyperpage{55}
+  \item uniformizer, \hyperpage{56}
   \item unit, \hyperpage{48}
   \item unit group, \hyperpage{47, 48}
   \item unramified, \hyperpage{64, 65}
@@ -207,7 +207,7 @@
 
   \indexspace
 
-  \item valuation, \hyperpage{55, 56}
+  \item valuation, \hyperpage{56, 57}
   \item Von Mangoldt coefficients, \hyperpage{106}
   \item von Mangoldt function, \hyperpage{4}
 

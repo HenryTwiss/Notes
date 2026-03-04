@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {4.2}Traces and Norms}{27}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Dedekind Domains}{38}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Localization}{49}{section.4.4}%
-\contentsline {section}{\numberline {4.5}\leavevmode {\color {red}\sf Todo: [Orders]}}{58}{section.4.5}%
+\contentsline {section}{\numberline {4.5}\leavevmode {\color {red}\sf Todo: [Orders]}}{59}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Splitting of Primes and Ramification}{60}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Splitting of Primes}{60}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Ramification}{65}{section.5.2}%
