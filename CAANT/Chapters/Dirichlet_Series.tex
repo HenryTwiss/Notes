@@ -236,7 +236,7 @@
       \]
       for \(\s > \s_{a}\). If the prime power coefficients satisfy
       \[
-        a(p^{k}) = \sum_{1 \le j_{1} \le \cdots \le j_{k} \le d}\a_{j_{1}}(p) \cdots \a_{j_{k}}(p),
+        a(p^{k}) = \sum_{j_{1} \le \cdots \le j_{k}}\a_{j_{1}}(p) \cdots \a_{j_{k}}(p),
       \]
       for some \(\a_{1}(p),\ldots,\a_{d}(p) \in \C\) and positive integer \(d\), then the product takes the form
       \[
@@ -254,7 +254,7 @@
       \]
       where the \(\ast\) indicates that we are summing over only those additional terms \(\frac{a(n)}{n^{s}}\) that appear in the expanded product. As \(N \to \infty\), the first sum on the right-hand side tends to \(D(s)\) and the second sum tends to zero because it is part of the tail of \(D(s)\). This proves that the product converges and is equal to \(D(s)\). If the prime power coefficients are of the form
       \[
-        a(p^{k}) = \sum_{1 \le j_{1} \le \cdots \le j_{k} \le d}\a_{j_{1}}(p) \cdots \a_{j_{k}}(p),
+        a(p^{k}) = \sum_{j_{1} \le \cdots \le j_{k}}\a_{j_{1}}(p) \cdots \a_{j_{k}}(p),
       \]
       then
       \[
@@ -275,9 +275,9 @@
     \[
       D(s) = \prod_{p}(1-a(p)p^{-s})^{-1}.
     \]
-    The condition
+    In any case, the existence of \(\a_{1}(p),\ldots,\a_{d}(p) \in \C\) with
     \[
-      a(p^{k}) = \sum_{1 \le j_{1} \le \cdots \le j_{k} \le d}\a_{j_{1}}(p) \cdots \a_{j_{k}}(p),
+      a(p^{k}) = \sum_{j_{1} \le \cdots \le j_{k}}\a_{j_{1}}(p) \cdots \a_{j_{k}}(p),
     \]
     guarantees that the Dirichlet series has an Euler product of degree \(d\).
 
@@ -387,7 +387,7 @@
       \[
         I(1,T) = \frac{1}{2}+O\left(\frac{c}{T}\right),
       \] 
-      and we see that \(\d(y) = \frac{1}{2}\). This proves everything when \(y = 1\). Now suppose \(y < 1\) and let \(d > c\). Let \(\eta = \sum_{1 \le i \le 4}\eta_{i}\) be the rectangular contour in \cref{fig:discontinuous_integral_contour_1} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = c\) and \(\s = d\). Consider
+      and we see that \(\d(y) = \frac{1}{2}\). This proves everything when \(y = 1\). Now suppose \(y < 1\) and let \(d > c\). Let \(\eta = \eta_{1}+\cdots+\eta_{4}\) be the rectangular contour in \cref{fig:discontinuous_integral_contour_1} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = c\) and \(\s = d\). Consider
       \[
         \frac{1}{2\pi i}\int_{\eta}y^{s}\,\frac{ds}{s}.
       \]

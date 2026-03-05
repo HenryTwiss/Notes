@@ -418,7 +418,7 @@
       \]
       So letting \(\s_{1,1},\ldots,\s_{n_{1},1}\) and \(\s_{1,2},\ldots,\s_{n_{2},2}\) be the elements of \(\Hom_{K}(L_{1},\conj{K})\) and \(\Hom_{K}(L_{2},\conj{K})\) respectively, \(\s_{1,1}\s_{1,2},\ldots,\s_{n_{1},1}\s_{n_{2},2}\) are the elements of \(\Hom_{K}(L,\conj{K})\). In particular, we may view \(\s_{1,1},\ldots,\s_{n_{1},1}\) and \(\s_{1,2},\ldots,\s_{n_{2},2}\) as elements of \(\Hom_{K}(L,\conj{K})\) that act as the identity on \(L_{2}\) and \(L_{1}\) respectively. Then the \(n_{1}\) and \(n_{2}\) equations
       \[
-        \sum_{i}\s_{i,1}(\b_{i,1})\a_{i,2} = \s_{i,1}(\b) \quad \text{and} \quad \sum_{j}\s_{j,2}(\b_{j,2})\a_{j,1} = \s_{j,2}(\b),
+        \sum_{k}\s_{i,1}(\b_{k,1})\a_{k,2} = \s_{i,1}(\b) \quad \text{and} \quad \sum_{\ell}\s_{j,2}(\b_{\ell,2})\a_{\ell,1} = \s_{j,2}(\b),
       \]
       are equivalent to the identities
       \[
@@ -499,7 +499,7 @@
     \[
       \mf{f}\mf{f}^{-1} = \smc{O}.
     \]
-    A priori, a fractional ideal need not be invertible nor should we expect it to be. In order to guarantee invertibility, we need to consider a more restrictive setting than mere integral domains. This will allow for integral ideals to factor uniquely into a product of primes and for the fractional ideals to form a group under multiplication in which every fractional ideal is invertible and \(\smc{O}\) is the identity. This will essentially permit us to treat integral ideas as we would integers.
+    A priori, a fractional ideal need not be invertible nor should we expect it to be. In order to guarantee invertibility, we need to consider a more restrictive setting than mere integral domains. This will allow for integral ideals to factor uniquely into a product of primes and for the fractional ideals to form an abelian group under multiplication in which every fractional ideal is invertible and \(\smc{O}\) is the identity. This will essentially permit us to treat integral ideas as we would integers.
     
     Accordingly, a ring \(\smc{O}\) is said to be a \textbf{Dedekind domain}\index{Dedekind domain} if the following properties are satisfied:
     \begin{enumerate}[label*=(\roman*)]
@@ -650,7 +650,7 @@
     
     Just as it is common to suppress the fundamental theorem of arithmetic and just state the prime factorization of an integer, we suppress referencing \cref{thm:unique_product_prime_ideals} and simply state the prime factorization of a fractional ideal.
 
-    With the prime factorization in hand, we will discuss the group structure of the fractional ideals of \(\smc{O}\). Let \(I_{\smc{O}}\) denote the set of fractional ideals of \(\smc{O}\). We call \(I_{\smc{O}}\) the \textbf{ideal group}\index{ideal group} of \(\smc{O}\). This is indeed a group as the following theorem demonstrates:
+    With the prime factorization in hand, we will discuss the group structure of the fractional ideals of \(\smc{O}\). Let \(I_{\smc{O}}\) denote the set of fractional ideals of \(\smc{O}\). This is indeed an abelian group.
 
     \begin{theorem}\label{thm:ideal_group_is_a_group}
       Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\). Then \(I_{\smc{O}}\) is an abelian group with identity \(\smc{O}\).
@@ -667,9 +667,44 @@
       We must show \(\mf{b} = \mf{a}^{-1}\). For the forward inclusion, \(\mf{a}\mf{b} = \smc{O}\) implies \(\mf{b} \subseteq \mf{a}^{-1}\) by the definition of \(\mf{a}^{-1}\). For the reverse inclusion, suppose \(\k \in \mf{a}^{-1}\). Then \(\k\mf{a} \subseteq \smc{O}\) and multiplying by \(\mf{b}\) shows \(\k\smc{O} \subseteq \mf{b}\) whence \(\k \in \mf{b}\).
     \end{proof}
 
-    It follows from this result that every fractional ideal is invertible in a Dedekind domain. We will use this fact so often that, rather than reference it, we will suppress it for legibility.
+    It follows from this result that every fractional ideal is invertible in a Dedekind domain. We will use this fact so often that we suppress it for legibility. 
     
-    It is an interesting fact that for a Dedekind domain, being a principal ideal domain is equivalent to being a unique factorization domain.
+    Let \(P_{\smc{O}}\) denote the subgroup of principal fractional ideals of \(I_{\smc{O}}\). Since \(I_{\smc{O}}\) is abelian by the previous result, \(P_{\smc{O}}\) is normal. The \textbf{ideal class group}\index{ideal class group} \(\Cl(\smc{O})\) of \(\smc{O}\) is defined to be the quotient
+    \[
+      \Cl(\smc{O}) = I_{\smc{O}}/P_{\smc{O}}.
+    \]
+    An element of \(\Cl(\smc{O})\) is called an \textbf{ideal class}\index{ideal class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. The \textbf{class number}\index{class number} \(h_{\smc{O}}\) of \(\smc{O}\) is defined by
+    \[
+      h_{\smc{O}} = |\Cl(\smc{O})|.
+    \]
+    The ideal class group encodes how much \(\smc{O}\) fails to be a principal ideal domain and the class number is a measure of the degree of failure. Indeed, \(\smc{O}\) is a principal ideal domain if and only if \(h_{\smc{O}} = 1\).
+
+    \begin{remark}\label{rem:general_class_number_not_finite}
+      The class number \(h_{\smc{O}}\) need not be finite for a general Dedekind domain \(\smc{O}\).
+    \end{remark}
+    
+    The \textbf{unit group}\index{unit group} of \(\smc{O}\) is defined to be \(\smc{O}^{\ast}\). That is, the unit group is the group of units in \(\smc{O}\). The ideal class and unit groups of \(\smc{O}\) fit into an exact sequence.
+
+    \begin{proposition}\label{prop:ideal_class_group_exact_sequence}
+      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\). Then the sequence
+      \begin{center}
+        \begin{tikzcd}
+          1 \arrow{r} & \smc{O}^{\ast} \arrow{r} & K^{\ast} \arrow{r} & I_{\smc{O}} \arrow{r} & \Cl(\smc{O}) \arrow{r} & 1,
+        \end{tikzcd}
+      \end{center}
+      where the middle map takes \(\k\) to its associated principal fractional ideal \(\k\smc{O}\), is exact.
+    \end{proposition}
+    \begin{proof}
+      As the second map is injective and the fourth map is surjective, the sequence is exact at \(\smc{O}^{\ast}\) and \(\Cl(\smc{O})\). So it suffices to prove exactness at \(K^{\ast}\) and \(I_{\smc{O}}\). For exactness at \(K^{\ast}\), recall from \cref{thm:ideal_group_is_a_group} that \(\smc{O}\) is the identity of \(I_{\smc{O}}\). A principal integral ideal is \(\smc{O}\) if and only if it is generated by a unit in \(\smc{O}\) and exactness at \(K^{\ast}\) follows. We have exactness at \(I_{\smc{O}}\) because the principal fractional ideals represent the identity class of \(\Cl(\smc{O})\) and these are generated by elements of \(K^{\ast}\).
+    \end{proof}
+
+    Thinking of the third map in this exact sequence as passing from numbers in \(K^{\ast}\) to fractional ideals in \(I_{\smc{O}}\), exactness means that unit group is measuring the contraction (how many numbers are annihilated) taking place during this process while the ideal class group is measuring the expansion (how many fractional ideals are created).
+    
+    \begin{remark}
+      The class number \(h_{\smc{O}}\) and unit group \(\smc{O}^{\ast}\) are two of the most difficult pieces of algebraic data of \(\smc{O}\) to compute.
+    \end{remark}
+
+    We will now turn to proving some interesting results about Dedekind domains. As a first result, being a principal ideal domain is equivalent to being a unique factorization domain for Dedekind domains.
 
     \begin{proposition}\label{prop:UDF_PID_equivalence_for_Dedekind}
       Let \(\smc{O}\) be a Dedekind domain. Then \(\smc{O}\) is a principal ideal domain if and only if it is a unique factorization domain.
@@ -678,7 +713,7 @@
       The forward implication is immediate as every principal ideal domain is a unique factorization domain. For the reverse implication, suppose \(\smc{O}\) is a unique factorization domain. As every integral ideal factors into a product of primes by \cref{thm:unique_product_prime_ideals} and the product of principal integral ideals is principal, it suffices to show that primes are principal. Let \(\mf{p}\) be a prime. Then there exists nonzero \(\a \in \mf{p}\) and \(\a\) is not a unit since \(\mf{p}\) a proper ideal. Since \(\smc{O}\) is a unique factorization domain, let \(\a = \e\rho_{1}^{e_{1}} \cdots \rho_{r}^{e_{r}}\) be the prime factorization of \(\a\). Since \(\mf{p}\) is prime, it follows that there is some \(i\) such that \(\rho_{i} \in \mf{p}\). Without loss of generality, we may assume \(\rho_{1} \in \mf{p}\). Then the integral ideal \(\rho_{1}\smc{O}\) satisfies \(\rho_{1}\smc{O} \subseteq \mf{p}\). As \(\rho_{1}\) is prime, \(\rho_{1}\smc{O}\) is a prime and hence maximal since prime ideals are maximal in \(\smc{O}\). Whence \(\rho_{1}\smc{O} = \mf{p}\) proving \(\mf{p}\) is principal.
     \end{proof}
 
-    We will now discuss applications of the Chinese remainder theorem in the context of integral ideals. With it we can prove some other interesting results. Suppose \(\mf{a}\) is an integral ideal with prime factorization
+    The Chinese remainder theorem also applies to Dedekind domains which will allow us to deduce some more results. Suppose \(\mf{a}\) is an integral ideal with prime factorization
     \[
       \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}.
     \]
@@ -690,7 +725,7 @@
     \[
       \a \equiv \a_{i} \pmod{\mf{p}_{i}^{e_{i}}}.
     \]
-    We will use the Chinese remainder theorem to prove a few useful lemmas about Dedekind domains. Our first lemma shows that given two integral ideals, we can multiply by a relatively prime integral ideal and produce a principal integral ideal.
+    We will use this fact to prove a few useful lemmas about Dedekind domains. Our first lemma shows that given two integral ideals, we can multiply by a relatively prime integral ideal to produce a principal integral ideal.
 
     \begin{lemma}\label{lem:relatively_prime_and_principal}
       Let \(\smc{O}\) be a Dedekind domain and \(\mf{a}\) and \(\mf{b}\) be integral ideals of \(\smc{O}\). Then there exists an integral ideal \(\mf{c}\) of \(\smc{O}\) relatively prime to \(\mf{b}\) such that \(\mf{a}\mf{c}\) is principal.
@@ -744,7 +779,7 @@
       By the first isomorphism theorem, it suffices to show \(\phi\) is surjective and \(\ker\phi = \mf{b}\). Surjectivity follows from the first identity above. As \(\ker\phi = \d^{-1}\mf{b}\mf{c} \cap \mf{a}\), the second identity above implies \(\ker\phi = \mf{b}\). This proves the first statement. For the second statement, take \(\mf{f} = \mf{a}^{-1}\), \(\mf{g} = \smc{O}\), and \(\mf{h} = \mf{a}\).
     \end{proof}
 
-    Returning to the general case of a Dedekind domain \(\smc{O}\) and a prime \(\mf{p}\), we call \(\F_{\mf{p}} = \smc{O}/\mf{p}\) the \textbf{residue class field}\index{residue class field} of \(\smc{O}\) by \(\mf{p}\). This is field as primes are maximal in Dedekind domains. Our last lemma gives an isomorphism between the residue class field and quotients by powers of a prime.
+    If \(\smc{O}\) is a Dedekind domain and \(\mf{p}\) is a prime of \(\smc{O}\), we call \(\F_{\mf{p}} = \smc{O}/\mf{p}\) the \textbf{residue class field}\index{residue class field} of \(\smc{O}\) by \(\mf{p}\). This is field as \(mf{p}\) is maximal. Our next lemma gives an isomorphism between the residue class field and quotients by powers of a prime.
 
     \begin{lemma}\label{lem:isomorphism_of_quotient_by_prime_integral_ideals}
       Let \(\smc{O}\) be a Dedekind domain. Then for any prime \(\mf{p}\) of \(\smc{O}\) and nonnegative integer \(n\), we have an isomorphism
@@ -768,7 +803,7 @@
        Surjectivity follows from the first identity. As \(\ker\phi = \b^{-1}\mf{p}^{n+1} \cap \smc{O}\), the second identity implies \(\ker\phi = \mf{p}\).
     \end{proof}
 
-    We now state two additional interesting propositions about Dedekind domains. The first proposition is that any Dedekind domain with only finitely many primes is a principal ideal domain.
+    We now state a few additional interesting propositions about Dedekind domains. The first is that any Dedekind domain with only finitely many primes is a principal ideal domain.
 
     \begin{proposition}\label{prop:Dedekind_with_finite_primes_is_PID}
       Let \(\smc{O}\) be a Dedekind domain. If there are only finitely many primes of \(\smc{O}\) then \(\smc{O}\) is a principal ideal domain.
@@ -777,7 +812,7 @@
       Let \(\mf{p}_{1},\ldots,\mf{p}_{r}\) be the primes of \(\smc{O}\). Then for any integral ideal \(\mf{a}\), \cref{lem:relatively_prime_and_principal} implies the existence of an integral ideal \(\mf{b}\) relatively prime to \(\mf{p}_{1} \cdots \mf{p}_{r}\) such that \(\mf{a}\mf{b} = \a\smc{O}\) for some nonzero \(\a \in \smc{O}\). As \(\mf{b}\) is relatively prime to all of the primes of \(\smc{O}\) we must have \(\mf{b} = \smc{O}\). Then \(\mf{a} = \a\smc{O}\). As \(\mf{a}\) was arbitrary, \(\smc{O}\) is a principal ideal domain.
     \end{proof}
     
-    The second proposition is that any fractional ideal is generated by at most two elements.
+    The second is that any Dedekind domain is not far off from being a principal ideal domain in terms of the number of generators needed for an integral ideal. In fact, any fractional ideal is generated by at most two elements.
 
     \begin{proposition}\label{prop:fractional_ideal_generated_by_two_elements}
       Let \(\smc{O}\) be a Dedekind domain. Then every fractional ideal \(\mf{f}\) of \(\smc{O}\) is generated by at most two elements.
@@ -794,42 +829,7 @@
       Therefore \(\mf{a}\) is generated by at most two elements.
     \end{proof}
 
-    This result shows that while a Dedekind domain \(\smc{O}\) may not be a principal ideal domain, it is not far off from one since every integral ideal needs at most two generators. We can give a more refined interpretation of the degree to which \(\smc{O}\) fails to be a principal ideal domain using the ideal group \(I_{\smc{O}}\). Let \(P_{\smc{O}}\) denote the subgroup of principal fractional ideals of \(I_{\smc{O}}\). Since \(I_{\smc{O}}\) is abelian by \cref{thm:ideal_group_is_a_group}, \(P_{\smc{O}}\) is normal. The \textbf{ideal class group}\index{ideal class group} \(\Cl(\smc{O})\) of \(\smc{O}\) is defined to be the quotient group
-    \[
-      \Cl(\smc{O}) = I_{\smc{O}}/P_{\smc{O}},
-    \]
-    An element of \(\Cl(\smc{O})\) is called an \textbf{ideal class}\index{ideal class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. The \textbf{class number}\index{class number} \(h_{\smc{O}}\) of \(\smc{O}\) is defined by
-    \[
-      h_{\smc{O}} = |\Cl(\smc{O})|.
-    \]
-    The ideal class group encodes how much \(\smc{O}\) fails to be a principal ideal domain and the class number is a measure of the degree of failure. Indeed, \(\smc{O}\) is a principal ideal domain if and only if \(h_{\smc{O}} = 1\).
-
-    \begin{remark}\label{rem:general_class_number_not_finite}
-      The class number \(h_{\smc{O}}\) need not be finite for a general Dedekind domain \(\smc{O}\).
-    \end{remark}
-    
-    The \textbf{unit group}\index{unit group} of \(\smc{O}\) is defined to be \(\smc{O}^{\ast}\). That is, the unit group is the group of units in \(\smc{O}\). The ideal class and unit groups of \(\smc{O}\) fit into an exact sequence.
-
-    \begin{proposition}\label{prop:ideal_class_group_exact_sequence}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\). Then the sequence
-      \begin{center}
-        \begin{tikzcd}
-          1 \arrow{r} & \smc{O}^{\ast} \arrow{r} & K^{\ast} \arrow{r} & I_{\smc{O}} \arrow{r} & \Cl(\smc{O}) \arrow{r} & 1,
-        \end{tikzcd}
-      \end{center}
-      where the middle map takes \(\k\) to its associated principal fractional ideal \(\k\smc{O}\), is exact.
-    \end{proposition}
-    \begin{proof}
-      As the second map is injective and the fourth map is surjective, the sequence is exact at \(\smc{O}^{\ast}\) and \(\Cl(\smc{O})\). So it suffices to prove exactness at \(K^{\ast}\) and \(I_{\smc{O}}\). For exactness at \(K^{\ast}\), recall from \cref{thm:ideal_group_is_a_group} that \(\smc{O}\) is the identity of \(I_{\smc{O}}\). A principal integral ideal is \(\smc{O}\) if and only if it is generated by a unit in \(\smc{O}\) and exactness at \(K^{\ast}\) follows. We have exactness at \(I_{\smc{O}}\) because the principal fractional ideals represent the identity class of \(\Cl(\smc{O})\) and these are generated by elements of \(K^{\ast}\).
-    \end{proof}
-
-    Thinking of the third map in this exact sequence as passing from numbers in \(K^{\ast}\) to fractional ideals in \(I_{\smc{O}}\), exactness means that unit group is measuring the contraction (how many numbers are annihilated) taking place during this process while the class group is measuring the expansion (how many fractional ideals are created).
-    
-    \begin{remark}
-      The class number \(h_{\smc{O}}\) and unit group \(\smc{O}^{\ast}\) are two of the most difficult pieces of algebraic data of \(\smc{O}\) to compute.
-    \end{remark}
-
-    Now let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). It turns out that \(\mc{O}\) is also a Dedekind domain.
+    For our last result, let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then it turns out that \(\mc{O}\) is also a Dedekind domain.
 
     \begin{proposition}\label{prop:integral_closure_of_Dedekind_is_Dedekind}
       Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). Then \(\mc{O}\) is a Dedekind domain with field of fractions \(L\).
@@ -856,7 +856,7 @@
     \end{equation}
     In general, it need not be true that \(\mc{O}/\smc{O}\) admits an integral basis as \(\mc{O}\) is not guaranteed to be a free \(\smc{O}\)-module of rank \(n\). However, an integral basis will exist if \(\smc{O}\) has finitely many primes for then it is a principal ideal domain by \cref{prop:Dedekind_with_finite_primes_is_PID} and we may appeal to \cref{thm:integral_basis_AKBL}.
 
-    We now turn to the case of a number field \(K\) for which our developments so far can be refined. By \cref{prop:integral_closure_of_Dedekind_is_Dedekind}, the ring of integers \(\mc{O}_{K}\) is a Dedekind domain as \(\Z\) is a principal ideal domain. In view of this fact, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). The \textbf{ideal group}\index{ideal group} \(I_{K}\) of \(K\) is the ideal group of \(\mc{O}_{K}\), we write \(P_{K}\) for the subgroup of principal fractional ideals of \(K\), and the \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). In particular,
+    We now turn to the case of a number field \(K\) for which our developments so far can be refined. By \cref{prop:integral_closure_of_Dedekind_is_Dedekind}, the ring of integers \(\mc{O}_{K}\) is a Dedekind domain as \(\Z\) is a principal ideal domain. In view of this fact, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). We let \(I_{K}\) denote the group of fractional ideals of \(\mc{O}_{K}\), let \(P_{K}\) be the subgroup of principal fractional ideals of \(I_{K}\), and let the \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) be the ideal class group of \(\mc{O}_{K}\). In particular,
     \[
       \Cl(K) = I_{K}/P_{K}.
     \]
@@ -1031,17 +1031,17 @@
       proving surjectivity. Moreover, \(\ker\phi = \wtilde{\mf{a}}_{\mf{p}}\) from the definition of \(\wtilde{\mf{a}}_{\mf{p}}\).
     \end{proof}
 
-    Also when \(\smc{O}\) is a one-dimensional noetherian domain, a fractional ideal is invertible if and only if its localizations at all primes is principal.
+    Also when \(\smc{O}\) is a one-dimensional noetherian domain, a fractional ideal of \(\smc{O}\) is invertible if and only if its localizations at all primes is principal in \(\smc{O}_{\mf{p}}\).
 
     \begin{proposition}\label{prop:invertible_fractional_ideal_using_localization}
       Let \(\smc{O}\) be a one-dimensional noetherian domain with field of fractions \(K\). Then a fractional ideal \(\mf{f}\) of \(\smc{O}\) is invertible if and only if the fractional ideal \(\mf{f}_{\mf{p}}\) of \(\smc{O}_{\mf{p}}\) is principal for every prime \(\mf{p}\) of \(\smc{O}\).
     \end{proposition}
     \begin{proof}
-      Write \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\). Then it suffices to show the claim for the integral ideal \(\mf{a}\). For legibility, write \(\mf{b} = \mf{a}^{-1}\).For the forward implication, suppose \(\mf{a}\) is invertible so that \(\mf{a}\mf{b} = \smc{O}\). Then
+      Write \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\). Then it suffices to show the claim for the integral ideal \(\mf{a}\). Set \(\mf{b} = \mf{a}^{-1}\). For the forward implication, suppose \(\mf{a}\) is invertible so that \(\mf{a}\mf{b} = \smc{O}\). Then we may find \(\a_{1},\ldots,\a_{n} \in \mf{a}\) and \(\b_{1},\ldots,\b_{n} \in \mf{b}\) such that
       \[
-        \sum_{i}\a_{i}\b_{i} = 1,
+        \sum_{i}\a_{i}\b_{i} = 1.
       \]
-      for some \(\a_{i} \in \mf{a}\) and \(\b_{i} \in \mf{b}\). Moreover, not all of the \(\a_{i}\b_{i}\) can lie in the unique maximal ideal \(\mf{p}_{\mf{p}}\) of the local ring \(\smc{O}_{\mf{p}}\) for otherwise this ideal is not proper. Without loss of generality, we may then assume \(\a_{1}\b_{1}\) is a unit in \(\smc{O}_{\mf{p}}\). As \(\mf{a}_{\mf{p}}\mf{b} = \smc{O}_{\mf{p}}\) because \(\mf{a}\) is invertible, it follows that \(\mf{a}_{\mf{p}} = \a_{1}\smc{O}_{\mf{p}}\). This shows \(\mf{a}_{\mf{p}}\) is principal. For the reverse implication, suppose \(\mf{a}_{\mf{p}}\) is principle for every prime \(\mf{p}\) of \(\smc{O}\). Whence \(\mf{a}_{\mf{p}} = \a_{\mf{p}}\smc{O}_{\mf{p}}\) for some nonzero \(\a_{\mf{p}} \in K\). As \(K\) is the field of fractions of \(\smc{O}_{\mf{p}}\), we may multiply by a nonzero element of \(\smc{O}_{\mf{p}}\), if necessary, to ensure that \(\a_{\mf{p}} \in \mf{a}\). Now if \(\mf{a}\) were not invertible, then there would exist a prime \(\mf{p}\) such that
+      Moreover, not all of the \(\a_{i}\b_{i}\) can lie in the unique maximal ideal \(\mf{p}_{\mf{p}}\) of the local ring \(\smc{O}_{\mf{p}}\) for otherwise this ideal is not proper. Without loss of generality, we may assume \(\a_{1}\b_{1} \notin \mf{p}_{\mf{p}}\) and so it is a unit in \(\smc{O}_{\mf{p}}\). As \(\mf{a}_{\mf{p}}\mf{b} = \smc{O}_{\mf{p}}\) by the invertibility of \(\mf{a}\), it follows that \(\mf{a}_{\mf{p}} = \a_{1}\smc{O}_{\mf{p}}\). This shows \(\mf{a}_{\mf{p}}\) is principal. For the reverse implication, suppose \(\mf{a}_{\mf{p}}\) is principle for every prime \(\mf{p}\) of \(\smc{O}\). Whence \(\mf{a}_{\mf{p}} = \a_{\mf{p}}\smc{O}_{\mf{p}}\) for some nonzero \(\a_{\mf{p}} \in K\). As \(K\) is the field of fractions of \(\smc{O}_{\mf{p}}\), we may multiply by a nonzero element of \(\smc{O}_{\mf{p}}\), if necessary, to ensure that \(\a_{\mf{p}} \in \mf{a}\). Now if \(\mf{a}\) were not invertible, then there would exist a prime \(\mf{p}\) such that
       \[
         \mf{a}\mf{a}^{-1} \subseteq \mf{p},
       \]
@@ -1198,17 +1198,35 @@
     \[
       \smc{O} \subseteq \mf{o} \subseteq \mc{O}.
     \]
-    A few useful facts about \(\mf{o}\) are also immediate. As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), \(\mf{o}\) is integral over \(\smc{O}\). Moreover, the field of fractions of \(\mf{o}\) contains \(K\) and as \(\mf{o}\) contains a basis of \(L/K\), the field of fractions must be \(L\) itself. Also, \(\mf{o}\) is noetherian and every prime is maximal. Indeed, any integral ideal of \(\mf{A}\) of \(\mf{o}\) is a finitely generated \(\smc{O}\)-module, as \(\mf{o}\) itself is, whence a finitely generated \(\mf{o}\)-module. This shows \(\mf{o}\) is noetherian. Now suppose \(\mf{P}\) is a prime of \(\mf{o}\). We claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal and is prime because \(\mf{P}\) is. To see that it is not the zero ideal, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
+    A few useful facts about \(\mf{o}\) are also immediate. As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), \(\mf{o}\) is integral over \(\smc{O}\). Moreover, the field of fractions of \(\mf{o}\) contains \(K\) and as \(\mf{o}\) contains a basis of \(L/K\), the field of fractions must be \(L\) itself. Also, \(\mf{o}\) is a one-dimensional noetherian domain. Indeed, any integral ideal of \(\mf{A}\) of \(\mf{o}\) is a finitely generated \(\smc{O}\)-module, as \(\mf{o}\) itself is, whence a finitely generated \(\mf{o}\)-module. This shows \(\mf{o}\) is noetherian. Now suppose \(\mf{P}\) is a prime of \(\mf{o}\). We claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal and is prime because \(\mf{P}\) is. To see that it is not the zero ideal, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
     \[
       \l^{n}+\a_{n-1}\l^{n-1}+\cdots+\a_{0} = 0,
     \]
-    for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Moreover, it follows that \(\a_{0}\mf{o} \subset \mf{P} \subseteq \mf{o}\). Therefore \(\mf{P}\) has the same rank as \(\mf{o}\) as \(\smc{O}\)-modules. Then the integral domain \(\mf{o}/\mf{P}\) is necessarily finite and thus a field proving \(\mf{P}\) is maximal. These facts show that while orders need not be integrally closed domains, they satisfy every other property of being a Dedekind domain. In practice, orders generally arise in the form
+    for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Whence \(\a_{0}\mf{o} \subset \mf{P} \subseteq \mf{o}\) which shows that \(\mf{P}\) has the same rank as \(\mf{o}\) as \(\smc{O}\)-modules. Then the integral domain \(\mf{o}/\mf{P}\) is necessarily finite and thus a field proving \(\mf{P}\) is maximal. These facts show that while orders need not be integrally closed domains, they satisfy every other property of being a Dedekind domain. In practice, orders generally arise in the form
     \[
       \mf{o} = \smc{O}[\a_{1},\ldots,\a_{n}],
     \]
     where \(\a_{1},\ldots,\a_{n}\) satisfy \(L = K(\a_{1},\ldots,\a_{n})\).
+
+    There is a generalization of the ideal class group to orders as well. Since \(\mf{o}\) is not necessarily a Dedekind domain, fractional ideals need not be invertible. The natural restriction is to then consider all fractional ideals which are invertible. Let \(I_{\mf{o}}\) denote the set of invertible fractional ideals of \(\mf{o}\) which are invertible. Then it is easy to see that this is an abelian group.
+
+    \begin{theorem}\label{thm:order_ideal_group_is_a_group}
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension for a degree \(n\) separable extension \(L/K\) and let \(\mf{o}\) be an order of \(\mc{O}/\smc{O}\). Then \(I_{\mf{o}}\) is an abelian group with identity \(\mf{o}\).
+    \end{theorem}
+    \begin{proof}
+      Associativity and commutativity of \(I_{\mf{o}}\) are obvious. The identity is \(\mf{o}\) because every invertible fractional ideal is a finitely generated \(\mf{o}\)-submodule of \(L\). Lastly, every fractional ideal is invertible by definition of \(I_{\mf{o}}\).
+    \end{proof}
     
-    \iffalse
+    Let \(P_{\mf{o}}\) denote the subgroup of principal fractional ideals of \(I_{\mf{o}}\). As \(I_{\mf{o}}\) is abelian by the previous result, \(P_{\mf{o}}\) is normal. The \textbf{Picard group}\index{Picard group} \(\Pic(\mf{o})\) of \(\mf{o}\) is defined to be the quotient
+    \[
+      \Pic(\mf{o}) = I_{\mf{o}}/P_{\mf{o}}.
+    \]
+  Of course, in the case of the maximal order \(\mc{O}\), the Picard group is precisely the ideal class group which is to say
+  \[
+    \Pic(\mc{O}) = \Cl(\mc{O}).
+  \]
+
+  \iffalse
     Another important fact about orders which we will see is that their localizations at primes behave much the same as for Dedekind domains for almost all primes. To begin to describe the similarity, we will prove a generalization of the Chinese remainder theorem.
 
     If \(\t\) is a primitive element for \(K/\Q\) contained in \(\mc{O}_{K}\) then the \textbf{conductor}\index{conductor} \(\mf{q}_{K}\) of \(K\) relative to \(\t\) is the conductor of \(\mc{O}_{K}/\Z\) relative to \(\t\). Even though \(K\) admits an integral basis, \(\mc{O}_{K}\) is not necessarily monogenic so that \(\mf{q}_{K}\) may not be \(\mc{O}_{K}\). \todo{say something about Galois number fields...}

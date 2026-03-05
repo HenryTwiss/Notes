@@ -12,7 +12,7 @@
     with coefficients \(a_{L}(n) \in \C\) such that \(a_{L}(1) = 1\) and satisfying the following properties:
     \begin{enumerate}[align=left]
       \item[\textbf{Analyticity:}] There exists a nonnegative integer \(m_{L}\) such that the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s > 1\) and admits meromorphic continuation to \(\C\) with at most a pole at \(s = 1\) of order \(m_{L}\). Moreover, \((s-1)^{m_{L}}L(s)\) is order \(1\).
-      \item[\textbf{Functional Equation:}] There is a positive integer \(q_{L}\), called the \textbf{conductor}\index{conductor} of \(L(s)\), a positive integer \(d_{L}\) called the \textbf{degree}\index{degree} of \(L(s)\), complex numbers \((\mu_{j})_{1 \le j \le d_{L}}\) called the \textbf{gamma parameters}\index{gamma parameters} of \(L(s)\) that are either real or occur in conjugate pairs and satisfy \(\Re(\mu_{j}) \ge 0\), and a complex number \(\e_{L}\) called the \textbf{root number}\index{root number} of \(L(s)\) with \(|\e_{L}| = 1\), all of which determine functions
+      \item[\textbf{Functional Equation:}] There is a positive integer \(q_{L}\), called the \textbf{conductor}\index{conductor} of \(L(s)\), a positive integer \(d_{L}\) called the \textbf{degree}\index{degree} of \(L(s)\), complex numbers \((\mu_{j})_{j \le d_{L}}\) called the \textbf{gamma parameters}\index{gamma parameters} of \(L(s)\) that are either real or occur in conjugate pairs and satisfy \(\Re(\mu_{j}) \ge 0\), and a complex number \(\e_{L}\) called the \textbf{root number}\index{root number} of \(L(s)\) with \(|\e_{L}| = 1\), all of which determine functions
       \[
         \L(s,L) = q_{L}^{\frac{s}{2}}\g_{L}(s)L(s) \quad \text{and} \quad \g_{L}(s) = \pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right),
       \]
@@ -21,7 +21,7 @@
         \L(s,L) = \e_{L}\conj{\L(1-\conj{s},L)}.
       \]
       This is called the \textbf{functional equation}\index{functional equation} of \(L(s)\). The tuple \((\e_{L},q_{L},\mu_{1},\ldots,\mu_{d_{L}})\) is called the \textbf{functional equation data}\index{functional equation data} of \(L(s)\).
-      \item[\textbf{Euler product:}] For every prime \(p\), there exist complex numbers \((\a_{j}(p))_{1 \le j \le d_{L}}\) called the \textbf{Euler parameters}\index{Euler parameters} of \(L(s)\) at \(p\) satisfying \(|\a_{j}(p)| \le p^{\theta}\) for some \(0 \le \theta < 1\) and are such that \(L(s)\) admits the Euler product
+      \item[\textbf{Euler product:}] For every prime \(p\), there exist complex numbers \((\a_{j}(p))_{j \le d_{L}}\) called the \textbf{Euler parameters}\index{Euler parameters} of \(L(s)\) at \(p\) satisfying \(|\a_{j}(p)| \le p^{\theta}\) for some \(0 \le \theta < 1\) and are such that \(L(s)\) admits the Euler product
       \[
         L(s) = \prod_{p}(1-\a_{1}(p)p^{-s})^{-1} \cdots (1-\a_{d_{L}}(p)p^{-s})^{-1},
       \]
@@ -54,7 +54,7 @@
       \]
       \item The Euler product implies that the coefficients \(a_{L}(n)\) are multiplicative and are determined on prime powers by
       \[
-        a_{L}(p^{k}) = \sum_{1 \le j_{1} \le \cdots \le j_{k} \le d_{L}}\a_{j_{1}}(p) \cdots \a_{j_{k}}(p).
+        a_{L}(p^{k}) = \sum_{j_{1} \le \cdots \le j_{k}}\a_{j_{1}}(p) \cdots \a_{j_{k}}(p).
       \]
       In other words, \(a_{L}(p^{k})\) is the complete symmetric polynomial of degree \(k\) in the Euler parameters at \(p\). If the Ramanujan bound holds, then it follows that \(a_{L}(n) \ll \s_{d_{L}}(n)\). This implies the slightly weaker, but more practical, estimate \(a_{L}(n) \ll_{\e} n^{\e}\).
     \end{enumerate}
@@ -90,7 +90,7 @@
       \[
         O(1) = c\log\log(x)+O(1),
       \]
-      for some positive integer \(c\) since the factorizations are distinct. This is impossible.
+      for some positive integer \(c\) since the factorizations are distinct. This is impossible and thus the factorization is unique.
     \end{proof}
 
     To an analytic \(L\)-function \(L(s)\), we associate its \textbf{analytic conductor}\index{analytic conductor} \(\mf{q}(s,L)\) defined by
