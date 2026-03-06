@@ -1017,7 +1017,7 @@
       \[
         \mf{A} = \mf{a}D^{-1}.
       \]
-      Since \(\smc{O}\) is a Dedekind domain, \(\mf{a}\) is a finitely generated \(\smc{O}\)-module and hence \(\mf{A}\) is a finitely generated \(\smc{O}D^{-1}\)-module by the identity we have just proved. Therefore \(\smc{O}D^{-1}\) is noetherian. It remains to show that every prime of \(\smc{O}D^{-1}\) is maximal. By \cref{prop:localization_prime_bijection}, every prime is of the form \(\mf{p}D^{-1}\) for some prime \(\mf{p}\) of \(\smc{O}\). But then \(\mf{p}D^{-1}\) is maximal because \(\mf{p}\) is and the bijections in \cref{prop:localization_prime_bijection} are inclusion-preserving.
+      Since \(\smc{O}\) is noetherian, \(\mf{a}\) is a finitely generated \(\smc{O}\)-module and hence \(\mf{A}\) is a finitely generated \(\smc{O}D^{-1}\)-module. Therefore \(\smc{O}D^{-1}\) is noetherian. It remains to show that every prime of \(\smc{O}D^{-1}\) is maximal. By \cref{prop:localization_prime_bijection}, every prime is of the form \(\mf{p}D^{-1}\) for some prime \(\mf{p}\) of \(\smc{O}\). But then \(\mf{p}D^{-1}\) is maximal because \(\mf{p}\) is and the bijections in \cref{prop:localization_prime_bijection} are inclusion-preserving.
     \end{proof}
 
     An immediate consequence of this result is that the localizations \(\smc{O}_{\mf{p}}\) and \(\smc{O}(X)\) are Dedekind domains if \(\smc{O}\) is. In fact, from \cref{prop:integral_closure_of_Dedekind_is_Dedekind,prop:localization_of_integral_closure_is_integral_closure,prop:localization_of_Dedekind_is_Dedekind} we see that \(\mc{O}D^{-1}/\smc{O}D^{-1}\) is a Dedekind extension of a finite separable extension \(L/K\) if \(\mc{O}/\smc{O}\) is. In this case we setup some additional notation. If \(\mf{p}\) is a prime of \(\smc{O}\), we define the \textbf{localization}\index{localization} \(\mc{O}_{\mf{p}}\) of \(\mc{O}\) at \(\mf{p}\) by
@@ -1128,17 +1128,17 @@
     \]
     We call any \(\a \in \mc{O}_{K}^{S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl^{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}^{S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K}^{S}\) of \(K\) is the class number of \(\Cl^{S}(K)\). The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \((\mc{O}_{K}^{S})^{\ast}\) of \(\mc{O}_{K}^{S}\) and we call any element of \((\mc{O}_{K}^{S})^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
   \section{\todo{Orders}}
-    Recall that Dedekind domains are one-dimensional noetherian domains that are also integrally closed domains. An order will relax the condition of being integrally closed, and surprisingly, we will still be able to deduce similar information as we did for Dedekind domains. More precisely, for any integral domain \(\smc{O}\) with field of fractions \(K\), we define its \textbf{conductor}\index{conductor} \(\mf{q}\) to be
+    Recall that Dedekind domains are one-dimensional noetherian domains that are also integrally closed domains. An order will relax the condition of being integrally closed, and surprisingly, we will still be able to deduce similar information as we did for Dedekind domains. More precisely, for any integral domain \(\smc{O}\) with field of fractions \(K\), we define its \textbf{conductor}\index{conductor} \(\mf{q}(\smc{O})\) to be
     \[
-      \mf{q} = \{\a \in \smc{O}:\a\conj{\smc{O}} \subseteq \smc{O}\}.
+      \mf{q}(\smc{O}) = \{\a \in \smc{O}:\a\conj{\smc{O}} \subseteq \smc{O}\}.
     \]
-    Then \(\mf{q}\) is an ideal of \(\smc{O}\) and it is the largest ideal which is also an ideal of \(\conj{\smc{O}}\). Clearly \(\smc{O}\) is an integrally closed domain if and only if the conductor is \(\smc{O}\). In the case \(\smc{O}\) is a noetherian domain, the conductor is an integral ideal of \(\smc{O}\), which is to say it is nonzero, precisely when \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
+    Then \(\mf{q}(\smc{O})\) is an ideal of \(\smc{O}\) and it is the largest ideal which is also an ideal of \(\conj{\smc{O}}\). Clearly \(\smc{O}\) is an integrally closed domain if and only if the conductor is \(\smc{O}\). In the case \(\smc{O}\) is a noetherian domain, the conductor is an integral ideal of \(\smc{O}\), which is to say it is nonzero, precisely when \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
 
     \begin{proposition}
-      Let \(\smc{O}\) be a noetherian domain with field of fractions \(K\). Then the conductor \(\mf{q}\) of \(\smc{O}\) is an integral ideal if and only if \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
+      Let \(\smc{O}\) be a noetherian domain with field of fractions \(K\). Then the conductor \(\mf{q}(\smc{O})\) of \(\smc{O}\) is an integral ideal if and only if \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
     \end{proposition}
     \begin{proof}
-      For the forward implication, suppose \(\mf{q}\) is an integral ideal of \(\smc{O}\). Then there is some nonzero \(\a \mf{q}\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). Whence \(\a\conj{\smc{O}}\) is an ideal of \(\smc{O}\) and hence a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is noetherian. But then \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\). For the reverse implication, let \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) be generators of \(\conj{\smc{O}}\) as a \(\smc{O}\)-submodule of \(K\). Then \(\d = \prod_{i}\d_{i}\) is nonzero element of \(\smc{O}\) with \(\d\conj{\smc{O}} \subset \smc{O}\). Whence \(\d \in \mf{q}\).
+      For the forward implication, suppose \(\mf{q}(\smc{O})\) is an integral ideal of \(\smc{O}\). Then there is some nonzero \(\a \mf{q}(\smc{O})\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). Whence \(\a\conj{\smc{O}}\) is an ideal of \(\smc{O}\) and hence a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is noetherian. But then \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\). For the reverse implication, let \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) be generators of \(\conj{\smc{O}}\) as a \(\smc{O}\)-submodule of \(K\). Then \(\d = \prod_{i}\d_{i}\) is nonzero element of \(\smc{O}\) with \(\d\conj{\smc{O}} \subset \smc{O}\). Whence \(\d \in \mf{q}(\smc{O})\).
     \end{proof}
     
     Accordingly, an \textbf{order}\index{order} \(\smc{O}\) is a one-dimensional noetherian domain whose conductor is an integral ideal of \(\smc{O}\). If \(\smc{O}\) has field of fractions \(K\), then this last condition is equivalent to \(\conj{\smc{O}}\) being a finitely generated \(\smc{O}\)-submodule of \(K\). This means \(\smc{O}\) is a Dedekind domain if and only if it is integrally closed which happens if and only if the conductor is \(\smc{O}\) itself.
@@ -1160,13 +1160,21 @@
     \[
       \Pic(\smc{O}) = \Cl(\smc{O}).
     \]
-    It is possible to describe the Picard group in terms of principal fractional ideals for the localizations \(\smc{O}_{\mf{p}}\) at primes \(\mf{p}\). To prove this, we need some results specific to orders and more generally one-dimensional noetherian domains. Our first property is that localization preserves orders.
+    It is possible to describe the Picard group in terms of principal fractional ideals for the localizations \(\smc{O}_{\mf{p}}\) at primes \(\mf{p}\). To prove this, we need some results specific to orders and more generally one-dimensional noetherian domains. Our first property is that localization preserves orders and their conductors.
 
     \begin{proposition}\label{prop:localization_preserves_orders}
-      Let \(\smc{O}\) be an order. Then for any multiplicative subset \(D\) of \(\smc{O}\), \(\smc{O}D^{-1}\) is an order.
+      Let \(\smc{O}\) be an order with conductor \(\mf{q}(\smc{O})\). Then for any multiplicative subset \(D\) of \(\smc{O}\), \(\smc{O}D^{-1}\) is an order with conductor \(\mf{q}(\smc{O})D^{-1}\).
     \end{proposition}
     \begin{proof}
-      \todo{Xxx}
+      By \cref{prop:localization_prime_bijection}, every prime of \(\smc{O}D^{-1}\) is of the form \(\mf{p}D^{-1}\) for some prime \(\mf{p}\) of \(\smc{O}\). But then \(\mf{p}D^{-1}\) is maximal because \(\mf{p}\) is and the bijections in \cref{prop:localization_prime_bijection} are inclusion-preserving. Therefore \(\smc{O}D^{-1}\) is one-dimensional. To show it is noetherian, let \(\mf{A}\) be an integral ideal of \(\smc{O}D^{-1}\) and set \(\mf{a} = \mf{A} \cap \smc{O}\). Then
+      \[
+        \mf{A} = \mf{a}D^{-1}.
+      \]
+      As \(\smc{O}\) is noetherian, \(\mf{a}\) is a finitely generated \(\smc{O}\)-module and hence \(\mf{A}\) is a finitely generated \(\smc{O}D^{-1}\)-module. This proves \(\smc{O}D^{-1}\) is noetherian. It remains to show that the conductor of \(\smc{O}D^{-1}\) is nonzero. By \cref{prop:localization_of_integral_closure_is_integral_closure}, \(\conj{\smc{O}}D^{-1}\) is the normalization of \(\smc{O}D^{-1}\). It remains to show
+      \[
+        \mf{q}(\smc{O}D^{-1}) = \mf{q}(\smc{O})D^{-1}.
+      \]
+      \todo{xxx}
     \end{proof}
     
     Our second property is a generalization of the Chinese remainder theorem for one-dimensional noetherian domains. 
@@ -1232,11 +1240,11 @@
     \begin{proposition}
       Let \(\smc{O}\) be an order with field of fractions \(K\). Then there is an isomorphism
       \[
-        I(\mf{o}) \cong \bigop_{\mf{p}}P(\mf{o}_{\mf{p}}),
+        I(\smc{O}) \cong \bigop_{\mf{p}}P(\smc{O}_{\mf{p}}),
       \]
-      induced by natural inclusion. In particular, upon identifying \(P(\mf{o})\) with its image under this isomorphism, we have
+      induced by natural inclusion. In particular, upon identifying \(P(\smc{O})\) with its image under this isomorphism, we have
       \[
-        \Pic(\mf{o}) \cong \left(\bigop_{\mf{p}}P(\mf{o}_{\mf{p}})\right)/P(\mf{o}).
+        \Pic(\smc{O}) \cong \left(\bigop_{\mf{p}}P(\smc{O}_{\mf{p}})\right)/P(\smc{O}).
       \]
     \end{proposition}
     \begin{proof}
