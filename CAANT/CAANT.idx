@@ -116,11 +116,11 @@
 \indexentry{localization|hyperpage}{55}
 \indexentry{localization|hyperpage}{55}
 \indexentry{localization|hyperpage}{55}
-\indexentry{discrete valuation ring|hyperpage}{56}
-\indexentry{uniformizer|hyperpage}{56}
+\indexentry{discrete valuation ring|hyperpage}{55}
+\indexentry{uniformizer|hyperpage}{55}
+\indexentry{valuation|hyperpage}{55}
 \indexentry{valuation|hyperpage}{56}
 \indexentry{valuation|hyperpage}{56}
-\indexentry{valuation|hyperpage}{57}
 \indexentry{exponential valuation|hyperpage}{57}
 \indexentry{ring of \(S\)-integers|hyperpage}{58}
 \indexentry{algebraic \(S\)-integer|hyperpage}{58}
@@ -128,86 +128,86 @@
 \indexentry{\(S\)-class number|hyperpage}{58}
 \indexentry{\(S\)-unit group|hyperpage}{58}
 \indexentry{\(S\)-unit|hyperpage}{58}
-\indexentry{order|hyperpage}{59}
-\indexentry{maximal order|hyperpage}{59}
-\indexentry{Picard group|hyperpage}{60}
-\indexentry{above|hyperpage}{62}
-\indexentry{below|hyperpage}{62}
-\indexentry{contraction|hyperpage}{62}
-\indexentry{ramification index|hyperpage}{63}
-\indexentry{residue class extension|hyperpage}{63}
-\indexentry{inertia degree|hyperpage}{63}
-\indexentry{fundamental equality|hyperpage}{64}
+\indexentry{order|hyperpage}{58}
+\indexentry{maximal order|hyperpage}{58}
+\indexentry{Picard group|hyperpage}{59}
+\indexentry{above|hyperpage}{61}
+\indexentry{below|hyperpage}{61}
+\indexentry{contraction|hyperpage}{61}
+\indexentry{ramification index|hyperpage}{62}
+\indexentry{residue class extension|hyperpage}{62}
+\indexentry{inertia degree|hyperpage}{62}
+\indexentry{fundamental equality|hyperpage}{63}
+\indexentry{inert|hyperpage}{64}
+\indexentry{nonsplit|hyperpage}{64}
+\indexentry{split|hyperpage}{64}
+\indexentry{totally split|hyperpage}{64}
+\indexentry{unramified|hyperpage}{64}
+\indexentry{ramified|hyperpage}{65}
+\indexentry{totally ramified|hyperpage}{65}
+\indexentry{unramified|hyperpage}{65}
+\indexentry{ramified|hyperpage}{65}
+\indexentry{totally ramified|hyperpage}{65}
 \indexentry{inert|hyperpage}{65}
 \indexentry{nonsplit|hyperpage}{65}
 \indexentry{split|hyperpage}{65}
 \indexentry{totally split|hyperpage}{65}
 \indexentry{unramified|hyperpage}{65}
-\indexentry{ramified|hyperpage}{66}
-\indexentry{totally ramified|hyperpage}{66}
-\indexentry{unramified|hyperpage}{66}
-\indexentry{ramified|hyperpage}{66}
-\indexentry{totally ramified|hyperpage}{66}
-\indexentry{inert|hyperpage}{66}
-\indexentry{nonsplit|hyperpage}{66}
-\indexentry{split|hyperpage}{66}
-\indexentry{totally split|hyperpage}{66}
-\indexentry{unramified|hyperpage}{66}
-\indexentry{ramified|hyperpage}{66}
-\indexentry{totally ramified|hyperpage}{66}
-\indexentry{conjugate|hyperpage}{66}
-\indexentry{ramification index|hyperpage}{67}
-\indexentry{inertia degree|hyperpage}{67}
-\indexentry{decomposition group|hyperpage}{67}
-\indexentry{decomposition field|hyperpage}{67}
-\indexentry{inertia group|hyperpage}{70}
-\indexentry{inertia field|hyperpage}{70}
-\indexentry{ramification index|hyperpage}{72}
-\indexentry{inertia degree|hyperpage}{72}
-\indexentry{Dirichlet series|hyperpage}{75}
-\indexentry{abscissa of convergence|hyperpage}{76}
-\indexentry{abscissa of absolute convergence|hyperpage}{76}
-\indexentry{Landau's theorem|hyperpage}{80}
-\indexentry{Euler product|hyperpage}{82}
-\indexentry{degree|hyperpage}{82}
-\indexentry{(classical) Perron's formula|hyperpage}{84}
-\indexentry{Perron's formula|hyperpage}{88}
-\indexentry{smooth weight|hyperpage}{89}
-\indexentry{unweighted|hyperpage}{89}
-\indexentry{weighted|hyperpage}{89}
-\indexentry{Perron's formula|hyperpage}{90}
-\indexentry{analytic \(L\)-function|hyperpage}{91}
-\indexentry{conductor|hyperpage}{91}
-\indexentry{degree|hyperpage}{91}
-\indexentry{gamma parameters|hyperpage}{91}
-\indexentry{root number|hyperpage}{91}
-\indexentry{completion|hyperpage}{91}
-\indexentry{gamma factor|hyperpage}{91}
-\indexentry{functional equation|hyperpage}{92}
-\indexentry{functional equation data|hyperpage}{92}
-\indexentry{Euler parameters|hyperpage}{92}
-\indexentry{Euler factor|hyperpage}{92}
-\indexentry{Selberg class|hyperpage}{92}
-\indexentry{primitive|hyperpage}{93}
-\indexentry{Selberg's orthogonality conjecture|hyperpage}{93}
-\indexentry{analytic conductor|hyperpage}{94}
-\indexentry{critical strip|hyperpage}{95}
-\indexentry{critical line|hyperpage}{95}
-\indexentry{central point|hyperpage}{95}
-\indexentry{approximate function equation|hyperpage}{97}
-\indexentry{trivial zero|hyperpage}{101}
-\indexentry{nontrivial zero|hyperpage}{101}
-\indexentry{Riemann hypothesis|hyperpage}{101}
-\indexentry{Selberg class Riemann hypothesis|hyperpage}{102}
+\indexentry{ramified|hyperpage}{65}
+\indexentry{totally ramified|hyperpage}{65}
+\indexentry{conjugate|hyperpage}{65}
+\indexentry{ramification index|hyperpage}{66}
+\indexentry{inertia degree|hyperpage}{66}
+\indexentry{decomposition group|hyperpage}{66}
+\indexentry{decomposition field|hyperpage}{66}
+\indexentry{inertia group|hyperpage}{69}
+\indexentry{inertia field|hyperpage}{69}
+\indexentry{ramification index|hyperpage}{71}
+\indexentry{inertia degree|hyperpage}{71}
+\indexentry{Dirichlet series|hyperpage}{74}
+\indexentry{abscissa of convergence|hyperpage}{75}
+\indexentry{abscissa of absolute convergence|hyperpage}{75}
+\indexentry{Landau's theorem|hyperpage}{79}
+\indexentry{Euler product|hyperpage}{81}
+\indexentry{degree|hyperpage}{81}
+\indexentry{(classical) Perron's formula|hyperpage}{83}
+\indexentry{Perron's formula|hyperpage}{87}
+\indexentry{smooth weight|hyperpage}{88}
+\indexentry{unweighted|hyperpage}{88}
+\indexentry{weighted|hyperpage}{88}
+\indexentry{Perron's formula|hyperpage}{89}
+\indexentry{analytic \(L\)-function|hyperpage}{90}
+\indexentry{conductor|hyperpage}{90}
+\indexentry{degree|hyperpage}{90}
+\indexentry{gamma parameters|hyperpage}{90}
+\indexentry{root number|hyperpage}{90}
+\indexentry{completion|hyperpage}{90}
+\indexentry{gamma factor|hyperpage}{90}
+\indexentry{functional equation|hyperpage}{91}
+\indexentry{functional equation data|hyperpage}{91}
+\indexentry{Euler parameters|hyperpage}{91}
+\indexentry{Euler factor|hyperpage}{91}
+\indexentry{Selberg class|hyperpage}{91}
+\indexentry{primitive|hyperpage}{92}
+\indexentry{Selberg's orthogonality conjecture|hyperpage}{92}
+\indexentry{analytic conductor|hyperpage}{93}
+\indexentry{critical strip|hyperpage}{94}
+\indexentry{critical line|hyperpage}{94}
+\indexentry{central point|hyperpage}{94}
+\indexentry{approximate function equation|hyperpage}{96}
+\indexentry{trivial zero|hyperpage}{100}
+\indexentry{nontrivial zero|hyperpage}{100}
+\indexentry{Riemann hypothesis|hyperpage}{100}
+\indexentry{Selberg class Riemann hypothesis|hyperpage}{101}
+\indexentry{convexity bound|hyperpage}{102}
+\indexentry{Lindel\"of hypothesis|hyperpage}{102}
+\indexentry{Selberg class Lindel\"of hypothesis|hyperpage}{102}
+\indexentry{subconvexity estimate|hyperpage}{102}
+\indexentry{convexity breaking bound|hyperpage}{102}
+\indexentry{Burgess bound|hyperpage}{102}
+\indexentry{Weyl bound|hyperpage}{102}
 \indexentry{convexity bound|hyperpage}{103}
-\indexentry{Lindel\"of hypothesis|hyperpage}{103}
-\indexentry{Selberg class Lindel\"of hypothesis|hyperpage}{103}
-\indexentry{subconvexity estimate|hyperpage}{103}
-\indexentry{convexity breaking bound|hyperpage}{103}
-\indexentry{Burgess bound|hyperpage}{103}
-\indexentry{Weyl bound|hyperpage}{103}
-\indexentry{convexity bound|hyperpage}{104}
-\indexentry{smooth dyadic weight|hyperpage}{104}
-\indexentry{central value|hyperpage}{107}
-\indexentry{central value estimate|hyperpage}{107}
-\indexentry{Von Mangoldt coefficients|hyperpage}{107}
+\indexentry{smooth dyadic weight|hyperpage}{103}
+\indexentry{central value|hyperpage}{106}
+\indexentry{central value estimate|hyperpage}{106}
+\indexentry{Von Mangoldt coefficients|hyperpage}{106}
