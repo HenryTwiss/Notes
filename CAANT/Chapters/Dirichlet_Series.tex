@@ -35,7 +35,7 @@
       \[
         \sum_{M \le n \le N}\frac{a(n)}{n^{s}} = R(M)M^{s_{0}-s}-R(N+1)(N+1)^{s_{0}-s}+(s_{0}-s)\int_{M}^{N+1}R(u)u^{s_{0}-s-1}\,du.
       \]
-      As \(D(s)\) converges at \(s = s_{0}\), we can choose \(M\) sufficiently large such that \(|R(u)| < \e\) for all \(u \ge M\). It follows that \(|R(u)u^{s_{0}-s}| < \e\) for all such \(u\) provided \(s\) in the desired sector. For such \(s\), we have
+      As \(D(s)\) converges at \(s = s_{0}\), we can choose \(M\) sufficiently large such that \(|R(u)| < \e\) for \(u \ge M\). It follows that \(|R(u)u^{s_{0}-s}| < \e\) for such \(u\) provided \(s\) in the desired sector. For such \(s\), we have
       \[
         |s-s_{0}| \le (\s-\s_{0})+|t-t_{0}| \le (H+1)(\s-\s_{0}).
       \]
@@ -67,10 +67,10 @@
       \[
         D(s) = \sum_{n \ge 1}\frac{a(n)}{n^{s}} \quad \text{and} \quad D(s) = \sum_{n \ge 1}\frac{b(n)}{n^{s}}.
       \]
-      Then \(a(n) = b(n)\) for all \(n\).
+      Then \(a(n) = b(n)\).
     \end{proposition}
     \begin{proof}
-      Set \(c(n) = a(n)-b(n)\). Then it suffices to prove \(c(n) = 0\) for all \(n\) and we will do so by induction. Take \(\s \ge \s_{a}\) so that \(D(s)\) converges absolutely. Letting \(\s \to \infty\), the dominated convergence theorem implies
+      Set \(c(n) = a(n)-b(n)\). Then it suffices to prove \(c(n) = 0\) and we will do so by induction. Take \(\s \ge \s_{a}\) so that \(D(s)\) converges absolutely. Letting \(\s \to \infty\), the dominated convergence theorem implies
       \[
         \lim_{\s \to \infty}D(\s) = a(1) \quad \text{and} \quad \lim_{\s \to \infty}D(\s) = b(1).
       \]

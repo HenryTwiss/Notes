@@ -62,7 +62,7 @@
     \begin{proof}
       Let \(q\) be the positive integer given by
       \[
-        q = \min\{d \mid m:\chi(a) = \chi(b) \text{ for all } a \equiv b \tmod{d} \text{ with } (ab,m) = 1\},
+        q = \min\{d \mid m:\chi(a) = \chi(b) \text{ for } a \equiv b \tmod{d} \text{ with } (ab,m) = 1\},
       \]
       and let \(\wtilde{\chi}:\Z \to \C\) be defined by
       \[
@@ -73,7 +73,7 @@
 
     In light of this result, we define the \textbf{conductor}\index{conductor} \(q\) of a Dirichlet character \(\chi\) modulo \(m\) to be the modulus of the unique primitive Dirichlet character \(\wtilde{\chi}\) inducing \(\chi\). By the proof, the conductor is given by
     \[
-      q = \min\{d \mid m:\chi(a) = \chi(b) \text{ for all } a \equiv b \tmod{d} \text{ with } (ab,m) = 1\}.
+      q = \min\{d \mid m:\chi(a) = \chi(b) \text{ for } a \equiv b \tmod{d} \text{ with } (ab,m) = 1\}.
     \]
     Also observe that \(\chi\) is \(q\)-periodic, \(q\) is the minimal period of \(\chi\), and the nonzero values of \(\chi\) are \(\vphi(q)\)-th roots of unity. Moreover,
     \[
@@ -149,7 +149,7 @@
       \[
         \chi_{D}(a) = \begin{cases} \legendre{a}{|D|} & \text{if \(D \equiv 1 \tmod{4}\)}, \\ \legendre{-1}{a}\legendre{a}{\left|\frac{D}{4}\right|} & \text{if \(\frac{D}{4} \equiv 3 \tmod{4}\)}, \\ \legendre{8}{a}\legendre{a}{\left|\frac{D}{8}\right|} & \text{if \(\frac{D}{8} \equiv 1 \tmod{4}\)}, \\ \legendre{-8}{a}\legendre{a}{\left|\frac{D}{8}\right|} & \text{if \(\frac{D}{8} \equiv 3 \tmod{4}\)}. \end{cases}
       \]
-      This proves \(\chi_{D}\) is a Dirichlet characters modulo \(|D|\). It is not hard to see that \(\chi_{D}\) is primitive. Indeed, we have already mentioned that the characters \(\tlegendre{-1}{a}\), \(\tlegendre{8}{a}\), and \(\tlegendre{-8}{a}\) are all primitive. Since \(D\), \(\frac{D}{4}\), and \(\frac{D}{8}\) are square-free according to their equivalences modulo \(4\) and \(D \neq 1\), it suffices to show that \(\chi_{p}\) is primitive for all primes \(p\) with \(p \neq 2\) by \cref{prop:primitive_characters_multiplicative_relatively_prime}. This is immediate since \(p\) is prime and \(\chi_{p}\) is not principal. 
+      This proves \(\chi_{D}\) is a Dirichlet characters modulo \(|D|\). It is not hard to see that \(\chi_{D}\) is primitive. Indeed, we have already mentioned that the characters \(\tlegendre{-1}{a}\), \(\tlegendre{8}{a}\), and \(\tlegendre{-8}{a}\) are all primitive. Since \(D\), \(\frac{D}{4}\), and \(\frac{D}{8}\) are square-free according to their equivalences modulo \(4\) and \(D \neq 1\), it suffices to show that \(\chi_{p}\) is primitive for primes \(p\) with \(p \neq 2\) by \cref{prop:primitive_characters_multiplicative_relatively_prime}. This is immediate since \(p\) is prime and \(\chi_{p}\) is not principal. 
       
       We now show that every primitive quadratic Dirichlet character is of the form \(\chi_{D}\) for some fundamental discriminant \(D\). By \cref{prop:primitive_characters_multiplicative_relatively_prime} again, it suffices to consider primitive quadratic Dirichlet character modulo a prime power \(p^{m}\).
       

@@ -737,7 +737,7 @@
       \]
       for some nonnegative integers \(e_{i}\) and \(f_{i}\). By prime factorization, there exists \(\a_{i} \in \mf{p}_{i}^{e_{i}}-\mf{p}_{i}^{e_{i}+1}\). As \(\mf{p}_{1}^{e_{1}+1},\ldots,\mf{p}_{r}^{e_{r}+1}\) are pairwise relatively prime, the Chinese remainder theorem implies the existence of an \(\a \in \smc{O}\) such that \(\a \equiv \a_{i} \tmod{\mf{p}_{i}^{e_{i}+1}}\). But then
       \[
-        \a \equiv 0 \mod{\mf{p}_{i}^{e_{i}}} \quad \text{and} \quad \a \equiv \a_{i} \mod{\mf{p}_{i}^{e_{i}+1}}.
+        \a \equiv 0 \pmod{\mf{p}_{i}^{e_{i}}} \quad \text{and} \quad \a \equiv \a_{i} \pmod{\mf{p}_{i}^{e_{i}+1}}.
       \]
       Whence \(\mf{p}_{i}^{e_{i}} \mid\mid \a\smc{O}\). It follows that \((\a\smc{O},\mf{a}\mf{b}) = \mf{a}\). Then there exists an integral ideal \(\mf{c}\) such that \(\a\smc{O} = \mf{a}\mf{c}\) and necessarily \((\mf{a}\mf{c},\mf{a}\mf{b}) = \mf{a}\). Thus \((\mf{c},\mf{b}) = \smc{O}\) which is to say that \(\mf{c}\) must be relatively prime to \(\mf{b}\).
     \end{proof}
@@ -1071,10 +1071,10 @@
     If \(\smc{O}\) is a Dedekind domain then it is local if and only if it is a discrete valuation ring. Indeed, any Dedekind domain with finitely many primes is a principal ideal domain by \cref{prop:Dedekind_with_finite_primes_is_PID}. This will allow us to establish a connection between Dedekind domains and discrete valuation rings. In particular, a noetherian domain is a Dedekind domain if and only if its localization at any prime is a discrete valuation ring.
 
     \begin{theorem}\label{thm:Dedekind_if_and_only_if_all_localizations_are_discrete_valuation_rings}
-      Let \(\smc{O}\) be a noetherian domain. Then \(\smc{O}\) is a Dedekind domain if and only if \(\smc{O}_{\mf{p}}\) is a discrete valuation ring for all primes \(\mf{p}\).
+      Let \(\smc{O}\) be a noetherian domain. Then \(\smc{O}\) is a Dedekind domain if and only if \(\smc{O}_{\mf{p}}\) is a discrete valuation ring.
     \end{theorem}
     \begin{proof}
-      For the forward implication, suppose \(\smc{O}\) is a Dedekind domain and let \(\mf{p}\) be a prime. Then \(\smc{O}_{\mf{p}}\) is a local Dedekind domain and hence a discrete valuation ring as we have seen. This proves the forward implication. For the reverse implication, suppose \(\smc{O}\) is a noetherian domain and \(\smc{O}_{\mf{p}}\) is a discrete valuation ring for all primes \(\mf{p}\). As \(\smc{O}_{\mf{p}}\) is a principal ideal domain, \(\smc{O}_{\mf{p}}\) is an integrally closed domain by \cref{lemma:unique_factorization_domains_are_integrally_closed}. Then \cref{prop:ring_is_intersection_of_all_localizations} implies \(\smc{O}\) is an integrally closed domain too. As \(\smc{O}\) is noetherian by assumption, it remains to show that every prime is maximal. So let \(\mf{q}\) be prime. As \(\mf{q}\) is proper, \(\mf{q}\) is contained in some maximal ideal \(\mf{p}\) which is necessarily prime. The inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{q}_{\mf{p}}\) and \(\mf{p}_{\mf{p}}\) are primes of \(\smc{O}_{\mf{p}}\). As \(\smc{O}_{\mf{p}}\) is a discrete valuation ring it is a Dedekind domain with exactly one prime. Whence \(\mf{q}_{\mf{p}} = \mf{p}_{\mf{p}}\) and the aforementioned inclusion-preserving bijections imply that \(\mf{q} = \mf{p}\). Hence \(\mf{q}\) is maximal. This proves the reverse implication.
+      For the forward implication, suppose \(\smc{O}\) is a Dedekind domain and let \(\mf{p}\) be a prime. Then \(\smc{O}_{\mf{p}}\) is a local Dedekind domain and hence a discrete valuation ring as we have seen. This proves the forward implication. For the reverse implication, suppose \(\smc{O}\) is a noetherian domain and \(\smc{O}_{\mf{p}}\) is a discrete valuation ring. As \(\smc{O}_{\mf{p}}\) is a principal ideal domain, \(\smc{O}_{\mf{p}}\) is an integrally closed domain by \cref{lemma:unique_factorization_domains_are_integrally_closed}. Then \cref{prop:ring_is_intersection_of_all_localizations} implies \(\smc{O}\) is an integrally closed domain too. As \(\smc{O}\) is noetherian by assumption, it remains to show that every prime is maximal. So let \(\mf{q}\) be prime. As \(\mf{q}\) is proper, \(\mf{q}\) is contained in some maximal ideal \(\mf{p}\) which is necessarily prime. The inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{q}_{\mf{p}}\) and \(\mf{p}_{\mf{p}}\) are primes of \(\smc{O}_{\mf{p}}\). As \(\smc{O}_{\mf{p}}\) is a discrete valuation ring it is a Dedekind domain with exactly one prime. Whence \(\mf{q}_{\mf{p}} = \mf{p}_{\mf{p}}\) and the aforementioned inclusion-preserving bijections imply that \(\mf{q} = \mf{p}\). Hence \(\mf{q}\) is maximal. This proves the reverse implication.
     \end{proof}
 
     It follows from this result that the Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) is an extension of principal ideal domains. Whence it admits an integral basis by \cref{thm:integral_basis_AKBL}. This is often a useful reduction for developing further results or applications in conjunction with \cref{prop:ring_is_intersection_of_all_localizations}.
@@ -1102,18 +1102,18 @@
           1 \arrow{r} & \smc{O}^{\ast} \arrow{r} & \smc{O}(X)^{\ast} \arrow{r} & \displaystyle{\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}} \arrow{r} & \Cl(\smc{O}) \arrow{r} & \Cl(\smc{O}(X)) \arrow{r} & 1,
         \end{tikzcd}
       \end{center}
-      where the fourth map takes the representative \((\k_{\mf{p}})_{\mf{p} \notin X}\) to the ideal class represented by \(\prod_{\mf{p} \notin X}\mf{p}^{v_{\mf{p}}(\k_{\mf{p}})}\) and the fifth map takes the representative \(\mf{a}\) to the ideal class represented by \(\mf{a}(X)\), is exact. Moreover, \(K^{\ast}/\smc{O}_{\mf{p}}^{\ast} \cong \Z\) for all primes \(\mf{p}\) of \(\smc{O}\).
+      where the fourth map takes the representative \((\k_{\mf{p}})_{\mf{p} \notin X}\) to the ideal class represented by \(\prod_{\mf{p} \notin X}\mf{p}^{v_{\mf{p}}(\k_{\mf{p}})}\) and the fifth map takes the representative \(\mf{a}\) to the ideal class represented by \(\mf{a}(X)\), is exact. Moreover, \(K^{\ast}/\smc{O}_{\mf{p}}^{\ast} \cong \Z\).
     \end{proposition}
     \begin{proof}
-      As the second map is injective and the fifth map is surjective, the sequence is exact at \(\smc{O}^{\ast}\) and \(\Cl(\smc{O}(X))\). So we must show exactness at \(\smc{O}(X)^{\ast}\), \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\), and \(\Cl(\smc{O})\). For exactness at \(\smc{O}(X)^{\ast}\), \(\a \in \smc{O}(X)^{\ast}\) represents the zero coset in under the third map \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) if and only if \(\a \in \smc{O}_{\mf{p}}^{\ast}\) for all \(\mf{p} \notin X\). But \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes} implies \(\a \in \smc{O}_{\mf{p}}^{\ast}\) for all primes \(\mf{p} \in X\). Whence \(\a\) represents the zero coset if and only if \(\a \in \smc{O}^{\ast}\) by \cref{prop:ring_is_intersection_of_all_localizations} proving exactness at \(\smc{O}(X)^{\ast}\). For exactness at \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\), a representative \((\k_{\mf{p}})_{\mf{p} \notin X}\) of a coset in \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) represents the principal class in \(\Cl(\smc{O})\) under the fourth map if and only if there is a \(\k \in K^{\ast}\) such that
+      As the second map is injective and the fifth map is surjective, the sequence is exact at \(\smc{O}^{\ast}\) and \(\Cl(\smc{O}(X))\). So we must show exactness at \(\smc{O}(X)^{\ast}\), \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\), and \(\Cl(\smc{O})\). For exactness at \(\smc{O}(X)^{\ast}\), \(\a \in \smc{O}(X)^{\ast}\) represents the zero coset in under the third map \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) if and only if \(\a \in \smc{O}_{\mf{p}}^{\ast}\) for \(\mf{p} \notin X\). But \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes} implies \(\a \in \smc{O}_{\mf{p}}^{\ast}\) for \(\mf{p} \in X\). Whence \(\a\) represents the zero coset if and only if \(\a \in \smc{O}^{\ast}\) by \cref{prop:ring_is_intersection_of_all_localizations} proving exactness at \(\smc{O}(X)^{\ast}\). For exactness at \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\), a representative \((\k_{\mf{p}})_{\mf{p} \notin X}\) of a coset in \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) represents the principal class in \(\Cl(\smc{O})\) under the fourth map if and only if there is a \(\k \in K^{\ast}\) such that
       \[
         \prod_{\mf{p} \notin X}\mf{p}^{v_{\mf{p}}(\k_{\mf{p}})} = \prod_{\mf{p}}\mf{p}^{v_{\mf{p}}(\k)}.
       \]
-      By prime factorization, \(v_{\mf{p}}(\k) = v_{\mf{p}}(\k_{\mf{p}})\). In particular, \(v_{\mf{p}}(\k) = 0\) for all \(\mf{p} \in X\) and \(v_{\mf{p}}(\k) = v_{\mf{p}}(\k_{\mf{p}})\) for all \(\mf{p} \notin X\). As \(v_{\mf{p}}(\k) = 0\) for all \(\mf{p} \in X\), we have \(\k \in \smc{O}_{\mf{p}}^{\ast}\) for these primes as well. Because the primes of \(\smc{O}(X)\) are \(\mf{p}_{X}\) for \(\mf{p} \in X\), \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes,prop:ring_is_intersection_of_all_localizations} together imply \(\k \in \smc{O}(X)^{\ast}\). Exactness at \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) follows. For exactness at \(\Cl(\smc{O})\), an integral ideal \(\mf{a}\) representing a class in \(\Cl(\smc{O})\) represents the principal class under the fifth map if and only if there is a \(\k \in K^{\ast}\) such that
+      By prime factorization, \(v_{\mf{p}}(\k) = v_{\mf{p}}(\k_{\mf{p}})\). In particular, \(v_{\mf{p}}(\k) = 0\) for all \(\mf{p} \in X\) and \(v_{\mf{p}}(\k) = v_{\mf{p}}(\k_{\mf{p}})\) for \(\mf{p} \notin X\). As \(v_{\mf{p}}(\k) = 0\) for \(\mf{p} \in X\), we have \(\k \in \smc{O}_{\mf{p}}^{\ast}\) for these primes as well. Because the primes of \(\smc{O}(X)\) are \(\mf{p}_{X}\) for \(\mf{p} \in X\), \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes,prop:ring_is_intersection_of_all_localizations} together imply \(\k \in \smc{O}(X)^{\ast}\). Exactness at \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) follows. For exactness at \(\Cl(\smc{O})\), an integral ideal \(\mf{a}\) representing a class in \(\Cl(\smc{O})\) represents the principal class under the fifth map if and only if there is a \(\k \in K^{\ast}\) such that
       \[
         \mf{a}(X) = \k\smc{O}(X).
       \]
-      In view of \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes,prop:ring_is_intersection_of_all_localizations} again, taking the intersection with the localizations at \(\mf{p}_{X}\) for all \(\mf{p} \notin X\) shows
+      In view of \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes,prop:ring_is_intersection_of_all_localizations} again, taking the intersection with the localizations at \(\mf{p}_{X}\) for \(\mf{p} \notin X\) shows
       \[
         \mf{a} = \k\smc{O}.
       \]
@@ -1160,7 +1160,7 @@
     \[
       \Pic(\smc{O}) = \Cl(\smc{O}).
     \]
-    It is possible to describe the Picard group in terms of principal fractional ideals for the localizations \(\smc{O}_{\mf{p}}\) at primes \(\mf{p}\). To prove this, we need some results specific to orders and more generally one-dimensional noetherian domains. Our first property is that localization preserves orders.
+    It is possible to describe the Picard group in terms of principal fractional ideals for the localizations \(\smc{O}_{\mf{p}}\) at primes \(\mf{p}\). To prove this, we need some results specific to orders. Our first property is that localization preserves orders.
 
     \begin{proposition}\label{prop:localization_preserves_orders}
       Let \(\smc{O}\) be an order. Then for any multiplicative subset \(D\) of \(\smc{O}\), \(\smc{O}D^{-1}\) is an order.
@@ -1173,14 +1173,17 @@
       As \(\smc{O}\) is noetherian, \(\mf{a}\) is a finitely generated \(\smc{O}\)-module and hence \(\mf{A}\) is a finitely generated \(\smc{O}D^{-1}\)-module. This proves \(\smc{O}D^{-1}\) is noetherian. It remains to show that the conductor of \(\smc{O}D^{-1}\) is an integral ideal of \(\smc{O}D^{-1}\). By \cref{prop:localization_of_integral_closure_is_integral_closure}, \(\conj{\smc{O}}D^{-1}\) is the normalization of \(\smc{O}D^{-1}\). So in view of \cref{prop:conductor_integral_ideal_equivalence}, it suffices to show that \(\conj{\smc{O}}D^{-1}\) is a finitely generated \(\smc{O}D^{-1}\)-submodule of \(K\). But this is clear since \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\) by \cref{prop:conductor_integral_ideal_equivalence} again.
     \end{proof}
     
-    Our second property is a generalization of the Chinese remainder theorem for one-dimensional noetherian domains. 
+    In particular, this result shows that \(\smc{O}_{\mf{p}}\) is an order. Our second property is a generalization of the Chinese remainder theorem for orders. 
 
     \begin{proposition}\label{prop:localized_Chinese_remainder_theorem}
-      Let \(\smc{O}\) be a one-dimensional noetherian domain. Then for any integral ideal \(\mf{a}\) of \(\smc{O}\), we have an isomorphism
+      Let \(\smc{O}\) be an order. Then for any integral ideal \(\mf{a}\) of \(\smc{O}\), we have an isomorphism
       \[
-        \smc{O}/\mf{a} \cong \bigop_{\mf{p} \subseteq \mf{a}}\smc{O}_{\mf{p}}/\mf{a}_{\mf{p}},
+        \smc{O}/\mf{a} \cong \bigop_{\mf{p}}\smc{O}_{\mf{p}}/\mf{a}_{\mf{p}},
       \]
-      induced by natural inclusion.
+      induced by natural inclusion. In particular, \(\mf{a}_{\mf{p}} = \smc{O}_{\mf{p}}\) for all but finitely many primes \(\mf{p}\) those of which satisfy \(\mf{a} \subseteq \mf{p}\) and so this isomorphism can be expressed as
+      \[
+        \smc{O}/\mf{a} \cong \bigop_{\mf{a} \subseteq \mf{p}}\smc{O}_{\mf{p}}/\mf{a}_{\mf{p}}.
+      \]
     \end{proposition}
     \begin{proof}
       Let \(\wtilde{\mf{a}}_{\mf{p}} = \mf{a}_{\mf{p}} \cap \smc{O}\). Then \(\wtilde{\mf{a}}_{\mf{p}}\) is an integral ideal of \(\smc{O}\). As \(\smc{O}\) is noetherian, \cref{lem:integral_ideal_prime_inclusion} implies
@@ -1201,9 +1204,13 @@
       \]
       Then \(\mf{b}\) is an integral ideal of \(\smc{O}\) containing \(\d\). As \(\d\) is not contained in any prime of \(\smc{O}\), it follows that \(\mf{b}\) cannot be contained in any prime of \(\smc{O}\). But every proper ideal is contained in a maximal ideal which is necessarily prime. Whence \(\mf{b}\) is not proper and so \(\mf{b} = \smc{O}\). Therefore \(\eta \in \d\mf{a}\) which implies \(\frac{\eta}{\d} \in \mf{a}\) proving the reverse inclusion. Altogether, the Chinese remainder theorem gives an isomorphism
       \[
-        \smc{O}/\mf{a} \cong \bigop_{\mf{a} \subseteq \mf{p}}\smc{O}/\wtilde{\mf{a}}_{\mf{p}},
+        \smc{O}/\mf{a} \cong \bigop_{\mf{p}}\smc{O}/\wtilde{\mf{a}}_{\mf{p}},
       \]
-      induced by natural inclusion. It remains to demonstrate that natural inclusion induces an isomorphism \(\smc{O}/\wtilde{\mf{a}}_{\mf{p}} \cong \smc{O}_{\mf{p}}/\mf{a}_{\mf{p}}\). To see this, consider the homomorphism
+      induced by natural inclusion. As \(\wtilde{\mf{a}}_{\mf{p}} = \smc{O}\) unless \(\mf{a} \subseteq \mf{p}\), this isomorphism can be expressed as
+      \[
+        \smc{O}/\mf{a} \cong \bigop_{\mf{a} \subseteq \mf{p}}\smc{O}/\wtilde{\mf{a}}_{\mf{p}}.
+      \]
+       It remains to demonstrate that natural inclusion induces an isomorphism \(\smc{O}/\wtilde{\mf{a}}_{\mf{p}} \cong \smc{O}_{\mf{p}}/\mf{a}_{\mf{p}}\). To see this, consider the homomorphism
       \[
         \phi:\smc{O} \to \smc{O}_{\mf{p}}/\mf{a}_{\mf{p}} \qquad \a \mapsto \a+\mf{a}_{\mf{p}},
       \]
@@ -1214,17 +1221,17 @@
       proving surjectivity. Moreover, \(\ker\phi = \wtilde{\mf{a}}_{\mf{p}}\) from the definition of \(\wtilde{\mf{a}}_{\mf{p}}\).
     \end{proof}
 
-    Our third property is that when \(\smc{O}\) is a one-dimensional noetherian domain, a fractional ideal of \(\smc{O}\) is invertible if and only if its localization at a prime \(\mf{p}\) is principal in \(\smc{O}_{\mf{p}}\).
+    Our third property is that a fractional ideal of \(\smc{O}\) is invertible if and only if its localization at a prime \(\mf{p}\) is principal in \(\smc{O}_{\mf{p}}\).
 
     \begin{proposition}\label{prop:invertible_fractional_ideal_using_localization}
-      Let \(\smc{O}\) be a one-dimensional noetherian domain with field of fractions \(K\). Then a fractional ideal \(\mf{f}\) of \(\smc{O}\) is invertible if and only if the fractional ideal \(\mf{f}_{\mf{p}}\) of \(\smc{O}_{\mf{p}}\) is principal for every prime \(\mf{p}\) of \(\smc{O}\).
+      Let \(\smc{O}\) be an order with field of fractions \(K\). Then a fractional ideal \(\mf{f}\) of \(\smc{O}\) is invertible if and only if the fractional ideal \(\mf{f}_{\mf{p}}\) of \(\smc{O}_{\mf{p}}\) is principal for every prime \(\mf{p}\) of \(\smc{O}\).
     \end{proposition}
     \begin{proof}
       Write \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\). Then it suffices to show the claim for the integral ideal \(\mf{a}\). Set \(\mf{b} = \mf{a}^{-1}\). For the forward implication, suppose \(\mf{a}\) is invertible so that \(\mf{a}\mf{b} = \smc{O}\). Then we may find \(\a_{1},\ldots,\a_{n} \in \mf{a}\) and \(\b_{1},\ldots,\b_{n} \in \mf{b}\) such that
       \[
         \sum_{i}\a_{i}\b_{i} = 1.
       \]
-      Moreover, not all of the \(\a_{i}\b_{i}\) can lie in the unique maximal ideal \(\mf{p}_{\mf{p}}\) of the local ring \(\smc{O}_{\mf{p}}\) for otherwise this ideal is not proper. Without loss of generality, we may assume \(\a_{1}\b_{1} \notin \mf{p}_{\mf{p}}\) and so it is a unit in \(\smc{O}_{\mf{p}}\). As \(\mf{a}_{\mf{p}}\mf{b} = \smc{O}_{\mf{p}}\) by the invertibility of \(\mf{a}\), it follows that \(\mf{a}_{\mf{p}} = \a_{1}\smc{O}_{\mf{p}}\). This shows \(\mf{a}_{\mf{p}}\) is principal. For the reverse implication, suppose \(\mf{a}_{\mf{p}}\) is principle for every prime \(\mf{p}\) of \(\smc{O}\). Whence \(\mf{a}_{\mf{p}} = \a_{\mf{p}}\smc{O}_{\mf{p}}\) for some nonzero \(\a_{\mf{p}} \in K\). As \(K\) is the field of fractions of \(\smc{O}_{\mf{p}}\), we may multiply by a nonzero element of \(\smc{O}_{\mf{p}}\), if necessary, to ensure that \(\a_{\mf{p}} \in \mf{a}\). Now if \(\mf{a}\) were not invertible, then there would exist a prime \(\mf{p}\) such that
+      Moreover, not all of the \(\a_{i}\b_{i}\) can lie in the unique maximal ideal \(\mf{p}_{\mf{p}}\) of \(\smc{O}_{\mf{p}}\) for otherwise this ideal is not proper. Without loss of generality, we may assume \(\a_{1}\b_{1} \notin \mf{p}_{\mf{p}}\) and so it is a unit in \(\smc{O}_{\mf{p}}\). As \(\mf{a}_{\mf{p}}\mf{b} = \smc{O}_{\mf{p}}\) by the invertibility of \(\mf{a}\), it follows that \(\mf{a}_{\mf{p}} = \a_{1}\smc{O}_{\mf{p}}\). This shows \(\mf{a}_{\mf{p}}\) is principal. For the reverse implication, suppose \(\mf{a}_{\mf{p}}\) is principle for every prime \(\mf{p}\) of \(\smc{O}\). Whence \(\mf{a}_{\mf{p}} = \a_{\mf{p}}\smc{O}_{\mf{p}}\) for some nonzero \(\a_{\mf{p}} \in K\). As \(K\) is the field of fractions of \(\smc{O}_{\mf{p}}\), we may multiply by a nonzero element of \(\smc{O}_{\mf{p}}\), if necessary, to ensure that \(\a_{\mf{p}} \in \mf{a}\). Now if \(\mf{a}\) were not invertible, then there would exist a prime \(\mf{p}\) such that
       \[
         \mf{a}\mf{a}^{-1} \subseteq \mf{p},
       \]
@@ -1246,9 +1253,21 @@
     \begin{proof}
       It follows from \cref{prop:invertible_fractional_ideal_using_localization} that \(\mf{f}_{\mf{p}}\) is a principal fractional ideal of \(\smc{O}_{\mf{p}}\) for every fractional ideal \(\mf{f}\) of \(I(\smc{O})\) and every prime \(\mf{p}\) of \(\smc{O}\). Therefore we may consider the homomorphism
       \[
-        \phi:I(\smc{O}) \to \bigop_{\mf{p}}P(\smc{O}_{\mf{p}}) \qquad \mf{a} \mapsto (\mf{a}_{\mf{p}})_{\mf{p}},
+        \phi:I(\smc{O}) \to \bigop_{\mf{p}}P(\smc{O}_{\mf{p}}) \qquad \mf{f} \mapsto (\mf{f}_{\mf{p}})_{\mf{p}},
       \]
-      induced by localization. To prove the first statement, we must show that this is an isomorphism. \todo{xxx}
+      induced by localization. To prove the first statement, we must show that \(\phi\) is an isomorphism. For surjectivity, let \((\k_{\mf{p}}\smc{O}_{\mf{p}})_{\mf{p}} \in \bigop_{\mf{p}}P(\smc{O}_{\mf{p}})\). Then \(\k_{\mf{p}} \in K\) and all but finitely satisfy \(\k_{\mf{p}}\smc{O}_{\mf{p}} = \smc{O}_{\mf{p}}\). We claim that
+      \[
+        \mf{f} = \bigcap_{\mf{p}}\k_{\mf{p}}\smc{O}_{\mf{p}},
+      \]
+      is an invertible fractional ideal of \(\smc{O}\) whose image under \(\phi\) is \((\k_{\mf{p}}\smc{O}_{\mf{p}})_{\mf{p}}\). As \(\k_{\mf{p}}\smc{O}_{\mf{p}} = \smc{O}_{\mf{p}}\) for all but finitely many primes \(\mf{p}\), there exists a nonzero \(\d \in \smc{O}\) for which \(\d\k_{\mf{p}} \in \smc{O}_{\mf{p}}\) for all primes \(\mf{p}\). It follows from \cref{prop:ring_is_intersection_of_all_localizations} that \(\d\mf{f} \subseteq \smc{O}\). Whence \(\mf{f}\) is a fractional ideal of \(\smc{O}\). To show it is invertible and that the image under \(\phi\) is \((\k_{\mf{p}}\smc{O}_{\mf{p}})_{\mf{p}}\), it suffices to prove
+      \[
+        \mf{f}_{\mf{p}} = \k_{\mf{p}}\smc{O}_{\mf{p}}.
+      \]
+      Indeed, \cref{prop:invertible_fractional_ideal_using_localization} will imply that \(\mf{f}\) is invertible and the definition of \(\phi\) shows that \(\mf{f}\) will then map to \((\k_{\mf{p}}\smc{O}_{\mf{p}})_{\mf{p}}\) under \(\phi\). The forward inclusion is clear by the definition of \(\mf{f}\). As \(\d\mf{f}\) is an integral ideal, \cref{prop:localized_Chinese_remainder_theorem} implies that there exists an \(\a \in \smc{O}\) satisfying
+      \[
+        \a \equiv \d\k_{\mf{p}} \pmod{\d\mf{f}_{\mf{p}}} \quad \text{and} \quad \a \equiv 0 \pmod{\d\mf{f}_{\mf{q}}},
+      \]
+      for primes \(\mf{q}\) with \(\mf{q} \neq \mf{p}\). Whence \(\frac{\a}{\d} \in \mf{f}_{\mf{p}}\) and \cref{prop:ring_is_intersection_of_all_localizations} implies \(\frac{\a}{\d} \in \mf{f}\). But then \(\k_{\mf{p}} \in \mf{f}_{\mf{p}}\) and the reverse inclusion holds. Altogether, this means \(\phi\) is surjective. To see that it is injective, suppose \(\mf{f} \in I(\smc{O})\) is such that \(\mf{f}_{\mf{p}} = \smc{O}_{\mf{p}}\). Then \cref{prop:ring_is_intersection_of_all_localizations} implies \(\mf{a} \subseteq \smc{O}\). This forces \(\mf{a} = \smc{O}\). For otherwise \(\mf{a}\) is proper and so it is contained in a maximal ideal which is necessarily prime. As \(\smc{O}\) is one-dimensional, there would exist a prime \(\mf{p}\) for which \(\mf{a} \subseteq \mf{p}\). But then \(\mf{a}_{\mf{p}} \subseteq \mf{p}_{\mf{p}}\) which is a contradiction as \(\mf{p}_{\mf{p}}\) is the unique maximal ideal of \(\smc{O}_{\mf{p}}\) and therefore cannot be \(\smc{O}_{\mf{p}}\). Therefore \(\mf{a} = \smc{O}\) which means \(\phi\) is injective. This establishes the first isomorphism. The second isomorphism is immediate by the definition of the Picard group.
     \end{proof}
 
   \iffalse
