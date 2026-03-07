@@ -1000,7 +1000,7 @@
       \[
         \l^{n}+\frac{\a_{n-1}}{\d_{n-1}}\l^{n-1}+\cdots+\frac{\a_{0}}{\d_{0}} = 0,
       \]
-      for some positive integer \(n\) and \(\frac{\a_{i}}{\d_{i}} \in \smc{O}D^{-1}\). Letting \(\d = \prod_{i}\d_{i}\) and multiplying by \(\d^{n}\), we obtain
+      for some positive integer \(n\) and \(\frac{\a_{i}}{\d_{i}} \in \smc{O}D^{-1}\). Then \(\d = \prod_{i}\d_{i}\) is nonzero and upon multiplying by \(\d^{n}\), we obtain
       \[
         (\l\d)^{n}+\frac{\a_{n-1}\d}{\d_{n-1}}(\l\d)^{n-1}+\cdots+\frac{\a_{0}\d^{n}}{\d_{0}} = 0.
       \]
@@ -1128,17 +1128,17 @@
     \]
     We call any \(\a \in \mc{O}_{K}^{S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl^{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}^{S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K}^{S}\) of \(K\) is the class number of \(\Cl^{S}(K)\). The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \((\mc{O}_{K}^{S})^{\ast}\) of \(\mc{O}_{K}^{S}\) and we call any element of \((\mc{O}_{K}^{S})^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
   \section{\todo{Orders}}
-    Recall that Dedekind domains are one-dimensional noetherian domains that are also integrally closed domains. An order will relax the condition of being integrally closed, and surprisingly, we will still be able to deduce similar information as we did for Dedekind domains. More precisely, for any integral domain \(\smc{O}\) with field of fractions \(K\), we define its \textbf{conductor}\index{conductor} \(\mf{q}(\smc{O})\) to be
+    Recall that Dedekind domains are one-dimensional noetherian domains that are also integrally closed domains. An order will relax the condition of being integrally closed, and surprisingly, we will still be able to deduce similar information as we did for Dedekind domains. More precisely, for any integral domain \(\smc{O}\) with field of fractions \(K\), we define its \textbf{conductor}\index{conductor} \(\mf{q}_{\smc{O}}\) to be
     \[
-      \mf{q}(\smc{O}) = \{\a \in \smc{O}:\a\conj{\smc{O}} \subseteq \smc{O}\}.
+      \mf{q}_{\smc{O}} = \{\a \in \smc{O}:\a\conj{\smc{O}} \subseteq \smc{O}\}.
     \]
-    Then \(\mf{q}(\smc{O})\) is an ideal of \(\smc{O}\) and it is the largest ideal which is also an ideal of \(\conj{\smc{O}}\). Clearly \(\smc{O}\) is an integrally closed domain if and only if the conductor is \(\smc{O}\). In the case \(\smc{O}\) is a noetherian domain, the conductor is an integral ideal of \(\smc{O}\), which is to say it is nonzero, precisely when \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
+    Then \(\mf{q}_{\smc{O}}\) is an ideal of \(\smc{O}\) and it is the largest ideal which is also an ideal of \(\conj{\smc{O}}\). Clearly \(\smc{O}\) is an integrally closed domain if and only if the conductor is \(\smc{O}\). In the case \(\smc{O}\) is a noetherian domain, the conductor is an integral ideal of \(\smc{O}\), which is to say it is nonzero, precisely when \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
 
-    \begin{proposition}
-      Let \(\smc{O}\) be a noetherian domain with field of fractions \(K\). Then the conductor \(\mf{q}(\smc{O})\) of \(\smc{O}\) is an integral ideal if and only if \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
+    \begin{proposition}\label{prop:conductor_integral_ideal_equivalence}
+      Let \(\smc{O}\) be a noetherian domain with field of fractions \(K\). Then the conductor \(\mf{q}_{\smc{O}}\) is an integral ideal of \(\smc{O}\) if and only if \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\).
     \end{proposition}
     \begin{proof}
-      For the forward implication, suppose \(\mf{q}(\smc{O})\) is an integral ideal of \(\smc{O}\). Then there is some nonzero \(\a \mf{q}(\smc{O})\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). Whence \(\a\conj{\smc{O}}\) is an ideal of \(\smc{O}\) and hence a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is noetherian. But then \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\). For the reverse implication, let \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) be generators of \(\conj{\smc{O}}\) as a \(\smc{O}\)-submodule of \(K\). Then \(\d = \prod_{i}\d_{i}\) is nonzero element of \(\smc{O}\) with \(\d\conj{\smc{O}} \subset \smc{O}\). Whence \(\d \in \mf{q}(\smc{O})\).
+      For the forward implication, suppose \(\mf{q}_{\smc{O}}\) is an integral ideal of \(\smc{O}\). Then there is some nonzero \(\a \in \mf{q}_{\smc{O}}\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). Whence \(\a\conj{\smc{O}}\) is an ideal of \(\smc{O}\) and hence a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is noetherian. But then \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\). For the reverse implication, let \(\frac{\a_{1}}{\d_{1}},\ldots,\frac{\a_{r}}{\d_{r}}\) be generators of \(\conj{\smc{O}}\) as a \(\smc{O}\)-submodule of \(K\). Then \(\d = \prod_{i}\d_{i}\) is nonzero with \(\d\conj{\smc{O}} \subset \smc{O}\). Whence \(\d \in \mf{q}_{\smc{O}}\).
     \end{proof}
     
     Accordingly, an \textbf{order}\index{order} \(\smc{O}\) is a one-dimensional noetherian domain whose conductor is an integral ideal of \(\smc{O}\). If \(\smc{O}\) has field of fractions \(K\), then this last condition is equivalent to \(\conj{\smc{O}}\) being a finitely generated \(\smc{O}\)-submodule of \(K\). This means \(\smc{O}\) is a Dedekind domain if and only if it is integrally closed which happens if and only if the conductor is \(\smc{O}\) itself.
@@ -1160,21 +1160,17 @@
     \[
       \Pic(\smc{O}) = \Cl(\smc{O}).
     \]
-    It is possible to describe the Picard group in terms of principal fractional ideals for the localizations \(\smc{O}_{\mf{p}}\) at primes \(\mf{p}\). To prove this, we need some results specific to orders and more generally one-dimensional noetherian domains. Our first property is that localization preserves orders and their conductors.
+    It is possible to describe the Picard group in terms of principal fractional ideals for the localizations \(\smc{O}_{\mf{p}}\) at primes \(\mf{p}\). To prove this, we need some results specific to orders and more generally one-dimensional noetherian domains. Our first property is that localization preserves orders.
 
     \begin{proposition}\label{prop:localization_preserves_orders}
-      Let \(\smc{O}\) be an order with conductor \(\mf{q}(\smc{O})\). Then for any multiplicative subset \(D\) of \(\smc{O}\), \(\smc{O}D^{-1}\) is an order with conductor \(\mf{q}(\smc{O})D^{-1}\).
+      Let \(\smc{O}\) be an order. Then for any multiplicative subset \(D\) of \(\smc{O}\), \(\smc{O}D^{-1}\) is an order.
     \end{proposition}
     \begin{proof}
       By \cref{prop:localization_prime_bijection}, every prime of \(\smc{O}D^{-1}\) is of the form \(\mf{p}D^{-1}\) for some prime \(\mf{p}\) of \(\smc{O}\). But then \(\mf{p}D^{-1}\) is maximal because \(\mf{p}\) is and the bijections in \cref{prop:localization_prime_bijection} are inclusion-preserving. Therefore \(\smc{O}D^{-1}\) is one-dimensional. To show it is noetherian, let \(\mf{A}\) be an integral ideal of \(\smc{O}D^{-1}\) and set \(\mf{a} = \mf{A} \cap \smc{O}\). Then
       \[
         \mf{A} = \mf{a}D^{-1}.
       \]
-      As \(\smc{O}\) is noetherian, \(\mf{a}\) is a finitely generated \(\smc{O}\)-module and hence \(\mf{A}\) is a finitely generated \(\smc{O}D^{-1}\)-module. This proves \(\smc{O}D^{-1}\) is noetherian. It remains to show that the conductor of \(\smc{O}D^{-1}\) is nonzero. By \cref{prop:localization_of_integral_closure_is_integral_closure}, \(\conj{\smc{O}}D^{-1}\) is the normalization of \(\smc{O}D^{-1}\). It remains to show
-      \[
-        \mf{q}(\smc{O}D^{-1}) = \mf{q}(\smc{O})D^{-1}.
-      \]
-      \todo{xxx}
+      As \(\smc{O}\) is noetherian, \(\mf{a}\) is a finitely generated \(\smc{O}\)-module and hence \(\mf{A}\) is a finitely generated \(\smc{O}D^{-1}\)-module. This proves \(\smc{O}D^{-1}\) is noetherian. It remains to show that the conductor of \(\smc{O}D^{-1}\) is an integral ideal of \(\smc{O}D^{-1}\). By \cref{prop:localization_of_integral_closure_is_integral_closure}, \(\conj{\smc{O}}D^{-1}\) is the normalization of \(\smc{O}D^{-1}\). So in view of \cref{prop:conductor_integral_ideal_equivalence}, it suffices to show that \(\conj{\smc{O}}D^{-1}\) is a finitely generated \(\smc{O}D^{-1}\)-submodule of \(K\). But this is clear since \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-submodule of \(K\) by \cref{prop:conductor_integral_ideal_equivalence} again.
     \end{proof}
     
     Our second property is a generalization of the Chinese remainder theorem for one-dimensional noetherian domains. 
@@ -1232,7 +1228,7 @@
       \[
         \mf{a}\mf{a}^{-1} \subseteq \mf{p},
       \]
-      since \(\smc{O}\) is one-dimensional. Let \(\a_{1},\ldots,\a_{r}\) be generators of \(\mf{a}\) as an \(\smc{O}\)-module. As \(\a_{i} \in \mf{a}_{\mf{p}}\), we may write \(\a_{i} = \a_{\mf{p}}\frac{\eta_{i}}{\d_{i}}\) with \(\frac{\eta_{i}}{\d_{i}} \in \smc{O}_{\mf{p}}\). Then \(\d_{i}\a_{i} \in \a_{\mf{p}}\smc{O}\) and so \(\d_{i}\a_{i}\a_{\mf{p}}^{-1} \in \smc{O}\). Setting \(\d = \prod_{i}\d_{i}\), it follows that \(\d\a_{\mf{p}}^{-1}\mf{a} \subseteq \smc{O}\). Thus \(\d\a_{\mf{p}}^{-1} \in \mf{a}^{-1}\) from which we find \(\d \in \mf{a}\mf{a}^{-1}\) whence \(\d \in \mf{p}\). This is a contradiction and so \(\mf{a}\) is invertible.
+      since \(\smc{O}\) is one-dimensional. Let \(\a_{1},\ldots,\a_{r}\) be generators of \(\mf{a}\) as an \(\smc{O}\)-module. As \(\a_{i} \in \mf{a}_{\mf{p}}\), we may write \(\a_{i} = \a_{\mf{p}}\frac{\eta_{i}}{\d_{i}}\) with \(\frac{\eta_{i}}{\d_{i}} \in \smc{O}_{\mf{p}}\). Then \(\d_{i}\a_{i} \in \a_{\mf{p}}\smc{O}\) and so \(\d_{i}\a_{i}\a_{\mf{p}}^{-1} \in \smc{O}\). Then \(\d = \prod_{i}\d_{i}\) is nonzero with \(\d\a_{\mf{p}}^{-1}\mf{a} \subseteq \smc{O}\). Thus \(\d\a_{\mf{p}}^{-1} \in \mf{a}^{-1}\) from which we find \(\d \in \mf{a}\mf{a}^{-1}\) whence \(\d \in \mf{p}\). This is a contradiction and so \(\mf{a}\) is invertible.
     \end{proof}
 
     We can now show how the Picard group is related to principal fractional ideals for the localizations \(\smc{O}_{\mf{p}}\) of an order \(\smc{O}\) at primes \(\mf{p}\).
@@ -1242,29 +1238,19 @@
       \[
         I(\smc{O}) \cong \bigop_{\mf{p}}P(\smc{O}_{\mf{p}}),
       \]
-      induced by natural inclusion. In particular, upon identifying \(P(\smc{O})\) with its image under this isomorphism, we have
+      induced by localization. In particular, upon identifying \(P(\smc{O})\) with its image under this isomorphism, we have
       \[
         \Pic(\smc{O}) \cong \left(\bigop_{\mf{p}}P(\smc{O}_{\mf{p}})\right)/P(\smc{O}).
       \]
     \end{proposition}
     \begin{proof}
-      \todo{xxx}
+      It follows from \cref{prop:invertible_fractional_ideal_using_localization} that \(\mf{f}_{\mf{p}}\) is a principal fractional ideal of \(\smc{O}_{\mf{p}}\) for every fractional ideal \(\mf{f}\) of \(I(\smc{O})\) and every prime \(\mf{p}\) of \(\smc{O}\). Therefore we may consider the homomorphism
+      \[
+        \phi:I(\smc{O}) \to \bigop_{\mf{p}}P(\smc{O}_{\mf{p}}) \qquad \mf{a} \mapsto (\mf{a}_{\mf{p}})_{\mf{p}},
+      \]
+      induced by localization. To prove the first statement, we must show that this is an isomorphism. \todo{xxx}
     \end{proof}
 
-    \iffalse
-    We are now ready to introduce orders. Let \(\mc{O}/\smc{O}\) be a Dedekind extension for a degree \(n\) separable extension \(L/K\). We will often consider integral domains that are in-between \(\smc{O}\) and \(\mc{O}\) but which are not themselves Dedekind domains as they need not be integrally closed domains. An \textbf{order}\index{order} \(\mf{o}\) of a Dedekind extension \(\mc{O}/\smc{O}\) for a degree \(n\) separable extension \(L/K\) is a finitely generated \(\smc{O}\)-module of \(\mc{O}\) which contains a basis for \(L/K\). Accordingly, we call \(\mc{O}\) the \textbf{maximal order}\index{maximal order} of \(\mc{O}/\smc{O}\). Necessarily, the order \(\mf{o}\) satisfies
-    \[
-      \smc{O} \subseteq \mf{o} \subseteq \mc{O}.
-    \]
-    A few useful facts about \(\mf{o}\) are also immediate. As \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\), \(\mf{o}\) is integral over \(\smc{O}\). Moreover, the field of fractions of \(\mf{o}\) contains \(K\) and as \(\mf{o}\) contains a basis of \(L/K\), the field of fractions must be \(L\) itself. Also, \(\mf{o}\) is a one-dimensional noetherian domain. Indeed, any integral ideal of \(\mf{A}\) of \(\mf{o}\) is a finitely generated \(\smc{O}\)-module, as \(\mf{o}\) itself is, whence a finitely generated \(\mf{o}\)-module. This shows \(\mf{o}\) is noetherian. Now suppose \(\mf{P}\) is a prime of \(\mf{o}\). We claim \(\mf{P} \cap \smc{O}\) is a prime of \(\smc{O}\). It is clearly an ideal and is prime because \(\mf{P}\) is. To see that it is not the zero ideal, let \(\l \in \mf{P}\) be nonzero. As \(\l\) is integral over \(\smc{O}\), we have
-    \[
-      \l^{n}+\a_{n-1}\l^{n-1}+\cdots+\a_{0} = 0,
-    \]
-    for some positive integer \(n\) and \(\a_{i} \in \smc{O}\). Taking \(n\) minimal ensures \(\a_{0} \neq 0\). Isolating \(\a_{0}\) shows \(\a_{0} \in \mf{P}\) whence \(\a_{0} \in \mf{P} \cap \smc{O}\). Whence \(\a_{0}\mf{o} \subset \mf{P} \subseteq \mf{o}\) which shows that \(\mf{P}\) has the same rank as \(\mf{o}\) as \(\smc{O}\)-modules. Then the integral domain \(\mf{o}/\mf{P}\) is necessarily finite and thus a field proving \(\mf{P}\) is maximal. These facts show that while orders need not be integrally closed domains, they satisfy every other property of being a Dedekind domain. In practice, orders generally arise in the form
-    \[
-      \mf{o} = \smc{O}[\a_{1},\ldots,\a_{n}],
-    \]
-    where \(\a_{1},\ldots,\a_{n}\) satisfy \(L = K(\a_{1},\ldots,\a_{n})\).
-
+  \iffalse
     If \(\t\) is a primitive element for \(K/\Q\) contained in \(\mc{O}_{K}\) then the \textbf{conductor}\index{conductor} \(\mf{q}_{K}\) of \(K\) relative to \(\t\) is the conductor of \(\mc{O}_{K}/\Z\) relative to \(\t\). Even though \(K\) admits an integral basis, \(\mc{O}_{K}\) is not necessarily monogenic so that \(\mf{q}_{K}\) may not be \(\mc{O}_{K}\). \todo{say something about Galois number fields...}
   \fi
