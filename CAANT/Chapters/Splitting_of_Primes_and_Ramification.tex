@@ -414,13 +414,13 @@
     In fact, the decomposition and inertia groups of \(\mf{P}\) over \(\mf{p}\) fit into an exact sequence.
 
     \begin{proposition}\label{prop:inertia_group_exact_sequence}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite Galois extension \(L/K\), let \(\mf{p}\) be a prime of \(\smc{O}\), and let \(\mf{P}\) be a prime of \(\mc{O}\) above \(\mf{p}\). Then the sequence
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite Galois extension \(L/K\), let \(\mf{p}\) be a prime of \(\smc{O}\), and let \(\mf{P}\) be a prime of \(\mc{O}\) above \(\mf{p}\). Then there is an exact sequence
       \begin{center}
         \begin{tikzcd}
           1 \arrow{r} & I_{\mf{p}}(\mf{P}) \arrow{r} & D_{\mf{p}}(\mf{P}) \arrow{r} & \Aut(\F_{\mf{P}}/\F_{\mf{p}}) \arrow{r} & 1,
         \end{tikzcd}
       \end{center}
-      where the third map map takes any \(\tau\) to its induced map \(T_{\mf{p}}^{\mf{P}}(\tau)\), is exact.
+      induced by natural inclusions and where the third map is given by \(\tau \mapsto T_{\mf{p}}^{\mf{P}}(\tau)\).
     \end{proposition}
     \begin{proof}
       As the second map is injective and the fourth map is surjective by \cref{prop:T_map_is_surjective}, the sequence is exact at \(I_{\mf{p}}(\mf{P})\) and \(\Aut(\F_{\mf{P}}/\F_{\mf{p}})\). So it remains to prove exactness at \(D_{\mf{p}}(\mf{P})\). This follows because \(I_{\mf{p}}(\mf{P})\) is the kernel of \(T_{\mf{p}}^{\mf{P}}\) by definition.
