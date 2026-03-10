@@ -1650,13 +1650,13 @@
       for primes \(\mf{q}\) with \(\mf{q} \neq \mf{p}\). Whence \(\frac{\a}{\d} \in \mf{f}_{\mf{q}}\) for all primes \(\mf{q}\) and \cref{prop:ring_is_intersection_of_all_localizations} implies \(\frac{\a}{\d} \in \mf{f}\). But then \(\k_{\mf{p}} \in \mf{f}_{\mf{p}}\) and the reverse inclusion holds. Altogether, this means \(\phi\) is surjective. To see that it is injective, suppose \(\mf{f} \in I(\smc{O})\) is such that \(\mf{f}_{\mf{p}} = \smc{O}_{\mf{p}}\) for all primes \(\mf{p}\). Then \cref{prop:ring_is_intersection_of_all_localizations} implies \(\mf{f} = \smc{O}\) which means \(\phi\) is injective. This establishes the first isomorphism. The second isomorphism is immediate by the definition of the Picard group.
     \end{proof}
 
-    With this formulation of the Picard group, it is possible to obtain a short exact sequence relating the Picard and ideal class groups of \(\smc{O}\) and its normalization \(\conj{\smc{O}}\).
+    With this formulation of the Picard group, it is possible to obtain a long exact sequence relating the Picard and ideal class groups of \(\smc{O}\) and its normalization \(\conj{\smc{O}}\).
 
     \begin{proposition}
-      Let \(\smc{O}\) be an order with field of fractions \(K\). Then there is a short exact sequence
+      Let \(\smc{O}\) be an order with field of fractions \(K\). Then there is a long exact sequence
       \begin{center}
         \begin{tikzcd}
-          1 \arrow{r} & \conj{\smc{O}}^{\ast}/\smc{O}^{\ast} \arrow{r} & \displaystyle{\bigop_{\mf{p}}\conj{\smc{O}}_{\mf{p}}^{\ast}/\smc{O}_{\mf{p}}^{\ast}} \arrow{r} & \ker(\Pic(\smc{O}) \to \Cl(\smc{\conj{O}})) \arrow{r} & 1,
+          1 \arrow{r} & \smc{O}^{\ast} \arrow{r} & \conj{\smc{O}}^{\ast} \arrow{r} & \displaystyle{\bigop_{\mf{p}}\conj{\smc{O}}_{\mf{p}}^{\ast}/\smc{O}_{\mf{p}}^{\ast}} \arrow{r} & \Pic(\smc{O}) \arrow{r} & \Cl(\conj{\smc{O}}) \arrow{r} & 1,
         \end{tikzcd}
       \end{center}
       induced by natural inclusions and projections, localization, as well as the maps \(\k \mapsto \k\smc{O}\) and \(\k \mapsto \k\conj{\smc{O}}\).
@@ -1688,7 +1688,25 @@
           1 \arrow{r} & K^{\ast}/\conj{\smc{O}}^{\ast} \arrow{r} & \bigop_{\mf{p}}K^{\ast}/\conj{\smc{O}}_{\mf{p}}^{\ast} \arrow{r} & \Cl(\conj{\smc{O}}) \arrow{r} & 1.
         \end{tikzcd}
       \end{center}
-      As the vertical maps are surjective, the desired short exact sequence follows from the snake lemma.
+      As the vertical maps are surjective, the snake lemma gives a short exact sequence
+      \begin{center}
+        \begin{tikzcd}
+          1 \arrow{r} & \conj{\smc{O}}^{\ast}/\smc{O}^{\ast} \arrow{r} & \displaystyle{\bigop_{\mf{p}}\conj{\smc{O}}_{\mf{p}}^{\ast}/\smc{O}_{\mf{p}}^{\ast}} \arrow{r} & \ker(\Pic(\smc{O}) \to \Cl(\smc{\conj{O}})) \arrow{r} & 1.
+        \end{tikzcd}
+      \end{center}
+      Splicing this short exact sequence with the short exact sequences
+      \begin{center}
+        \begin{tikzcd}
+          1 \arrow{r} & \smc{O}^{\ast} \arrow{r} & \conj{\smc{O}}^{\ast} \arrow{r} & \conj{\smc{O}}^{\ast}/\smc{O}^{\ast} \arrow{r} & 1,
+        \end{tikzcd}
+      \end{center}
+      and
+      \begin{center}
+        \begin{tikzcd}
+          1 \arrow{r} & \ker(\Pic(\smc{O}) \to \Cl(\smc{\conj{O}})) \arrow{r} & \Pic(\smc{O}) \arrow{r} & \Cl(\conj{\smc{O}}) \arrow{r} & 1,
+        \end{tikzcd}
+      \end{center}
+      gives the desired long exact sequence.
     \end{proof}
 
     \iffalse
