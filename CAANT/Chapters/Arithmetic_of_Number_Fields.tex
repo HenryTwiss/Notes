@@ -578,7 +578,7 @@
       \[
         \begin{pmatrix} \a-\a_{1,1} & \a_{1,2} & \cdots & -\a_{1,r} \\ -\a_{2,1} & \a-\a_{2,2} & & \\ \vdots & & \ddots & \\ -\a_{r,1} & & & \a-\a_{r,r} \end{pmatrix}\begin{pmatrix} \w_{1} \\ \w_{2} \\ \vdots \\ \w_{r} \end{pmatrix} = \mathbf{0}.
       \]
-      Thus the determinant of the matrix on the left-hand side must be zero. But this means \(\a\) is a root of the characteristic polynomial \(\det(xI-(\a_{i,j}))\) which is a monic polynomial with coefficients \(\smc{O}\). As \(\smc{O}\) is an integrally closed domain, \(\a \in \smc{O}\) which is a contraction. Thus \(\mf{p}\mf{p}^{-1} = \smc{O}\).
+      Thus the determinant of the matrix on the left-hand side must be zero. But this means \(\a\) is a root of the characteristic polynomial \(\det(xI-(\a_{i,j}))\) which is a monic polynomial with coefficients \(\smc{O}\). As \(\smc{O}\) is an integrally closed domain, \(\a \in \smc{O}\) which is a contradiction. Thus \(\mf{p}\mf{p}^{-1} = \smc{O}\).
     \end{proof}
 
     We can now show that every integral ideal factors uniquely into a product of primes.
@@ -802,7 +802,7 @@
       \[
         \b\smc{O}+\mf{p}^{n+1} = \mf{p}^{n} \quad \text{and} \quad \b^{-1}\mf{p}^{n+1} \cap \smc{O} = \mf{p}.
       \]
-       Surjectivity follows from the first identity. As \(\ker\phi = \b^{-1}\mf{p}^{n+1} \cap \smc{O}\), the second identity implies \(\ker\phi = \mf{p}\).
+      Surjectivity follows from the first identity. As \(\ker\phi = \b^{-1}\mf{p}^{n+1} \cap \smc{O}\), the second identity implies \(\ker\phi = \mf{p}\).
     \end{proof}
 
     We now state a few additional interesting propositions about Dedekind domains. The first is that any Dedekind domain with only finitely many primes is a principal ideal domain.
@@ -1502,7 +1502,7 @@
     \begin{proof}
       \(\conj{\smc{O}}\) is an integrally closed domain with field of fractions \(K\) by definition. To see \(\conj{\smc{O}}\) is noetherian, recall that \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is an order. Since \(\smc{O}\) is noetherian, every integral ideal of \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module and therefore also a finitely generated \(\conj{\smc{O}}\)-module. Whence \(\conj{\smc{O}}\) is noetherian. It remains to show that every prime \(\conj{\mf{p}}\) of \(\conj{\smc{O}}\) is maximal. This is equivalent to showing \(\conj{\smc{O}}/\conj{\mf{p}}\) is a field. So consider the homomorphism
       \[
-        \phi: \smc{O} \mapsto \conj{\smc{O}}/\conj{\mf{p}} \qquad \a \mapsto \a+\conj{\mf{p}},
+        \phi:\smc{O} \mapsto \conj{\smc{O}}/\conj{\mf{p}} \qquad \a \mapsto \a+\conj{\mf{p}},
       \]
       induced by natural projection. Recall that \(\conj{\mf{p}}\) is above some prime \(\mf{p}\) of \(\smc{O}\). Whence \(\ker\phi = \mf{p}\). By the first isomorphism theorem, \(\phi\) induces an embedding \(\F_{\mf{p}} \to \conj{\smc{O}}/\conj{\mf{p}}\). Therefore \(\conj{\smc{O}}/\conj{\mf{p}}\) is a finitely dimensional \(\F_{\mf{p}}\)-vector space as \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module. By primality of \(\conj{\mf{p}}\), \(\conj{\smc{O}}/\conj{\mf{p}}\) is also an integral domain and therefore must be a field.
     \end{proof}
@@ -1721,67 +1721,90 @@
       \[
         \conj{\mf{p}} = \conj{\mf{p}}_{\conj{\mf{p}}} \cap \conj{\smc{O}} \quad \text{and} \quad \conj{\mf{q}} = \conj{\mf{q}}_{\conj{\mf{q}}} \cap \conj{\smc{O}}.
       \]
-      These identities together with the previous inequality imply \(\conj{\mf{p}} \subseteq \conj{\mf{q}}\) and so \(\conj{\mf{p}} = \conj{\mf{q}}\) as primes of \(\conj{\smc{O}}\) are maximal. This proves uniqueness. It remains to show \(\mf{p}\) is invertible. By \cref{prop:invertible_fractional_ideal_using_localization}, we must show that \(\mf{p}_{\mf{q}}\) is principal for every prime \(\mf{q}\) of \(\smc{O}\). If \(\mf{q} = \mf{q}\), regularity of \(\mf{p}\) means \(\smc{O}_{\mf{p}}\) is a discrete valuation ring and hence a principal ideal domain. Thus \(\mf{p}_{\mf{p}}\) is principal. If \(\mf{q} \neq \mf{p}\), then \(\mf{p}\) contains an element of \(\smc{O}-\mf{q}\) forcing \(\mf{p}_{\mf{q}} = \smc{O}_{\mf{q}}\) which is also principal. This completes the proof of the second statement.
+      These identities together with the previous inequality imply \(\conj{\mf{p}} \subseteq \conj{\mf{q}}\) and so \(\conj{\mf{p}} = \conj{\mf{q}}\) as primes of \(\conj{\smc{O}}\) are maximal. This proves uniqueness. It remains to show \(\mf{p}\) is invertible. By \cref{prop:invertible_fractional_ideal_using_localization}, we must show that \(\mf{p}_{\mf{q}}\) is principal for every prime \(\mf{q}\) of \(\smc{O}\). If \(\mf{q} = \mf{p}\), regularity of \(\mf{p}\) means \(\smc{O}_{\mf{p}}\) is a discrete valuation ring and hence a principal ideal domain. Thus \(\mf{p}_{\mf{p}}\) is principal. If \(\mf{q} \neq \mf{p}\), then \(\mf{p}\) contains an element of \(\smc{O}-\mf{q}\) forcing \(\mf{p}_{\mf{q}} = \smc{O}_{\mf{q}}\) which is also principal. This completes the proof of the second statement.
     \end{proof}
 
     As \(\smc{O}\) is noetherian, \cref{lem:integral_ideal_prime_inclusion} implies
     \[
       \mf{p}_{1} \cdots \mf{p}_{k} \subseteq \mf{q}_{\smc{O}},
     \]
-    for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{q}_{\smc{O}}\) is a prime and thus one of the \(\mf{p}_{i}\). In view of \cref{prop:regular_primes_relative_to_conductor}, this means that only finitely many primes of \(\smc{O}\) are irregular and they are exactly the primes which are not invertible. This is a quite concrete description of the failure to which \(\smc{O}\) is not integrally closed in terms of the conductor \(\mf{q}_{\smc{O}}\).
+    for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{q}_{\smc{O}}\) is a prime and thus one of the \(\mf{p}_{i}\). In view of the previous result, this means that only finitely many primes of \(\smc{O}\) are irregular and they are exactly the primes which are not invertible. Moreover, there is exactly one prime of \(\conj{\smc{O}}\) above each of these primes and they are the exactly the prime factors of \(\mf{q}_{\smc{O}}\) in \(\conj{\smc{O}}\). This is a quite concrete description of the failure to which \(\smc{O}\) is not integrally closed in terms of the conductor \(\mf{q}_{\smc{O}}\).
 
-    \iffalse
-    It is desirable to understand how \(\mf{p}\mc{O}\) factors into primes. This is tractable for most primes if we know a sufficient amount of information about the minimal polynomial of certain primitive elements for \(L/K\). Let \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\). In view of \cref{prop:field_of_fractions_AKBL} we can multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure \(\t \in \mc{O}\) and hence its minimal polynomial \(m_{\t}(x)\) over \(K\) has coefficients in \(\smc{O}\). For such a primitive element \(\t\), we define the \textbf{conductor}\index{conductor} \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\) of \(\mc{O}/\smc{O}\) relative to \(\t\) by
-    \[
-      \mf{Q}_{\mc{O}/\smc{O}}(\t) = \{\a \in \mc{O}:\a\mc{O} \subseteq \smc{O}[\t]\}.
-    \]
-    This is an integral ideal of \(\mc{O}\) provided it is nonzero. To see that it is nonzero, recall that \(\mc{O}\) is a finitely generated \(\smc{O}\) module by \cref{prop:Dedekind_extension_facts}. Let \(\w_{1},\ldots,\w_{r}\) be generators. As \(L/K\) is algebraic, \(\t\) is algebraic over \(K\) and hence \(L = K[\t]\). Then
-    \[
-      \w_{i} = \sum_{j}\k_{i,j}\t^{j},
-    \]
-    with \(\k_{i,j} \in K\). As \(K\) is the field of fractions of \(\smc{O}\), \(\k_{i,j} = \frac{\a_{i,j}}{\d_{i,j}}\) with \(\a_{i,j},\d_{i,j} \in \smc{O}\) and \(\d_{i,j}\) nonzero. Setting \(\d = \prod_{i,j}\d_{i,j}\), we find that \(\d \in \smc{O}\) is nonzero and satisfies \(\d\w_{i} \in \smc{O}[\t]\). As \(\w_{1},\ldots,\w_{r}\) generate \(\mc{O}\) as a \(\smc{O}\)-module, we conclude \(\d \in \mf{Q}_{\mc{O}/\smc{O}}(\t)\). Therefore \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\) is nonzero and hence an integral ideal of \(\mc{O}\). The \textbf{Dedekind-Kummer theorem}\index{Dedekind-Kummer theorem} describes the factorization of \(\mf{p}\mc{O}\) provided it is relatively prime to the conductor \(\mf{Q}_{\mc{O}/\smc{O}}(\t)\):
+    We now turn to an application of orders in the setting of a Dedekind extension \(\mc{O}/\smc{O}\) for a finite separable extension \(L/K\). Recall that if \(\mf{p}\) is a prime of \(\smc{O}\), then it is desirable to understand how \(\mf{p}\mc{O}\) factors into primes of \(\mc{O}\). Using orders, this is tractable for almost all primes \(\mf{p}\) if we know a sufficient amount of information about the minimal polynomial of a primitive element for \(L/K\). Let \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\). In view of \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure \(\t \in \mc{O}\) and hence its minimal polynomial \(m_{\t}(x)\) over \(K\) has coefficients in \(\smc{O}\). Then \(\smc{O} \subseteq \smc{O}[\t] \subseteq \mc{O}\) so that \(\smc{O}[\t]\) is an order. In fact, the field of fractions of \(\smc{O}[\t]\) is \(L\) since the field of fractions of \(\smc{O}\) is \(K\). As \(\smc{O}[\t]\) is integral over \(\smc{O}\), it follows that the normalization of \(\smc{O}[\t]\) is \(\mc{O}\). Therefore the conductor \(\mf{q}_{\smc{O}[\t]}\) is an integral ideal of \(\smc{O}[\t]\) and \(\mc{O}\). The \textbf{Dedekind-Kummer theorem}\index{Dedekind-Kummer theorem} describes the factorization of \(\mf{p}\mc{O}\) provided it is relatively prime to \(\mf{q}_{\smc{O}[\t]}\).
 
     \begin{theorem*}[Dedekind-Kummer theorem]
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\), \(\t\) be a primitive element of \(L/K\) contained in \(\mc{O}\) with minimal polynomial \(m_{\t}(x)\) over \(K\), and \(\mf{p}\) be a prime of \(\smc{O}\) such that \(\mf{p}\mc{O}\) is relatively prime to \(\mf{Q}_{\mc{O}/\smc{O}}\). Suppose
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\), \(\t\) be a primitive element for \(L/K\) contained in \(\mc{O}\) with minimal polynomial \(m_{\t}(x)\) over \(K\), and \(\mf{p}\) be a prime of \(\smc{O}\) such that \(\mf{p}\mc{O}\) is relatively prime to \(\mf{q}_{\smc{O}[\t]}\). Also let \(\conj{m_{\t}}(x) \in \F_{\mf{p}}[x]\) be the image of \(m_{\t}(x)\) under natural projection and suppose
       \[
         \conj{m_{\t}}(x) = \conj{m_{1}}(x)^{e_{1}} \cdots \conj{m_{r}}(x)^{e_{r}},
       \]
-      is the prime factorization of \(\conj{m_{\t}}(x)\) in \(\F_{\mf{p}}[x]\). Let \(m_{i}(x)\) be any lift of \(\conj{m_{i}}(x)\) to \(\smc{O}[x]\) and set
+      is its prime factorization. Let \(m_{i}(x)\) be any lift of \(\conj{m_{i}}(x)\) to \(\smc{O}[x]\) and set
       \[
-        \mf{P}_{i} = \mf{p}\mc{O}+m_{i}(\t)\mc{O},
+        \mf{P}_{i} = \mf{p}\mc{O}+m_{i}(\t)\mc{O}.
       \]
-      for \(1 \le i \le r\). Then \(\mf{P}_{i}\) is a prime of \(\mc{O}\) for all \(i\),
+      Then \(\mf{P}_{i}\) is a prime of \(\mc{O}\) and
       \[
         \mf{p}\mc{O} = \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}},
       \]
-      is the prime factorization of \(\mf{p}\mc{O}\), and \(f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\).
+      is the prime factorization of \(\mf{p}\mc{O}\). In particular,
+      \[
+        e_{\mf{p}}(\mf{P}_{i}) = e_{i} \quad \text{and} \quad f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x)).
+      \]
     \end{theorem*}
     \begin{proof}
-      First consider the homomorphism
+      We will being by demonstrating a chain of isomorphisms
       \[
-        \phi:\smc{O}[\t] \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O}.
+        \mc{O}/\mf{p}\mc{O} \cong \smc{O}[\t]/\mf{p}[\t] \cong \F_{\mf{p}}[x]/(\conj{m_{\t}}(x)).
       \]
-      We have \(\mf{p}\mc{O}+\mf{Q}_{\mc{O}/\smc{O}} = \mc{O}\) because \(\mf{p}\mc{O}\) is relatively prime to \(\mf{Q}_{\mc{O}/\smc{O}}\). As \(\mf{Q}_{\mc{O}/\smc{O}} \subseteq \smc{O}[\t]\), it follows that \(\mf{p}\mc{O}+\smc{O}[\t] = \mc{O}\) which shows \(\phi\) is surjective. Now \(\ker\phi = \smc{O}[\t] \cap \mf{p}\mc{O}\) and we claim \(\smc{O}[\t] \cap \mf{p}\mc{O} = \mf{p}\smc{O}[\t]\). The reverse inclusion is clear since \(\mf{p}\) is an integral ideal of \(\smc{O}\). For the forward inclusion, intersecting both sides of \(\mf{p}\mc{O}+\mf{Q}_{\mc{O}/\smc{O}} = \mc{O}\) with \(\smc{O}\) gives \(\mf{p} \cap \mf{Q}_{\mc{O}/\smc{O}} = \smc{O}\) because \(\mf{p}\mc{O} \cap \smc{O} = \mf{p}\). Hence
+      For the first isomorphism, consider the homomorphism
       \[
-        \smc{O}[\t] \cap \mf{p}\mc{O} = (\mf{p} \cap \mf{Q}_{\mc{O}/\smc{O}})(\smc{O}[\t] \cap \mf{p}\mc{O}) = (\mf{p}\smc{O}[\t] \cap \mf{p}\mc{O})+(\mf{Q}_{\mc{O}/\smc{O}}\smc{O}[\t] \cap \mf{Q}_{\mc{O}/\smc{O}}\mf{p}\mc{O}) \subseteq \mf{p}\smc{O}[\t],
+        \phi:\smc{O}[\t] \mapsto \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O},
       \]
-      where the inclusion follows by the definition of the conductor \(\mf{Q}_{\mc{O}/\smc{O}}\). This proves the reverse containment so that \(\ker\phi = \mf{p}\smc{O}[\t]\). By first isomorphism theorem, we obtain
+      induced by natural projection. We have \(\mf{q}_{\smc{O}[\t]}+\mf{p}\mc{O} = \mc{O}\) because \(\mf{p}\mc{O}\) is relatively prime to \(\mf{q}_{\smc{O}[\t]}\). Whence
       \[
-        \smc{O}[\t]/\mf{p}\smc{O}[\t] \cong \mc{O}/\mf{p}\mc{O}.
+        \smc{O}[\t]+\mf{p}\mc{O} = \mc{O},
       \]
-      Since \(m_{\t}(x)\) is the minimal polynomial for \(\t\) over \(K\), we have an isomorphism \(\smc{O}[x]/m_{\t}(x)\smc{O}[x] \cong \smc{O}[\t]\) given by evaluation at \(\t\). Then we have the chain of isomorphism
+      proving \(\phi\) is surjective. We claim \(\ker\phi = \mf{p}[\t]\). Since \(\ker\phi = \mf{p}\mc{O} \cap \smc{O}[\t]\), it suffices to show
       \[
-        \smc{O}[\t]/\mf{p}\smc{O}[\t] \cong (\smc{O}[x]/m_{\t}(x)\smc{O}[x])/(\mf{p}(\smc{O}[x]/m_{\t}(x)\smc{O}[x])) \cong \smc{O}[x]/(\mf{p}\smc{O}[x]+m_{\t}(x)\smc{O}[x]) \cong \F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x],
+        \mf{p}\mc{O} \cap \smc{O}[\t] = \mf{p}[\t].
       \]
-      where the second and third isomorphisms follow by taking \(\smc{O}[x]/(\mf{p}\smc{O}[x]+m_{\t}(x)\smc{O}[x])\) and reducing elements of \(\smc{O}[x]\) modulo \(m_{\t}(x)\smc{O}[x]\) or their coefficients modulo \(\mf{p}\) respectively. Therefore the inverse isomorphism is given by sending any representative \(\conj{f}(x)\) of a coset in \(\F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x]\) to a lift \(f(x)\) in \(\smc{O}[x]\) and then to \(\conj{f(\t)}\) by reducing \(f(\t)\) modulo \(\mf{p}\mc{O}\). Now set \(A = \F_{\mf{p}}[x]/\conj{m_{\t}}(x)\F_{\mf{p}}[x]\). The Chinese remainder theorem gives an isomorphism
+      The reverse inclusion is clear. For the forward inclusion, we claim \((\mf{q}_{\smc{O}[\t]} \cap \smc{O})+\mf{p} = \smc{O}\). For if not, \((\mf{q}_{\smc{O}[\t]} \cap \smc{O})+\mf{p} \subseteq \mf{q}\) for some prime \(\mf{q}\) of \(\smc{O}\) as primes are maximal. Letting \(\mf{Q}\) be a prime of \(\mc{O}\) above \(\mf{q}\), we would then have \(\mf{q}_{\smc{O}[\t]}+\mf{p}\mc{O} \subseteq \mf{Q}\) contradicting relative primality. A short computation shows
       \[
-        A \cong \bigop_{1 \le i \le r}\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x].
+        ((\mf{q}_{\smc{O}[\t]} \cap \smc{O})+\mf{p})(\smc{O}[\t] \cap \mf{p}\mc{O}) \subseteq \mf{p}[\t],
       \]
-      As \(\conj{m_{i}}(x)\) is irreducible, \(\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is maximal and hence \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is a field. By the third isomorphism theorem, \(\conj{m_{i}}(x)\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x]\) is a maximal ideal of \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)^{e_{i}}\F_{\mf{p}}[x]\). It follows that the maximal ideals of \(\smc{O}\) are precisely the \(\conj{m_{i}}(x)A\) and we have an isomorphism
+      from whence the reverse inclusion follows. So \(\ker\phi = \mf{p}[\t]\). By first isomorphism theorem, we obtain
       \[
-        A/\conj{m_{i}}(x)A \cong \F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x],
+        \smc{O}[\t]/\mf{p}[\t] \cong \mc{O}/\mf{p}\mc{O}.
       \]
-      for all \(i\). Via the isomorphism \(\mc{O}/\mf{p}\mc{O} \cong A\) described above, the maximal ideals of \(\mc{O}/\mf{p}\mc{O}\) are exactly \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). We now show that the \(\mf{P}_{i}\) are prime. To see this, consider the surjective homomorphism
+      This establishes the first isomorphism in the chain. For the second, recall from \cref{prop:field_of_fractions_AKBL} that \(m_{\t}(x)\) has coefficients in \(\smc{O}\) whence is an element of \(\smc{O}[x]\). Therefore \(\conj{m_{\t}}(x)\) is an element of \(\F_{p}[x]\) and we may consider the homomorphism
+      \[
+        \pi:\smc{O}[x] \mapsto \F_{\mf{p}}[x]/(\conj{m_{\t}}(x)) \qquad f(x) \mapsto \conj{f}(x)+(\conj{m_{\t}}(x)),
+      \]
+      given by the composition of natural projections. As such, \(\pi\) is surjective and \(\ker\pi = (\mf{p},m_{\t}(x))\). Whence the first isomorphism theorem gives
+      \[
+        \smc{O}[x]/(\mf{p},m_{\t}(x)) \cong \F_{\mf{p}}[x]/(\conj{m_{\t}}(x)).
+      \]
+      In view of the isomorphism \(\smc{O}[\t] \cong \smc{O}[x]/(m_{\t}(x))\) induced by evaluation at \(\t\) and the third isomorphism theorem, the aforementioned isomorphism becomes
+      \[
+        \smc{O}[\t]/\mf{p}[\t] \cong \F_{\mf{p}}[x]/(\conj{m_{\t}}(x)).
+      \]
+      This establishes the second isomorphism in the chain.
+      
+      We now determine the maximal ideals of \(\mc{O}/\mf{p}\mc{O}\) via this chain. As the \(\conj{m}_{i}(x)^{e_{i}}\) are pairwise relatively prime, the Chinese remainder theorem gives an isomorphism
+      \[
+        \F_{\mf{p}}[x]/(\conj{m_{\t}}(x)) \cong \bigop_{i}\F_{\mf{p}}[x]/(\conj{m_{i}}(x)^{e_{i}}),
+      \]
+      induced by natural projection. Since \(\conj{m_{i}}(x)\) is irreducible, \((\conj{m_{i}}(x))\) is maximal whence \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x))\) is a field. By the fourth isomorphism theorem, \((\conj{m_{i}}(x))/(\conj{m_{i}}(x)^{e_{i}})\) is a maximal ideal of \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x)^{e_{i}})\). So under the aforementioned isomorphism, the maximal ideals of \(\F_{\mf{p}}[x]/(\conj{m_{\t}}(x))\) are of the form \((\conj{m_{i}}(x))/(\conj{m_{\theta}}(x))\) and the corresponding quotient fields are isomorphic to \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x))\) by the third isomorphism theorem. As the chain of isomorphisms previously established are induced by natural projections, the maximal ideals of \(\mc{O}/\mf{p}\mc{O}\) are of the form \(m_{i}(\t)\mc{O}/\mf{p}\mc{O}\).
+      
+      It is now possible to show that the \(\mf{P}_{i}\) are prime. To see this, consider the homomorphism
+      \[
+        \pi:\mc{O} \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O},
+      \]
+      given by natural projection. As such, \(\pi\) is surjective. \todo{xxx}
+    \end{proof}
+
+    \iffalse
+    \begin{proof}
+     We now show that the \(\mf{P}_{i}\) are prime. To see this, consider the surjective homomorphism
       \[
         \pi:\mc{O} \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O}.
       \]
@@ -1791,9 +1814,9 @@
       \]
       for some ramification indices \(e_{\mf{p}}(\mf{P}_{i})\). We will be done if we can show \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\) and \(f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\). To accomplish this, observe that we have an isomorphism
       \[
-        \F_{\mf{P}_{i}} \cong (\mc{O}/\mf{p}\mc{O})/(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})) \cong \F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x],
+        \F_{\mf{P}_{i}} \cong (\mc{O}/\mf{p}\mc{O})/(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})) \cong \F_{\mf{p}}[x]/(\conj{m_{i}}(x)),
       \]
-      where the first isomorphism follow by taking \(\F_{\mf{P}_{i}}\) and reducing \(\mc{O}\) modulo \(\mf{p}\) and the second isomorphism follows from \(\mc{O}/\mf{p}\mc{O} \cong A\) and that the image of the maximal ideal \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\) under this isomorphism is \(\conj{m_{i}}(x)A\). Now \(\F_{\mf{p}}[x]/\conj{m_{i}}(x)\F_{\mf{p}}[x]\) is an \(\F_{\mf{p}}\)-vector space of degree \(\deg(\conj{m_{i}}(x))\). Hence \(f_{p}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\) as desired. The ideal \(\conj{m_{i}}(x)^{e_{i}}A\) under the isomorphism \(A \cong \mc{O}/\mf{p}\mc{O}\) is the ideal \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\). As the image of \(\mf{P}_{i}\) under \(\pi\) is \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\), we have that \(\mf{P}_{i}^{e_{i}}\) is contained in the preimage of \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\) under \(\pi\). As \(\conj{m_{\t}(\t)}(\mc{O}/\mf{p}\mc{O}) = 0\), it follows that
+      where the first isomorphism follow by taking \(\F_{\mf{P}_{i}}\) and reducing \(\mc{O}\) modulo \(\mf{p}\) and the second isomorphism follows from \(\mc{O}/\mf{p}\mc{O} \cong A\) and that the image of the maximal ideal \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\) under this isomorphism is \(\conj{m_{i}}(x)A\). Now \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x))\) is an \(\F_{\mf{p}}\)-vector space of degree \(\deg(\conj{m_{i}}(x))\). Hence \(f_{p}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\) as desired. The ideal \(\conj{m_{i}}(x)^{e_{i}}A\) under the isomorphism \(A \cong \mc{O}/\mf{p}\mc{O}\) is the ideal \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\). As the image of \(\mf{P}_{i}\) under \(\pi\) is \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\), we have that \(\mf{P}_{i}^{e_{i}}\) is contained in the preimage of \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\) under \(\pi\). As \(\conj{m_{\t}(\t)}(\mc{O}/\mf{p}\mc{O}) = 0\), it follows that
       \[
         \mf{p}\mc{O} = \pi^{-1}(0) \supseteq \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}.
       \]
@@ -1804,9 +1827,9 @@
       where the last equality follows by the prime factorization of \(\conj{m_{\t}}(x)\) and that \(\deg(\conj{m_{\t}}(x)) = \deg(m_{\t}(x))\) because \(m_{\t}(x)\) is monic. This shows \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\) for all \(i\) which completes the proof.
     \end{proof}
 
-    Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). The Dedekind-Kummer theorem allows us to compute the prime factorization of \(\mf{p}\mc{O}\) provided this integral ideal is relatively prime to the conductor \(\mf{Q}_{\mc{O}/\smc{O}}\). By the prime factorization of fractional ideals, \(\mf{Q}_{\mc{O}/\smc{O}}\) has finitely many prime factors so we only have to avoid finitely many primes of \(\mc{O}\). In fact, if the conductor is \(\mc{O}\) then we do not have to avoid any primes at all. This occurs when \(\mc{O}/\smc{O}\) is monogenic. Indeed, Suppose \(\mc{O} = \smc{O}[\a]\) for some \(\a \in \mc{O}\). Then \(1,\a,\ldots,\a^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\) and is necessarily a basis for \(L/K\). But then \(\a\) is also a primitive element for \(L/K\) which implies
+    Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). The Dedekind-Kummer theorem allows us to compute the prime factorization of \(\mf{p}\mc{O}\) provided this integral ideal is relatively prime to the conductor \(\mf{q}_{\smc{O}[\t]}\). By the prime factorization of fractional ideals, \(\mf{q}_{\smc{O}[\t]}\) has finitely many prime factors so we only have to avoid finitely many primes of \(\mc{O}\). In fact, if the conductor is \(\mc{O}\) then we do not have to avoid any primes at all. This occurs when \(\mc{O}/\smc{O}\) is monogenic. Indeed, Suppose \(\mc{O} = \smc{O}[\a]\) for some \(\a \in \mc{O}\). Then \(1,\a,\ldots,\a^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\) and is necessarily a basis for \(L/K\). But then \(\a\) is also a primitive element for \(L/K\) which implies
     \[
-      \mf{Q}_{\mc{O}/\smc{O}} = \mc{O}.
+      \mf{q}_{\smc{O}[\t]} = \mc{O}.
     \]
     \fi
 
