@@ -1480,7 +1480,7 @@
       \mc{O}_{K}^{S} = \mc{O}_{K}(X).
     \]
     We call any \(\a \in \mc{O}_{K}^{S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl^{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}^{S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K}^{S}\) of \(K\) is the class number of \(\Cl^{S}(K)\). The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \((\mc{O}_{K}^{S})^{\ast}\) of \(\mc{O}_{K}^{S}\) and we call any element of \((\mc{O}_{K}^{S})^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
-  \section{\todo{Orders}}
+  \section{Orders}
     Recall that Dedekind domains are one-dimensional noetherian domains that are also integrally closed domains. An order will relax the condition of being integrally closed, and surprisingly, we will still be able to deduce similar information as we did for Dedekind domains. More precisely, for any integral domain \(\smc{O}\) with field of fractions \(K\), we define its \textbf{conductor}\index{conductor} \(\mf{q}_{\smc{O}}\) to be
     \[
       \mf{q}_{\smc{O}} = \{\a \in \smc{O}:\a\conj{\smc{O}} \subseteq \smc{O}\}.
@@ -1739,7 +1739,7 @@
       \]
       is its prime factorization. Let \(m_{i}(x)\) be any lift of \(\conj{m_{i}}(x)\) to \(\smc{O}[x]\) and set
       \[
-        \mf{P}_{i} = \mf{p}\mc{O}+m_{i}(\t)\mc{O}.
+        \mf{P}_{i} = m_{i}(\t)\mc{O}+\mf{p}\mc{O}.
       \]
       Then \(\mf{P}_{i}\) is a prime of \(\mc{O}\) and
       \[
@@ -1793,50 +1793,38 @@
       \[
         \F_{\mf{p}}[x]/(\conj{m_{\t}}(x)) \cong \bigop_{i}\F_{\mf{p}}[x]/(\conj{m_{i}}(x)^{e_{i}}),
       \]
-      induced by natural projection. Since \(\conj{m_{i}}(x)\) is irreducible, \((\conj{m_{i}}(x))\) is maximal whence \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x))\) is a field. By the fourth isomorphism theorem, \((\conj{m_{i}}(x))/(\conj{m_{i}}(x)^{e_{i}})\) is a maximal ideal of \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x)^{e_{i}})\). So under the aforementioned isomorphism, the maximal ideals of \(\F_{\mf{p}}[x]/(\conj{m_{\t}}(x))\) are of the form \((\conj{m_{i}}(x))/(\conj{m_{\theta}}(x))\) and the corresponding quotient fields are isomorphic to \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x))\) by the third isomorphism theorem. As the chain of isomorphisms previously established are induced by natural projections, the maximal ideals of \(\mc{O}/\mf{p}\mc{O}\) are of the form \(m_{i}(\t)\mc{O}/\mf{p}\mc{O}\).
+      induced by natural projection. Since \(\conj{m_{i}}(x)\) is irreducible, \((\conj{m_{i}}(x))\) is maximal. By the fourth isomorphism theorem, \((\conj{m_{i}}(x))/(\conj{m_{i}}(x)^{e_{i}})\) is a maximal ideal of \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x)^{e_{i}})\). So under the aforementioned isomorphism, the maximal ideals of \(\F_{\mf{p}}[x]/(\conj{m_{\t}}(x))\) are of the form \((\conj{m_{i}}(x))/(\conj{m_{\theta}}(x))\). As the chain of isomorphisms is induced by natural projections, the maximal ideals of \(\mc{O}/\mf{p}\mc{O}\) are of the form \(m_{i}(\t)\mc{O}/\mf{p}\mc{O}\).
       
-      It is now possible to show that the \(\mf{P}_{i}\) are prime. To see this, consider the homomorphism
+      It is now possible to show that the \(\mf{P}_{i}\) are the prime factors of \(\mf{p}\mc{O}\). To see this, consider the homomorphism
       \[
         \pi:\mc{O} \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O},
       \]
-      given by natural projection. As such, \(\pi\) is surjective. \todo{xxx}
-    \end{proof}
-
-    \iffalse
-    \begin{proof}
-     We now show that the \(\mf{P}_{i}\) are prime. To see this, consider the surjective homomorphism
-      \[
-        \pi:\mc{O} \to \mc{O}/\mf{p}\mc{O} \qquad \a \mapsto \a+\mf{p}\mc{O}.
-      \]
-      Then the image of \(\mf{P}_{i}\) under \(\pi\) is \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). As this ideal is maximal and hence prime, the preimage \(\mf{P}_{i}\) is prime too. Moreover, the \(\mf{P}_{i}\) are all distinct since the \(\conj{m_{i}(\t)}\mc{O}/\mf{p}\mc{O}\) are which are all distinct because the \(\conj{m_{i}}(x)A\) are (using the isomorphism \(\mc{O}/\mf{p}\mc{O} \cong A\)). In particular, they are also relatively prime. By construction, \(\mf{P}_{i} \subseteq \mf{p}\mc{O}\) so that the \(\mf{P}_{i}\) are prime factors of \(\mf{p}\mc{O}\). These are the only prime factors of \(\mf{p}\mc{O}\) because the image of any prime under \(\pi\) contained in \(\mf{p}\mc{O}\) must be a maximal ideal of \(\mc{O}/\mf{p}\mc{O}\) (since primes are maximal and by the fourth isomorphism theorem) and every maximal ideal is one of the \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\). Together, all of this means that \(\mf{p}\mc{O}\) admits the prime factorization
+      given by natural projection. As such, \(\pi\) is surjective. By definition of \(\mf{P}_{i}\), the image under \(\pi\) is \(m_{i}(\t)\mc{O}/\mf{p}\mc{O}\). As this ideal is maximal and hence prime, the preimage \(\mf{P}_{i}\) is prime too. Moreover, the \(\mf{P}_{i}\) are distinct since the \(m_{i}(\t)\mc{O}/\mf{p}\mc{O}\) are. In particular, the \(\mf{P}_{i}\) are also pairwise relatively prime. By construction, \(\mf{P}_{i} \mid \mf{p}\mc{O}\) because to divide is to contain. Whence the \(\mf{P}_{i}\) are prime factors of \(\mf{p}\mc{O}\). They constitute all of the prime factors of \(\mf{p}\mc{O}\) because the image of any prime under \(\pi\) containing \(\mf{p}\mc{O}\) must be a maximal ideal of \(\mc{O}/\mf{p}\mc{O}\) by the fourth isomorphism theorem and every maximal ideal is one of the \(m_{i}(\t)\mc{O}/\mf{p}\mc{O}\). Together, all of this means that \(\mf{p}\mc{O}\) admits the prime factorization
       \[
         \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})},
       \]
-      for some ramification indices \(e_{\mf{p}}(\mf{P}_{i})\). We will be done if we can show \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\) and \(f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\). To accomplish this, observe that we have an isomorphism
+      for some ramification indices \(e_{\mf{p}}(\mf{P}_{i})\).
+
+      It remains to compute the ramification indices and inertia degrees. We will first compute the inertia degrees and then use the fundamental equality to determine the ramification indices. From our previous work, we have an isomorphism
       \[
-        \F_{\mf{P}_{i}} \cong (\mc{O}/\mf{p}\mc{O})/(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})) \cong \F_{\mf{p}}[x]/(\conj{m_{i}}(x)),
+        \mc{O}/\mf{p}\mc{O} \cong \F_{\mf{p}}[x]/(\conj{m_{\t}}(x)).
       \]
-      where the first isomorphism follow by taking \(\F_{\mf{P}_{i}}\) and reducing \(\mc{O}\) modulo \(\mf{p}\) and the second isomorphism follows from \(\mc{O}/\mf{p}\mc{O} \cong A\) and that the image of the maximal ideal \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\) under this isomorphism is \(\conj{m_{i}}(x)A\). Now \(\F_{\mf{p}}[x]/(\conj{m_{i}}(x))\) is an \(\F_{\mf{p}}\)-vector space of degree \(\deg(\conj{m_{i}}(x))\). Hence \(f_{p}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) for all \(i\) as desired. The ideal \(\conj{m_{i}}(x)^{e_{i}}A\) under the isomorphism \(A \cong \mc{O}/\mf{p}\mc{O}\) is the ideal \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\). As the image of \(\mf{P}_{i}\) under \(\pi\) is \(\conj{m_{i}(\t)}(\mc{O}/\mf{p}\mc{O})\), we have that \(\mf{P}_{i}^{e_{i}}\) is contained in the preimage of \(\conj{m_{i}(\t)}^{e_{i}}(\mc{O}/\mf{p}\mc{O})\) under \(\pi\). As \(\conj{m_{\t}(\t)}(\mc{O}/\mf{p}\mc{O}) = 0\), it follows that
+      Moreover, the primes \(\mf{P}_{i}\) of \(\mc{O}\) correspond to the maximal ideals \(m_{i}(\t)\mc{O}/\mf{p}\mc{O}\) of \(\mc{O}/\mf{p}\mc{O}\) which correspond to the maximal ideals \((\conj{m_{i}}(x))/(\conj{m_{\theta}}(x))\) of \(\F_{\mf{p}}[x]/(\conj{m_{\t}}(x))\) under this isomorphism. By the third isomorphism theorem, we obtain the isomorphism of fields
       \[
-        \mf{p}\mc{O} = \pi^{-1}(0) \supseteq \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}}.
+        \mc{O}/\mf{P}\mc{O} \cong \F_{\mf{p}}[x]/(\conj{m_{i}}(x)).
       \]
-      Since the \(\mf{P}_{i}\) are prime, we have \(e_{\mf{p}}(\mf{P}_{i}) \le e_{i}\) for all \(i\). But the fundamental equality then gives
+      Both of these fields are \(\F_{\mf{p}}\)-vector spaces where the latter clearly has degree \(\deg(\conj{m_{i}}(x))\). Hence \(f_{\mf{p}}(\mf{P}_{i}) = \deg(\conj{m_{i}}(x))\) which is the desired formula for the inertia degrees. For the ramification indices, as the chain of isomorphisms is induced by natural projections, the ideal \((\conj{m_{i}}(x)^{e_{i}})/(\conj{m_{\t}}(x))\) of \(\F_{\mf{p}}[x]/(\conj{m_{\t}}(x))\) corresponds to the ideal \(m_{i}(\t)^{e_{i}}\mc{O}/\mf{p}\mc{O}\) of \(\mc{O}/\mf{p}\mc{O}\). Since the image of \(\mf{P}_{i}\) under \(\pi\) is \(m_{i}(\t)\mc{O}/\mf{p}\mc{O}\), we have that \(\mf{P}_{i}^{e_{i}}\) is contained in the preimage of \(m_{i}(\t)^{e_{i}}\mc{O}/\mf{p}\mc{O}\) under \(\pi\). As \(m_{\t}(\t) \in \mf{p}\mc{O}\), it follows that
       \[
-        n = \sum_{1 \le i \le r}e_{\mf{p}}(\mf{P}_{i})f_{p}(\mf{P}_{i}) \le \sum_{1 \le i \le r}e_{i}f_{p}(\mf{P}_{i}) \le \sum_{1 \le i \le r}e_{i}\deg(\conj{m_{i}}(x)) \le n,
+        \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}} \subseteq \mf{p}\mc{O}.
       \]
-      where the last equality follows by the prime factorization of \(\conj{m_{\t}}(x)\) and that \(\deg(\conj{m_{\t}}(x)) = \deg(m_{\t}(x))\) because \(m_{\t}(x)\) is monic. This shows \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\) for all \(i\) which completes the proof.
+      Prime factorization then forces \(e_{\mf{p}}(\mf{P}_{i}) \le e_{i}\). But then
+      \[
+        \sum_{i}e_{\mf{p}}(\mf{P}_{i})f_{p}(\mf{P}_{i}) = \sum_{i}e_{i}\deg(\conj{m_{i}}(x)),
+      \]
+      as fundamental equality says that the first sum is sum is \(n\) while the prime factorization of \(m_{\t}(x)\) says that the second sum is \(n\) as well. Ths only way this is possible is if \(e_{\mf{p}}(\mf{P}_{i}) = e_{i}\). This is the desired formula for the ramification indices.
     \end{proof}
 
-    Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). The Dedekind-Kummer theorem allows us to compute the prime factorization of \(\mf{p}\mc{O}\) provided this integral ideal is relatively prime to the conductor \(\mf{q}_{\smc{O}[\t]}\). By the prime factorization of fractional ideals, \(\mf{q}_{\smc{O}[\t]}\) has finitely many prime factors so we only have to avoid finitely many primes of \(\mc{O}\). In fact, if the conductor is \(\mc{O}\) then we do not have to avoid any primes at all. This occurs when \(\mc{O}/\smc{O}\) is monogenic. Indeed, Suppose \(\mc{O} = \smc{O}[\a]\) for some \(\a \in \mc{O}\). Then \(1,\a,\ldots,\a^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\) and is necessarily a basis for \(L/K\). But then \(\a\) is also a primitive element for \(L/K\) which implies
-    \[
-      \mf{q}_{\smc{O}[\t]} = \mc{O}.
-    \]
-    \fi
-
-    \iffalse
-      If \(\t\) is a primitive element for \(K/\Q\) contained in \(\mc{O}_{K}\) then the \textbf{conductor}\index{conductor} \(\mf{q}_{K}\) of \(K\) relative to \(\t\) is the conductor of \(\mc{O}_{K}/\Z\) relative to \(\t\). Even though \(K\) admits an integral basis, \(\mc{O}_{K}\) is not necessarily monogenic so that \(\mf{q}_{K}\) may not be \(\mc{O}_{K}\). \todo{say something about Galois number fields...}
-    \fi
-
+    As we have already noted, the irregular primes of \(\smc{O}[\t]\) correspond to the prime factors of \(\mf{q}_{\smc{O}[\t]}\) of which there are finitely many as \(\mc{O}\) is a Dedekind domain. This means that the Dedekind-Kummer theorem is valid for \(\mf{p}\mc{O}\) provided that \(\mf{p}\) is not below any of the prime factors of \(\mf{q}_{\smc{O}[\t]}\). Therefore the theorem is valid for all but finitely many primes \(\mf{p}\). In fact, if \(\mf{q}_{\smc{O}[\t]} = \mc{O}\) then we do not have to avoid any primes at all. This occurs when \(\mc{O}/\smc{O}\) is monogenic. Indeed, Suppose \(\mc{O} = \smc{O}[\t]\) for some \(\t \in \mc{O}\). Then \(1,\t,\ldots,\t^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\) which is necessarily a basis for \(L/K\). This means \(\t\) is also a primitive element for \(L/K\) which implies \(\mf{q}_{\smc{O}[\t]} = \mc{O}\).
   \iffalse\section{\todo{The Different and Discriminant}}
     Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). It is exceptionally rare for a prime \(\mf{p}\) of \(K\) to ramify. We will construct two integral ideals, one of \(\mc{O}\) and the other of \(\smc{O}\) which will tell us which primes ramify in \(L\) or \(K\). These integral ideals are the different and discriminant respectively. To describe them, we will need the concept of lattices in Dedekind domains. We say that \(\mf{L}\) is a \textbf{\(\smc{O}\)-lattice}\index{\(\smc{O}\)-lattice} if it is a finitely generated \(\smc{O}\)-submodule of \(L\). Moreover, we say that \(\mf{L}\) is \textbf{complete}\index{complete} if it spans \(L/K\). That is, \(\mf{L}\) contains a basis of \(L/K\).
 
