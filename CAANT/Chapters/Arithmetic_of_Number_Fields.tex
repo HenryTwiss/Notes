@@ -333,7 +333,7 @@
     \end{equation}
     which is the square of the Vandermonde determinant of \(M(1,\l,\ldots,\l^{n-1})\).
 
-    Let us now consider the situation when \(\smc{O}\) is an integrally closed domain with field of fractions \(K\), \(L/K\) be a degree \(n\) separable extension, and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). If \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\), then by \cref{prop:field_of_fractions_AKBL}, we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). In many instances this will be useful. As a first application, the discriminant of such a basis relates inclusion of \(\mc{O}\) relative to \(\smc{O}\).
+    Let us now consider the situation when \(\smc{O}\) is an integrally closed domain with field of fractions \(K\), \(L/K\) be a degree \(n\) separable extension, and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\). If \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\) then using \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis belongs to \(\mc{O}\). In many instances this will be useful. As a first application, the discriminant of such a basis relates inclusion of \(\mc{O}\) relative to \(\smc{O}\).
 
     \begin{lemma}\label{lem:lemma_for_integral_basis_AKBL}
       Let \(\smc{O}\) be an integrally closed domain with field of fractions \(K\), \(L/K\) be a degree \(n\) separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). If \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\) that is contained in \(\mc{O}\) then
@@ -856,7 +856,7 @@
 
     We now turn to the case of a number field \(K\) for which our developments so far can be refined. By \cref{prop:integral_closure_of_Dedekind_is_Dedekind}, the ring of integers \(\mc{O}_{K}\) is a Dedekind domain as \(\Z\) is a principal ideal domain. In view of this fact, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). The \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). The \textbf{class number}\index{class number} \(h_{K}\) of \(K\) is the class number of \(\mc{O}_{K}\). The \textbf{unit group}\index{unit group} of \(K\) is the unit group of \(\mc{O}_{K}\) and we call any element of \(\mc{O}_{K}^{\ast}\) a \textbf{unit}\index{unit} of \(K\) (this is slightly abusive as every element of \(K^{\ast}\) is invertible). Note that the integral ideals of \(K\) admit prime factorizations. One of our core investigations will be to understand how the principal integral ideal \(p\mc{O}_{K}\) factors into a product of primes of \(K\) for any prime \(p\). We will also leverage geometric ideas to show that the class number is finite and completely describe the unit group.
 
-    Now suppose \(L/K/\Q\) is an extension of number fields. Then \(L/K/\Q\) is a finite separable tower. Moreover, \(\mc{O}_{L}/\mc{O}_{K}/\Z\) is a tower of Dedekind extension for \(L/K/\Q\) by \cref{prop:integral_closure_is_transitive,prop:integral_closure_of_Dedekind_is_Dedekind}. In particular, \(\mc{O}_{L}/\mc{O}_{K}\) is a Dedekind extension for \(L/K\) and we will always assume this is the associated Dedekind extension.
+    Now suppose \(L/K/\Q\) is an extension of number fields. Then \(L/K/\Q\) is a finite separable tower. Moreover, \(\mc{O}_{L}/\mc{O}_{K}/\Z\) is a tower of Dedekind extension of \(L/K/\Q\) by \cref{prop:integral_closure_is_transitive,prop:integral_closure_of_Dedekind_is_Dedekind}. In particular, \(\mc{O}_{L}/\mc{O}_{K}\) is a Dedekind extension of \(L/K\) and we will always assume this is the associated Dedekind extension.
   \section{Prime Splitting}
     We being by introducing the notion of primes lying above each other which is a slight generalization of a part of the proof of \cref{prop:integral_closure_of_Dedekind_is_Dedekind}. Let \(\mc{O}/\smc{O}\) be an extension integral domains with \(\mc{O}\) integral over \(\smc{O}\). If \(\mf{P}\) and \(\mf{p}\) are primes of \(\mc{O}\) and \(\smc{O}\) respectively, we say that \(\mf{P}\) is \textbf{above}\index{above} \(\mf{p}\), or equivalently, \(\mf{p}\) is \textbf{below}\index{below} \(\mf{P}\) if
     \[
@@ -993,7 +993,6 @@
     \[
       \mf{p}\mc{O} = \mf{P}^{n}.
     \]
-
     We now turn to the setting where \(L/K\) is an extension of number fields and recall that the underlying Dedekind extension is \(\mc{O}_{L}/\mc{O}_{K}\). Then every residue class extension is separable as \(\F_{p}\) is perfect. A prime \(\mf{p}\) of \(K\) is said to be \textbf{inert}\index{inert}, \textbf{nonsplit}\index{nonsplit}, \textbf{split}\index{split}, or \textbf{totally split}\index{totally split} in \(L/K\) if it is in \(\mc{O}_{L}/\mc{O}_{K}\). Primes \(\mf{P}\) and \(\mf{p}\) of \(L\) and \(K\) are said to be \textbf{unramified}\index{unramified}, \textbf{ramified}\index{ramified}, or \textbf{totally ramified}\index{totally ramified} in \(L/K\) if they are in \(\mc{O}_{L}/\mc{O}_{K}\). In particular, a prime \(\mf{P}\) above \(\mf{p}\) is unramified in \(L/K\) if and only if \(e_{\mf{p}}(\mf{P}) = 1\).
   \section{Ramification}
     Much more can be said about the ramification of primes in a Dedekind extension \(\mc{O}/\smc{O}\) when the associated extension \(L/K\) is Galois. Since \(L/K\) is assumed to be finite and separable, this amounts to further assuming \(L/K\) is normal. In this case, the Galois group is
@@ -1494,7 +1493,7 @@
       For the forward implication, suppose \(\mf{q}_{\smc{O}}\) is an integral ideal of \(\smc{O}\). Then there is some nonzero \(\a \in \mf{q}_{\smc{O}}\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). Whence \(\a\conj{\smc{O}}\) is an ideal of \(\smc{O}\) and hence a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is noetherian. But then \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module. For the reverse implication, let \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) be generators of \(\conj{\smc{O}}\) as a \(\smc{O}\)-module. Then \(\d = \prod_{i}\d_{i}\) is nonzero with \(\d\conj{\smc{O}} \subset \smc{O}\). Whence \(\d \in \mf{q}_{\smc{O}}\).
     \end{proof}
     
-    Accordingly, an \textbf{order}\index{order} \(\smc{O}\) is a one-dimensional noetherian domain whose conductor is an integral ideal of \(\smc{O}\). If \(\smc{O}\) has field of fractions \(K\), then this last condition is equivalent to the normalization \(\conj{\smc{O}}\) being a finitely generated \(\smc{O}\)-module. This means \(\smc{O}\) is a Dedekind domain if and only if it is an integrally closed domain which happens if and only if the conductor is \(\smc{O}\) itself. In fact, the normalization of an order is always a Dedekind domain.
+    Accordingly, an \textbf{order}\index{order} \(\smc{O}\) is a one-dimensional noetherian domain whose conductor is an integral ideal of \(\smc{O}\). If \(\smc{O}\) has field of fractions \(K\) then this last condition is equivalent to the normalization \(\conj{\smc{O}}\) being a finitely generated \(\smc{O}\)-module. This means \(\smc{O}\) is a Dedekind domain if and only if it is an integrally closed domain which happens if and only if the conductor is \(\smc{O}\) itself. In fact, the normalization of an order is always a Dedekind domain.
 
     \begin{proposition}\label{prop:normalization_of_order_is_Dedekind}
       Let \(\smc{O}\) be an order with field of fractions \(K\). Then \(\conj{\smc{O}}\) is a Dedekind domain with field of fractions \(K\).
@@ -1611,7 +1610,7 @@
       \[
         \sum_{i}\a_{i}\b_{i} = 1.
       \]
-      Moreover, not all of the \(\a_{i}\b_{i}\) can lie in the unique maximal ideal \(\mf{p}_{\mf{p}}\) of \(\smc{O}_{\mf{p}}\) for otherwise this ideal is not proper. Without loss of generality, we may assume \(\a_{1}\b_{1} \notin \mf{p}_{\mf{p}}\) and so it is a unit in \(\smc{O}_{\mf{p}}\). As \(\mf{a}_{\mf{p}}\mf{b} = \smc{O}_{\mf{p}}\) by the invertibility of \(\mf{a}\), it follows that \(\mf{a}_{\mf{p}} = \a_{1}\smc{O}_{\mf{p}}\). This shows \(\mf{a}_{\mf{p}}\) is principal. For the reverse implication, suppose \(\mf{a}_{\mf{p}}\) is principle for every prime \(\mf{p}\) of \(\smc{O}\). Whence \(\mf{a}_{\mf{p}} = \a_{\mf{p}}\smc{O}_{\mf{p}}\) for some nonzero \(\a_{\mf{p}} \in K\). As \(K\) is the field of fractions of \(\smc{O}_{\mf{p}}\), we may multiply by a nonzero element of \(\smc{O}_{\mf{p}}\), if necessary, to ensure that \(\a_{\mf{p}} \in \mf{a}\). Now if \(\mf{a}\) were not invertible, then there would exist a prime \(\mf{p}\) such that
+      Moreover, not all of the \(\a_{i}\b_{i}\) can lie in the unique maximal ideal \(\mf{p}_{\mf{p}}\) of \(\smc{O}_{\mf{p}}\) for otherwise this ideal is not proper. Without loss of generality, we may assume \(\a_{1}\b_{1} \notin \mf{p}_{\mf{p}}\) and so it is a unit in \(\smc{O}_{\mf{p}}\). As \(\mf{a}_{\mf{p}}\mf{b} = \smc{O}_{\mf{p}}\) by the invertibility of \(\mf{a}\), it follows that \(\mf{a}_{\mf{p}} = \a_{1}\smc{O}_{\mf{p}}\). This shows \(\mf{a}_{\mf{p}}\) is principal. For the reverse implication, suppose \(\mf{a}_{\mf{p}}\) is principle for every prime \(\mf{p}\) of \(\smc{O}\). Whence \(\mf{a}_{\mf{p}} = \a_{\mf{p}}\smc{O}_{\mf{p}}\) for some nonzero \(\a_{\mf{p}} \in K\). As \(K\) is the field of fractions of \(\smc{O}_{\mf{p}}\), we may multiply by a nonzero element of \(\smc{O}_{\mf{p}}\), if necessary, to ensure that \(\a_{\mf{p}} \in \mf{a}\). Now if \(\mf{a}\) were not invertible then there would exist a prime \(\mf{p}\) such that
       \[
         \mf{a}\mf{a}^{-1} \subseteq \mf{p},
       \]
@@ -1721,7 +1720,7 @@
       \[
         \conj{\mf{p}} = \conj{\mf{p}}_{\conj{\mf{p}}} \cap \conj{\smc{O}} \quad \text{and} \quad \conj{\mf{q}} = \conj{\mf{q}}_{\conj{\mf{q}}} \cap \conj{\smc{O}}.
       \]
-      These identities together with the previous inequality imply \(\conj{\mf{p}} \subseteq \conj{\mf{q}}\) and so \(\conj{\mf{p}} = \conj{\mf{q}}\) as primes of \(\conj{\smc{O}}\) are maximal. This proves uniqueness. It remains to show \(\mf{p}\) is invertible. By \cref{prop:invertible_fractional_ideal_using_localization}, we must show that \(\mf{p}_{\mf{q}}\) is principal for every prime \(\mf{q}\) of \(\smc{O}\). If \(\mf{q} = \mf{p}\), regularity of \(\mf{p}\) means \(\smc{O}_{\mf{p}}\) is a discrete valuation ring and hence a principal ideal domain. Thus \(\mf{p}_{\mf{p}}\) is principal. If \(\mf{q} \neq \mf{p}\), then \(\mf{p}\) contains an element of \(\smc{O}-\mf{q}\) forcing \(\mf{p}_{\mf{q}} = \smc{O}_{\mf{q}}\) which is also principal. This completes the proof of the second statement.
+      These identities together with the previous inequality imply \(\conj{\mf{p}} \subseteq \conj{\mf{q}}\) and so \(\conj{\mf{p}} = \conj{\mf{q}}\) as primes of \(\conj{\smc{O}}\) are maximal. This proves uniqueness. It remains to show \(\mf{p}\) is invertible. By \cref{prop:invertible_fractional_ideal_using_localization}, we must show that \(\mf{p}_{\mf{q}}\) is principal for every prime \(\mf{q}\) of \(\smc{O}\). If \(\mf{q} = \mf{p}\), regularity of \(\mf{p}\) means \(\smc{O}_{\mf{p}}\) is a discrete valuation ring and hence a principal ideal domain. Thus \(\mf{p}_{\mf{p}}\) is principal. If \(\mf{q} \neq \mf{p}\) then \(\mf{p}\) contains an element of \(\smc{O}-\mf{q}\) forcing \(\mf{p}_{\mf{q}} = \smc{O}_{\mf{q}}\) which is also principal. This completes the proof of the second statement.
     \end{proof}
 
     As \(\smc{O}\) is noetherian, \cref{lem:integral_ideal_prime_inclusion} implies
@@ -1730,7 +1729,7 @@
     \]
     for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{q}_{\smc{O}}\) is a prime and thus one of the \(\mf{p}_{i}\). In view of the previous result, this means that only finitely many primes of \(\smc{O}\) are irregular and they are exactly the primes which are not invertible. Moreover, there is exactly one prime of \(\conj{\smc{O}}\) above each of these primes and they are the exactly the prime factors of \(\mf{q}_{\smc{O}}\) in \(\conj{\smc{O}}\). This is a quite concrete description of the failure to which \(\smc{O}\) is not integrally closed in terms of the conductor \(\mf{q}_{\smc{O}}\).
 
-    We now turn to an application of orders in the setting of a Dedekind extension \(\mc{O}/\smc{O}\) for a finite separable extension \(L/K\). Recall that if \(\mf{p}\) is a prime of \(\smc{O}\), then it is desirable to understand how \(\mf{p}\mc{O}\) factors into primes of \(\mc{O}\). Using orders, this is tractable for almost all primes \(\mf{p}\) if we know a sufficient amount of information about the minimal polynomial of a primitive element for \(L/K\). Let \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\). In view of \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure \(\t \in \mc{O}\) and hence its minimal polynomial \(m_{\t}(x)\) over \(K\) has coefficients in \(\smc{O}\). Then \(\smc{O} \subseteq \smc{O}[\t] \subseteq \mc{O}\) so that \(\smc{O}[\t]\) is an order. In fact, the field of fractions of \(\smc{O}[\t]\) is \(L\) since the field of fractions of \(\smc{O}\) is \(K\). As \(\smc{O}[\t]\) is integral over \(\smc{O}\), it follows that the normalization of \(\smc{O}[\t]\) is \(\mc{O}\). Therefore the conductor \(\mf{q}_{\smc{O}[\t]}\) is an integral ideal of \(\smc{O}[\t]\) and \(\mc{O}\). The \textbf{Dedekind-Kummer theorem}\index{Dedekind-Kummer theorem} describes the factorization of \(\mf{p}\mc{O}\) provided it is relatively prime to \(\mf{q}_{\smc{O}[\t]}\).
+    We now turn to an application of orders in the setting of a Dedekind extension \(\mc{O}/\smc{O}\) for a finite separable extension \(L/K\). Recall that if \(\mf{p}\) is a prime of \(\smc{O}\) then it is desirable to understand how \(\mf{p}\mc{O}\) factors into primes of \(\mc{O}\). Using orders, this is tractable for almost all primes \(\mf{p}\) if we know a sufficient amount of information about the minimal polynomial of a primitive element for \(L/K\). Let \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\). In view of \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure \(\t \in \mc{O}\) and hence its minimal polynomial \(m_{\t}(x)\) over \(K\) has coefficients in \(\smc{O}\). Then \(\smc{O} \subseteq \smc{O}[\t] \subseteq \mc{O}\) so that \(\smc{O}[\t]\) is an order. In fact, the field of fractions of \(\smc{O}[\t]\) is \(L\) since the field of fractions of \(\smc{O}\) is \(K\). As \(\smc{O}[\t]\) is integral over \(\smc{O}\), it follows that the normalization of \(\smc{O}[\t]\) is \(\mc{O}\). Therefore the conductor \(\mf{q}_{\smc{O}[\t]}\) is an integral ideal of \(\smc{O}[\t]\) and \(\mc{O}\). The \textbf{Dedekind-Kummer theorem}\index{Dedekind-Kummer theorem} describes the factorization of \(\mf{p}\mc{O}\) provided it is relatively prime to \(\mf{q}_{\smc{O}[\t]}\).
 
     \begin{theorem*}[Dedekind-Kummer theorem]
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\), \(\t\) be a primitive element for \(L/K\) contained in \(\mc{O}\) with minimal polynomial \(m_{\t}(x)\) over \(K\), and \(\mf{p}\) be a prime of \(\smc{O}\) such that \(\mf{p}\mc{O}\) is relatively prime to \(\mf{q}_{\smc{O}[\t]}\). Also let \(\conj{m_{\t}}(x) \in \F_{\mf{p}}[x]\) be the image of \(m_{\t}(x)\) under natural projection and suppose
@@ -2053,19 +2052,58 @@
     \]
     As all of the residue class extensions are separable, it follows from \cref{thm:ramifies_if_and_only_if_divides_the_different,thm:ramifies_if_and_only_if_divides_the_discriminant} that a prime of \(K\) ramifies in \(\mc{O}_{K}/\Z\) if and only if it divides \(\mf{D}_{K}\) and a prime of \(\Q\) ramifies in \(\mc{O}_{K}/\Z\) if and only if it divides \(|\D_{K}|\). Moreover, finitely many primes of \(K\) and \(\Q\) ramify by \cref{cor:finitely_many_primes_ramify_L,cor:finitely_many_primes_ramify_K}.
   \fi\iffalse\section{\todo{The Ideal Norm}}
-    Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) extension \(L/K\). If \(\mf{P}\) a prime of \(L\) is above the prime \(\mf{p}\) of \(K\), we define the \textbf{norm}\index{norm} \(\Norm_{\mc{O}/\smc{O}}(\mf{P})\) of \(\mf{P}\) by
+    We can now introduce the ideal norm of \(\mc{O}/\smc{O}\). Suppose \(\mf{F}\) is a fractional ideal of \(\mc{O}\) with prime factorization
     \[
-      \Norm_{\mc{O}/\smc{O}}(\mf{P}) = \mf{p}^{f_{\mf{p}}(\mf{P})}.
+      \mf{F} = \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}}.
     \]
-    Setting \(\Norm_{\mc{O}/\smc{O}}(\mc{O}) = \smc{O}\), we extend this multiplicatively to all fractional ideals of \(\mc{O}\). This induces a homomorphism
+    Let \(\mf{p}_{i}\) be the prime below \(\mf{P}_{i}\). We define the \textbf{norm}\index{norm} \(\Norm_{\mc{O}/\smc{O}}(\mf{F})\) of \(\mf{F}\) by
     \[
-      \Norm_{\mc{O}/\smc{O}}:I_{\mc{O}} \to I_{\smc{O}} \qquad \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}} \mapsto \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})},
+      \Norm_{\mc{O}/\smc{O}}(\mf{F}) = \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})}.
     \]
-    called the \textbf{ideal norm}\index{ideal norm} of \(\mc{O}/\smc{O}\). It follows from the fundamental equality and multiplicatively of the ideal norm that
+    Setting \(\Norm_{\mc{O}/\smc{O}}(\mc{O}) = \smc{O}\), unique factorization shows that we obtain a homomorphism
     \[
-      \Norm_{\mc{O}/\smc{O}}(\mf{f}\mc{O}) = \mf{f}^{n},
+      \Norm_{\mc{O}/\smc{O}}:I(\mc{O}) \to I(\smc{O}) \qquad \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}} \mapsto \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})},
     \]
-    for any fractional ideal \(\mf{f}\) of \(\smc{O}\). 
+    called the \textbf{ideal norm}\index{ideal norm} of \(\mc{O}/\smc{O}\). This means that the ideal norm is multiplicative. It follows from the fundamental equality that
+    \[
+      \Norm_{\mc{O}/\smc{O}}(\mf{p}\mc{O}) = \mf{p}^{n},
+    \]
+    and by multiplicativity of the ideal norm, any fractional ideal \(\mf{f}\) of \(\smc{O}\) satisfies
+    \[
+      \Norm_{\mc{O}/\smc{O}}(\mf{f}\mc{O}) = \mf{f}^{n}.
+    \]
+    In any case, the ideal norm is aptly named because it is compatible with the norm \(N_{L/K}\).
+
+    \begin{proposition}
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite separable extension \(L/K\). Then
+      \[
+        \Norm(\l\mc{O}) = \Norm_{L/K}(\l)\smc{O},
+      \]
+      for any \(\l \in L\).
+    \end{proposition}
+    \begin{proof}
+      In view of \cref{prop:ring_is_intersection_of_all_localizations}, it suffices to show
+      \[
+        \Norm(\l\mc{O})_{\mf{p}} = \Norm_{L/K}(\l)\smc{O}_{\mf{p}},
+      \]
+      for all primes \(\mf{p}\) of \(\smc{O}\). Let
+      \[
+        \l\mc{O} = \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}},
+      \]
+      be the prime factorization of \(\l\mc{O}\). If \(\mf{P}_{i}\) is not above \(\mf{p}\) then \(\mf{P}_{i}\) contains an element of \(\smc{O}-\mf{p}\) whence the prime below it does as well and so its localization becomes \(\smc{O}_{\mf{p}}\). So on the one hand, we find that
+      \[
+        \Norm(\l\mc{O})_{\mf{p}} = \mf{p}_{\mf{p}}^{\sum_{\mf{P}_{i} \mid \mf{p}\mc{O}}e_{i}f_{\mf{p}}(\mf{P}_{i})}.
+      \]
+      On the other hand, \(\smc{O}_{\mf{p}}\) is a discrete valuation ring by \cref{thm:Dedekind_if_and_only_if_all_localizations_are_discrete_valuation_rings} whence
+      \[
+        \Norm_{L/K}(\l)\smc{O}_{\mf{p}} = \mf{p}_{\mf{p}}^{v_{\mf{p}}(\Norm_{L/K}(\l))}.
+      \]
+      Therefore it suffices to show
+      \[
+        \sum_{\mf{P}_{i} \mid \mf{p}\mc{O}}e_{i}f_{\mf{p}}(\mf{P}_{i}) = v_{\mf{p}}(\Norm_{L/K}(\l)).
+      \]
+      \todo{xxx}
+    \end{proof}
 
     \begin{remark}
       The ideal norm can be though of as an almost inverse to the mapping that sends a fractional ideal \(\mf{f}\) of \(\smc{O}\) to the fractional ideal \(\mf{f}\mc{O}\) of \(\mc{O}\).
