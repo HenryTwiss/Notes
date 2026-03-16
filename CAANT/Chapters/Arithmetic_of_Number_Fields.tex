@@ -714,7 +714,7 @@
       Let \(\smc{O}\) be a Dedekind domain. Then \(\smc{O}\) is a principal ideal domain if and only if it is a unique factorization domain.
     \end{proposition}
     \begin{proof}
-      The forward implication is immediate as every principal ideal domain is a unique factorization domain. For the reverse implication, suppose \(\smc{O}\) is a unique factorization domain. As every integral ideal factors into a product of primes by \cref{thm:unique_product_prime_ideals} and the product of principal integral ideals is principal, it suffices to show that primes are principal. Let \(\mf{p}\) be a prime. Then there exists nonzero \(\a \in \mf{p}\) and \(\a\) is not a unit since \(\mf{p}\) a proper ideal. Since \(\smc{O}\) is a unique factorization domain, let \(\a = \e\rho_{1}^{e_{1}} \cdots \rho_{r}^{e_{r}}\) be the prime factorization of \(\a\). Since \(\mf{p}\) is prime, it follows that there is some \(i\) such that \(\rho_{i} \in \mf{p}\). Without loss of generality, we may assume \(\rho_{1} \in \mf{p}\). Then the integral ideal \(\rho_{1}\smc{O}\) satisfies \(\rho_{1}\smc{O} \subseteq \mf{p}\). As \(\rho_{1}\) is prime, \(\rho_{1}\smc{O}\) is a prime and hence maximal since prime ideals are maximal in \(\smc{O}\). Whence \(\rho_{1}\smc{O} = \mf{p}\) proving \(\mf{p}\) is principal.
+      The forward implication is immediate as every principal ideal domain is a unique factorization domain. For the reverse implication, suppose \(\smc{O}\) is a unique factorization domain. As every integral ideal factors into a product of primes by \cref{thm:unique_product_prime_ideals} and the product of principal integral ideals is principal, it suffices to show that primes are principal. Let \(\mf{p}\) be a prime. Then there exists nonzero \(\a \in \mf{p}\) and \(\a\) is not a unit since \(\mf{p}\) a proper ideal. Since \(\smc{O}\) is a unique factorization domain, let \(\a = \e\pi_{1}^{e_{1}} \cdots \pi_{r}^{e_{r}}\) be the prime factorization of \(\a\). Since \(\mf{p}\) is prime, it follows that there is some \(\pi_{i} \in \mf{p}\). Without loss of generality, we may assume \(\pi_{1} \in \mf{p}\). Then the integral ideal \(\pi_{1}\smc{O}\) satisfies \(\pi_{1}\smc{O} \subseteq \mf{p}\). As \(\pi_{1}\) is prime, \(\pi_{1}\smc{O}\) is a prime and hence maximal since prime ideals are maximal in \(\smc{O}\). Whence \(\pi_{1}\smc{O} = \mf{p}\) proving \(\mf{p}\) is principal.
     \end{proof}
 
     The Chinese remainder theorem also applies to Dedekind domains which will allow us to deduce some more results. Suppose \(\mf{a}\) is an integral ideal with prime factorization
@@ -1071,7 +1071,7 @@
     \[
       \k = \e\pi^{n},
     \]
-    for some integer \(n\) and unit \(\e\). The most important data of a discrete valuation ring is its valuation. The \textbf{valuation}\index{valuation} \(v\) associated to \(\smc{O}\) on \(K\) is the function defined by
+    for some integer \(n\) and unit \(\e\). The most important data of a discrete valuation ring is its valuation. The \textbf{valuation}\index{valuation} \(v\) associated to \(\smc{O}\) is the function defined by
     \[
       v:K \to \Z \cup \{\infty\} \qquad \k \mapsto v(\k) = \begin{cases} n & \text{if \(\k = \e\pi^{n}\)}, \\ \infty & \text{if \(\k = 0\)}. \end{cases}
     \]
@@ -1104,7 +1104,7 @@
 
     It follows from this result that the Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) is an extension of principal ideal domains. Whence it admits an integral basis by \cref{thm:integral_basis_AKBL}. This is often a useful reduction for developing further results or applications in conjunction with \cref{prop:ring_is_intersection_of_all_localizations}.
 
-    Let \(v_{\mf{p}}\) denote the valuation of \(\smc{O}_{\mf{p}}\). We call \(v_{\mf{p}}\) the \textbf{valuation}\index{valuation} associated to the prime \(\mf{p}\) of \(\smc{O}\). These valuations are intimately connected to prime factorizations. Indeed, prime factorization implies that for any \(\k \in K^{\ast}\), we have
+    Let \(v_{\mf{p}}\) denote the valuation of \(\smc{O}_{\mf{p}}\). We call \(v_{\mf{p}}\) the \textbf{valuation}\index{valuation} associated to the prime \(\mf{p}\). These valuations are intimately connected to prime factorizations. Indeed, prime factorization implies that for any \(\k \in K^{\ast}\), we have
     \[
       \k\smc{O} = \prod_{\mf{q}}\mf{q}^{e_{\mf{q}}},
     \]
@@ -1401,7 +1401,7 @@
     \[
       \mf{p}_{1} \cdots \mf{p}_{k} \subseteq \mf{q}_{\smc{O}},
     \]
-    for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{q}_{\smc{O}}\) is a prime and thus one of the \(\mf{p}_{i}\). In view of the previous result, this means that only finitely many primes of \(\smc{O}\) are irregular and they are exactly the primes which are not invertible. Moreover, there is exactly one prime of \(\conj{\smc{O}}\) above each of these primes and they are the exactly the prime factors of \(\mf{q}_{\smc{O}}\) in \(\conj{\smc{O}}\). This is a quite concrete description of the failure to which \(\smc{O}\) is not integrally closed in terms of the conductor \(\mf{q}_{\smc{O}}\).
+    for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{q}_{\smc{O}}\) is a prime and thus one of the \(\mf{p}_{i}\). In view of the previous result, this means that only finitely many primes of \(\smc{O}\) are irregular and they are exactly the primes which are not invertible. Moreover, there is exactly one prime of \(\conj{\smc{O}}\) above each of these primes and they are the exactly the prime factors of \(\mf{q}_{\smc{O}}\) in \(\conj{\smc{O}}\). This is a concrete description of the failure to which \(\smc{O}\) is not integrally closed in terms of the conductor \(\mf{q}_{\smc{O}}\).
   \section{Prime Splitting}
     Suppose \(\mc{O}/\smc{O}\) is a Dedekind extension of a finite separable extension \(L/K\). Let \(\mf{P}\) be a prime of \(\mc{O}\) above the prime \(\mf{p}\) of \(\smc{O}\). The \textbf{ramification index}\index{ramification index} \(e_{\mf{p}}(\mf{P})\) of \(\mf{P}\) relative to \(\mf{p}\) is defined to be the power of \(\mf{P}\) appearing in the prime factorization of \(\mf{p}\mc{O}\). If \(\mf{p}\mc{O}\) has prime factors \(\mf{P}_{1},\ldots,\mf{P}_{r}\) then the prime factorization of \(\mf{p}\mc{O}\) is
     \[
@@ -1611,7 +1611,6 @@
     \end{proof}
 
     As we have already noted, the irregular primes of \(\smc{O}[\t]\) correspond to the prime factors of \(\mf{q}_{\smc{O}[\t]}\) of which there are finitely many as \(\mc{O}\) is a Dedekind domain. This means that the Dedekind-Kummer theorem is valid for \(\mf{p}\mc{O}\) provided that \(\mf{p}\) is not below any of the prime factors of \(\mf{q}_{\smc{O}[\t]}\). In other words, the Dedekind-Kummer theorem is valid for all but finitely many primes \(\mf{p}\). In fact, if \(\mf{q}_{\smc{O}[\t]} = \mc{O}\) then we do not have to avoid any primes at all. This occurs when \(\mc{O}/\smc{O}\) is monogenic. Indeed, Suppose \(\mc{O} = \smc{O}[\t]\) for some \(\t \in \mc{O}\). Then \(1,\t,\ldots,\t^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\) which is necessarily a basis for \(L/K\). This means \(\t\) is also a primitive element for \(L/K\) which implies \(\mf{q}_{\smc{O}[\t]} = \mc{O}\).
-
     \subsection*{Number Fields}
       We now turn to the setting where \(L/K\) is an extension of number fields and recall that the underlying Dedekind extension is \(\mc{O}_{L}/\mc{O}_{K}\). Then every residue class extension is separable as \(\F_{p}\) is perfect. A prime \(\mf{p}\) of \(K\) is said to be \textbf{inert}\index{inert}, \textbf{nonsplit}\index{nonsplit}, \textbf{split}\index{split}, or \textbf{totally split}\index{totally split} in \(L/K\) if it is in \(\mc{O}_{L}/\mc{O}_{K}\). Primes \(\mf{P}\) and \(\mf{p}\) of \(L\) and \(K\) are said to be \textbf{unramified}\index{unramified}, \textbf{ramified}\index{ramified}, or \textbf{totally ramified}\index{totally ramified} in \(L/K\) if they are in \(\mc{O}_{L}/\mc{O}_{K}\). In particular, a prime \(\mf{P}\) above \(\mf{p}\) is unramified in \(L/K\) if and only if \(e_{\mf{p}}(\mf{P}) = 1\).
   \section{Ramification}
@@ -2064,35 +2063,35 @@
     \[
       \mf{F} = \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}}.
     \]
-    Let \(\mf{p}_{i}\) be the prime below \(\mf{P}_{i}\). We define the \textbf{norm}\index{norm} \(\Norm_{\mc{O}/\smc{O}}(\mf{F})\) of \(\mf{F}\) by
+    Let \(\mf{p}_{i}\) be the prime below \(\mf{P}_{i}\). We define the \textbf{norm}\index{norm} \(\mf{N}_{\mc{O}/\smc{O}}(\mf{F})\) of \(\mf{F}\) by
     \[
-      \Norm_{\mc{O}/\smc{O}}(\mf{F}) = \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})}.
+      \mf{N}_{\mc{O}/\smc{O}}(\mf{F}) = \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})}.
     \]
-    Setting \(\Norm_{\mc{O}/\smc{O}}(\mc{O}) = \smc{O}\), unique factorization shows that we obtain a homomorphism
+    Setting \(\mf{N}_{\mc{O}/\smc{O}}(\mc{O}) = \smc{O}\), unique factorization shows that we obtain a homomorphism
     \[
-      \Norm_{\mc{O}/\smc{O}}:I(\mc{O}) \to I(\smc{O}) \qquad \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}} \mapsto \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})},
+      \mf{N}_{\mc{O}/\smc{O}}:I(\mc{O}) \to I(\smc{O}) \qquad \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}} \mapsto \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})},
     \]
     called the \textbf{ideal norm}\index{ideal norm} of \(\mc{O}/\smc{O}\). This means that the ideal norm is multiplicative. It follows from the fundamental equality that
     \[
-      \Norm_{\mc{O}/\smc{O}}(\mf{p}\mc{O}) = \mf{p}^{n},
+      \mf{N}_{\mc{O}/\smc{O}}(\mf{p}\mc{O}) = \mf{p}^{n},
     \]
     and by multiplicativity of the ideal norm, any fractional ideal \(\mf{f}\) of \(\smc{O}\) satisfies
     \[
-      \Norm_{\mc{O}/\smc{O}}(\mf{f}\mc{O}) = \mf{f}^{n}.
+      \mf{N}_{\mc{O}/\smc{O}}(\mf{f}\mc{O}) = \mf{f}^{n}.
     \]
     In any case, the ideal norm is aptly named because it is compatible with the norm \(N_{L/K}\).
 
     \begin{proposition}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite separable extension \(L/K\). Then
       \[
-        \Norm(\l\mc{O}) = \Norm_{L/K}(\l)\smc{O},
+        \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O}) = \Norm_{L/K}(\l)\smc{O},
       \]
       for any \(\l \in L\).
     \end{proposition}
     \begin{proof}
-      In view of \cref{prop:ring_is_intersection_of_all_localizations}, it suffices to show
+      Since both \(\mf{N}_{\mc{O}/\smc{O}}\) and \(\Norm_{L/K}\) are multiplicative and \(L\) is the field of fractions of \(\mc{O}\), it is enough to prove the claim when \(\l \in \mc{O}\). In view of \cref{prop:ring_is_intersection_of_all_localizations}, it suffices to show
       \[
-        \Norm(\l\mc{O})_{\mf{p}} = \Norm_{L/K}(\l)\smc{O}_{\mf{p}},
+        \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O})_{\mf{p}} = \Norm_{L/K}(\l)\smc{O}_{\mf{p}},
       \]
       for all primes \(\mf{p}\) of \(\smc{O}\). Let
       \[
@@ -2100,13 +2099,13 @@
       \]
       be the prime factorization of \(\l\mc{O}\). If \(\mf{P}_{i}\) is not above \(\mf{p}\) then \(\mf{P}_{i}\) contains an element of \(\smc{O}-\mf{p}\) whence the prime below it does as well and so its localization becomes \(\smc{O}_{\mf{p}}\). So on the one hand, we find that
       \[
-        \Norm(\l\mc{O})_{\mf{p}} = \mf{p}_{\mf{p}}^{\sum_{\mf{P}_{i} \mid \mf{p}\mc{O}}e_{i}f_{\mf{p}}(\mf{P}_{i})}.
+        \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O})_{\mf{p}} = \mf{p}_{\mf{p}}^{\sum_{\mf{P}_{i} \mid \mf{p}\mc{O}}e_{i}f_{\mf{p}}(\mf{P}_{i})}.
       \]
       On the other hand, \(\smc{O}_{\mf{p}}\) is a discrete valuation ring by \cref{thm:Dedekind_if_and_only_if_all_localizations_are_discrete_valuation_rings} whence
       \[
         \Norm_{L/K}(\l)\smc{O}_{\mf{p}} = \mf{p}_{\mf{p}}^{v_{\mf{p}}(\Norm_{L/K}(\l))}.
       \]
-      Therefore it suffices to show
+      Therefore we are reduced to proving
       \[
         \sum_{\mf{P}_{i} \mid \mf{p}\mc{O}}e_{i}f_{\mf{p}}(\mf{P}_{i}) = v_{\mf{p}}(\Norm_{L/K}(\l)).
       \]

@@ -37,7 +37,7 @@
   \item completion, \hyperpage{98}
   \item complex, \hyperpage{10}
   \item conductor, \hyperpage{9}, \hyperpage{58}, \hyperpage{98}
-  \item conjugate, \hyperpage{73}
+  \item conjugate, \hyperpage{72}
   \item constant function, \hyperpage{2}
   \item contraction, \hyperpage{49}
   \item convexity bound, \hyperpage{110, 111}
@@ -48,7 +48,7 @@
 
   \indexspace
 
-  \item decomposition field, \hyperpage{74}
+  \item decomposition field, \hyperpage{73}
   \item decomposition group, \hyperpage{73}
   \item Dedekind domain, \hyperpage{39}
   \item Dedekind extension, \hyperpage{48}
@@ -193,7 +193,7 @@
 
   \item total number of prime divisors function, \hyperpage{4}
   \item totally ramified, \hyperpage{69}, \hyperpage{72}
-  \item totally split, \hyperpage{69}, \hyperpage{72}
+  \item totally split, \hyperpage{68}, \hyperpage{72}
   \item trace, \hyperpage{28}, \hyperpage{38}
   \item trace form, \hyperpage{32}, \hyperpage{38}
   \item trace matrix, \hyperpage{31}
