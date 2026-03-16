@@ -893,7 +893,7 @@
     \[
       \mf{f}D^{-1} = \left\{\frac{\eta}{\d} \in K:\eta \in \mf{f} \text{ and } \d \in D\right\}.
     \]
-    In particular, \(\mf{a}D^{-1}\) is an integral ideal of \(\smc{O}D^{-1}\) if \(\mf{a}\) is an integral ideal of \(\smc{O}\). Writing \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d\) and integral ideal \(\mf{a}\), it follows that \(\mf{f}D^{-1}\) is a fractional ideal of \(\smc{O}D^{-1}\).
+    In particular, \(\mf{a}D^{-1}\) is an integral ideal of \(\smc{O}D^{-1}\) if \(\mf{a}\) is an integral ideal of \(\smc{O}\). Writing \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d\) and integral ideal \(\mf{a}\), it follows that \(\mf{f}D^{-1}\) is a fractional ideal of \(\smc{O}D^{-1}\). Note that in the case of an integral ideal \(\mf{a}\), we will have \(\mf{a}D^{-1} = \smc{O}D^{-1}\) if \(\mf{a}\) contains an element of \(D\).
     
     In the case of primes, we have a bijective correspondence between those of \(\smc{O}\) disjoint from \(D\) and those of \(\smc{O}D^{-1}\).
 
@@ -1063,7 +1063,7 @@
     \]
     If \(X\) consists of a single prime \(\mf{p}\) then \(\mc{O}(X) = \mc{O}_{\mf{p}}\) and \(\mf{F}(X) = \mf{F}_{\mf{p}}\). Moreover, \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) and \(\mc{O}(X)/\smc{O}(X)\) are Dedekind extensions.
     
-    We wil now consider a more restrictive setting. An integral domain \(\smc{O}\) is said to be a \textbf{discrete valuation ring}\index{discrete valuation ring} if it is a principal ideal domain with a unique maximal ideal. Equivalently, \(\smc{O}\) is a local principal ideal domain or a Dedekind domain with exactly one prime. Let \(\mf{p}\) be the unique maximal ideal of \(\smc{O}\). In particular, \(\mf{p}\) is prime and of the form \(\mf{p} = \pi\smc{O}\) for some prime \(\pi \in \smc{O}\). We call \(\pi\) a \textbf{uniformizer}\index{uniformizer} of \(\smc{O}\) and it is uniquely defined up to multiplication by a unit. On the one hand, \(\smc{O}\) is local so every element not in \(\mf{p}\) is a unit. On the other hand, \(\smc{O}\) is a principal ideal domain so that \(\pi\) is the only prime of \(\smc{O}\). Since \(\smc{O}\) is necessarily a unique factorization domain, these facts together imply that every \(\a \in \smc{O}\) is of the form
+    We will now consider a more restrictive setting. An integral domain \(\smc{O}\) is said to be a \textbf{discrete valuation ring}\index{discrete valuation ring} if it is a principal ideal domain with a unique maximal ideal. Equivalently, \(\smc{O}\) is a local principal ideal domain or a Dedekind domain with exactly one prime. Let \(\mf{p}\) be the unique maximal ideal of \(\smc{O}\). In particular, \(\mf{p}\) is prime and of the form \(\mf{p} = \pi\smc{O}\) for some prime \(\pi \in \smc{O}\). We call \(\pi\) a \textbf{uniformizer}\index{uniformizer} of \(\smc{O}\) and it is uniquely defined up to multiplication by a unit. On the one hand, \(\smc{O}\) is local so every element not in \(\mf{p}\) is a unit. On the other hand, \(\smc{O}\) is a principal ideal domain so that \(\pi\) is the only prime of \(\smc{O}\). Since \(\smc{O}\) is necessarily a unique factorization domain, these facts together imply that every \(\a \in \smc{O}\) is of the form
     \[
       \a = \e\pi^{n},
     \]
@@ -1102,17 +1102,25 @@
       For the forward implication, suppose \(\smc{O}\) is a Dedekind domain and let \(\mf{p}\) be a prime. Then \(\smc{O}_{\mf{p}}\) is a local Dedekind domain and hence a discrete valuation ring as we have seen. This proves the forward implication. For the reverse implication, suppose \(\smc{O}\) is a noetherian domain and \(\smc{O}_{\mf{p}}\) is a discrete valuation ring. As \(\smc{O}_{\mf{p}}\) is a principal ideal domain, \(\smc{O}_{\mf{p}}\) is an integrally closed domain by \cref{lemma:unique_factorization_domains_are_integrally_closed}. Then \cref{prop:ring_is_intersection_of_all_localizations} implies \(\smc{O}\) is an integrally closed domain too. As \(\smc{O}\) is noetherian by assumption, it remains to show that every prime \(\mf{q}\) of \(\smc{O}\) is maximal. As \(\mf{q}\) is proper, it is contained in some maximal ideal \(\mf{p}\) which is necessarily prime. The inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{q}_{\mf{p}}\) and \(\mf{p}_{\mf{p}}\) are primes of \(\smc{O}_{\mf{p}}\). As \(\smc{O}_{\mf{p}}\) is a discrete valuation ring it is a Dedekind domain with exactly one prime. Whence \(\mf{q}_{\mf{p}} = \mf{p}_{\mf{p}}\) and the aforementioned inclusion-preserving bijections imply that \(\mf{q} = \mf{p}\). Hence \(\mf{q}\) is maximal. This proves the reverse implication.
     \end{proof}
 
-    It follows from this result that the Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) is an extension of principal ideal domains. Whence it admits an integral basis by \cref{thm:integral_basis_AKBL}. This is often a useful reduction for developing further results or applications in conjunction with \cref{prop:ring_is_intersection_of_all_localizations}.
+    We can now say more about the Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O_{\mf{p}}}\). The previous result implies \(\smc{O}_{\mf{p}}\) is a discrete valuation ring whence a principal ideal domain. This forces \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) to admit an integral basis, but we can say more. Observe that \(\mf{P}\) is not above \(\mf{p}\) if and only if \(\mf{P}\) contains an element of \(\smc{O}-\mf{p}\). Whence the only primes of \(\mc{O}_{\mf{p}}\) are those above the unique prime of \(\smc{O}_{\mf{p}}\) and so there are finitely many. By \cref{prop:Dedekind_with_finite_primes_is_PID}, we find that \(\mc{O}_{\mf{p}}\) is also a principal ideal domain. In particular, \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) is an extension of principal ideal domains. Moreover, suppose \(\mf{A}\) is an integral ideal of \(\mc{O}\). By prime factorization, we may write
+    \[
+      \mf{A} = \prod_{\mf{P}}\mf{P}^{e_{\mf{P}}},
+    \]
+    where \(e_{\mf{P}}\) are nonnegative integers all but finitely many of which are zero. Then we see that
+    \[
+      \mf{A}_{\mf{p}} = \prod_{\mf{P} \mid \mf{p}\smc{O}}\mf{P}_{\mf{p}}^{e_{\mf{P}}}.
+    \]
+    In other words, localizing an integral ideal of \(\mc{O}\) at \(\mf{p}\) removes all of the prime factors that are not above \(\mf{p}\) and localizes the primes above \(\mf{p}\). In view of \cref{prop:ring_is_intersection_of_all_localizations}, all of this suggests that localizing a Dedekind extension \(\mc{O}/\smc{O}\) at a prime \(\mf{p}\) is a useful simplification technique for developing further results or applications.
 
-    Let \(v_{\mf{p}}\) denote the valuation of \(\smc{O}_{\mf{p}}\). We call \(v_{\mf{p}}\) the \textbf{valuation}\index{valuation} associated to the prime \(\mf{p}\). These valuations are intimately connected to prime factorizations. Indeed, prime factorization implies that for any \(\k \in K^{\ast}\), we have
+    Suppose \(\smc{O}\) is a Dedekind domain with field of fractions \(K\) and let \(v_{\mf{p}}\) denote the valuation of \(\smc{O}_{\mf{p}}\) in view of \cref{thm:Dedekind_if_and_only_if_all_localizations_are_discrete_valuation_rings}. We call \(v_{\mf{p}}\) the \textbf{valuation}\index{valuation} associated to the prime \(\mf{p}\). These valuations are intimately connected to prime factorizations. Indeed, prime factorization implies that for any \(\k \in K^{\ast}\), we have
     \[
       \k\smc{O} = \prod_{\mf{q}}\mf{q}^{e_{\mf{q}}},
     \]
-    for some integers \(e_{\mf{q}}\) all but finitely many of which are zero. We claim that \(v_{\mf{p}}(\k) = e_{\mf{p}}\). To see this, first observe that if \(\mf{p}\) and \(\mf{q}\) are distinct primes then \(\mf{q}_{\mf{p}} = \smc{O}_{\mf{p}}\). Indeed, as these primes are distinct choose \(\a \in \mf{q}-\mf{p}\). Then \(\a \in \mf{q}_{\mf{p}}-\mf{p}_{\mf{p}}\) by primality of \(\mf{p}\). As \(\smc{O}_{\mf{p}}\) is local, \(\a\) must be a unit whence \(\mf{q}_{\mf{p}} = \smc{O}_{\mf{p}}\). This forces
+    for some integers \(e_{\mf{q}}\) all but finitely many of which are zero. We claim that \(v_{\mf{p}}(\k) = e_{\mf{p}}\). To see this, first observe that if \(\mf{p}\) and \(\mf{q}\) are distinct primes then \(\mf{q}_{\mf{p}} = \smc{O}_{\mf{p}}\). Indeed, we have
     \[
       \k\smc{O}_{\mf{p}} = \mf{p}_{\mf{p}}^{e_{\mf{p}}},
     \]
-    and we readily see that \(v_{\mf{p}}(\k) = e_{\mf{p}}\). In particular, \(v_{\mf{p}}(\k) = 0\) for all but finitely many primes \(\mf{p}\). In view of these properties, \(v_{\mf{p}}\) is also called an \textbf{exponential valuation}\index{exponential valuation}.
+    from which \(v_{\mf{p}}(\k) = e_{\mf{p}}\). In particular, \(v_{\mf{p}}(\k) = 0\) for all but finitely many primes \(\mf{p}\). In view of these properties, \(v_{\mf{p}}\) is also called an \textbf{exponential valuation}\index{exponential valuation}.
 
     Continue to let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and let \(X\) be a set of all but finitely many primes of \(\smc{O}\). Then \(\smc{O}(X)\) is a Dedekind domain. By \cref{prop:localization_prime_bijection}, the primes \(\mf{p}_{X}\) of \(\smc{O}(X)\) are of the form \(\mf{p}_{X} = \mf{p}(X)\) for \(\mf{p} \in X\). Moreover, \(\smc{O}\) and \(\smc{O}(X)\) have the same localizations at \(\mf{p}\) and \(\mf{p}_{X}\) respectively because the only elements which are not inverted are those of \(\mf{p}\). In particular, this means
     \begin{equation}\label{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes} 
@@ -1243,7 +1251,7 @@
       \[
         \mf{p}_{1} \cdots \mf{p}_{k} \subseteq \mf{a},
       \]
-      for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{a}\) is a prime and thus one of the \(\mf{p}_{i}\). So one the one hand, \(\mf{a} \subsetneq \mf{p}\) for all but finitely many primes \(\mf{p}\). Whence \(\mf{a}\) contains an element of \(\smc{O}-\mf{p}\) for these primes. This forces \(\mf{a}_{\mf{p}} = \smc{O}_{\mf{p}}\) and so \(\wtilde{\mf{a}}_{\mf{p}} = \smc{O}\). On the other hand, if \(\mf{a} \subseteq \mf{p}\) then the inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{p}\) is the only prime containing \(\wtilde{\mf{a}}_{\mf{p}}\). As \(\smc{O}\) is one-dimensional, this means that if \(\mf{p}\) and \(\mf{q}\) are distinct primes then
+      for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every prime is maximal whence every maximal ideal containing \(\mf{a}\) is one of the \(\mf{p}_{i}\). So one the one hand, \(\mf{a} \subsetneq \mf{p}\) for all but finitely many primes \(\mf{p}\). Whence \(\mf{a}_{\mf{p}} = \smc{O}_{\mf{p}}\) and \(\wtilde{\mf{a}}_{\mf{p}} = \smc{O}\) for these primes. On the other hand, if \(\mf{a} \subseteq \mf{p}\) then the inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{p}\) is the only prime containing \(\wtilde{\mf{a}}_{\mf{p}}\). As \(\smc{O}\) is one-dimensional, this means that if \(\mf{p}\) and \(\mf{q}\) are distinct primes then
       \[
         \wtilde{\mf{a}}_{\mf{p}}+\wtilde{\mf{a}}_{\mf{q}} = \smc{O},
       \]
@@ -1394,7 +1402,7 @@
       \[
         \conj{\mf{p}} = \conj{\mf{p}}_{\conj{\mf{p}}} \cap \conj{\smc{O}} \quad \text{and} \quad \conj{\mf{q}} = \conj{\mf{q}}_{\conj{\mf{q}}} \cap \conj{\smc{O}}.
       \]
-      These identities together with the previous inequality imply \(\conj{\mf{p}} \subseteq \conj{\mf{q}}\) and so \(\conj{\mf{p}} = \conj{\mf{q}}\) as primes of \(\conj{\smc{O}}\) are maximal. This proves uniqueness. It remains to show \(\mf{p}\) is invertible. By \cref{prop:invertible_fractional_ideal_using_localization}, we must show that \(\mf{p}_{\mf{q}}\) is principal for every prime \(\mf{q}\) of \(\smc{O}\). If \(\mf{q} = \mf{p}\), regularity of \(\mf{p}\) means \(\smc{O}_{\mf{p}}\) is a discrete valuation ring and hence a principal ideal domain. Thus \(\mf{p}_{\mf{p}}\) is principal. If \(\mf{q} \neq \mf{p}\) then \(\mf{p}\) contains an element of \(\smc{O}-\mf{q}\) forcing \(\mf{p}_{\mf{q}} = \smc{O}_{\mf{q}}\) which is also principal. This completes the proof of the second statement.
+      These identities together with the previous inequality imply \(\conj{\mf{p}} \subseteq \conj{\mf{q}}\) and so \(\conj{\mf{p}} = \conj{\mf{q}}\) as primes of \(\conj{\smc{O}}\) are maximal. This proves uniqueness. It remains to show \(\mf{p}\) is invertible. By \cref{prop:invertible_fractional_ideal_using_localization}, we must show that \(\mf{p}_{\mf{q}}\) is principal for every prime \(\mf{q}\) of \(\smc{O}\). If \(\mf{q} = \mf{p}\), regularity of \(\mf{p}\) means \(\smc{O}_{\mf{p}}\) is a discrete valuation ring and hence a principal ideal domain. Thus \(\mf{p}_{\mf{p}}\) is principal. If \(\mf{q} \neq \mf{p}\) then \(\mf{p}_{\mf{q}} = \smc{O}_{\mf{q}}\) which is also principal. This completes the proof of the second statement.
     \end{proof}
 
     As \(\smc{O}\) is noetherian, \cref{lem:integral_ideal_prime_inclusion} implies
@@ -1628,7 +1636,7 @@
       \[
         \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}} \subseteq \mf{p}\mc{O}.
       \]
-      Prime factorization then forces \(e_{\mf{p}}(\mf{P}_{i}) \le e_{i}\). But then
+      Prime factorization forces \(e_{\mf{p}}(\mf{P}_{i}) \le e_{i}\). But then
       \[
         \sum_{i}e_{\mf{p}}(\mf{P}_{i})f_{p}(\mf{P}_{i}) = \sum_{i}e_{i}\deg(\conj{m_{i}}(x)),
       \]
