@@ -1102,7 +1102,7 @@
       For the forward implication, suppose \(\smc{O}\) is a Dedekind domain and let \(\mf{p}\) be a prime. Then \(\smc{O}_{\mf{p}}\) is a local Dedekind domain and hence a discrete valuation ring as we have seen. This proves the forward implication. For the reverse implication, suppose \(\smc{O}\) is a noetherian domain and \(\smc{O}_{\mf{p}}\) is a discrete valuation ring. As \(\smc{O}_{\mf{p}}\) is a principal ideal domain, \(\smc{O}_{\mf{p}}\) is an integrally closed domain by \cref{lemma:unique_factorization_domains_are_integrally_closed}. Then \cref{prop:ring_is_intersection_of_all_localizations} implies \(\smc{O}\) is an integrally closed domain too. As \(\smc{O}\) is noetherian by assumption, it remains to show that every prime \(\mf{q}\) of \(\smc{O}\) is maximal. As \(\mf{q}\) is proper, it is contained in some maximal ideal \(\mf{p}\) which is necessarily prime. The inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that \(\mf{q}_{\mf{p}}\) and \(\mf{p}_{\mf{p}}\) are primes of \(\smc{O}_{\mf{p}}\). As \(\smc{O}_{\mf{p}}\) is a discrete valuation ring it is a Dedekind domain with exactly one prime. Whence \(\mf{q}_{\mf{p}} = \mf{p}_{\mf{p}}\) and the aforementioned inclusion-preserving bijections imply that \(\mf{q} = \mf{p}\). Hence \(\mf{q}\) is maximal. This proves the reverse implication.
     \end{proof}
 
-    We can now say more about the Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O_{\mf{p}}}\). The previous result implies \(\smc{O}_{\mf{p}}\) is a discrete valuation ring whence a principal ideal domain. This forces \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) to admit an integral basis, but we can say more. Observe that \(\mf{P}\) is not above \(\mf{p}\) if and only if \(\mf{P}\) contains an element of \(\smc{O}-\mf{p}\). Whence the only primes of \(\mc{O}_{\mf{p}}\) are those above the unique prime of \(\smc{O}_{\mf{p}}\) and so there are finitely many. By \cref{prop:Dedekind_with_finite_primes_is_PID}, we find that \(\mc{O}_{\mf{p}}\) is also a principal ideal domain. In particular, \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) is an extension of principal ideal domains. Moreover, suppose \(\mf{A}\) is an integral ideal of \(\mc{O}\). By prime factorization, we may write
+    We can now say more about the Dedekind extension \(\mc{O}_{\mf{p}}/\smc{O_{\mf{p}}}\). The previous result implies \(\smc{O}_{\mf{p}}\) is a discrete valuation ring whence a principal ideal domain. This forces \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) to admit an integral basis, but we can say more. Observe that \(\mf{P}\) is not above \(\mf{p}\) if and only if \(\mf{P}\) contains an element of \(\smc{O}-\mf{p}\). In view of \cref{prop:localization_prime_bijection}, it follows that the only primes of \(\mc{O}_{\mf{p}}\) are those above the unique prime of \(\smc{O}_{\mf{p}}\) and they correspond to the primes of \(\mc{O}\) above \(\mf{p}\). In particular, there are finitely many such primes. By \cref{prop:Dedekind_with_finite_primes_is_PID}, we find that \(\mc{O}_{\mf{p}}\) is also a principal ideal domain. In particular, \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) is an extension of principal ideal domains. Moreover, suppose \(\mf{A}\) is an integral ideal of \(\mc{O}\). By prime factorization, we may write
     \[
       \mf{A} = \prod_{\mf{P}}\mf{P}^{e_{\mf{P}}},
     \]
@@ -1549,7 +1549,7 @@
     \]
     Note that being totally ramified or totally split correspond to antithetical factorizations in terms of ramification indices. In particular, the larger the maximum ramification index is the greater the tendency for \(\mf{p}\mc{O}\) to factor as a power of a single prime.
 
-    In any case, all of this suggests that it is desirable to understand how \(\mf{p}\mc{O}\) factors into primes of \(\mc{O}\). Using orders, this is tractable for almost all primes \(\mf{p}\) if we know a sufficient amount of information about the minimal polynomial of a primitive element for \(L/K\). Let \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\). In view of \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure \(\t \in \mc{O}\) and hence its minimal polynomial \(m_{\t}(x)\) over \(K\) has coefficients in \(\smc{O}\). Then \(\smc{O} \subseteq \smc{O}[\t] \subseteq \mc{O}\) so that \(\smc{O}[\t]\) is an order. In fact, the field of fractions of \(\smc{O}[\t]\) is \(L\) since the field of fractions of \(\smc{O}\) is \(K\). As \(\smc{O}[\t]\) is integral over \(\smc{O}\), it follows that the normalization of \(\smc{O}[\t]\) is \(\mc{O}\). Therefore the conductor \(\mf{q}_{\smc{O}[\t]}\) is an integral ideal of \(\smc{O}[\t]\) and \(\mc{O}\). The \textbf{Dedekind-Kummer theorem}\index{Dedekind-Kummer theorem} describes the factorization of \(\mf{p}\mc{O}\) provided it is relatively prime to \(\mf{q}_{\smc{O}[\t]}\).
+    In any case, all of this suggests that it is desirable to understand how \(\mf{p}\mc{O}\) factors into primes of \(\mc{O}\). Using orders, this is tractable for almost all primes \(\mf{p}\) if we know a sufficient amount of information about the minimal polynomial of a primitive element for \(L/K\). Let \(\t\) be a primitive element for \(L/K\) so that \(L = K(\t)\). In view of \cref{prop:field_of_fractions_AKBL} we may multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure \(\t \in \mc{O}\) and hence its minimal polynomial \(m_{\t}(x)\) over \(K\) has coefficients in \(\smc{O}\). Then \(\smc{O} \subseteq \smc{O}[\t] \subseteq \mc{O}\) so that \(\smc{O}[\t]\) is an order. In fact, the field of fractions of \(\smc{O}[\t]\) is \(L\) since the field of fractions of \(\smc{O}\) is \(K\). As \(\smc{O}[\t]\) is integral over \(\smc{O}\), it follows that the normalization of \(\smc{O}[\t]\) is \(\mc{O}\). Therefore the conductor \(\mf{q}_{\smc{O}[\t]}\) is an integral ideal of \(\smc{O}[\t]\) and \(\mc{O}\). The \textbf{Dedekind-Kummer theorem}\index{Dedekind-Kummer theorem} describes the prime factorization of \(\mf{p}\mc{O}\) provided it is relatively prime to \(\mf{q}_{\smc{O}[\t]}\).
 
     \begin{theorem*}[Dedekind-Kummer theorem]
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\), \(\t\) be a primitive element for \(L/K\) contained in \(\mc{O}\) with minimal polynomial \(m_{\t}(x)\) over \(K\), and \(\mf{p}\) be a prime of \(\smc{O}\) such that \(\mf{p}\mc{O}\) is relatively prime to \(\mf{q}_{\smc{O}[\t]}\). Also let \(\conj{m_{\t}}(x) \in \F_{\mf{p}}[x]\) be the image of \(m_{\t}(x)\) under natural projection and suppose
@@ -1645,7 +1645,46 @@
 
     As we have already noted, the irregular primes of \(\smc{O}[\t]\) correspond to the prime factors of \(\mf{q}_{\smc{O}[\t]}\) of which there are finitely many as \(\mc{O}\) is a Dedekind domain. This means that the Dedekind-Kummer theorem is valid for \(\mf{p}\mc{O}\) provided that \(\mf{p}\) is not below any of the prime factors of \(\mf{q}_{\smc{O}[\t]}\). In other words, the Dedekind-Kummer theorem is valid for all but finitely many primes \(\mf{p}\). In fact, if \(\mf{q}_{\smc{O}[\t]} = \mc{O}\) then we do not have to avoid any primes at all. This occurs when \(\mc{O}/\smc{O}\) is monogenic. Indeed, Suppose \(\mc{O} = \smc{O}[\t]\) for some \(\t \in \mc{O}\). Then \(1,\t,\ldots,\t^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\) which is necessarily a basis for \(L/K\). This means \(\t\) is also a primitive element for \(L/K\) which implies \(\mf{q}_{\smc{O}[\t]} = \mc{O}\).
 
-    We can now introduce the ideal norm of \(\mc{O}/\smc{O}\). Suppose \(\mf{F}\) is a fractional ideal of \(\mc{O}\) with prime factorization
+    Let us now discuss how ramification indices and inertia degrees are affected under localization. The truth of the matter is that they are preserved.
+
+    \begin{proposition}\label{prop:ramification_setup_respects_localization}
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then for the Dedekind extension \(\mc{O}D^{-1}/\smc{O}D^{-1}\), \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\) if and only if \(\mf{P}\) is above \(\mf{p}\) and there are isomorphisms
+      \[
+        \F_{\mf{P}D^{-1}} \cong \F_{\mf{P}} \quad \text{and} \quad \F_{\mf{p}D^{-1}} \cong \F_{\mf{p}}.
+      \]
+      Lastly, we have equalities
+      \[
+        f_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = f_{\mf{p}}(\mf{P}) \quad \text{and} \quad e_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = e_{\mf{p}}(\mf{P}).
+      \]
+    \end{proposition}
+    \begin{proof}
+      In view of \cref{prop:localization_prime_bijection}, \(\mf{P}\) and \(\mf{p}\) are necessarily disjoint from \(D\). In fact, the inclusion-preserving bijections show that \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\) if and only if \(\mf{P}\) is above \(\mf{p}\). This proves the first statement. Now consider the homomorphisms
+      \[
+        \Phi:\mc{O} \to \F_{\mf{P}D^{-1}} \qquad \a \mapsto \a+\mf{P}D^{-1},
+      \]
+      and
+      \[
+        \phi:\smc{O} \to \F_{\mf{p}D^{-1}} \qquad \a \mapsto \a+\mf{p}D^{-1},
+      \]
+      induced by natural projection. By the first isomorphism theorem, it suffices to show \(\Phi\) and \(\phi\) are surjective as well as \(\ker\Phi = \mf{P}\) and \(\ker\phi = \mf{p}\). We have
+      \[
+        \mc{O}+\mf{P}D^{-1} = \mc{O}D^{-1} \quad \text{and} \quad \smc{O}+\mf{p}D^{-1} = \smc{O}D^{-1},
+      \]
+      since \(\mf{P}D^{-1}\) and \(\mf{p}D^{-1}\) are maximal. This proves surjectivity of \(\Phi\) and \(\phi\). Now \(\ker\Phi = \mf{P}D^{-1} \cap \mc{O}\) and \(\ker\phi = \mf{p}D^{-1} \cap \smc{O}\). The inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show that
+      \[
+        \mf{P}D^{-1} \cap \mc{O} = \mf{P} \quad \text{and} \quad \mf{p}D^{-1} \cap \smc{O} = \mf{p}.
+      \]
+      Whence \(\ker\Phi = \mf{P}\) and \(\ker\phi = \mf{p}\) and we obtain the desired isomorphisms. In fact, these isomorphisms together imply
+      \[
+        f_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = f_{\mf{p}}(\mf{P}).
+      \]
+      As \(\mf{P}D^{-1}\) is above \(\mf{p}D^{-1}\) if and only if \(\mf{P}\) is above \(\mf{p}\), the fundamental equality forces
+      \[
+        e_{\mf{p}D^{-1}}(\mf{P}D^{-1}) = e_{\mf{p}}(\mf{P}).
+      \]
+    \end{proof}
+
+    We are now ready to introduce the ideal norm of \(\mc{O}/\smc{O}\). Suppose \(\mf{F}\) is a fractional ideal of \(\mc{O}\) with prime factorization
     \[
       \mf{F} = \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}}.
     \]

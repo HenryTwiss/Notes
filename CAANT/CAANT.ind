@@ -37,7 +37,7 @@
   \item completion, \hyperpage{100}
   \item complex, \hyperpage{10}
   \item conductor, \hyperpage{9}, \hyperpage{59}, \hyperpage{100}
-  \item conjugate, \hyperpage{74}
+  \item conjugate, \hyperpage{75}
   \item constant function, \hyperpage{2}
   \item contraction, \hyperpage{49}
   \item convexity bound, \hyperpage{112, 113}
@@ -48,8 +48,8 @@
 
   \indexspace
 
-  \item decomposition field, \hyperpage{75}
-  \item decomposition group, \hyperpage{75}
+  \item decomposition field, \hyperpage{76}
+  \item decomposition group, \hyperpage{76}
   \item Dedekind domain, \hyperpage{39}
   \item Dedekind extension, \hyperpage{48}
   \item Dedekind-Kummer theorem, \hyperpage{70}
@@ -95,15 +95,15 @@
 
   \item ideal class, \hyperpage{44}
   \item ideal class group, \hyperpage{43}, \hyperpage{50}
-  \item ideal norm, \hyperpage{73}
+  \item ideal norm, \hyperpage{74}
   \item identity function, \hyperpage{3}
   \item imprimitive, \hyperpage{9}
   \item indicator function, \hyperpage{2}
   \item induced, \hyperpage{9}
   \item inert, \hyperpage{69}, \hyperpage{74}
-  \item inertia degree, \hyperpage{67}, \hyperpage{75}, \hyperpage{81}
-  \item inertia field, \hyperpage{78}
-  \item inertia group, \hyperpage{78}
+  \item inertia degree, \hyperpage{67}, \hyperpage{76}, \hyperpage{81}
+  \item inertia field, \hyperpage{79}
+  \item inertia group, \hyperpage{79}
   \item integral, \hyperpage{24}
   \item integral basis, \hyperpage{34}, \hyperpage{38}
   \item integral closure, \hyperpage{25}
@@ -136,7 +136,7 @@
 
   \item nonsplit, \hyperpage{69}, \hyperpage{74}
   \item nontrivial zero, \hyperpage{110}
-  \item norm, \hyperpage{28}, \hyperpage{38}, \hyperpage{73}
+  \item norm, \hyperpage{28}, \hyperpage{38}, \hyperpage{74}
   \item normalization, \hyperpage{25}
   \item number field, \hyperpage{27}
   \item number of distinct prime factors function, \hyperpage{4}
@@ -165,7 +165,7 @@
   \indexspace
 
   \item Ramanujan sum, \hyperpage{13, 14}
-  \item ramification index, \hyperpage{67}, \hyperpage{75}, 
+  \item ramification index, \hyperpage{67}, \hyperpage{76}, 
 		\hyperpage{81}
   \item ramified, \hyperpage{70}, \hyperpage{74}
   \item real, \hyperpage{10}
