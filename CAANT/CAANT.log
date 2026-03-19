@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  18 MAR 2026 23:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  19 MAR 2026 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -593,7 +593,7 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
 
 Writing index file CAANT.idx
-(./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Integrality_and_Dedekind_Domains.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux))
+(./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux))
 \openout1 = `CAANT.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -755,18 +755,11 @@ Package hyperref Info: bookmark level for unknown corollary defaults to 0 on inp
 
 
 ]
-\openout2 = `Chapters/Integrality_and_Dedekind_Domains.aux'.
-
-
-No file Chapters/Integrality_and_Dedekind_Domains.tex.
 \openout2 = `Chapters/Arithmetic_of_Number_Fields.aux'.
 
-(./Chapters/Arithmetic_of_Number_Fields.tex
+ (./Chapters/Arithmetic_of_Number_Fields.tex
 Chapter 4.
 [24
-
-
-
 
 
 ]
@@ -777,7 +770,7 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input 
 LaTeX Font Info:    Trying to load font information for U+euf on input line 494.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]) [82] [83]
+) [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82]) [83]
 Chapter 5.
 [84
 
@@ -833,23 +826,23 @@ Chapter 11.
 \tf@thm=\write7
 \openout7 = `CAANT.thm'.
 
- (./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Integrality_and_Dedekind_Domains.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux))
+ (./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux))
 Package rerunfilecheck Info: File `CAANT.out' has not changed.
-(rerunfilecheck)             Checksum: 390CF2BFCAA38E7F2020034E2FF583CF;6945.
+(rerunfilecheck)             Checksum: 3A1004A7C820C35A0BEDDE24B408D901;6978.
  ) 
 Here is how much of TeX's memory you used:
- 27236 strings out of 478268
- 550026 string characters out of 5846347
- 794438 words of memory out of 5000000
- 44529 multiletter control sequences out of 15000+600000
+ 27215 strings out of 478268
+ 548616 string characters out of 5846347
+ 793335 words of memory out of 5000000
+ 44511 multiletter control sequences out of 15000+600000
  489562 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2373b,1218s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on CAANT.pdf (131 pages, 690936 bytes).
+Output written on CAANT.pdf (131 pages, 694129 bytes).
 PDF statistics:
- 1643 PDF objects out of 1728 (max. 8388607)
- 1453 compressed objects within 15 object streams
- 445 named destinations out of 1000 (max. 500000)
+ 1650 PDF objects out of 1728 (max. 8388607)
+ 1460 compressed objects within 15 object streams
+ 447 named destinations out of 1000 (max. 500000)
  309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

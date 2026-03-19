@@ -17,8 +17,8 @@
 \contentsline {section}{\numberline {4.4}Localization}{50}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Orders}{58}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Prime Splitting}{66}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Ramification}{76}{section.4.7}%
-\contentsline {chapter}{\numberline {5}\leavevmode {\color {red}\sf Todo: [Geometry of Numbers]}}{84}{chapter.5}%
+\contentsline {section}{\numberline {4.7}Ramification}{77}{section.4.7}%
+\contentsline {chapter}{\numberline {5}\leavevmode {\color {red}\sf Todo: [Geometry of Number Fields]}}{84}{chapter.5}%
 \contentsline {part}{III\hspace {1em}Analytic Number Theory}{85}{part.3}%
 \contentsline {chapter}{\numberline {6}Dirichlet Series}{86}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Convergence Properties}{86}{section.6.1}%

@@ -58,10 +58,10 @@
 \indexentry{algebraic integer|hyperpage}{27}
 \indexentry{trace|hyperpage}{28}
 \indexentry{norm|hyperpage}{28}
-\indexentry{trace|hyperpage}{28}
-\indexentry{norm|hyperpage}{28}
-\indexentry{trace|hyperpage}{28}
-\indexentry{norm|hyperpage}{28}
+\indexentry{field trace|hyperpage}{28}
+\indexentry{field norm|hyperpage}{28}
+\indexentry{field trace|hyperpage}{28}
+\indexentry{field norm|hyperpage}{28}
 \indexentry{trace matrix|hyperpage}{31}
 \indexentry{discriminant|hyperpage}{31}
 \indexentry{discriminant|hyperpage}{31}
@@ -69,10 +69,10 @@
 \indexentry{embedding matrix|hyperpage}{33}
 \indexentry{integral basis|hyperpage}{34}
 \indexentry{monogenic|hyperpage}{37}
-\indexentry{trace|hyperpage}{38}
-\indexentry{norm|hyperpage}{38}
-\indexentry{trace|hyperpage}{38}
-\indexentry{norm|hyperpage}{38}
+\indexentry{field trace|hyperpage}{38}
+\indexentry{field norm|hyperpage}{38}
+\indexentry{field trace|hyperpage}{38}
+\indexentry{field norm|hyperpage}{38}
 \indexentry{trace form|hyperpage}{38}
 \indexentry{integral basis|hyperpage}{38}
 \indexentry{discriminant|hyperpage}{38}
@@ -163,13 +163,16 @@
 \indexentry{ramified|hyperpage}{76}
 \indexentry{totally ramified|hyperpage}{76}
 \indexentry{ideal norm|hyperpage}{76}
-\indexentry{conjugate|hyperpage}{76}
-\indexentry{ramification index|hyperpage}{77}
-\indexentry{inertia degree|hyperpage}{77}
-\indexentry{decomposition group|hyperpage}{77}
-\indexentry{decomposition field|hyperpage}{77}
-\indexentry{inertia group|hyperpage}{80}
-\indexentry{inertia field|hyperpage}{80}
+\indexentry{ideal norm|hyperpage}{76}
+\indexentry{norm|hyperpage}{76}
+\indexentry{norm|hyperpage}{76}
+\indexentry{conjugate|hyperpage}{77}
+\indexentry{ramification index|hyperpage}{78}
+\indexentry{inertia degree|hyperpage}{78}
+\indexentry{decomposition group|hyperpage}{78}
+\indexentry{decomposition field|hyperpage}{78}
+\indexentry{inertia group|hyperpage}{81}
+\indexentry{inertia field|hyperpage}{81}
 \indexentry{ramification index|hyperpage}{83}
 \indexentry{inertia degree|hyperpage}{83}
 \indexentry{Dirichlet series|hyperpage}{86}

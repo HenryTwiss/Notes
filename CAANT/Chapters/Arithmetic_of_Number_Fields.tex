@@ -149,11 +149,11 @@
     \]
     because the corresponding matrix for \(\b\) is block diagonal.
 
-    In the case of a degree \(n\) field extension \(L/K\), we call \(\Trace_{L/K}\) and \(\Norm_{L/K}\) the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(L/K\). For any \(\l \in L\), the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(\l\) are \(\Trace_{L/K}(\l)\) and \(\Norm_{L/K}(\l)\). In this case, \(\Norm_{L/K}(\l) = 0\) if and only if \(\l = 0\) because otherwise \(T_{\l}\) has inverse \(T_{\l^{-1}}\) and hence a nonzero determinant. Therefore we obtain homomorphisms
+    In the case of a degree \(n\) field extension \(L/K\), we call \(\Trace_{L/K}\) and \(\Norm_{L/K}\) the \textbf{field trace}\index{field trace} and \textbf{field norm}\index{field norm} of \(L/K\). For any \(\l \in L\), the \textbf{field trace}\index{field trace} and \textbf{field norm}\index{field norm} of \(\l\) are \(\Trace_{L/K}(\l)\) and \(\Norm_{L/K}(\l)\). In this case, \(\Norm_{L/K}(\l) = 0\) if and only if \(\l = 0\) because otherwise \(T_{\l}\) has inverse \(T_{\l^{-1}}\) and hence a nonzero determinant. Therefore we obtain homomorphisms
     \[
       \Trace_{L/K}:L \to K \quad \text{and} \quad \Norm_{L/K}:L^{\ast} \to K^{\ast}.
     \]
-    When \(L/K\) is also separable, we can derive alternative descriptions of the trace and norm of \(L/K\). This additional assumption is weak because we are mostly interested in field extensions of \(\Q\) and \(\F_{p}\) of finite degree which are always separable as these fields are perfect. In any case, to do this we need to work in the algebraic closure \(\conj{K}\) of \(K\). As \(L/K\) is a degree \(n\) separable extension, there are exactly \(n\) distinct \(K\)-embeddings \(\s_{1},\ldots,\s_{n}\) of \(L\) into \(\conj{K}\). That is, there are \(n\) elements of \(\Hom_{K}(L,\conj{K})\). These \(K\)-embeddings are constructed by letting \(\t\) be a primitive element for \(L/K\) and sending \(\t\) to one of its conjugate roots in the minimal polynomial \(m_{\t}(x)\) of \(\t\) over \(K\). These \(K\)-embeddings are deeply connected to the trace and norm.
+    When \(L/K\) is also separable, we can derive alternative descriptions of the field trace and field norm of \(L/K\). This additional assumption is weak because we are mostly interested in field extensions of \(\Q\) and \(\F_{p}\) of finite degree which are always separable as these fields are perfect. In any case, to do this we need to work in the algebraic closure \(\conj{K}\) of \(K\). As \(L/K\) is a degree \(n\) separable extension, there are exactly \(n\) distinct \(K\)-embeddings \(\s_{1},\ldots,\s_{n}\) of \(L\) into \(\conj{K}\). That is, there are \(n\) elements of \(\Hom_{K}(L,\conj{K})\). These \(K\)-embeddings are constructed by letting \(\t\) be a primitive element for \(L/K\) and sending \(\t\) to one of its conjugate roots in the minimal polynomial \(m_{\t}(x)\) of \(\t\) over \(K\). These \(K\)-embeddings are deeply connected to the field trace and field norm.
 
     \begin{proposition}\label{prop:formulas_for_trace_and_norm}
       Let \(L/K\) be a degree \(n\) separable extension and let \(\s\) run over the elements of \(\Hom_{K}(L,\conj{K})\). For any \(\l \in L\), the characteristic polynomial \(f_{\l}(x)\) of \(T_{\l}\) over \(K\) is a power of the minimal polynomial \(m_{\l}(x)\) of \(\l\) over \(K\) and satisfies
@@ -194,16 +194,16 @@
       \[
         f_{\l}(x) = \prod_{\s}(x-\s(\l)).
       \]
-      The formulas for the trace and norm follow from Vieta's formulas applied to this product for \(f_{\l}(x)\). Now suppose \(L/K\) is Galois. Then \(\Hom_{K}(L,\conj{K}) = \Gal(L/K)\). Therefore the conjugates of \(\l\) are exactly the images of \(\l\) under these \(K\)-embeddings and the last statement follows.
+      The formulas for the field trace and field norm follow from Vieta's formulas applied to this product for \(f_{\l}(x)\). Now suppose \(L/K\) is Galois. Then \(\Hom_{K}(L,\conj{K}) = \Gal(L/K)\). Therefore the conjugates of \(\l\) are exactly the images of \(\l\) under these \(K\)-embeddings and the last statement follows.
     \end{proof}
 
     As an application of this result, we can show how the trace and norm act when \(\smc{O}\) is an integrally closed domain with field of fractions \(K\), \(L/K\) is a finite separable extension, and \(\mc{O}\) is the integral closure of \(\smc{O}\) in \(L\).
 
     \begin{proposition}\label{prop:trace_and_norm_AKBL}
-      Let \(\smc{O}\) be an integrally closed domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). If \(\b \in \mc{O}\) then the trace and norm of \(\b\) are in \(\smc{O}\).
+      Let \(\smc{O}\) be an integrally closed domain with field of fractions \(K\), \(L/K\) be a finite separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). If \(\b \in \mc{O}\) then \(\Trace_{L/K}(\b) \in \smc{O}\) and \(\Norm_{L/K}(\b) \in \smc{O}\).
     \end{proposition}
     \begin{proof}
-      By \cref{prop:field_of_fractions_AKBL}, the minimal polynomial \(m_{\b}(x)\) of \(\b\) over \(K\) has coefficients in \(\smc{O}\). By \cref{prop:formulas_for_trace_and_norm}, the characteristic polynomial \(f_{\b}(x)\) is a power of \(m_{\b}(x)\) and hence \(f_{\b}(x)\) has coefficients in \(\smc{O}\) too. Whence trace and norm of \(\b\) are in \(\smc{O}\) as they are coefficients of \(f_{\b}(x)\) up to sign.
+      By \cref{prop:field_of_fractions_AKBL}, the minimal polynomial \(m_{\b}(x)\) of \(\b\) over \(K\) has coefficients in \(\smc{O}\). From \cref{prop:formulas_for_trace_and_norm}, the characteristic polynomial \(f_{\b}(x)\) is a power of \(m_{\b}(x)\) and hence \(f_{\b}(x)\) has coefficients in \(\smc{O}\) too. Whence \(\Trace_{L/K}(\b) \in \smc{O}\) and \(\Norm_{L/K}(\b) \in \smc{O}\) as they are coefficients of \(f_{\b}(x)\) up to sign.
     \end{proof}
 
     In this setting it is also easy to classify the units of \(\mc{O}\) in terms of the units of \(\smc{O}\).
@@ -216,7 +216,7 @@
       \[
         \Norm_{L/K}(\b)\Norm_{L/K}\left(\frac{1}{\b}\right) = 1.
       \]
-      By \cref{prop:trace_and_norm_AKBL}, both of the norms on the left-hand side are in \(\smc{O}\). This proves \(\Norm_{L/K}(\b) \in \smc{O}\) is a unit. For the reverse implication, we know by assumption that \(\b\) is nonzero. Also, \cref{prop:field_of_fractions_AKBL} implies that the minimal polynomial \(m_{\b}(x)\) of \(\b\) over \(K\) has coefficients in \(\smc{O}\). The constant term is a unit since it is \(\Norm_{L/K}(\b)\) up to sign. Letting the degree of \(m_{\b}(x)\) be \(m\), we have shown that
+      By \cref{prop:trace_and_norm_AKBL}, both of the field norms on the left-hand side are in \(\smc{O}\). This proves \(\Norm_{L/K}(\b) \in \smc{O}\) is a unit. For the reverse implication, we know by assumption that \(\b\) is nonzero. Also, \cref{prop:field_of_fractions_AKBL} implies that the minimal polynomial \(m_{\b}(x)\) of \(\b\) over \(K\) has coefficients in \(\smc{O}\). The constant term is a unit since it is \(\Norm_{L/K}(\b)\) up to sign. Letting the degree of \(m_{\b}(x)\) be \(m\), we have shown that
       \[
         m_{\b}(x) = x^{m}+\a_{m-1}x^{m-1}+\cdots+\a,
       \]
@@ -283,7 +283,7 @@
     \[
       \Trace_{L/K}:L \x L \to K \qquad (\l,\eta) \mapsto \Trace_{L/K}(\l\eta).
     \]
-    In other words, this is just the trace of \(L/K\) considered as a pairing. Clearly this is a symmetric bilinear form. In fact, the trace form is also nondegenerate as \cref{prop:formulas_for_trace_and_norm} implies
+    In other words, this is just the field trace of \(L/K\) considered as a pairing. Clearly this is a symmetric bilinear form. In fact, the trace form is also nondegenerate as \cref{prop:formulas_for_trace_and_norm} implies
     \[
       \Trace_{L/K}(1) = n,
     \]
@@ -460,7 +460,7 @@
 
     It is generally a difficult problem to write down an integral basis explicitly. However, there is one instance in which this is possible. We say that \(\mc{O}/\smc{O}\) is \textbf{monogenic}\index{monogenic} if \(\mc{O} =\smc{O}[\b]\) for some \(\b \in \mc{O}\). It follows immediately that \(1,\b,\ldots,\b^{n-1}\) is an integral basis for \(\mc{O}/\smc{O}\). The discriminant of this basis is then given by \cref{equ:Vandermonde_determinant_for_discriminant}.
     
-    Regardless of if \(\mc{O}/\smc{O}\) is monogenic or not, if an integral basis exists then the traces \(\Trace_{L/K}\) and \(\Trace_{\mc{O}/\smc{O}}\) and norms \(\Norm_{L/K}\) and \(\Norm_{\mc{O}/\smc{O}}\) agree.
+    Regardless of if \(\mc{O}/\smc{O}\) is monogenic or not, if an integral basis exists then the field trace \(\Trace_{L/K}\) and field norm \(\Norm_{L/K}\) agree with the trace \(\Trace_{\mc{O}/\smc{O}}\) and norm \(\Norm_{\mc{O}/\smc{O}}\) respectively.
 
     \begin{proposition}\label{prop:trace_and_norm_reduce_for_integral_basis}
       Let \(\smc{O}\) be an integrally closed domain with field of fractions \(K\), \(L/K\) be a degree \(n\) separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). If \(\mc{O}\) admits an integral basis over \(\smc{O}\) then
@@ -477,7 +477,7 @@
     \end{proof}
 
     \subsection*{Number Fields}
-      We now turn to the case of a number field \(K\) of degree \(n\). We write \(\Trace_{K} = \Trace_{K/\Q}\) and \(\Norm_{K} = \Norm_{K/\Q}\) and call these the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(K\). Moreover, for any \(\k \in K\) we call \(\Trace_{K}(\k)\) and \(\Norm_{K}(\k)\) the \textbf{trace}\index{trace} and \textbf{norm}\index{norm} of \(\k\). Observe from \cref{prop:trace_and_norm_AKBL,prop:unit_if_and_only_if_AKBL} that the trace and norm of algebraic integers are themselves integers and any \(\k \in \mc{O}_{K}\) is a unit if and only if \(\Norm_{K}(\k) = \pm 1\). We also call the nondegenerate symmetric bilinear form
+      We now turn to the case of a number field \(K\) of degree \(n\). We write \(\Trace_{K} = \Trace_{K/\Q}\) and \(\Norm_{K} = \Norm_{K/\Q}\) and call these the \textbf{field trace}\index{field trace} and \textbf{field norm}\index{field norm} of \(K\). Moreover, for any \(\k \in K\) we call \(\Trace_{K}(\k)\) and \(\Norm_{K}(\k)\) the \textbf{field trace}\index{field trace} and \textbf{field norm}\index{field norm} of \(\k\). Observe from \cref{prop:trace_and_norm_AKBL,prop:unit_if_and_only_if_AKBL} that the field trace and field norm of algebraic integers are themselves integers and any \(\k \in \mc{O}_{K}\) is a unit if and only if \(\Norm_{K}(\k) = \pm 1\). We also call the nondegenerate symmetric bilinear form
       \[
         \Trace_{K/\Q}:K \x K \to \Q \qquad (\k,\l) \mapsto \Trace_{K/\Q}(\k\l),
       \]
@@ -1696,9 +1696,9 @@
     \[
       \mf{N}_{\mc{O}/\smc{O}}(\mf{f}\mc{O}) = \mf{f}^{n}.
     \]
-    In any case, the ideal norm is aptly named because it is compatible with the norm \(N_{L/K}\).
+    In any case, the ideal norm is aptly named because it is compatible with the field norm \(\Norm_{L/K}\).
 
-    \begin{proposition}
+    \begin{proposition}\label{prop:ideal_norm_of_principal_ideal}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Then
       \[
         \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O}) = \Norm_{L/K}(\l)\smc{O},
@@ -1748,17 +1748,60 @@
     between ideal class groups.
     
     \subsection*{Number Fields}
-      We now turn to the setting where \(L/K\) is an extension of number fields and recall that the underlying Dedekind extension is \(\mc{O}_{L}/\mc{O}_{K}\). Then every residue class extension is separable as \(\F_{p}\) is perfect. A prime \(\mf{p}\) of \(K\) is said to be \textbf{inert}\index{inert}, \textbf{nonsplit}\index{nonsplit}, \textbf{split}\index{split}, or \textbf{totally split}\index{totally split} in \(L/K\) if it is in \(\mc{O}_{L}/\mc{O}_{K}\). Primes \(\mf{P}\) and \(\mf{p}\) of \(L\) and \(K\) are said to be \textbf{unramified}\index{unramified}, \textbf{ramified}\index{ramified}, or \textbf{totally ramified}\index{totally ramified} in \(L/K\) if they are in \(\mc{O}_{L}/\mc{O}_{K}\). In particular, if \(\mf{P}\) is above \(\mf{p}\) then it is unramified in \(L/K\) if and only if \(e_{\mf{p}}(\mf{P}) = 1\). Lastly, the \textbf{ideal norm}\index{ideal norm} \(\mf{N}_{L/K}\) of \(L/K\) is the ideal ideal norm \(\mf{N}_{\mc{O}_{L}/\mc{O}_{K}}\).
+      We now turn to the setting where \(L/K\) is an extension of number fields and recall that the underlying Dedekind extension is \(\mc{O}_{L}/\mc{O}_{K}\). Then every residue class extension is separable as \(\F_{p}\) is perfect. A prime \(\mf{p}\) of \(K\) is said to be \textbf{inert}\index{inert}, \textbf{nonsplit}\index{nonsplit}, \textbf{split}\index{split}, or \textbf{totally split}\index{totally split} in \(L/K\) if it is in \(\mc{O}_{L}/\mc{O}_{K}\). Primes \(\mf{P}\) and \(\mf{p}\) of \(L\) and \(K\) are said to be \textbf{unramified}\index{unramified}, \textbf{ramified}\index{ramified}, or \textbf{totally ramified}\index{totally ramified} in \(L/K\) if they are in \(\mc{O}_{L}/\mc{O}_{K}\). In particular, if \(\mf{P}\) is above \(\mf{p}\) then it is unramified in \(L/K\) if and only if \(e_{\mf{p}}(\mf{P}) = 1\). Lastly, the \textbf{ideal norm}\index{ideal norm} \(\mf{N}_{L/K}\) of \(L/K\) is the ideal norm \(\mf{N}_{\mc{O}_{L}/\mc{O}_{K}}\).
+
+      In the case of a number field \(K\), we can say much more as \(\mc{O}_{K}/\Z\) admits an integral basis and the reside class fields extension \(\F_{\mf{p}}/\F_{p}\) for a prime \(\mf{p}\) above \(p\) is an extension of finite fields. The \textbf{ideal norm}\index{ideal norm} \(\mf{N}_{K}\) of \(K\) is the ideal norm \(\mf{N}_{\mc{O}_{K}/\Z}\). As \(\Z\) is a principal ideal domain, every fractional ideal is principal. Therefore, \(\mf{N}_{K}(\mf{f})\) is generated by some \(r_{\mf{f}} \in \Q_{+}\) for every fractional ideal \(\mf{f}\) of \(\mc{O}_{K}\). As the ideal norm is multiplicative, this induces a homomorphism
+      \[
+        \Norm_{K}:I_{K} \to \Q_{+} \qquad \mf{f} \mapsto r_{\mf{f}},
+      \]
+      called the \textbf{norm}\index{norm} of \(K\). We call \(\Norm_{K}(\mf{f})\) the \textbf{norm}\index{norm} of \(\mf{f}\). The relationship between this norm and the ideal norm is
+      \[
+        \mf{N}_{K}(\mf{f}) = r_{\mf{f}}\Z.
+      \]
+      In particular, if \(\mf{p}\) is a prime of \(K\) above \(p\) then
+      \[
+        \mf{N}_{K}(\mf{p}) = p^{f_{p}(\mf{p})}\Z \quad \text{and} \quad \Norm_{K}(\mf{p}) = p^{f_{p}(\mf{p})}.
+      \]
+      For an integral ideal \(\mf{a}\), there is a simple relationship between the norm of \(\mf{a}\) and the quotient \(\mc{O}_{K}/\mf{a}\).
+
+      \begin{proposition}\label{prop:norm_and_field_norms_are_identical}
+        Let \(K\) be a number field of degree \(n\). Then for any integral ideal \(\mf{a}\) of \(\mc{O}_{K}\), we have
+        \[
+          \Norm_{K}(\mf{a}) = |\mc{O}_{K}/\mf{a}|.
+        \]
+        Moreover,
+        \[
+          \Norm_{K}(\a\mc{O}_{K}) = |\Norm_{K}(\a)|,
+        \]
+        for any \(\a \in \mc{O}_{K}\).
+      \end{proposition}
+      \begin{proof}
+        By prime factorization, we may write
+        \[
+          \mf{a} = \prod_{\mf{p}}\mf{p}^{e_{\mf{p}}},
+        \]
+        where all but finitely many of the nonnegative integers \(e_{\mf{p}}\) are zero. As the Chinese remainder theorem gives an isomorphism
+        \[
+          \mc{O}_{K}/\mf{a} \cong \bigop_{\mf{p}}\mc{O}_{K}/\mf{p}^{e_{\mf{p}}}\mc{O}_{K},
+        \]
+        it suffices to prove the claim for \(\mf{p}^{e_{\mf{p}}}\). Fix a prime \(\mf{p}\) and let \(p\) be the prime below it. On the one hand, \(\Norm_{K}(\mf{p}^{e}) = p^{ef_{p}(\mf{p})}\). On the other hand, \cref{lem:quotient_by_prime_power_isomorphism} shows that \(\mc{O}_{K}/\mf{p}^{e}\) is an \(\F_{p}\)-vector space of dimension \(ef_{p}(\mf{p})\) whence \(|\mc{O}_{K}/\mf{p}^{e}| = p^{ef_{p}(\mf{p})}\). So
+        \[
+          \Norm_{K}(\mf{p}^{e}) = |\mc{O}_{K}/\mf{p}^{e}|,
+        \]
+        proving the first statement. The second statement follows from \cref{prop:ideal_norm_of_principal_ideal}.
+      \end{proof}
+
+      As a consequence of this result and Lagrange's theorem, we see that \(\Norm_{K}(\mf{a}) \in \mf{a}\) and therefore for every fractional ideal \(\mf{f}\) as well. 
   \section{Ramification}
     Much more can be said about the ramification of primes in a Dedekind extension \(\mc{O}/\smc{O}\) when the associated extension \(L/K\) is Galois. Since \(L/K\) is assumed to be finite and separable, this amounts to further assuming \(L/K\) is normal. In this case, the Galois group is
     \[
       \Gal(L/K) = \Hom_{K}(L,\conj{K}),
     \]
-    so that every \(K\)-embedding of \(L\) into \(\conj{K}\) is an automorphism of \(L\). By \cref{prop:formulas_for_trace_and_norm}, the norm and trace of any \(\l \in L\) are given by
+    so that every \(K\)-embedding of \(L\) into \(\conj{K}\) is an automorphism of \(L\). By \cref{prop:formulas_for_trace_and_norm}, the field trace and field norm of any \(\l \in L\) are given by
     \[
-      \Norm_{L/K}(\l) = \prod_{\s \in \Gal(L/K)}\s(\l) \quad \text{and} \quad \Trace_{L/K}(\l) = \sum_{\s \in \Gal(L/K)}\s(\l).
+      \Trace_{L/K}(\l) = \sum_{\s}\s(\l) \quad \text{and} \quad \Norm_{L/K}(\l) = \prod_{\s}\s(\l),
     \]
-    As \(\smc{O} \subseteq K\), \(\Gal(L/K)\) fixes \(\smc{O}\) pointwise and hence every fractional ideal of \(\smc{O}\) as well. In fact, for any \(\a \in \mc{O}\), we see that \(\Gal(L/K)\) permutes the roots of the monic polynomial in \(\smc{O}[x]\) which \(\a\) satisfies. Whence there is an action
+    where \(\s\) runs over the elements of \(\Gal(L/K)\). As \(\smc{O} \subseteq K\), \(\Gal(L/K)\) fixes \(\smc{O}\) pointwise and hence every fractional ideal of \(\smc{O}\) as well. In fact, for any \(\a \in \mc{O}\), we see that \(\Gal(L/K)\) permutes the roots of the monic polynomial in \(\smc{O}[x]\) which \(\a\) satisfies. Whence there is an action
     \[
       \Gal(L/K) \x \mc{O} \to \mc{O} \qquad (\s,\a) \mapsto \s(\a).
     \]
@@ -1819,7 +1862,7 @@
     \end{center}
     The decomposition group encodes how \(\mf{p}\mc{O}\) splits into distinct prime factors. Indeed, by the orbit-stabilizer theorem the number of cosets in \(\Gal(L/K)/D_{\mf{p}}(\mf{P})\) is equal to the size of the orbit of \(\mf{P}\) under the action of \(\Gal(L/K)\). As the action is transitive by \cref{prop:Galois_action_on_primes_is_transitive}, \(\s(\mf{P})\) runs over the primes above \(\mf{p}\) as \(\s\) runs over a complete set of representatives for this coset space. Whence
     \[
-      \mf{p}\mc{O} = \left(\prod_{\s \in \Gal(L/K)/D_{\mf{p}}(\mf{P})}\s(\mf{P})\right)^{e}.
+      \mf{p}\mc{O} = \left(\prod_{\s}\s(\mf{P})\right)^{e}.
     \]
     Then the order of \(\Gal(L/K)/D_{\mf{p}}(\mf{P})\) is exactly the number of prime factors of \(\mf{p}\mc{O}\). That is,
     \[
@@ -2189,104 +2232,61 @@
       There are only finitely many prime factors of \(\mf{d}_{\mc{O}/\smc{O}}\) by the prime factorization of fractional ideals. Therefore only finitely many primes can ramify in \(K\) by \cref{thm:ramifies_if_and_only_if_divides_the_discriminant}.
     \end{proof}
 
-    Now consider the case of a number field \(K\) of degree \(n\). The \textbf{complement}\index{complement} \(\mf{C}_{K}\) of \(K\) is the complement of \(\mc{O}_{K}/\Z\), the \textbf{different}\index{different} \(\mf{D}_{K}\) of \(K\) is the different of \(\mc{O}_{K}/\Z\), and the \textbf{discriminant}\index{discriminant} \(\mf{d}_{K}\) of \(K\) is the discriminant of \(\mc{O}_{K}/\Z\). Since \(\Z\) is a principal ideal domain, the \(\mf{d}_{K}\) is related to the discriminant \(\D_{K}\) by
-    \[
-      \mf{d}_{K} = \D_{K}\mc{O}_{K}.
-    \]
-    As all of the residue class extensions are separable, it follows from \cref{thm:ramifies_if_and_only_if_divides_the_different,thm:ramifies_if_and_only_if_divides_the_discriminant} that a prime of \(K\) ramifies in \(\mc{O}_{K}/\Z\) if and only if it divides \(\mf{D}_{K}\) and a prime of \(\Q\) ramifies in \(\mc{O}_{K}/\Z\) if and only if it divides \(|\D_{K}|\). Moreover, finitely many primes of \(K\) and \(\Q\) ramify by \cref{cor:finitely_many_primes_ramify_L,cor:finitely_many_primes_ramify_K}.
-  \fi\iffalse\section{\todo{The Ideal Norm}}
-    In the case of a degree \(n\) number field \(K\), the \textbf{ideal norm}\index{ideal norm} \(\Norm_{K}\) of \(K\) is the ideal norm of \(\mc{O}_{K}/\Z\). As \(\Z\) is a principal ideal domain, every fractional ideal is principal. Therefore, \(\Norm_{K}(\mf{f})\) is generated by an \(r_{\mf{f}} \in \Q^{\ast}\) for every fractional ideal \(\mf{f}\) of \(\mc{O}_{K}\). We define the \textbf{norm}\index{norm} \(\Norm_{K}(\mf{f})\) of \(\mf{f}\) by
-    \[
-      \Norm_{K}(\mf{f}) = |r_{\mf{f}}|.
-    \]
-    Since the ideal norm is multiplicative, we obtain a homomorphism
-    \[
-      \Norm_{K}:I_{K} \to \Q^{\ast} \qquad \mf{f} \mapsto |r_{\mf{f}}|,
-    \]
-    called the \textbf{norm}\index{norm} of \(K\). For an integral ideal \(\mf{a}\), there is a simple relationship between the norm \(\mf{a}\) and the quotient \(\mc{O}_{K}/\mf{a}\):
+    \subsection*{Number Fields}
+      Now consider the case of a number field \(K\) of degree \(n\). The \textbf{complement}\index{complement} \(\mf{C}_{K}\) of \(K\) is the complement of \(\mc{O}_{K}/\Z\), the \textbf{different}\index{different} \(\mf{D}_{K}\) of \(K\) is the different of \(\mc{O}_{K}/\Z\), and the \textbf{discriminant}\index{discriminant} \(\mf{d}_{K}\) of \(K\) is the discriminant of \(\mc{O}_{K}/\Z\). Since \(\Z\) is a principal ideal domain, the \(\mf{d}_{K}\) is related to the discriminant \(\D_{K}\) by
+      \[
+        \mf{d}_{K} = \D_{K}\mc{O}_{K}.
+      \]
+      As all of the residue class extensions are separable, it follows from \cref{thm:ramifies_if_and_only_if_divides_the_different,thm:ramifies_if_and_only_if_divides_the_discriminant} that a prime of \(K\) ramifies in \(\mc{O}_{K}/\Z\) if and only if it divides \(\mf{D}_{K}\) and a prime of \(\Q\) ramifies in \(\mc{O}_{K}/\Z\) if and only if it divides \(|\D_{K}|\). Moreover, finitely many primes of \(K\) and \(\Q\) ramify by \cref{cor:finitely_many_primes_ramify_L,cor:finitely_many_primes_ramify_K}.
 
-    \begin{proposition}\label{prop:norm_and_field_norms_are_identical}
-      Let \(K\) be a number field of degree \(n\). Then for any integral ideal \(\mf{a}\), we have
-      \[
-        \Norm_{K}(\mf{a}) = |\mc{O}_{K}/\mf{a}|.
-      \]
-      Moreover, any \(\a \in \mc{O}_{K}\) satisfies
-      \[
-        \Norm_{K}(\a\mc{O}_{K}) = |\Norm_{K}(\a)|.
-      \]
-    \end{proposition}
-    \begin{proof}
-      Since \(K\) admits an integral basis, \(\mc{O}_{K}\) is a free abelian group of rank \(n\) as is any fractional ideal. In particular, \(|\mc{O}_{K}/\mf{a}|\) is finite. As the Chinese remainder theorem implies
-      \[
-        |\mc{O}_{K}/\mf{a}\mf{b}| = |\mc{O}_{K}/\mf{a}||\mc{O}_{K}/\mf{b}|,
-      \]
-      whenever \(\mf{a}\) and \(\mf{b}\) are relatively prime, it suffices to prove the claim in the case of a prime power. So let \(\mf{p}\) be a prime of \(\mc{O}_{K}\) above \(p\) and \(e \ge 1\). On the one hand, \(\Norm_{K}(\mf{p}^{e}) = p^{ef_{p}(\mf{p})}\) by definition of the norm. On the other hand, \cref{lem:quotient_by_prime_power_isomorphism} implies \(\mc{O}_{K}/\mf{p}^{e}\) is an \(\F_{p}\)-vector space of dimension \(ef_{p}(\mf{p})\) so that \(|\mc{O}_{K}/\mf{p}^{e}| = p^{ef_{p}(\mf{p})}\). Together, we have
-      \[
-        \Norm_{K}(\mf{p}^{e}) = |\mc{O}_{K}/\mf{p}^{e}|,
-      \]
-      and the first statement follows. For the second statement, we just have to show that \(|\Norm_{K}(\a)| = |\mc{O}_{K}/\a\mc{O}_{K}|\). To this end, let \(\a_{1},\ldots,\a_{n}\) be an integral basis for \(K\). Writing
-      \[
-        \a = \sum_{1 \le i \le n}a_{i}\a_{i},
-      \]
-      with \(a_{i} \in \Z\), we see that \(a_{1}\a_{1},\ldots,a_{n}\a_{n}\) is a basis for \(\a\mc{O}_{K}\). In particular, the base change matrix from \(\a_{1},\ldots,\a_{n}\)  to this basis is a diagonal matrix with the \(a_{i}\) on the diagonal. Then on the one hand, we have \(|\mc{O}_{K}/\a\mc{O}_{K}| = |a_{1} \cdots a_{n}|\) by \cref{prop:base_change_quotient_determinant} again. On the other hand, the multiplication by \(\a\) map in terms of the basis \(a_{1}\a_{1},\ldots,a_{n}\a_{n}\) has matrix representation
-      \[
-        \begin{pmatrix} a_{1} & & \\ & \ddots & \\ & & a_{n} \end{pmatrix},
-      \]
-      and so \(\Norm_{K}(\a) = a_{1} \cdots a_{n}\). Hence
-      \[
-        |\mc{O}_{K}/\a\mc{O}_{K}| = |\Norm_{K}(\a)|,
-      \]
-      as desired.
-    \end{proof}
+      Computing the norm of the discriminant \(\D_{K}\) is also an easy matter:
 
-    As a consequence of \cref{prop:norm_and_field_norms_are_identical} and Lagrange's theorem, \(\Norm_{K}(\mf{a}) \in \mf{a}\) for any integral ideal \(\mf{a}\) and therefore for every fractional ideal as well (recall every such fractional ideal is of the form \(\frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \Z\) and integral ideal \(\mf{a}\)). Computing the norm of the discriminant \(\D_{K}\) is also an easy matter:
+      \begin{proposition}\label{prop:norm_of_different_is_discriminant}
+        Let \(K\) be a number field of degree \(n\). Then
+        \[
+          \Norm_{K}(\mf{D}_{K}) = |\D_{K}|.
+        \]
+      \end{proposition}
+      \begin{proof}
+        From \cref{equ:different_isomorphism_chain} we have an isomorphism
+        \[
+          \mc{O}_{K}/\mf{D}_{K} \cong \mc{O}_{K}^{\vee}/\mc{O}_{K}.
+        \]
+        Therefore \(\Norm_{K}(\mf{D}_{K}) = |\mc{O}_{K}^{\vee}/\mc{O}_{K}|\) by \cref{prop:norm_and_field_norms_are_identical}. Now let \(\a_{1},\ldots,\a_{n}\) be an integral basis for \(\mc{O}_{K}\). Then the dual basis \(\a_{1}^{\vee},\ldots,\a_{n}^{\vee}\) is a basis for \(\mc{O}_{K}^{\vee}\) and we have
+        \[
+          \a_{i}^{\vee} = \sum_{1 \le j \le n}\Trace_{K}(\a_{i}\a_{j})\a_{j}.
+        \]
+        But then the base change matrix from \(\a_{1},\ldots,\a_{n}\) to \(\a_{1}^{\vee},\ldots,\a_{n}^{\vee}\) is \(\Trace_{K}(\a_{1},\ldots,\a_{n})\). The claim follows by \cref{prop:base_change_quotient_determinant} and the definition of \(\D_{K}\).
+      \end{proof}
 
-    \begin{proposition}\label{prop:norm_of_different_is_discriminant}
-      Let \(K\) be a number field of degree \(n\). Then
-      \[
-        \Norm_{K}(\mf{D}_{K}) = |\D_{K}|.
-      \]
-    \end{proposition}
-    \begin{proof}
-      From \cref{equ:different_isomorphism_chain} we have an isomorphism
-      \[
-        \mc{O}_{K}/\mf{D}_{K} \cong \mc{O}_{K}^{\vee}/\mc{O}_{K}.
-      \]
-      Therefore \(\Norm_{K}(\mf{D}_{K}) = |\mc{O}_{K}^{\vee}/\mc{O}_{K}|\) by \cref{prop:norm_and_field_norms_are_identical}. Now let \(\a_{1},\ldots,\a_{n}\) be an integral basis for \(\mc{O}_{K}\). Then the dual basis \(\a_{1}^{\vee},\ldots,\a_{n}^{\vee}\) is a basis for \(\mc{O}_{K}^{\vee}\) and we have
-      \[
-        \a_{i}^{\vee} = \sum_{1 \le j \le n}\Trace_{K}(\a_{i}\a_{j})\a_{j}.
-      \]
-      But then the base change matrix from \(\a_{1},\ldots,\a_{n}\) to \(\a_{1}^{\vee},\ldots,\a_{n}^{\vee}\) is \(\Trace_{K}(\a_{1},\ldots,\a_{n})\). The claim follows by \cref{prop:base_change_quotient_determinant} and the definition of \(\D_{K}\).
-    \end{proof}
+      We can now compute the norm of a dual ideal:
 
-    We can now compute the norm of a dual ideal:
+      \begin{corollary}\label{cor:norm_of_different}
+        Let \(K\) be a number field and \(\mf{f}\) be a fractional ideal. Then
+        \[
+          \Norm_{K}(\mf{f}^{\vee}) = \frac{\Norm_{K}(\mf{f}^{-1})}{|\D_{K}|}.
+        \]
+      \end{corollary}
+      \begin{proof}
+        This follows immediately from \(\mf{f}^{\vee} = \mf{f}^{-1}\mf{D}_{K}^{-1}\), multiplicativity of the norm, and \cref{prop:norm_of_different_is_discriminant}.
+      \end{proof}
 
-    \begin{corollary}\label{cor:norm_of_different}
-      Let \(K\) be a number field and \(\mf{f}\) be a fractional ideal. Then
-      \[
-        \Norm_{K}(\mf{f}^{\vee}) = \frac{\Norm_{K}(\mf{f}^{-1})}{|\D_{K}|}.
-      \]
-    \end{corollary}
-    \begin{proof}
-      This follows immediately from \(\mf{f}^{\vee} = \mf{f}^{-1}\mf{D}_{K}^{-1}\), multiplicativity of the norm, and \cref{prop:norm_of_different_is_discriminant}.
-    \end{proof}
+      Lastly, let \(a_{K}(m)\) denote the number of integral ideals of norm \(m\). Because the ideal norm is multiplicative so is \(a_{K}(m)\). Moreover, we have the following result:
 
-    Lastly, let \(a_{K}(m)\) denote the number of integral ideals of norm \(m\). Because the ideal norm is multiplicative so is \(a_{K}(m)\). Moreover, we have the following result:
+      \begin{proposition}\label{equ:ideals_of_fixed_norm_bound}
+        Let \(K\) be a number field of degree \(n\). Then \(a_{K}(m) \le \s_{0}(m)^{n}\).
+      \end{proposition}
+      \begin{proof}
+        Let \(\mf{a}\) be an integral ideal of norm \(m\). First suppose \(m = p^{k}\) for some prime \(p\) and \(k \ge 0\). As there are at most \(n\) primes \(\mf{p}_{1},\ldots,\mf{p}_{n}\) above \(p\) with inertia degrees \(f_{p}(\mf{p}_{1}),\ldots,f_{p}(\mf{p}_{n})\) respectively, we have
+        \[
+          \Norm_{K}(\mf{a}) = p^{e_{1}f_{p}(\mf{p}_{1})} \cdots p^{e_{n}f_{p}(\mf{p}_{n})},
+        \]
+        for some integers \(0 \le e_{i} \le k\) for \(1 \le i \le n\). Therefore the number of possibilities is equivalent to the number of solutions
+        \[
+          e_{1}f_{p}(\mf{p}_{1})+\cdots+e_{n}f_{p}(\mf{p}_{n}) = k,
+        \]
+        which is at most \(\s_{0}(p^{k})^{n} = (k+1)^{n}\). This proves the claim in the case \(m\) is a prime power. By multiplicativity of \(a_{K}(m)\) and the divisor function, it follows that the number of integral ideals of norm \(m\) is at most \(\s_{0}(m)^{n}\) as desired.
+      \end{proof}
 
-    \begin{proposition}\label{equ:ideals_of_fixed_norm_bound}
-      Let \(K\) be a number field of degree \(n\). Then \(a_{K}(m) \le \s_{0}(m)^{n}\).
-    \end{proposition}
-    \begin{proof}
-      Let \(\mf{a}\) be an integral ideal of norm \(m\). First suppose \(m = p^{k}\) for some prime \(p\) and \(k \ge 0\). As there are at most \(n\) primes \(\mf{p}_{1},\ldots,\mf{p}_{n}\) above \(p\) with inertia degrees \(f_{p}(\mf{p}_{1}),\ldots,f_{p}(\mf{p}_{n})\) respectively, we have
-      \[
-        \Norm_{K}(\mf{a}) = p^{e_{1}f_{p}(\mf{p}_{1})} \cdots p^{e_{n}f_{p}(\mf{p}_{n})},
-      \]
-      for some integers \(0 \le e_{i} \le k\) for \(1 \le i \le n\). Therefore the number of possibilities is equivalent to the number of solutions
-      \[
-        e_{1}f_{p}(\mf{p}_{1})+\cdots+e_{n}f_{p}(\mf{p}_{n}) = k,
-      \]
-      which is at most \(\s_{0}(p^{k})^{n} = (k+1)^{n}\). This proves the claim in the case \(m\) is a prime power. By multiplicativity of \(a_{K}(m)\) and the divisor function, it follows that the number of integral ideals of norm \(m\) is at most \(\s_{0}(m)^{n}\) as desired.
-    \end{proof}
-
-    As a consequence of \cref{prop:sum_of_divisors_growth_rate}, we have the slightly weaker estimate \(a_{K}(n) \ll_{\e} n^{\e}\).
+      As a consequence of \cref{prop:sum_of_divisors_growth_rate}, we have the slightly weaker estimate \(a_{K}(n) \ll_{\e} n^{\e}\).
   \fi

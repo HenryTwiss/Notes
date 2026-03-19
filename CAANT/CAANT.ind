@@ -37,7 +37,7 @@
   \item completion, \hyperpage{102}
   \item complex, \hyperpage{10}
   \item conductor, \hyperpage{9}, \hyperpage{59}, \hyperpage{102}
-  \item conjugate, \hyperpage{76}
+  \item conjugate, \hyperpage{77}
   \item constant function, \hyperpage{2}
   \item contraction, \hyperpage{49}
   \item convexity bound, \hyperpage{114, 115}
@@ -48,8 +48,8 @@
 
   \indexspace
 
-  \item decomposition field, \hyperpage{77}
-  \item decomposition group, \hyperpage{77}
+  \item decomposition field, \hyperpage{78}
+  \item decomposition group, \hyperpage{78}
   \item Dedekind domain, \hyperpage{39}
   \item Dedekind extension, \hyperpage{48}
   \item Dedekind-Kummer theorem, \hyperpage{70}
@@ -77,6 +77,8 @@
 
   \indexspace
 
+  \item field norm, \hyperpage{28}, \hyperpage{38}
+  \item field trace, \hyperpage{28}, \hyperpage{38}
   \item fractional ideal, \hyperpage{38}, \hyperpage{50}
   \item functional equation, \hyperpage{103}
   \item functional equation data, \hyperpage{103}
@@ -101,9 +103,9 @@
   \item indicator function, \hyperpage{2}
   \item induced, \hyperpage{9}
   \item inert, \hyperpage{69}, \hyperpage{76}
-  \item inertia degree, \hyperpage{67}, \hyperpage{77}, \hyperpage{83}
-  \item inertia field, \hyperpage{80}
-  \item inertia group, \hyperpage{80}
+  \item inertia degree, \hyperpage{67}, \hyperpage{78}, \hyperpage{83}
+  \item inertia field, \hyperpage{81}
+  \item inertia group, \hyperpage{81}
   \item integral, \hyperpage{24}
   \item integral basis, \hyperpage{34}, \hyperpage{38}
   \item integral closure, \hyperpage{25}
@@ -136,7 +138,7 @@
 
   \item nonsplit, \hyperpage{69}, \hyperpage{76}
   \item nontrivial zero, \hyperpage{112}
-  \item norm, \hyperpage{28}, \hyperpage{38}, \hyperpage{74}
+  \item norm, \hyperpage{28}, \hyperpage{74}, \hyperpage{76}
   \item normalization, \hyperpage{25}
   \item number field, \hyperpage{27}
   \item number of distinct prime factors function, \hyperpage{4}
@@ -165,7 +167,7 @@
   \indexspace
 
   \item Ramanujan sum, \hyperpage{13, 14}
-  \item ramification index, \hyperpage{66}, \hyperpage{77}, 
+  \item ramification index, \hyperpage{66}, \hyperpage{78}, 
 		\hyperpage{83}
   \item ramified, \hyperpage{70}, \hyperpage{76}
   \item real, \hyperpage{10}
@@ -195,7 +197,7 @@
   \item total number of prime divisors function, \hyperpage{4}
   \item totally ramified, \hyperpage{70}, \hyperpage{76}
   \item totally split, \hyperpage{69}, \hyperpage{76}
-  \item trace, \hyperpage{28}, \hyperpage{38}
+  \item trace, \hyperpage{28}
   \item trace form, \hyperpage{32}, \hyperpage{38}
   \item trace matrix, \hyperpage{31}
   \item trivial Dirichlet character, \hyperpage{7}
