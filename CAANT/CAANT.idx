@@ -175,50 +175,54 @@
 \indexentry{inertia field|hyperpage}{81}
 \indexentry{ramification index|hyperpage}{83}
 \indexentry{inertia degree|hyperpage}{83}
-\indexentry{Dirichlet series|hyperpage}{86}
-\indexentry{abscissa of convergence|hyperpage}{87}
-\indexentry{abscissa of absolute convergence|hyperpage}{87}
-\indexentry{Landau's theorem|hyperpage}{91}
-\indexentry{Euler product|hyperpage}{93}
-\indexentry{degree|hyperpage}{93}
-\indexentry{(classical) Perron's formula|hyperpage}{95}
-\indexentry{Perron's formula|hyperpage}{99}
-\indexentry{smooth weight|hyperpage}{100}
-\indexentry{unweighted|hyperpage}{100}
-\indexentry{weighted|hyperpage}{100}
-\indexentry{Perron's formula|hyperpage}{101}
-\indexentry{analytic \(L\)-function|hyperpage}{102}
-\indexentry{conductor|hyperpage}{102}
-\indexentry{degree|hyperpage}{102}
-\indexentry{gamma parameters|hyperpage}{102}
-\indexentry{root number|hyperpage}{102}
-\indexentry{completion|hyperpage}{102}
-\indexentry{gamma factor|hyperpage}{102}
-\indexentry{functional equation|hyperpage}{103}
-\indexentry{functional equation data|hyperpage}{103}
-\indexentry{Euler parameters|hyperpage}{103}
-\indexentry{Euler factor|hyperpage}{103}
-\indexentry{Selberg class|hyperpage}{103}
-\indexentry{primitive|hyperpage}{104}
-\indexentry{Selberg's orthogonality conjecture|hyperpage}{104}
-\indexentry{analytic conductor|hyperpage}{105}
-\indexentry{critical strip|hyperpage}{106}
-\indexentry{critical line|hyperpage}{106}
-\indexentry{central point|hyperpage}{106}
-\indexentry{approximate function equation|hyperpage}{108}
-\indexentry{trivial zero|hyperpage}{112}
-\indexentry{nontrivial zero|hyperpage}{112}
-\indexentry{Riemann hypothesis|hyperpage}{112}
-\indexentry{Selberg class Riemann hypothesis|hyperpage}{113}
-\indexentry{convexity bound|hyperpage}{114}
-\indexentry{Lindel\"of hypothesis|hyperpage}{114}
-\indexentry{Selberg class Lindel\"of hypothesis|hyperpage}{114}
-\indexentry{subconvexity estimate|hyperpage}{114}
-\indexentry{convexity breaking bound|hyperpage}{114}
-\indexentry{Burgess bound|hyperpage}{114}
-\indexentry{Weyl bound|hyperpage}{114}
+\indexentry{\(\smc{O}\)-lattice|hyperpage}{84}
+\indexentry{complete|hyperpage}{84}
+\indexentry{dual|hyperpage}{84}
+\indexentry{self-dual|hyperpage}{84}
+\indexentry{Dirichlet series|hyperpage}{87}
+\indexentry{abscissa of convergence|hyperpage}{88}
+\indexentry{abscissa of absolute convergence|hyperpage}{88}
+\indexentry{Landau's theorem|hyperpage}{92}
+\indexentry{Euler product|hyperpage}{94}
+\indexentry{degree|hyperpage}{94}
+\indexentry{(classical) Perron's formula|hyperpage}{96}
+\indexentry{Perron's formula|hyperpage}{100}
+\indexentry{smooth weight|hyperpage}{101}
+\indexentry{unweighted|hyperpage}{101}
+\indexentry{weighted|hyperpage}{101}
+\indexentry{Perron's formula|hyperpage}{102}
+\indexentry{analytic \(L\)-function|hyperpage}{103}
+\indexentry{conductor|hyperpage}{103}
+\indexentry{degree|hyperpage}{103}
+\indexentry{gamma parameters|hyperpage}{103}
+\indexentry{root number|hyperpage}{103}
+\indexentry{completion|hyperpage}{103}
+\indexentry{gamma factor|hyperpage}{103}
+\indexentry{functional equation|hyperpage}{104}
+\indexentry{functional equation data|hyperpage}{104}
+\indexentry{Euler parameters|hyperpage}{104}
+\indexentry{Euler factor|hyperpage}{104}
+\indexentry{Selberg class|hyperpage}{104}
+\indexentry{primitive|hyperpage}{105}
+\indexentry{Selberg's orthogonality conjecture|hyperpage}{105}
+\indexentry{analytic conductor|hyperpage}{106}
+\indexentry{critical strip|hyperpage}{107}
+\indexentry{critical line|hyperpage}{107}
+\indexentry{central point|hyperpage}{107}
+\indexentry{approximate function equation|hyperpage}{109}
+\indexentry{trivial zero|hyperpage}{113}
+\indexentry{nontrivial zero|hyperpage}{113}
+\indexentry{Riemann hypothesis|hyperpage}{113}
+\indexentry{Selberg class Riemann hypothesis|hyperpage}{114}
 \indexentry{convexity bound|hyperpage}{115}
-\indexentry{smooth dyadic weight|hyperpage}{115}
-\indexentry{central value|hyperpage}{118}
-\indexentry{central value estimate|hyperpage}{118}
-\indexentry{Von Mangoldt coefficients|hyperpage}{118}
+\indexentry{Lindel\"of hypothesis|hyperpage}{115}
+\indexentry{Selberg class Lindel\"of hypothesis|hyperpage}{115}
+\indexentry{subconvexity estimate|hyperpage}{115}
+\indexentry{convexity breaking bound|hyperpage}{115}
+\indexentry{Burgess bound|hyperpage}{115}
+\indexentry{Weyl bound|hyperpage}{115}
+\indexentry{convexity bound|hyperpage}{116}
+\indexentry{smooth dyadic weight|hyperpage}{116}
+\indexentry{central value|hyperpage}{119}
+\indexentry{central value estimate|hyperpage}{119}
+\indexentry{Von Mangoldt coefficients|hyperpage}{119}

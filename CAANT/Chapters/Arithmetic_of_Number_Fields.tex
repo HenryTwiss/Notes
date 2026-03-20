@@ -2010,33 +2010,28 @@
 
     \subsection*{Number Fields}
       In the case of a Galois extension of number fields \(L/K\) and a prime \(\mf{p}\) of \(K\), the \textbf{ramification index}\index{ramification index} \(e\) and \textbf{inertia degree}\index{inertia degree} \(f\) of \(\mf{p}\) in \(L/K\) is that of \(\mc{O}_{L}/\mc{O}_{K}\). Recall that all of the residue class extensions are separable. This means that the above diagram applies to \(L/K\).
-  \iffalse\section{\todo{The Different and Discriminant}}
-    Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). It is exceptionally rare for a prime \(\mf{p}\) of \(K\) to ramify. We will construct two integral ideals, one of \(\mc{O}\) and the other of \(\smc{O}\) which will tell us which primes ramify in \(L\) or \(K\). These integral ideals are the different and discriminant respectively. To describe them, we will need the concept of lattices in Dedekind domains. We say that \(\mf{L}\) is a \textbf{\(\smc{O}\)-lattice}\index{\(\smc{O}\)-lattice} if it is a finitely generated \(\smc{O}\)-submodule of \(L\). Moreover, we say that \(\mf{L}\) is \textbf{complete}\index{complete} if it spans \(L/K\). That is, \(\mf{L}\) contains a basis of \(L/K\).
-
-    \begin{remark}
-      A \(\Z\)-lattice is an integral lattice and a complete \(\Z\)-lattice is a complete integral lattice.
-    \end{remark}
-
-    A \(\smc{O}\)-lattice \(\mf{L}\) need not be a fractional ideal of \(\smc{O}\) since it does not need to be a \(\mc{O}\)-submodule of \(L\). However, every fractional ideal \(\mf{F}\) of \(\mc{O}\) is a complete \(\smc{O}\)-lattice. Indeed, by \cref{prop:Dedekind_extension_facts} \(\mc{O}\) is a finitely generated \(\smc{O}\)-module and so \(\mf{F}\) is a finitely generated \(\smc{O}\)-module as well. Moreover, \(\mf{F}\) contains a basis of \(L/K\). For if \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\) we may use \cref{prop:field_of_fractions_AKBL} to multiply by a nonzero element of \(\smc{O}\), if necessary, to ensure that this basis is contained in \(\mc{O}\). Choosing any nonzero \(\a \in \mf{F}\), \(\a\l_{1},\ldots,\a\l_{n}\) is a basis for \(L/K\) inside \(\mf{F}\).
-
-    \begin{remark}
-      A \(\smc{O}\)-lattice \(\mc{L}\) need not be a free \(\smc{O}\)-submodule of \(L\). Indeed, we are only guaranteed that \(\mc{L}\) is a finitely generated \(\smc{O}\)-submodule of \(L\) not that it is a free finitely generated \(\smc{O}\)-submodule of \(L\).
-    \end{remark}
-    
-    Recall by \cref{lem:trace_is_nondegenerate} that there is a nondegenerate symmetric bilinear form on \(K\) given by
+  \section{Differents and Discriminants}
+    Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). We being by introducing the notion of lattices in this setting. We say that \(\mf{L}\) is an \textbf{\(\smc{O}\)-lattice}\index{\(\smc{O}\)-lattice} of \(L\) if it is a finitely generated \(\smc{O}\)-submodule of \(L\). Moreover, we say that \(\mf{L}\) is \textbf{complete}\index{complete} if it spans \(L/K\). That is, \(\mf{L}\) contains a basis of \(L/K\). It is also possible to construct duals to complete \(\smc{O}\)-lattices. For this, we need a nondegenerate symmetric bilinear form. The natural choice is the trace form
     \[
       \Trace_{L/K}:L \x L \to K \qquad (\l,\eta) \mapsto \Trace_{L/K}(\l\eta).
     \]
-    We call this bilinear form the \textbf{trace form}\index{trace form} of \(L/K\). The trace form makes \(L\) into a nondegenerate inner product space over \(K\) and so every basis \(\l_{1},\ldots,\l_{n}\) admits a dual basis \(\l_{1}^{\vee},\ldots,\l_{n}^{\vee}\) with respect to \(\Trace_{L/K}\) defined by
+    Then any basis \(\l_{1},\ldots,\l_{n}\) for \(L/K\) admits a dual basis \(\l_{1}^{\vee},\ldots,\l_{n}^{\vee}\) defined by
     \[
       \Trace_{L/K}(\l_{i}\l_{j}^{\vee}) = \d_{i,j},
     \]
-    for \(1 \le i,j \le n\). The trace form will allow us to introduce duals. Indeed, if \(\mf{F}\) is a fractional ideal \(\mc{O}\), the \textbf{dual}\index{dual} \(\mf{F}^{\vee}\) of \(\mf{F}\) is defined by
+    If \(\mf{L}\) is complete, then we define the \textbf{dual}\index{dual} \(\mf{L}^{\vee}\) of \(\mf{L}\) by
     \[
-      \mf{F}^{\vee} = \{\l \in L:\Trace_{L/K}(\l\mf{F}) \subseteq \smc{O}\}.
+      \mf{L}^{\vee} = \{\l \in L:\Trace_{L/K}(\l\mf{L}) \subseteq \smc{O}\}.
     \]
-    We say that \(\mf{F}\) is \textbf{self-dual}\index{self-dual} if \(\mf{F}^{\vee} = \mf{F}\). The following proposition shows that the dual \(\mf{F}^{\vee}\) is indeed a fractional ideal:
+    We say that \(\mf{L}\) is \textbf{self-dual}\index{self-dual} if \(\mf{L}^{\vee} = \mf{L}\). The dual \(\mf{L}^{\vee}\) is indeed a complete \(\smc{O}\)-lattice of \(L\). To see this, let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) contained in \(\mf{L}\). For any \(\l \in L\) we may write
+    \[
+      \l = \sum_{j}\k_{j}^{\vee}\l_{j}^{\vee},
+    \]
+    with \(\k_{j}^{\vee} \in K\). As the dual basis is determined by \(\Trace_{L/K}(\l_{i}\l_{j}^{\vee}) = \d_{i,j}\), it follows that \(\l \in \L^{\vee}\) if and only if \(\k_{j}^{\vee} \in \smc{O}\). Whence \(\l_{1}^{\vee},\ldots,\l_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a \(\smc{O}\)-submodule of \(L\) and thus is a complete \(\smc{O}\)-lattice of \(L\).
 
+    Observe that an \(\smc{O}\)-lattice need not be a fractional ideal of \(\mc{O}\) as it need not be a \(\mc{O}\)-submodule of \(L\). However, very fractional ideal \(\mf{F}\) of \(\mc{O}\) is a complete \(\smc{O}\)-lattice. Indeed, \(\mf{F}\) is a finitely generated \(\smc{O}\)-submodule of \(L\) as \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. Moreover, \(\mf{F}\) contains a basis of \(L/K\). To see this, let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) contained in \(\mc{O}\) and let \(\a \in \mf{F}\) be nonzero. Then \(\a\l_{1},\ldots,\a\l_{n}\) is a basis for \(L/K\) contained in \(\mf{F}\).
+
+    \iffalse
     \begin{proposition}\label{prop:dual_lattice_is_fractional}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(\mf{F}\) be a fractional ideal of \(\mc{O}\). Then \(\mf{F}^{\vee}\) is also a fractional ideal of \(\mc{O}\) and
       \[
@@ -2075,7 +2070,7 @@
       For the forward containment, suppose \(\l \in (\mf{F}D^{-1})^{\vee}\). Then \(\Trace_{L/K}(\l\mf{F}D^{-1}) \subseteq \smc{O}D^{-1}\). As \(D \subset K\), linearity of the trace implies \(\l = \frac{\a}{\d}\) with \(\Trace_{L/K}(\a\mf{F})\d \subseteq \smc{O}D^{-1}\) so that \(\a \in \mf{F}^{\vee}\) and \(\d \in D\). Hence \(\l \in (\mf{F}^{\vee})D^{-1}\) and the forward containment follows. For the reverse containment, suppose \(\frac{\a}{\d} \in (\mf{F}^{\vee})D^{-1}\). Then \(\a \in \mf{F}^{\vee}\) so that \(\Trace_{L/K}(\a\mf{F}) \subseteq \smc{O}\) and \(\d \in D\). As \(D \subset K\), linearity of the trace implies \(\Trace_{L/K}(\l\mf{F}) \subseteq \smc{O}D^{-1}\) with \(\l = \frac{\a}{\d}\). Hence \(\frac{\a}{\d} \in (\mf{F}D^{-1})^{\vee}\) and the reverse containment holds.
     \end{proof}
     
-    We will now introduce the different and the discriminant. We define the \textbf{complement}\index{complement} \(\mf{C}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) by
+    It turns out that it is exceptionally rare for primes of \(\mc{O}\) and \(\smc{O}\) to ramify. We will demonstrate this phenomena by constructs two integral ideals, one of \(\mc{O}\) and the other of \(\smc{O}\), which will encode the ramification of the corresponding primes. These integral ideals are the different and discriminant respectively. We define the \textbf{complement}\index{complement} \(\mf{C}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) by
     \[
       \mf{C}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}.  
     \]
@@ -2288,5 +2283,4 @@
         which is at most \(\s_{0}(p^{k})^{n} = (k+1)^{n}\). This proves the claim in the case \(m\) is a prime power. By multiplicativity of \(a_{K}(m)\) and the divisor function, it follows that the number of integral ideals of norm \(m\) is at most \(\s_{0}(m)^{n}\) as desired.
       \end{proof}
 
-      As a consequence of \cref{prop:sum_of_divisors_growth_rate}, we have the slightly weaker estimate \(a_{K}(n) \ll_{\e} n^{\e}\).
-  \fi
+      As a consequence of \cref{prop:sum_of_divisors_growth_rate}, we have the slightly weaker estimate \(a_{K}(n) \ll_{\e} n^{\e}\).\fi
