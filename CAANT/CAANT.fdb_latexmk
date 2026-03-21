@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex CAANT.idx"] 1774038012 "CAANT.idx" "CAANT.ind" "CAANT" 1774059213
-  "CAANT.idx" 1774059213 9589 62fef2a397ebd98711b999ca7089fdc7 "pdflatex"
+["makeindex CAANT.idx"] 1774084612 "CAANT.idx" "CAANT.ind" "CAANT" 1774084662
+  "CAANT.idx" 1774084662 9589 62fef2a397ebd98711b999ca7089fdc7 "pdflatex"
   (generated)
   "CAANT.ilg"
   "CAANT.ind"
-["pdflatex"] 1774059212 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1774059213
+["pdflatex"] 1774084661 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" "CAANT.pdf" "CAANT" 1774084662
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/CAANT/CAANT.tex" 1774059212 1081 1fb655bc8d439d85ce37570f532111b6 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -206,20 +206,20 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "CAANT.aux" 1774059213 2904 86636b92040f768866a228ce6ba240cc "pdflatex"
-  "CAANT.ind" 1774038012 7695 6974040d64bd05dc0c03b27d11500913 "makeindex CAANT.idx"
-  "CAANT.out" 1774059213 7179 da5992b6e7c02daddad2f225def9624f "pdflatex"
+  "CAANT.aux" 1774084662 2904 86636b92040f768866a228ce6ba240cc "pdflatex"
+  "CAANT.ind" 1774084613 7695 6974040d64bd05dc0c03b27d11500913 "makeindex CAANT.idx"
+  "CAANT.out" 1774084662 7179 da5992b6e7c02daddad2f225def9624f "pdflatex"
   "CAANT.tex" 1774059212 1081 1fb655bc8d439d85ce37570f532111b6 ""
-  "CAANT.toc" 1774059213 3431 9fc11bf21830db241a998fdc9e146359 "pdflatex"
-  "Chapters/Analytic_L-functions.aux" 1774059213 8880 a482e11e2cea6e0b519147116948c72c "pdflatex"
+  "CAANT.toc" 1774084662 3431 9fc11bf21830db241a998fdc9e146359 "pdflatex"
+  "Chapters/Analytic_L-functions.aux" 1774084662 8880 6cf24d1130220288ca8abaddaabdb1e5 "pdflatex"
   "Chapters/Analytic_L-functions.tex" 1772914146 85088 8f1d5da7f905c5f05109fc0fa8e90b8f ""
-  "Chapters/Arithmetic_Functions.aux" 1774059212 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a "pdflatex"
+  "Chapters/Arithmetic_Functions.aux" 1774084661 3601 9f5dd6cdd6ce0a3fd4597a62853ee62a "pdflatex"
   "Chapters/Arithmetic_Functions.tex" 1773928845 8119 da15c97bb66734949a32e38c9f5da26e ""
-  "Chapters/Arithmetic_of_Number_Fields.aux" 1774059213 27326 56db50d165d13e840f3a29c7a669486f "pdflatex"
-  "Chapters/Arithmetic_of_Number_Fields.tex" 1774059075 239982 0575cb9945b934adbe46b72bae74e5f0 ""
-  "Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1774059212 9218 4d8f16edc8a6ca6be44b1306e7dd906e "pdflatex"
+  "Chapters/Arithmetic_of_Number_Fields.aux" 1774084662 27639 cc54adc655178310745a9efc612e1714 "pdflatex"
+  "Chapters/Arithmetic_of_Number_Fields.tex" 1774084660 240245 257faeae73d3985fc3a9c2b71f1e1672 ""
+  "Chapters/Dirichlet_Characters_and_Exponential_Sums.aux" 1774084661 9218 4d8f16edc8a6ca6be44b1306e7dd906e "pdflatex"
   "Chapters/Dirichlet_Characters_and_Exponential_Sums.tex" 1772914146 42878 adf9d2589fd4db79b566238716c6f107 ""
-  "Chapters/Dirichlet_Series.aux" 1774059213 10741 2e22a1140ebfedfb3dcbb21fa8ae79b3 "pdflatex"
+  "Chapters/Dirichlet_Series.aux" 1774084662 10741 d11f6a3e64225a6d1bf52c95aa93f5f9 "pdflatex"
   "Chapters/Dirichlet_Series.tex" 1772914145 41058 b23d1c2e805f1b92953991246486f2b7 ""
   "preamble.tex" 1772842557 5488 8341419d5a76e071722ec0fe16bc9c22 ""
   (generated)

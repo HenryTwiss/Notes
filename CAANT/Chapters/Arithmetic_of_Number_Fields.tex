@@ -2027,17 +2027,19 @@
     \[
       \l = \sum_{j}\k_{j}^{\vee}\l_{j}^{\vee},
     \]
-    with \(\k_{j}^{\vee} \in K\). As the dual basis is determined by \(\Trace_{L/K}(\l_{i}\l_{j}^{\vee}) = \d_{i,j}\), it follows that \(\l \in \L^{\vee}\) if and only if \(\k_{j}^{\vee} \in \smc{O}\). Whence \(\l_{1}^{\vee},\ldots,\l_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a \(\smc{O}\)-submodule of \(L\) and thus is a complete \(\smc{O}\)-lattice of \(L\). In particular, \(\mc{O}\) is a complete \(\smc{O}\)-lattice of \(L\) and hence its dual \(\mc{O}^{\vee}\) is as well.
+    with \(\k_{j}^{\vee} \in K\). As the dual basis is determined by \(\Trace_{L/K}(\l_{i}\l_{j}^{\vee}) = \d_{i,j}\), it follows that \(\l \in \L^{\vee}\) if and only if \(\k_{j}^{\vee} \in \smc{O}\). Whence \(\l_{1}^{\vee},\ldots,\l_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a \(\smc{O}\)-submodule of \(L\) and thus is a complete \(\smc{O}\)-lattice of \(L\). As the dual of the dual basis is the original basis, \((\mf{L}^{\vee})^{\vee} = \mf{L}\). The prototypical complete \(\smc{O}\)-lattice of \(L\) is \(\mc{O}\) whence it admits a dual \(\mc{O}^{\vee}\).
 
-    Observe that an \(\smc{O}\)-lattice of \(L\) is not necessarily a fractional ideal of \(\mc{O}\) as it need not be an \(\mc{O}\)-submodule of \(L\). However, every fractional ideal \(\mf{F}\) of \(\mc{O}\) is a complete \(\smc{O}\)-lattice of \(L\). Indeed, \(\mf{F}\) is a finitely generated \(\smc{O}\)-submodule of \(L\) as \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. Moreover, \(\mf{F}\) contains a basis of \(L/K\). To see this, let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) contained in \(\mc{O}\) and let \(\a \in \mf{F}\) be nonzero. Then \(\a\l_{1},\ldots,\a\l_{n}\) is a basis for \(L/K\) contained in \(\mf{F}\).
+    Observe that an \(\smc{O}\)-lattice of \(L\) is not necessarily a fractional ideal of \(\mc{O}\) as it need not be an \(\mc{O}\)-submodule of \(L\). However, every fractional ideal \(\mf{F}\) of \(\mc{O}\) is a complete \(\smc{O}\)-lattice of \(L\). Indeed, \(\mf{F}\) is a finitely generated \(\smc{O}\)-submodule of \(L\) as \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. Moreover, \(\mf{F}\) contains a basis of \(L/K\). To see this, let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) contained in \(\mc{O}\) and let \(\a \in \mf{F}\) be nonzero. Then \(\a\l_{1},\ldots,\a\l_{n}\) is a basis for \(L/K\) contained in \(\mf{F}\). As \(\mf{F}\) is complete, it admits a dual \(\mf{F}^{\vee}\). The dual \(\mf{F}^{\vee}\) is also a fractional ideal of \(\mc{O}\). \todo{xxx}
+    
+    There is a simple relationship between the duals \(\mf{F}^{\vee}\) and \(\mc{O}^{\vee}\).
 
-    \iffalse
     \begin{proposition}\label{prop:dual_lattice_is_fractional}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(\mf{F}\) be a fractional ideal of \(\mc{O}\). Then \(\mf{F}^{\vee}\) is also a fractional ideal of \(\mc{O}\) and
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(\mf{F}\) be a fractional ideal of \(\mc{O}\). Then
       \[
         \mf{F}^{\vee} = \mf{F}^{-1}\mc{O}^{\vee}.
       \]
     \end{proposition}
+    \iffalse
     \begin{proof}
       We will first show that \(\mf{F}^{\vee}\) is a finitely generated \(\smc{O}\)-submodule of \(L\). Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). Using \cref{prop:field_of_fractions_AKBL} to multiply by a nonzero element of \(\smc{O}\), if necessary, we can ensure that this basis is contained in \(\mc{O}\). Now choose some nonzero \(\a \in \mf{F} \cap \smc{O}\) (such an element exists since every prime \(\mf{P}\) of \(\mc{O}\) is above a prime \(\mf{p}\) of \(\smc{O}\) and \(\mf{F}\) is of the form \(\mf{F} = \frac{1}{\d}\mf{A}\) for some nonzero \(\d \in \mc{O}\) and integral ideal \(\mf{A}\) so that \(\mf{A} \subseteq \mf{F}\)). Now suppose \(\l \in \mf{F}^{\vee}\) and write \(\l = \k_{1}\l_{1}+\cdots+\k_{n}\l_{n}\) with \(\k_{i} \in K\) for \(1 \le i \le n\). Then linearity of the trace implies
       \[
