@@ -97,7 +97,7 @@
       Let \(\smc{O}\) be an integrally closed domains with field of fractions \(K\), let \(M/L/K\) be a finite separable tower, and suppose \(\mc{O}\) and \(\wtilde{\mc{O}}\) are the integral closures of \(\smc{O}\) in \(L\) and \(M\) respectively. Then \(\mc{O}\) and \(\wtilde{\mc{O}}\) are integrally closed domains. In particular, \(\wtilde{\mc{O}}\) is the integral closure of \(\mc{O}\) in \(L\).
     \end{proposition}
     \begin{proof}
-      The first statement follows from two applications of \cref{prop:field_of_fractions_AKBL}. To prove the second statement, we must show \(\wtilde{\mc{O}} = \conj{\mc{O}}\). The forward inclusion is obvious as \(\smc{O}\) is a subset of \(\mc{O}\). For the reverse inclusion, \cref{prop:integrality_is_transitive} implies that \(\conj{\mc{O}}\) is integral over \(\smc{O}\). As \(\wtilde{\mc{O}}\) is the integral closure of \(\smc{O}\) in \(M\), the reverse containment follows.
+      The first statement follows from two applications of \cref{prop:field_of_fractions_AKBL}. To prove the second statement, we must show \(\wtilde{\mc{O}} = \conj{\mc{O}}\). The forward inclusion is obvious as \(\smc{O}\) is a subset of \(\mc{O}\). For the reverse inclusion, \cref{prop:integrality_is_transitive} implies that \(\conj{\mc{O}}\) is integral over \(\smc{O}\). As \(\wtilde{\mc{O}}\) is the integral closure of \(\smc{O}\) in \(M\), the reverse inclusion follows.
     \end{proof}
 
     \subsection*{Number Fields}
@@ -117,7 +117,7 @@
   \section{Traces and Norms}
     Let \(\mc{O}/\smc{O}\) be an extension of integral domains such that \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\). Recall that by fixing a basis for \(\mc{O}/\smc{O}\), there is an isomorphism
     \[
-      \End_{\smc{O}}(\mc{O}) \cong \Mat_{n}(\smc{O})
+      \End_{\mc{O}/\smc{O}} \cong \Mat_{n}(\smc{O})
     \]
     This permits us to view \(\smc{O}\)-linear operators from \(\mc{O}\) to itself as \(n \x n\) matrices with coefficients in \(\smc{O}\). To any \(\b \in \mc{O}\), we associate the \(\smc{O}\)-linear operator \(T_{\b}\) defined by
     \[
@@ -247,11 +247,11 @@
     \[
       d_{\mc{O}/\smc{O}}(\b_{1}',\ldots,\b_{n}') = \det((\a_{i,j}))^{2}d_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n}).
     \]
-    Accordingly, we define the \textbf{discriminant}\index{discriminant} \(d_{\smc{O}}(\mc{O})\) of \(\mc{O}/\smc{O}\) to be the coset in \(\smc{O}/(\smc{O}^{\ast})^{2}\) represented by any discriminant \(d_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n})\). In other words,
+    Accordingly, we define the \textbf{discriminant}\index{discriminant} \(d_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) to be the coset in \(\smc{O}/(\smc{O}^{\ast})^{2}\) represented by any discriminant \(d_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n})\). In other words,
     \[
-      d_{\smc{O}}(\mc{O}) = d_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n})(\smc{O}^{\ast})^{2}.
+      d_{\mc{O}/\smc{O}} = d_{\mc{O}/\smc{O}}(\b_{1},\ldots,\b_{n})(\smc{O}^{\ast})^{2}.
     \]
-    In particular, \(d_{\smc{O}}(\mc{O}) = 0\) is independent of the choice of representative. The discriminant is also multiplicative with respect to direct sums.
+    In particular, \(d_{\mc{O}/\smc{O}} = 0\) is independent of the choice of representative. The discriminant is also multiplicative with respect to direct sums.
 
     \begin{proposition}\label{prop:discriminant_and_direct_sums}
       Let \(\mc{O}/\smc{O}\) be an extension of integral domains such that \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\). Suppose we have a direct sum decomposition
@@ -491,7 +491,7 @@
       \]
       Lastly, we say \(K\) is \textbf{monogenic}\index{monogenic} if \(\mc{O}_{K}\) is monogenic over \(\Z\).
   \section{Dedekind Domains}
-    Let \(\smc{O}\) be an integral domain with field of fractions \(K\). Any nonzero ideal \(\mf{a}\) of \(\smc{O}\) is said to be an \textbf{integral ideal}\index{integral ideal} of \(\smc{O}\). We call any prime integral ideal \(\mf{p}\) of \(\smc{O}\) a \textbf{prime}\index{prime} of \(\smc{O}\). If \(\mf{p}\) is principal with \(\mf{p} = \a\smc{O}\) for some nonzero \(\a \in K\) we will also refer to \(\a\) as the prime instead of \(\mf{p}\). In any case, an integral ideal is just a \(\smc{O}\)-submodule of \(\smc{O}\). More generally, we say \(\mf{f}\) is a \textbf{fractional ideal}\index{fractional ideal} of \(\smc{O}\) if it is a nonzero \(\smc{O}\)-submodule of \(K\) such that there is a nonzero \(\d \in \smc{O}\) with \(\d\mf{f} \in \smc{O}\). This simply means \(\d\mf{f}\) is an integral ideal. Conversely, if \(\mf{a}\) is an integral ideal and \(\d \in \smc{O}\) is nonzero then  
+    Let \(\smc{O}\) be an integral domain with field of fractions \(K\). Any nonzero ideal \(\mf{a}\) of \(\smc{O}\) is said to be an \textbf{integral ideal}\index{integral ideal} of \(\smc{O}\). We call any prime integral ideal \(\mf{p}\) of \(\smc{O}\) a \textbf{prime}\index{prime} of \(\smc{O}\). If \(\mf{p}\) is principal with \(\mf{p} = \a\smc{O}\) for some nonzero \(\a \in K\) we will also refer to \(\a\) as the prime instead of \(\mf{p}\). In any case, an integral ideal is just an \(\smc{O}\)-submodule of \(\smc{O}\). More generally, we say \(\mf{f}\) is a \textbf{fractional ideal}\index{fractional ideal} of \(\smc{O}\) if it is a nonzero \(\smc{O}\)-submodule of \(K\) such that there is a nonzero \(\d \in \smc{O}\) with \(\d\mf{f} \in \smc{O}\). This simply means \(\d\mf{f}\) is an integral ideal. Conversely, if \(\mf{a}\) is an integral ideal and \(\d \in \smc{O}\) is nonzero then  
     \[
       \mf{f} = \frac{1}{\d}\mf{a},
     \]
@@ -1172,7 +1172,7 @@
       Let \(\smc{O}\) be a noetherian domain with field of fractions \(K\). Then the conductor \(\mf{q}_{\smc{O}}\) is an integral ideal of \(\smc{O}\) if and only if \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module.
     \end{proposition}
     \begin{proof}
-      For the forward implication, suppose \(\mf{q}_{\smc{O}}\) is an integral ideal of \(\smc{O}\). Then there is some nonzero \(\a \in \mf{q}_{\smc{O}}\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). Whence \(\a\conj{\smc{O}}\) is an ideal of \(\smc{O}\) and hence a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is noetherian. But then \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module. For the reverse implication, let \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) be generators of \(\conj{\smc{O}}\) as a \(\smc{O}\)-module. Then \(\d = \prod_{i}\d_{i}\) is nonzero with \(\d\conj{\smc{O}} \subset \smc{O}\). Whence \(\d \in \mf{q}_{\smc{O}}\).
+      For the forward implication, suppose \(\mf{q}_{\smc{O}}\) is an integral ideal of \(\smc{O}\). Then there is some nonzero \(\a \in \mf{q}_{\smc{O}}\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). Whence \(\a\conj{\smc{O}}\) is an ideal of \(\smc{O}\) and hence a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is noetherian. But then \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module. For the reverse implication, let \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) be generators of \(\conj{\smc{O}}\) as an \(\smc{O}\)-module. Then \(\d = \prod_{i}\d_{i}\) is nonzero with \(\d\conj{\smc{O}} \subset \smc{O}\). Whence \(\d \in \mf{q}_{\smc{O}}\).
     \end{proof}
     
     Accordingly, an \textbf{order}\index{order} \(\smc{O}\) is a one-dimensional noetherian domain whose conductor is an integral ideal of \(\smc{O}\). If \(\smc{O}\) has field of fractions \(K\) then this last condition is equivalent to the normalization \(\conj{\smc{O}}\) being a finitely generated \(\smc{O}\)-module. This means \(\smc{O}\) is a Dedekind domain if and only if it is an integrally closed domain which happens if and only if the conductor is \(\smc{O}\) itself. In fact, the normalization of an order is always a Dedekind domain.
@@ -1396,7 +1396,7 @@
       Let \(\smc{O}\) be an order. Then a prime \(\mf{p}\) of \(\smc{O}\) is regular if and only if \(\mf{q}_{\smc{O}} \subsetneq \mf{p}\). In the case \(\mf{p}\) is regular, there a unique prime \(\conj{\mf{p}}\) of \(\conj{\smc{O}}\) above \(\mf{p}\) which is given by \(\conj{\mf{p}} = \mf{p}_{\mf{p}} \cap \conj{\smc{O}}\), we have \(\conj{\smc{O}}_{\conj{\mf{p}}} = \smc{O}_{\mf{p}}\), and \(\mf{p}\) is invertible. 
     \end{proposition}
     \begin{proof}
-      For the forward implication, if \(\mf{p}\) is regular then \(\smc{O}_{\mf{p}}\) is an integrally closed domain. As \(\conj{\smc{O}}\) is integral over \(\smc{O}\) and hence also \(\smc{O}_{\mf{p}}\), it follows that \(\conj{\smc{O}} \subseteq \smc{O}_{\mf{p}}\). But \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module by \cref{prop:conductor_integral_ideal_equivalence}. So we may find generators \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) for \(\conj{\smc{O}}\) as a \(\smc{O}\)-module with \(\d_{i} \notin \mf{p}\). Then \(\d = \prod_{i}\d_{i}\) is nonzero with \(\d\conj{\smc{O}} \subseteq \smc{O}\) meaning \(\d \in \mf{q}_{\smc{O}}\). But primality of \(\mf{p}\) forces \(\d \notin \mf{p}\). Whence \(\mf{q}_{\smc{O}} \subsetneq \mf{p}\). For the reverse implication, suppose \(\mf{q}_{\smc{O}} \subsetneq \mf{p}\). Then we may find a nonzero \(\a \in \mf{q}_{\smc{O}}-\mf{p}\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). It follows that \(\conj{\smc{O}} \subset \smc{O}_{\mf{p}}\). As \(\mf{p}_{\mf{p}}\) is the unique maximal ideal of \(\smc{O}_{\mf{p}}\), it is necessarily a prime. In view of the previous inclusion, \(\conj{\mf{p}}\) is then a prime of \(\conj{\smc{O}}\) containing \(\mf{p}\) and is therefore above \(\mf{p}\) as \(\smc{O}\) is one-dimensional. Since \(\conj{\smc{O}}_{\conj{\mf{p}}}\) is an integrally closed domain by \cref{prop:localization_of_integral_closure_is_integral_closure}, it is enough to show \(\conj{\smc{O}}_{\conj{\mf{p}}} = \smc{O}_{\mf{p}}\). The reverse inclusion holds because \(\conj{\mf{p}}\) is above \(\mf{p}\). For the forward inclusion, Suppose \(\frac{\eta}{\d} \in \conj{\smc{O}}_{\conj{\mf{p}}}\). Then \(\a\eta \in \smc{O}\) and \(\a\d \notin \mf{p}\) by primality of \(\mf{p}\). Whence \(\frac{\eta}{\d} \in \smc{O}_{\mf{p}}\) proving the forward inclusion. This completes the proof of the first statement.
+      For the forward implication, if \(\mf{p}\) is regular then \(\smc{O}_{\mf{p}}\) is an integrally closed domain. As \(\conj{\smc{O}}\) is integral over \(\smc{O}\) and hence also \(\smc{O}_{\mf{p}}\), it follows that \(\conj{\smc{O}} \subseteq \smc{O}_{\mf{p}}\). But \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module by \cref{prop:conductor_integral_ideal_equivalence}. So we may find generators \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) for \(\conj{\smc{O}}\) as an \(\smc{O}\)-module with \(\d_{i} \notin \mf{p}\). Then \(\d = \prod_{i}\d_{i}\) is nonzero with \(\d\conj{\smc{O}} \subseteq \smc{O}\) meaning \(\d \in \mf{q}_{\smc{O}}\). But primality of \(\mf{p}\) forces \(\d \notin \mf{p}\). Whence \(\mf{q}_{\smc{O}} \subsetneq \mf{p}\). For the reverse implication, suppose \(\mf{q}_{\smc{O}} \subsetneq \mf{p}\). Then we may find a nonzero \(\a \in \mf{q}_{\smc{O}}-\mf{p}\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). It follows that \(\conj{\smc{O}} \subset \smc{O}_{\mf{p}}\). As \(\mf{p}_{\mf{p}}\) is the unique maximal ideal of \(\smc{O}_{\mf{p}}\), it is necessarily a prime. In view of the previous inclusion, \(\conj{\mf{p}}\) is then a prime of \(\conj{\smc{O}}\) containing \(\mf{p}\) and is therefore above \(\mf{p}\) as \(\smc{O}\) is one-dimensional. Since \(\conj{\smc{O}}_{\conj{\mf{p}}}\) is an integrally closed domain by \cref{prop:localization_of_integral_closure_is_integral_closure}, it is enough to show \(\conj{\smc{O}}_{\conj{\mf{p}}} = \smc{O}_{\mf{p}}\). The reverse inclusion holds because \(\conj{\mf{p}}\) is above \(\mf{p}\). For the forward inclusion, Suppose \(\frac{\eta}{\d} \in \conj{\smc{O}}_{\conj{\mf{p}}}\). Then \(\a\eta \in \smc{O}\) and \(\a\d \notin \mf{p}\) by primality of \(\mf{p}\). Whence \(\frac{\eta}{\d} \in \smc{O}_{\mf{p}}\) proving the forward inclusion. This completes the proof of the first statement.
 
       As for the second statement, we have already verified \(\conj{\mf{p}}\) is a prime of \(\conj{\smc{O}}\) above \(\mf{p}\) and that \(\conj{\smc{O}}_{\conj{\mf{p}}} = \smc{O}_{\mf{p}}\). To show it is the unique prime of \(\conj{\smc{O}}\) above \(\mf{p}\), let \(\conj{\mf{q}}\) be another prime of \(\conj{\smc{O}}\) above \(\mf{p}\). In view of the identity \(\conj{\smc{O}}_{\conj{\mf{p}}} = \smc{O}_{\mf{p}}\), it follows that \(\conj{\smc{O}}_{\conj{\mf{p}}} \subseteq \conj{\smc{O}}_{\conj{\mf{q}}}\). The inclusion-preserving bijections in \cref{prop:localization_prime_bijection} show 
       \[
@@ -2027,41 +2027,43 @@
     \[
       \l = \sum_{j}\k_{j}^{\vee}\l_{j}^{\vee},
     \]
-    with \(\k_{j}^{\vee} \in K\). As the dual basis is determined by \(\Trace_{L/K}(\l_{i}\l_{j}^{\vee}) = \d_{i,j}\), it follows that \(\l \in \L^{\vee}\) if and only if \(\k_{j}^{\vee} \in \smc{O}\). Whence \(\l_{1}^{\vee},\ldots,\l_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a \(\smc{O}\)-submodule of \(L\) and thus is a complete \(\smc{O}\)-lattice of \(L\). As the dual of the dual basis is the original basis, \((\mf{L}^{\vee})^{\vee} = \mf{L}\). The prototypical complete \(\smc{O}\)-lattice of \(L\) is \(\mc{O}\) whence it admits a dual \(\mc{O}^{\vee}\).
+    with \(\k_{j}^{\vee} \in K\). As the dual basis is determined by \(\Trace_{L/K}(\l_{i}\l_{j}^{\vee}) = \d_{i,j}\), it follows that \(\l \in \mf{L}^{\vee}\) if and only if \(\k_{j}^{\vee} \in \smc{O}\). Whence \(\l_{1}^{\vee},\ldots,\l_{n}^{\vee}\) is a basis for \(\mf{L}^{\vee}\) as an \(\smc{O}\)-submodule of \(L\) and thus \(\mf{L}^{\vee}\) is a complete \(\smc{O}\)-lattice of \(L\). As the dual of the dual basis is the original basis, \((\mf{L}^{\vee})^{\vee} = \mf{L}\). The prototypical complete \(\smc{O}\)-lattice of \(L\) is \(\mc{O}\) whence it admits a dual \(\mc{O}^{\vee}\).
 
-    Observe that an \(\smc{O}\)-lattice of \(L\) is not necessarily a fractional ideal of \(\mc{O}\) as it need not be an \(\mc{O}\)-submodule of \(L\). However, every fractional ideal \(\mf{F}\) of \(\mc{O}\) is a complete \(\smc{O}\)-lattice of \(L\). Indeed, \(\mf{F}\) is a finitely generated \(\smc{O}\)-submodule of \(L\) as \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. Moreover, \(\mf{F}\) contains a basis of \(L/K\). To see this, let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) contained in \(\mc{O}\) and let \(\a \in \mf{F}\) be nonzero. Then \(\a\l_{1},\ldots,\a\l_{n}\) is a basis for \(L/K\) contained in \(\mf{F}\). As \(\mf{F}\) is complete, it admits a dual \(\mf{F}^{\vee}\). The dual \(\mf{F}^{\vee}\) is also a fractional ideal of \(\mc{O}\). \todo{xxx}
+    Observe that an \(\smc{O}\)-lattice of \(L\) is not necessarily a fractional ideal of \(\mc{O}\) as it need not be an \(\mc{O}\)-submodule of \(L\). However, every fractional ideal \(\mf{F}\) of \(\mc{O}\) is a complete \(\smc{O}\)-lattice of \(L\). Indeed, \(\mf{F}\) is a finitely generated \(\smc{O}\)-submodule of \(L\) as \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. Moreover, \(\mf{F}\) contains a basis of \(L/K\). To see this, let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) contained in \(\mc{O}\) and let \(\a \in \mf{F}\) be nonzero. Then \(\a\l_{1},\ldots,\a\l_{n}\) is a basis for \(L/K\) contained in \(\mf{F}\). As \(\mf{F}\) is complete, it admits a dual \(\mf{F}^{\vee}\). The dual \(\mf{F}^{\vee}\) is also a fractional ideal of \(\mc{O}\). To see that it is an \(\mc{O}\)-submodule of \(L\), we have \(\Trace_{L/K}(\mc{O}\mf{F}) \subseteq \smc{O}\) by \cref{prop:trace_and_norm_AKBL} upon writing \(\mf{F} = \frac{1}{\d}\mf{A}\) for some nonzero \(\d\) and integral ideal \(\mf{A}\). Whence \(\mf{F}^{\vee}\) is a finitely generated \(\mc{O}\)-submodule of \(L\) as \(\mc{O}\) is a finitely generated \(\smc{O}\)-module. In fact, there is a simple relationship between the duals \(\mf{F}^{\vee}\) and \(\mc{O}^{\vee}\) given by
+    \[
+      \mf{F}^{\vee} = \mf{F}^{-1}\mc{O}^{\vee}.
+    \]
+    For the forward inclusion, observe that \(\Trace_{L/K}(\mf{F}^{\vee}\mf{F}\mc{O}) \subseteq \smc{O}\). Whence \(\mf{F}^{\vee}\mf{F} \subseteq \mc{O}^{\vee}\) which is equivalent to \(\mf{F}^{\vee} \subseteq \mf{F}^{-1}\mc{O}^{\vee}\). This proves the forward inclusion. For the reverse inclusion, we have \(\Trace_{L/K}(\mf{F}^{-1}\mc{O}^{\vee}\mf{F}) \subseteq \smc{O}\). Thus \(\mf{F}^{-1}\mc{O}^{\vee} \subseteq \mf{F}^{\vee}\) proving the reverse inclusion.
     
-    There is a simple relationship between the duals \(\mf{F}^{\vee}\) and \(\mc{O}^{\vee}\).
+    We now turn to the construction of two specific integral ideals which encode many properties of fractional ideals, ramification of primes, and \(\smc{O}\)-lattices of \(L\). It turns out that it is exceptionally rare for primes of \(\mc{O}\) and \(\smc{O}\) to ramify. The two integral ideals we will construct, one of \(\mc{O}\) and the other of \(\smc{O}\), will encode the ramification of the corresponding primes. These integral ideals are the different and discriminant respectively. We being by defining the \textbf{complement}\index{complement} \(\mf{C}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) by
+    \[
+      \mf{C}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}.  
+    \]
+    As we have seen, this is a fractional ideal of \(\mc{O}\) and hence a complete \(\smc{O}\)-lattice of \(L\). The \textbf{different}\index{different} \(\mf{D}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) is defined to be
+    \[
+      \mf{D}_{\mc{O}/\smc{O}} = (\mc{O}^{\vee})^{-1}.  
+    \]
+    In other words, the different is the inverse of the complement and so
+    \[
+      \mf{D}_{\mc{O}/\smc{O}} = \{\l \in L: \l\mc{O}^{\vee} \subseteq \mc{O}\}.  
+    \]
+    As \(\mc{O} \subseteq \mc{O}^{\vee}\) by \cref{prop:trace_and_norm_AKBL}, the definition of the inverse shows \(\mf{D}_{\mc{O}/\smc{O}} \subseteq \mc{O}\). Therefore the different \(\mf{D}_{\mc{O}/\smc{O}}\) is an integral ideal of \(\mc{O}\) and we have a chain of inclusions
+    \[
+      \mf{D}_{\mc{O}/\smc{O}} \subseteq \mc{O} \subseteq \mc{O}^{\vee}.
+    \]
+    From this chain we see that the different \(\mf{D}_{\mc{O}/\smc{O}}\) is a measure of how much \(\mc{O}\) fails to be self-dual as \(\mf{D}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}\) if and only if \(\mc{O}\) is self-dual. In terms of the different, the dual \(\mf{F}^{\vee}\) of a fractional ideal \(\mf{F}\) of \(\mc{O}\) may be expressed as
+    \[
+      \mf{F}^{\vee} = \mf{F}^{-1}\mf{D}_{\mc{O}/\smc{O}}^{-1}.
+    \]
+    Now for the discriminant. We define the \textbf{discriminant}\index{discriminant} \(\mf{d}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) to be the integral ideal of \(\smc{O}\) generated by the discriminants \(d_{L/K}(\a_{1},\ldots,\a_{n})\) as \(\a_{1},\ldots,\a_{n}\) run over all bases of \(L/K\) contained in \(\mc{O}\). Recall that if \(\mc{O}/\smc{O}\) admits an integral basis then \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\). In this case, bases of \(L/K\) contained in \(\mc{O}\) are precisely the integral bases of \(\mc{O}/\smc{O}\). Then
+    \[
+      \mf{d}_{\mc{O}/\smc{O}} = d_{\mc{O}/\smc{O}}\smc{O},
+    \]
+    so that the discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) is generated by the discriminant \(d_{\mc{O}/\smc{O}}\). In particular, \(\mf{d}_{\mc{O}/\smc{O}}\) is principal if \(\mc{O}/\smc{O}\) admits an integral basis. In view of \cref{thm:integral_basis_AKBL}, this will hold if \(\smc{O}\) is a principal ideal domain.
 
-    \begin{proposition}\label{prop:dual_lattice_is_fractional}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(\mf{F}\) be a fractional ideal of \(\mc{O}\). Then
-      \[
-        \mf{F}^{\vee} = \mf{F}^{-1}\mc{O}^{\vee}.
-      \]
-    \end{proposition}
     \iffalse
-    \begin{proof}
-      We will first show that \(\mf{F}^{\vee}\) is a finitely generated \(\smc{O}\)-submodule of \(L\). Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). Using \cref{prop:field_of_fractions_AKBL} to multiply by a nonzero element of \(\smc{O}\), if necessary, we can ensure that this basis is contained in \(\mc{O}\). Now choose some nonzero \(\a \in \mf{F} \cap \smc{O}\) (such an element exists since every prime \(\mf{P}\) of \(\mc{O}\) is above a prime \(\mf{p}\) of \(\smc{O}\) and \(\mf{F}\) is of the form \(\mf{F} = \frac{1}{\d}\mf{A}\) for some nonzero \(\d \in \mc{O}\) and integral ideal \(\mf{A}\) so that \(\mf{A} \subseteq \mf{F}\)). Now suppose \(\l \in \mf{F}^{\vee}\) and write \(\l = \k_{1}\l_{1}+\cdots+\k_{n}\l_{n}\) with \(\k_{i} \in K\) for \(1 \le i \le n\). Then linearity of the trace implies
-      \[
-        \sum_{1 \le j \le n}\a\k_{j}\Trace_{L/K}(\l_{i}\l_{j}) = \Trace_{L/K}(\a\l_{i}\l),
-      \]
-      for \(1 \le i \le n\). These \(n\) equations are equivalent to the identity
-      \[
-        \Trace_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \a\k_{1} \\ \vdots \\ \a\k_{n} \end{pmatrix} = \begin{pmatrix} \Trace_{L/K}(\a\l_{1}\l) \\ \vdots \\ \Trace_{L/K}(\a\l_{n}\l) \end{pmatrix}.
-      \]
-      Multiplying on the left by the adjugate \(\adj(\Trace_{L/K}(\l_{1},\ldots,\l_{n}))\) of \(\Trace_{L/K}(\l_{1},\ldots,\l_{n})\) and recalling that a matrix times its adjugate is its determinant times the identity, we see that
-      \[
-        d_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \a\k_{1} \\ \vdots \\ \a\k_{n} \end{pmatrix} = \adj(\Trace_{L/K}(\l_{1},\ldots,\l_{n}))\begin{pmatrix} \Trace_{L/K}(\a\l_{1}\l) \\ \vdots \\ \Trace_{L/K}(\a\l_{n}\l) \end{pmatrix}.
-      \]
-      Since \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\) that is contained in \(\mc{O}\), the matrix \(\Trace_{L/K}(\l_{1},\ldots,\l_{n})\) has entries in \(\smc{O}\) by \cref{prop:trace_and_norm_AKBL} and therefore \(\adj(\Trace_{L/K}(\l_{1},\ldots,\l_{n}))\) does too. As \(\a\l_{i} \in \mf{F}\) (because \(\l_{j} \in \mc{O}\) for all \(j\)) and \(\l \in \mf{F}^{\vee}\), \cref{prop:trace_and_norm_AKBL} again implies \(\Trace_{L/K}(\a\l_{i}\l) \in \smc{O}\) for all \(i\). So the right-hand side has entires in \(\smc{O}\) and hence the left-hand side must as well. This means \(d_{L/K}(\l_{1},\ldots,\l_{n})\a\k_{i} \in \smc{O}\) for all \(i\). Since \(\l \in \mf{F}^{\vee}\) was arbitrary, we have
-      \[
-        \a d_{L/K}(\l_{1},\ldots,\l_{n})\mf{F}^{\vee} \subseteq \mc{O}.
-      \]
-      As \(\mc{O}\) is a finitely generated \(\smc{O}\)-module by \cref{prop:Dedekind_extension_facts}, it follows that \(\mf{F}^{\vee}\) is a finitely generated \(\smc{O}\)-submodule of \(L\). Therefore \(\mf{F}^{\vee}\) is also a finitely generated \(\mc{O}\)-submodule of \(L\) if it is preserved under multiplication by \(\mc{O}\). Let \(\a \in \mc{O}\) and \(\b \in \mf{F}^{\vee}\). Then we must show \(\a\b \in \mf{F}^{\vee}\). To see this, observe that \(\Trace_{L/K}(\a\b\mf{F}) \subseteq \Trace_{L/K}(\b\mf{F}) \subseteq \smc{O}\) by \cref{prop:trace_and_norm_AKBL} since \(\a\mf{F} \subseteq \mf{F}\) and \(\b \in \mf{F}^{\vee}\). Therefore \(\a\b \in \mf{F}^{\vee}\) and hence \(\mf{F}^{\vee}\) is a fractional ideal proving the first statement. To prove the second statement we will show containment in both directions. For the forward containment, first suppose \(\a \in \mf{F}^{\vee}\) and \(\b \in \mf{F}\). Then \(\Trace_{L/K}(\a\b\mc{O}) \subseteq \Trace_{L/K}(\a\mf{F}) \subseteq \smc{O}\) by \cref{prop:trace_and_norm_AKBL} since \(\b\mc{O} \subseteq \mf{F}\) and \(\a \in \mf{F}^{\vee}\). Hence \(\a\b \in \mc{O}^{\vee}\) so that \(\mf{F}^{\vee}\mf{F} \subseteq \mc{O}^{\vee}\) and therefore \(\mf{F}^{\vee} \subseteq \mf{F}^{-1}\mc{O}^{\vee}\). This proves the forward containment. For the reverse containment, suppose \(\a \in \mf{F}^{-1}\) and \(\b \in \mc{O}^{\vee}\). Then \(\Trace_{L/K}(\a\b\mf{F}) \subseteq \Trace_{L/K}(\b\mc{O}) \subseteq \smc{O}\) by \cref{prop:trace_and_norm_AKBL} since \(\a\mf{F} \subseteq \mc{O}\) and \(\b \in \mc{O}^{\vee}\). Thus \(\a\b \in \mf{F}^{\vee}\) implying \(\mf{F}^{-1}\mc{O}^{\vee} \subseteq \mf{F}^{\vee}\) and proving the reverse containment. This completes the proof.
-    \end{proof}
-
-    As the dual \(\mf{F}^{\vee}\) is a fractional ideal by \cref{prop:dual_lattice_is_fractional}, it is also a complete \(\smc{O}\)-lattice. As we might hope, localization respects duals:
-
+    As we might hope, localization respects duals:
+    
     \begin{proposition}\label{prop:localization_of_dual_is_dual_of_localization}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then for any fractional ideal \(\mf{F}\) of \(\mc{O}\), we have
       \[
@@ -2072,35 +2074,7 @@
       For the forward containment, suppose \(\l \in (\mf{F}D^{-1})^{\vee}\). Then \(\Trace_{L/K}(\l\mf{F}D^{-1}) \subseteq \smc{O}D^{-1}\). As \(D \subset K\), linearity of the trace implies \(\l = \frac{\a}{\d}\) with \(\Trace_{L/K}(\a\mf{F})\d \subseteq \smc{O}D^{-1}\) so that \(\a \in \mf{F}^{\vee}\) and \(\d \in D\). Hence \(\l \in (\mf{F}^{\vee})D^{-1}\) and the forward containment follows. For the reverse containment, suppose \(\frac{\a}{\d} \in (\mf{F}^{\vee})D^{-1}\). Then \(\a \in \mf{F}^{\vee}\) so that \(\Trace_{L/K}(\a\mf{F}) \subseteq \smc{O}\) and \(\d \in D\). As \(D \subset K\), linearity of the trace implies \(\Trace_{L/K}(\l\mf{F}) \subseteq \smc{O}D^{-1}\) with \(\l = \frac{\a}{\d}\). Hence \(\frac{\a}{\d} \in (\mf{F}D^{-1})^{\vee}\) and the reverse containment holds.
     \end{proof}
     
-    It turns out that it is exceptionally rare for primes of \(\mc{O}\) and \(\smc{O}\) to ramify. We will demonstrate this phenomena by constructs two integral ideals, one of \(\mc{O}\) and the other of \(\smc{O}\), which will encode the ramification of the corresponding primes. These integral ideals are the different and discriminant respectively. We define the \textbf{complement}\index{complement} \(\mf{C}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) by
-    \[
-      \mf{C}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}.  
-    \]
-    This is a fractional ideal by \cref{prop:dual_lattice_is_fractional}. The \textbf{different}\index{different} \(\mf{D}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) is defined to be the inverse of the complement \(\mf{C}_{\mc{O}/\smc{O}}\):
-    \[
-      \mf{D}_{\mc{O}/\smc{O}} = (\mc{O}^{\vee})^{-1}.  
-    \]
-    As \(\mc{O} \subseteq \mc{O}^{\vee}\) by \cref{prop:trace_and_norm_AKBL}, it follows from \cref{prop:explicit_inverse_ideal} that \(\mf{D}_{\mc{O}/\smc{O}}\) is an integral ideal and
-    \[
-      \mf{D}_{\mc{O}/\smc{O}} = \{\l \in L: \l\mc{O}^{\vee} \subseteq \mc{O}\}.  
-    \]
-    Also, \cref{lem:cancellation_isomorphism} gives the first isomorphism in the following chain:
-    \begin{equation}\label{equ:different_isomorphism_chain}
-      \mc{O}/\mf{D}_{\mc{O}/\smc{O}} \cong \mf{D}_{\mc{O}/\smc{O}}^{-1}/\mc{O} \cong \mc{O}^{\vee}/\mc{O}.
-    \end{equation}
-    From this chain of isomorphisms we find that
-    \[
-      \mf{D}_{\mc{O}/\smc{O}} \subseteq \mc{O} \subseteq \mc{O}^{\vee}.
-    \]
-    Therefore the different \(\mf{D}_{\mc{O}/\smc{O}}\) is a measure of how much \(\mc{O}\) fails to be self-dual for if \(\mf{D}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}\) then \(\mc{O}\) must be self-dual. Moreover, by \cref{prop:dual_lattice_is_fractional} we can express the dual fractional ideal \(\mf{F}^{\vee}\) of a fractional ideal \(\mf{F}\) of \(\smc{O}\) in terms of the different as
-    \[
-      \mf{F}^{\vee} = \mf{F}^{-1}\mf{D}_{\mc{O}/\smc{O}}^{-1}.
-    \]
-    Now for the discriminant. We define the \textbf{discriminant}\index{discriminant} \(\mf{d}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) to be the ideal of \(\smc{O}\) generated by all discriminants \(d_{L/K}(\a_{1},\ldots,\a_{n})\) as \(\a_{1},\ldots,\a_{n}\) run over all bases of \(L/K\) contained in \(\mc{O}\). Note that \(\mf{d}_{\mc{O}/\smc{O}}\) is necessarily an integral ideal. Recall that if \(\mc{O}/\smc{O}\) admits an integral then \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\). In this case, bases of \(L/K\) contained in \(\mc{O}\) are precisely the integral bases of \(\mc{O}/\smc{O}\). Then
-    \[
-      \mf{d}_{\mc{O}/\smc{O}} = d_{\smc{O}}(\mc{O})\smc{O},
-    \]
-    so that the discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) is generated by the discriminant \(d_{\smc{O}}(\mc{O})\). In particular, \(\mf{d}_{\mc{O}/\smc{O}}\) is a principal integral ideal if \(\mc{O}/\smc{O}\) admits an integral basis. By \cref{thm:integral_basis_AKBL} this will hold if \(\smc{O}\) is a principal ideal domain but not necessarily in general. The different and discriminant also respect localization:
+    The different and discriminant also respect localization:
 
     \begin{proposition}\label{prop:different_and_discriminant_respect_localization}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then
@@ -2195,11 +2169,11 @@
     \begin{proof}
       As the residue class extensions are assumed to be separable, \(\mf{p}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\) for some prime \(\mf{P}\) above \(\mf{p}\). In view of \cref{prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, it suffices to assume \(\mc{O}/\smc{O}\) is a local Dedekind extension. Therefore \(\smc{O}\) is a discrete valuation ring, \(\mc{O}\) is a principal ideal domain, and \(\mc{O}/\smc{O}\) admits an integral basis \(\a_{1},\ldots,\a_{n}\) making \(\mc{O}\) a free \(\smc{O}\)-module of rank \(n\). Then, as we have see, \(\mf{d}_{\mc{O}/\smc{O}}\) is principal and
       \[
-        \mf{d}_{\mc{O}/\smc{O}} = d_{\smc{O}}(\mc{O})\smc{O}.
+        \mf{d}_{\mc{O}/\smc{O}} = d_{\mc{O}/\smc{O}}\smc{O}.
       \]
-      Therefore \(\mf{p}\) divides \(\mf{d}_{\mc{O}/\smc{O}}\) if and only if \(d_{\smc{O}}(\mc{O}) \equiv 0 \tmod{\mf{p}}\). Since \(\conj{\a_{1}},\ldots,\conj{\a_{n}}\) is a basis for \(\mc{O}/\mf{p}\mc{O}\) as an \(\F_{\mf{p}}\)-vector space, it follows that
+      Therefore \(\mf{p}\) divides \(\mf{d}_{\mc{O}/\smc{O}}\) if and only if \(d_{\mc{O}/\smc{O}} \equiv 0 \tmod{\mf{p}}\). Since \(\conj{\a_{1}},\ldots,\conj{\a_{n}}\) is a basis for \(\mc{O}/\mf{p}\mc{O}\) as an \(\F_{\mf{p}}\)-vector space, it follows that
       \[
-        d_{\smc{O}}(\mc{O}) \equiv d_{\F_{\mf{p}}}(\mc{O}/\mf{p}\mc{O}) \pmod{\mf{p}}.
+        d_{\mc{O}/\smc{O}} \equiv d_{\F_{\mf{p}}}(\mc{O}/\mf{p}\mc{O}) \pmod{\mf{p}}.
       \]
       So \(\mf{p}\) divides \(\mf{d}_{\mc{O}/\smc{O}}\) if and only if \(d_{\F_{\mf{p}}}(\mc{O}/\mf{p}\mc{O}) = 0\). Now suppose \(\mf{p}\mc{O}\) has prime factorization
       \[
