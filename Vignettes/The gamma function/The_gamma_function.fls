@@ -1,8 +1,8 @@
-PWD /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The gamma function
+PWD /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The gamma function/The_gamma_function.tex
+INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function/The_gamma_function.tex
 OUTPUT The_gamma_function.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls

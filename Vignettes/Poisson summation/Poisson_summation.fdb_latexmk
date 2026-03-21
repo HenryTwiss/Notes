@@ -1,11 +1,11 @@
 # Fdb version 3
-["makeindex Poisson_summation.idx"] 1774039019 "Poisson_summation.idx" "Poisson_summation.ind" "Poisson_summation" 1774039144
+["makeindex Poisson_summation.idx"] 1774039019 "Poisson_summation.idx" "Poisson_summation.ind" "Poisson_summation" 1774059120
   "Poisson_summation.idx" 0 -1 0 "pdflatex"
   (generated)
   "Poisson_summation.ilg"
   "Poisson_summation.ind"
-["pdflatex"] 1774039143 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Poisson summation/Poisson_summation.tex" "Poisson_summation.pdf" "Poisson_summation" 1774039144
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Poisson summation/Poisson_summation.tex" 1774039143 15219 a8383b2dd1578d2b78615181122d98e7 ""
+["pdflatex"] 1774059120 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Poisson summation/Poisson_summation.tex" "Poisson_summation.pdf" "Poisson_summation" 1774059120
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Poisson summation/Poisson_summation.tex" 1774059105 15219 f74e6d1cec36503156553598fbe9302c ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1772735856 5446 b8e8c4c981b5aeb2a22d0d715bd1341b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -194,10 +194,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Poisson_summation.aux" 1774039144 2694 2d4962e6d22c26a14da7df5d52548dab "pdflatex"
+  "Poisson_summation.aux" 1774059120 2694 2d4962e6d22c26a14da7df5d52548dab "pdflatex"
   "Poisson_summation.ind" 0 -1 0 "makeindex Poisson_summation.idx"
-  "Poisson_summation.out" 1774039144 401 635c140c189cc69ba9f12d03fda8d109 "pdflatex"
-  "Poisson_summation.tex" 1774039143 15219 a8383b2dd1578d2b78615181122d98e7 ""
+  "Poisson_summation.out" 1774059120 401 635c140c189cc69ba9f12d03fda8d109 "pdflatex"
+  "Poisson_summation.tex" 1774059105 15219 f74e6d1cec36503156553598fbe9302c ""
   (generated)
   "Poisson_summation.aux"
   "Poisson_summation.idx"
