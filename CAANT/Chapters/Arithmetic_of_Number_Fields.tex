@@ -1009,15 +1009,17 @@
 
     It also turns out that the localization of the inverse is the inverse of the localization for any fractional ideal of \(\smc{O}\).
 
-    \begin{proposition}\label{prop:localization_of_inverse_is_inverse_of_localization}
-      Let \(\smc{O}\) be a Dedekind domain with field of fractions \(K\) and \(D\) be a multiplicative subset of \(\smc{O}\). Then for any fractional ideal \(\mf{f}\) of \(\smc{O}\), we have
+    \begin{proposition}\label{prop:inverse_of_localization_is_localization_of_inverse}
+      Let \(\smc{O}\) be an integral domain with field of fractions \(K\) and \(D\) be a multiplicative subset of \(\smc{O}\). Then for any fractional ideal \(\mf{f}\) of \(\smc{O}\), we have
       \[
-        \mf{f}^{-1}D^{-1} = (\mf{f}D^{-1})^{-1}.
+        (\mf{f}D^{-1})^{-1} = \mf{f}^{-1}D^{-1}.
       \]
     \end{proposition}
     \begin{proof}
-      As \(\mf{f}\mf{f}^{-1} \subseteq \smc{O}\) we have \(\mf{f}D^{-1}\mf{f}^{-1}D^{-1} \subseteq \smc{O}D^{-1}\) which shows the forward inclusion \(\mf{f}^{-1}D^{-1} \subseteq (\mf{f}D^{-1})^{-1}\). For the reverse inclusion, \(\mf{f}D^{-1}(\mf{f}D^{-1})^{-1} \subseteq \smc{O}D^{-1}\) and multiplying by \(\mf{f}^{-1}\) implies \((\mf{f}D^{-1})^{-1} \subseteq \mf{f}^{-1}D^{-1}\) which is the reverse inclusion.
+      The definition of the inverse implies \(\mf{f}D^{-1}(\mf{f}D^{-1})^{-1} \subseteq \smc{O}D^{-1}\). Multiplying by \(\mf{f}^{-1}\) shows \((\mf{f}D^{-1})^{-1} \subseteq \mf{f}^{-1}D^{-1}\). This proves the forward inclusion. Similarly, we have \(\mf{f}\mf{f}^{-1} \subseteq \smc{O}\) whence \(\mf{f}D^{-1}\mf{f}^{-1}D^{-1} \subseteq \smc{O}D^{-1}\) which proves the reverse inclusion.
     \end{proof}
+
+    Equivalently, this result says that inversion and localization are commutative. Therefore when inverting and localizing we do not need to specify the order in which these operations are performed.
 
     When \(\smc{O}\) is an integrally closed domain, localization respects integral closure.
 
@@ -2046,8 +2048,26 @@
       \mf{F}^{\vee} = \mf{F}^{-1}\mc{O}^{\vee}.
     \]
     For the forward inclusion, we have \(\Trace_{L/K}(\mf{F}^{\vee}\mf{F}) \subseteq \smc{O}\). Whence \(\mf{F}^{\vee}\mf{F} \subseteq \mc{O}^{\vee}\) which is equivalent to \(\mf{F}^{\vee} \subseteq \mf{F}^{-1}\mc{O}^{\vee}\). This proves the forward inclusion. For the reverse inclusion, observe that \(\Trace_{L/K}(\mc{O}^{\vee}) \subseteq \smc{O}\). Thus \(\mf{F}^{-1}\mc{O}^{\vee} \subseteq \mf{F}^{\vee}\) proving the reverse inclusion.
+
+    Also, we might hope that localization respects duals of fractional ideals in order to make their study more approachable. This turns out to be true and is a very useful property.
     
-    We now turn to the construction of two specific integral ideals which encode many properties of fractional ideals, ramification of primes, and \(\smc{O}\)-lattices of \(L\). It turns out that it is exceptionally rare for primes of \(\mc{O}\) and \(\smc{O}\) to ramify. The two integral ideals we will construct, one of \(\mc{O}\) and the other of \(\smc{O}\), will encode the ramification of the corresponding primes. These integral ideals are the different and discriminant respectively. We being by defining the \textbf{complement}\index{complement} \(\mf{C}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) by
+    \begin{proposition}\label{prop:dual_of_localization_is_localization_of_dual}
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then for any fractional ideal \(\mf{F}\) of \(\mc{O}\), we have
+      \[
+        (\mf{F}D^{-1})^{\vee} = \mf{F}^{\vee}D^{-1}.
+      \]
+    \end{proposition}
+    \begin{proof}
+      As \(D\) is a subset of \(K\), we have
+      \[
+        \Trace_{L/K}(\mf{F}^{\vee}\mf{F}D^{-1}) = \Trace_{L/K}(\mf{F}^{\vee}\mf{F})D^{-1}.
+      \]
+      It follows that \(\Trace_{L/K}(\mf{F}^{\vee}\mf{F}D^{-1}) \subseteq \smc{O}D^{-1}\) if and only if \(\Trace_{L/K}(\mf{F}^{\vee}\mf{F})D^{-1} \subseteq \smc{O}D^{-1}\). The forward and reverse inclusions both follows from this which proves the claim.
+    \end{proof}
+
+    In a similar spirit to \cref{prop:inverse_of_localization_is_localization_of_inverse}, this result says that dualization and localization are commutative. So when dualizing and localizing we do not need to specify the order in which these operations are performed.
+    
+    We now turn to the construction of two specific integral ideals which encode many properties of fractional ideals, ramification of primes, and \(\smc{O}\)-lattices of \(L\). In the study of these integral ideals, it will be revealed that it is an exceptionally rare phenomena for primes of \(\mc{O}\) and \(\smc{O}\) to ramify. The two integral ideals we will construct, one of \(\mc{O}\) and the other of \(\smc{O}\), will encode the ramification of the corresponding primes. These integral ideals are the different and discriminant respectively. We being by defining the \textbf{complement}\index{complement} \(\mf{C}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) by
     \[
       \mf{C}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}.  
     \]
@@ -2063,51 +2083,46 @@
     \[
       \mf{D}_{\mc{O}/\smc{O}} \subseteq \mc{O} \subseteq \mc{O}^{\vee}.
     \]
-    From this chain we see that the different \(\mf{D}_{\mc{O}/\smc{O}}\) is a measure of how much \(\mc{O}\) fails to be self-dual as \(\mf{D}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}\) if and only if \(\mc{O}\) is self-dual. In terms of the different, the dual \(\mf{F}^{\vee}\) of a fractional ideal \(\mf{F}\) of \(\mc{O}\) may be expressed as
+    From this chain we see that the different \(\mf{D}_{\mc{O}/\smc{O}}\) is a measure of how much \(\mc{O}\) fails to be self-dual since \(\mf{D}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}\) if and only if \(\mc{O}\) is self-dual. In terms of the different, the dual \(\mf{F}^{\vee}\) of a fractional ideal \(\mf{F}\) of \(\mc{O}\) may be expressed as
     \[
       \mf{F}^{\vee} = \mf{F}^{-1}\mf{D}_{\mc{O}/\smc{O}}^{-1}.
     \]
-    Now for the discriminant. We define the \textbf{discriminant}\index{discriminant} \(\mf{d}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) to be the integral ideal of \(\smc{O}\) generated by the discriminants \(d_{L/K}(\a_{1},\ldots,\a_{n})\) as \(\a_{1},\ldots,\a_{n}\) run over all bases of \(L/K\) contained in \(\mc{O}\). Recall that if \(\mc{O}/\smc{O}\) admits an integral basis then \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\). In this case, bases of \(L/K\) contained in \(\mc{O}\) are precisely the integral bases of \(\mc{O}/\smc{O}\). Then
+    As expected, the different respects localization.
+
+    \begin{proposition}\label{prop:different_respect_localization}
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then
+      \[
+        \mf{D}_{\mc{O}D^{-1}/\smc{O}D^{-1}} = \mf{D}_{\mc{O}/\smc{O}}D^{-1}.
+      \]
+    \end{proposition}
+    \begin{proof}
+      By definition of the different, it is equivalent to show
+      \[
+        ((\mc{O}D^{-1})^{\vee})^{-1} = (\mc{O}^{\vee})^{-1}D^{-1}.
+      \]
+      This identity follows from \cref{prop:inverse_of_localization_is_localization_of_inverse,prop:dual_of_localization_is_localization_of_dual}. 
+    \end{proof}
+
+    We define the \textbf{discriminant}\index{discriminant} \(\mf{d}_{\mc{O}/\smc{O}}\) of \(\mc{O}/\smc{O}\) to be the integral ideal of \(\smc{O}\) generated by the discriminants \(d_{L/K}(\l_{1},\ldots,\l_{n})\) as \(\l_{1},\ldots,\l_{n}\) run over all bases of \(L/K\) contained in \(\mc{O}\). Recall that if \(\mc{O}/\smc{O}\) admits an integral basis then \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\). In this case, bases of \(L/K\) contained in \(\mc{O}\) are precisely the integral bases of \(\mc{O}/\smc{O}\). Then
     \[
       \mf{d}_{\mc{O}/\smc{O}} = d_{\mc{O}/\smc{O}}\smc{O},
     \]
     so that the discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) is generated by the discriminant \(d_{\mc{O}/\smc{O}}\). In particular, \(\mf{d}_{\mc{O}/\smc{O}}\) is principal if \(\mc{O}/\smc{O}\) admits an integral basis. In view of \cref{thm:integral_basis_AKBL} this will hold if \(\smc{O}\) is a principal ideal domain.
 
-    The different and discriminant are important integral ideals because they keep track of which primes ramify. In fact, we will show that primes of \(\mc{O}\) and \(\smc{O}\) ramify in \(\mc{O}/\smc{O}\) if and only they divide the different \(\mf{D}_{\mc{O}/\smc{O}}\) and discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) respectively provided the residue class extensions are separable. To this end, we first prove some useful properties. The first is that localization respects duals of fractional ideals.
-    
-    \begin{proposition}\label{prop:localization_of_dual_is_dual_of_localization}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then for any fractional ideal \(\mf{F}\) of \(\mc{O}\), we have
-      \[
-        (\mf{F}D^{-1})^{\vee} = \mf{F}^{\vee}D^{-1}.
-      \]
-    \end{proposition}
-    \begin{proof}
-      As \(D\) is a subset of \(K\), we have
-      \[
-        \Trace_{L/K}(\mf{F}^{\vee}\mf{F}D^{-1}) = \Trace_{L/K}(\mf{F}^{\vee}\mf{F})D^{-1}.
-      \]
-      It follows that \(\Trace_{L/K}(\mf{F}^{\vee}\mf{F}D^{-1}) \subseteq \smc{O}D^{-1}\) if and only if \(\Trace_{L/K}(\mf{F}^{\vee}\mf{F})D^{-1} \subseteq \smc{O}D^{-1}\). This proves the claim.
-    \end{proof}
-
-    \todo{xxx}
-    
-    \iffalse
-    
-    The different and discriminant also respect localization:
+    Similarly to the different, the discriminant also respects localization.
 
     \begin{proposition}\label{prop:different_and_discriminant_respect_localization}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then
       \[
-        \mf{D}_{\mc{O}D^{-1}/\smc{O}D^{-1}} = \mf{D}_{\mc{O}/\smc{O}}D^{-1} \quad \text{and} \quad \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}} = \mf{d}_{\mc{O}/\smc{O}}D^{-1}
+        \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}} = \mf{d}_{\mc{O}/\smc{O}}D^{-1}.
       \]
     \end{proposition}
+    \iffalse
     \begin{proof}
-      For the first identity, it is equivalent to show
-      \[
-        ((\mc{O}D^{-1})^{\vee})^{-1} = (\mc{O}^{\vee})^{-1}D^{-1},
-      \]
-      by definition of the different. Applying \cref{prop:localization_of_inverse_is_inverse_of_localization,prop:localization_of_dual_is_dual_of_localization}, we see that the right-had side is equal to the left-hand side as desired. For the second identity, we will show containment in both directions. For the forward containment, suppose \(\frac{\a_{1}}{\d_{1}},\ldots,\frac{\a_{n}}{\d_{n}}\) is a basis of \(L/K\) contained in \(\mc{O}D^{-1}\). Setting \(\d = \d_{1} \cdots \d_{n}\), we see that \(\frac{\a_{1}\d}{\d_{1}},\ldots,\frac{\a_{n}\d}{\d_{n}}\) is a basis of \(L/K\) contained in \(\mc{O}\). As \(D \subset K\) and \(d_{L/K}\left(\frac{\a_{1}\d}{\d_{1}},\ldots,\frac{\a_{n}\d}{\d_{n}}\right) \in \mf{d}_{\mc{O}/\smc{O}}\), linearity of the trace implies \(d_{L/K}\left(\frac{\a_{1}}{\d_{1}},\ldots,\frac{\a_{n}}{\d_{n}}\right) \in \mf{d}_{\mc{O}/\smc{O}}D^{-1}\). This shows the forward containment. For the reverse containment, suppose \(\a_{1},\ldots,\a_{n}\) is a basis of \(L/K\) contained in \(\mc{O}\) and let \(\d \in D^{-1}\). Then \(\frac{\a_{1}}{\d},\ldots,\frac{\a_{n}}{\d}\) is a basis for \(L/K\) contained in \(\mc{O}D^{-1}\). As \(D \subseteq K\) and \(d_{L/K}\left(\frac{\a_{1}}{\d},\ldots,\frac{\a_{n}}{\d}\right) \in \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}}\), linearity of the trace again implies \(d_{L/K}(\a_{1}\ldots,\a_{n}) \in \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}}\) proving the reverse containment.
+      For the forward inclusion, suppose \(\frac{\a_{1}}{\d_{1}},\ldots,\frac{\a_{n}}{\d_{n}}\) is a basis of \(L/K\) contained in \(\mc{O}D^{-1}\). Setting \(\d = \prod_{i}\d_{i}\), we see that \(\frac{\a_{1}\d}{\d_{1}},\ldots,\frac{\a_{n}\d}{\d_{n}}\) is a basis of \(L/K\) contained in \(\mc{O}\). As \(D \subset K\) and \(d_{L/K}\left(\frac{\a_{1}\d}{\d_{1}},\ldots,\frac{\a_{n}\d}{\d_{n}}\right) \in \mf{d}_{\mc{O}/\smc{O}}\), linearity of the trace implies \(d_{L/K}\left(\frac{\a_{1}}{\d_{1}},\ldots,\frac{\a_{n}}{\d_{n}}\right) \in \mf{d}_{\mc{O}/\smc{O}}D^{-1}\). This shows the forward inclusion. For the reverse inclusion, suppose \(\a_{1},\ldots,\a_{n}\) is a basis of \(L/K\) contained in \(\mc{O}\) and let \(\d \in D^{-1}\). Then \(\frac{\a_{1}}{\d},\ldots,\frac{\a_{n}}{\d}\) is a basis for \(L/K\) contained in \(\mc{O}D^{-1}\). As \(D \subseteq K\) and \(d_{L/K}\left(\frac{\a_{1}}{\d},\ldots,\frac{\a_{n}}{\d}\right) \in \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}}\), linearity of the trace again implies \(d_{L/K}(\a_{1}\ldots,\a_{n}) \in \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}}\) proving the reverse inclusion.
     \end{proof}
+
+    The different and discriminant are important integral ideals because they keep track of which primes ramify. In fact, we will show that primes of \(\mc{O}\) and \(\smc{O}\) ramify in \(\mc{O}/\smc{O}\) if and only they divide the different \(\mf{D}_{\mc{O}/\smc{O}}\) and discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) respectively provided the residue class extensions are separable.
 
     We want to show that a prime \(\mf{P}\) of \(\mc{O}\) ramifies in \(\mc{O}/\smc{O}\) if and only if it divides the different \(\mf{D}_{\mc{O}/\smc{O}}\) provided the residue class extensions are separable. We first require a lemma:
 

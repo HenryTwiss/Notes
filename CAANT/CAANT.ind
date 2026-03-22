@@ -63,7 +63,7 @@
   \item Dirichlet orthogonality relations, \hyperpage{8}
   \item Dirichlet series, \hyperpage{89}
   \item discrete valuation ring, \hyperpage{55}
-  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{85}
+  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{86}
   \item divides, \hyperpage{42}
   \item divisor function, \hyperpage{3}
   \item dual, \hyperpage{84}
@@ -219,7 +219,7 @@
 
   \indexspace
 
-  \item valuation, \hyperpage{55--57}
+  \item valuation, \hyperpage{56, 57}
   \item Von Mangoldt coefficients, \hyperpage{121}
   \item von Mangoldt function, \hyperpage{4}
 
