@@ -1702,7 +1702,7 @@
     \[
       \mf{N}_{\mc{O}/\smc{O}}:I(\mc{O}) \to I(\smc{O}) \qquad \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}} \mapsto \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})},
     \]
-    called the \textbf{ideal norm}\index{ideal norm} of \(\mc{O}/\smc{O}\). This means that the ideal norm is multiplicative. It follows from the fundamental equality that
+    called the \textbf{ideal norm}\index{ideal norm} of \(\mc{O}/\smc{O}\). This means that the ideal norm is completely multiplicative. It follows from the fundamental equality that
     \[
       \mf{N}_{\mc{O}/\smc{O}}(\mf{p}\mc{O}) = \mf{p}^{n},
     \]
@@ -1710,7 +1710,19 @@
     \[
       \mf{N}_{\mc{O}/\smc{O}}(\mf{f}\mc{O}) = \mf{f}^{n}.
     \]
-    In any case, the ideal norm is aptly named because it is compatible with the field norm \(\Norm_{L/K}\).
+    In any case, the ideal norm is aptly named because it is compatible with the field norm. To prove this, we first show that the ideal norm is compatible with localization.
+
+    \begin{proposition}\label{prop:ideal_norm_localization_is_localization_of_ideal_norm}
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a completely multiplicative subset of \(\smc{O}\). Then
+      \[
+        \mf{N}_{\mc{O}D^{-1}/\smc{O}D^{-1}}(\mf{F}D^{-1}) = \mf{N}_{\mc{O}/\smc{O}}(\mf{F})D^{-1}.
+      \]
+    \end{proposition}
+    \begin{proof}
+      As the ideal norm is completely multiplicative, it suffices to prove the claim for a prime of \(\mc{O}\). So let \(\mf{P}\) be such a prime and let \(\mf{p}\) be the prime below it. If \(\mf{P}\) is not disjoint from \(D\) then neither is \(\mf{p}\), and their localizations are \(\mc{O}D^{-1}\) and \(\smc{O}D^{-1}\) respectively. Whence the claim is immediate as both sides are \(\smc{O}D^{-1}\). If \(\mf{P}\) is disjoint from \(D\) then the claim follows from \cref{prop:ramification_setup_respects_localization}.
+    \end{proof}
+
+    With this result in hand, we can shows that the ideal norm is compatible with the field norm.
 
     \begin{proposition}\label{prop:ideal_norm_of_principal_ideal}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Then
@@ -1720,39 +1732,35 @@
       for any \(\l \in L\).
     \end{proposition}
     \begin{proof}
-      Since both \(\mf{N}_{\mc{O}/\smc{O}}\) and \(\Norm_{L/K}\) are multiplicative and \(L\) is the field of fractions of \(\mc{O}\), it is enough to prove the claim when \(\l \in \mc{O}\). By prime factorization, we may write
+      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ideal_norm_localization_is_localization_of_ideal_norm}, we may assume that \(\mc{O}/\smc{O}\) is a Dedekind extension of principal ideal domains where \(\smc{O}\) is a discrete valuation ring. Moreover, as \(\mf{N}_{\mc{O}/\smc{O}}\) and \(\Norm_{L/K}\) are both completely multiplicative and \(L\) is the field of fractions of \(\mc{O}\), it is enough to prove the claim when \(\l \in \mc{O}\). By prime factorization, we may write
       \[
-        \l\mc{O} = \prod_{\mf{P}}\mf{P}^{v_{\mf{P}}(\l)},
+        \l\mc{O} = \prod_{\mf{P} \mid \mf{p}\mc{O}}\mf{P}^{v_{\mf{P}}(\l)},
       \]
-      where all but finitely many of the valuations \(v_{\mf{P}}(\l)\) are zero. In view of \cref{prop:ring_is_intersection_of_all_localizations}, it suffices to show
+      since every prime \(\mf{P}\) of \(\mc{O}\) is above the unique prime \(\mf{p}\) of \(\smc{O}\). Whence
       \[
-        \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O})_{\mf{p}} = \Norm_{L/K}(\l)\smc{O}_{\mf{p}},
+        \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O}) = \prod_{\mf{P} \mid \mf{p}\mc{O}}\mf{p}^{v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})} \quad \text{and} \quad \Norm_{L/K}(\l)\smc{O} = \mf{p}^{v_{\mf{p}}(\Norm_{L/K}(\l))},
       \]
-      for all primes \(\mf{p}\) of \(\smc{O}\). In view of the prime factorization of \(\l\mc{O}\) and that \(\smc{O}_{\mf{p}}\) is a discrete valuation ring by \cref{thm:Dedekind_if_and_only_if_all_localizations_are_discrete_valuation_rings}, we have
-      \[
-        \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O})_{\mf{p}} = \prod_{\mf{P} \mid \mf{p}\mc{O}}\mf{p}_{\mf{p}}^{v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})} \quad \text{and} \quad \Norm_{L/K}(\l)\smc{O}_{\mf{p}} = \mf{p}_{\mf{p}}^{v_{\mf{p}}(\Norm_{L/K}(\l))}.
-      \]
-      Therefore we are reduced to proving
+      and we are reduced to proving
       \[
         \sum_{\mf{P} \mid \mf{p}\mc{O}}v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P}) = v_{\mf{p}}(\Norm_{L/K}(\l)).
       \]
-      We will show this via a dimension computation. Recall that \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) is a Dedekind extension of principal ideal domains for \(L/K\) and admits an integral basis. We will compute the dimension of \(\mc{O}_{\mf{p}}/\l\mc{O}_{\mf{p}}\) as an \(\F_{\mf{p}}\)-vector space in two ways. First, the Chinese remainder theorem gives an isomorphism
+      We will show this by computing the dimension of \(\mc{O}/\smc{O}\) as an \(\F_{\mf{p}}\)-vector space in two ways. First, the Chinese remainder theorem gives an isomorphism
       \[
-        \mc{O}_{\mf{p}}/\l\mc{O}_{\mf{p}} \cong \bigop_{\mf{P} \mid \mf{p}\mc{O}}\mc{O}_{\mf{p}}/\mf{P}_{\mf{p}}^{v_{\mf{P}}(\l)}.
+        \mc{O}/\smc{O} \cong \bigop_{\mf{P} \mid \mf{p}\mc{O}}\mc{O}/\mf{P}^{v_{\mf{P}}(\l)}.
       \]
-      By \cref{lem:quotient_by_prime_power_isomorphism,prop:ramification_setup_respects_localization}, \(\mc{O}_{\mf{p}}/\mf{P}_{\mf{p}}^{v_{\mf{P}}(\l)}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})\). Therefore \(\mc{O}_{\mf{p}}/\l\mc{O}_{\mf{p}}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(\sum_{\mf{P} \mid \mf{p}\mc{O}}v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})\). On the other hand, \(\mc{O}_{\mf{p}}\) is a free \(\smc{O}_{\mf{p}}\) of rank \(n\) as \(\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}\) admits an integral basis. By the structure theorem for finitely generated modules over principal ideal domains and \cref{thm:integral_basis_AKBL}, we have isomorphisms
+      By \cref{lem:quotient_by_prime_power_isomorphism}, \(\mc{O}/\mf{P}^{v_{\mf{P}}(\l)}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})\). Therefore \(\mc{O}/\smc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(\sum_{\mf{P} \mid \mf{p}\mc{O}}v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})\). On the other hand, \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\) as \(\mc{O}/\smc{O}\) admits an integral basis. By the structure theorem for finitely generated modules over principal ideal domains and \cref{thm:integral_basis_AKBL}, we have isomorphisms
       \[
-        \mc{O}_{\mf{p}} \cong \bigop^{n}\smc{O}_{\mf{p}} \quad \text{and} \quad \l\mc{O}_{\mf{p}} \cong \bigop_{i}\pi^{k_{i}}\smc{O}_{\mf{p}},
+        \mc{O} \cong \bigop^{n}\smc{O} \quad \text{and} \quad \l\mc{O} \cong \bigop_{i}\pi^{k_{i}}\smc{O},
       \]
-      for some nonnegative integers \(k_{1},\ldots,k_{n}\) and a uniformizer \(\pi\) for \(\smc{O}_{\mf{p}}\). Whence there is another isomorphism
+      for some nonnegative integers \(k_{1},\ldots,k_{n}\) and where \(\pi\) is a uniformizer for \(\smc{O}\). Whence there is another isomorphism
       \[
-        \mc{O}_{\mf{p}}/\l\mc{O}_{\mf{p}} \cong \bigop_{i}\smc{O}_{\mf{p}}/\pi^{k_{i}}\smc{O}_{\mf{p}}.
+        \mc{O}/\smc{O} \cong \bigop_{i}\smc{O}/\pi^{k_{i}}\smc{O}.
       \]
-      Moreover, \(\Norm_{L/K}(\l) = \Norm_{\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}}(\l)\) by \cref{prop:trace_and_norm_reduce_for_integral_basis}. Recall that \(\Norm_{\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}}(\l)\) is the determinant of the \(\smc{O}_{\mf{p}}\)-linear operator
+      Moreover, \(\Norm_{L/K}(\l) = \Norm_{\mc{O}/\smc{O}}(\l)\) by \cref{prop:trace_and_norm_reduce_for_integral_basis}. Recall that \(\Norm_{\mc{O}/\smc{O}}(\l)\) is the determinant of the \(\smc{O}\)-linear operator
       \[
-        T_{\l}:\mc{O}_{\mf{p}} \to \mc{O}_{\mf{p}} \qquad x \mapsto \l x. 
+        T_{\l}:\mc{O} \to \mc{O} \qquad x \mapsto \l x. 
       \]
-      So under the aforementioned isomorphisms, it follows that \(\Norm_{\mc{O}_{\mf{p}}/\smc{O}_{\mf{p}}}(\l) = \pi^{\sum_{i}k_{i}}\) whence \(v_{\mf{p}}(\Norm_{L/K}(\l)) = \sum_{i}k_{i}\). The proof will be complete if the dimension of \(\mc{O}_{\mf{p}}/\l\mc{O}_{\mf{p}}\) as an \(\F_{\mf{p}}\)-vector space is \(\sum_{i}k_{i}\). From \cref{lem:quotient_by_prime_power_isomorphism,prop:ramification_setup_respects_localization} we see that \(\smc{O}_{\mf{p}}/\pi^{k_{i}}\smc{O}_{\mf{p}}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(k_{i}\). The claim follows from the last isomorphism above.
+      So under the aforementioned isomorphisms, it follows that \(\Norm_{\mc{O}/\smc{O}}(\l) = \pi^{\sum_{i}k_{i}}\) whence \(v_{\mf{p}}(\Norm_{L/K}(\l)) = \sum_{i}k_{i}\). The proof will be complete if the dimension of \(\mc{O}/\smc{O}\) as an \(\F_{\mf{p}}\)-vector space is \(\sum_{i}k_{i}\). From \cref{lem:quotient_by_prime_power_isomorphism} we see that \(\smc{O}/\pi^{k_{i}}\smc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(k_{i}\). The claim follows from the last isomorphism above.
     \end{proof}
 
     In light of this result, the ideal norm preserves principal ideals. This means that the ideal norm induces a homomorphism
@@ -1764,7 +1772,7 @@
     \subsection*{Number Fields}
       We now turn to the setting where \(L/K\) is an extension of number fields and recall that the underlying Dedekind extension is \(\mc{O}_{L}/\mc{O}_{K}\). Then every residue class extension is separable as \(\F_{p}\) is perfect. A prime \(\mf{p}\) of \(K\) is said to be \textbf{inert}\index{inert}, \textbf{nonsplit}\index{nonsplit}, \textbf{split}\index{split}, or \textbf{totally split}\index{totally split} in \(L/K\) if it is in \(\mc{O}_{L}/\mc{O}_{K}\). Primes \(\mf{P}\) and \(\mf{p}\) of \(L\) and \(K\) are said to be \textbf{unramified}\index{unramified}, \textbf{ramified}\index{ramified}, or \textbf{totally ramified}\index{totally ramified} in \(L/K\) if they are in \(\mc{O}_{L}/\mc{O}_{K}\). In particular, if \(\mf{P}\) is above \(\mf{p}\) then it is unramified in \(L/K\) if and only if \(e_{\mf{p}}(\mf{P}) = 1\). Lastly, the \textbf{ideal norm}\index{ideal norm} \(\mf{N}_{L/K}\) of \(L/K\) is the ideal norm \(\mf{N}_{\mc{O}_{L}/\mc{O}_{K}}\).
 
-      In the case of a number field \(K\), we can say much more as \(\mc{O}_{K}/\Z\) admits an integral basis and the reside class fields extension \(\F_{\mf{p}}/\F_{p}\) for a prime \(\mf{p}\) above \(p\) is an extension of finite fields. The \textbf{ideal norm}\index{ideal norm} \(\mf{N}_{K}\) of \(K\) is the ideal norm \(\mf{N}_{\mc{O}_{K}/\Z}\). As \(\Z\) is a principal ideal domain, every fractional ideal is principal. Therefore, \(\mf{N}_{K}(\mf{f})\) is generated by some \(r_{\mf{f}} \in \Q_{+}\) for every fractional ideal \(\mf{f}\) of \(\mc{O}_{K}\). As the ideal norm is multiplicative, this induces a homomorphism
+      In the case of a number field \(K\), we can say much more as \(\mc{O}_{K}/\Z\) admits an integral basis and the reside class fields extension \(\F_{\mf{p}}/\F_{p}\) for a prime \(\mf{p}\) above \(p\) is an extension of finite fields. The \textbf{ideal norm}\index{ideal norm} \(\mf{N}_{K}\) of \(K\) is the ideal norm \(\mf{N}_{\mc{O}_{K}/\Z}\). As \(\Z\) is a principal ideal domain, every fractional ideal is principal. Therefore, \(\mf{N}_{K}(\mf{f})\) is generated by some \(r_{\mf{f}} \in \Q_{+}\) for every fractional ideal \(\mf{f}\) of \(\mc{O}_{K}\). As the ideal norm is completely multiplicative, this induces a homomorphism
       \[
         \Norm_{K}:I_{K} \to \Q_{+} \qquad \mf{f} \mapsto r_{\mf{f}},
       \]
@@ -2079,7 +2087,7 @@
     \[
       \mf{D}_{\mc{O}/\smc{O}} = \{\l \in L: \l\mc{O}^{\vee} \subseteq \mc{O}\}.  
     \]
-    As \(\mc{O} \subseteq \mc{O}^{\vee}\) by \cref{prop:trace_and_norm_AKBL}, the definition of the inverse shows \(\mf{D}_{\mc{O}/\smc{O}} \subseteq \mc{O}\). Therefore the different \(\mf{D}_{\mc{O}/\smc{O}}\) is an integral ideal of \(\mc{O}\) and we have a chain of inclusions
+    As \(\mc{O} \subseteq \mc{O}^{\vee}\) by \cref{prop:trace_and_norm_AKBL}, inverting shows \(\mf{D}_{\mc{O}/\smc{O}} \subseteq \mc{O}\). Therefore the different \(\mf{D}_{\mc{O}/\smc{O}}\) is an integral ideal of \(\mc{O}\) and we have a chain of inclusions
     \[
       \mf{D}_{\mc{O}/\smc{O}} \subseteq \mc{O} \subseteq \mc{O}^{\vee}.
     \]
@@ -2087,7 +2095,7 @@
     \[
       \mf{F}^{\vee} = \mf{F}^{-1}\mf{D}_{\mc{O}/\smc{O}}^{-1}.
     \]
-    As expected, the different respects localization.
+    As for other properties of the different, it respects localization which will be useful in further developments.
 
     \begin{proposition}\label{prop:different_respect_localization}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then
@@ -2109,7 +2117,7 @@
     \]
     so that the discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) is generated by the discriminant \(d_{\mc{O}/\smc{O}}\). In particular, \(\mf{d}_{\mc{O}/\smc{O}}\) is principal if \(\mc{O}/\smc{O}\) admits an integral basis. In view of \cref{thm:integral_basis_AKBL} this will hold if \(\smc{O}\) is a principal ideal domain.
 
-    Similarly to the different, the discriminant also respects localization.
+    As for properties of the discriminant, we have the very useful fact that it respects localization just as the different does.
 
     \begin{proposition}\label{prop:different_and_discriminant_respect_localization}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(D\) be a multiplicative subset of \(\smc{O}\). Then
@@ -2117,22 +2125,20 @@
         \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}} = \mf{d}_{\mc{O}/\smc{O}}D^{-1}.
       \]
     \end{proposition}
-    \iffalse
     \begin{proof}
-      For the forward inclusion, suppose \(\frac{\a_{1}}{\d_{1}},\ldots,\frac{\a_{n}}{\d_{n}}\) is a basis of \(L/K\) contained in \(\mc{O}D^{-1}\). Setting \(\d = \prod_{i}\d_{i}\), we see that \(\frac{\a_{1}\d}{\d_{1}},\ldots,\frac{\a_{n}\d}{\d_{n}}\) is a basis of \(L/K\) contained in \(\mc{O}\). As \(D \subset K\) and \(d_{L/K}\left(\frac{\a_{1}\d}{\d_{1}},\ldots,\frac{\a_{n}\d}{\d_{n}}\right) \in \mf{d}_{\mc{O}/\smc{O}}\), linearity of the trace implies \(d_{L/K}\left(\frac{\a_{1}}{\d_{1}},\ldots,\frac{\a_{n}}{\d_{n}}\right) \in \mf{d}_{\mc{O}/\smc{O}}D^{-1}\). This shows the forward inclusion. For the reverse inclusion, suppose \(\a_{1},\ldots,\a_{n}\) is a basis of \(L/K\) contained in \(\mc{O}\) and let \(\d \in D^{-1}\). Then \(\frac{\a_{1}}{\d},\ldots,\frac{\a_{n}}{\d}\) is a basis for \(L/K\) contained in \(\mc{O}D^{-1}\). As \(D \subseteq K\) and \(d_{L/K}\left(\frac{\a_{1}}{\d},\ldots,\frac{\a_{n}}{\d}\right) \in \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}}\), linearity of the trace again implies \(d_{L/K}(\a_{1}\ldots,\a_{n}) \in \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}}\) proving the reverse inclusion.
+      For the forward inclusion, suppose \(\frac{\l_{1}}{\d_{1}},\ldots,\frac{\l_{n}}{\d_{n}}\) is a basis of \(L/K\) contained in \(\mc{O}D^{-1}\). Upon setting \(\d = \prod_{i}\d_{i}\), we see that \(\frac{\l_{1}\d}{\d_{1}},\ldots,\frac{\l_{n}\d}{\d_{n}}\) is a basis of \(L/K\) contained in \(\mc{O}\). Then \(d_{L/K}\left(\frac{\l_{1}\d}{\d_{1}},\ldots,\frac{\l_{n}\d}{\d_{n}}\right) \in \mf{d}_{\mc{O}/\smc{O}}\) whence \(d_{L/K}\left(\frac{\l_{1}}{\d_{1}},\ldots,\frac{\l_{n}}{\d_{n}}\right) \in \mf{d}_{\mc{O}/\smc{O}}D^{-1}\). This shows the forward inclusion. For the reverse inclusion, suppose \(\frac{\l_{1}}{\d},\ldots,\frac{\l_{n}}{\d}\) is such that \(\l_{1},\ldots,\l_{n}\) is a basis of \(L/K\) contained in \(\mc{O}\). Then \(\frac{\l_{1}}{\d},\ldots,\frac{\l_{n}}{\d}\) is a basis for \(L/K\) contained in \(\mc{O}D^{-1}\). So \(d_{L/K}\left(\frac{\a_{1}}{\d},\ldots,\frac{\a_{n}}{\d}\right) \in \mf{d}_{\mc{O}D^{-1}/\smc{O}D^{-1}}\) whence \(d_{L/K}(\l_{1},\ldots,\l_{n}) \in \mf{d}_{\mc{O}/\smc{O}}D^{-1}\). This proves the reverse inclusion.
     \end{proof}
 
-    The different and discriminant are important integral ideals because they keep track of which primes ramify. In fact, we will show that primes of \(\mc{O}\) and \(\smc{O}\) ramify in \(\mc{O}/\smc{O}\) if and only they divide the different \(\mf{D}_{\mc{O}/\smc{O}}\) and discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) respectively provided the residue class extensions are separable.
-
-    We want to show that a prime \(\mf{P}\) of \(\mc{O}\) ramifies in \(\mc{O}/\smc{O}\) if and only if it divides the different \(\mf{D}_{\mc{O}/\smc{O}}\) provided the residue class extensions are separable. We first require a lemma:
+    The different and discriminant are important integral ideals because they keep track of which primes ramify. In fact, we will show that primes of \(\mc{O}\) and \(\smc{O}\) ramify in \(\mc{O}/\smc{O}\) if and only they divide the different \(\mf{D}_{\mc{O}/\smc{O}}\) and discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) respectively provided the residue class extensions are separable. To this end, we will require a lemma.
 
     \begin{lemma}\label{lem:different_containment_lemma}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(\mf{A}\) be an integral ideal of \(\mc{O}\). Then \(\mf{A} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\Trace_{L/K}(\mf{A}^{-1}) \subseteq \smc{O}\).
     \end{lemma}
     \begin{proof}
-      \(\mf{A}\) divides \(\mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\mf{D}_{\mc{O}/\smc{O}} \subseteq \mf{A}\). This equivalent to \((\mc{O}^{\vee})^{-1} \subseteq \mf{A}\) and inverting shows the further equivalence \(\mf{A}^{-1} \subseteq \mc{O}^{\vee}\). This last containment is equivalent to \(\Trace_{L/K}(\mf{A}^{-1}) \subseteq \smc{O}\) which completes the proof.
+      \(\mf{A}\) divides \(\mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\mf{D}_{\mc{O}/\smc{O}} \subseteq \mf{A}\). This equivalent to \((\mc{O}^{\vee})^{-1} \subseteq \mf{A}\) and inverting shows the further equivalence \(\mf{A}^{-1} \subseteq \mc{O}^{\vee}\). This last inclusion is equivalent to \(\Trace_{L/K}(\mf{A}^{-1}) \subseteq \smc{O}\).
     \end{proof}
 
+    \iffalse
     With \cref{lem:different_containment_lemma} in hand, we can now prove our claim:
 
     \begin{theorem}\label{thm:ramifies_if_and_only_if_divides_the_different}
