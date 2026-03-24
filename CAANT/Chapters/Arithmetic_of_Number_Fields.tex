@@ -2137,7 +2137,7 @@
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and let \(\mf{A}\) be an integral ideal of \(\mc{O}\). Then \(\mf{A} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\Trace_{L/K}(\mf{A}^{-1}) \subseteq \smc{O}\).
     \end{lemma}
     \begin{proof}
-      \(\mf{A}\) divides \(\mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\mf{D}_{\mc{O}/\smc{O}} \subseteq \mf{A}\). This equivalent to \((\mc{O}^{\vee})^{-1} \subseteq \mf{A}\) and inverting shows the further equivalence \(\mf{A}^{-1} \subseteq \mc{O}^{\vee}\). This last inclusion is equivalent to \(\Trace_{L/K}(\mf{A}^{-1}) \subseteq \smc{O}\).
+      Since to divide is to contain, \(\mf{A} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\mf{D}_{\mc{O}/\smc{O}} \subseteq \mf{A}\). This equivalent to \((\mc{O}^{\vee})^{-1} \subseteq \mf{A}\) and inverting shows the further equivalence \(\mf{A}^{-1} \subseteq \mc{O}^{\vee}\). This last inclusion is equivalent to \(\Trace_{L/K}(\mf{A}^{-1}) \subseteq \smc{O}\).
     \end{proof}
 
     With this result, we can now show that a prime of \(\mc{O}\) is ramified in \(\mc{O}/\smc{O}\) if and only if it divides the discriminant \(\mf{D}_{\mc{O}/\smc{O}}\) provided the residue class extensions are separable. In fact, we will prove something slightly stronger.
@@ -2152,21 +2152,29 @@
     \begin{proof}
       As all residue class extensions are separable by assumption, \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). But properties (i) and (ii) together imply that \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). Whence \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\). So it remains to prove properties (i) and (ii).
 
-      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, we may assume that \(\mc{O}/\smc{O}\) is a local Dedekind extension. We will first show the weaker condition \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\) for any ramification index \(e_{\mf{p}}(\mf{P})\).
-      
-      \iffalse To this end, write \(\mf{p}\mc{O} = \mf{P}^{e_{\mf{p}}(\mf{P})-1}\mf{A}\) for some integral ideal \(\mf{A}\) of \(\mc{O}\) so that \(\mf{P} \mid\mid \mf{A}\). By \cref{lem:different_containment_lemma}, \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\Trace_{L/K}(\mf{P}^{1-e_{\mf{p}}(\mf{P})}) \subseteq \smc{O}\). Since \(\mf{P}^{1-e_{\mf{p}}(\mf{P})} = \mf{p}^{-1}\mf{A}\), linearity of the trace implies that this is equivalent to \(\Trace_{L/K}(\mf{A}) \subseteq \mf{p}\). By \cref{prop:trace_and_norm_reduce_for_integral_basis}, \(\Trace_{K/L}(\mf{A}) = \Trace_{\mc{O}/\smc{O}}(\mf{A})\) and so it is further equivalent to show
+      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, we may assume that \(\mc{O}/\smc{O}\) is a local Dedekind extension. We will first show the weaker condition \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\) for any ramification index \(e_{\mf{p}}(\mf{P})\). To this end, write \(\mf{p}\mc{O} = \mf{P}^{e_{\mf{p}}(\mf{P})-1}\mf{A}\) for some integral ideal \(\mf{A}\) of \(\mc{O}\) so that \(\mf{P} \mid\mid \mf{A}\). By \cref{lem:different_containment_lemma}, \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\Trace_{L/K}(\mf{P}^{1-e_{\mf{p}}(\mf{P})}) \subseteq \smc{O}\). As \(\mf{P}^{1-e_{\mf{p}}(\mf{P})} = \mf{p}^{-1}\mf{A}\), it it further equivalent to show \(\Trace_{L/K}(\mf{A}) \subseteq \mf{p}\). As \(\mc{O}/\smc{O}\) admits an integral basis, we have \(\Trace_{K/L}(\mf{A}) = \Trace_{\mc{O}/\smc{O}}(\mf{A})\) from  \cref{prop:trace_and_norm_reduce_for_integral_basis} and so it is further equivalent to show
       \[
-        \Trace_{\mc{O}/\smc{O}}(\mf{A}) \subseteq \mf{p},
+        \Trace_{\mc{O}/\smc{O}}(\mf{A}) \subseteq \mf{p}.
       \]
-      Let \(\a \in \mf{A}\) and \(T_{\a}\) be the multiplication by \(\a\) map. Then \(\mf{p}\mc{O}\) is \(T_{\a}\)-invariant because it is an ideal of \(\mc{O}\). This induces a multiplication by \(\conj{\a}\) map \(T_{\conj{\a}}\) on \(\mc{O}/\mf{p}\mc{O}\) as an \(\F_{\mf{p}}\)-vector space. As the classes \(\conj{\a_{1}},\ldots,\conj{\a_{n}}\) are a basis for \(\mc{O}/\mf{p}\mc{O}\) as an \(\F_{\mf{p}}\)-vector space, it follows that
+      Let \(\a \in \mf{A}\) and let \(\conj{\a} \in \mc{O}/\mf{p}\mc{O}\) be its image under natural projection. Consider the \(\smc{O}\)-linear operator
+      \[
+        T_{\a}:\mc{O} \to \mc{O} \qquad x \mapsto \a x.
+      \]
+      Since \(\mf{p}\mc{O}\) is \(T_{\a}\)-invariant, there is an induced \(\F_{\mf{p}}\)-linear operator
+      \[
+        T_{\conj{\a}}:\mc{O}/\mf{p}\mc{O} \to \mc{O}/\mf{p}\mc{O} \qquad \conj{x} \mapsto \conj{\a x}.
+      \]
+      Recall that \(\mc{O}/\smc{O}\) admits an integral basis. The image of which in \(\mc{O}/\mf{p}\mc{O}\) under natural projection is a basis for \(\mc{O}/\mf{p}\mc{O}\) as an \(\F_{\mf{p}}\)-vector space. Whence
       \[
         \Trace_{\mc{O}/\smc{O}}(\a) \equiv \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \tmod{\mf{p}}.
       \]
       Therefore it is yet further equivalent to show
       \[
-        \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \equiv 0 \tmod{\mf{p}},
+        \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \equiv 0 \tmod{\mf{p}}.
       \]
-      for all \(\a \in \mf{A}\). To prove this, observe that \(\conj{\a}\) runs over to the subring \(\mf{A}/\mf{p}\mc{O}\) of \(\mc{O}/\mf{p}\mc{O}\) as \(\a\) runs over \(\mf{A}\). By construction, \(\mf{A}\) is divisible by every prime factor of \(\mf{p}\mc{O}\) and so a power, say \(k\), of \(\mf{A}\) is divisible by \(\mf{p}\mc{O}\). But this means \(T_{\conj{\a}}^{k}\) is the zero operator so that it is nilpotent. As nilpotent maps have trace zero, \(\Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = 0\). But then \(\Trace_{\mc{O}/\smc{O}}(\a) \equiv 0 \tmod{p}\) and, as \(\a\) was arbitrary, the claim is justified. We now prove (i) and (ii):
+      By construction, the prime factors of \(\mf{A}\) and \(\mf{p}\mc{O}\) are the same. Whence there is a positive integer \(e\) such that \(\mf{A}^{e}\) is divisible by \(\mf{p}\mc{O}\). So \(\mf{p}\mc{O} \mid \mf{A}^{e}\) and therefore \(\mf{A}^{e} \subseteq \mf{p}\mc{O}\) as to divide is to contain. This implies \(T_{\conj{\a}}^{e}\) is the zero operator so that it is nilpotent. As nilpotent operators have trace zero, \(\Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = 0\) which implies the desired congruence.
+      
+      \iffalse We now prove (i) and (ii):
       \begin{enumerate}[label*=(\roman*)]
         \item Begin by writing \(\mf{p}\mc{O} = \mf{P}^{e_{\mf{p}}(\mf{P})}\mf{A}\) for some integral ideal \(\mf{A}\) of \(\mc{O}\) so that \(\mf{A}\) is relatively prime to \(\mf{P}\). Arguing as before, we find that \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if
         \[
