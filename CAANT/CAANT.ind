@@ -5,7 +5,7 @@
   \item \(S\)-class number, \hyperpage{58}
   \item \(S\)-unit, \hyperpage{58}
   \item \(S\)-unit group, \hyperpage{58}
-  \item \(\smc{O}\)-lattice, \hyperpage{84}
+  \item \(\smc{O}\)-lattice, \hyperpage{83}
 
   \indexspace
 
@@ -34,7 +34,7 @@
   \item characteristic function of square-free integers, \hyperpage{3}
   \item class number, \hyperpage{44}, \hyperpage{50}
   \item complement, \hyperpage{85}
-  \item complete, \hyperpage{84}
+  \item complete, \hyperpage{83}
   \item completely additive, \hyperpage{2}
   \item completely multiplicative, \hyperpage{2}
   \item completion, \hyperpage{106}
@@ -63,10 +63,10 @@
   \item Dirichlet orthogonality relations, \hyperpage{8}
   \item Dirichlet series, \hyperpage{90}
   \item discrete valuation ring, \hyperpage{55}
-  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{86}
+  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{85}
   \item divides, \hyperpage{42}
   \item divisor function, \hyperpage{3}
-  \item dual, \hyperpage{84}
+  \item dual, \hyperpage{83}
 
   \indexspace
 
@@ -88,7 +88,7 @@
   \item functional equation, \hyperpage{107}
   \item functional equation data, \hyperpage{107}
   \item fundamental discriminant, \hyperpage{11}
-  \item fundamental equality, \hyperpage{68}
+  \item fundamental equality, \hyperpage{67}
 
   \indexspace
 
@@ -102,15 +102,15 @@
 
   \item ideal class, \hyperpage{44}
   \item ideal class group, \hyperpage{43}, \hyperpage{50}
-  \item ideal norm, \hyperpage{74}, \hyperpage{76}
+  \item ideal norm, \hyperpage{74, 75}
   \item identity function, \hyperpage{3}
   \item imprimitive, \hyperpage{9}
   \item indicator function, \hyperpage{2}
   \item induced, \hyperpage{9}
-  \item inert, \hyperpage{69}, \hyperpage{76}
+  \item inert, \hyperpage{69}, \hyperpage{75}
   \item inertia degree, \hyperpage{67}, \hyperpage{78}, \hyperpage{83}
   \item inertia field, \hyperpage{81}
-  \item inertia group, \hyperpage{81}
+  \item inertia group, \hyperpage{80}
   \item integral, \hyperpage{24}
   \item integral basis, \hyperpage{34}, \hyperpage{38}
   \item integral closure, \hyperpage{25}
@@ -141,9 +141,9 @@
 
   \indexspace
 
-  \item nonsplit, \hyperpage{69}, \hyperpage{76}
+  \item nonsplit, \hyperpage{69}, \hyperpage{75}
   \item nontrivial zero, \hyperpage{116}
-  \item norm, \hyperpage{28}, \hyperpage{74}, \hyperpage{76}
+  \item norm, \hyperpage{28}, \hyperpage{73}, \hyperpage{75}
   \item normalization, \hyperpage{25}
   \item number field, \hyperpage{27}
   \item number of distinct prime factors function, \hyperpage{4}
@@ -172,9 +172,9 @@
   \indexspace
 
   \item Ramanujan sum, \hyperpage{13, 14}
-  \item ramification index, \hyperpage{66}, \hyperpage{78}, 
+  \item ramification index, \hyperpage{66}, \hyperpage{77}, 
 		\hyperpage{83}
-  \item ramified, \hyperpage{70}, \hyperpage{76}
+  \item ramified, \hyperpage{69}, \hyperpage{75}
   \item real, \hyperpage{10}
   \item regular, \hyperpage{65}
   \item relatively prime, \hyperpage{43}
@@ -194,15 +194,15 @@
   \item self-dual, \hyperpage{84}
   \item smooth dyadic weight, \hyperpage{119}
   \item smooth weight, \hyperpage{104}
-  \item split, \hyperpage{69}, \hyperpage{76}
+  \item split, \hyperpage{69}, \hyperpage{75}
   \item subconvexity estimate, \hyperpage{118}
   \item sum of divisors function, \hyperpage{3}
 
   \indexspace
 
   \item total number of prime divisors function, \hyperpage{4}
-  \item totally ramified, \hyperpage{70}, \hyperpage{76}
-  \item totally split, \hyperpage{69}, \hyperpage{76}
+  \item totally ramified, \hyperpage{69}, \hyperpage{75}
+  \item totally split, \hyperpage{69}, \hyperpage{75}
   \item trace, \hyperpage{28}
   \item trace form, \hyperpage{32}, \hyperpage{38}
   \item trace matrix, \hyperpage{31}
@@ -214,7 +214,7 @@
   \item uniformizer, \hyperpage{55}
   \item unit, \hyperpage{50}
   \item unit group, \hyperpage{44}, \hyperpage{50}, \hyperpage{60}
-  \item unramified, \hyperpage{70}, \hyperpage{76}
+  \item unramified, \hyperpage{69}, \hyperpage{75}
   \item unweighted, \hyperpage{104}
 
   \indexspace

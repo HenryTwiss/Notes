@@ -1085,7 +1085,7 @@
     \[
       \k = \e\pi^{n},
     \]
-    for some integer \(n\) and unit \(\e\). The most important data of a discrete valuation ring is its valuation. The \textbf{valuation}\index{valuation} \(v\) associated to \(\smc{O}\) is the function defined by
+    for some integer \(n\) and unit \(\e\). The most important data of a discrete valuation ring is its valuation. The \textbf{valuation}\index{valuation} \(v\) of \(\smc{O}\) is the function defined by
     \[
       v:K \to \Z \cup \{\infty\} \qquad \k \mapsto v(\k) = \begin{cases} n & \text{if \(\k = \e\pi^{n}\)}, \\ \infty & \text{if \(\k = 0\)}. \end{cases}
     \]
@@ -1438,7 +1438,7 @@
       \]
       However, with this generality the normalization of \(\mc{O}\) need not be \(\mc{O}_{L}\). Therefore we usually only consider orders \(\mc{O}\) whose normalization is \(\mc{O}_{L}\). For example, this always occurs if \(\a_{1},\ldots,\a_{n}\) is a basis for \(L/K\) as \(L\) is the field of fractions of \(\mc{O}_{L}\).
   \section{Prime Splitting}
-    Suppose \(\mc{O}/\smc{O}\) is a Dedekind extension of a finite separable extension \(L/K\). Let \(\mf{P}\) be a prime of \(\mc{O}\) above the prime \(\mf{p}\) of \(\smc{O}\). The \textbf{ramification index}\index{ramification index} \(e_{\mf{p}}(\mf{P})\) of \(\mf{P}\) relative to \(\mf{p}\) is defined to be the power of \(\mf{P}\) appearing in the prime factorization of \(\mf{p}\mc{O}\). If \(\mf{p}\mc{O}\) has prime factors \(\mf{P}_{1},\ldots,\mf{P}_{r}\) then the prime factorization of \(\mf{p}\mc{O}\) is
+    Suppose \(\mc{O}/\smc{O}\) is a Dedekind extension of a finite separable extension \(L/K\). Let \(\mf{P}\) be a prime of \(\mc{O}\) above a prime \(\mf{p}\) of \(\smc{O}\). The \textbf{ramification index}\index{ramification index} \(e_{\mf{p}}(\mf{P})\) of \(\mf{P}\) relative to \(\mf{p}\) is defined to be the power of \(\mf{P}\) appearing in the prime factorization of \(\mf{p}\mc{O}\). If \(\mf{p}\mc{O}\) has prime factors \(\mf{P}_{1},\ldots,\mf{P}_{r}\) then the prime factorization of \(\mf{p}\mc{O}\) is
     \[
       \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})}.
     \]
@@ -1451,11 +1451,11 @@
     \[
       f_{\mf{p}}(\mf{P}) = [\F_{\mf{P}}:\F_{\mf{p}}].
     \]
-    That is, \(f_{\mf{p}}(\mf{P})\) is the degree of \(\F_{\mf{P}}/\F_{\mf{p}}\) which is the dimension of the residue field \(\F_{\mf{P}}\) as an \(\F_{\mf{p}}\)-vector space. In fact, something slightly more general is true. Let \(\mf{A}\) be an integral ideal of \(\mc{O}\) containing \(\mf{p}\). Consider the homomorphism
+    That is, \(f_{\mf{p}}(\mf{P})\) is the degree of \(\F_{\mf{P}}/\F_{\mf{p}}\) which is the dimension of the residue field \(\F_{\mf{P}}\) as an \(\F_{\mf{p}}\)-vector space. In fact, something slightly more general is true. Let \(\mf{A}\) and \(\mf{B}\) be an integral ideals of \(\mc{O}\) with \(\mf{p}\mc{O} \subseteq \mf{B} \subseteq \mf{A}\). Consider the homomorphism
     \[
-      \phi:\smc{O} \to \mc{O}/\mf{A} \qquad \a \mapsto \a+\mf{A},
+      \phi:\mf{A} \to \mf{A}/\mf{B} \qquad \a \mapsto \a+\mf{B},
     \]
-    induced by natural projection. As \(\mf{p} \subseteq \mf{A}\), we have that \(\ker\phi = \mf{A} \cap \smc{O}\) contains \(\mf{p}\). So \(\phi\) induces a homomorphism \(\F_{\mf{p}} \to \mc{O}/\mf{A}\). Whence \(\mc{O}/\mf{A}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space of dimension at most \(n\) because \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\). We obtain the residue class extension when \(\mf{A} = \mf{P}\).
+    induced by natural projection. As \(\mf{A}\) and \(\mf{B}\) contain \(\mf{p}\), we have that \(\ker\phi\) contains \(\mf{p}\). So \(\phi\) induces a homomorphism \(\F_{\mf{p}} \to \mf{A}/\mf{B}\). Whence \(\mf{A}/\mf{B}\) is a finite dimensional \(\F_{\mf{p}}\)-vector space of dimension at most \(n\) because \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\). We obtain the residue class extension when \(\mf{A} = \mc{O}\) and \(\mf{B} = \mf{P}\).
 
     Suppose \(\wtilde{\mc{O}}/\mc{O}/\smc{O}\) is a tower of Dedekind extensions for a finite separable tower \(M/L/K\). Let \(\wtilde{\mf{P}}\), \(\mf{P}\), and \(\mf{p}\) be primes of \(\wtilde{\mc{O}}\), \(\mc{O}\), and \(\smc{O}\) respectively with \(\wtilde{\mf{P}}\) above \(\mf{P}\) and \(\mf{P}\) above \(\mf{p}\). We illustrate this relationship via the diagram
     \begin{center}
@@ -1471,32 +1471,7 @@
     \end{equation}
     In other words, the ramification indices and inertia degrees are multiplicative with respect to towers.
 
-    The ramification indices and inertia degrees satisfy a simple relationship to the degree of \(L/K\) that is fundamental to they study of Dedekind extensions. In order to state it, we will require a lemma.
-
-    \begin{lemma}\label{lem:quotient_by_prime_power_isomorphism}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Suppose \(\mf{P}\) is a prime above \(\mf{p}\). Then for any positive integer \(e\), we have
-      \[
-        \mc{O}/\mf{P}^{e} \cong \bigop^{e}\F_{\mf{P}}.
-      \]
-      In particular, the dimension of \(\mc{O}/\mf{P}^{e}\) as an \(\F_{\mf{p}}\)-vector space is \(ef_{\mf{p}}(\mf{P})\).
-    \end{lemma}
-    \begin{proof}
-      Consider the descending chain
-      \[
-        \mc{O}/\mf{P}^{e} \supseteq \mf{P}/\mf{P}^{e} \supseteq \cdots \supseteq \mf{P}^{e-1}/\mf{P}^{e} \supseteq \mf{P}^{e}/\mf{P}^{e},
-      \]
-      of \(\F_{\mf{p}}\)-vector spaces. By the third isomorphism theorem, these quotients are of the form \(\mf{P}^{i}/\mf{P}^{i+1}\) and are all isomorphic to \(\F_{\mf{P}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. Therefore we have a decomposition
-      \[
-        \mf{P}^{i}/\mf{P}^{e} \cong \F_{\mf{P}} \op (\mf{P}^{i+1}/\mf{P}^{e}).
-      \]
-      Iteratively applying this isomorphism \(e-1\) times gives
-      \[
-        \mc{O}/\mf{P}^{e} \cong \bigop^{e}\F_{\mf{P}}.
-      \]
-      This proves the first statement. Since the dimension of \(\F_{\mf{P}}\) as an \(\F_{\mf{p}}\)-vector space is \(f_{\mf{p}}(\mf{P})\) by definition, it follows that \(\mc{O}/\mf{P}^{e}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(ef_{\mf{p}}(\mf{P})\). This proves the second statement.
-    \end{proof}
-    
-    We can now describe the relationship between ramification indices and inertia degrees. The idea is that \(\mc{O}/\mf{p}\mc{O}\) is of maximum dimension as an \(\F_{\mf{p}}\)-vector space, namely \(n\), and its dimension can be computed as a sum of products of the ramification indices and inertia degrees. This relationship is known as the \textbf{fundamental equality}\index{fundamental equality}.
+    The ramification indices and inertia degrees satisfy a simple relationship to the degree of \(L/K\) that is fundamental to the study of Dedekind extensions. In order to state it, we will require a lemma. The idea is that \(\mc{O}/\mf{p}\mc{O}\) is of maximum dimension as an \(\F_{\mf{p}}\)-vector space, namely \(n\), and its dimension can be computed as a sum of products of the ramification indices and inertia degrees. This relationship is known as the \textbf{fundamental equality}\index{fundamental equality}.
 
     \begin{theorem*}[Fundamental equality]
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Suppose \(\mf{p}\) is a prime of \(\smc{O}\) and \(\mf{p}\mc{O}\) has prime factorization
@@ -1529,10 +1504,11 @@
       \[
         L = \l_{1}K+\cdots+\l_{m}K.
       \]
-      Hence \(\l_{1},\ldots,\l_{m}\) spans \(L/K\) whence \(\mc{O}/\mf{p}\mc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(n\). For \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\), the dimensionality claim follows from \cref{lem:quotient_by_prime_power_isomorphism}. So our dimension computations combine to give
+      Hence \(\l_{1},\ldots,\l_{m}\) spans \(L/K\) whence \(\mc{O}/\mf{p}\mc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(n\). For \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\), consider the filtration
       \[
-        n = \sum_{i}e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P}_{i}).
+        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \mf{P}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \cdots \supset \mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})},
       \]
+      of \(\F_{\mf{p}}\)-vector spaces. By the third isomorphism theorem, the successive quotients are of the form \(\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}\) which are all isomorphic to \(\F_{\mf{P}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. Whence \(\mf{P}/\mf{P}_{i}^{j}\) is an \(\F_{\mf{P}}\)-vector space of dimension \(j\). In particular, \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{P}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P}_{i})\). Since the dimension of \(\F_{\mf{P}_{i}}\) as an \(\F_{\mf{p}}\)-vector space is \(f_{\mf{p}}(\mf{P}_{i})\), it follows that \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(ef_{\mf{p}}(\mf{P}_{i})\). This completes the proof.
     \end{proof}
 
     It is useful to classify primes according to specific cases of the fundamental equality. We say \(\mf{p}\) is \textbf{inert}\index{inert} in \(\mc{O}/\smc{O}\) if there is a prime \(\mf{P}\) above \(\mf{p}\) with \(f_{\mf{p}}(\mf{P}) = n\). By the fundamental equality, this means \(e_{\mf{p}}(\mf{P}) = 1\) and \(r = 1\). Whence
@@ -1734,35 +1710,23 @@
       for any \(\l \in L\).
     \end{proposition}
     \begin{proof}
-      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ideal_norm_localization_is_localization_of_ideal_norm}, we may assume that \(\mc{O}/\smc{O}\) is a local Dedekind extension. Moreover, as \(\mf{N}_{\mc{O}/\smc{O}}\) and \(\Norm_{L/K}\) are both completely multiplicative and \(L\) is the field of fractions of \(\mc{O}\), it is enough to prove the claim when \(\l \in \mc{O}\). By prime factorization, we may write
+      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ideal_norm_localization_is_localization_of_ideal_norm}, we may assume that \(\mc{O}/\smc{O}\) is a local Dedekind extension. Moreover, as \(\mf{N}_{\mc{O}/\smc{O}}\) and \(\Norm_{L/K}\) are both completely multiplicative and \(L\) is the field of fractions of \(\mc{O}\), it is enough to prove the claim when \(\l \in \mc{O}\) and \(\l\) is prime. As \(\mc{O}\) is a principle ideal domain, we have \(\l\mc{O} = \mf{P}\) for some prime \(\mf{P}\) of \(\mc{O}\). Let \(\mf{p}\) be the prime of \(\smc{O}\) below \(\mf{P}\) and let \(v\) be the valuation of \(\smc{O}\). Then
       \[
-        \l\mc{O} = \prod_{\mf{P} \mid \mf{p}\mc{O}}\mf{P}^{v_{\mf{P}}(\l)},
-      \]
-      since every prime \(\mf{P}\) of \(\mc{O}\) is above the unique prime \(\mf{p}\) of \(\smc{O}\). Whence
-      \[
-        \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O}) = \prod_{\mf{P} \mid \mf{p}\mc{O}}\mf{p}^{v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})} \quad \text{and} \quad \Norm_{L/K}(\l)\smc{O} = \mf{p}^{v_{\mf{p}}(\Norm_{L/K}(\l))},
+        \mf{N}_{\mc{O}/\smc{O}}(\l\mc{O}) = \mf{p}^{f_{\mf{p}}(\mf{P})} \quad \text{and} \quad \Norm_{L/K}(\l)\smc{O} = \mf{p}^{v(\Norm_{L/K}(\l))},
       \]
       and we are reduced to proving
       \[
-        \sum_{\mf{P} \mid \mf{p}\mc{O}}v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P}) = v_{\mf{p}}(\Norm_{L/K}(\l)).
+        f_{\mf{p}}(\mf{P}) = v(\Norm_{L/K}(\l)).
       \]
-      We will show this by computing the dimension of \(\mc{O}/\smc{O}\) as an \(\F_{\mf{p}}\)-vector space in two ways. First, the Chinese remainder theorem gives an isomorphism
+      As \(f_{\mf{p}}(\mf{P})\) is the dimension of \(\F_{\mf{P}}\) as an \(\F_{\mf{p}}\)-vector space, it suffices to show that the same is true of \(v(\Norm_{L/K}(\l))\). To this end, \(\Norm_{L/K}(\l) = \Norm_{\mc{O}/\smc{O}}(\l)\) by \cref{prop:trace_and_norm_reduce_for_integral_basis}. Recall that \(\Norm_{\mc{O}/\smc{O}}(\l)\) is the determinant of the \(\smc{O}\)-linear operator \(T_{\l}\). As \(\smc{O}\) is a principal ideal domain, putting \(T_{\l}\) in smith normal form shows that
       \[
-        \mc{O}/\smc{O} \cong \bigop_{\mf{P} \mid \mf{p}\mc{O}}\mc{O}/\mf{P}^{v_{\mf{P}}(\l)}.
+        T_{\l} = U\begin{pmatrix} \e_{1}\pi^{k_{1}} & & \\ & \ddots & \\ & & \e_{n}\pi^{k_{n}} \end{pmatrix}V,
       \]
-      By \cref{lem:quotient_by_prime_power_isomorphism}, \(\mc{O}/\mf{P}^{v_{\mf{P}}(\l)}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})\). Therefore \(\mc{O}/\smc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(\sum_{\mf{P} \mid \mf{p}\mc{O}}v_{\mf{P}}(\l)f_{\mf{p}}(\mf{P})\). On the other hand, \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\) as \(\mc{O}/\smc{O}\) admits an integral basis. By the structure theorem for finitely generated modules over principal ideal domains and \cref{thm:integral_basis_AKBL}, we have isomorphisms
+      for some invertible matrices \(U,V \in \GL_{n}(\smc{O})\) of unit determinant, nonnegative integers \(k_{i}\), units \(\e_{i}\) and uniformizer \(\pi\) for \(\smc{O}\). Setting \(\e = \prod_{i}\e_{i}\) and \(k = \sum_{i}k_{i}\) shows \(\Norm_{\mc{O}/\smc{O}}(\l) =\e\pi^{k}\) whence \(v(\Norm_{L/K}(\l)) = k\). As the image of \(T_{\l}\) is \(\mf{P}\), the smith normal form induces an isomorphism
       \[
-        \mc{O} \cong \bigop^{n}\smc{O} \quad \text{and} \quad \l\mc{O} \cong \bigop_{i}\pi^{k_{i}}\smc{O},
+        \F_{\mf{P}} \cong \bigop_{i}\smc{O}/\pi^{k_{i}}\smc{O}.
       \]
-      for some nonnegative integers \(k_{1},\ldots,k_{n}\) and where \(\pi\) is a uniformizer for \(\smc{O}\). Whence there is another isomorphism
-      \[
-        \mc{O}/\smc{O} \cong \bigop_{i}\smc{O}/\pi^{k_{i}}\smc{O}.
-      \]
-      Moreover, \(\Norm_{L/K}(\l) = \Norm_{\mc{O}/\smc{O}}(\l)\) by \cref{prop:trace_and_norm_reduce_for_integral_basis}. Recall that \(\Norm_{\mc{O}/\smc{O}}(\l)\) is the determinant of the \(\smc{O}\)-linear operator
-      \[
-        T_{\l}:\mc{O} \to \mc{O} \qquad x \mapsto \l x. 
-      \]
-      So under the aforementioned isomorphisms, it follows that \(\Norm_{\mc{O}/\smc{O}}(\l) = \pi^{\sum_{i}k_{i}}\) whence \(v_{\mf{p}}(\Norm_{L/K}(\l)) = \sum_{i}k_{i}\). The proof will be complete if the dimension of \(\mc{O}/\smc{O}\) as an \(\F_{\mf{p}}\)-vector space is \(\sum_{i}k_{i}\). From \cref{lem:quotient_by_prime_power_isomorphism} we see that \(\smc{O}/\pi^{k_{i}}\smc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(k_{i}\). The claim follows from the last isomorphism above.
+      Observe that the length of \(\smc{O}/\pi^{k_{i}}\smc{O}\) as an \(\smc{O}\)-module is \(k_{i}\). Whence the length of \(\F_{\mf{P}}\) as a \(\smc{O}\)-module is \(k\). But then \(k\) is the dimension of \(\F_{\mf{P}}\) as an \(\F_{\mf{p}}\)-vector space which is also \(v(\Norm_{L/K}(\l))\).
     \end{proof}
 
     In light of this result, the ideal norm preserves principal ideals. This means that the ideal norm induces a homomorphism
@@ -1780,7 +1744,7 @@
       \]
       called the \textbf{norm}\index{norm} of \(K\). We call \(\Norm_{K}(\mf{f})\) the \textbf{norm}\index{norm} of \(\mf{f}\). The relationship between this norm and the ideal norm is
       \[
-        \mf{N}_{K}(\mf{f}) = r_{\mf{f}}\Z.
+        \mf{N}_{K}(\mf{f}) = \Norm_{K}(\mf{f})\Z.
       \]
       In particular, if \(\mf{p}\) is a prime of \(K\) above \(p\) then
       \[
@@ -1795,27 +1759,23 @@
         \]
         Moreover,
         \[
-          \Norm_{K}(\a\mc{O}_{K}) = |\Norm_{K}(\a)|,
+          \Norm_{K}(\a\mc{O}_{K}) = \Norm_{K}(\a),
         \]
         for any \(\a \in \mc{O}_{K}\).
       \end{proposition}
       \begin{proof}
-        By prime factorization, we may write
+        As \(K\) admits an integral basis, every integral ideal of \(K\) is a free \(\Z\)-module of rank \(n\) by \cref{thm:integral_basis_AKBL}. Whence any such quotient is finite. By the Chinese remainder theorem, the right-hand side of the desired formula is multiplicative. As the norm is also multiplicative, it suffices to prove the claim when \(\mf{a}\) is a prime power. So fix a prime power \(\mf{p}^{e}\) and let \(p\) be the prime below \(\mf{p}\). On the one hand, \(\Norm_{K}(\mf{p}^{e}) = p^{ef_{p}(\mf{p})}\). On the other hand, consider the filtration
         \[
-          \mf{a} = \prod_{\mf{p}}\mf{p}^{e_{\mf{p}}},
+          \mc{O}_{K} \supset \mf{p} \supset \cdots \supset \mf{p}^{e}.
         \]
-        where all but finitely many of the nonnegative integers \(e_{\mf{p}}\) are zero. As the Chinese remainder theorem gives an isomorphism
+        The successive quotients are of the form \(\mf{p}^{i}/\mf{p}^{i+1}\) which are all isomorphic to \(\F_{\mf{p}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. Repeated application of the third isomorphism theorem gives
         \[
-          \mc{O}_{K}/\mf{a} \cong \bigop_{\mf{p}}\mc{O}_{K}/\mf{p}^{e_{\mf{p}}}\mc{O}_{K},
+          |\mc{O}_{K}/\mf{p}^{e}| = \prod_{i}|\mf{p}^{i}/\mf{p}^{i+1}|.
         \]
-        it suffices to prove the claim for \(\mf{p}^{e_{\mf{p}}}\). Fix a prime \(\mf{p}\) and let \(p\) be the prime below it. On the one hand, \(\Norm_{K}(\mf{p}^{e}) = p^{ef_{p}(\mf{p})}\). On the other hand, \cref{lem:quotient_by_prime_power_isomorphism} shows that \(\mc{O}_{K}/\mf{p}^{e}\) is an \(\F_{p}\)-vector space of dimension \(ef_{p}(\mf{p})\) whence \(|\mc{O}_{K}/\mf{p}^{e}| = p^{ef_{p}(\mf{p})}\). So
-        \[
-          \Norm_{K}(\mf{p}^{e}) = |\mc{O}_{K}/\mf{p}^{e}|,
-        \]
-        proving the first statement. The second statement follows from \cref{prop:ideal_norm_of_principal_ideal}.
+        As \(\F_{\mf{p}}\) is an \(\F_{p}\)-vector space of dimension \(f_{p}(\mf{p})\), we find that \(|\mf{p}^{i}/\mf{p}^{i+1}| = p^{f_{p}(\mf{p})}\). Whence \(|\mc{O}_{K}/\mf{p}^{e}| = p^{ef_{p}(\mf{p})}\). This proves the first statement. The second statement follows from the first together with \cref{prop:ideal_norm_of_principal_ideal}.
       \end{proof}
 
-      As a consequence of this result and Lagrange's theorem, we see that \(\Norm_{K}(\mf{a}) \in \mf{a}\) and therefore for every fractional ideal \(\mf{f}\) as well. 
+      As a consequence of this result and Lagrange's theorem, we see that \(\Norm_{K}(\mf{a}) \in \mf{a}\) and therefore for every fractional ideal \(\mf{f}\) as well.
   \section{Ramification}
     Much more can be said about the ramification of primes in a Dedekind extension \(\mc{O}/\smc{O}\) when the associated extension \(L/K\) is Galois. Since \(L/K\) is assumed to be finite and separable, this amounts to further assuming \(L/K\) is normal. In this case, the Galois group is
     \[
@@ -1848,7 +1808,7 @@
     \begin{proof}
       Assume by contradiction that there exist distinct primes \(\mf{P}_{i}\) and \(\mf{P}_{j}\) above \(\mf{p}\) for which \(\mf{P}_{i} \neq \mf{P}_{j}\) for any \(K\)-automorphism \(\s\). As distinct primes are relatively prime, the Chinese remainder theorem implies the existence of an \(\a \in \mc{O}\) such that
       \[
-        \a \equiv 1 \tmod{\s(\mf{P}_{i})} \quad \text{and} \quad \a \equiv 0 \tmod{\mf{P}_{j}},
+        \a \equiv 1 \pmod{\s(\mf{P}_{i})} \quad \text{and} \quad \a \equiv 0 \pmod{\mf{P}_{j}},
       \]
       Now recall As \(\Norm_{L/K}(\a) \in \smc{O}\) by \cref{prop:trace_and_norm_AKBL}. On the one hand, \(\a \notin \s(\mf{P}_{i})\) whence \(\s(\a) \notin \mf{P}_{i}\). Then \(\Norm_{L/K}(\a) \notin \mf{P}_{i}\) by primality of \(\mf{P}_{i}\) and hence \(\Norm_{L/K}(\a) \notin \mf{p}\) because \(\mf{P}_{i}\) is above \(\mf{p}\). On the other hand, \(\a \in \mf{P}_{j}\) which implies \(\a \in \s(\mf{P}_{j})\) when \(\s\) is the identity. Therefore \(\Norm_{L/K}(\a) \in \mf{P}_{j}\) and so \(\Norm_{L/K}(\a) \in \mf{p}\) because \(\mf{P}_{j}\) is above \(\mf{p}\). This gives a contradiction from which we conclude the action is transitive. 
       
@@ -2143,67 +2103,46 @@
     With this result, we can now show that a prime of \(\mc{O}\) is ramified in \(\mc{O}/\smc{O}\) if and only if it divides the discriminant \(\mf{D}_{\mc{O}/\smc{O}}\) provided the residue class extensions are separable. In fact, we will prove something slightly stronger.
 
     \begin{theorem}\label{thm:ramifies_if_and_only_if_divides_the_different}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Then a prime \(\mf{P}\) of \(\mc{O}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P}\) divides \(\mf{D}_{\mc{O}/\smc{O}}\). In particular, if \(\mf{P}\) is above \(\mf{p}\) then the following divisibility properties hold:
-      \begin{enumerate}[label*=(\roman*)]
-        \item \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\).
-        \item \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid\mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \not\equiv 0 \tmod{\mf{p}}\).
-      \end{enumerate}
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Let \(\mf{P}\) be a prime of \(\mc{O}\) above a prime \(\mf{p}\) of \(\smc{O}\). Then \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\). Moreover, \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). In particular, \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\).
     \end{theorem}
     \begin{proof}
-      As all residue class extensions are separable by assumption, \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). But properties (i) and (ii) together imply that \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). Whence \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\). So it remains to prove properties (i) and (ii).
-
-      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, we may assume that \(\mc{O}/\smc{O}\) is a local Dedekind extension. We will first show the weaker condition \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\) for any ramification index \(e_{\mf{p}}(\mf{P})\). To this end, write \(\mf{p}\mc{O} = \mf{P}^{e_{\mf{p}}(\mf{P})-1}\mf{A}\) for some integral ideal \(\mf{A}\) of \(\mc{O}\) so that \(\mf{P} \mid\mid \mf{A}\). By \cref{lem:different_containment_lemma}, \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\Trace_{L/K}(\mf{P}^{1-e_{\mf{p}}(\mf{P})}) \subseteq \smc{O}\). As \(\mf{P}^{1-e_{\mf{p}}(\mf{P})} = \mf{p}^{-1}\mf{A}\), it it further equivalent to show \(\Trace_{L/K}(\mf{A}) \subseteq \mf{p}\). As \(\mc{O}/\smc{O}\) admits an integral basis, we have \(\Trace_{K/L}(\mf{A}) = \Trace_{\mc{O}/\smc{O}}(\mf{A})\) from  \cref{prop:trace_and_norm_reduce_for_integral_basis} and so it is further equivalent to show
+      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, we may assume that \(\mc{O}/\smc{O}\) is a local Dedekind extension. Let \(e\) be a nonnegative integer with \(e \le e_{\mf{p}}(\mf{P})\) and write \(\mf{p}\mc{O} = \mf{P}^{e}\mf{A}\) for some integral ideal \(\mf{A}\) of \(\mc{O}\). By \cref{lem:different_containment_lemma}, \(\mf{P}^{e} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\Trace_{L/K}(\mf{P}^{e}) \subseteq \smc{O}\). As \(\mf{P}^{e} = \mf{p}^{-1}\mf{A}\), it it further equivalent to show \(\Trace_{L/K}(\mf{A}) \subseteq \mf{p}\). Since \(\mc{O}/\smc{O}\) admits an integral basis, we have \(\Trace_{K/L}(\mf{A}) = \Trace_{\mc{O}/\smc{O}}(\mf{A})\) from  \cref{prop:trace_and_norm_reduce_for_integral_basis} and so it is further equivalent to show
       \[
         \Trace_{\mc{O}/\smc{O}}(\mf{A}) \subseteq \mf{p}.
       \]
-      Let \(\a \in \mf{A}\) and let \(\conj{\a} \in \mc{O}/\mf{p}\mc{O}\) be its image under natural projection. Consider the \(\smc{O}\)-linear operator
+      Let \(\a \in \mf{A}\) and let \(\conj{\a} \in \mc{O}/\mf{p}\mc{O}\) be its image under natural projection. Then
       \[
-        T_{\a}:\mc{O} \to \mc{O} \qquad x \mapsto \a x.
-      \]
-      Since \(\mf{p}\mc{O}\) is \(T_{\a}\)-invariant, there is an induced \(\F_{\mf{p}}\)-linear operator
-      \[
-        T_{\conj{\a}}:\mc{O}/\mf{p}\mc{O} \to \mc{O}/\mf{p}\mc{O} \qquad \conj{x} \mapsto \conj{\a x}.
-      \]
-      Recall that \(\mc{O}/\smc{O}\) admits an integral basis. The image of which in \(\mc{O}/\mf{p}\mc{O}\) under natural projection is a basis for \(\mc{O}/\mf{p}\mc{O}\) as an \(\F_{\mf{p}}\)-vector space. Whence
-      \[
-        \Trace_{\mc{O}/\smc{O}}(\a) \equiv \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \tmod{\mf{p}}.
+        \Trace_{\mc{O}/\smc{O}}(\a) \equiv \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \pmod{\mf{p}}.
       \]
       Therefore it is yet further equivalent to show
       \[
-        \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \equiv 0 \tmod{\mf{p}}.
+        \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \equiv 0 \pmod{\mf{p}}.
       \]
-      By construction, the prime factors of \(\mf{A}\) and \(\mf{p}\mc{O}\) are the same. Whence there is a positive integer \(e\) such that \(\mf{A}^{e}\) is divisible by \(\mf{p}\mc{O}\). So \(\mf{p}\mc{O} \mid \mf{A}^{e}\) and therefore \(\mf{A}^{e} \subseteq \mf{p}\mc{O}\) as to divide is to contain. This implies \(T_{\conj{\a}}^{e}\) is the zero operator so that it is nilpotent. As nilpotent operators have trace zero, \(\Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = 0\) which implies the desired congruence.
-      
-      \iffalse We now prove (i) and (ii):
-      \begin{enumerate}[label*=(\roman*)]
-        \item Begin by writing \(\mf{p}\mc{O} = \mf{P}^{e_{\mf{p}}(\mf{P})}\mf{A}\) for some integral ideal \(\mf{A}\) of \(\mc{O}\) so that \(\mf{A}\) is relatively prime to \(\mf{P}\). Arguing as before, we find that \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if
-        \[
-          \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = 0,
-        \]
-        for all \(\a \in \mf{A}\). Since \(\mf{P}^{e_{\mf{p}}(\mf{P})}\) and \(\mf{A}\) are relatively prime, the Chinese remainder theorem implies
-        \[
-          \mc{O}/\mf{p}\mc{O} \cong (\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) \op (\mc{O}/\mf{A}).
-        \]
-        So there exists \(\b,\g \in \mc{O}\) such that \(\b \equiv \a \tmod{\mf{P}^{e_{\mf{p}}(\mf{P})}}\) and \(\g \equiv \a \tmod{\mf{A}}\). Then \cref{equ:trace_and_norm_direct_sums} implies
-        \[
-          \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b})+\Trace_{(\mc{O}/\mf{A})/\F_{\mf{p}}}(\conj{\g}).
-        \]
-        As \(\a \in \mf{A}\), \(\conj{\g} = 0\) and so \(\Trace_{(\mc{O}/\mf{A})/\F_{\mf{p}}}(\conj{\g}) = 0\). Therefore it is further equivalent to show
-        \[
-          \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b}) = 0,
-        \]
-        for all \(\b \in \mc{O}\). We will show that this occurs if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). So let \(\b \in \mc{O}\). By \cref{lem:quotient_by_prime_power_isomorphism}, we have an isomorphism
-        \[
-          \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \cong \bigop_{0 \le e \le e_{\mf{p}}(\mf{P})-1}\mc{O}/\mf{P}.
-        \]
-        Therefore there exists \(\b_{e} \in \mc{O}\) such that \(\b \equiv \b_{e} \tmod{\mf{P}}\) for all \(e\). But then \(\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\conj{\b}_{e}) = \Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\conj{\b})\) for all \(e\), and combining with \cref{equ:trace_and_norm_direct_sums} gives
-        \[
-          \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b}) = e_{\mf{p}}(\mf{P})\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\conj{\b}),
-        \]
-        which we recall is an element of \(\F_{\mf{p}}\). As the residue class extensions are assumed to be separable, \cref{lem:trace_is_nondegenerate} implies that \(\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\conj{\b})\) cannot be zero for all \(\b \in \mc{O}\). So it must be the case that \(\Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b}) = 0\) for all \(\b \in \mc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). This proves (i).
-        \item As we have already shown \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\), (ii) follows from (i).
-      \end{enumerate}
-      \fi
+
+      To show \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\), take \(e = e_{\mf{p}}(\mf{P})-1\) so that \(\mf{P} \mid\mid \mf{A}\). Then the prime factors of \(\mf{A}\) and \(\mf{p}\mc{O}\) are the same. Whence there is a positive integer \(k\) such that \(\mf{A}^{k}\) is divisible by \(\mf{p}\mc{O}\). So \(\mf{p}\mc{O} \mid \mf{A}^{k}\) and therefore \(\mf{A}^{k} \subseteq \mf{p}\mc{O}\) as to divide is to contain. This implies that the \(\F_{\mf{p}}\)-linear operator \(T_{\conj{\a}}^{k}\) is the zero operator. Whence \(T_{\conj{\a}}\) is nilpotent. As nilpotent operators have trace zero, \(\Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = 0\) which implies the desired congruence.
+
+      To show \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\), take \(e = e_{\mf{p}}(\mf{P})\) so that \(\mf{P}\) and \(\mf{A}\) are relatively prime. The Chinese remainder theorem gives an isomorphism
+      \[
+        \mc{O}/\mf{p}\mc{O} \cong (\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) \op (\mc{O}/\mf{A}).
+      \]
+      Since \(\a \in \mf{A}\), there exists \(\b,\g \in \mc{O}\) such that 
+      \[
+        \a \equiv \b \pmod{\mf{P}^{e_{\mf{p}}(\mf{P})}} \quad \text{and} \quad \a \equiv \g \pmod{\mf{A}}.
+      \]
+      Let \(\conj{\b} \in \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) and \(\conj{\g} \in \mc{O}/\mf{A}\mc{O}\) be the images of \(\b\) and \(\g\) under the respective natural projection. Then
+      \[
+        \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b})+\Trace_{(\mc{O}/\mf{A})/\F_{\mf{p}}}(\conj{\g}).
+      \]
+      But as \(\a \in \mf{A}\), we have \(\Trace_{(\mc{O}/\mf{A})/\F_{\mf{p}}}(\conj{\g}) = 0\) and it is further equivalent to show
+      \[
+        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b}) = 0.
+      \]
+      We will prove that this occurs if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). \todo{xxx}
+      \iffalse
+      As the residue class extensions are assumed to be separable, \cref{lem:trace_is_nondegenerate} implies that \(\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\conj{\b})\) cannot be zero for all \(\b \in \mc{O}\). So it must be the case that \(\Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b}) = 0\) for all \(\b \in \mc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\).
+
+       As all residue class extensions are separable by assumption, \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). But (i) and (ii) together imply that \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). Whence \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\). So it remains to prove (i) and (ii).
+       \fi
     \end{proof}
 
     \iffalse
