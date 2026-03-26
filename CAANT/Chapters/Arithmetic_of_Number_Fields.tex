@@ -646,7 +646,7 @@
     \[
       \mf{a} = \mf{p}_{1}^{e_{1}} \cdots \mf{p}_{r}^{e_{r}},
     \]
-    for some positive integers \(e_{i}\). Accordingly, for any two integral ideal \(\mf{a}\) and \(\mf{b}\) we say that \(\mf{a}\) \textbf{divides}\index{divides} \(\mf{b}\) and write \(\mf{a} \mid \mf{b}\) if \(\mf{b} \subseteq \mf{a}\). Sometimes this condition is expressed as \textit{to divide is to contain}. By prime factorization, this is equivalent to the fact that every prime power factor of \(\mf{a}\) appears in the prime factorization of \(\mf{b}\). We also say that \(\mf{a}\) \textbf{exactly divides}\index{exactly divides} \(\mf{b}\) and write \(\mf{a} \mid\mid \mf{b}\) if \(\mf{a}\) divides \(\mf{b}\) but no power of \(\mf{a}\) divides \(\mf{b}\). This is equivalent to the fact that every prime power factor of \(\mf{a}\) appears in the prime factorization of \(\mf{b}\) but not for any power of \(\mf{a}\). In the case of a prime \(\mf{p}\) and an integral ideal \(\mf{a}\), \(\mf{p} \mid \mf{a}\) if and only if \(\mf{p}\) is a prime factor of \(\mf{a}\) and \(\mf{p}^{e} \mid\mid \mf{a}\) for some positive integer \(e\) if and only if \(\mf{p}^{e}\) is exactly the power of \(\mf{p}\) appearing in the prime factorization of \(\mf{a}\). Moreover, if \(\mf{a} \mid \mf{p}\) then \(\mf{a} = \mf{p}\). The \textbf{greatest common divisor}\index{greatest common divisor} \((\mf{a},\mf{b})\) of \(\mf{a}\) and \(\mf{b}\) is defined to be the integral ideal that all other common integral ideal divisors divide. Since to divide is to contain, \((\mf{a},\mf{b})\) is the smallest ideal that contains both \(\mf{a}\) and \(\mf{b}\). This is \(\mf{a}+\mf{b}\) and so \((\mf{a},\mf{b}) = \mf{a}+\mf{b}\). The \textbf{least common multiple}\index{least common multiple} \([\mf{a},\mf{b}]\) of \(\mf{a}\) and \(\mf{b}\) is defined to be the integral ideal that divides all other common multiples. Since to divide is to contain, \([\mf{a},\mf{b}]\) is the largest integral ideal that is contained in both \(\mf{a}\) and \(\mf{b}\). This is \(\mf{a} \cap \mf{b}\) and so \([\mf{a},\mf{b}] = \mf{a} \cap \mf{b}\). Lastly, we say that \(\mf{a}\) and \(\mf{b}\) are \textbf{relatively prime}\index{relatively prime} if \((\mf{a},\mf{b}) = \smc{O}\). In other words, \(\mf{a}\) and \(\mf{b}\) are comaximal which is to say
+    for some positive integers \(e_{i}\). Accordingly, for any two integral ideal \(\mf{a}\) and \(\mf{b}\) we say that \(\mf{b}\) \textbf{divides}\index{divides} \(\mf{a}\) and write \(\mf{b} \mid \mf{a}\) if \(\mf{a} \subseteq \mf{b}\). Sometimes this condition is expressed as \textit{to divide is to contain}. By prime factorization, this is equivalent to the fact that every prime power factor of \(\mf{b}\) appears in the prime factorization of \(\mf{a}\). In the case of a prime \(\mf{p}\), we also say that \(\mf{p}^{e}\) \textbf{exactly divides}\index{exactly divides} \(\mf{a}\) and write \(\mf{p}^{e} \mid\mid \mf{a}\) if \(\mf{p}^{e}\) divides \(\mf{a}\) but no larger power of \(\mf{p}\) divides \(\mf{a}\). This is equivalent to the fact that \(\mf{p}^{e}\) is the power of \(\mf{p}\) appearing in the prime factorization of \(\mf{a}\). Moreover, if \(\mf{a} \mid \mf{p}\) then \(\mf{a} = \mf{p}\). The \textbf{greatest common divisor}\index{greatest common divisor} \((\mf{a},\mf{b})\) of \(\mf{a}\) and \(\mf{b}\) is defined to be the integral ideal that all other common integral ideal divisors divide. Since to divide is to contain, \((\mf{a},\mf{b})\) is the smallest ideal that contains both \(\mf{a}\) and \(\mf{b}\). This is \(\mf{a}+\mf{b}\) and so \((\mf{a},\mf{b}) = \mf{a}+\mf{b}\). The \textbf{least common multiple}\index{least common multiple} \([\mf{a},\mf{b}]\) of \(\mf{a}\) and \(\mf{b}\) is defined to be the integral ideal that divides all other common multiples. Since to divide is to contain, \([\mf{a},\mf{b}]\) is the largest integral ideal that is contained in both \(\mf{a}\) and \(\mf{b}\). This is \(\mf{a} \cap \mf{b}\) and so \([\mf{a},\mf{b}] = \mf{a} \cap \mf{b}\). Lastly, we say that \(\mf{a}\) and \(\mf{b}\) are \textbf{relatively prime}\index{relatively prime} if \((\mf{a},\mf{b}) = \smc{O}\). In other words, \(\mf{a}\) and \(\mf{b}\) are comaximal which is to say
     \[
       \mf{a}+\mf{b} = \smc{O}.
     \]
@@ -677,7 +677,7 @@
     \[
       \Cl(\smc{O}) = I(\smc{O})/P(\smc{O}).
     \]
-    An element of \(\Cl(\smc{O})\) is called an \textbf{ideal class}\index{ideal class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. The \textbf{class number}\index{class number} \(h_{\smc{O}}\) of \(\smc{O}\) is defined by
+    A class of \(\Cl(\smc{O})\) is called an \textbf{ideal class}\index{ideal class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. The \textbf{class number}\index{class number} \(h_{\smc{O}}\) of \(\smc{O}\) is defined by
     \[
       h_{\smc{O}} = |\Cl(\smc{O})|.
     \]
@@ -699,7 +699,7 @@
       induced by natural inclusions and projections and where the second map is induced by \(\k \mapsto \k\smc{O}\).
     \end{proposition}
     \begin{proof}
-      As the second map is injective and the fourth map is surjective, the sequence is exact at \(K^{\ast}/\smc{O}^{\ast}\) and \(\Cl(\smc{O})\). So it suffices to prove exactness at \(I(\smc{O})\). This follows because the principal fractional ideals represent the identity class of \(\Cl(\smc{O})\) and these are generated by a complete set of representatives for \(K^{\ast}/\smc{O}^{\ast}\).
+      As the second map is injective and the third map is surjective, the sequence is exact at \(K^{\ast}/\smc{O}^{\ast}\) and \(\Cl(\smc{O})\). So it suffices to prove exactness at \(I(\smc{O})\). This follows because the principal fractional ideals represent the identity class of \(\Cl(\smc{O})\) and these are generated by a complete set of representatives for \(K^{\ast}/\smc{O}^{\ast}\).
     \end{proof}
 
     Thinking of the third map in this exact sequence as passing from numbers in \(K^{\ast}\) to fractional ideals in \(I(\smc{O})\), exactness means that unit group is measuring the contraction (how many numbers are annihilated) taking place during this process while the ideal class group is measuring the expansion (how many fractional ideals are created).
@@ -751,13 +751,13 @@
     \begin{lemma}\label{lem:cancellation_isomorphism}
       Let \(\smc{O}\) be a Dedekind domain where \(\mf{f}\), \(\mf{g}\), and \(\mf{h}\) be fractional ideals of \(\smc{O}\) with \(\mf{g} \subseteq \mf{f}\). Then we have an isomorphism
       \[
-        \mf{f}/\mf{g} \cong \mf{f}\mf{h}/\mf{g}\mf{h}.
+        \mf{f}/\mf{g} \cong \mf{f}\mf{h}/\mf{g}\mf{h},
       \]
-      In particular, there is an isomorphism
+      induced by multiplication and natural projection. In particular, there is an isomorphism
       \[
         \mf{a}^{-1}/\smc{O} \cong \smc{O}/\mf{a},
       \]
-      for any integral ideal \(\mf{a}\) of \(\smc{O}\).
+      induced by multiplication and natural projection for any integral ideal \(\mf{a}\) of \(\smc{O}\).
     \end{lemma}
     \begin{proof}
       Write \(\mf{f} = \frac{1}{\a}\mf{a}\), \(\mf{g} = \frac{1}{\b}\mf{b}\), and \(\mf{h} = \frac{1}{\g}\mf{c}\) for some nonzero \(\a,\b,\g \in \smc{O}\) and integral ideals \(\mf{a}\), \(\mf{b}\), and \(\mf{c}\) with \(\mf{b} \subseteq \mf{a}\). In view of the isomorphisms
@@ -778,9 +778,9 @@
       \]
       Consider the homomorphism
       \[
-        \phi:\mf{a} \to \mf{a}\mf{c}/\mf{b}\mf{c} \qquad \a \mapsto \d\a+\mf{b}\mf{c}.
+        \phi:\mf{a} \to \mf{a}\mf{c}/\mf{b}\mf{c} \qquad \a \mapsto \d\a+\mf{b}\mf{c},
       \]
-      By the first isomorphism theorem, it suffices to show \(\phi\) is surjective and \(\ker\phi = \mf{b}\). Surjectivity follows from the first identity above. As \(\ker\phi = \d^{-1}\mf{b}\mf{c} \cap \mf{a}\), the second identity above implies \(\ker\phi = \mf{b}\). This proves the first statement. For the second statement, take \(\mf{f} = \mf{a}^{-1}\), \(\mf{g} = \smc{O}\), and \(\mf{h} = \mf{a}\).
+      induced by multiplication and natural projection. By the first isomorphism theorem, it suffices to show \(\phi\) is surjective and \(\ker\phi = \mf{b}\). Surjectivity follows from the first identity above. As \(\ker\phi = \d^{-1}\mf{b}\mf{c} \cap \mf{a}\), the second identity above implies \(\ker\phi = \mf{b}\). This proves the first statement. For the second statement, take \(\mf{f} = \mf{a}^{-1}\), \(\mf{g} = \smc{O}\), and \(\mf{h} = \mf{a}\).
     \end{proof}
 
     If \(\smc{O}\) is a Dedekind domain and \(\mf{p}\) is a prime of \(\smc{O}\), we call \(\F_{\mf{p}} = \smc{O}/\mf{p}\) the \textbf{residue class field}\index{residue class field} of \(\smc{O}\) by \(\mf{p}\). This is field as \(mf{p}\) is maximal. Our next lemma gives an isomorphism between the residue class field and quotients by powers of a prime.
@@ -788,15 +788,16 @@
     \begin{lemma}\label{lem:isomorphism_of_quotient_by_prime_integral_ideals}
       Let \(\smc{O}\) be a Dedekind domain. Then for any prime \(\mf{p}\) of \(\smc{O}\) and nonnegative integer \(n\), we have an isomorphism
       \[
-        \F_{\mf{p}} \cong \mf{p}^{n}/\mf{p}^{n+1}.
+        \F_{\mf{p}} \cong \mf{p}^{n}/\mf{p}^{n+1},
       \]
+      induced by multiplication and natural projection.
     \end{lemma}
     \begin{proof}
       By uniqueness of prime factorizations of fractional ideals, there exists \(\b \in \mf{p}^{n}-\mf{p}^{n+1}\). Consider the homomorphism
       \[
-        \phi:\smc{O} \to \mf{p}^{n}/\mf{p}^{n+1} \qquad \a \mapsto \b\a+\mf{p}^{n+1}.
+        \phi:\smc{O} \to \mf{p}^{n}/\mf{p}^{n+1} \qquad \a \mapsto \b\a+\mf{p}^{n+1},
       \]
-      By the first isomorphism theorem, it suffices to show \(\phi\) is surjective and \(\ker\phi = \mf{p}\). By our choice of \(\b\), we find that \(\b\mf{p}^{-n}\) is an integral ideal relatively prime to \(\mf{p}\). Whence
+      induced by multiplication and natural projection. By the first isomorphism theorem, it suffices to show \(\phi\) is surjective and \(\ker\phi = \mf{p}\). By our choice of \(\b\), we find that \(\b\mf{p}^{-n}\) is an integral ideal relatively prime to \(\mf{p}\). Whence
       \[
         \b\mf{p}^{-n}+\mf{p} = \smc{O} \quad \text{and} \quad \b\mf{p}^{-n} \cap \mf{p} = \b\mf{p}^{1-n}.
       \]
@@ -1154,11 +1155,11 @@
       induced by natural inclusions and projections and where the fourth map and fifth maps are induced by \((\k_{\mf{p}})_{\mf{p} \notin X} \mapsto \prod_{\mf{p} \notin X}\mf{p}^{v_{\mf{p}}(\k_{\mf{p}})}\) and \(\mf{a} \mapsto \mf{a}(X)\) respectively. Moreover, \(K^{\ast}/\smc{O}_{\mf{p}}^{\ast} \cong \Z\).
     \end{proposition}
     \begin{proof}
-      As the second map is injective and the fifth map is surjective, the sequence is exact at \(\smc{O}^{\ast}\) and \(\Cl(\smc{O}(X))\). So we must show exactness at \(\smc{O}(X)^{\ast}\), \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\), and \(\Cl(\smc{O})\). For exactness at \(\smc{O}(X)^{\ast}\), \(\a \in \smc{O}(X)^{\ast}\) represents the zero coset in under the third map \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) if and only if \(\a \in \smc{O}_{\mf{p}}^{\ast}\) for \(\mf{p} \notin X\). But \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes} implies \(\a \in \smc{O}_{\mf{p}}^{\ast}\) for \(\mf{p} \in X\). Whence \(\a\) represents the zero coset if and only if \(\a \in \smc{O}^{\ast}\) by \cref{prop:ring_is_intersection_of_all_localizations} proving exactness at \(\smc{O}(X)^{\ast}\). For exactness at \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\), a representative \((\k_{\mf{p}})_{\mf{p} \notin X}\) of a coset in \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) represents the principal class in \(\Cl(\smc{O})\) under the fourth map if and only if there is a \(\k \in K^{\ast}\) such that
+      As the second map is injective and the fifth map is surjective, the sequence is exact at \(\smc{O}^{\ast}\) and \(\Cl(\smc{O}(X))\). So we must show exactness at \(\smc{O}(X)^{\ast}\), \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\), and \(\Cl(\smc{O})\). For exactness at \(\smc{O}(X)^{\ast}\), \(\a \in \smc{O}(X)^{\ast}\) represents the zero coset in under the third map \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) if and only if \(\a \in \smc{O}_{\mf{p}}^{\ast}\) for \(\mf{p} \notin X\). But \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes} implies \(\a \in \smc{O}_{\mf{p}}^{\ast}\) for \(\mf{p} \in X\). Whence \(\a\) represents the zero coset if and only if \(\a \in \smc{O}^{\ast}\) by \cref{prop:ring_is_intersection_of_all_localizations} proving exactness at \(\smc{O}(X)^{\ast}\). For exactness at \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\), a representative \((\k_{\mf{p}})_{\mf{p} \notin X}\) of a coset in \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) represents the principal class of \(\Cl(\smc{O})\) under the fourth map if and only if there is a \(\k \in K^{\ast}\) such that
       \[
         \prod_{\mf{p} \notin X}\mf{p}^{v_{\mf{p}}(\k_{\mf{p}})} = \prod_{\mf{p}}\mf{p}^{v_{\mf{p}}(\k)}.
       \]
-      By prime factorization, \(v_{\mf{p}}(\k) = v_{\mf{p}}(\k_{\mf{p}})\). In particular, \(v_{\mf{p}}(\k) = 0\) for all \(\mf{p} \in X\) and \(v_{\mf{p}}(\k) = v_{\mf{p}}(\k_{\mf{p}})\) for \(\mf{p} \notin X\). As \(v_{\mf{p}}(\k) = 0\) for \(\mf{p} \in X\), we have \(\k \in \smc{O}_{\mf{p}}^{\ast}\) for these primes as well. Because the primes of \(\smc{O}(X)\) are \(\mf{p}_{X}\) for \(\mf{p} \in X\), \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes,prop:ring_is_intersection_of_all_localizations} together imply \(\k \in \smc{O}(X)^{\ast}\). Exactness at \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) follows. For exactness at \(\Cl(\smc{O})\), an integral ideal \(\mf{a}\) representing a class in \(\Cl(\smc{O})\) represents the principal class under the fifth map if and only if there is a \(\k \in K^{\ast}\) such that
+      By prime factorization, \(v_{\mf{p}}(\k) = v_{\mf{p}}(\k_{\mf{p}})\). In particular, \(v_{\mf{p}}(\k) = 0\) for all \(\mf{p} \in X\) and \(v_{\mf{p}}(\k) = v_{\mf{p}}(\k_{\mf{p}})\) for \(\mf{p} \notin X\). As \(v_{\mf{p}}(\k) = 0\) for \(\mf{p} \in X\), we have \(\k \in \smc{O}_{\mf{p}}^{\ast}\) for these primes as well. Because the primes of \(\smc{O}(X)\) are \(\mf{p}_{X}\) for \(\mf{p} \in X\), \cref{equ:localizing_at_primes_for_X_is_the_same_as_localizing_at_primes,prop:ring_is_intersection_of_all_localizations} together imply \(\k \in \smc{O}(X)^{\ast}\). Exactness at \(\bigop_{\mf{p} \notin X}K^{\ast}/\smc{O}_{\mf{p}}^{\ast}\) follows. For exactness at \(\Cl(\smc{O})\), an integral ideal \(\mf{a}\) representing a class of \(\Cl(\smc{O})\) represents the principal class under the fifth map if and only if there is a \(\k \in K^{\ast}\) such that
       \[
         \mf{a}(X) = \k\smc{O}(X).
       \]
@@ -1221,7 +1222,7 @@
     \[
       \Pic(\smc{O}) = \Cl(\smc{O}).
     \]
-    An element of \(\Pic(\smc{O})\) is called an \textbf{Picard class}\index{Picard class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. 
+    A class of \(\Pic(\smc{O})\) is called an \textbf{Picard class}\index{Picard class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. 
     The \textbf{unit group}\index{unit group} of \(\smc{O}\) is defined to be \(\smc{O}^{\ast}\). That is, the unit group is the group of units in \(\smc{O}\). The Picard and unit groups of \(\smc{O}\) fit into a short exact sequence analogous to \cref{prop:ideal_class_group_exact_sequence}.
 
     \begin{proposition}\label{prop:Picard_class_group_exact_sequence}
@@ -1234,7 +1235,7 @@
       induced by natural inclusions and projections and where the second map is induced by \(\k \mapsto \k\smc{O}\).
     \end{proposition}
     \begin{proof}
-      As the second map is injective and the fourth map is surjective, the sequence is exact at \(K^{\ast}/\smc{O}^{\ast}\) and \(\Pic(\smc{O})\). So it suffices to prove exactness at \(I(\smc{O})\). This follows because the principal fractional ideals represent the identity class of \(\Pic(\smc{O})\) and these are generated by a complete set of representatives for \(K^{\ast}/\smc{O}^{\ast}\).
+      As the second map is injective and the third map is surjective, the sequence is exact at \(K^{\ast}/\smc{O}^{\ast}\) and \(\Pic(\smc{O})\). So it suffices to prove exactness at \(I(\smc{O})\). This follows because the principal fractional ideals represent the identity class of \(\Pic(\smc{O})\) and these are generated by a complete set of representatives for \(K^{\ast}/\smc{O}^{\ast}\).
     \end{proof}
 
     It is possible to describe the Picard group in terms of principal fractional ideals for the localizations \(\smc{O}_{\mf{p}}\) at primes \(\mf{p}\). To prove this, we need some results specific to orders. Our first property is that localization preserves orders.
@@ -1471,7 +1472,7 @@
     \end{equation}
     In other words, the ramification indices and inertia degrees are multiplicative with respect to towers.
 
-    The ramification indices and inertia degrees satisfy a simple relationship to the degree of \(L/K\) that is fundamental to the study of Dedekind extensions. In order to state it, we will require a lemma. The idea is that \(\mc{O}/\mf{p}\mc{O}\) is of maximum dimension as an \(\F_{\mf{p}}\)-vector space, namely \(n\), and its dimension can be computed as a sum of products of the ramification indices and inertia degrees. This relationship is known as the \textbf{fundamental equality}\index{fundamental equality}.
+    The ramification indices and inertia degrees satisfy a simple relationship to the degree of \(L/K\) that is fundamental to the study of Dedekind extensions. The idea is that \(\mc{O}/\mf{p}\mc{O}\) is of maximum dimension as an \(\F_{\mf{p}}\)-vector space, namely \(n\), and its dimension can be computed as a sum of products of the ramification indices and inertia degrees. This relationship is known as the \textbf{fundamental equality}\index{fundamental equality}.
 
     \begin{theorem*}[Fundamental equality]
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Suppose \(\mf{p}\) is a prime of \(\smc{O}\) and \(\mf{p}\mc{O}\) has prime factorization
@@ -1506,9 +1507,13 @@
       \]
       Hence \(\l_{1},\ldots,\l_{m}\) spans \(L/K\) whence \(\mc{O}/\mf{p}\mc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(n\). For \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\), consider the filtration
       \[
-        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \mf{P}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \cdots \supset \mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})},
+        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \mf{P}_{i}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \cdots \supset \mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})},
       \]
-      of \(\F_{\mf{p}}\)-vector spaces. By the third isomorphism theorem, the successive quotients are of the form \(\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}\) which are all isomorphic to \(\F_{\mf{P}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. Whence \(\mf{P}/\mf{P}_{i}^{j}\) is an \(\F_{\mf{P}}\)-vector space of dimension \(j\). In particular, \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{P}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P}_{i})\). Since the dimension of \(\F_{\mf{P}_{i}}\) as an \(\F_{\mf{p}}\)-vector space is \(f_{\mf{p}}(\mf{P}_{i})\), it follows that \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(ef_{\mf{p}}(\mf{P}_{i})\). This completes the proof.
+      of \(\F_{\mf{P}_{i}}\)-vector subspaces. By the third isomorphism theorem, quotients of successive subspaces of the filtration are isomorphic to \(\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}\). As every vector subspace has a complement, iteratively applying this isomorphism shows
+      \[
+        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \cong \bigop_{j}\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}.
+      \]
+      The summands are all isomorphic to \(\F_{\mf{P}_{i}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals} which is an \(\F_{\mf{p}}\)-vector space of dimension \(f_{\mf{p}}(\mf{P}_{i})\). It follows that \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P_{i}})\).
     \end{proof}
 
     It is useful to classify primes according to specific cases of the fundamental equality. We say \(\mf{p}\) is \textbf{inert}\index{inert} in \(\mc{O}/\smc{O}\) if there is a prime \(\mf{P}\) above \(\mf{p}\) with \(f_{\mf{p}}(\mf{P}) = n\). By the fundamental equality, this means \(e_{\mf{p}}(\mf{P}) = 1\) and \(r = 1\). Whence
@@ -1676,7 +1681,7 @@
     \[
       \mf{N}_{\mc{O}/\smc{O}}(\mf{F}) = \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})}.
     \]
-    Setting \(\mf{N}_{\mc{O}/\smc{O}}(\mc{O}) = \smc{O}\), unique factorization shows that we obtain a homomorphism
+    Setting \(\mf{N}_{\mc{O}/\smc{O}}(\mc{O}) = \smc{O}\), prime factorization shows that we obtain a homomorphism
     \[
       \mf{N}_{\mc{O}/\smc{O}}:I(\mc{O}) \to I(\smc{O}) \qquad \mf{P}_{1}^{e_{1}} \cdots \mf{P}_{r}^{e_{r}} \mapsto \mf{p}_{1}^{e_{1}f_{\mf{p}_{1}}(\mf{P}_{1})} \cdots \mf{p}_{r}^{e_{r}f_{\mf{p}_{r}}(\mf{P}_{r})},
     \]
@@ -1718,9 +1723,9 @@
       \[
         f_{\mf{p}}(\mf{P}) = v(\Norm_{L/K}(\l)).
       \]
-      As \(f_{\mf{p}}(\mf{P})\) is the dimension of \(\F_{\mf{P}}\) as an \(\F_{\mf{p}}\)-vector space, it suffices to show that the same is true of \(v(\Norm_{L/K}(\l))\). To this end, \(\Norm_{L/K}(\l) = \Norm_{\mc{O}/\smc{O}}(\l)\) by \cref{prop:trace_and_norm_reduce_for_integral_basis}. Recall that \(\Norm_{\mc{O}/\smc{O}}(\l)\) is the determinant of the \(\smc{O}\)-linear operator \(T_{\l}\). As \(\smc{O}\) is a principal ideal domain, putting \(T_{\l}\) in smith normal form shows that
+      As \(f_{\mf{p}}(\mf{P})\) is the dimension of \(\F_{\mf{P}}\) as an \(\F_{\mf{p}}\)-vector space, it suffices to show that the same is true of \(v(\Norm_{L/K}(\l))\). To this end, \(\Norm_{L/K}(\l) = \Norm_{\mc{O}/\smc{O}}(\l)\) by \cref{prop:trace_and_norm_reduce_for_integral_basis}. Recall that \(\Norm_{\mc{O}/\smc{O}}(\l)\) is the determinant of the \(\smc{O}\)-linear operator \(T_{\l}\) on \(\mc{O}\). As \(\smc{O}\) is a principal ideal domain, putting \(T_{\l}\) in smith normal form shows that there is a basis of \(\mc{O}/\smc{O}\) for which the matrix of \(T_{\l}\) is
       \[
-        T_{\l} = U\begin{pmatrix} \e_{1}\pi^{k_{1}} & & \\ & \ddots & \\ & & \e_{n}\pi^{k_{n}} \end{pmatrix}V,
+        U\begin{pmatrix} \e_{1}\pi^{k_{1}} & & \\ & \ddots & \\ & & \e_{n}\pi^{k_{n}} \end{pmatrix}V,
       \]
       for some invertible matrices \(U,V \in \GL_{n}(\smc{O})\) of unit determinant, nonnegative integers \(k_{i}\), units \(\e_{i}\) and uniformizer \(\pi\) for \(\smc{O}\). Setting \(\e = \prod_{i}\e_{i}\) and \(k = \sum_{i}k_{i}\) shows \(\Norm_{\mc{O}/\smc{O}}(\l) =\e\pi^{k}\) whence \(v(\Norm_{L/K}(\l)) = k\). As the image of \(T_{\l}\) is \(\mf{P}\), the smith normal form induces an isomorphism
       \[
@@ -1766,13 +1771,17 @@
       \begin{proof}
         As \(K\) admits an integral basis, every integral ideal of \(K\) is a free \(\Z\)-module of rank \(n\) by \cref{thm:integral_basis_AKBL}. Whence any such quotient is finite. By the Chinese remainder theorem, the right-hand side of the desired formula is multiplicative. As the norm is also multiplicative, it suffices to prove the claim when \(\mf{a}\) is a prime power. So fix a prime power \(\mf{p}^{e}\) and let \(p\) be the prime below \(\mf{p}\). On the one hand, \(\Norm_{K}(\mf{p}^{e}) = p^{ef_{p}(\mf{p})}\). On the other hand, consider the filtration
         \[
-          \mc{O}_{K} \supset \mf{p} \supset \cdots \supset \mf{p}^{e}.
+          \mc{O}_{K}/\mf{p}^{e} \supset \mf{p}/\mf{p}^{e} \supset \cdots \supset \mf{p}^{e}/\mf{p}^{e},
         \]
-        The successive quotients are of the form \(\mf{p}^{i}/\mf{p}^{i+1}\) which are all isomorphic to \(\F_{\mf{p}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. Repeated application of the third isomorphism theorem gives
+        of \(\F_{p}\)-vector subspaces. By the third isomorphism theorem, quotients of successive subspaces of the filtration are isomorphic to \(\mf{p}^{i}/\mf{p}^{i+1}\). As every vector subspace has a complement, iteratively applying this isomorphism shows
+        \[
+          \mc{O}_{K}/\mf{p}^{e} \cong \bigop_{i}\mf{p}^{i}/\mf{p}^{i+1}.
+        \]
+        Therefore
         \[
           |\mc{O}_{K}/\mf{p}^{e}| = \prod_{i}|\mf{p}^{i}/\mf{p}^{i+1}|.
         \]
-        As \(\F_{\mf{p}}\) is an \(\F_{p}\)-vector space of dimension \(f_{p}(\mf{p})\), we find that \(|\mf{p}^{i}/\mf{p}^{i+1}| = p^{f_{p}(\mf{p})}\). Whence \(|\mc{O}_{K}/\mf{p}^{e}| = p^{ef_{p}(\mf{p})}\). This proves the first statement. The second statement follows from the first together with \cref{prop:ideal_norm_of_principal_ideal}.
+        Each factor is isomorphic to \(\F_{\mf{p}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. As \(\F_{\mf{p}}\) is an \(\F_{p}\)-vector space of dimension \(f_{p}(\mf{p})\), we find that \(|\mf{p}^{i}/\mf{p}^{i+1}| = p^{f_{p}(\mf{p})}\). Whence \(|\mc{O}_{K}/\mf{p}^{e}| = p^{ef_{p}(\mf{p})}\). This proves the first statement. The second statement follows from the first together with \cref{prop:ideal_norm_of_principal_ideal}.
       \end{proof}
 
       As a consequence of this result and Lagrange's theorem, we see that \(\Norm_{K}(\mf{a}) \in \mf{a}\) and therefore for every fractional ideal \(\mf{f}\) as well.
@@ -1949,7 +1958,7 @@
       induced by natural inclusions and projections and where the third map is given by \(\tau \mapsto T_{\mf{p}}^{\mf{P}}(\tau)\).
     \end{proposition}
     \begin{proof}
-      As the second map is injective and the fourth map is surjective by \cref{prop:T_map_is_surjective}, the sequence is exact at \(I_{\mf{p}}(\mf{P})\) and \(\Aut(\F_{\mf{P}}/\F_{\mf{p}})\). So it remains to prove exactness at \(D_{\mf{p}}(\mf{P})\). This follows because \(I_{\mf{p}}(\mf{P})\) is the kernel of \(T_{\mf{p}}^{\mf{P}}\) by definition.
+      As the second map is injective and the third map is surjective by \cref{prop:T_map_is_surjective}, the sequence is exact at \(I_{\mf{p}}(\mf{P})\) and \(\Aut(\F_{\mf{P}}/\F_{\mf{p}})\). So it remains to prove exactness at \(D_{\mf{p}}(\mf{P})\). This follows because \(I_{\mf{p}}(\mf{P})\) is the kernel of \(T_{\mf{p}}^{\mf{P}}\) by definition.
     \end{proof}
 
     We can say more when the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is separable. For in this case, \cref{prop:T_map_is_surjective} implies \(\F_{\mf{P}}/\F_{\mf{p}}\) is Galois. Whence
@@ -2106,55 +2115,45 @@
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Let \(\mf{P}\) be a prime of \(\mc{O}\) above a prime \(\mf{p}\) of \(\smc{O}\). Then \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\). Moreover, \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). In particular, \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\).
     \end{theorem}
     \begin{proof}
-      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, we may assume that \(\mc{O}/\smc{O}\) is a local Dedekind extension. Let \(e\) be a nonnegative integer with \(e \le e_{\mf{p}}(\mf{P})\) and write \(\mf{p}\mc{O} = \mf{P}^{e}\mf{A}\) for some integral ideal \(\mf{A}\) of \(\mc{O}\). By \cref{lem:different_containment_lemma}, \(\mf{P}^{e} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\Trace_{L/K}(\mf{P}^{e}) \subseteq \smc{O}\). As \(\mf{P}^{e} = \mf{p}^{-1}\mf{A}\), it it further equivalent to show \(\Trace_{L/K}(\mf{A}) \subseteq \mf{p}\). Since \(\mc{O}/\smc{O}\) admits an integral basis, we have \(\Trace_{K/L}(\mf{A}) = \Trace_{\mc{O}/\smc{O}}(\mf{A})\) from  \cref{prop:trace_and_norm_reduce_for_integral_basis} and so it is further equivalent to show
+      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, we may assume that \(\mc{O}/\smc{O}\) is a local Dedekind extension. Let \(e\) be a nonnegative integer with \(e \le e_{\mf{p}}(\mf{P})\) and write \(\mf{p}\mc{O} = \mf{P}^{e}\mf{A}\) for some integral ideal \(\mf{A}\) of \(\mc{O}\). By \cref{lem:different_containment_lemma}, \(\mf{P}^{e} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(\Trace_{L/K}(\mf{P}^{e}) \subseteq \smc{O}\). As \(\mf{P}^{e} = \mf{p}^{-1}\mf{A}\), it is further equivalent to show \(\Trace_{L/K}(\mf{A}) \subseteq \mf{p}\). Since \(\mc{O}/\smc{O}\) admits an integral basis, we have \(\Trace_{K/L}(\mf{A}) = \Trace_{\mc{O}/\smc{O}}(\mf{A})\) from \cref{prop:trace_and_norm_reduce_for_integral_basis}. Whence it is further equivalent to show \(\Trace_{\mc{O}/\smc{O}}(\mf{A}) \subseteq \mf{p}\) which is to say
       \[
-        \Trace_{\mc{O}/\smc{O}}(\mf{A}) \subseteq \mf{p}.
-      \]
-      Let \(\a \in \mf{A}\) and let \(\conj{\a} \in \mc{O}/\mf{p}\mc{O}\) be its image under natural projection. Then
-      \[
-        \Trace_{\mc{O}/\smc{O}}(\a) \equiv \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \pmod{\mf{p}}.
-      \]
-      Therefore it is yet further equivalent to show
-      \[
-        \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) \equiv 0 \pmod{\mf{p}}.
+        \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\mf{A}/\mf{p}\mc{O}) \equiv 0 \pmod{\mf{p}}.
       \]
 
-      To show \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\), take \(e = e_{\mf{p}}(\mf{P})-1\) so that \(\mf{P} \mid\mid \mf{A}\). Then the prime factors of \(\mf{A}\) and \(\mf{p}\mc{O}\) are the same. Whence there is a positive integer \(k\) such that \(\mf{A}^{k}\) is divisible by \(\mf{p}\mc{O}\). So \(\mf{p}\mc{O} \mid \mf{A}^{k}\) and therefore \(\mf{A}^{k} \subseteq \mf{p}\mc{O}\) as to divide is to contain. This implies that the \(\F_{\mf{p}}\)-linear operator \(T_{\conj{\a}}^{k}\) is the zero operator. Whence \(T_{\conj{\a}}\) is nilpotent. As nilpotent operators have trace zero, \(\Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = 0\) which implies the desired congruence.
+      To prove \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\), take \(e = e_{\mf{p}}(\mf{P})-1\) so that \(\mf{P} \mid\mid \mf{A}\). Then the prime factors of \(\mf{A}\) and \(\mf{p}\mc{O}\) are the same. Whence there is a positive integer \(k\) such that \(\mf{A}^{k}\) is divisible by \(\mf{p}\mc{O}\). So \(\mf{p}\mc{O} \mid \mf{A}^{k}\) and therefore \(\mf{A}^{k} \subseteq \mf{p}\mc{O}\) as to divide is to contain. It follows that the \(k\)-th power of the \(\F_{\mf{p}}\)-linear operator on \(\mc{O}/\mf{p}\mc{O}\) for any class of \(\mf{A}/\mf{p}\mc{O}\) is the zero operator. Such an operator is necessarily nilpotent. As nilpotent operators have trace zero, \(\Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\mf{A}/\mf{p}\mc{O}) = 0\) which is stronger than the desired congruence. This proves the first statement.
 
-      To show \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\), take \(e = e_{\mf{p}}(\mf{P})\) so that \(\mf{P}\) and \(\mf{A}\) are relatively prime. The Chinese remainder theorem gives an isomorphism
+      To prove \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\), take \(e = e_{\mf{p}}(\mf{P})\) so that \(\mf{P}\) and \(\mf{A}\) are relatively prime. The Chinese remainder theorem gives an isomorphism
       \[
-        \mc{O}/\mf{p}\mc{O} \cong (\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) \op (\mc{O}/\mf{A}).
+        \mc{O}/\mf{p}\mc{O} \cong (\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) \op (\mc{O}/\mf{A}),
       \]
-      Since \(\a \in \mf{A}\), there exists \(\b,\g \in \mc{O}\) such that 
+      induced by natural projection. So \(\mf{A}/\mf{p}\mc{O} \cong \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) and it is further equivalent to show
       \[
-        \a \equiv \b \pmod{\mf{P}^{e_{\mf{p}}(\mf{P})}} \quad \text{and} \quad \a \equiv \g \pmod{\mf{A}}.
+        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) \equiv 0 \pmod{\mf{p}}.
       \]
-      Let \(\conj{\b} \in \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) and \(\conj{\g} \in \mc{O}/\mf{A}\mc{O}\) be the images of \(\b\) and \(\g\) under the respective natural projection. Then
+      We will prove that this occurs if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). To this end, consider the filtration
       \[
-        \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b})+\Trace_{(\mc{O}/\mf{A})/\F_{\mf{p}}}(\conj{\g}).
+        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \mf{P}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \cdots \supset \mf{P}^{e_{\mf{p}}(\mf{P})}/\mf{P}^{e_{\mf{p}}(\mf{P})},
       \]
-      But as \(\a \in \mf{A}\), we have \(\Trace_{(\mc{O}/\mf{A})/\F_{\mf{p}}}(\conj{\g}) = 0\) and it is further equivalent to show
+      of \(\F_{\mf{p}}\)-vector subspaces. By the third isomorphism theorem, quotients of successive subspaces of the filtration are isomorphic to \(\mf{P}^{i}/\mf{P}^{i+1}\) which is induced by natural projection. As every vector subspace has a complement, iteratively applying this isomorphism shows
       \[
-        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b}) = 0.
+        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \cong \bigop_{i}\mf{P}^{i}/\mf{P}^{i+1}.
       \]
-      We will prove that this occurs if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). \todo{xxx}
-      \iffalse
-      As the residue class extensions are assumed to be separable, \cref{lem:trace_is_nondegenerate} implies that \(\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\conj{\b})\) cannot be zero for all \(\b \in \mc{O}\). So it must be the case that \(\Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b}) = 0\) for all \(\b \in \mc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\).
+      Whence
+      \[
+        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) = \sum_{i}\Trace_{(\mf{P}^{i}/\mf{P}^{i+1})/\F_{\mf{p}}}(\mf{P}^{i}/\mf{P}^{i+1}).
+      \]
+      By \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}, every quotient \(\mf{P}^{i}/\mf{P}^{i+1}\) is isomorphic to \(\F_{\mf{P}}\) which is induced by multiplication and natural projection. This implies the the trace in the summands are all \(\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\F_{\mf{P}})\). So
+      \[
+        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) = e_{\mf{p}}(\mf{P})\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\F_{\mf{P}}).
+      \]
+      As the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is assumed to be separable, the trace form of \(\F_{\mf{P}}/\F_{\mf{p}}\) is nondegenerate. Therefore the desired congruence holds if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). This proves the second statement.
 
-       As all residue class extensions are separable by assumption, \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). But (i) and (ii) together imply that \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). Whence \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\). So it remains to prove (i) and (ii).
-       \fi
+       It remains to show \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\). As all residue class extensions are separable, \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). But the previous two statements together imply that \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). Whence \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\).
     \end{proof}
+
+    In the case the reside class extensions are separable, note that this result implies \(\mf{P}^{e_{\mf{p}}(\mf{P})-1}\) exactly divides \(\mf{D}_{\mc{O}/\smc{O}}\) provided \(e_{\mf{p}}(\mf{P}) \neq 0 \tmod{\mf{p}}\). However, when \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\) we only know \(\mf{P}^{e_{\mf{p}}(\mf{P})}\) divides \(\mf{D}_{\mc{O}/\smc{O}}\). So \(\mf{P}\) very well might divide \(\mf{D}_{\mc{O}/\smc{O}}\) to a larger power. Also, upon factorizing \(\mf{D}_{\mc{O}/\smc{O}}\) into a product of primes, we see that only finitely many primes of \(\mc{O}\) can ramify in \(\mc{O}/\smc{O}\).
 
     \iffalse
-    Note that \cref{thm:ramifies_if_and_only_if_divides_the_different} does not tell us the degree to which \(\mf{P}\) divides \(\mf{D}_{\mc{O}/\smc{O}}\) in the case \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{p}\). It only tells us that the degree is at least \(e_{\mf{p}}(\mf{P})\). Also, only finitely many primes can ramify in \(L\) as a corollary of \cref{thm:ramifies_if_and_only_if_divides_the_different}:
-
-    \begin{corollary}\label{cor:finitely_many_primes_ramify_L}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite separable extension \(L/K\) and assume that all residue class extensions are separable. Then only finitely many primes ramify in \(L\).
-    \end{corollary}
-    \begin{proof}
-      There are only finitely many prime factors of \(\mf{D}_{\mc{O}/\smc{O}}\) by the prime factorization of fractional ideals. Therefore only finitely many primes can ramify in \(L\) by \cref{thm:ramifies_if_and_only_if_divides_the_different}.
-    \end{proof}
-
     Similarly, a prime \(\mf{p}\) of \(\smc{O}\) ramifies in \(\mc{O}/\smc{O}\) if and only if it divides the discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) provided the residue class extensions are separable:
 
     \begin{theorem}\label{thm:ramifies_if_and_only_if_divides_the_discriminant}
