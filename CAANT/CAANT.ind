@@ -63,10 +63,10 @@
   \item Dirichlet orthogonality relations, \hyperpage{8}
   \item Dirichlet series, \hyperpage{91}
   \item discrete valuation ring, \hyperpage{55}
-  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{85}
+  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{86}
   \item divides, \hyperpage{42}
   \item divisor function, \hyperpage{3}
-  \item dual, \hyperpage{83}
+  \item dual, \hyperpage{84}
 
   \indexspace
 
@@ -102,7 +102,7 @@
 
   \item ideal class, \hyperpage{43}
   \item ideal class group, \hyperpage{43}, \hyperpage{49}
-  \item ideal norm, \hyperpage{73}, \hyperpage{75}
+  \item ideal norm, \hyperpage{74, 75}
   \item identity function, \hyperpage{3}
   \item imprimitive, \hyperpage{9}
   \item indicator function, \hyperpage{2}
@@ -110,7 +110,7 @@
   \item inert, \hyperpage{69}, \hyperpage{75}
   \item inertia degree, \hyperpage{67}, \hyperpage{78}, \hyperpage{83}
   \item inertia field, \hyperpage{81}
-  \item inertia group, \hyperpage{80}
+  \item inertia group, \hyperpage{81}
   \item integral, \hyperpage{24}
   \item integral basis, \hyperpage{34}, \hyperpage{38}
   \item integral closure, \hyperpage{25}
@@ -143,7 +143,7 @@
 
   \item nonsplit, \hyperpage{69}, \hyperpage{75}
   \item nontrivial zero, \hyperpage{117}
-  \item norm, \hyperpage{28}, \hyperpage{73}, \hyperpage{75}
+  \item norm, \hyperpage{28}, \hyperpage{74}, \hyperpage{76}
   \item normalization, \hyperpage{25}
   \item number field, \hyperpage{27}
   \item number of distinct prime factors function, \hyperpage{4}
@@ -172,7 +172,7 @@
   \indexspace
 
   \item Ramanujan sum, \hyperpage{13, 14}
-  \item ramification index, \hyperpage{66}, \hyperpage{77}, 
+  \item ramification index, \hyperpage{66}, \hyperpage{78}, 
 		\hyperpage{83}
   \item ramified, \hyperpage{69}, \hyperpage{75}
   \item real, \hyperpage{10}

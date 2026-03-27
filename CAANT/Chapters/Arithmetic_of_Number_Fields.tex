@@ -119,7 +119,7 @@
     \[
       \End_{\mc{O}/\smc{O}} \cong \Mat_{n}(\smc{O})
     \]
-    This permits us to view \(\smc{O}\)-linear operators from \(\mc{O}\) to itself as \(n \x n\) matrices with coefficients in \(\smc{O}\). To any \(\b \in \mc{O}\), we associate the \(\smc{O}\)-linear operator \(T_{\b}\) defined by
+    This permits us to view \(\smc{O}\)-linear operators from \(\mc{O}\) to itself as \(n \x n\) matrices with coefficients in \(\smc{O}\). To any \(\b \in \mc{O}\), we define the \(\smc{O}\)-linear operator \(T_{\b}\) on \(\mc{O}\) by
     \[
       T_{\b}:\mc{O} \to \mc{O} \qquad x \mapsto \b x.
     \]
@@ -1507,13 +1507,19 @@
       \]
       Hence \(\l_{1},\ldots,\l_{m}\) spans \(L/K\) whence \(\mc{O}/\mf{p}\mc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(n\). For \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\), consider the filtration
       \[
-        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \mf{P}_{i}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \cdots \supset \mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})},
+        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \mf{P}_{i}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \cdots \supset \mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})-1}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset 0,
       \]
-      of \(\F_{\mf{P}_{i}}\)-vector subspaces. By the third isomorphism theorem, quotients of successive subspaces of the filtration are isomorphic to \(\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}\). As every vector subspace has a complement, iteratively applying this isomorphism shows
+      of \(\F_{\mf{P}_{i}}\)-vector spaces. By the third isomorphism theorem, quotients of successive layers of the filtration are isomorphic to \(\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}\). Whence we obtain a short exact sequence
+      \begin{center}
+        \begin{tikzcd}
+          0 \arrow{r} & \mf{P}_{i}^{j+1}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \arrow{r} & \mf{P}_{i}^{j}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \arrow{r} & \mf{P}_{i}^{j}/\mf{P}_{i}^{j+1} \arrow{r} & 0,
+        \end{tikzcd}
+      \end{center}
+      induced by natural inclusions and projections. As this is a short exact sequence of \(\F_{\mf{P}_{i}}\)-vector spaces it splits. Choosing sections for all of these short exact sequences is equivalent to choosing a basis for \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) adapted to the filtration and we obtain an isomorphism
       \[
-        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \cong \bigop_{j}\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}.
+        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \cong \bigop_{j}\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1},
       \]
-      The summands are all isomorphic to \(\F_{\mf{P}_{i}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals} which is an \(\F_{\mf{p}}\)-vector space of dimension \(f_{\mf{p}}(\mf{P}_{i})\). It follows that \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P_{i}})\).
+      induced by natural projection of the adapted basis. The quotients \(\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}\) are all isomorphic to \(\F_{\mf{P}_{i}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. As \(\F_{\mf{P}_{i}}\) is an \(\F_{\mf{p}}\)-vector spaces of dimension \(f_{\mf{p}}(\mf{P}_{i})\), it follows that \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P_{i}})\).
     \end{proof}
 
     It is useful to classify primes according to specific cases of the fundamental equality. We say \(\mf{p}\) is \textbf{inert}\index{inert} in \(\mc{O}/\smc{O}\) if there is a prime \(\mf{P}\) above \(\mf{p}\) with \(f_{\mf{p}}(\mf{P}) = n\). By the fundamental equality, this means \(e_{\mf{p}}(\mf{P}) = 1\) and \(r = 1\). Whence
@@ -1771,17 +1777,13 @@
       \begin{proof}
         As \(K\) admits an integral basis, every integral ideal of \(K\) is a free \(\Z\)-module of rank \(n\) by \cref{thm:integral_basis_AKBL}. Whence any such quotient is finite. By the Chinese remainder theorem, the right-hand side of the desired formula is multiplicative. As the norm is also multiplicative, it suffices to prove the claim when \(\mf{a}\) is a prime power. So fix a prime power \(\mf{p}^{e}\) and let \(p\) be the prime below \(\mf{p}\). On the one hand, \(\Norm_{K}(\mf{p}^{e}) = p^{ef_{p}(\mf{p})}\). On the other hand, consider the filtration
         \[
-          \mc{O}_{K}/\mf{p}^{e} \supset \mf{p}/\mf{p}^{e} \supset \cdots \supset \mf{p}^{e}/\mf{p}^{e},
+          \mc{O}_{K}/\mf{p}^{e} \supset \mf{p}/\mf{p}^{e} \supset \cdots \supset \mf{p}^{e-1}/\mf{p}^{e} \supset 0,
         \]
-        of \(\F_{p}\)-vector subspaces. By the third isomorphism theorem, quotients of successive subspaces of the filtration are isomorphic to \(\mf{p}^{i}/\mf{p}^{i+1}\). As every vector subspace has a complement, iteratively applying this isomorphism shows
-        \[
-          \mc{O}_{K}/\mf{p}^{e} \cong \bigop_{i}\mf{p}^{i}/\mf{p}^{i+1}.
-        \]
-        Therefore
+        of \(\mc{O}_{K}\)-modules. By the third isomorphism theorem, quotients of successive layers of the filtration are isomorphic to \(\mf{p}^{i}/\mf{p}^{i+1}\). Repeated application of this isomorphism and Lagrange's theorem together give
         \[
           |\mc{O}_{K}/\mf{p}^{e}| = \prod_{i}|\mf{p}^{i}/\mf{p}^{i+1}|.
         \]
-        Each factor is isomorphic to \(\F_{\mf{p}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. As \(\F_{\mf{p}}\) is an \(\F_{p}\)-vector space of dimension \(f_{p}(\mf{p})\), we find that \(|\mf{p}^{i}/\mf{p}^{i+1}| = p^{f_{p}(\mf{p})}\). Whence \(|\mc{O}_{K}/\mf{p}^{e}| = p^{ef_{p}(\mf{p})}\). This proves the first statement. The second statement follows from the first together with \cref{prop:ideal_norm_of_principal_ideal}.
+        The quotients \(\mf{p}^{i}/\mf{p}^{i+1}\) are all isomorphic to \(\F_{\mf{p}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. As \(\F_{\mf{p}}\) is an \(\F_{p}\)-vector space of dimension \(f_{p}(\mf{p})\), we find that \(|\mf{p}^{i}/\mf{p}^{i+1}| = p^{f_{p}(\mf{p})}\) and so \(|\mc{O}_{K}/\mf{p}^{e}| = p^{ef_{p}(\mf{p})}\). This proves the first statement. The second statement follows from the first together with \cref{prop:ideal_norm_of_principal_ideal}.
       \end{proof}
 
       As a consequence of this result and Lagrange's theorem, we see that \(\Norm_{K}(\mf{a}) \in \mf{a}\) and therefore for every fractional ideal \(\mf{f}\) as well.
@@ -2120,7 +2122,7 @@
         \Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\mf{A}/\mf{p}\mc{O}) \equiv 0 \pmod{\mf{p}}.
       \]
 
-      To prove \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\), take \(e = e_{\mf{p}}(\mf{P})-1\) so that \(\mf{P} \mid\mid \mf{A}\). Then the prime factors of \(\mf{A}\) and \(\mf{p}\mc{O}\) are the same. Whence there is a positive integer \(k\) such that \(\mf{A}^{k}\) is divisible by \(\mf{p}\mc{O}\). So \(\mf{p}\mc{O} \mid \mf{A}^{k}\) and therefore \(\mf{A}^{k} \subseteq \mf{p}\mc{O}\) as to divide is to contain. It follows that the \(k\)-th power of the \(\F_{\mf{p}}\)-linear operator on \(\mc{O}/\mf{p}\mc{O}\) for any class of \(\mf{A}/\mf{p}\mc{O}\) is the zero operator. Such an operator is necessarily nilpotent. As nilpotent operators have trace zero, \(\Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\mf{A}/\mf{p}\mc{O}) = 0\) which is stronger than the desired congruence. This proves the first statement.
+      To prove \(\mf{P}^{e_{\mf{p}}(\mf{P})-1} \mid \mf{D}_{\mc{O}/\smc{O}}\), take \(e = e_{\mf{p}}(\mf{P})-1\) so that \(\mf{P} \mid\mid \mf{A}\). Then the prime factors of \(\mf{A}\) and \(\mf{p}\mc{O}\) are the same. Whence there is a positive integer \(k\) such that \(\mf{A}^{k}\) is divisible by \(\mf{p}\mc{O}\). So \(\mf{p}\mc{O} \mid \mf{A}^{k}\) and therefore \(\mf{A}^{k} \subseteq \mf{p}\mc{O}\) as to divide is to contain. Now let \(\a \in \mf{A}\) with \(\conj{\a} \in \mf{A}/\mf{p}\mc{O}\) its image under natural projection. It follows that the \(k\)-th power of the \(\F_{\mf{p}}\)-linear operator \(T_{\conj{\a}}\) on \(\mc{O}/\mf{p}\mc{O}\) is the zero operator. This means \(T_{\conj{\a}}\) is nilpotent. As nilpotent operators have trace zero, \(\Trace_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}}(\conj{\a}) = 0\). As \(\a\) was arbitrary, this implies the desired congruence proving the first statement.
 
       To prove \(\mf{P}^{e_{\mf{p}}(\mf{P})} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\), take \(e = e_{\mf{p}}(\mf{P})\) so that \(\mf{P}\) and \(\mf{A}\) are relatively prime. The Chinese remainder theorem gives an isomorphism
       \[
@@ -2132,19 +2134,25 @@
       \]
       We will prove that this occurs if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). To this end, consider the filtration
       \[
-        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \mf{P}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \cdots \supset \mf{P}^{e_{\mf{p}}(\mf{P})}/\mf{P}^{e_{\mf{p}}(\mf{P})},
+        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \mf{P}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \cdots \supset \mf{P}^{e_{\mf{p}}(\mf{P})-1}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset 0,
       \]
-      of \(\F_{\mf{p}}\)-vector subspaces. By the third isomorphism theorem, quotients of successive subspaces of the filtration are isomorphic to \(\mf{P}^{i}/\mf{P}^{i+1}\) which is induced by natural projection. As every vector subspace has a complement, iteratively applying this isomorphism shows
+      of \(\F_{\mf{p}}\)-vector spaces. By the third isomorphism theorem, quotients of successive layers of the filtration are isomorphic to \(\mf{P}^{i}/\mf{P}^{i+1}\). Whence we obtain a short exact sequence
+      \begin{center}
+        \begin{tikzcd}
+          0 \arrow{r} & \mf{P}^{i+1}/\mf{P}^{e_{\mf{p}}(\mf{P})} \arrow{r} & \mf{P}^{i}/\mf{P}^{e_{\mf{p}}(\mf{P})} \arrow{r} & \mf{P}^{i}/\mf{P}^{i+1} \arrow{r} & 0,
+        \end{tikzcd}
+      \end{center}
+      induced by natural inclusions and projections. As this is a short exact sequence of \(\F_{\mf{P}}\)-vector spaces it splits. Choosing sections for all of these short exact sequences is equivalent to choosing a basis for \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) adapted to the filtration and we obtain an isomorphism
       \[
-        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \cong \bigop_{i}\mf{P}^{i}/\mf{P}^{i+1}.
+        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P}_{i})} \cong \bigop_{i}\mf{P}^{i}/\mf{P}^{i+1},
       \]
-      Whence
+      induced by natural projection of the adapted basis. Now let \(\a \in \mc{O}\) where \(\conj{\a} \in \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P}_{i})}\) is its image under natural projection. Also let \(\conj{\a}_{i} \in \mf{P}^{i}/\mf{P}^{i+1}\) be the images of \(\a\) under the aforementioned isomorphism. Then
       \[
-        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) = \sum_{i}\Trace_{(\mf{P}^{i}/\mf{P}^{i+1})/\F_{\mf{p}}}(\mf{P}^{i}/\mf{P}^{i+1}).
+        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\a}) = \sum_{i}\Trace_{(\mf{P}^{i}/\mf{P}^{i+1})/\F_{\mf{p}}}(\conj{\a}_{i}).
       \]
-      By \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}, every quotient \(\mf{P}^{i}/\mf{P}^{i+1}\) is isomorphic to \(\F_{\mf{P}}\) which is induced by multiplication and natural projection. This implies the the trace in the summands are all \(\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\F_{\mf{P}})\). So
+      The quotients \(\mf{P}^{i}/\mf{P}^{i+1}\) are all isomorphic to \(\F_{\mf{P}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals} which is induced by multiplication and natural projection. This implies the the trace in the summands are all \(\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\conj{\a}_{0})\). So
       \[
-        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) = e_{\mf{p}}(\mf{P})\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\F_{\mf{P}}).
+        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\a}) = e_{\mf{p}}(\mf{P})\Trace_{\F_{\mf{P}}/\F_{\mf{p}}}(\conj{\a}_{0}).
       \]
       As the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is assumed to be separable, the trace form of \(\F_{\mf{P}}/\F_{\mf{p}}\) is nondegenerate. Therefore the desired congruence holds if and only if \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\). This proves the second statement.
 
