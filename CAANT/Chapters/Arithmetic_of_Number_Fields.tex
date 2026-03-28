@@ -1472,7 +1472,34 @@
     \end{equation}
     In other words, the ramification indices and inertia degrees are multiplicative with respect to towers.
 
-    The ramification indices and inertia degrees satisfy a simple relationship to the degree of \(L/K\) that is fundamental to the study of Dedekind extensions. The idea is that \(\mc{O}/\mf{p}\mc{O}\) is of maximum dimension as an \(\F_{\mf{p}}\)-vector space, namely \(n\), and its dimension can be computed as a sum of products of the ramification indices and inertia degrees. This relationship is known as the \textbf{fundamental equality}\index{fundamental equality}.
+    The ramification indices and inertia degrees satisfy a simple relationship to the degree of \(L/K\) that is fundamental to the study of Dedekind extensions. We first prove a useful lemma.
+
+    \begin{lemma}\label{lem:prime_power_vector_space_isomorphism}
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite separable extension \(L/K\) and suppose \(\mf{P}\) a prime of \(\mc{O}\) above a prime \(\mf{p}\) of \(\smc{O}\). Then there is an isomorphism
+      \[
+        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \cong \bigop_{i}\mf{P}^{i}/\mf{P}^{i+1},
+      \]
+      induced by natural projection of a basis adapted to the filtration
+      \[
+        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \mf{P}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \cdots \supset \mf{P}^{e_{\mf{p}}(\mf{P})-1}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset 0,
+      \]
+      of \(\F_{\mf{P}}\)-vector spaces. In particular, \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P})f_{\mf{p}}(\mf{P})\).
+    \end{lemma}
+    \begin{proof}
+      By the third isomorphism theorem, quotients of successive layers of the filtration are isomorphic to \(\mf{P}^{i}/\mf{P}^{i+1}\). Whence we obtain a short exact sequence
+      \begin{center}
+        \begin{tikzcd}
+          0 \arrow{r} & \mf{P}^{i+1}/\mf{P}^{e_{\mf{p}}(\mf{P})} \arrow{r} & \mf{P}^{i}/\mf{P}^{e_{\mf{p}}(\mf{P})} \arrow{r} & \mf{P}^{i}/\mf{P}^{i+1} \arrow{r} & 0,
+        \end{tikzcd}
+      \end{center}
+      induced by natural inclusions and projections. As this is a short exact sequence of \(\F_{\mf{P}}\)-vector spaces it splits. Choosing sections for all of these short exact sequences is equivalent to choosing a basis for \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) adapted to the filtration and we obtain an isomorphism
+      \[
+        \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \cong \bigop_{i}\mf{P}^{i}/\mf{P}^{i+1},
+      \]
+      induced by natural projection of the adapted basis. This proves the first statement. The quotients \(\mf{P}^{i}/\mf{P}^{i+1}\) are all isomorphic to \(\F_{\mf{P}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. As \(\F_{\mf{P}}\) is an \(\F_{\mf{p}}\)-vector spaces of dimension \(f_{\mf{p}}(\mf{P})\), it follows that \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P})f_{\mf{p}}(\mf{P})\). This proves the second statement.
+    \end{proof}
+    
+     We can now establish the relationship between the ramification indices, inertia degrees, and degree of \(L/K\). The idea is that \(\mc{O}/\mf{p}\mc{O}\) is of maximum dimension as an \(\F_{\mf{p}}\)-vector space, namely \(n\), and its dimension can be computed as a sum of products of the ramification indices and inertia degrees. This relationship is known as the \textbf{fundamental equality}\index{fundamental equality}.
 
     \begin{theorem*}[Fundamental equality]
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). Suppose \(\mf{p}\) is a prime of \(\smc{O}\) and \(\mf{p}\mc{O}\) has prime factorization
@@ -1505,21 +1532,7 @@
       \[
         L = \l_{1}K+\cdots+\l_{m}K.
       \]
-      Hence \(\l_{1},\ldots,\l_{m}\) spans \(L/K\) whence \(\mc{O}/\mf{p}\mc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(n\). For \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\), consider the filtration
-      \[
-        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \mf{P}_{i}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset \cdots \supset \mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})-1}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \supset 0,
-      \]
-      of \(\F_{\mf{P}_{i}}\)-vector spaces. By the third isomorphism theorem, quotients of successive layers of the filtration are isomorphic to \(\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}\). Whence we obtain a short exact sequence
-      \begin{center}
-        \begin{tikzcd}
-          0 \arrow{r} & \mf{P}_{i}^{j+1}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \arrow{r} & \mf{P}_{i}^{j}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \arrow{r} & \mf{P}_{i}^{j}/\mf{P}_{i}^{j+1} \arrow{r} & 0,
-        \end{tikzcd}
-      \end{center}
-      induced by natural inclusions and projections. As this is a short exact sequence of \(\F_{\mf{P}_{i}}\)-vector spaces it splits. Choosing sections for all of these short exact sequences is equivalent to choosing a basis for \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) adapted to the filtration and we obtain an isomorphism
-      \[
-        \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})} \cong \bigop_{j}\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1},
-      \]
-      induced by natural projection of the adapted basis. The quotients \(\mf{P}_{i}^{j}/\mf{P}_{i}^{j+1}\) are all isomorphic to \(\F_{\mf{P}_{i}}\) by \cref{lem:isomorphism_of_quotient_by_prime_integral_ideals}. As \(\F_{\mf{P}_{i}}\) is an \(\F_{\mf{p}}\)-vector spaces of dimension \(f_{\mf{p}}(\mf{P}_{i})\), it follows that \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P_{i}})\).
+      Hence \(\l_{1},\ldots,\l_{m}\) spans \(L/K\) whence \(\mc{O}/\mf{p}\mc{O}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(n\). For \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\), the dimensionality claim follows from \cref{lem:prime_power_vector_space_isomorphism}.
     \end{proof}
 
     It is useful to classify primes according to specific cases of the fundamental equality. We say \(\mf{p}\) is \textbf{inert}\index{inert} in \(\mc{O}/\smc{O}\) if there is a prime \(\mf{P}\) above \(\mf{p}\) with \(f_{\mf{p}}(\mf{P}) = n\). By the fundamental equality, this means \(e_{\mf{p}}(\mf{P}) = 1\) and \(r = 1\). Whence
@@ -1913,7 +1926,7 @@
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a finite Galois extension \(L/K\), let \(\mf{p}\) be a prime of \(\smc{O}\), and let \(\mf{P}\) be a prime of \(\mc{O}\) above \(\mf{p}\). Then the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is normal. Moreover, the homomorphism \(T_{\mf{p}}^{\mf{P}}\) is surjective.
     \end{proposition}
     \begin{proof}
-      As \(f_{\mf{p}}(\mf{P}^{D}) = 1\) by \cref{prop:decomposition_field_e_and_f}, we have an isomorphism \(\F_{\mf{P}^{D}} \cong \F_{\mf{p}}\). So without loss of generality, we may assume \(L^{D_{\mf{p}}(\mf{P})} = K\) which is to say \(D_{\mf{p}}(\mf{P}) = \Gal(L/K)\). For any \(\a \in \mc{O}\) let \(\conj{\a} \in \F_{\mf{P}}\) be its image under natural projection. Also let \(m_{\a}(x)\) and \(m_{\conj{\a}}(x)\) be the minimal polynomials of \(\a\) and \(\conj{\a}\) over \(K\) and \(\F_{\mf{p}}\) respectively. As \(m_{\a}(x)\) necessarily has coefficients in \(\smc{O}\) and hence \(\mc{O}\), let \(\conj{m_{\a}}(x) \in \F_{\mf{P}}[x]\) be the image of \(m_{\a}(x)\) under natural projection. Note that as \(\conj{\a}\) is a root of \(\conj{m_{\a}}(x)\), \(m_{\conj{\a}}(x)\) divides \(\conj{m_{\a}}(x)\) in \(\F_{\mf{P}}[x]\).
+      As \(f_{\mf{p}}(\mf{P}^{D}) = 1\) by \cref{prop:decomposition_field_e_and_f}, we have an isomorphism \(\F_{\mf{P}^{D}} \cong \F_{\mf{p}}\). So without loss of generality, we may assume \(L^{D_{\mf{p}}(\mf{P})} = K\) which is to say \(D_{\mf{p}}(\mf{P}) = \Gal(L/K)\). For any \(\a \in \mc{O}\) let \(\conj{\a} \in \F_{\mf{P}}\) be its image under natural projection. Also let \(m_{\a}(x)\) and \(m_{\conj{\a}}(x)\) be the minimal polynomials of \(\a\) and \(\conj{\a}\) over \(K\) and \(\F_{\mf{p}}\) respectively. As \(m_{\a}(x)\) necessarily has coefficients in \(\smc{O}\) and hence \(\mc{O}\), let \(\conj{m_{\a}}(x) \in \F_{\mf{P}}[x]\) be its image under natural projection. Note that as \(\conj{\a}\) is a root of \(\conj{m_{\a}}(x)\), \(m_{\conj{\a}}(x)\) divides \(\conj{m_{\a}}(x)\) in \(\F_{\mf{P}}[x]\).
 
       For the first statement, let \(\a \in \mc{O}\). Then we must show that \(m_{\conj{\a}}(x)\) splits into linear factors over \(\F_{\mf{P}}\). As \(m_{\conj{\a}}(x)\) divides \(\conj{m_{\a}}(x)\) in \(\F_{\mf{P}}[x]\), it suffices to show \(\conj{m_{\a}}(x)\) splits into linear factors over \(\F_{\mf{P}}\). As \(L/K\) is Galois and thus normal, \(m_{\a}(x)\) splits into linear factors over \(L\). These linear factors belong to \(\mc{O}[x]\) since their roots are the Galois conjugates of \(\a\) which belong to \(\mc{O}\). It follows that \(\conj{m_{\a}}(x)\) splits into linear factors over \(\F_{\mf{P}}\) proving the first statement.
       
@@ -2088,7 +2101,11 @@
     \[
       \mf{d}_{\mc{O}/\smc{O}} = d_{\mc{O}/\smc{O}}\smc{O},
     \]
-    so that the discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) is generated by the discriminant \(d_{\mc{O}/\smc{O}}\). In particular, \(\mf{d}_{\mc{O}/\smc{O}}\) is principal if \(\mc{O}/\smc{O}\) admits an integral basis. In view of \cref{thm:integral_basis_AKBL} this will hold if \(\smc{O}\) is a principal ideal domain.
+    so that the discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) is generated by the discriminant \(d_{\mc{O}/\smc{O}}\). In fact, this means
+    \[
+      \mf{d}_{\mc{O}/\smc{O}} = d_{\mc{O}/\smc{O}}(\a_{1},\ldots,\a_{n})\smc{O},
+    \]
+    for any integral basis \(\a_{1},\ldots,\a_{n}\) for \(\mc{O}/\smc{O}\). Whence \(\mf{d}_{\mc{O}/\smc{O}}\) is principal if \(\mc{O}/\smc{O}\) admits an integral basis. In view of \cref{thm:integral_basis_AKBL} this will hold if \(\smc{O}\) is a principal ideal domain.
 
     As for properties of the discriminant, we have the very useful fact that it respects localization just as the different does.
 
@@ -2137,17 +2154,11 @@
       \[
         \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \mf{P}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \cdots \supset \mf{P}^{e_{\mf{p}}(\mf{P})-1}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset 0,
       \]
-      of \(\F_{\mf{p}}\)-vector spaces. By the third isomorphism theorem, quotients of successive layers of the filtration are isomorphic to \(\mf{P}^{i}/\mf{P}^{i+1}\). Whence we obtain a short exact sequence
-      \begin{center}
-        \begin{tikzcd}
-          0 \arrow{r} & \mf{P}^{i+1}/\mf{P}^{e_{\mf{p}}(\mf{P})} \arrow{r} & \mf{P}^{i}/\mf{P}^{e_{\mf{p}}(\mf{P})} \arrow{r} & \mf{P}^{i}/\mf{P}^{i+1} \arrow{r} & 0,
-        \end{tikzcd}
-      \end{center}
-      induced by natural inclusions and projections. As this is a short exact sequence of \(\F_{\mf{P}}\)-vector spaces it splits. Choosing sections for all of these short exact sequences is equivalent to choosing a basis for \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) adapted to the filtration and we obtain an isomorphism
+      of \(\F_{\mf{p}}\)-vector spaces. Upon choosing a basis for \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) adapted to the filtration, \cref{lem:prime_power_vector_space_isomorphism} gives an isomorphism
       \[
         \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P}_{i})} \cong \bigop_{i}\mf{P}^{i}/\mf{P}^{i+1},
       \]
-      induced by natural projection of the adapted basis. Now \(\conj{\b}_{i} \in \mf{P}^{i}/\mf{P}^{i+1}\) be the images of \(\b\) under the aforementioned isomorphism. Then
+      induced by natural projection of the adapted basis. Now let \(\conj{\b}_{i} \in \mf{P}^{i}/\mf{P}^{i+1}\) be the images of \(\b\) under the aforementioned isomorphism. Then
       \[
         \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b}) = \sum_{i}\Trace_{(\mf{P}^{i}/\mf{P}^{i+1})/\F_{\mf{p}}}(\conj{\b}_{i}).
       \]
@@ -2164,51 +2175,46 @@
        It remains to show \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\). As all residue class extensions are separable, \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). But the previous two statements together imply that \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\). Whence \(\mf{P}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{P} \mid \mf{D}_{\mc{O}/\smc{O}}\).
     \end{proof}
 
-    In the case the reside class extensions are separable, note that this result implies \(\mf{P}^{e_{\mf{p}}(\mf{P})-1}\) exactly divides \(\mf{D}_{\mc{O}/\smc{O}}\) provided \(e_{\mf{p}}(\mf{P}) \not\equiv 0 \tmod{\mf{p}}\). However, when \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\) we only know \(\mf{P}^{e_{\mf{p}}(\mf{P})}\) divides \(\mf{D}_{\mc{O}/\smc{O}}\). So \(\mf{P}\) very well might divide \(\mf{D}_{\mc{O}/\smc{O}}\) to a higher power. Also, upon factorizing \(\mf{D}_{\mc{O}/\smc{O}}\) into a product of primes, we see that only finitely many primes of \(\mc{O}\) can ramify in \(\mc{O}/\smc{O}\).
+    In the case the reside class extensions are separable, note that this result implies \(\mf{P}^{e_{\mf{p}}(\mf{P})-1}\) exactly divides \(\mf{D}_{\mc{O}/\smc{O}}\) provided \(e_{\mf{p}}(\mf{P}) \not\equiv 0 \tmod{\mf{p}}\). However, when \(e_{\mf{p}}(\mf{P}) \equiv 0 \tmod{\mf{p}}\) we only know \(\mf{P}^{e_{\mf{p}}(\mf{P})}\) divides \(\mf{D}_{\mc{O}/\smc{O}}\). So \(\mf{P}\) very well might divide \(\mf{D}_{\mc{O}/\smc{O}}\) to a higher power. Also, upon factorizing \(\mf{D}_{\mc{O}/\smc{O}}\) into a product of primes we see that only finitely many primes of \(\mc{O}\) can ramify in \(\mc{O}/\smc{O}\).
 
-    \iffalse
     Similarly to the previous result, a prime \(\mf{p}\) of \(\smc{O}\) ramifies in \(\mc{O}/\smc{O}\) if and only if it divides the discriminant \(\mf{d}_{\mc{O}/\smc{O}}\) provided the residue class extensions are separable.
 
     \begin{theorem}\label{thm:ramifies_if_and_only_if_divides_the_discriminant}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Then a prime \(\mf{p}\) of \(\smc{O}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{p}\) divides \(\mf{d}_{\mc{O}/\smc{O}}\).
+      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Then a prime \(\mf{p}\) of \(\smc{O}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(\mf{p} \mid \mf{d}_{\mc{O}/\smc{O}}\).
     \end{theorem}
     \begin{proof}
-      As the residue class extensions are assumed to be separable, \(\mf{p}\) ramifies in \(\mc{O}/\smc{O}\) if and only if \(e_{\mf{p}}(\mf{P}) \ge 2\) for some prime \(\mf{P}\) above \(\mf{p}\). In view of \cref{prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, it suffices to assume \(\mc{O}/\smc{O}\) is a local Dedekind extension. Therefore \(\smc{O}\) is a discrete valuation ring, \(\mc{O}\) is a principal ideal domain, and \(\mc{O}/\smc{O}\) admits an integral basis \(\a_{1},\ldots,\a_{n}\) making \(\mc{O}\) a free \(\smc{O}\)-module of rank \(n\). Then, as we have see, \(\mf{d}_{\mc{O}/\smc{O}}\) is principal and
+      In view of \cref{prop:ring_is_intersection_of_all_localizations,prop:ramification_setup_respects_localization,prop:different_and_discriminant_respect_localization}, it suffices to assume \(\mc{O}/\smc{O}\) is a local Dedekind extension. As \(\smc{O}\) is a principal ideal domain, we have
       \[
         \mf{d}_{\mc{O}/\smc{O}} = d_{\mc{O}/\smc{O}}\smc{O}.
       \]
-      Therefore \(\mf{p}\) divides \(\mf{d}_{\mc{O}/\smc{O}}\) if and only if \(d_{\mc{O}/\smc{O}} \equiv 0 \tmod{\mf{p}}\). Since \(\conj{\a_{1}},\ldots,\conj{\a_{n}}\) is a basis for \(\mc{O}/\mf{p}\mc{O}\) as an \(\F_{\mf{p}}\)-vector space, it follows that
+      Therefore \(\mf{p} \mid \mf{d}_{\mc{O}/\smc{O}}\) if and only if \(d_{\mc{O}/\smc{O}}(\a_{1},\ldots,\a_{n}) \subset \mf{p}\) which is to say
       \[
-        d_{\mc{O}/\smc{O}} \equiv d_{\F_{\mf{p}}}(\mc{O}/\mf{p}\mc{O}) \pmod{\mf{p}}.
+        d_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}} = 0.
       \]
-      So \(\mf{p}\) divides \(\mf{d}_{\mc{O}/\smc{O}}\) if and only if \(d_{\F_{\mf{p}}}(\mc{O}/\mf{p}\mc{O}) = 0\). Now suppose \(\mf{p}\mc{O}\) has prime factorization
+      Now let
       \[
-        \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})}.
+        \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})},
       \]
-      As the \(\mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})},\ldots,\mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})}\) are pairwise relatively prime, the Chinese remainder theorem gives
+      be the prime factorization of \(\mf{p}\mc{O}\). The Chinese remainder theorem gives an isomorphism
       \[
-        \mc{O}/\mf{p}\mc{O} \cong \bigop_{1 \le i \le r} \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}.
+        \mc{O}/\mf{p}\mc{O} \cong \bigop_{i} \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})},
       \]
-      Then \cref{prop:discriminant_and_direct_sums} further implies
+      and \cref{prop:discriminant_and_direct_sums} further implies
       \[
-        d_{\F_{\mf{p}}}(\mc{O}/\mf{p}\mc{O}) = \prod_{1 \le i \le r}d_{\F_{\mf{p}}}(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}),
+        d_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}} = \prod_{i}d_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}}.
       \]
-      Therefore \(d_{\F_{\mf{p}}}(\mc{O}/\mf{p}\mc{O}) = 0\) if and only if \(d_{\F_{\mf{p}}}(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}) = 0\) for some \(i\). We will prove that this occurs if and only if \(e_{\mf{p}}(\mf{P}_{i}) \ge 2\) which will complete the proof because this is exactly when \(\mf{p}\) ramifies. So let \(\mf{P}\) be above \(\mf{p}\) and first suppose \(e_{\mf{p}}(\mf{P}) \ge 2\). Then we need to show \(d_{\F_{\mf{p}}}(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) = 0\). By uniqueness of prime factorizations of fractional ideals, there exists \(\b_{1} \in \mf{P}^{e_{\mf{p}}(\mf{P})-1}-\mf{P}^{e_{\mf{p}}(\mf{P})}\). Then \(\b_{1}^{2} \in \mf{P}^{2(e_{\mf{p}}(\mf{P})-1)} \subseteq \mf{P}^{e_{\mf{p}}(\mf{P})}\) because \(e_{\mf{p}}(\mf{P}) \ge 2\). By construction, \(\conj{\b_{1}}\) in \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) is nonzero and such that \(\conj{\b_{1}}^{2} = 0\). Since \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(f_{\mf{p}}(\mf{P})\), there exists a basis of the form \(\conj{\b_{1}},\ldots,\conj{\b_{f_{\mf{p}}(\mf{P})}}\). Now
+      Therefore \(d_{(\mc{O}/\mf{p}\mc{O})/\F_{\mf{p}}} = 0\) if and only if \(d_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}} = 0\) for some prime \(\mf{P}_{i}\). We will prove that this occurs if and only if \(e_{\mf{p}}(\mf{P}_{i}) \ge 2\) which will complete the proof because this is exactly when \(\mf{p}\) ramifies since all residue class extensions are separable by assumption.
+      
+      For the forward implication, we will prove the contrapositive so suppose \(e_{\mf{p}}(\mf{P}_{i}) = 1\). As the residue class extension \(\F_{\mf{P}_{i}}/\F_{\mf{p}}\) is separable by assumption, \cref{prop:discriminant_not_zero} implies \(d_{\F_{\mf{P}_{i}}/\F_{\mf{p}}} \neq 0\). For the reverse implication, suppose \(e_{\mf{p}}(\mf{P}_{i}) \ge 2\). By prime factorization, there exists \(\b_{1} \in \mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})-1}-\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) and let \(\conj{\b_{1}} \in \mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) be its image under natural projection. Then \(\conj{\b_{1}} \neq 0\) and \(\conj{\b_{1}}^{2} = 0\) by construction. Since \(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})}\) is an \(\F_{\mf{p}}\)-vector space of dimension \(e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P}_{i})\) by \cref{lem:prime_power_vector_space_isomorphism}, there exists a basis of the form \(\conj{\b_{1}},\ldots,\conj{\b_{e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P}_{i})}}\). Now \(T_{\conj{\b_{1}}\conj{\b_{j}}}^{2}\) is the zero operator by our choice of \(\b_{1}\). Whence \(T_{\conj{\b_{1}}\conj{\b_{j}}}\) is nilpotent. As nilpotent operators have trace zero, we have
       \[
-        \Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b_{1}\b_{j}}) = 0,
+        \Trace_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}}(\conj{\b_{1}\b_{j}}) = 0.
       \]
-      for \(1 \le j \le f_{\mf{p}}(\mf{P})\) since \(T_{\conj{\b_{1}}\conj{\b_{j}}}\) is nilpotent because \(T_{\conj{\b_{1}}\conj{\b_{j}}}^{2}\) is the zero operator as \(\conj{\b_{1}}^{2} = 0\). But then the first row of \(\Trace_{(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})})/\F_{\mf{p}}}(\conj{\b_{1}},\ldots,\conj{\b_{f_{\mf{p}}(\mf{P})}})\) is zero and hence \(d_{\F_{\mf{p}}}(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}) = 0\). Now suppose \(e_{\mf{p}}(\mf{P}) = 1\). Then it remains to show \(d_{\F_{\mf{p}}}(\F_{\mf{P}}) \neq 0\). Since the residue class extension \(\F_{\mf{P}}/\F_{\mf{p}}\) is separable by assumption, \cref{prop:discriminant_not_zero} implies \(d_{\F_{\mf{p}}}(\F_{\mf{P}}) \neq 0\). This completes the proof.
+      This means that the first row of \(\Trace_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}}(\conj{\b_{1}},\ldots,\conj{\b_{e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P}_{i})}})\) is zero. Therefore \(d_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}} = 0\) completing the proof.
     \end{proof}
 
-    As a corollary of \cref{thm:ramifies_if_and_only_if_divides_the_discriminant} we see that only finitely many primes can ramify in \(K\):
+    In the case the reside class extensions are separable, factorizing \(\mf{d}_{\mc{O}/\smc{O}}\) into a product of primes shows that only finitely many primes of \(\smc{O}\) can ramify in \(\mc{O}/\smc{O}\).
 
-    \begin{corollary}\label{cor:finitely_many_primes_ramify_K}
-      Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\) and assume that all residue class extensions are separable. Then only finitely many primes ramify in \(K\).
-    \end{corollary}
-    \begin{proof}
-      There are only finitely many prime factors of \(\mf{d}_{\mc{O}/\smc{O}}\) by the prime factorization of fractional ideals. Therefore only finitely many primes can ramify in \(K\) by \cref{thm:ramifies_if_and_only_if_divides_the_discriminant}.
-    \end{proof}
-
+    \iffalse
     \subsection*{Number Fields}
       Now consider the case of a number field \(K\) of degree \(n\). The \textbf{complement}\index{complement} \(\mf{C}_{K}\) of \(K\) is the complement of \(\mc{O}_{K}/\Z\), the \textbf{different}\index{different} \(\mf{D}_{K}\) of \(K\) is the different of \(\mc{O}_{K}/\Z\), and the \textbf{discriminant}\index{discriminant} \(\mf{d}_{K}\) of \(K\) is the discriminant of \(\mc{O}_{K}/\Z\). Since \(\Z\) is a principal ideal domain, the \(\mf{d}_{K}\) is related to the discriminant \(\D_{K}\) by
       \[
