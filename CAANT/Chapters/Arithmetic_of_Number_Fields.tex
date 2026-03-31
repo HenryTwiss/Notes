@@ -879,7 +879,7 @@
     \[
       \mf{f}\mc{O} \cap \smc{O} = \mf{f}.
     \]
-    This is called the \textbf{contraction}\index{contraction} of the fractional ideal \(\mf{f}\mc{O}\) to \(\smc{O}\). In practice, it is useful for relating information about the fractional ideal \(\mf{f}\mc{O}\) of \(\mc{O}\) to the fraction ideal \(\mf{f}\) of \(\smc{O}\).
+    This is called \textbf{contraction}\index{contraction} of the fractional ideal \(\mf{f}\mc{O}\) to \(\smc{O}\). In practice, it is useful for relating information about the fractional ideal \(\mf{f}\mc{O}\) of \(\mc{O}\) to the fraction ideal \(\mf{f}\) of \(\smc{O}\).
 
     \subsection*{Number Fields}
       We now turn to the case of a number field \(K\) for which our developments so far can be refined. By \cref{prop:integral_closure_of_Dedekind_is_Dedekind}, the ring of integers \(\mc{O}_{K}\) is a Dedekind domain as \(\Z\) is a principal ideal domain. In view of this fact, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). The \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). The \textbf{class number}\index{class number} \(h_{K}\) of \(K\) is the class number of \(\mc{O}_{K}\). The \textbf{unit group}\index{unit group} of \(K\) is the unit group of \(\mc{O}_{K}\) and we call any element of \(\mc{O}_{K}^{\ast}\) a \textbf{unit}\index{unit} of \(K\) (this is slightly abusive as every element of \(K^{\ast}\) is invertible). Note that the integral ideals of \(K\) admit prime factorizations. One of our core investigations will be to understand how the principal integral ideal \(p\mc{O}_{K}\) factors into a product of primes of \(K\) for any prime \(p\). We will also leverage geometric ideas to show that the class number is finite and completely describe the unit group.
@@ -2078,9 +2078,9 @@
       \mf{D}_{\mc{O}/\smc{O}} \subseteq \mc{O} \subseteq \mc{O}^{\vee}.
     \]
     From this chain we see that the different is a measure of how much \(\mc{O}\) fails to be self-dual since \(\mf{D}_{\mc{O}/\smc{O}} = \mc{O}^{\vee}\) if and only if \(\mc{O}\) is self-dual. In terms of the different, the dual \(\mf{F}^{\vee}\) of a fractional ideal \(\mf{F}\) of \(\mc{O}\) may be expressed as
-    \[
+    \begin{equation}\label{equ:dual_in_terms_of_inverse_and_different}
       \mf{F}^{\vee} = \mf{F}^{-1}\mf{D}_{\mc{O}/\smc{O}}^{-1}.
-    \]
+    \end{equation}
     As for other properties of the different, it respects localization which will be useful in further developments.
 
     \begin{proposition}\label{prop:different_respect_localization}
@@ -2265,7 +2265,7 @@
       \[
         \Norm_{K}(\mf{f}^{\vee}) = \frac{\Norm_{K}(\mf{f}^{-1})}{|\D_{K}|},
       \]
-      upon writing \(\mf{f}^{\vee} = \mf{f}^{-1}\mf{D}_{K}^{-1}\).
+      from \cref{equ:dual_in_terms_of_inverse_and_different}.
       
       Lastly, let \(a_{K}(m)\) denote the number of integral ideals of \(\mc{O}_{K}\) of norm \(m\). As the norm is completely multiplicative, prime factorization implies that \(a_{K}(m)\) is multiplicative. In fact, we can estimate the growth of \(a_{K}(m)\).
 
