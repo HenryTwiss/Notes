@@ -1,6 +1,7 @@
 \chapter{Geometry of Number Fields}
-  \section{\todo{Minkowski Space}}\iffalse
-    Let \(K\) be number field of degree \(n\) and let \(\s \in \Hom_{\Q}(K,\conj{\Q})\). Then either \(\s\) is real or complex and if it is complex it has a paired \(\Q\)-embedding \(\conj{\s} \in \Hom_{\Q}(K,\conj{\Q})\) given by the conjugate of \(\s\). Accordingly, let \(r_{1}\) and \(2r_{2}\) be the number of real and complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) respectively. We call the pair \((r_{1},r_{2})\) the \textbf{signature}\index{signature} of \(K\) and it satisfies the relation
+  Throughout, all rings will be understood to be commutative and with unity.
+  \section{\todo{Minkowski Space}}
+    Let \(K\) be number field of degree \(n\). If \(\s \in \Hom_{\Q}(K,\conj{\Q})\) then either \(\s\) is real or complex and in the latter case it is has a paired \(\Q\)-embedding \(\conj{\s}\) which is the complex conjugate of \(\s\). Accordingly, let \(r_{1}\) and \(2r_{2}\) be the number of real and complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) respectively. We call the pair \((r_{1},r_{2})\) the \textbf{signature}\index{signature} of \(K\) and it satisfies the relation
     \[
       n = r_{1}+2r_{2}.
     \]
@@ -8,54 +9,52 @@
     \[
       K_{\C} = \C^{n},
     \]
-    we see that \(K_{\C}\) is a \(\C\)-algebra and also a complex Hilbert space with respect to \(\<\cdot,\cdot\>_{K_{\C}}\) which we take to be the standard complex inner product. We denote the associated Lebesgue measure by \(d\l_{K_{\C}}\). We define the \textbf{canonical embedding}\index{canonical embedding} \(j\) of \(K\) to be the \(\Q\)-embedding
-    \[
-      j:K \to K_{\C} \qquad \k \mapsto (\s(\k))_{\s},
-    \]
-    where \(\s\) runs over \(\Hom_{\Q}(K,\conj{\Q})\). Consider the conjugation map
-    \[
-      F:\C \to \C \qquad z \mapsto \conj{z}.
-    \]
-    This induces an automorphism
-    \[
-      F:K_{\C} \to K_{\C} \qquad (z_{\s})_{\s} \mapsto (\conj{z_{\conj{\s}}})_{\s},
-    \]
-    that is clearly an involution. The inner product \(\<\cdot,\cdot\>_{K_{\C}}\) is also \(F\)-equivariant since any \(\mathbf{z},\mathbf{w} \in K_{\C}\) satisfy
-    \[
-      \<F(\mathbf{z}),F(\mathbf{z})\>_{K_{\C}} = \<(\conj{z_{\conj{\s}}})_{\s},(\conj{w_{\conj{\s}}})_{\s}\>_{K_{\C}} = \sum_{\s}\conj{z_{\conj{\s}}w_{\conj{\s}}} = \conj{\sum_{\s}z_{\s}w_{\s}} = F(\<\mathbf{z},\mathbf{w}\>_{K_{\C}}),
-    \]
-    where in the third equality we have used the fact that the complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) come in conjugate pairs. On \(K_{\C}\) we also have linear maps
+    makes \(K_{\C}\) into a component-wise \(\C\)-algebra. Moreover, \(K_{\C}\) is also a complex Hilbert space with respect to the standard complex inner product which we denote by \(\<\cdot,\cdot\>_{K_{\C}}\). We also write \(d\l_{K_{\C}}\) for the induced Lebesgue measure on \(K_{\C}\) by this inner product. Also let \(\Trace_{K_{\C}}\) and \(\Norm_{K_{\C}}\) denote the trace and norm of \(K_{\C}/\C\). Because \(K_{\C}\) is a component-wise \(\C\)-algebra, the trace and the norm are given by
     \[
       \Trace_{K_{\C}}((z_{\s})_{\s}) = \sum_{\s}z_{\s} \quad \text{and} \quad \Norm_{K_{\C}}((z_{\s})_{\s}) = \prod_{\s}z_{\s},
     \]
-    and clearly induce homomorphisms
+    for all \((z_{\s})_{\s} \in K_{\R}\). We define the \textbf{canonical embedding}\index{canonical embedding} \(j\) of \(K\) to be the \(\Q\)-embedding
     \[
-      \Trace_{K_{\C}}:K_{\C} \to \C \quad \text{and} \quad \Norm_{K_{\C}}:K_{\C}^{\ast} \to \C^{\ast}.
+      j:K \to K_{\C} \qquad \k \mapsto (\s(\k))_{\s}.
     \]
-    The composition of \(j\) with \(\Trace_{K_{\C}}\) and \(\Norm_{K_{\C}}\) are \(\Trace_{K}\) and \(\Norm_{K}\) respectively since
+    In other words, the canonical embedding is just the diagonal embedding of \(K\) into \(\conj{\Q}\) via \(\Q\)-embeddings. In view of \cref{prop:formulas_for_trace_and_norm}, we have
     \[
-      \Trace_{K_{\C}}(j(\k)) = \sum_{\s}\s(\k) = \Trace_{K}(\k) \quad \text{and} \quad \Norm_{K_{\C}}(j(\k)) = \prod_{\s}\s(\k) = \Norm_{K}(\k),
+      \Trace_{K_{\C}}(j(\k)) = \Trace_{K}(\k) \quad \text{and} \quad \Norm_{K_{\C}}(j(\k)) = \Norm_{K}(\k),
     \]
-    where the last equality in each chain follow by \cref{prop:formulas_for_trace_and_norm}. We now define the \textbf{Minkowski space}\index{Minkowski space} \(K_{\R}\) of \(K\) by
+    which is to say that the compositions of the trace and norm of \(K_{\C}/\C\) with the canonical embedding produces the field trace and field norm. Our primary aim is to construct an \(\R\)-subalgebra of \(K_{\C}\) which corrects for the fact that the complex \(\Q\)-embeddings come in pairs. To this end, consider the conjugation map
+    \[
+      F:\C \to \C \qquad z \mapsto \conj{z}.
+    \]
+    This induces an automorphism of \(K_{\C}\) given by
+    \[
+      F:K_{\C} \to K_{\C} \qquad (z_{\s})_{\s} \mapsto (\conj{z_{\conj{\s}}})_{\s},
+    \]
+    which is an involution. A short computation shows
+    \[
+      \<F(\mathbf{z}),F(\mathbf{w})\>_{K_{\C}} = F(\<\mathbf{z},\mathbf{w}\>_{K_{\C}}),
+    \]
+    for all \(\mathbf{z},\mathbf{w} \in K_{\C}\). In other words, inner product \(\<\cdot,\cdot\>_{K_{\C}}\) is \(F\)-equivariant. We define the \textbf{Minkowski space}\index{Minkowski space} \(K_{\R}\) of \(K\) by
     \[
       K_{\R} = \{(z_{\s})_{\s} \in K_{\C}:F((z_{\s})_{\s}) = (z_{\s})_{\s}\}.
     \]
-    In other words, \(K_{\R}\) consists of all of the \(F\)-invariant points of \(K_{\C}\). That is, \(\mathbf{z} \in K_{\R}\) if and only if \(F(\mathbf{z}) = \mathbf{z}\) or equivalently \(z_{\conj{\s}} = \conj{z_{\s}}\) for all \(\s\). In particular, \(j(K) \subset K_{\R}\) because \(\conj{\s}(\k) = \conj{\s(\k)}\) by definition of \(\conj{\s}\). We denote the restriction of the inner product \(\<\cdot,\cdot\>_{K_{\C}}\) on \(K_{\C}\) to \(K_{\R}\) by \(\<\cdot,\cdot\>_{K_{\R}}\). Note that \(K_{\R}\) is an \(\R\)-algebra. Moreover, the inner product \(\<\cdot,\cdot\>_{K_{\R}}\) turns \(K_{\R}\) into a real Hilbert space. Indeed, for any \(\mathbf{z},\mathbf{w} \in K_{\R}\) the conjugate symmetry and \(F\)-equivariance of the inner product together give
+    In other words, \(K_{\R}\) consists of all of the \(F\)-invariant points of \(K_{\C}\). Note that \(K_{\R}\) is an \(\R\)-algebra. We denote the restriction of the inner product \(\<\cdot,\cdot\>_{K_{\C}}\) to \(K_{\R}\) by \(\<\cdot,\cdot\>_{K_{\R}}\). Moreover, the inner product \(\<\cdot,\cdot\>_{K_{\R}}\) turns \(K_{\R}\) into a real Hilbert space. Indeed, the conjugate symmetry and \(F\)-equivariance of the inner product together give
     \[
-      \conj{\<\mathbf{z},\mathbf{w}\>} = F(\<\mathbf{w},\mathbf{z}\>) = \<F(\mathbf{z}),F(\mathbf{w})\> = \<\mathbf{z},\mathbf{w}\>,
+      \conj{\<\mathbf{z},\mathbf{w}\>} = \<\mathbf{z},\mathbf{w}\>,
     \]
-    so that \(\<\mathbf{z},\mathbf{w}\> \in \R\) is real. Accordingly, we call \(\<\cdot,\cdot\>_{K_{\R}}\) the \textbf{Minkowski inner product}\index{Minkowski inner product}. We denote the restriction of the Lebesgue measure \(d\l_{\C}\) to \(K_{\R}\) by \(d\l_{K_{\R}}\) which is also the Lebesgue measure associated to \(\<\cdot,\cdot\>_{K_{\R}}\). We call \(d\l_{K_{\R}}\) the \textbf{Minkowski measure}\index{Minkowski measure}. Lastly, we denote the restrictions of \(\Trace_{K_{\C}}\) and \(\Norm_{K_{\C}}\) to \(K_{\R}\) by \(\Trace_{K_{\R}}\) and \(\Norm_{K_{\R}}\) respectively and call these maps the \textbf{Minkowski trace}\index{Minkowski trace} and \textbf{Minkowski norm}\index{Minkowski norm} respectively. We also have homomorphisms
+    for any \(\mathbf{z},\mathbf{w} \in K_{\R}\). Accordingly, we call \(\<\cdot,\cdot\>_{K_{\R}}\) the \textbf{Minkowski inner product}\index{Minkowski inner product} of \(K\). We denote the restriction of the Lebesgue measure \(d\l_{\C}\) to \(K_{\R}\) by \(d\l_{K_{\R}}\) which is also the Lebesgue measure associated to \(\<\cdot,\cdot\>_{K_{\R}}\). We call \(d\l_{K_{\R}}\) the \textbf{Minkowski measure}\index{Minkowski measure}. Lastly, we denote the restrictions of \(\Trace_{K_{\C}}\) and \(\Norm_{K_{\C}}\) to \(K_{\R}\) by \(\Trace_{K_{\R}}\) and \(\Norm_{K_{\R}}\) respectively which are the norm and trace of \(K_{\R}/\R\). We call \(\Trace_{K_{\R}}\) and \(\Norm_{K_{\R}}\) the \textbf{Minkowski trace}\index{Minkowski trace} and \textbf{Minkowski norm}\index{Minkowski norm} of \(K\) respectively. As the complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) come in conjugate pairs, \(j(K) \subset K_{\R}\) so that \(K\) embeds into Minkowski space via the canonical embedding. Whence
     \[
-      \Trace_{K_{\R}}:K_{\R} \to \R \quad \text{and} \quad \Norm_{K_{\R}}:K_{\R}^{\ast} \to \R^{\ast},
+      \Trace_{K_{\R}}(j(\k)) = \Trace_{K}(\k) \quad \text{and} \quad \Norm_{K_{\R}}(j(\k)) = \Norm_{K}(\k).
     \]
-    \(\mathbf{z} \in K_{\R}\) if and only if \(z_{\conj{\s}} = \conj{z_{\s}}\) for all \(\s\). As \(j(K) \subset K_{\R}\), the compositions of \(j\) with the Minkowski trace and Minkowski norm are the field trace and field norm respectively. We can now give a more explicit description of \(K_{\R}\) and to do this we setup some notation. Let \(\rho\) run over the real \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) and let \(\tau\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\). For any \(\s \in \Hom_{\Q}(K,\conj{\Q})\), let \(N_{\s} = 1,2\) according to if \(\s\) is real or complex respectively. So \(N_{\rho} = 1\) and \(N_{\tau} = 2\). As \(K_{\R}\) consists of exactly the \(F\)-invariant points of \(K_{\C}\), we have
+    So the compositions of the Minkowski trace and Minkowski norm with the canonical embedding produces the field trace and field norm.
+    
+    To give a more explicit description of Minkowski space, let \(N_{\s} = 1,2\) according to if \(\s\) is real or complex respectively. Also let \(\rho\) and \(\t\) run over the real \(\Q\)-embeddings and a complete set of representatives for pairs of complex \(\Q\)-embeddings for \(\Hom_{\Q}(K,\conj{\Q})\). Note that \(N_{\rho} = 1\) and \(N_{\tau} = 2\). Then
     \[
       K_{\R} = \{(z_{\s})_{\s} \in K_{\C}:z_{\rho} \in \R \text{ and } z_{\conj{\tau}} = \conj{z_{\tau}} \text{ for all } \rho \text{ and } \tau\}.
     \]
-    We now describe an explicit isomorphism from the Minkowski space and \(\R^{n}\):
+    In fact, this gives an explicit isomorphism between Minkowski space and \(\R^{n}\).
     
     \begin{proposition}\label{prop:Minkowski_space_isomorphism}
-      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Also let \(\s\) run over \(\Hom_{\Q}(K,\conj{\Q})\), \(\rho\) run over all such real \(\Q\)-embeddings, and \(\tau\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings. Then there is an isomorphism
+      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then there is an isomorphism
       \[
         K_{\R} \to \R^{n} \qquad z_{\s} \mapsto x_{\s} = \begin{cases} z_{\s} & \text{if \(\s = \rho\)}, \\ \Re(z_{\s}) & \text{if \(\s = \tau\)}, \\ \Im(z_{\s}) & \text{if \(\s = \conj{\tau}\)}. \end{cases}
       \]
@@ -65,6 +64,7 @@
       \]
       for any \(\mathbf{x},\mathbf{x}' \in \R^{n}\).
     \end{proposition}
+    \todo{xxx}
     \begin{proof}
       This map is an isomorphism since it is invertible and linear in each component. Since there are \(n\)  elements of \(\Hom_{\Q}(K,\conj{\Q})\), we see that \(K_{\R}\) is an \(n\)-dimensional real vector space. We will now prove the statement about the inner product. Let \((z_{\s})_{\s}\) and \((z'_{\s})_{\s}\) be elements of \(K_{\R}\) and let \((x_{\s})_{\s}\) and \((x'_{\s})_{\s}\) be the corresponding elements in \(\R^{n}\). If \(\s = \rho\) then
       \[
@@ -160,7 +160,7 @@
       \]
       Since the complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) occur in conjugate pairs and \(\k_{1},\ldots,\k_{n}\) is a basis for \(K\), we see that \(P'' = M(\k_{1},\ldots,\k_{n})\) is an embedding matrix for \(\mf{f}\).
     \end{proof}
-  \fi\section{\todo{Finiteness of the Class Number}}\iffalse
+  \section{\todo{Finiteness of the Class Number}}\iffalse
     Recall that the class number \(h_{K}\) is a measure of how much the ring of integers \(\mc{O}_{K}\) fails to be a principal ideal domain. From \cref{rem:general_class_number_not_finite}, the class number of an arbitrary Dedekind domain need not be finite. However, we will show that the class number \(h_{K}\) for a number field \(K\) is always finite and thus \(\mc{O}_{K}\) only has finite failure from being a principal ideal domain:
 
     \begin{theorem}\label{equ:finitness_of_class_number}

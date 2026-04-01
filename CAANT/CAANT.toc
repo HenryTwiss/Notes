@@ -21,21 +21,21 @@
 \contentsline {section}{\numberline {4.8}Differents and Discriminants}{83}{section.4.8}%
 \contentsline {chapter}{\numberline {5}Geometry of Number Fields}{92}{chapter.5}%
 \contentsline {section}{\numberline {5.1}\leavevmode {\color {red}\sf Todo: [Minkowski Space]}}{92}{section.5.1}%
-\contentsline {section}{\numberline {5.2}\leavevmode {\color {red}\sf Todo: [Finiteness of the Class Number]}}{92}{section.5.2}%
-\contentsline {section}{\numberline {5.3}\leavevmode {\color {red}\sf Todo: [Dirichlet's Unit Theorem]}}{92}{section.5.3}%
-\contentsline {part}{III\hspace {1em}Analytic Number Theory}{93}{part.3}%
-\contentsline {chapter}{\numberline {6}Dirichlet Series}{94}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Convergence Properties}{94}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Euler Products}{100}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Dirichlet Convolution}{102}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Perron Formulas}{103}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Analytic \(L\)-functions}{110}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Analytic Data}{110}{section.7.1}%
-\contentsline {section}{\numberline {7.2}The Approximate Functional Equation}{114}{section.7.2}%
-\contentsline {section}{\numberline {7.3}The Riemann Hypothesis and Nontrivial Zeros}{120}{section.7.3}%
-\contentsline {section}{\numberline {7.4}The Lindel\"of Hypothesis and Estimates on the Critical Line}{121}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Logarithmic Derivatives}{126}{section.7.5}%
-\contentsline {chapter}{\numberline {8}\leavevmode {\color {red}\sf Todo: [Moments]}}{129}{chapter.8}%
-\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{130}{chapter.9}%
-\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{131}{chapter.10}%
-\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{132}{chapter.11}%
+\contentsline {section}{\numberline {5.2}\leavevmode {\color {red}\sf Todo: [Finiteness of the Class Number]}}{96}{section.5.2}%
+\contentsline {section}{\numberline {5.3}\leavevmode {\color {red}\sf Todo: [Dirichlet's Unit Theorem]}}{96}{section.5.3}%
+\contentsline {part}{III\hspace {1em}Analytic Number Theory}{97}{part.3}%
+\contentsline {chapter}{\numberline {6}Dirichlet Series}{98}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Convergence Properties}{98}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Euler Products}{104}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Dirichlet Convolution}{106}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Perron Formulas}{107}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Analytic \(L\)-functions}{114}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analytic Data}{114}{section.7.1}%
+\contentsline {section}{\numberline {7.2}The Approximate Functional Equation}{118}{section.7.2}%
+\contentsline {section}{\numberline {7.3}The Riemann Hypothesis and Nontrivial Zeros}{124}{section.7.3}%
+\contentsline {section}{\numberline {7.4}The Lindel\"of Hypothesis and Estimates on the Critical Line}{125}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Logarithmic Derivatives}{130}{section.7.5}%
+\contentsline {chapter}{\numberline {8}\leavevmode {\color {red}\sf Todo: [Moments]}}{133}{chapter.8}%
+\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{134}{chapter.9}%
+\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{135}{chapter.10}%
+\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{136}{chapter.11}%
