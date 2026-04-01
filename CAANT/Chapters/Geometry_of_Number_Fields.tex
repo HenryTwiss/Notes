@@ -17,7 +17,7 @@
     \[
       j:K \to K_{\C} \qquad \k \mapsto (\s(\k))_{\s}.
     \]
-    In other words, the canonical embedding is just the diagonal embedding of \(K\) into \(\conj{\Q}\) via \(\Q\)-embeddings. In view of \cref{prop:formulas_for_trace_and_norm}, we have
+    In other words, the canonical embedding is a component-wise \(\Q\)-embedding of \(K\) into \(K_{\C}\) via the \(\s\). In view of \cref{prop:formulas_for_trace_and_norm}, we have
     \[
       \Trace_{K_{\C}}(j(\k)) = \Trace_{K}(\k) \quad \text{and} \quad \Norm_{K_{\C}}(j(\k)) = \Norm_{K}(\k),
     \]
@@ -37,11 +37,11 @@
     \[
       K_{\R} = \{(z_{\s})_{\s} \in K_{\C}:F((z_{\s})_{\s}) = (z_{\s})_{\s}\}.
     \]
-    In other words, \(K_{\R}\) consists of all of the \(F\)-invariant points of \(K_{\C}\). Note that \(K_{\R}\) is an \(\R\)-algebra. We denote the restriction of the inner product \(\<\cdot,\cdot\>_{K_{\C}}\) to \(K_{\R}\) by \(\<\cdot,\cdot\>_{K_{\R}}\). Moreover, the inner product \(\<\cdot,\cdot\>_{K_{\R}}\) turns \(K_{\R}\) into a real Hilbert space. Indeed, the conjugate symmetry and \(F\)-equivariance of the inner product together give
+    In other words, \(K_{\R}\) consists of all of the \(F\)-invariant points of \(K_{\C}\). Note that \(K_{\R}\) is an \(\R\)-subalgebra of \(K_{\C}\). We denote the restriction of the inner product \(\<\cdot,\cdot\>_{K_{\C}}\) to \(K_{\R}\) by \(\<\cdot,\cdot\>_{K_{\R}}\). Moreover, the inner product \(\<\cdot,\cdot\>_{K_{\R}}\) turns \(K_{\R}\) into a real Hilbert space. Indeed, the conjugate symmetry and \(F\)-equivariance of the inner product together give
     \[
       \conj{\<\mathbf{z},\mathbf{w}\>} = \<\mathbf{z},\mathbf{w}\>,
     \]
-    for any \(\mathbf{z},\mathbf{w} \in K_{\R}\). Accordingly, we call \(\<\cdot,\cdot\>_{K_{\R}}\) the \textbf{Minkowski inner product}\index{Minkowski inner product} of \(K\). We denote the restriction of the Lebesgue measure \(d\l_{\C}\) to \(K_{\R}\) by \(d\l_{K_{\R}}\) which is also the Lebesgue measure associated to \(\<\cdot,\cdot\>_{K_{\R}}\). We call \(d\l_{K_{\R}}\) the \textbf{Minkowski measure}\index{Minkowski measure}. Lastly, we denote the restrictions of \(\Trace_{K_{\C}}\) and \(\Norm_{K_{\C}}\) to \(K_{\R}\) by \(\Trace_{K_{\R}}\) and \(\Norm_{K_{\R}}\) respectively which are the norm and trace of \(K_{\R}/\R\). We call \(\Trace_{K_{\R}}\) and \(\Norm_{K_{\R}}\) the \textbf{Minkowski trace}\index{Minkowski trace} and \textbf{Minkowski norm}\index{Minkowski norm} of \(K\) respectively. As the complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) come in conjugate pairs, \(j(K) \subset K_{\R}\) so that \(K\) embeds into Minkowski space via the canonical embedding. Whence
+    for any \(\mathbf{z},\mathbf{w} \in K_{\R}\). Accordingly, we call \(\<\cdot,\cdot\>_{K_{\R}}\) the \textbf{Minkowski inner product}\index{Minkowski inner product} of \(K\). We denote the restriction of the Lebesgue measure \(d\l_{\C}\) to \(K_{\R}\) by \(d\l_{K_{\R}}\) which is also the Lebesgue measure associated to \(\<\cdot,\cdot\>_{K_{\R}}\). We call \(d\l_{K_{\R}}\) the \textbf{Minkowski measure}\index{Minkowski measure}. Lastly, we denote the restrictions of \(\Trace_{K_{\C}}\) and \(\Norm_{K_{\C}}\) to \(K_{\R}\) by \(\Trace_{K_{\R}}\) and \(\Norm_{K_{\R}}\) respectively which are the norm and trace of \(K_{\R}/\R\). We call \(\Trace_{K_{\R}}\) and \(\Norm_{K_{\R}}\) the \textbf{Minkowski trace}\index{Minkowski trace} and \textbf{Minkowski norm}\index{Minkowski norm} of \(K\) respectively. As the complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) come in conjugate pairs, \(j(K) \subset K_{\R}\) so that the canonical embedding is a \(\Q\)-embedding of \(K\) into Minkowski space. Whence
     \[
       \Trace_{K_{\R}}(j(\k)) = \Trace_{K}(\k) \quad \text{and} \quad \Norm_{K_{\R}}(j(\k)) = \Norm_{K}(\k).
     \]
@@ -54,19 +54,22 @@
     In fact, this gives an explicit isomorphism between Minkowski space and \(\R^{n}\).
     
     \begin{proposition}\label{prop:Minkowski_space_isomorphism}
-      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then there is an isomorphism
+      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then the map
       \[
-        K_{\R} \to \R^{n} \qquad z_{\s} \mapsto x_{\s} = \begin{cases} z_{\s} & \text{if \(\s = \rho\)}, \\ \Re(z_{\s}) & \text{if \(\s = \tau\)}, \\ \Im(z_{\s}) & \text{if \(\s = \conj{\tau}\)}. \end{cases}
+        z_{\s} \mapsto x_{\s} = \begin{cases} z_{\s} & \text{if \(\s = \rho\)}, \\ \Re(z_{\s}) & \text{if \(\s = \tau\)}, \\ \Im(z_{\s}) & \text{if \(\s = \conj{\tau}\)}, \end{cases}
       \]
-      In particular, \(K_{\R}\) is a \(n\)-dimensional real vector space. Moreover, the inner product \(\<\cdot,\cdot\>\) on \(\R^{n}\) induced by the Minkowski inner product is given by
+      induces a component-wise isomorphism between \(K_{\R}\) and \(\R^{n}\) making \(K_{\R}\) a real vector space of dimension \(n\). Moreover, the inner product \(\<\cdot,\cdot\>\) on \(\R^{n}\) induced by the Minkowski inner product is given by
       \[
         \<\mathbf{x},\mathbf{x}'\> = \sum_{\s}N_{\s}x_{\s}x'_{\s},
       \]
       for any \(\mathbf{x},\mathbf{x}' \in \R^{n}\).
     \end{proposition}
-    \iffalse
     \begin{proof}
-      This map is an isomorphism since it is invertible and linear in each component. Since there are \(n\)  elements of \(\Hom_{\Q}(K,\conj{\Q})\), we see that \(K_{\R}\) is an \(n\)-dimensional real vector space. We will now prove the statement about the inner product. Let \((z_{\s})_{\s}\) and \((z'_{\s})_{\s}\) be elements of \(K_{\R}\) and let \((x_{\s})_{\s}\) and \((x'_{\s})_{\s}\) be the corresponding elements in \(\R^{n}\). If \(\s = \rho\) then
+      This map has inverse
+      \[
+        x_{\s} \mapsto z_{\s} = \begin{cases} x_{\s} & \text{if \(\s = \rho\)}, \\ x_{\s}+ix_{\conj{\s}} & \text{if \(\s = \tau\)}, \\ x_{\conj{\s}}+ix_{\s} & \text{if \(\s = \conj{\tau}\)}. \end{cases}
+      \]
+      As both maps are \(\R\)-linear, it follows that the original map induces a component-wise isomorphism between \(K_{\R}\) and \(\R^{n}\) proving the first statement. For the second statement, let \((z_{\s})_{\s},(z'_{\s})_{\s} \in K_{\R}\) and let \((x_{\s})_{\s},(x'_{\s})_{\s} \in \R^{n}\) be the corresponding elements in \(\R^{n}\) under this isomorphism respectively. If \(\s = \rho\) then
       \[
         x_{\rho} = z_{\rho} \quad \text{and} \quad x'_{\rho} = z'_{\rho},
       \]
@@ -76,20 +79,22 @@
       \]
       If \(\s = \tau\) then
       \[
-        x_{\tau} = \Re(z_{\tau}), \quad x_{\conj{\tau}} = \Im(z_{\tau}), \quad x'_{\tau} = \Re(z'_{\tau}), \text{and} \quad x'_{\conj{\tau}} = \Im(z'_{\tau}),
+        x_{\tau} = \Re(z_{\tau}), \quad x_{\conj{\tau}} = \Im(z_{\tau}), \quad x'_{\tau} = \Re(z'_{\tau}), \quad \text{and} \quad x'_{\conj{\tau}} = \Im(z'_{\tau}).
       \]
-      and hence
+      Whence a short computation shows
       \[
-        2(x_{\tau}x'_{\tau}+x_{\conj{\tau}}x'_{\conj{\tau}}) = 2(\Re(z_{\tau})\Re(z'_{\tau})+\Im(z_{\tau})\Im(z'_{\tau})) = 2\Re(z_{\tau}\conj{z'_{\tau}}) = z_{\tau}\conj{z'_{\tau}}+z_{\conj{\tau}}\conj{z'_{\conj{\tau}}}.
+        2(x_{\tau}x'_{\tau}+x_{\conj{\tau}}x'_{\conj{\tau}}) = z_{\tau}\conj{z'_{\tau}}+z_{\conj{\tau}}\conj{z'_{\conj{\tau}}}.
       \]
-      This proves the claim about the inner product.
+      The claim about the inner product follows.
     \end{proof}
-    
-    Define the \textbf{Minkowski embedding}\index{Minkowski embedding} \(\s_{K}\) of \(K\) by
+
+    In view of this result, we define the \textbf{Minkowski embedding}\index{Minkowski embedding} \(\s_{K}\) of \(K\) by
     \[
-      \s_{K}:K \to \R^{n} \qquad \k \mapsto (\rho_{1}(\k),\ldots,\rho_{r_{1}}(k),\Re(\tau_{1}(\k)),\Im(\tau_{1}(\k)),\ldots,\Re(\tau_{r_{2}}(\k)),\Im(\tau_{r_{2}}(\k))),
+      \s_{K}:K \to \R^{n} \qquad \k \mapsto (\rho(\k))_{\rho} \op (\Re(\tau(\k)),\Im(\tau(\k)))_{\tau},
     \]
-    where \(\rho_{1},\ldots,\rho_{r_{1}}\) are the real \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) and \(\tau_{1},\ldots,\tau_{r_{2}}\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\). The Minkowski embedding \(\s_{K}\) is then a \(\Q\)-embedding of \(K\) into \(\R^{n}\) since it is the composition of the canonical embedding \(j\) (whose image under \(K\) is in \(K_{\R}\) as we have noted) and the isomorphism established by \cref{prop:Minkowski_space_isomorphism}. It is also independent of the choice of representatives \(\tau_{1},\ldots,\tau_{r_{2}}\) since the complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) occur in conjugate pairs. As \(j\) is a \(\Q\)-embedding and any fractional ideal \(\mf{f}\) is a complete lattice, \(j(\mf{f})\) is a complete lattice in \(K_{\R}\). We now determine the covolume of \(j(\mf{f})\):
+    The Minkowski embedding is a \(\Q\)-embedding of \(K\) into \(\R^{n}\) since it is the composition of the canonical embedding and the isomorphism established in the previous result.
+    
+    We have now constructed Minkowski space and determined its dimension as a real vector space. Our goal now is to pass from \(\Z\)-lattices of \(K\) to integral lattices of Minkowski space. Being an inner product space, this will permit us to measure fractional ideals of \(K\) geometrically via their images inside Minkowski space. As \(j\) is a \(\Q\)-embedding and any fractional ideal \(\mf{f}\) of \(K\) is a complete \(\Z\)-lattice of \(K\), \(j(\mf{f})\) is a complete integral lattice of \(K_{\R}\). The covolume \(V_{j(\mf{f})}\) of \(j(\mf{f})\) is easily determined.
 
     \begin{proposition}\label{prop:covolume_of_fractional_ideal_under_j}
       Let \(K\) be a number field with signature \((r_{1},r_{2})\). Then \(V_{j(\mf{f})}\) is the absolute value of the determinant of any embedding matrix for \(\mf{f}\). In particular,
@@ -101,20 +106,17 @@
         V_{j(\mc{O}_{K})} = \sqrt{|\D_{K}|}.
       \]
     \end{proposition}
+    \iffalse
     \begin{proof}
-      The last statement follows from the first two by taking \(\mf{f} = \mc{O}_{K}\) so it suffices to prove the first two statements. Let \(\k_{1},\ldots,\k_{n}\) be a basis for \(\mf{f}\) and let \(\s_{1},\ldots,\s_{n}\) be the elements of \(\Hom_{\Q}(K,\conj{\Q})\). Then the associated generator matrix \(P\) for \(j(\mf{f})\) is given by
-      \[
-        P = \begin{pmatrix} \s_{1}(\k_{1}) & \cdots & \s_{1}(\k_{n}) \\ \vdots & & \vdots & \\ \s_{n}(\k_{1}) & \cdots & \s_{n}(\k_{n}) \end{pmatrix} = M(\k_{1},\ldots,\k_{n}),
-      \]
-      which is an embedding matrix for \(\mf{f}\). Hence
+      The second identity follows from the first by taking \(\mf{f} = \mc{O}_{K}\) so it remains to prove the first two statements. Let \(\k_{1},\ldots,\k_{n}\) be a basis for \(\mf{f}\) and let \(\s_{1},\ldots,\s_{n}\) be the elements of \(\Hom_{\Q}(K,\conj{\Q})\). Then the associated generator matrix for \(j(\mf{f})\) is the embedding matrix \(M(\k_{1},\ldots,\k_{n})\). Hence
       \[
         V_{j(\mf{f})} = |\det(M(\k_{1},\ldots,\k_{n}))|,
       \]
-      proving the first statement. We will be done if we can show
+      proving the first statement. To prove the remaining identity, it suffices to show
       \[
         |\det(M(\k_{1},\ldots,\k_{n}))| = \Norm_{K}(\mf{f})|\det(M(\a_{1},\ldots,\a_{n}))|,
       \]
-      for any integral basis \(\a_{1},\ldots,\a_{n}\) since \(|\det(M(\a_{1},\ldots,\a_{n}))| = \sqrt{|\D_{K}|}\) (as we have seen). As \(\mf{f}\) is a fractional ideal, there exists a nonzero \(\d \in \mc{O}_{K}\) and an integral ideal \(\mf{a}\) such that
+      for any integral basis \(\a_{1},\ldots,\a_{n}\) in view of \cref{equ:embedding_matrix_discriminant_relation}. \todo{xxx} As \(\mf{f}\) is a fractional ideal, there exists a nonzero \(\d \in \mc{O}_{K}\) and an integral ideal \(\mf{a}\) such that
       \[
         \mf{f} = \frac{1}{\d}\mf{a}.
       \]

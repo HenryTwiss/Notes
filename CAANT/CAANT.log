@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  31 MAR 2026 23:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  1 APR 2026 17:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -703,7 +703,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...3}Dirichlet Convolution}{104}{section.6.3}
+l.30 ...3}Dirichlet Convolution}{105}{section.6.3}
                                                   % [1
 
 ])
@@ -780,7 +780,7 @@ Chapter 5.
 
 
 
-] [93]) [94] [95
+] [93] [94]) [95] [96
 
 
 
@@ -789,42 +789,42 @@ Chapter 5.
 
  (./Chapters/Dirichlet_Series.tex
 Chapter 6.
-[96
+[97
 
 
-] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110]) [111]
+] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]) [112]
 \openout2 = `Chapters/Analytic_L-functions.aux'.
 
  (./Chapters/Analytic_L-functions.tex
 Chapter 7.
-[112
+[113
 
 
 
 
-] [113]
+] [114]
 Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 64.
- [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129]) [130]
+ [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130]) [131]
 Chapter 8.
-[131
+[132
 
 
 
 ]
 Chapter 9.
-[132
-
-]
-Chapter 10.
 [133
 
 ]
+Chapter 10.
+[134
+
+]
 Chapter 11.
-(./CAANT.ind [134
+(./CAANT.ind [135
 
-] [135
+] [136
 
-] [136] [137
+] [137] [138
 
 ])
 \tf@thm=\write7
@@ -835,18 +835,18 @@ Package rerunfilecheck Info: File `CAANT.out' has not changed.
 (rerunfilecheck)             Checksum: 3C7FF5DAFA30061969CDE1BBA191E488;7686.
  ) 
 Here is how much of TeX's memory you used:
- 27360 strings out of 478268
- 553054 string characters out of 5846347
- 801938 words of memory out of 5000000
- 44613 multiletter control sequences out of 15000+600000
+ 27368 strings out of 478268
+ 553283 string characters out of 5846347
+ 802123 words of memory out of 5000000
+ 44617 multiletter control sequences out of 15000+600000
  489868 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2083b,1218s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on CAANT.pdf (140 pages, 742972 bytes).
+Output written on CAANT.pdf (141 pages, 747036 bytes).
 PDF statistics:
- 1795 PDF objects out of 2073 (max. 8388607)
- 1593 compressed objects within 16 object streams
- 483 named destinations out of 1000 (max. 500000)
+ 1805 PDF objects out of 2073 (max. 8388607)
+ 1601 compressed objects within 17 object streams
+ 487 named destinations out of 1000 (max. 500000)
  333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
