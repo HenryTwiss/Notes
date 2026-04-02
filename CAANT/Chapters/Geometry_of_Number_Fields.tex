@@ -1,5 +1,5 @@
 \chapter{Geometry of Number Fields}
-  Throughout, all rings will be understood to be commutative and with unity.
+  Throughout, all rings will be understood to be commutative and with unity. We will also use the theory of integral lattices in \cref{sec:integral_lattices}.
   \section{\todo{Minkowski Space}}
     Let \(K\) be number field of degree \(n\). If \(\s \in \Hom_{\Q}(K,\conj{\Q})\) then either \(\s\) is real or complex and in the latter case it is has a paired \(\Q\)-embedding \(\conj{\s}\) which is the complex conjugate of \(\s\). Accordingly, let \(r_{1}\) and \(2r_{2}\) be the number of real and complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) respectively. We call the pair \((r_{1},r_{2})\) the \textbf{signature}\index{signature} of \(K\) and it satisfies the relation
     \[
@@ -11,9 +11,9 @@
     \]
     makes \(K_{\C}\) into a component-wise \(\C\)-algebra. Moreover, \(K_{\C}\) is also a complex Hilbert space with respect to the standard complex inner product which we denote by \(\<\cdot,\cdot\>_{K_{\C}}\). We also write \(d\l_{K_{\C}}\) for the induced Lebesgue measure on \(K_{\C}\) by this inner product. Also let \(\Trace_{K_{\C}}\) and \(\Norm_{K_{\C}}\) denote the trace and norm of \(K_{\C}/\C\). Because \(K_{\C}\) is a component-wise \(\C\)-algebra, the trace and the norm are given by
     \[
-      \Trace_{K_{\C}}((z_{\s})_{\s}) = \sum_{\s}z_{\s} \quad \text{and} \quad \Norm_{K_{\C}}((z_{\s})_{\s}) = \prod_{\s}z_{\s},
+      \Trace_{K_{\C}}(\mathbf{z}) = \sum_{\s}z_{\s} \quad \text{and} \quad \Norm_{K_{\C}}(\mathbf{z}) = \prod_{\s}z_{\s},
     \]
-    for all \((z_{\s})_{\s} \in K_{\R}\). We define the \textbf{canonical embedding}\index{canonical embedding} \(j\) of \(K\) to be the \(\Q\)-embedding
+    for all \(\mathbf{z} \in K_{\R}\). We define the \textbf{canonical embedding}\index{canonical embedding} \(j\) of \(K\) to be the \(\Q\)-embedding
     \[
       j:K \to K_{\C} \qquad \k \mapsto (\s(\k))_{\s}.
     \]
@@ -27,7 +27,7 @@
     \]
     This induces an automorphism of \(K_{\C}\) given by
     \[
-      F:K_{\C} \to K_{\C} \qquad (z_{\s})_{\s} \mapsto (\conj{z_{\conj{\s}}})_{\s},
+      F:K_{\C} \to K_{\C} \qquad \mathbf{z} \mapsto (\conj{z_{\conj{\s}}})_{\s},
     \]
     which is an involution. A short computation shows
     \[
@@ -35,7 +35,7 @@
     \]
     for all \(\mathbf{z},\mathbf{w} \in K_{\C}\). In other words, inner product \(\<\cdot,\cdot\>_{K_{\C}}\) is \(F\)-equivariant. We define the \textbf{Minkowski space}\index{Minkowski space} \(K_{\R}\) of \(K\) by
     \[
-      K_{\R} = \{(z_{\s})_{\s} \in K_{\C}:F((z_{\s})_{\s}) = (z_{\s})_{\s}\}.
+      K_{\R} = \{\mathbf{z} \in K_{\C}:F(\mathbf{z}) = \mathbf{z}\}.
     \]
     In other words, \(K_{\R}\) consists of all of the \(F\)-invariant points of \(K_{\C}\). Note that \(K_{\R}\) is an \(\R\)-subalgebra of \(K_{\C}\). We denote the restriction of the inner product \(\<\cdot,\cdot\>_{K_{\C}}\) to \(K_{\R}\) by \(\<\cdot,\cdot\>_{K_{\R}}\). Moreover, the inner product \(\<\cdot,\cdot\>_{K_{\R}}\) turns \(K_{\R}\) into a real Hilbert space. Indeed, the conjugate symmetry and \(F\)-equivariance of the inner product together give
     \[
@@ -49,7 +49,7 @@
     
     To give a more explicit description of Minkowski space, let \(N_{\s} = 1,2\) according to if \(\s\) is real or complex respectively. Also let \(\rho\) and \(\t\) run over the real \(\Q\)-embeddings and a complete set of representatives for pairs of complex \(\Q\)-embeddings for \(\Hom_{\Q}(K,\conj{\Q})\). Note that \(N_{\rho} = 1\) and \(N_{\tau} = 2\). Then
     \[
-      K_{\R} = \{(z_{\s})_{\s} \in K_{\C}:z_{\rho} \in \R \text{ and } z_{\conj{\tau}} = \conj{z_{\tau}} \text{ for all } \rho \text{ and } \tau\}.
+      K_{\R} = \{\mathbf{z} \in K_{\C}:\Im(z_{\rho}) = 0 \text{ and } z_{\conj{\tau}} = \conj{z_{\tau}} \text{ for all } \rho \text{ and } \tau\}.
     \]
     In fact, this gives an explicit isomorphism between Minkowski space and \(\R^{n}\).
     
@@ -69,7 +69,7 @@
       \[
         x_{\s} \mapsto z_{\s} = \begin{cases} x_{\s} & \text{if \(\s = \rho\)}, \\ x_{\s}+ix_{\conj{\s}} & \text{if \(\s = \tau\)}, \\ x_{\conj{\s}}+ix_{\s} & \text{if \(\s = \conj{\tau}\)}. \end{cases}
       \]
-      As both maps are \(\R\)-linear, it follows that the original map induces a component-wise isomorphism between \(K_{\R}\) and \(\R^{n}\) proving the first statement. For the second statement, let \((z_{\s})_{\s},(z'_{\s})_{\s} \in K_{\R}\) and let \((x_{\s})_{\s},(x'_{\s})_{\s} \in \R^{n}\) be the corresponding elements in \(\R^{n}\) under this isomorphism respectively. If \(\s = \rho\) then
+      As both maps are \(\R\)-linear, it follows that the original map induces a component-wise isomorphism between \(K_{\R}\) and \(\R^{n}\) proving the first statement. For the second statement, let \(\mathbf{z},\mathbf{z}' \in K_{\R}\) and let \(\mathbf{x},\mathbf{x}' \in \R^{n}\) be the corresponding elements in \(\R^{n}\) under this isomorphism respectively. If \(\s = \rho\) then
       \[
         x_{\rho} = z_{\rho} \quad \text{and} \quad x'_{\rho} = z'_{\rho},
       \]
@@ -92,7 +92,7 @@
     \[
       \s_{K}:K \to \R^{n} \qquad \k \mapsto (\rho(\k))_{\rho} \op (\Re(\tau(\k)),\Im(\tau(\k)))_{\tau},
     \]
-    The Minkowski embedding is a \(\Q\)-embedding of \(K\) into \(\R^{n}\) since it is the composition of the canonical embedding and the isomorphism established in the previous result.
+    Note that the Minkowski embedding is a \(\Q\)-embedding of \(K\) into \(\R^{n}\) as it is the composition of the canonical embedding and the isomorphism established in the previous result.
     
     We have now constructed Minkowski space and determined its dimension as a real vector space. Our goal now is to pass from \(\Z\)-lattices of \(K\) to integral lattices of Minkowski space. Being an inner product space, this will permit us to measure fractional ideals of \(K\) geometrically via their images inside Minkowski space. As \(j\) is a \(\Q\)-embedding and any fractional ideal \(\mf{f}\) of \(K\) is a complete \(\Z\)-lattice of \(K\), \(j(\mf{f})\) is a complete integral lattice of \(K_{\R}\). The covolume \(V_{j(\mf{f})}\) of \(j(\mf{f})\) is easily determined.
 
@@ -106,31 +106,32 @@
         V_{j(\mc{O}_{K})} = \sqrt{|\D_{K}|}.
       \]
     \end{proposition}
-    \iffalse
     \begin{proof}
-      The second identity follows from the first by taking \(\mf{f} = \mc{O}_{K}\) so it remains to prove the first two statements. Let \(\k_{1},\ldots,\k_{n}\) be a basis for \(\mf{f}\) and let \(\s_{1},\ldots,\s_{n}\) be the elements of \(\Hom_{\Q}(K,\conj{\Q})\). Then the associated generator matrix for \(j(\mf{f})\) is the embedding matrix \(M(\k_{1},\ldots,\k_{n})\). Hence
+      Upon writing \(\mf{f} = \frac{1}{d}\mf{a}\) for some nonzero \(d \in \Z\) and integral ideal \(\mf{a}\) and \cref{prop:norm_and_field_norms_are_identical}, it suffices to prove the statements for an integral ideal \(\mf{a}\).
+      As \(\mf{a}\) is complete, let \(\k_{1},\ldots,\k_{n}\) be a basis for \(L/K\) contained in \(\mf{a}\). Also let \(\s_{1},\ldots,\s_{n}\) be the elements of \(\Hom_{\Q}(K,\conj{\Q})\). Then the associated generator matrix for \(j(\mf{a})\) is the embedding matrix \(M(\k_{1},\ldots,\k_{n})\). Hence
       \[
-        V_{j(\mf{f})} = |\det(M(\k_{1},\ldots,\k_{n}))|,
+        V_{j(\mf{a})} = |\det(M(\k_{1},\ldots,\k_{n}))|,
       \]
-      proving the first statement. To prove the remaining identity, it suffices to show
+      proving the first statement. To prove the first identity of the second statement, in view of \cref{equ:embedding_matrix_discriminant_relation} it suffices to show
       \[
-        |\det(M(\k_{1},\ldots,\k_{n}))| = \Norm_{K}(\mf{f})|\det(M(\a_{1},\ldots,\a_{n}))|,
+        |\det(M(\k_{1},\ldots,\k_{n}))| = \Norm_{K}(\mf{a})|\det(M(\a_{1},\ldots,\a_{n}))|,
       \]
-      for any integral basis \(\a_{1},\ldots,\a_{n}\) in view of \cref{equ:embedding_matrix_discriminant_relation}. \todo{xxx} As \(\mf{f}\) is a fractional ideal, there exists a nonzero \(\d \in \mc{O}_{K}\) and an integral ideal \(\mf{a}\) such that
+      for any integral basis \(\a_{1},\ldots,\a_{n}\) for \(K\). Note that \(\k_{1},\ldots,\k_{n}\) is necessarily a basis for \(\mf{a}\) as a free \(\Z\)-module by \cref{thm:integral_basis_AKBL} and write
       \[
-        \mf{f} = \frac{1}{\d}\mf{a}.
+        \k_{i} = \sum_{j}a_{i,j}\a_{j},
       \]
-      Then \(\d\k_{1},\ldots,\d\k_{n}\) is a basis for \(\mf{a}\). By \cref{prop:norm_and_field_norms_are_identical,prop:base_change_quotient_determinant}, we have
+      with \(a_{i,j} \in \Z\). Then \((a_{i,j})\) is the base change matrix from \(\a_{1},\ldots,\a_{n}\) to \(\k_{1},\ldots,\k_{n}\). Whence the image of \(\mc{O}_{K}\) under this matrix is \(\mf{a}\). As \(\Z\) is a principal ideal domain, the smith normal form of this matrix implies that
       \[
-        |\det(M(\d\k_{1},\ldots,\d\k_{n}))| = \Norm_{K}(\mf{a})|\det(M(\a_{1},\ldots,\a_{n}))|,
+        \Norm(\mf{a}) = |\det((a_{i,j}))|.
       \]
-      since they together show that \(\Norm_{K}(\mf{a})\) is the absolute value of the determinant of the base change matrix from \(\k_{1},\ldots,\k_{n}\) to \(\d\k_{1},\ldots,\d\k_{n}\). Similarly,
+      This fact together with \cref{equ:base_change_discriminant,disc_as_square_of_embedding_matrix} gives
       \[
-        |\det(M(\d\k_{1},\ldots,\d\k_{n}))| = |\Norm_{K}(\d)||\det(M(\k_{1},\ldots,\k_{n}))|,
+        |\det(M(\k_{1},\ldots,\k_{n}))| = \Norm(\mf{a})|\det(M(\a_{1},\ldots,\a_{n}))|,
       \]
-      since \cref{prop:norm_and_field_norms_are_identical,prop:base_change_quotient_determinant} together show that \(|\Norm_{K}(\d)|\) is the absolute value of the determinant of the base change matrix from \(\k_{1},\ldots,\k_{n}\) to \(\d\k_{1},\ldots,\d\k_{n}\). As \(\Norm_{K}(\mf{f}) = \frac{\Norm_{K}(\mf{a})}{|\Norm_{K}(\d)|}\) by multiplicativity of the norm and \cref{prop:norm_and_field_norms_are_identical}, these two identities for \(|\det(M(\d\k_{1},\ldots,\d\k_{n}))|\) together imply the claim.
+      as claimed. The second identity follows from the first upon taking \(\mf{f} = \mc{O}_{K}\).
     \end{proof}
     
+    \iffalse
     Now as \(\s_{K}\) is also a \(\Q\)-embedding, \(\s_{K}(\mf{f})\) is a complete lattice in \(\R^{n}\). As a corollary of \cref{prop:covolume_of_fractional_ideal_under_j}, we can determine the covolume of \(\s_{K}(\mf{f})\):
     
     \begin{corollary}\label{cor:covolume_of_fractional_ideal_under_canonical_embedding}

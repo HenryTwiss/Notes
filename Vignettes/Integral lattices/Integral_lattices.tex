@@ -13,7 +13,7 @@
   \date{}
   \maketitle
   \section{Integral Lattices}
-    Let \(F\) be a characteristic zero field and \(V\) be an \(\F\)-vector space of dimension \(n\) with nondegenerate symmetric inner product \(\<\cdot,\cdot\>\). We say that a subset \(\L\) of \(V\) is a \textit{lattice} if \(\L\) is a free abelian group. In particular, any lattice \(\L\) is of the form
+    Let \(F\) be a characteristic zero field and \(V\) be an \(\F\)-vector space of dimension \(n\) with nondegenerate symmetric inner product \(\<\cdot,\cdot\>\). We say that a subset \(\L\) of \(V\) is a \textit{lattice} if \(\L\) is a free \(\Z\)-module. In particular, any lattice \(\L\) is of the form
     \[
       \L = \Z v_{1}+\cdots+\Z v_{m},
     \]
@@ -45,7 +45,7 @@
       \[
         v = \sum_{j}a_{i}v_{j}^{\vee},
       \]
-      with \(v_{j}^{\vee} \in \R\). Since the dual basis is determined by \(\<v_{i},v_{j}^{\vee}\> = \d_{i,j}\), it follows that \(v \in \L^{\vee}\) if and only if \(v_{j}^{\vee} \in \Z\). This means \(v_{1}^{\vee},\ldots,v_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a free abelian group and thus is a complete lattice.
+      with \(v_{j}^{\vee} \in \R\). Since the dual basis is determined by \(\<v_{i},v_{j}^{\vee}\> = \d_{i,j}\), it follows that \(v \in \L^{\vee}\) if and only if \(v_{j}^{\vee} \in \Z\). This means \(v_{1}^{\vee},\ldots,v_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a free \(\Z\)-module and thus is a complete lattice.
     \end{proof}
 
     Since the dual of the dual basis is the original basis, \((\L^{\vee})^{\vee} = \L\). We say that \(\L\) is \textit{self-dual} if \(\L^{\vee} = \L\). For example, the lattice \(\Z^{n}\) is self-dual because the standard basis is self-dual. It also turns out that the covolume of the dual lattice is the inverse of the volume of the original lattice.
@@ -107,7 +107,7 @@
       \[
         \L \subseteq \L' = \Z\frac{1}{q}v'_{1}+\cdots+\Z\frac{1}{q}v'_{m}.
       \]
-      In particular, \(\L\) is a subgroup of a free abelian group and therefore is free abelian. This means \(\L\) is a lattice.
+      In particular, \(\L\) is a subgroup of a free \(\Z\)-module and therefore a free \(\Z\)-module itself. This means \(\L\) is a lattice.
     \end{proof}
 
     As for complete lattices in \(V\), they are equivalent to the existence of a bounded set whose translates cover \(V\).
