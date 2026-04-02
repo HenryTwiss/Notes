@@ -39,3 +39,7 @@
 \contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{133}{chapter.9}%
 \contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{134}{chapter.10}%
 \contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{135}{chapter.11}%
+\contentsline {chapter}{\numberline {A}Appendices}{136}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Integral Lattices}{137}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Poisson Summation}{141}{section.A.2}%
+\contentsline {section}{\numberline {A.3}The Gamma Function}{147}{section.A.3}%

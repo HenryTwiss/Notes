@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  20 MAR 2026 16:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  1 APR 2026 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Integral lattices/Integral_lattices.tex"
-(/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Integral lattices/Integral_lattices.tex
+**"/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Integral Lattices/Integral_Lattices.tex"
+(/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Integral Lattices/Integral_Lattices.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -583,12 +583,12 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@layerboxsaved@background=\box67
 )
 \@indexfile=\write4
-\openout4 = `Integral_lattices.idx'.
+\openout4 = `Integral_Lattices.idx'.
 
 
-Writing index file Integral_lattices.idx
-(./Integral_lattices.aux)
-\openout1 = `Integral_lattices.aux'.
+Writing index file Integral_Lattices.idx
+(./Integral_Lattices.aux)
+\openout1 = `Integral_Lattices.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -656,9 +656,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
 LaTeX Info: Redefining \nameref on input line 12.
- (./Integral_lattices.out) (./Integral_lattices.out)
+ (./Integral_Lattices.out) (./Integral_Lattices.out)
 \@outlinefile=\write5
-\openout5 = `Integral_lattices.out'.
+\openout5 = `Integral_Lattices.out'.
 
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -695,10 +695,10 @@ Package hyperref Info: bookmark level for unknown proof defaults to 0 on input l
 Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 132.
  [4]
 \tf@thm=\write6
-\openout6 = `Integral_lattices.thm'.
+\openout6 = `Integral_Lattices.thm'.
 
- [5] (./Integral_lattices.aux)
-Package rerunfilecheck Info: File `Integral_lattices.out' has not changed.
+ [5] (./Integral_Lattices.aux)
+Package rerunfilecheck Info: File `Integral_Lattices.out' has not changed.
 (rerunfilecheck)             Checksum: 32710FBC2A98F023E22DC1BD9A41739B;131.
  ) 
 Here is how much of TeX's memory you used:
@@ -710,7 +710,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  105i,8n,107p,769b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Integral_lattices.pdf (5 pages, 165536 bytes).
+Output written on Integral_Lattices.pdf (5 pages, 165829 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream

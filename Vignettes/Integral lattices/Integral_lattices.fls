@@ -1,9 +1,9 @@
-PWD /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Integral lattices
+PWD /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Integral Lattices
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Integral lattices/Integral_lattices.tex
-OUTPUT Integral_lattices.log
+INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Integral Lattices/Integral_Lattices.tex
+OUTPUT Integral_Lattices.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -786,11 +786,11 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/p
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
-OUTPUT Integral_lattices.idx
-INPUT ./Integral_lattices.aux
-INPUT Integral_lattices.aux
-INPUT Integral_lattices.aux
-OUTPUT Integral_lattices.aux
+OUTPUT Integral_Lattices.idx
+INPUT ./Integral_Lattices.aux
+INPUT Integral_Lattices.aux
+INPUT Integral_Lattices.aux
+OUTPUT Integral_Lattices.aux
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -828,18 +828,18 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestri
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-INPUT ./Integral_lattices.out
-INPUT Integral_lattices.out
-INPUT ./Integral_lattices.out
-INPUT Integral_lattices.out
-INPUT ./Integral_lattices.out
-INPUT Integral_lattices.out
-INPUT ./Integral_lattices.out
-INPUT Integral_lattices.out
-OUTPUT Integral_lattices.pdf
-INPUT ./Integral_lattices.out
-INPUT ./Integral_lattices.out
-OUTPUT Integral_lattices.out
+INPUT ./Integral_Lattices.out
+INPUT Integral_Lattices.out
+INPUT ./Integral_Lattices.out
+INPUT Integral_Lattices.out
+INPUT ./Integral_Lattices.out
+INPUT Integral_Lattices.out
+INPUT ./Integral_Lattices.out
+INPUT Integral_Lattices.out
+OUTPUT Integral_Lattices.pdf
+INPUT ./Integral_Lattices.out
+INPUT ./Integral_Lattices.out
+OUTPUT Integral_Lattices.out
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -903,10 +903,10 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
-OUTPUT Integral_lattices.thm
-INPUT Integral_lattices.aux
-INPUT ./Integral_lattices.out
-INPUT ./Integral_lattices.out
+OUTPUT Integral_Lattices.thm
+INPUT Integral_Lattices.aux
+INPUT ./Integral_Lattices.out
+INPUT ./Integral_Lattices.out
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb

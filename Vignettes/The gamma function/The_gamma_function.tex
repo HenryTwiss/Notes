@@ -13,7 +13,7 @@
   \date{}
   \maketitle
   Throughout, \(s = \s+it\) and \(u = \tau+ir\) will stand for complex variables with \(\s\), \(\tau\), \(t\), and \(r\) real. 
-  \section{Analytic Properties}
+  \section{The Gamma Function}
     The \textit{gamma function} \(\G(s)\) is defined by the integral
     \[
       \G(s) = \int_{0}^{\infty}e^{-x}x^{s-1}\,dx.
@@ -344,8 +344,8 @@
         \frac{1}{\G(s)} = se^{\g s}\prod_{n \ge 1}\left(1+\frac{s}{n}\right)e^{-\frac{s}{n}},
       \]
       as desired.
-    \end{proof}   
-  \section{Asymptotics}
+    \end{proof}
+
     Upon inspection of the Hadamard factorization, we find that the reciprocal of the gamma function is of order \(1\). We now turn to analyzing the growth rate of the gamma function itself. In fact, we can obtain a well-known asymptotic formula for the gamma function known as \textit{Stirling's formula}:
 
     \begin{theorem*}[Stirling's formula]

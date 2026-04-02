@@ -1,11 +1,11 @@
 # Fdb version 3
-["makeindex The_gamma_function.idx"] 1774039035 "The_gamma_function.idx" "The_gamma_function.ind" "The_gamma_function" 1774059257
-  "The_gamma_function.idx" 0 -1 0 "pdflatex"
+["makeindex The_Gamma_Function.idx"] 1775097550 "The_Gamma_Function.idx" "The_Gamma_Function.ind" "The_Gamma_Function" 1775097793
+  "The_Gamma_Function.idx" 0 -1 0 "pdflatex"
   (generated)
-  "The_gamma_function.ilg"
-  "The_gamma_function.ind"
-["pdflatex"] 1774059256 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function/The_gamma_function.tex" "The_gamma_function.pdf" "The_gamma_function" 1774059257
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function/The_gamma_function.tex" 1774059256 32377 aebe6d01707c1f8a8f33ae0b98ab29b6 ""
+  "The_Gamma_Function.ilg"
+  "The_Gamma_Function.ind"
+["pdflatex"] 1775097793 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function/The_Gamma_Function.tex" "The_Gamma_Function.pdf" "The_Gamma_Function" 1775097793
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function/The_Gamma_Function.tex" 1775097792 32350 60a7b0447e3751b1748b4962cd200f76 ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1772735856 5446 b8e8c4c981b5aeb2a22d0d715bd1341b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -186,14 +186,14 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "The_gamma_function.aux" 1774059256 7923 83159f1ec0e611818cec8dc798138031 "pdflatex"
-  "The_gamma_function.ind" 0 -1 0 "makeindex The_gamma_function.idx"
-  "The_gamma_function.out" 1774059256 239 ec93f82e5b2ae5ad38c14f4cc17279ee "pdflatex"
-  "The_gamma_function.tex" 1774059256 32377 aebe6d01707c1f8a8f33ae0b98ab29b6 ""
+  "The_Gamma_Function.aux" 1775097793 7899 52838a2130596d124e2e538965e7ed21 "pdflatex"
+  "The_Gamma_Function.ind" 0 -1 0 "makeindex The_Gamma_Function.idx"
+  "The_Gamma_Function.out" 1775097793 139 5a3ab686fd3b624948d927158e5752a6 "pdflatex"
+  "The_Gamma_Function.tex" 1775097792 32350 60a7b0447e3751b1748b4962cd200f76 ""
   (generated)
-  "The_gamma_function.aux"
-  "The_gamma_function.idx"
-  "The_gamma_function.log"
-  "The_gamma_function.out"
-  "The_gamma_function.pdf"
-  "The_gamma_function.thm"
+  "The_Gamma_Function.aux"
+  "The_Gamma_Function.idx"
+  "The_Gamma_Function.log"
+  "The_Gamma_Function.out"
+  "The_Gamma_Function.pdf"
+  "The_Gamma_Function.thm"
