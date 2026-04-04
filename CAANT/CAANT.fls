@@ -1030,6 +1030,12 @@ INPUT ./Chapters/Geometry_of_Number_Fields.tex
 INPUT Chapters/Geometry_of_Number_Fields.tex
 INPUT ./Chapters/Geometry_of_Number_Fields.tex
 INPUT Chapters/Geometry_of_Number_Fields.tex
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss17.tfm
 INPUT ./Chapters/Dirichlet_Series.tex
 INPUT ./Chapters/Dirichlet_Series.tex
@@ -1093,12 +1099,6 @@ INPUT ./Appendices/Poisson_Summation.tex
 INPUT Appendices/Poisson_Summation.tex
 INPUT ./Appendices/Poisson_Summation.tex
 INPUT Appendices/Poisson_Summation.tex
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
 INPUT ./Appendices/The_Gamma_Function.tex
 INPUT ./Appendices/The_Gamma_Function.tex
 INPUT ./Appendices/The_Gamma_Function.tex

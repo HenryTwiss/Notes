@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 APR 2026 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  4 APR 2026 16:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -703,7 +703,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...3}Dirichlet Convolution}{107}{section.6.3}
+l.30 ...3}Dirichlet Convolution}{110}{section.6.3}
                                                   % [1
 
 ])
@@ -780,7 +780,7 @@ Chapter 5.
 
 
 
-] [93] [94] [95] [96]) [97] [98
+] [93] [94] [95] [96] [97] [98] [99]) [100] [101
 
 
 
@@ -789,67 +789,67 @@ Chapter 5.
 
  (./Chapters/Dirichlet_Series.tex
 Chapter 6.
-[99
+[102
 
 
-] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]) [114]
+] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116]) [117]
 \openout2 = `Chapters/Analytic_L-functions.aux'.
 
  (./Chapters/Analytic_L-functions.tex
 Chapter 7.
-[115
+[118
 
 
 
 
-] [116]
+] [119]
 Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 64.
- [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132]) [133]
+ [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135]) [136]
 Chapter 8.
-[134
+[137
 
 
 
 ]
 Chapter 9.
-[135
+[138
 
 ]
 Chapter 10.
-[136
+[139
 
 ]
 Chapter 11.
-[137
+[140
 
 ]
 Appendix A.
-[138
+[141
 
 ]
 \openout2 = `Appendices/Integral_Lattices.aux'.
 
- (./Appendices/Integral_Lattices.tex [139
+ (./Appendices/Integral_Lattices.tex [142
 
-] [140] [141]) [142]
+] [143] [144]) [145]
 \openout2 = `Appendices/Poisson_Summation.aux'.
 
- (./Appendices/Poisson_Summation.tex [143
+ (./Appendices/Poisson_Summation.tex [146
 
 
 
-] [144] [145] [146] [147]) [148]
+] [147] [148] [149] [150]) [151]
 \openout2 = `Appendices/The_Gamma_Function.aux'.
 
- (./Appendices/The_Gamma_Function.tex [149
+ (./Appendices/The_Gamma_Function.tex [152
 
 
 
-] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161]) [162] (./CAANT.ind [163
+] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164]) [165] (./CAANT.ind [166
 
 
 
-] [164] [165
+] [167] [168
 
 ])
 \tf@thm=\write7
@@ -857,21 +857,21 @@ Appendix A.
 
  (./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Geometry_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux) (./Appendices/Integral_Lattices.aux) (./Appendices/Poisson_Summation.aux) (./Appendices/The_Gamma_Function.aux))
 Package rerunfilecheck Info: File `CAANT.out' has not changed.
-(rerunfilecheck)             Checksum: C5EF812B5A65D6335EA38D7662950083;8184.
+(rerunfilecheck)             Checksum: 8C8C38A18F3050820AE53745FECA5B8E;8141.
  ) 
 Here is how much of TeX's memory you used:
- 27738 strings out of 478268
- 563136 string characters out of 5846347
- 809467 words of memory out of 5000000
- 44855 multiletter control sequences out of 15000+600000
+ 27751 strings out of 478268
+ 563308 string characters out of 5846347
+ 809577 words of memory out of 5000000
+ 44858 multiletter control sequences out of 15000+600000
  491709 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2083b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on CAANT.pdf (168 pages, 867574 bytes).
+Output written on CAANT.pdf (171 pages, 878850 bytes).
 PDF statistics:
- 2087 PDF objects out of 2487 (max. 8388607)
- 1848 compressed objects within 19 object streams
- 591 named destinations out of 1000 (max. 500000)
+ 2118 PDF objects out of 2487 (max. 8388607)
+ 1876 compressed objects within 19 object streams
+ 601 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

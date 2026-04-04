@@ -90,7 +90,7 @@
 
     In view of this result, we define the \textbf{Minkowski embedding}\index{Minkowski embedding} \(\s_{K}\) of \(K\) by
     \[
-      \s_{K}:K \to \R^{n} \qquad \k \mapsto (\rho(\k))_{\rho} \op (\Re(\tau(\k)),\Im(\tau(\k)))_{\tau}.
+      \s_{K}:K \to \R^{n} \qquad \k \mapsto ((\rho(\k))_{\rho},(\Re(\tau(\k)),\Im(\tau(\k)))_{\tau}).
     \]
     Note that the Minkowski embedding is a \(\Q\)-embedding of \(K\) into \(\R^{n}\) as it is the composition of the canonical embedding and the isomorphism established in the previous result.
     
@@ -160,43 +160,44 @@
         V_{\s_{K}(\mf{f})} = \frac{|\det(M(\k_{1},\ldots,\k_{n}))|}{2^{r_{2}}}.
       \]
     \end{proof}
-  \section{\todo{Finiteness of the Class Number}}
-    Recall that the class number of a Dedekind domain is a measure of how much the Dedekind domain fails to be a principal ideal domain and even need not be finite from \cref{rem:general_class_number_not_finite}. However, we will show that the class number \(h_{K}\) for a number field \(K\) is always finite and thus \(\mc{O}_{K}\) only has finite failure from being a principal ideal domain. In doing so, we will also show that every ideal class contains an integral ideal of bounded norm.
+  \section{Finiteness of the Class Number}
+    Recall that the class number of a Dedekind domain is a measure of how much the Dedekind domain fails to be a principal ideal domain and even need not be finite from \cref{rem:general_class_number_not_finite}. However, we will show that the class number \(h_{K}\) for a number field \(K\) is always finite and thus \(\mc{O}_{K}\) only has finite failure from being a principal ideal domain. In doing so, we will also show that every ideal class is represented by an integral ideal of bounded norm.
 
     \begin{theorem}\label{equ:finitness_of_class_number}
-      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Also, let \(X \subseteq \R^{n}\) be a compact convex symmetric set and set \(M = \max_{\mathbf{x} \in X}\left(\prod_{i}|x_{i}|\right)\). Then every ideal class contains an integral ideal \(\mf{a}\) satisfying
+      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Also, let \(X \subseteq \R^{n}\) be a compact convex symmetric set and set \(M = \max_{\mathbf{x} \in X}\left(\prod_{i}|x_{i}|\right)\). Then every ideal class of \(\Cl(K)\) is represented by an integral ideal \(\mf{a}\) satisfying
       \[
         \Norm_{K}(\mf{a}) \le \frac{2^{r_{1}+r_{2}}M}{\Vol(X)}\sqrt{|\D_{K}|}.
       \]
-      Moreover, the class number \(h_{K}\) is finite which is to say the ideal class group \(\Cl(K)\) is.
+      Moreover, the ideal class group \(\Cl(K)\) is finite which is to say that the class number \(h_{K}\) is.
     \end{theorem}
-    \iffalse
     \begin{proof}
       Let \(\mf{f}\) be a fractional ideal, \(n\) be a positive integer, and set
       \[
         \l^{n} = 2^{n}\frac{V_{\s_{K}(\mf{f}^{-1})}}{\Vol(X)}.
       \]
-      Then by construction,
+      Then by construction, we have
       \[
-        \Vol(\l X) = \l^{n}\Vol(X) = 2^{n}V_{\s_{K}(\mf{f}^{-1})}.
+        \Vol(\l X) = 2^{n}V_{\s_{K}(\mf{f}^{-1})}.
       \]
-      By Minkowski's lattice point theorem, there exists a nonzero \(\a \in \mf{f}^{-1}\) such that \(\s_{K}(\a) \in \s_{K}(\mf{f}^{-1})\) and \(\s_{K}(\a) \in \l X\). Since \(\a \in \mf{f}^{-1}\), \(\a\mf{f} \subseteq \mc{O}_{K}\) so that \(\a\mf{f}\) is an integral ideal in the same ideal class as \(\mf{f}\). Now let \(\s\) run over \(\Hom_{\Q}(K,\conj{\Q})\). Since the norm is multiplicative, we have
+      By Minkowski's lattice point theorem (see \cref{sec:integral_lattices}), there exists a nonzero element of \(\s_{K}(\mf{f}^{-1}) \cap \l X\). Whence there is a nonzero \(\a \in \mf{f}^{-1}\) such that \(\s_{K}(\a) \in \l X\). Moreover, \(\a\mf{f} \subseteq \mc{O}_{K}\) so that \(\mf{a} = \a\mf{f}\) is an integral ideal in the same class as \(\mf{f}\). Using \cref{prop:norm_and_field_norms_are_identical,prop:formulas_for_trace_and_norm}, a short computation shows
       \[
-        \Norm_{K}(\a\mf{f}) = |\Norm_{K}(\a)|\Norm_{K}(\mf{f}) = \left|\prod_{\s}\s(\a)\right|\Norm_{K}(\mf{f}) \le \l^{n}M\Norm_{K}(\mf{f}),
+        \Norm_{K}(\mf{a}) \le \l^{n}M\Norm_{K}(\mf{f}).
       \]
-      where in the first equality we have applied multiplicativity of the norm and \cref{prop:norm_and_field_norms_are_identical}, in the second we have used \cref{prop:formulas_for_trace_and_norm}, and the inequality follows since \(\s_{K}(\a) \in \l X\). This inequality, our choice of \(\l^{n}\), and \cref{cor:covolume_of_fractional_ideal_under_canonical_embedding} together give
+      In view of our choice of \(\l^{n}\) and \cref{cor:covolume_of_fractional_ideal_under_canonical_embedding}, this inequality becomes
       \[
-        \Norm_{K}(\a\mf{f}) \le \l^{n}M\Norm_{K}(\mf{f}) = 2^{n}M\Norm_{K}(\mf{f})\frac{V_{\s_{K}(\mf{f}^{-1})}}{\Vol(X)} = 2^{n}M\frac{\sqrt{|\D_{K}|}}{2^{r_{2}}\Vol(X)} = \frac{2^{r_{1}+r_{2}}M}{\Vol(X)}\sqrt{|\D_{K}|},
+        \Norm_{K}(\mf{a}) \le \frac{2^{r_{1}+r_{2}}M}{\Vol(X)}\sqrt{|\D_{K}|},
       \]
-      which proves the first statement since the fractional ideal \(\mf{f}\) was arbitrary. We now prove that the class group is finite. By what we have just proved, we can find a complete set of representatives for \(\Cl(K)\) consisting of integral ideals of bounded norm. Since the norm is multiplicative, the prime factors of these representatives have bounded norm as well. As we have seen, the norm of a prime integral ideal is exactly the prime \(p\) below it. Thus the norms of these prime factors are bounded primes \(p\). As there are finitely many prime integral ideals above any prime \(p\) (because \(p\mc{O}_{K}\) factors into a product of prime integral ideals and these are exactly the prime integral ideals above \(p\)), it follows that these representatives have finitely many prime factors. Altogether this means that there are finitely many representatives. Hence \(\Cl(K)\) is finite and so the class number \(h_{K}\) is too.
+      which proves the first statement.
+      
+      We now prove that the class group is finite. By the first statement, we can find a complete set of representatives for \(\Cl(K)\) consisting of integral ideals of bounded norm. Since the norm is multiplicative, the prime factors of these representatives have bounded norm as well. Moreover, the norm of a prime \(\mf{p}\) is \(p^{f_{p}(\mf{p})}\) where \(p\) is the prime below \(\mf{p}\). Whence there are only finitely many possible primes \(p\). As there are finitely many primes \(\mf{p}\) above any prime \(p\), it follows that these representatives have finitely many prime factors. Altogether this means that there are finitely many representatives. Hence \(\Cl(K)\) is finite and so the class number \(h_{K}\) is too.
     \end{proof}
 
-    We would like to obtain an explicit bound in \cref{equ:finitness_of_class_number} by making a choice for the set \(X\). To obtain a bound that is not too large, we need to ensure that the volume of \(X\) is large while the constant \(M\) is small. The following lemma dictates our choice of \(X\) and computes its volume:
+    Observe that the bound in the previous result is not explicit. To obtain an explicit bound, we need to make a choice for the compact convex symmetric set \(X\). In order for such a bound to be sharp, we need to ensure that the volume of \(X\) is large while the constant \(M\) is small. The following lemma dictates our choice of \(X\) and computes its volume:
 
     \begin{lemma}\label{lem:Minkowski_bound_lemma}
-      Suppose \(n\) is a positive integer and write \(n = r_{1}+2r_{2}\) for some nonnegative integers \(r_{1}\) and \(r_{2}\). Let \(X \subset \R^{n}\) to be the compact convex symmetric set given by
+      Suppose \(n\) is a positive integer and write \(n = r_{1}+2r_{2}\) for some nonnegative integers \(r_{1}\) and \(r_{2}\). Let \(X \subset \R^{n}\) be the compact convex symmetric set given by
       \[
-        X = \left\{\mathbf{x} \in \R^{n}:\sum_{1 \le i \le r_{1}}|x_{i}|+2\sum_{\substack{1 \le j \le r_{2} \\ j \equiv 1 \tmod{2}}}\sqrt{x_{r_{1}+j}^{2}+x_{r_{1}+j+1}^{2}} \le n\right\}.
+        X = \left\{(\mathbf{x}_{1},\mathbf{x}_{2}) \in \R^{n}:\sum_{i}|x_{i,1}|+2\sum_{j}\sqrt{x_{2j-1,2}^{2}+x_{2j,2}^{2}} \le n\right\}.
       \]
       Then
       \[
@@ -204,120 +205,99 @@
       \]
     \end{lemma}
     \begin{proof}
-      Making the change of variables \(x_{r_{1}+j} \mapsto u_{j}\sin(\t_{j})\) and \(x_{r_{1}+j+1} \mapsto u_{j}\cos(\t_{j})\) for all \(j\) gives
+      Making the change of variables \(x_{2j-1,2} \mapsto r_{j}\sin(\t_{j})\) and \(x_{2j,2} \mapsto r_{j}\cos(\t_{j})\) gives
       \[
-        \Vol(X) = \int_{X'}u_{1} \cdots u_{r_{2}}\,dx_{1} \cdots dx_{r_{1}}\,du_{1}\t_{1} \cdots du_{r_{2}}\t_{r_{2}},
+        \Vol(X) = \int_{X'}r_{1} \cdots r_{r_{2}}\,d\mathbf{x}_{1}\,d\mathbf{r}\,d\boldsymbol{\t},
+      \]
+      because the Jacobian determinant is \(r_{1} \cdots r_{r_{2}}\), and where
+      \[
+        X' = \left\{(\mathbf{x}_{1},\mathbf{r},\boldsymbol{\t}) \in \R^{r_{1}} \op B(0,n)^{r_{2}}:\sum_{i}|x_{i}|+2\sum_{j}r_{j} \le n\right\}.
+      \]
+      Making the change of variables \(r_{j} \mapsto \frac{r_{j}}{2}\) and using the facts that the integrand is symmetric in the \(x_{i}\) and independent of \(\t_{j}\) gives
+      \[
+        \Vol(X) = 2^{r_{1}}\left(\frac{\pi}{2}\right)^{r_{2}}\int_{X''}r_{1} \cdots r_{r_{2}}\,d\mathbf{x}_{1}\,d\mathbf{r},
       \]
       where
       \[
-        X' = \left\{(x_{1},\ldots,x_{r_{1}},u_{1},\t_{1},\ldots,u_{r_{2}},\t_{r_{2}}):\sum_{1 \le i \le r_{1}}|x_{i}|+2\sum_{1 \le j \le r_{2}}u_{j} \le n\right\}.
+        X'' = \left\{(\mathbf{x}_{1},\mathbf{r}) \in \R_{+}^{r_{1}} \op B(0,n)^{r_{2}}:\sum_{i}x_{i}+2\sum_{j}r_{j} \le n\right\}.
       \]
-      Since the integrand is independent of the \(\t_{j}\), we have
+      To compute the remaining integral, for nonnegative integers \(\ell\) and \(k\) and positive \(t\), let
       \[
-        \Vol(X) = (2\pi)^{r_{2}}\int_{X'}u_{1} \cdots u_{r_{2}}\,dx_{1} \cdots dx_{r_{1}}\,du_{1} \cdots du_{r_{2}}.
+        X''_{\ell,k}(t) = \left\{(\mathbf{x}_{1},\mathbf{r}) \in \R_{+}^{\ell} \op B(0,n)^{k}:\sum_{i}x_{i}+2\sum_{j}r_{j} \le n\right\},
       \]
-      Making the change of variables \(u_{j} \mapsto \frac{u_{j}}{2}\) for all \(j\) and using the fact that the integrand is symmetric in the \(x_{i}\) for all \(i\) gives
-      \begin{equation}\label{equ:Minkowski_bound_lemma_1}
-        \Vol(X) = 2^{r_{1}}\left(\frac{\pi}{2}\right)^{r_{2}}\int_{X''}u_{1} \cdots u_{r_{2}}\,dx_{1} \cdots dx_{r_{1}}\,du_{1} \cdots du_{r_{2}},
-      \end{equation}
-      where
+      and set
       \[
-        X'' = \left\{(x_{1},\ldots,x_{r_{1}},u_{1},\ldots,u_{r_{2}}):\sum_{1 \le i \le r_{1}}x_{i}+\sum_{1 \le j \le r_{2}}u_{j} \le n\right\}.
+        I_{\ell,k}(t) = \int_{X''_{\ell,k}(t)}r_{1} \cdots r_{\ell}\,d\mathbf{x}_{1}\,d\mathbf{r}.
       \]
-      To compute the remaining integral, for nonnegative integers \(\ell\) and \(k\) and \(t \ge 0\), we let
+      In this notation, we have
       \[
-        X''_{\ell,k}(t) = \left\{(x_{1},\ldots,x_{\ell},u_{1},\ldots,u_{k}):\sum_{1 \le i \le \ell}x_{i}+\sum_{1 \le j \le k}u_{j} \le t\right\},
+        \Vol(X) = 2^{r_{1}}\left(\frac{\pi}{2}\right)^{r_{2}}I_{r_{1},r_{2}}(n).
       \]
-      and set 
+      To compute the remaining integral, the change of variables \(x_{i} \mapsto tx_{i}\) and \(r_{j} \mapsto tr_{j}\) gives
       \[
-        I_{\ell,k}(t) = \int_{X''_{\ell,k}(t)}u_{1} \cdots u_{\ell}\,dx_{1} \cdots dx_{n}\,du_{1} \cdots du_{k}.
-      \]
-      Then we have to compute \(I_{r_{1},r_{2}}(n)\). To this end, the change of variables \(x_{i} \mapsto tx_{i}\) and \(u_{j} \mapsto tu_{j}\) for all \(i\) and \(j\) gives
-      \begin{equation}\label{equ:Minkowski_bound_lemma_2}
         I_{\ell,k}(t) = t^{\ell+2k}I_{\ell,k}(1).
-      \end{equation}
-      Now note that the condition
-      \[
-        \sum_{1 \le i \le \ell}x_{i}+\sum_{1 \le j \le k}u_{j} \le t,
       \]
-      is equivalent to
+      Whence
       \[
-        \sum_{1 \le i \le \ell-1}x_{i}+\sum_{1 \le j \le k}u_{j} \le t-x_{i}.
+        I_{\ell,k}(1) = \int_{0}^{1}(1-x_{\ell})^{\ell-1+2k}I_{\ell-1,k}(1)\,dx_{\ell} = \frac{1}{\ell+2k}I_{\ell-1,k}(1).
       \]
-      This fact together with the Fubini–Tonelli theorem and \cref{equ:Minkowski_bound_lemma_2} gives
+      Upon repeating this procedure \(\ell-1\) times results in
       \[
-        I_{\ell,k}(1) = \int_{0}^{1}I_{\ell-1,k}(1-x_{\ell})\,dx_{\ell} = \int_{0}^{1}(1-x_{\ell})^{\ell-1+2k}I_{\ell-1,k}(1)\,dx_{\ell} = \frac{1}{\ell+2k}I_{\ell-1,k}(1).
-      \]
-      Repeating this procedure \(\ell-1\) times results in
-      \begin{equation}\label{equ:Minkowski_bound_lemma_3}
         I_{\ell,k}(1) = \frac{1}{(\ell+2k) \cdots (2k+1)}I_{0,k}(1).
-      \end{equation}
-      Similarly, the condition
-      \[
-        \sum_{1 \le j \le k}u_{j} \le t,
       \]
-      is equivalent to
+      Similarly, we have
       \[
-        \sum_{1 \le j \le k-1}u_{j} \le t-u_{k}.
+        I_{0,k}(1) = \int_{0}^{1}r_{k}(1-r_{k})^{2k-2}I_{0,k-1}(1)\,dr_{k} = \frac{1}{2k}I_{0,k-1}(1),
       \]
-      This fact together with the Fubini–Tonelli theorem, \cref{equ:Minkowski_bound_lemma_2}, and \cref{prop:integral_reprepsentation_for_beta_function}, gives
+      because the latter integral is the beta function \(B(1,2k-1)\) (see \cref{sec:the_gamma_function}). Upon repeating this procedure \(k-1\) times results in
       \[
-        I_{0,k}(1) = \int_{0}^{1}u_{k}I_{0,k-1}(1-u_{k})\,du_{k} = \int_{0}^{1}u_{k}(1-u_{k})^{2k-2}I_{0,k-1}(1)\,du_{k} = B(1,2k-1)I_{0,k-1}(1) = \frac{1}{2k}I_{0,k-1}(1).
+        I_{0,k}(1) = \frac{1}{k!}.
       \]
-      Repeating this procedure \(k-1\) times results in
-      \begin{equation}\label{equ:Minkowski_bound_lemma_4}
-        I_{0,k}(1) = \frac{1}{k!},
-      \end{equation}
-      since \(I_{0,0}(1) = 1\). Combining \cref{equ:Minkowski_bound_lemma_2,equ:Minkowski_bound_lemma_3,equ:Minkowski_bound_lemma_4} we find that
+      Altogether, this means
       \[
-        I_{\ell,k}(t) = t^{\ell+2k}\frac{1}{(\ell+2k)!}.
+        I_{\ell,k}(t) = \frac{t^{\ell+2k}}{(\ell+2k)!},
       \]
-      In particular, \(I_{r_{1},r_{2}}(n) = \frac{n^{n}}{n!}\) and from \cref{equ:Minkowski_bound_lemma_1} we obtain
+      and therefore
       \[
-        \Vol(X) = \frac{n^{n}}{n!}2^{r_{1}}\left(\frac{\pi}{2}\right)^{r_{2}},
+        \Vol(X) = \frac{n^{n}}{n!}2^{r_{1}}\left(\frac{\pi}{2}\right)^{r_{2}}.
       \]
-      as desired.
     \end{proof}
 
-    Observe that the set \(X\) in \cref{lem:Minkowski_bound_lemma} just consists of those points in \(\R^{n}\) whose induced norm corresponding to the induced Minkowski inner product is at most \(n\) (recall \cref{prop:Minkowski_space_isomorphism}). We can now obtain an explicit bound in \cref{equ:finitness_of_class_number} known as the \textbf{Minkowski bound}\index{Minkowski bound}:
+    Observe that the compact convex symmetric set \(X\) consists of those points in \(\R^{n}\) whose norm corresponding to the inner product induced by the Minkowski inner product from \cref{prop:Minkowski_space_isomorphism} at most \(n\). We can now obtain an explicit bound known as the \textbf{Minkowski bound}\index{Minkowski bound}.
 
     \begin{theorem*}[Minkowski bound]
-      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then every ideal class contains an integral ideal \(\mf{a}\) satisfying
+      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then every ideal class of \(\Cl(K)\) is represented by an integral ideal \(\mf{a}\) satisfying
       \[
         \Norm_{K}(\mf{a}) \le \left(\frac{4}{\pi}\right)^{r_{2}}\frac{n!}{n^{n}}\sqrt{|\D_{K}|}.
       \]
     \end{theorem*}
     \begin{proof}
-      Let \(X\) be given by
-      \[
-        X = \left\{\mathbf{x} \in \R^{n}:\sum_{1 \le i \le r_{1}}|x_{i}|+2\sum_{\substack{1 \le j \le r_{2} \\ j \equiv 1 \tmod{2}}}\sqrt{x_{r_{1}+j}^{2}+x_{r_{1}+j+1}^{2}} \le n\right\}.
-      \]
-      Then \cref{equ:finitness_of_class_number,lem:Minkowski_bound_lemma} together show that every ideal class contains an integral ideal \(\mf{a}\) such that
+      \cref{equ:finitness_of_class_number,lem:Minkowski_bound_lemma} together show that every ideal class of \(\Cl(K)\) is represented by an integral ideal \(\mf{a}\) satisfying
       \[
         \Norm_{K}(\mf{a}) \le M\left(\frac{4}{\pi}\right)^{r_{2}}\frac{n!}{n^{n}}\sqrt{|\D_{K}|},
       \]
-      where \(M = \max_{\mathbf{x} \in X}\left(\prod_{1 \le \ell \le n}|x_{\ell}|\right)\). But for all \(\mathbf{x} \in X\), the arithmetic-geometric mean inequality gives
+      where \(M = \max_{\mathbf{x} \in X}\left(\prod_{i}|x_{}|\right)\). But for all \(\mathbf{x} \in X\), the arithmetic-geometric mean inequality implies
       \[
-        \left(\prod_{1 \le \ell \le n}|x_{\ell}|\right)^{\frac{1}{n}} \le \frac{1}{n}\sum_{1 \le \ell \le n}|x_{\ell}| \le 1,
+        \left(\prod_{i}|x_{i}|\right)^{\frac{1}{n}} \le 1,
       \]
-      where the second inequality holds by the definition of \(X\). Hence \(M \le 1\) and this completes the proof.
+      Whence \(M \le 1\) completing the proof.
     \end{proof}
 
-    As a corollary we can obtain a lower bound for the discriminant of a number field and show that every number field \(K\), other than \(\Q\), has at least one ramified prime in \(\mc{O}_{K}/\Z\):
+    As a corollary we can obtain a lower bound for the discriminant of a number field and show that every number field \(K\), other than \(\Q\), has at least one ramified prime.
 
     \begin{corollary}
       Let \(K\) be a number field of degree \(n\). Then
       \[
         |\D_{K}| \ge \left(\frac{\pi}{4}\right)^{\frac{n}{2}}\frac{n^{n}}{n!}.
       \]
-      In particular, there is at least one ramified prime in \(\mc{O}_{K}/\Z\) provided the degree of \(K\) is at least \(2\). 
+      In particular, there is at least one ramified prime of \(K\) provided the degree of \(K\) is at least \(2\). 
     \end{corollary}
     \begin{proof}
-      Since the norm of every integral ideal is at least \(1\), \(\pi < 4\), and \(r_{2}\) is at most \(n\), the desired inequality follows immediately from the Minkowski bound. Now suppose \(n \ge 2\). In the case \(n = 2\), the lower bound is larger than \(1\) so that \(|\D_{K}|\) is at least \(2\) for every quadratic number field. As \(n^{n} \ge n!\) for all \(n \ge 1\) (which easily follows by induction), \(\left(\frac{\pi}{4}\right)^{\frac{n}{2}}\frac{n^{n}}{n!}\) is an increasing function in \(n\). Therefore \(|\D_{K}| \ge 2\) for all \(n \ge 2\) so that \(|\D_{K}|\) has a prime divisor. This means at least one prime of \(K\) ramifies in \(\mc{O}_{K}/\Z\).
+      The inequality follows from the Minkowski bound since the norm of every integral ideal is at least \(1\) and \(r_{2}\) is at most \(n\). This proves the first statement. For the second statement, suppose \(n \ge 2\). In the case \(n = 2\), the lower bound is larger than \(1\) so that \(|\D_{K}|\) is at least \(2\). Whence \(|\D_{K}|\) has a prime divisor and so some prime above this divisor is a ramified prime of \(K\). Now suppose \(n \ge 3\). As \(n^{n} \ge n!\), \(\left(\frac{\pi}{4}\right)^{\frac{n}{2}}\frac{n^{n}}{n!}\) is an increasing function in \(n\). Therefore \(|\D_{K}| \ge 2\) and, as before, there is at least one ramified prime of \(K\) .
     \end{proof}
 
-    Generally speaking, the class number \(h_{K}\) is one of the most difficult pieces of arithmetic data about \(K\) to compute. For example, it is still unknown if there are infinitely many number fields of class number \(1\), that is, number fields such that their ring of integers are principal ideal domains.
-  \fi\section{\todo{Dirichlet's Unit Theorem}}\iffalse
+    Generally speaking, the class number of \(K\) is one of the most difficult pieces of arithmetic data about \(K\) to compute. For example, it is still unknown if there are infinitely many number fields of class number \(1\). That is to say, it is unknown if there are infinitely many number fields such that their ring of integers are principal ideal domains.
+  \section{\todo{Dirichlet's Unit Theorem}}\iffalse
     Let \(K\) be a number field of signature \((r_{1},r_{2})\). We define the \textbf{rank}\index{rank} \(r_{K}\) of \(K\) to be
     \[
       r_{K} = r_{1}+r_{2}-1.
