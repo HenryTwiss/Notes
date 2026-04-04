@@ -1,6 +1,6 @@
 \chapter{Geometry of Number Fields}
-  Throughout, all rings will be understood to be commutative and with unity. We will also use the theory of integral lattices in \cref{sec:integral_lattices}.
-  \section{\todo{Minkowski Space}}
+  Throughout, all rings will be understood to be commutative and with unity. We will also use the theory of integral lattices in \cref{sec:integral_lattices} and some results of the beta function is \cref{sec:the_gamma_function}.
+  \section{Minkowski Space}
     Let \(K\) be number field of degree \(n\). If \(\s \in \Hom_{\Q}(K,\conj{\Q})\) then either \(\s\) is real or complex and in the latter case it is has a paired \(\Q\)-embedding \(\conj{\s}\) which is the complex conjugate of \(\s\). Accordingly, let \(r_{1}\) and \(2r_{2}\) be the number of real and complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) respectively. We call the pair \((r_{1},r_{2})\) the \textbf{signature}\index{signature} of \(K\) and it satisfies the relation
     \[
       n = r_{1}+2r_{2}.
@@ -47,7 +47,7 @@
     \]
     So the compositions of the Minkowski trace and Minkowski norm with the canonical embedding produces the field trace and field norm.
     
-    To give a more explicit description of Minkowski space, let \(N_{\s} = 1,2\) according to if \(\s\) is real or complex respectively. Also let \(\rho\) and \(\t\) run over the real \(\Q\)-embeddings and a complete set of representatives for pairs of complex \(\Q\)-embeddings for \(\Hom_{\Q}(K,\conj{\Q})\). Note that \(N_{\rho} = 1\) and \(N_{\tau} = 2\). Then
+    To give a more explicit description of Minkowski space, let \(N_{\s} = 1,2\) according to if \(\s\) is real or complex respectively. Also let \(\rho\) and \(\tau\) run over the real \(\Q\)-embeddings and a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) respectively. Note that \(N_{\rho} = 1\) and \(N_{\tau} = 2\). Then
     \[
       K_{\R} = \{\mathbf{z} \in K_{\C}:\Im(z_{\rho}) = 0 \text{ and } z_{\conj{\tau}} = \conj{z_{\tau}} \text{ for all } \rho \text{ and } \tau\}.
     \]
@@ -90,14 +90,14 @@
 
     In view of this result, we define the \textbf{Minkowski embedding}\index{Minkowski embedding} \(\s_{K}\) of \(K\) by
     \[
-      \s_{K}:K \to \R^{n} \qquad \k \mapsto (\rho(\k))_{\rho} \op (\Re(\tau(\k)),\Im(\tau(\k)))_{\tau},
+      \s_{K}:K \to \R^{n} \qquad \k \mapsto (\rho(\k))_{\rho} \op (\Re(\tau(\k)),\Im(\tau(\k)))_{\tau}.
     \]
     Note that the Minkowski embedding is a \(\Q\)-embedding of \(K\) into \(\R^{n}\) as it is the composition of the canonical embedding and the isomorphism established in the previous result.
     
     We have now constructed Minkowski space and determined its dimension as a real vector space. Our goal now is to pass from \(\Z\)-lattices of \(K\) to integral lattices of Minkowski space. Being an inner product space, this will permit us to measure fractional ideals of \(K\) geometrically via their images inside Minkowski space. As \(j\) is a \(\Q\)-embedding and any fractional ideal \(\mf{f}\) of \(K\) is a complete \(\Z\)-lattice of \(K\), \(j(\mf{f})\) is a complete integral lattice of \(K_{\R}\). The covolume \(V_{j(\mf{f})}\) of \(j(\mf{f})\) is easily determined.
 
     \begin{proposition}\label{prop:covolume_of_fractional_ideal_under_j}
-      Let \(K\) be a number field with signature \((r_{1},r_{2})\). Then \(V_{j(\mf{f})}\) is the absolute value of the determinant of any embedding matrix for \(\mf{f}\). In particular,
+      Let \(K\) be a number field with signature \((r_{1},r_{2})\) and let \(\mf{f}\) be a fractional ideal of \(K\). Then \(V_{j(\mf{f})}\) is the absolute value of the determinant of any embedding matrix of a basis for \(K/\Q\) contained in \(\mf{f}\). In particular,
       \[
         V_{j(\mf{f})} = \Norm_{K}(\mf{f})\sqrt{|\D_{K}|},
       \]
@@ -107,8 +107,7 @@
       \]
     \end{proposition}
     \begin{proof}
-      Upon writing \(\mf{f} = \frac{1}{d}\mf{a}\) for some nonzero \(d \in \Z\) and integral ideal \(\mf{a}\) and \cref{prop:norm_and_field_norms_are_identical}, it suffices to prove the statements for an integral ideal \(\mf{a}\).
-      As \(\mf{a}\) is complete, let \(\k_{1},\ldots,\k_{n}\) be a basis for \(L/K\) contained in \(\mf{a}\). Also let \(\s_{1},\ldots,\s_{n}\) be the elements of \(\Hom_{\Q}(K,\conj{\Q})\). Then the associated generator matrix for \(j(\mf{a})\) is the embedding matrix \(M(\k_{1},\ldots,\k_{n})\). Hence
+      Upon writing \(\mf{f} = \frac{1}{d}\mf{a}\) for some nonzero \(d \in \Z\) and integral ideal \(\mf{a}\) and \cref{prop:norm_and_field_norms_are_identical}, it suffices to prove the statements for the integral ideal \(\mf{a}\). Let \(\k_{1},\ldots,\k_{n}\) be a basis for \(K/\Q\) contained in \(\mf{a}\). Then the associated generator matrix for \(j(\mf{a})\) is the embedding matrix \(M(\k_{1},\ldots,\k_{n})\). Hence
       \[
         V_{j(\mf{a})} = |\det(M(\k_{1},\ldots,\k_{n}))|,
       \]
@@ -116,7 +115,7 @@
       \[
         |\det(M(\k_{1},\ldots,\k_{n}))| = \Norm_{K}(\mf{a})|\det(M(\a_{1},\ldots,\a_{n}))|,
       \]
-      for any integral basis \(\a_{1},\ldots,\a_{n}\) for \(K\). Note that \(\k_{1},\ldots,\k_{n}\) is necessarily a basis for \(\mf{a}\) as a free \(\Z\)-module by \cref{thm:integral_basis_AKBL} and write
+      for any integral basis \(\a_{1},\ldots,\a_{n}\) for \(K/\Q\). Note that \(\k_{1},\ldots,\k_{n}\) is necessarily a basis for \(\mf{a}\) as a free \(\Z\)-module by \cref{thm:integral_basis_AKBL} and write
       \[
         \k_{i} = \sum_{j}a_{i,j}\a_{j},
       \]
@@ -131,54 +130,53 @@
       as claimed. The second identity follows from the first upon taking \(\mf{f} = \mc{O}_{K}\).
     \end{proof}
     
-    \iffalse
-    Now as \(\s_{K}\) is also a \(\Q\)-embedding, \(\s_{K}(\mf{f})\) is a complete lattice in \(\R^{n}\). As a corollary of \cref{prop:covolume_of_fractional_ideal_under_j}, we can determine the covolume of \(\s_{K}(\mf{f})\):
+    As \(\s_{K}\) is also a \(\Q\)-embedding, \(\s_{K}(\mf{f})\) is a complete integral lattice in \(\R^{n}\). As a corollary of the previous result, we can determine the covolume of \(V_{\s_{K}(\mf{f})}\) of \(\s_{K}(\mf{f})\) as well.
     
     \begin{corollary}\label{cor:covolume_of_fractional_ideal_under_canonical_embedding}
-      Let \(K\) be a number field with signature \((r_{1},r_{2})\). Then
+      Let \(K\) be a number field with signature \((r_{1},r_{2})\) and let \(\mf{f}\) be a fractional ideal of \(K\). Then
       \[
-        V_{\s_{K}(\mf{f})} = \Norm_{K}(\mf{f})\frac{\sqrt{|\D_{K}|}}{2^{r_{2}}}.
+        V_{\s_{K}(\mf{f})} = \Norm_{K}(\mf{f})\frac{\sqrt{|\D_{K}|}}{2^{r_{2}}},
       \]
-      In particular,
+      and
       \[
         V_{\s_{K}(\mc{O}_{K})} = \frac{\sqrt{|\D_{K}|}}{2^{r_{2}}}.
       \]
     \end{corollary}
     \begin{proof}
-      The second statement follows from the first by taking \(\mf{f} = \mc{O}_{K}\) so it suffices to prove the first statement. Let \(\k_{1},\ldots,\k_{n}\) be a basis for \(\mf{f}\), \(\rho_{1},\ldots,\rho_{r_{1}}\) be the real \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\), and \(\tau_{1},\ldots,\tau_{r_{2}}\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\). Then the associated generator matrix \(P\) for \(\s_{K}(\mf{f})\) is
+      Let \(\k_{1},\ldots,\k_{n}\) be a basis for \(K/\Q\) contained in \(\mf{f}\). Also let \(\rho_{1},\ldots,\rho_{r_{1}}\) and \(\tau_{1},\ldots,\tau_{r_{2}}\) run over the real \(\Q\)-embeddings and a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) respectively. Then the associated generator matrix for \(\s_{K}(\mf{f})\) is
       \[
-        P = \begin{pmatrix} \rho_{1}(\k_{1}) & \cdots & \rho_{r_{1}}(\k_{1}) & \Re(\tau_{1}(\k_{1})) & \Im(\tau_{1}(\k_{1})) & \cdots & \Re(\tau_{r_{2}}(\k_{1})) & \Im(\tau_{r_{2}}(\k_{1})) \\ \vdots & & \vdots & \vdots & \vdots & & \vdots & \vdots \\ \rho_{1}(\k_{n}) & \cdots & \rho_{r_{1}}(\k_{n}) & \Re(\tau_{1}(\k_{n})) & \Im(\tau_{1}(\k_{n})) & \cdots & \Re(\tau_{r_{2}}(\k_{n})) & \Im(\tau_{r_{2}}(\k_{n})) \end{pmatrix}^{t}.
+        \begin{pmatrix} \rho_{1}(\k_{1}) & \cdots & \rho_{r_{1}}(\k_{1}) & \Re(\tau_{1}(\k_{1})) & \Im(\tau_{1}(\k_{1})) & \cdots & \Re(\tau_{r_{2}}(\k_{1})) & \Im(\tau_{r_{2}}(\k_{1})) \\ \vdots & & \vdots & \vdots & \vdots & & \vdots & \vdots \\ \rho_{1}(\k_{n}) & \cdots & \rho_{r_{1}}(\k_{n}) & \Re(\tau_{1}(\k_{n})) & \Im(\tau_{1}(\k_{n})) & \cdots & \Re(\tau_{r_{2}}(\k_{n})) & \Im(\tau_{r_{2}}(\k_{n})) \end{pmatrix}^{t}.
       \]
-      By \cref{prop:covolume_of_fractional_ideal_under_j} we are done if the absolute value of the determinant of this matrix is \(2^{-r_{2}}\) times the determinate of an embedding matrix for \(\mf{f}\). To show this, first add an \(i\) multiple of the imaginary columns to their corresponding real columns and then apply the identity \(\Im(z) = \frac{z-\conj{z}}{2i}\) to the imaginary columns to obtain
+      By \cref{prop:covolume_of_fractional_ideal_under_j} we are done if the absolute value of the determinant of this matrix is \(\frac{1}{2^{r_{2}}}\) times the absolute value of the determinate of the embedding matrix for \(\k_{1},\ldots,\k_{n}\). To show this, first add an \(i\) multiple of the imaginary columns to their corresponding real columns and then apply the identity \(\Im(z) = \frac{z-\conj{z}}{2i}\) to the imaginary columns. We obtain the matrix
       \[
-        P' = \begin{pmatrix} \rho_{1}(\k_{1}) & \cdots & \rho_{r_{1}}(\k_{1}) & \tau_{1}(\k_{1}) & \frac{\tau_{1}(\k_{1})-\conj{\tau_{1}}(\k_{1})}{2i} & \cdots & \tau_{r_{2}}(\k_{1}) & \frac{\tau_{r_{2}}(\k_{1})-\conj{\tau_{r_{2}}}(\k_{1})}{2i} \\ \vdots & & \vdots & \vdots & \vdots & & \vdots & \vdots \\ \rho_{1}(\k_{n}) & \cdots & \rho_{r_{1}}(\k_{n}) & \tau_{1}(\k_{n}) & \frac{\tau_{1}(\k_{n})-\conj{\tau_{1}}(\k_{n})}{2i} & \cdots & \tau_{r_{2}}(\k_{n}) & \frac{\tau_{r_{2}}(\k_{n})-\conj{\tau_{r_{2}}}(\k_{n})}{2i} \end{pmatrix}^{t}.
+        \begin{pmatrix} \rho_{1}(\k_{1}) & \cdots & \rho_{r_{1}}(\k_{1}) & \tau_{1}(\k_{1}) & \frac{\tau_{1}(\k_{1})-\conj{\tau_{1}}(\k_{1})}{2i} & \cdots & \tau_{r_{2}}(\k_{1}) & \frac{\tau_{r_{2}}(\k_{1})-\conj{\tau_{r_{2}}}(\k_{1})}{2i} \\ \vdots & & \vdots & \vdots & \vdots & & \vdots & \vdots \\ \rho_{1}(\k_{n}) & \cdots & \rho_{r_{1}}(\k_{n}) & \tau_{1}(\k_{n}) & \frac{\tau_{1}(\k_{n})-\conj{\tau_{1}}(\k_{n})}{2i} & \cdots & \tau_{r_{2}}(\k_{n}) & \frac{\tau_{r_{2}}(\k_{n})-\conj{\tau_{r_{2}}}(\k_{n})}{2i} \end{pmatrix}^{t},
       \]
-      Since \(P'\) differs from \(P\) by column addition, their determinants are the same. Multiplying the imaginary columns of \(P'\) by \(-2i\) and then adding the corresponding columns to annihilate the negative terms results in
+      which has the same determinant as the generator matrix. Now multiply the imaginary columns by \(-2i\) and then adding the preceding columns to annihilate the negative terms. This results in the matrix
       \[
-        P'' = \begin{pmatrix} \rho_{1}(\k_{1}) & \cdots & \rho_{r_{1}}(\k_{1}) & \tau_{1}(\k_{1}) &\conj{\tau_{1}}(\k_{1}) & \cdots & \tau_{r_{2}}(\k_{1}) & \conj{\tau_{r_{2}}}(\k_{1}) \\ \vdots & & \vdots & \vdots & \vdots & & \vdots & \vdots \\ \rho_{1}(\k_{n}) & \cdots & \rho_{r_{1}}(\k_{n}) & \tau_{1}(\k_{n}) & \conj{\tau_{1}}(\k_{n}) & \cdots & \tau_{r_{2}}(\k_{n}) & \conj{\tau_{r_{2}}}(\k_{n}) \end{pmatrix}^{t}.
+        \begin{pmatrix} \rho_{1}(\k_{1}) & \cdots & \rho_{r_{1}}(\k_{1}) & \tau_{1}(\k_{1}) &\conj{\tau_{1}}(\k_{1}) & \cdots & \tau_{r_{2}}(\k_{1}) & \conj{\tau_{r_{2}}}(\k_{1}) \\ \vdots & & \vdots & \vdots & \vdots & & \vdots & \vdots \\ \rho_{1}(\k_{n}) & \cdots & \rho_{r_{1}}(\k_{n}) & \tau_{1}(\k_{n}) & \conj{\tau_{1}}(\k_{n}) & \cdots & \tau_{r_{2}}(\k_{n}) & \conj{\tau_{r_{2}}}(\k_{n}) \end{pmatrix}^{t},
       \]
-      As \(P''\) differs from \(P'\) by column addition and column scaling of which there were \(r_{2}\) many of factor \(-2i\), the determinant of \(P''\) is \((-2i)^{-r_{2}}\) that of \(P'\). Altogether,
+      whose determinant is \((-2i)^{-r_{2}}\) that of the generator matrix. But this latter matrix is the embedding \(M(\k_{1},\ldots,\k_{n})\). Whence
       \[
-        V_{\mf{f}} = |\det(P)| = |\det(P')| = |(-2i)^{-r_{2}}\det(P'')| = 2^{-r_{2}}|\det(P'')|.
+        V_{\s_{K}(\mf{f})} = \frac{|\det(M(\k_{1},\ldots,\k_{n}))|}{2^{r_{2}}}.
       \]
-      Since the complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) occur in conjugate pairs and \(\k_{1},\ldots,\k_{n}\) is a basis for \(K\), we see that \(P'' = M(\k_{1},\ldots,\k_{n})\) is an embedding matrix for \(\mf{f}\).
     \end{proof}
-  \fi\section{\todo{Finiteness of the Class Number}}\iffalse
-    Recall that the class number \(h_{K}\) is a measure of how much the ring of integers \(\mc{O}_{K}\) fails to be a principal ideal domain. From \cref{rem:general_class_number_not_finite}, the class number of an arbitrary Dedekind domain need not be finite. However, we will show that the class number \(h_{K}\) for a number field \(K\) is always finite and thus \(\mc{O}_{K}\) only has finite failure from being a principal ideal domain:
+  \section{\todo{Finiteness of the Class Number}}
+    Recall that the class number of a Dedekind domain is a measure of how much the Dedekind domain fails to be a principal ideal domain and even need not be finite from \cref{rem:general_class_number_not_finite}. However, we will show that the class number \(h_{K}\) for a number field \(K\) is always finite and thus \(\mc{O}_{K}\) only has finite failure from being a principal ideal domain. In doing so, we will also show that every ideal class contains an integral ideal of bounded norm.
 
     \begin{theorem}\label{equ:finitness_of_class_number}
-      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Also, let \(X \subseteq \R^{n}\) be a compact convex symmetric set and set \(M = \max_{\mathbf{x} \in X}\left(\prod_{1 \le i \le n}|x_{i}|\right)\). Then every ideal class contains an integral ideal \(\mf{a}\) satisfying
+      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Also, let \(X \subseteq \R^{n}\) be a compact convex symmetric set and set \(M = \max_{\mathbf{x} \in X}\left(\prod_{i}|x_{i}|\right)\). Then every ideal class contains an integral ideal \(\mf{a}\) satisfying
       \[
         \Norm_{K}(\mf{a}) \le \frac{2^{r_{1}+r_{2}}M}{\Vol(X)}\sqrt{|\D_{K}|}.
       \]
-      Moreover, the ideal class group \(\Cl(K)\) is finite so that the class number \(h_{K}\) is too.
+      Moreover, the class number \(h_{K}\) is finite which is to say the ideal class group \(\Cl(K)\) is.
     \end{theorem}
+    \iffalse
     \begin{proof}
-      Let \(\mf{f}\) be a fractional ideal, and set
+      Let \(\mf{f}\) be a fractional ideal, \(n\) be a positive integer, and set
       \[
-        \l^{n} = 2^{n}\frac{V_{\s_{K}(\mf{f}^{-1})}}{\Vol(X)},
+        \l^{n} = 2^{n}\frac{V_{\s_{K}(\mf{f}^{-1})}}{\Vol(X)}.
       \]
-      for any \(n \ge 1\). Then by construction,
+      Then by construction,
       \[
         \Vol(\l X) = \l^{n}\Vol(X) = 2^{n}V_{\s_{K}(\mf{f}^{-1})}.
       \]
