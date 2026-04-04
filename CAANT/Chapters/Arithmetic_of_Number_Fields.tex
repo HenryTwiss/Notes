@@ -1433,15 +1433,15 @@
     for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{q}_{\smc{O}}\) is a prime and thus one of the \(\mf{p}_{i}\). In view of the previous result, this means that only finitely many primes of \(\smc{O}\) are irregular and they are exactly the primes which are not invertible. Moreover, there is exactly one prime of \(\conj{\smc{O}}\) above each of these primes and they are the exactly the prime factors of \(\mf{q}_{\smc{O}}\) in \(\conj{\smc{O}}\). This is a concrete description of the failure to which \(\smc{O}\) is not integrally closed in terms of the conductor \(\mf{q}_{\smc{O}}\).
 
     \subsection*{Number Fields}
-      We now turn to the setting of an extension of number fields \(L/K\). Then the most natural orders \(\mc{O}\) to consider are finitely generated \(\mc{O}_{K}\)-modules contained inside \(\mc{O}_{L}\). Such an order is of the form
+      We now turn to the setting of a number field \(K\) of degree \(n\). An \textbf{order}\index{order} \(\smc{O}\) of \(K\) is an order satisfying
       \[
-        \mc{O} = \mc{O}_{K}[\a_{1},\ldots,\a_{n}],
+        \Z \subseteq \smc{O} \subseteq \mc{O}_{K},
       \]
-      with \(\a_{i} \in \mc{O}_{L}\) and necessarily satisfies
+      and whose normalization is \(\mc{O}_{K}\). Accordingly, \(\mc{O}_{K}\) is called the \textbf{maximal order}\index{maxiaml order} of \(K\). Clearly it is the largest order of \(K\). As the normalization of \(\smc{O}\) is \(O_{K}\), the field of fractions of \(\smc{O}\) is necessarily \(K\). In fact, \(\smc{O}\) contains a basis for \(K/\Q\). To see this, let \(\k_{1},\ldots,\k_{n}\) be a basis for \(K/\Q\) and write
       \[
-        \mc{O}_{K} \subseteq \mc{O} \subseteq \mc{O}_{L}.
+        k_{i} = \frac{\a_{i}}{\d_{i}},
       \]
-      However, with this generality the normalization of \(\mc{O}\) need not be \(\mc{O}_{L}\). Therefore we usually only consider orders \(\mc{O}\) whose normalization is \(\mc{O}_{L}\). For example, this always occurs if \(\a_{1},\ldots,\a_{n}\) is a basis for \(L/K\) as \(L\) is the field of fractions of \(\mc{O}_{L}\).
+      for \(\a_{i},\d_{i} \in \smc{O}\) with \(\d_{i}\) nonzero. Then \(\d = \prod_{i}\d_{i}\) is nonzero and we find that \(\d\k_{1},\ldots,\d\k_{n}\) is a basis for \(K/\Q\) contained in \(\smc{O}\).
   \section{Prime Splitting}
     Suppose \(\mc{O}/\smc{O}\) is a Dedekind extension of a finite separable extension \(L/K\). Let \(\mf{P}\) be a prime of \(\mc{O}\) above a prime \(\mf{p}\) of \(\smc{O}\). The \textbf{ramification index}\index{ramification index} \(e_{\mf{p}}(\mf{P})\) of \(\mf{P}\) relative to \(\mf{p}\) is defined to be the power of \(\mf{P}\) appearing in the prime factorization of \(\mf{p}\mc{O}\). If \(\mf{p}\mc{O}\) has prime factors \(\mf{P}_{1},\ldots,\mf{P}_{r}\) then the prime factorization of \(\mf{p}\mc{O}\) is
     \[
