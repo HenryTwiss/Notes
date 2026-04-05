@@ -231,7 +231,7 @@
     Now knowing that the gamma function has no zeros, we can use the beta function to prove an important multiplicativity property of the gamma function. This is known as \textit{Legendre's duplication formula}:
 
     \begin{theorem*}[Legendre's duplication formula]
-      For any \(s \in \C-\Z_{\le 0}\), we have
+      For any \(s \in \C-\Z_{0-}\), we have
       \[
         \G(s)\G\left(s+\frac{1}{2}\right) = 2^{1-2s}\sqrt{\pi}\G(2s).
       \]
@@ -276,7 +276,7 @@
     provided \(x > 0\), and that \(\left(\frac{x}{n}+1\right)^{n}\) is monotonically increasing in \(n\). We first prove the following lemma:
 
     \begin{lemma}\label{lem:Hadamard_factorization_of_gamma_function_lemma}
-      For any \(s \in \C-\Z_{\le 0}\), we have
+      For any \(s \in \C-\Z_{0-}\), we have
       \[
         \lim_{n \to \infty}\frac{n^{-s}\G(s+n)}{\G(n)} = 1.
       \]
@@ -316,7 +316,7 @@
     The Hadamard factorization is the following:
 
     \begin{theorem}\label{thm:Hadamard_factorization_for_reciprocal_of_gamma}
-      For any \(s \in \C-\Z_{\le 0}\), we have
+      For any \(s \in \C-\Z_{0-}\), we have
       \[
         \frac{1}{\G(s)} = se^{\g s}\prod_{n \ge 1}\left(1+\frac{s}{n}\right)e^{-\frac{s}{n}},
       \]
@@ -516,7 +516,7 @@
     In similar spirit, we may take the logarithmic derivative of the Hadamard factorization of the reciprocal of the gamma function to obtain a summation formula for the digamma function.
 
     \begin{corollary}\label{cor:logarithmic_derivative_of_gamma}
-      For all \(s \in \C-\Z_{\le 0}\), we have
+      For all \(s \in \C-\Z_{0-}\), we have
       \[
         \frac{\G'}{\G}(s+1) = -\g+\sum_{n \ge 1}\left(\frac{1}{n}-\frac{1}{s+n}\right),
       \]

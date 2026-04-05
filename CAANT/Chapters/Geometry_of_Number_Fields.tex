@@ -211,7 +211,7 @@
       \]
       because the Jacobian determinant is \(r_{1} \cdots r_{r_{2}}\), and where
       \[
-        X' = \left\{(\mathbf{x}_{1},\mathbf{r},\boldsymbol{\t}) \in \R^{r_{1}} \op B(0,n)^{r_{2}}:\sum_{i}|x_{i}|+2\sum_{j}r_{j} \le n\right\}.
+        X' = \left\{(\mathbf{x}_{1},\mathbf{r},\boldsymbol{\t}) \in [-n,n]^{r_{1}} \op [0,n]^{r_{2}} \op [0,2\pi]^{r_{2}}:\sum_{i}|x_{i}|+2\sum_{j}r_{j} \le n\right\}.
       \]
       Making the change of variables \(r_{j} \mapsto \frac{r_{j}}{2}\) and using the facts that the integrand is symmetric in the \(x_{i}\) and independent of \(\t_{j}\) gives
       \[
@@ -219,13 +219,13 @@
       \]
       where
       \[
-        X'' = \left\{(\mathbf{x}_{1},\mathbf{r}) \in \R_{+}^{r_{1}} \op B(0,n)^{r_{2}}:\sum_{i}x_{i}+2\sum_{j}r_{j} \le n\right\}.
+        X'' = \left\{(\mathbf{x}_{1},\mathbf{r}) \in [0,n]^{r_{1}+r_{2}}:\sum_{i}x_{i}+2\sum_{j}r_{j} \le n\right\}.
       \]
       To compute the remaining integral, for nonnegative integers \(\ell\) and \(k\) and positive \(t\), let
       \[
-        X''_{\ell,k}(t) = \left\{(\mathbf{x}_{1},\mathbf{r}) \in \R_{+}^{\ell} \op B(0,n)^{k}:\sum_{i}x_{i}+2\sum_{j}r_{j} \le n\right\},
+        X''_{\ell,k}(t) = \left\{(\mathbf{x}_{1},\mathbf{r}) \in [0,t]^{\ell+k}:\sum_{i}x_{i}+2\sum_{j}r_{j} \le t\right\},
       \]
-      and set
+      and define
       \[
         I_{\ell,k}(t) = \int_{X''_{\ell,k}(t)}r_{1} \cdots r_{\ell}\,d\mathbf{x}_{1}\,d\mathbf{r}.
       \]
