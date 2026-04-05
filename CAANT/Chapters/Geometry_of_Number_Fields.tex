@@ -21,7 +21,7 @@
     \[
       \Trace_{K_{\C}}(j(\k)) = \Trace_{K}(\k) \quad \text{and} \quad \Norm_{K_{\C}}(j(\k)) = \Norm_{K}(\k),
     \]
-    which is to say that the compositions of the trace and norm of \(K_{\C}/\C\) with the canonical embedding produces the field trace and field norm. Our primary aim is to construct an \(\R\)-subalgebra of \(K_{\C}\) which corrects for the fact that the complex \(\Q\)-embeddings come in pairs. To this end, consider the conjugation map
+    which is to say that the compositions of the trace and norm of \(K_{\C}/\C\) with the canonical embedding produces the field trace and field norm. Our primary aim is to construct an \(\R\)-subalgebra of \(K_{\C}\) which corrects for the fact that the complex \(\Q\)-embeddings come in pairs. To this end, consider the complex conjugation map
     \[
       F:\C \to \C \qquad z \mapsto \conj{z}.
     \]
@@ -297,20 +297,22 @@
     \end{proof}
 
     Generally speaking, the class number of \(K\) is one of the most difficult pieces of arithmetic data about \(K\) to compute. For example, it is still unknown if there are infinitely many number fields of class number \(1\). That is to say, it is unknown if there are infinitely many number fields such that their ring of integers are principal ideal domains.
-  \section{\todo{Dirichlet's Unit Theorem}}\iffalse
-    Let \(K\) be a number field of signature \((r_{1},r_{2})\). We define the \textbf{rank}\index{rank} \(r_{K}\) of \(K\) to be
+  \section{\todo{Dirichlet's Unit Theorem}}
+    Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). We define the \textbf{rank}\index{rank} \(r_{K}\) of \(K\) by
     \[
       r_{K} = r_{1}+r_{2}-1.
     \]
-    This will be an important in the following. Another very important piece of arithmetic data about \(K\) is the structure of the unit group \(\mc{O}_{K}^{\ast}\). Note that \(\mc{O}_{K}^{\ast}\) is closed under conjugation because \(\Norm_{K}(\a) = \Norm_{K}(\conj{\a})\) as a consequence of \cref{prop:formulas_for_trace_and_norm}. Moreover, since the norm of a unit is \(\pm1\), we can express the unit group as
+    The rank of \(K\) is intimately related to the structure of the unit group \(\mc{O}_{K}^{\ast}\). Observe that we can express the unit group as
     \[
-      \mc{O}_{K}^{\ast} = \{\e \in \mc{O}_{K}:\Norm_{K}(\e) = \pm 1\}.
+      \mc{O}_{K}^{\ast} = \{\a \in \mc{O}_{K}:\Norm_{K}(\a) = \pm 1\}.
     \]
-    Our main goal will be to describe the group structure of \(\mc{O}_{K}^{\ast}\) completely. Let \(\W\) denote the group of all roots of unity. We will set \(\mu(K) = \mc{O}_{K}^{\ast} \cap \W\) so that \(\mu(K)\) is the subgroup of \(\mc{O}_{K}^{\ast}\) consisting of all of the roots of unity in \(K\). Clearly \(\{\pm 1\} \subseteq \mu(K)\). In fact, \(\mu(K)\) is finite since any root of unity in \(K\) is a root of \(x^{n}-1\) and thus an \(n\)-th root of unity. We set
+    Our main goal will be to describe the group structure of \(\mc{O}_{K}^{\ast}\) completely. Let \(\mu(K)\) be the subgroup of \(K^{\ast}\) consisting of all the roots of unity in \(K\). As any \(m\)-th root of unity is a root of \(x^{m}-1\), it follows that roots of unity are algebraic integers. Whence \(\mu(K)\) is a subgroup of \(\mc{O}_{K}^{\ast}\). Clearly \(\{\pm 1\} \subseteq \mu(K)\). In fact, \(\mu(K)\) always is finite. To see this, let \(\w \in \mu(K)\) and recall that any root of unity is a primitive root of unity of some, potentially smaller, order. So we may assume \(\w\) is a primitive \(m\)-th root of unity. The minimal polynomial of \(\w\) over \(\Q\) is the \(m\)-th cyclotomic polynomial \(\Phi_{m}(x)\) which has degree \(\vphi(m)\). Whence \(\vphi(m) \le n\). Since \(\vphi(m) \to \infty\) as \(m \to \infty\), there can only be finitely many such \(\w\). This means \(\mu(K)\) is finite. Accordingly, set
     \[
       w_{K} = |\mu(K)|.
     \]
-    Our goal will be to show that \(\mc{O}_{K}^{\ast}\) is a direct product of \(\mu(K)\) and a free abelian group of rank \(r_{K}\). Determining that the rank of the free group is exactly \(r_{K}\) will be the most difficult part of the proof. We will require a map on \(K^{\ast}\) that transitions between the field trace and the field norm. Let \(\rho_{1},\ldots,\rho_{r_{1}}\) be the real \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) and \(\tau_{1},\ldots,\tau_{r_{2}}\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\). First consider the map
+    Our primary aim will be to show that \(\mc{O}_{K}^{\ast}\) is a direct product of \(\mu(K)\) and a free abelian group of rank \(r_{K}\). Determining that the rank of the free abelian group is exactly \(r_{K}\) will be the most difficult part of the argument. To accomplish this, we will require a map on \(K^{\ast}\) that transitions between the field trace and the field norm. 
+    
+    \iffalse To define this map, let \(\rho_{1},\ldots,\rho_{r_{1}}\) be the real \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) and \(\tau_{1},\ldots,\tau_{r_{2}}\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\). First consider the map
     \[
       \ell:K_{\R}^{\ast} \to \R^{r_{K}+1} \qquad (z_{\s})_{\s} \mapsto (\log|z_{\rho_{1}}|,\ldots,\log|z_{\rho_{r_{1}}}|,2\log|z_{\tau_{1}}|,\ldots,2\log|z_{\tau_{r_{2}}}|).
     \]
@@ -477,4 +479,6 @@
       \begin{pmatrix} \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & & \vdots \\ \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1}  \end{pmatrix}.
     \]
     We call \(R_{K}\) the \textbf{regulator}\index{regulator} of \(K\). Since \(V_{\L}\) is independent of the choice of basis, the regulator \(R_{K}\) is independent of any choice of a system of fundamental units for \(K\). Moreover, since \(H\) is a real inner product space we see that the regulator is roughly a measure of the density of the fundamental units in \(K\) (recall \cref{prop:covolume_equals_volume_of_fundamental_domain}). The smaller the regulator the more dense the fundamental units are.
-  \fi
+
+
+    \fi
