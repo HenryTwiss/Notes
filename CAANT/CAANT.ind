@@ -28,7 +28,7 @@
 
   \indexspace
 
-  \item canonical embedding, \hyperpage{92}
+  \item canonical embedding, \hyperpage{91}
   \item central point, \hyperpage{123}
   \item central value, \hyperpage{135}
   \item central value estimate, \hyperpage{135}
@@ -64,11 +64,11 @@
   \item Dirichlet orthogonality relations, \hyperpage{8}
   \item Dirichlet series, \hyperpage{103}
   \item discrete valuation ring, \hyperpage{55}
-  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{86}, 
+  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{85}, 
 		\hyperpage{90}
   \item divides, \hyperpage{42}
   \item divisor function, \hyperpage{3}
-  \item dual, \hyperpage{84}
+  \item dual, \hyperpage{83}
 
   \indexspace
 
@@ -132,19 +132,20 @@
   \item local, \hyperpage{51}, \hyperpage{56}
   \item localization, \hyperpage{50, 51}, \hyperpage{54, 55}
   \item logarithm, \hyperpage{3}
+  \item logarithmic embedding, \hyperpage{100}
 
   \indexspace
 
   \item M\"obius function, \hyperpage{3}
   \item M\"obius inversion, \hyperpage{5}
   \item maxiaml order, \hyperpage{66}
-  \item Minkowski bound, \hyperpage{99}
-  \item Minkowski embedding, \hyperpage{94}
-  \item Minkowski inner product, \hyperpage{93}
-  \item Minkowski measure, \hyperpage{93}
-  \item Minkowski norm, \hyperpage{93}
-  \item Minkowski space, \hyperpage{93}
-  \item Minkowski trace, \hyperpage{93}
+  \item Minkowski bound, \hyperpage{98}
+  \item Minkowski embedding, \hyperpage{93}
+  \item Minkowski inner product, \hyperpage{92}
+  \item Minkowski measure, \hyperpage{92}
+  \item Minkowski norm, \hyperpage{92}
+  \item Minkowski space, \hyperpage{92}
+  \item Minkowski trace, \hyperpage{92}
   \item modulus, \hyperpage{7}
   \item monogenic, \hyperpage{37, 38}
   \item multiplicative, \hyperpage{2}, \hyperpage{50}
@@ -154,6 +155,7 @@
   \item nonsplit, \hyperpage{69}, \hyperpage{75, 76}
   \item nontrivial zero, \hyperpage{129}
   \item norm, \hyperpage{28}, \hyperpage{74}, \hyperpage{76}
+  \item norm-one hypersurface, \hyperpage{100}
   \item normalization, \hyperpage{25}
   \item number field, \hyperpage{27}
   \item number of distinct prime factors function, \hyperpage{4}
@@ -184,8 +186,8 @@
   \item Ramanujan sum, \hyperpage{13, 14}
   \item ramification index, \hyperpage{66}, \hyperpage{78}, 
 		\hyperpage{83}
-  \item ramified, \hyperpage{70}, \hyperpage{75, 76}
-  \item rank, \hyperpage{100}
+  \item ramified, \hyperpage{69}, \hyperpage{75, 76}
+  \item rank, \hyperpage{99}
   \item real, \hyperpage{10}
   \item regular, \hyperpage{65}
   \item relatively prime, \hyperpage{43}
@@ -203,7 +205,7 @@
   \item Selberg class Riemann hypothesis, \hyperpage{130}
   \item Selberg's orthogonality conjecture, \hyperpage{121}
   \item self-dual, \hyperpage{84}
-  \item signature, \hyperpage{92}
+  \item signature, \hyperpage{91}
   \item smooth dyadic weight, \hyperpage{132}
   \item smooth weight, \hyperpage{117}
   \item split, \hyperpage{69}, \hyperpage{75, 76}
@@ -214,11 +216,12 @@
 
   \item tamely ramified, \hyperpage{88}
   \item total number of prime divisors function, \hyperpage{4}
-  \item totally ramified, \hyperpage{70}, \hyperpage{75, 76}
+  \item totally ramified, \hyperpage{69}, \hyperpage{75, 76}
   \item totally split, \hyperpage{69}, \hyperpage{75, 76}
   \item trace, \hyperpage{28}
   \item trace form, \hyperpage{32}, \hyperpage{38}
   \item trace matrix, \hyperpage{31}
+  \item trace-zero hyperplane, \hyperpage{100}
   \item trivial Dirichlet character, \hyperpage{7}
   \item trivial zero, \hyperpage{129}
 
@@ -227,7 +230,8 @@
   \item uniformizer, \hyperpage{55}
   \item unit, \hyperpage{49}
   \item unit group, \hyperpage{44}, \hyperpage{49}, \hyperpage{60}
-  \item unramified, \hyperpage{70}, \hyperpage{75, 76}
+  \item unit lattice, \hyperpage{100}
+  \item unramified, \hyperpage{69}, \hyperpage{75, 76}
   \item unweighted, \hyperpage{117}
 
   \indexspace

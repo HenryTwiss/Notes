@@ -19,10 +19,10 @@
 \contentsline {section}{\numberline {4.6}Prime Splitting}{66}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Ramification}{77}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Differents and Discriminants}{83}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Geometry of Number Fields}{92}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Minkowski Space}{92}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Finiteness of the Class Number}{97}{section.5.2}%
-\contentsline {section}{\numberline {5.3}\leavevmode {\color {red}\sf Todo: [Dirichlet's Unit Theorem]}}{100}{section.5.3}%
+\contentsline {chapter}{\numberline {5}Geometry of Number Fields}{91}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Minkowski Space}{91}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Finiteness of the Class Number}{96}{section.5.2}%
+\contentsline {section}{\numberline {5.3}\leavevmode {\color {red}\sf Todo: [Dirichlet's Unit Theorem]}}{99}{section.5.3}%
 \contentsline {part}{III\hspace {1em}Analytic Number Theory}{102}{part.3}%
 \contentsline {chapter}{\numberline {6}Dirichlet Series}{103}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Convergence Properties}{103}{section.6.1}%

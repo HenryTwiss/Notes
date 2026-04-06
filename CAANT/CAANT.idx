@@ -149,12 +149,12 @@
 \indexentry{nonsplit|hyperpage}{69}
 \indexentry{split|hyperpage}{69}
 \indexentry{totally split|hyperpage}{69}
-\indexentry{unramified|hyperpage}{70}
-\indexentry{ramified|hyperpage}{70}
-\indexentry{totally ramified|hyperpage}{70}
-\indexentry{unramified|hyperpage}{70}
-\indexentry{ramified|hyperpage}{70}
-\indexentry{totally ramified|hyperpage}{70}
+\indexentry{unramified|hyperpage}{69}
+\indexentry{ramified|hyperpage}{69}
+\indexentry{totally ramified|hyperpage}{69}
+\indexentry{unramified|hyperpage}{69}
+\indexentry{ramified|hyperpage}{69}
+\indexentry{totally ramified|hyperpage}{69}
 \indexentry{Dedekind-Kummer theorem|hyperpage}{70}
 \indexentry{norm|hyperpage}{74}
 \indexentry{ideal norm|hyperpage}{74}
@@ -187,26 +187,30 @@
 \indexentry{inertia degree|hyperpage}{83}
 \indexentry{\(\smc{O}\)-lattice|hyperpage}{83}
 \indexentry{complete|hyperpage}{83}
-\indexentry{dual|hyperpage}{84}
+\indexentry{dual|hyperpage}{83}
 \indexentry{self-dual|hyperpage}{84}
 \indexentry{complement|hyperpage}{85}
 \indexentry{different|hyperpage}{85}
-\indexentry{discriminant|hyperpage}{86}
+\indexentry{discriminant|hyperpage}{85}
 \indexentry{tamely ramified|hyperpage}{88}
 \indexentry{widely ramified|hyperpage}{88}
 \indexentry{complement|hyperpage}{90}
 \indexentry{different|hyperpage}{90}
 \indexentry{discriminant|hyperpage}{90}
-\indexentry{signature|hyperpage}{92}
-\indexentry{canonical embedding|hyperpage}{92}
-\indexentry{Minkowski space|hyperpage}{93}
-\indexentry{Minkowski inner product|hyperpage}{93}
-\indexentry{Minkowski measure|hyperpage}{93}
-\indexentry{Minkowski trace|hyperpage}{93}
-\indexentry{Minkowski norm|hyperpage}{93}
-\indexentry{Minkowski embedding|hyperpage}{94}
-\indexentry{Minkowski bound|hyperpage}{99}
-\indexentry{rank|hyperpage}{100}
+\indexentry{signature|hyperpage}{91}
+\indexentry{canonical embedding|hyperpage}{91}
+\indexentry{Minkowski space|hyperpage}{92}
+\indexentry{Minkowski inner product|hyperpage}{92}
+\indexentry{Minkowski measure|hyperpage}{92}
+\indexentry{Minkowski trace|hyperpage}{92}
+\indexentry{Minkowski norm|hyperpage}{92}
+\indexentry{Minkowski embedding|hyperpage}{93}
+\indexentry{Minkowski bound|hyperpage}{98}
+\indexentry{rank|hyperpage}{99}
+\indexentry{logarithmic embedding|hyperpage}{100}
+\indexentry{norm-one hypersurface|hyperpage}{100}
+\indexentry{trace-zero hyperplane|hyperpage}{100}
+\indexentry{unit lattice|hyperpage}{100}
 \indexentry{Dirichlet series|hyperpage}{103}
 \indexentry{abscissa of convergence|hyperpage}{104}
 \indexentry{abscissa of absolute convergence|hyperpage}{104}

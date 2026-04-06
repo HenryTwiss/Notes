@@ -92,7 +92,7 @@
     \[
       \s_{K}:K \to \R^{n} \qquad \k \mapsto ((\rho(\k))_{\rho},(\Re(\tau(\k)),\Im(\tau(\k)))_{\tau}).
     \]
-    Note that the Minkowski embedding is a \(\Q\)-embedding of \(K\) into \(\R^{n}\) as it is the composition of the canonical embedding and the isomorphism established in the previous result. Also, the Minkowski embedding is independent of the representatives \(\tau\) used because they occur in conjugate pairs.
+    Note that the Minkowski embedding is a \(\Q\)-embedding of \(K\) into \(\R^{n}\) as it is the composition of the canonical embedding and the isomorphism established in the previous result. Also, the Minkowski embedding is independent of the representatives \(\tau\) because they occur in conjugate pairs.
     
     We have now constructed Minkowski space and determined its dimension as a real vector space. Our goal now is to pass from \(\Z\)-lattices of \(K\) to integral lattices of Minkowski space. Being an inner product space, this will permit us to measure fractional ideals of \(K\) geometrically via their images inside Minkowski space. As \(j\) is a \(\Q\)-embedding and any fractional ideal \(\mf{f}\) of \(K\) is a complete \(\Z\)-lattice of \(K\), \(j(\mf{f})\) is a complete integral lattice of \(K_{\R}\). The covolume \(V_{j(\mf{f})}\) of \(j(\mf{f})\) is easily determined.
 
@@ -310,60 +310,52 @@
     \[
       w_{K} = |\mu(K)|.
     \]
-    Our primary aim will be to show that \(\mc{O}_{K}^{\ast}\) is a direct product of \(\mu(K)\) and a free abelian group of rank \(r_{K}\). Determining that the rank of the free abelian group is exactly \(r_{K}\) will be the most difficult part of the argument. To accomplish this, we will require a map on \(K^{\ast}\) that transitions between the field trace and the field norm.
-    
-    \iffalse To define this map, let \(\rho_{1},\ldots,\rho_{r_{1}}\) be the real \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) and \(\tau_{1},\ldots,\tau_{r_{2}}\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\). First consider the map
+    Our primary aim will be to show that \(\mc{O}_{K}^{\ast}\) is a direct product of \(\mu(K)\) and a free abelian group of rank \(r_{K}\). Determining that the rank of the free abelian group is exactly \(r_{K}\) will be the most difficult part of the argument. To accomplish this, we will require a map on \(K^{\ast}\) that transitions between the Minkowski trace and Minkowski norm. To define this map, let \(\rho\) and \(\tau\) run over the real \(\Q\)-embeddings and a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) respectively. Consider the homomorphism 
     \[
-      \ell:K_{\R}^{\ast} \to \R^{r_{K}+1} \qquad (z_{\s})_{\s} \mapsto (\log|z_{\rho_{1}}|,\ldots,\log|z_{\rho_{r_{1}}}|,2\log|z_{\tau_{1}}|,\ldots,2\log|z_{\tau_{r_{2}}}|).
+      \ell:K_{\R}^{\ast} \to \R^{r_{K}+1} \qquad (z_{\s})_{\s} \mapsto ((\log|z_{\rho}|)_{\rho},(2\log|z_{\tau}|)_{\tau}).
     \]
-    This map is independent of the choice of representatives \(\tau_{1},\ldots,\tau_{r_{2}}\) because \(z_{\conj{\tau}} = \conj{z_{\tau}}\) for \(\mathbf{z} \in K_{\R}\).
-    We define the \textbf{logarithmic embedding}\index{logarithmic embedding} \(\log_{K}\) of \(K\) by
+    This map is independent of the choice of representatives \(\tau\) by definition of Minkowski space. Then the Minkowski trace and Minkowski norm and related via the identity
     \[
-      \log_{K}:K^{\ast} \to \R^{r_{K}+1} \qquad \k \mapsto (\log|\rho_{1}(\k)|,\ldots,\log|\rho_{r_{1}}(\k)|,2\log|\tau_{1}(\k)|,\ldots,2\log|\tau_{r_{2}}(\k)|).
+      \Trace_{K_{\R}}(\ell(\mathbf{z})) = \log|\Norm_{K_{\R}}(\mathbf{z})|,
     \]
-    Then \(\log_{K}\) is just the restriction of \(j\) to \(K^{\ast}\) composed with \(\ell\). Since \(\ell\) is a homomorphism and \(j\) is a \(\Q\)-embedding, \(\log_{K}\) is a homomorphism. We distinguish the subsets
+    for all \(\mathbf{z} \in K_{\R}\). We define the \textbf{logarithmic embedding}\index{logarithmic embedding} \(\log_{K}\) of \(K\) to be the homomorphism given by
     \[
-      S = \{\mathbf{x} \in  \R_{+}^{r_{K}+1}:\Norm_{\R^{r_{K}+1}/\R}(\mathbf{x}) = 1\} \quad \text{and} \quad H = \{\mathbf{x} \in \R^{r_{K}+1}:\Trace_{\R^{r_{K}+1}/\R}(\mathbf{x}) = 0\},
+      \log_{K}:K^{\ast} \to \R^{r_{K}+1} \qquad \k \mapsto ((\log|\rho(\k)|)_{\rho},(2\log|\rho(\tau)|)_{\tau}).
     \]
-    called the \textbf{norm-one hypersurface}\index{norm-one hypersurface} and \textbf{trace-zero hyperplane}\index{trace-zero hyperplane} of \(\R^{r_{K}+1}\) respectively. Note that \(H\) is an \(r_{K}\)-dimensional subspace of \(\R^{r_{K}+1}\). We will also make use of the subset
+    Then \(\log_{K}\) is just the restriction of \(j\) to \(K^{\ast}\) composed with \(\ell\). As such, it is also independent of the representatives \(\tau\). We distinguish the subsets of \(\R^{r_{K}+1}\) given by
     \[
-      U = \{\mathbf{z} \in K_{\R}:\Norm_{K_{\R}}(\mathbf{z}) = \pm 1\}.
+      S = \{\mathbf{x} \in  \R_{+}^{r_{K}+1}:\Norm_{\R^{r_{K}+1}/\R}(\mathbf{x}) = 1\} \quad \text{and} \quad H = \{\mathbf{x} \in \R^{r_{K}+1}:\Trace_{\R^{r_{K}+1}/\R}(\mathbf{x}) = 0\}.
     \]
-    Let \(\l\) denote the restriction of \(\log_{K}\) to \(\mc{O}_{K}^{\ast}\) and set
+    We call \(S\) and \(H\) the \textbf{norm-one hypersurface}\index{norm-one hypersurface} and \textbf{trace-zero hyperplane}\index{trace-zero hyperplane} of \(\R^{r_{K}+1}\) respectively. Note that \(H\) is an \(r_{K}\)-dimensional subspace of \(\R^{r_{K}+1}\). We will also make use of the subset
+    \[
+      U = \{\mathbf{z} \in K_{\R}^{\ast}:\Norm_{K_{\R}}(\mathbf{z}) = \pm 1\}.
+    \]
+    Observe \(j\) maps \(\mc{O}_{K}^{\ast}\) into \(U\) and \(\ell\) maps \(U\) into \(H\). Let \(\l\) denote the restriction of \(\log_{K}\) to \(\mc{O}_{K}^{\ast}\) and set
     \[
       \L = \log_{K}(\mc{O}_{K}^{\ast}),
     \]
-    so that \(\L\) is the image of \(\l\). We call \(\L\) the \textbf{unit lattice}\index{unit lattice} of \(K\). It is not immediately obvious that \(\L\) is a lattice, but we will show this and more. Observe that \(\ell\) takes \(U\) into \(H\) since \(\Trace_{\R^{r_{K}+1}/\R}(\ell(\mathbf{z})) = \log|\Norm_{K_{\R}}(\mathbf{z})| = 1\). In particular, \(\L \subset H\) since \(j(\mc{O}_{K}^{\ast}) \subset U\). All of this data can be collected into the following commutative diagram:
-
-    \begin{center}
-      \begin{tikzcd}[row sep=large, column sep=large]
-        \mc{O}_{K}^{\ast} \arrow{d} \arrow{r}{j} \arrow[bend left]{rr}{\log_{K}} & U \arrow{d} \arrow{r}{\ell} & H \arrow{d} \\
-        K^{\ast} \arrow{d}{\Norm} \arrow{r}{j} & K_{\R} \arrow{d}{\Norm_{K_{\R}}}^{\ast} \arrow{r}{\ell} & \R^{r_{K}+1} \arrow{d}{\Trace_{\R^{r_{K}+1}/\R}} \\
-        \Q^{\ast} \arrow{r} & \R^{\ast} \arrow{r}{\log|\phantom{\cdot}|} & \R.
-      \end{tikzcd}
-    \end{center}
-    We first show that the logarithmic embedding fits into an exact sequence:
+    so that \(\L\) is the image of \(\l\). In particular, \(\L \subset H\). We call \(\L\) the \textbf{unit lattice}\index{unit lattice} of \(K\). It is not immediately obvious that \(\L\) is a lattice, but we will show this and more. We first show that the unit group and unit lattice of \(K\) fit into a short exact sequence.
 
     \begin{proposition}\label{prop:exact_sequence_for_Dirichlets_unit_theorem}
-      Let \(K\) be a number field. Then the sequence
+      Let \(K\) be a number field. Then there is a short exact sequence
 
       \begin{center}
-        \begin{tikzcd}[row sep=large, column sep=large]
-          1 \arrow{r} & \mu(K) \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r}{\l} & \L \arrow{r} & 0,
+        \begin{tikzcd}
+          1 \arrow{r} & \mu(K) \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r} & \L \arrow{r} & 0,
         \end{tikzcd}
       \end{center}
-
-      is exact.
+      induced by natural inclusions and where the third map is given by \(\l\).
     \end{proposition}
     \begin{proof}
-      Exactness of this sequence means that \(\mu(K)\) is the kernel of \(\l\). If \(\w \in \mu(K)\) then \(|\w| = 1\) and it follows that \(\l(\w) = 0\). Therefore \(\ker\l\) contains \(\mu(K)\). To see that this is all of \(\ker\l\), suppose \(\e \in \mc{O}_{K}^{\ast}\) is such that \(\l(\e) = 0\). But then every component of \(j(\e)\) is has absolute value \(1\) and therefore belongs to a bounded subset of the Minkowski space \(K_{\R}\). Since \(\mc{O}_{K}^{\ast}\) is a subgroup of \(\mc{O}_{K}\) and \(j(\mc{O}_{K})\) is a complete lattice in \(K_{\R}\) (as we have already remarked), \(j(\mc{O}_{K}^{\ast})\) is a lattice in \(K_{\R}\). But then \(j(\e)\) belongs to a discrete set by \cref{prop:integral lattice_if_and_only_if_discrete_subgroup}. Together, \(j(\e)\) belongs to a discrete and bounded set and hence is necessarily finite. Since \(j\) is a \(\Q\)-embedding, it follows that the subgroup \(\ker\l\) of \(\mc{O}_{K}^{\ast}\) contains finitely many elements and hence only roots of unity because \(\ker\l \subset K \subset \C\). Thus \(\ker\l = \mu(K)\).
+      As the second map is injective and the third map is surjective, the sequence is exact at \(\mu(K)\) and \(\L\). So it remains to prove exactness at \(\mc{O}_{K}^{\ast}\). For this we must show \(\ker\l = \mu(K)\). The reverse inclusion holds since the elements of \(\Hom_{\Q}(K,\conj{\Q})\) preserve roots of unity. For the forward inclusion, the elements of \(j(\ker\l)\) are such that each component is absolutely bounded. So one the one hand, this set belongs to a compact subset of \(K_{\R}\). On the other hand, this set is also a subset of the lattice \(j(\mc{O}_{K})\) which is a discrete subset of \(K_{\R}\). Together, this means \(j(\ker\l)\) is a subset of a compact and discrete set which is necessarily finite. As \(j\) is a \(\Q\)-embedding, it follows that the subgroup \(\ker\l\) of \(\mc{O}_{K}^{\ast}\) contains finitely many elements and hence only roots of unity since these are the only elements of \(\C\) with finite order. This proves the forward inclusion.
     \end{proof}
 
-    Our aim now is to show that the unit lattice \(\L\) is a a free abelian group of rank \(r_{K}\). For this, we will require a lemma:
+    Our aim now is to show that the unit lattice \(\L\) is a a free abelian group of rank \(r_{K}\). For this, we will require a lemma.
 
     \begin{lemma}\label{lem:finitely_many_elements_of_fixed_norm}
-      Let \(K\) be a number field. There are finitely many elements in \(\mc{O}_{K}\) of a given norm up to multiplication by units.
+      Let \(K\) be a number field. There are finitely many elements in \(\mc{O}_{K}\) of a given field norm up to multiplication by units.
     \end{lemma}
+    \iffalse
     \begin{proof}
       Recall that the norm of an algebraic integer is an integer and that the elements of norm \(\pm1\) are exactly the units of \(K\). Therefore it suffices to prove the claim for norm \(n \ge 2\) (the norm is only zero for zero itself). Further recall that \(\mc{O}_{K}/n\mc{O}_{K}\) is finite (with \(\Norm_{K}(n\mc{O}_{K})\) many elements). Therefore, it suffices to show that in each coset there is at most one element of norm \(n\) up to multiplication by units. To show this, suppose \(\a\) and \(\b\) are two representatives in the same coset and are of norm \(n\). Writing \(\a = \b+n\g\) for some \(n\g \in n\mc{O}_{K}\), we have
       \[
@@ -450,7 +442,7 @@
       By \cref{prop:exact_sequence_for_Dirichlets_unit_theorem} we have an exact sequence
 
       \begin{center}
-        \begin{tikzcd}[row sep=large, column sep=large]
+        \begin{tikzcd}
           1 \arrow{r} & \mu(K) \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r}{\l} & \L \arrow{r} & 0,
         \end{tikzcd}
       \end{center}
@@ -479,6 +471,4 @@
       \begin{pmatrix} \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & & \vdots \\ \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1}  \end{pmatrix}.
     \]
     We call \(R_{K}\) the \textbf{regulator}\index{regulator} of \(K\). Since \(V_{\L}\) is independent of the choice of basis, the regulator \(R_{K}\) is independent of any choice of a system of fundamental units for \(K\). Moreover, since \(H\) is a real inner product space we see that the regulator is roughly a measure of the density of the fundamental units in \(K\) (recall \cref{prop:covolume_equals_volume_of_fundamental_domain}). The smaller the regulator the more dense the fundamental units are.
-
-
     \fi
