@@ -121,16 +121,16 @@
       \]
       with \(a_{i,j} \in \Z\). Then \((a_{i,j})\) is the base change matrix from \(\a_{1},\ldots,\a_{n}\) to \(\k_{1},\ldots,\k_{n}\). Whence the image of \(\mc{O}_{K}\) under this matrix is \(\mf{a}\). As \(\Z\) is a principal ideal domain, the smith normal form of this matrix implies that
       \[
-        \Norm(\mf{a}) = |\det((a_{i,j}))|.
+        \Norm_{K}(\mf{a}) = |\det((a_{i,j}))|.
       \]
       This fact together with \cref{equ:base_change_discriminant,disc_as_square_of_embedding_matrix} gives
       \[
-        |\det(M(\k_{1},\ldots,\k_{n}))| = \Norm(\mf{a})|\det(M(\a_{1},\ldots,\a_{n}))|,
+        |\det(M(\k_{1},\ldots,\k_{n}))| = \Norm_{K}(\mf{a})|\det(M(\a_{1},\ldots,\a_{n}))|,
       \]
       as claimed. The second identity follows from the first upon taking \(\mf{f} = \mc{O}_{K}\).
     \end{proof}
     
-    As \(\s_{K}\) is also a \(\Q\)-embedding, \(\s_{K}(\mf{f})\) is a complete integral lattice in \(\R^{n}\). As a corollary of the previous result, we can determine the covolume of \(V_{\s_{K}(\mf{f})}\) of \(\s_{K}(\mf{f})\) as well.
+    As \(\s_{K}\) is also a \(\Q\)-embedding, \(\s_{K}(\mf{f})\) is a complete integral lattice of \(\R^{n}\). As a corollary of the previous result, we can determine the covolume of \(V_{\s_{K}(\mf{f})}\) of \(\s_{K}(\mf{f})\) as well.
     
     \begin{corollary}\label{cor:covolume_of_fractional_ideal_under_canonical_embedding}
       Let \(K\) be a number field with signature \((r_{1},r_{2})\) and let \(\mf{f}\) be a fractional ideal of \(K\). Then
@@ -332,43 +332,43 @@
     \]
     Observe \(j\) maps \(\mc{O}_{K}^{\ast}\) into \(U\) and \(\ell\) maps \(U\) into \(H\). Let \(\l\) denote the restriction of \(\log_{K}\) to \(\mc{O}_{K}^{\ast}\) and set
     \[
-      \L = \log_{K}(\mc{O}_{K}^{\ast}),
+      \L_{K} = \log_{K}(\mc{O}_{K}^{\ast}),
     \]
-    so that \(\L\) is the image of \(\l\). In particular, \(\L \subset H\). We call \(\L\) the \textbf{unit lattice}\index{unit lattice} of \(K\). It is not immediately obvious that \(\L\) is a lattice, but we will show this and more. We first show that the unit group and unit lattice of \(K\) fit into a short exact sequence.
+    so that \(\L_{K}\) is the image of \(\l\). In particular, \(\L_{K} \subset H\). We call \(\L_{K}\) the \textbf{unit lattice}\index{unit lattice} of \(K\). It is not immediately obvious that \(\L_{K}\) is an integral lattice, but we will show this and more. We first show that the unit group and unit lattice of \(K\) fit into a short exact sequence.
 
     \begin{proposition}\label{prop:exact_sequence_for_Dirichlets_unit_theorem}
       Let \(K\) be a number field. Then there is a short exact sequence
 
       \begin{center}
         \begin{tikzcd}
-          1 \arrow{r} & \mu(K) \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r} & \L \arrow{r} & 0,
+          1 \arrow{r} & \mu(K) \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r} & \L_{K} \arrow{r} & 0,
         \end{tikzcd}
       \end{center}
       induced by natural inclusions and where the third map is given by \(\l\).
     \end{proposition}
     \begin{proof}
-      As the second map is injective and the third map is surjective, the sequence is exact at \(\mu(K)\) and \(\L\). So it remains to prove exactness at \(\mc{O}_{K}^{\ast}\). For this we must show \(\ker\l = \mu(K)\). The reverse inclusion holds since the elements of \(\Hom_{\Q}(K,\conj{\Q})\) preserve roots of unity. For the forward inclusion, the elements of \(j(\ker\l)\) are such that each component is absolutely bounded. So one the one hand, this set belongs to a compact subset of \(K_{\R}\). On the other hand, this set is also a subset of the lattice \(j(\mc{O}_{K})\) which is a discrete subset of \(K_{\R}\). Together, this means \(j(\ker\l)\) is a subset of a compact and discrete set which is necessarily finite. As \(j\) is a \(\Q\)-embedding, it follows that the subgroup \(\ker\l\) of \(\mc{O}_{K}^{\ast}\) contains finitely many elements and hence only roots of unity since these are the only elements of \(\C\) with finite order. This proves the forward inclusion.
+      As the second map is injective and the third map is surjective, the sequence is exact at \(\mu(K)\) and \(\L_{K}\). So it remains to prove exactness at \(\mc{O}_{K}^{\ast}\). For this we must show \(\ker\l = \mu(K)\). The reverse inclusion holds since the elements of \(\Hom_{\Q}(K,\conj{\Q})\) preserve roots of unity. For the forward inclusion, the elements of \(j(\ker\l)\) are such that each component is absolutely bounded. So one the one hand, this set belongs to a compact subset of \(K_{\R}\). On the other hand, this set is also a subset of the lattice \(j(\mc{O}_{K})\) which is a discrete subset of \(K_{\R}\). Together, this means \(j(\ker\l)\) is a subset of a compact and discrete set which is necessarily finite. As \(j\) is a \(\Q\)-embedding, it follows that the subgroup \(\ker\l\) of \(\mc{O}_{K}^{\ast}\) contains finitely many elements and hence only roots of unity since these are the only elements of \(\C\) with finite order. This proves the forward inclusion.
     \end{proof}
 
-    Our aim now is to show that the unit lattice \(\L\) is a a free abelian group of rank \(r_{K}\). For this, we will require a lemma.
+    Our aim now is to show that the unit lattice \(\L_{K}\) is a a free abelian group of rank \(r_{K}\). For this, we will require a lemma.
 
     \begin{lemma}\label{lem:finitely_many_elements_of_fixed_norm}
       Let \(K\) be a number field. There are finitely many elements in \(\mc{O}_{K}\) of a given field norm up to multiplication by units.
     \end{lemma}
-    \iffalse
     \begin{proof}
-      Recall that the norm of an algebraic integer is an integer and that the elements of norm \(\pm1\) are exactly the units of \(K\). Therefore it suffices to prove the claim for norm \(n \ge 2\) (the norm is only zero for zero itself). Further recall that \(\mc{O}_{K}/n\mc{O}_{K}\) is finite (with \(\Norm_{K}(n\mc{O}_{K})\) many elements). Therefore, it suffices to show that in each coset there is at most one element of norm \(n\) up to multiplication by units. To show this, suppose \(\a\) and \(\b\) are two representatives in the same coset and are of norm \(n\). Writing \(\a = \b+n\g\) for some \(n\g \in n\mc{O}_{K}\), we have
+      The claim is true for algebraic integers of norm \(\pm 1\) as these are exactly the units of \(\mc{O}_{K}\). Now suppose \(m \ge 2\). By \cref{prop:norm_and_field_norms_are_identical}, \(\mc{O}_{K}/m\mc{O}_{K}\) is finite with \(\Norm_{K}(m)\) many elements. Therefore, it suffices to show that in each coset there is at most finitely many element of norm \(n\) up to multiplication by units. In fact, we will show that there is at most one such element. So let \(\a\) and \(\b\) be two representatives in the same coset which are of field norm \(n\). Writing \(\a = \b+n\g\) for some \(\g \in \mc{O}_{K}\), we may further write
       \[
-        \frac{\a}{\b} = 1+\frac{n}{\b}\g = 1+\frac{\Norm_{K}(\b)}{\b}\g,
+        \frac{\a}{\b} = 1+\frac{\Norm_{K}(\b)}{\b}\g.
       \]
-      which is an element of \(\mc{O}_{K}\) because \(\frac{\Norm_{K}(\b)}{\b}\) is since \(\Norm_{K}(\b) \in \b\mc{O}_{K}\) as any integral ideal contains it norm. Hence \(\frac{\a}{\b} \in \mc{O}_{K}\), and interchanging the roles of \(\a\) and \(\b\) shows that \(\frac{\b}{\a} \in \mc{O}_{K}\) too. But then \(\frac{\a}{\b}\) is a unit in \(\mc{O}_{K}\) and thus \(\a\) and \(\b\) differ up to multiplication by a unit.
+      As any integral ideal contains its norm, \cref{prop:norm_and_field_norms_are_identical} implies \(\frac{\Norm_{K}(\b)}{\b} \in \mc{O}_{K}\). Whence \(\frac{\a}{\b} \in \mc{O}_{K}\) and interchanging the roles of \(\a\) and \(\b\) shows that \(\frac{\b}{\a} \in \mc{O}_{K}\) too. But then \(\frac{\a}{\b}\) is a unit in \(\mc{O}_{K}\) and thus \(\a\) and \(\b\) differ up to multiplication by a unit.
     \end{proof}
 
-    Recall that \(\L \subset H\). We will show \(\L\) is a lattice in \(H\), actually a complete lattice, and compute its rank as a free abelian group:
+    With this lemma, we can show \(\L_{K}\) is a complete integral lattice of \(H\), actually a complete lattice and compute its rank as a free abelian group.
 
     \begin{theorem}\label{thm:unit_group_complete_lattice}
-      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then the unit lattice \(\L\) is a complete lattice in the trace-zero hyperplane \(H\) of \(\R^{r_{K}+1}\). In particular, \(\L\) is a free abelian group of rank \(r_{K}\).
+      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then \(\L_{K}\) is a complete lattice of \(H\). In particular, \(\L_{K}\) is a free abelian group of rank \(r_{K}\).
     \end{theorem}
+    \iffalse
     \begin{proof}
       Throughout, let \(\s\) run over \(\Hom_{\Q}(K,\conj{\Q})\), \(\rho\) run over all such real \(\Q\)-embeddings, and \(\tau\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings. We first prove \(\L\) is a lattice in \(H\). Since \(\l\) is a homomorphism (because \(\log_{K}\) is), \(\L\) is a subgroup of \(H\). So by \cref{prop:integral lattice_if_and_only_if_discrete_subgroup}, \(\L\) is a lattice if and only if it is discrete. In particular, we will show that for any \(c > 0\), the bounded region
       \[
