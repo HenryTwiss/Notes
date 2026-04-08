@@ -22,24 +22,24 @@
 \contentsline {chapter}{\numberline {5}Geometry of Number Fields}{91}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Minkowski Space}{91}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Finiteness of the Class Number}{96}{section.5.2}%
-\contentsline {section}{\numberline {5.3}\leavevmode {\color {red}\sf Todo: [Dirichlet's Unit Theorem]}}{99}{section.5.3}%
-\contentsline {part}{III\hspace {1em}Analytic Number Theory}{102}{part.3}%
-\contentsline {chapter}{\numberline {6}Dirichlet Series}{103}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Convergence Properties}{103}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Euler Products}{109}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Dirichlet Convolution}{111}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Perron Formulas}{112}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Analytic \(L\)-functions}{119}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Analytic Data}{119}{section.7.1}%
-\contentsline {section}{\numberline {7.2}The Approximate Functional Equation}{123}{section.7.2}%
-\contentsline {section}{\numberline {7.3}The Riemann Hypothesis and Nontrivial Zeros}{129}{section.7.3}%
-\contentsline {section}{\numberline {7.4}The Lindel\"of Hypothesis and Estimates on the Critical Line}{130}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Logarithmic Derivatives}{135}{section.7.5}%
-\contentsline {chapter}{\numberline {8}\leavevmode {\color {red}\sf Todo: [Moments]}}{138}{chapter.8}%
-\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{139}{chapter.9}%
-\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{140}{chapter.10}%
-\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{141}{chapter.11}%
-\contentsline {chapter}{\numberline {A}Appendices}{142}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Integral Lattices}{143}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Poisson Summation}{147}{section.A.2}%
-\contentsline {section}{\numberline {A.3}The Gamma Function}{153}{section.A.3}%
+\contentsline {section}{\numberline {5.3}Dirichlet's Unit Theorem}{99}{section.5.3}%
+\contentsline {part}{III\hspace {1em}Analytic Number Theory}{106}{part.3}%
+\contentsline {chapter}{\numberline {6}Dirichlet Series}{107}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Convergence Properties}{107}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Euler Products}{113}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Dirichlet Convolution}{115}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Perron Formulas}{116}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Analytic \(L\)-functions}{123}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analytic Data}{123}{section.7.1}%
+\contentsline {section}{\numberline {7.2}The Approximate Functional Equation}{127}{section.7.2}%
+\contentsline {section}{\numberline {7.3}The Riemann Hypothesis and Nontrivial Zeros}{133}{section.7.3}%
+\contentsline {section}{\numberline {7.4}The Lindel\"of Hypothesis and Estimates on the Critical Line}{134}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Logarithmic Derivatives}{139}{section.7.5}%
+\contentsline {chapter}{\numberline {8}\leavevmode {\color {red}\sf Todo: [Moments]}}{142}{chapter.8}%
+\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{143}{chapter.9}%
+\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{144}{chapter.10}%
+\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{145}{chapter.11}%
+\contentsline {chapter}{\numberline {A}Appendices}{146}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Integral Lattices}{147}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Poisson Summation}{151}{section.A.2}%
+\contentsline {section}{\numberline {A.3}The Gamma Function}{157}{section.A.3}%

@@ -37,7 +37,7 @@
     \[
       K_{\R} = \{\mathbf{z} \in K_{\C}:F(\mathbf{z}) = \mathbf{z}\}.
     \]
-    In other words, \(K_{\R}\) consists of all of the \(F\)-invariant points of \(K_{\C}\). Note that \(K_{\R}\) is an \(\R\)-subalgebra of \(K_{\C}\). We denote the restriction of the inner product \(\<\cdot,\cdot\>_{K_{\C}}\) to \(K_{\R}\) by \(\<\cdot,\cdot\>_{K_{\R}}\). Moreover, the inner product \(\<\cdot,\cdot\>_{K_{\R}}\) turns \(K_{\R}\) into a real Hilbert space. Indeed, the conjugate symmetry and \(F\)-equivariance of the inner product together give
+    In other words, \(K_{\R}\) consists of all of the \(F\)-invariant elements of \(K_{\C}\). Note that \(K_{\R}\) is an \(\R\)-subalgebra of \(K_{\C}\). We denote the restriction of the inner product \(\<\cdot,\cdot\>_{K_{\C}}\) to \(K_{\R}\) by \(\<\cdot,\cdot\>_{K_{\R}}\). Moreover, the inner product \(\<\cdot,\cdot\>_{K_{\R}}\) turns \(K_{\R}\) into a real Hilbert space. Indeed, the conjugate symmetry and \(F\)-equivariance of the inner product together give
     \[
       \conj{\<\mathbf{z},\mathbf{w}\>} = \<\mathbf{z},\mathbf{w}\>,
     \]
@@ -115,7 +115,7 @@
       \[
         |\det(M(\k_{1},\ldots,\k_{n}))| = \Norm_{K}(\mf{a})|\det(M(\a_{1},\ldots,\a_{n}))|,
       \]
-      for any integral basis \(\a_{1},\ldots,\a_{n}\) for \(K/\Q\). Note that \(\k_{1},\ldots,\k_{n}\) is necessarily a basis for \(\mf{a}\) as a free \(\Z\)-module by \cref{thm:integral_basis_AKBL} and write
+      for any integral basis \(\a_{1},\ldots,\a_{n}\) for \(K/\Q\). Note that \(\k_{1},\ldots,\k_{n}\) is necessarily a basis for \(\mf{a}/\Z\) by \cref{thm:integral_basis_AKBL} and write
       \[
         \k_{i} = \sum_{j}a_{i,j}\a_{j},
       \]
@@ -263,7 +263,7 @@
       \]
     \end{proof}
 
-    Observe that the compact convex symmetric set \(X\) consists of those points in \(\R^{n}\) whose norm corresponding to the inner product induced by the Minkowski inner product from \cref{prop:Minkowski_space_isomorphism} at most \(n\). We can now obtain an explicit bound known as the \textbf{Minkowski bound}\index{Minkowski bound}.
+    Observe that the compact convex symmetric set \(X\) consists of those elements in \(\R^{n}\) whose norm corresponding to the inner product induced by the Minkowski inner product from \cref{prop:Minkowski_space_isomorphism} at most \(n\). We can now obtain an explicit bound known as the \textbf{Minkowski bound}\index{Minkowski bound}.
 
     \begin{theorem*}[Minkowski bound]
       Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then every ideal class of \(\Cl(K)\) is represented by an integral ideal \(\mf{a}\) satisfying
@@ -297,7 +297,7 @@
     \end{proof}
 
     Generally speaking, the class number of \(K\) is one of the most difficult pieces of arithmetic data about \(K\) to compute. For example, it is still unknown if there are infinitely many number fields of class number \(1\). That is to say, it is unknown if there are infinitely many number fields such that their ring of integers are principal ideal domains.
-  \section{\todo{Dirichlet's Unit Theorem}}
+  \section{Dirichlet's Unit Theorem}
     Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). We define the \textbf{rank}\index{rank} \(r_{K}\) of \(K\) by
     \[
       r_{K} = r_{1}+r_{2}-1.
@@ -310,7 +310,7 @@
     \[
       w_{K} = |\mu(K)|.
     \]
-    Our primary aim will be to show that \(\mc{O}_{K}^{\ast}\) is a direct product of \(\mu(K)\) and a free abelian group of rank \(r_{K}\). Determining that the rank of the free abelian group is exactly \(r_{K}\) will be the most difficult part of the argument. To accomplish this, we will require a map on \(K^{\ast}\) that transitions between the Minkowski trace and Minkowski norm. To define this map, let \(\rho\) and \(\tau\) run over the real \(\Q\)-embeddings and a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) respectively. Consider the homomorphism 
+    Our primary aim will be to show that \(\mc{O}_{K}^{\ast}\) is a direct product of \(\mu(K)\) and a free \(Z\)-module of rank \(r_{K}\). Determining that the rank of the free \(Z\)-module is exactly \(r_{K}\) will be the most difficult part of the argument. To accomplish this, we will require a map on \(K^{\ast}\) that transitions between the Minkowski trace and Minkowski norm. To define this map, let \(\rho\) and \(\tau\) run over the real \(\Q\)-embeddings and a complete set of representatives for the pairs of complex \(\Q\)-embeddings of \(\Hom_{\Q}(K,\conj{\Q})\) respectively. Consider the homomorphism 
     \[
       \ell:K_{\R}^{\ast} \to \R^{r_{K}+1} \qquad (z_{\s})_{\s} \mapsto ((\log|z_{\rho}|)_{\rho},(2\log|z_{\tau}|)_{\tau}).
     \]
@@ -326,7 +326,7 @@
     \[
       S = \{\mathbf{x} \in  \R_{+}^{r_{K}+1}:\Norm_{\R^{r_{K}+1}/\R}(\mathbf{x}) = 1\} \quad \text{and} \quad H = \{\mathbf{x} \in \R^{r_{K}+1}:\Trace_{\R^{r_{K}+1}/\R}(\mathbf{x}) = 0\}.
     \]
-    We call \(S\) and \(H\) the \textbf{norm-one hypersurface}\index{norm-one hypersurface} and \textbf{trace-zero hyperplane}\index{trace-zero hyperplane} of \(\R^{r_{K}+1}\) respectively. Note that \(H\) is an \(r_{K}\)-dimensional subspace of \(\R^{r_{K}+1}\). We will also make use of the subset
+    We call \(S\) and \(H\) the \textbf{norm-one hypersurface}\index{norm-one hypersurface} and \textbf{trace-zero hyperplane}\index{trace-zero hyperplane} of \(\R^{r_{K}+1}\) respectively. Note that \(H\) is a subspace of \(\R^{r_{K}+1}\) of dimension \(r_{K}\). We will also make use of the subset
     \[
       U = \{\mathbf{z} \in K_{\R}^{\ast}:\Norm_{K_{\R}}(\mathbf{z}) = \pm 1\}.
     \]
@@ -341,94 +341,95 @@
 
       \begin{center}
         \begin{tikzcd}
-          1 \arrow{r} & \mu(K) \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r} & \L_{K} \arrow{r} & 0,
+          1 \arrow{r} & \mu(K) \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r} & \L_{K} \arrow{r} & 1,
         \end{tikzcd}
       \end{center}
       induced by natural inclusions and where the third map is given by \(\l\).
     \end{proposition}
     \begin{proof}
-      As the second map is injective and the third map is surjective, the sequence is exact at \(\mu(K)\) and \(\L_{K}\). So it remains to prove exactness at \(\mc{O}_{K}^{\ast}\). For this we must show \(\ker\l = \mu(K)\). The reverse inclusion holds since the elements of \(\Hom_{\Q}(K,\conj{\Q})\) preserve roots of unity. For the forward inclusion, the elements of \(j(\ker\l)\) are such that each component is absolutely bounded. So one the one hand, this set belongs to a compact subset of \(K_{\R}\). On the other hand, this set is also a subset of the lattice \(j(\mc{O}_{K})\) which is a discrete subset of \(K_{\R}\). Together, this means \(j(\ker\l)\) is a subset of a compact and discrete set which is necessarily finite. As \(j\) is a \(\Q\)-embedding, it follows that the subgroup \(\ker\l\) of \(\mc{O}_{K}^{\ast}\) contains finitely many elements and hence only roots of unity since these are the only elements of \(\C\) with finite order. This proves the forward inclusion.
+      As the second map is injective and the third map is surjective, the sequence is exact at \(\mu(K)\) and \(\L_{K}\). So it remains to prove exactness at \(\mc{O}_{K}^{\ast}\). For this we must show \(\ker\l = \mu(K)\). The reverse inclusion holds since the elements of \(\Hom_{\Q}(K,\conj{\Q})\) preserve roots of unity. For the forward inclusion, the elements of \(j(\ker\l)\) are such that each component is absolutely bounded. So one the one hand, this set belongs to a compact subset of \(K_{\R}\). On the other hand, this set is also a subset of the integral lattice \(j(\mc{O}_{K})\) which is a discrete subset of \(K_{\R}\). Together, this means \(j(\ker\l)\) is a subset of a compact and discrete set which is necessarily finite. As \(j\) is a \(\Q\)-embedding, it follows that the subgroup \(\ker\l\) of \(\mc{O}_{K}^{\ast}\) contains finitely many elements and hence only roots of unity since these are the only elements of \(\C\) with finite order. This proves the forward inclusion.
     \end{proof}
 
-    Our aim now is to show that the unit lattice \(\L_{K}\) is a a free abelian group of rank \(r_{K}\). For this, we will require a lemma.
+    Our aim now is to show that the unit lattice \(\L_{K}\) is a a free \(Z\)-module of rank \(r_{K}\). For this, we will require a lemma.
 
     \begin{lemma}\label{lem:finitely_many_elements_of_fixed_norm}
       Let \(K\) be a number field. There are finitely many elements in \(\mc{O}_{K}\) of a given field norm up to multiplication by units.
     \end{lemma}
     \begin{proof}
-      The claim is true for algebraic integers of norm \(\pm 1\) as these are exactly the units of \(\mc{O}_{K}\). Now suppose \(m \ge 2\). By \cref{prop:norm_and_field_norms_are_identical}, \(\mc{O}_{K}/m\mc{O}_{K}\) is finite with \(\Norm_{K}(m)\) many elements. Therefore, it suffices to show that in each coset there is at most finitely many element of norm \(n\) up to multiplication by units. In fact, we will show that there is at most one such element. So let \(\a\) and \(\b\) be two representatives in the same coset which are of field norm \(n\). Writing \(\a = \b+n\g\) for some \(\g \in \mc{O}_{K}\), we may further write
+      The claim is true for algebraic integers of norm \(\pm 1\) as these are exactly the units of \(K\). Now suppose \(m \ge 2\). By \cref{prop:norm_and_field_norms_are_identical}, \(\mc{O}_{K}/m\mc{O}_{K}\) is finite with \(\Norm_{K}(m)\) many elements. Therefore, it suffices to show that in each coset there is at most finitely many element of norm \(n\) up to multiplication by units. In fact, we will show that there is at most one such element. So let \(\a\) and \(\b\) be two representatives in the same coset which are of field norm \(n\). Writing \(\a = \b+n\g\) for some \(\g \in \mc{O}_{K}\), we may further write
       \[
         \frac{\a}{\b} = 1+\frac{\Norm_{K}(\b)}{\b}\g.
       \]
       As any integral ideal contains its norm, \cref{prop:norm_and_field_norms_are_identical} implies \(\frac{\Norm_{K}(\b)}{\b} \in \mc{O}_{K}\). Whence \(\frac{\a}{\b} \in \mc{O}_{K}\) and interchanging the roles of \(\a\) and \(\b\) shows that \(\frac{\b}{\a} \in \mc{O}_{K}\) too. But then \(\frac{\a}{\b}\) is a unit in \(\mc{O}_{K}\) and thus \(\a\) and \(\b\) differ up to multiplication by a unit.
     \end{proof}
 
-    With this lemma, we can show \(\L_{K}\) is a complete integral lattice of \(H\), actually a complete lattice and compute its rank as a free abelian group.
+    With this lemma, we can show \(\L_{K}\) is a complete integral lattice of \(H\) and compute its rank as a free \(Z\)-module.
 
     \begin{theorem}\label{thm:unit_group_complete_lattice}
-      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then \(\L_{K}\) is a complete lattice of \(H\). In particular, \(\L_{K}\) is a free abelian group of rank \(r_{K}\).
+      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then \(\L_{K}\) is a complete integral lattice of \(H\). In particular, \(\L_{K}\) is a free \(Z\)-module of rank \(r_{K}\).
     \end{theorem}
-    \iffalse
     \begin{proof}
-      Throughout, let \(\s\) run over \(\Hom_{\Q}(K,\conj{\Q})\), \(\rho\) run over all such real \(\Q\)-embeddings, and \(\tau\) run over a complete set of representatives for the pairs of complex \(\Q\)-embeddings. We first prove \(\L\) is a lattice in \(H\). Since \(\l\) is a homomorphism (because \(\log_{K}\) is), \(\L\) is a subgroup of \(H\). So by \cref{prop:integral lattice_if_and_only_if_discrete_subgroup}, \(\L\) is a lattice if and only if it is discrete. In particular, we will show that for any \(c > 0\), the bounded region
+      We will begin by showing that \(\L_{K}\) is a lattice of \(H\). Since \(\l\) is a homomorphism, \(\L_{K}\) is a subgroup of \(H\). Therefore \(\L_{K}\) is a lattice if and only if it is discrete (see \cref{sec:integral_lattices}). To prove this, we will show that for any positive constant \(c\), the compact subset 
       \[
         X = \{\mathbf{x} \in \R^{r_{K}+1}:|x_{\rho}| \le c \text{ and } |x_{\tau}| \le 2c \text{ for all } \rho \text{ and } \tau\},
       \]
-      contains only finitely many points of \(\L\). The preimage of \(X\) under \(\ell\) is
+      contains only finitely many elements of \(\L_{K}\). The preimage of \(X\) under \(\ell\) is the compact subset
       \[
         \ell^{-1}(X) = \{\mathbf{z} \in K_{\R}:e^{-c} \le |z_{\s}| \le e^{c} \text{ for all } \s\},
       \]
-      and hence it contains finitely many points of \(j(\mc{O}_{K}^{\ast})\) because this is a subset of the lattice \(j(\mc{O}_{K})\). It follows that \(X\) contains finitely many points of \(\L\) (as the preimage of \(\mathbf{x}\) in \(\R^{n}\) under \(\ell\) contains \(2^{n}\) points of \(K_{\R}\)) so that \(\L\) is discrete and thus a lattice. We will now show that \(\L\) is a complete lattice in \(H\) and since \(H\) is an \(r_{K}\)-dimensional real vector space, this will also prove the claim about the rank of \(\L\). By \cref{prop:complete_integral lattice_if_and_only_if_bounded_translates_cover} it suffices to show that there is a bounded subset \(M\) of the trace-zero hyperplane \(H\) whose translates by \(\L\) cover \(H\). Actually, since \(\ell\) is surjective it suffices to construct a bounded subset \(T\) of \(U\) such that
+      and hence it contains finitely many elements of \(j(\mc{O}_{K}^{\ast})\) which is a subset of the complete integral lattice \(j(\mc{O}_{K})\) of \(K_{\R}\). Whence \(\ell^{-1}(X) \cap j(\mc{O}_{K}^{\ast})\) is finite. The image of this intersection under \(\ell\) is exactly \(X \cap \L_{K}\). Whence \(X \cap \L_{K}\) is finite too. Therefore \(\L_{K}\) is discrete and thus a lattice of \(H\).
+      
+      We now show that \(\L_{K}\) is a complete integral lattice of \(H\) and since \(H\) is a real vector space of dimension \(r_{K}\), this will prove the claim about the rank of \(\L_{K}\) as well. It is enough to show that there is a bounded subset \(M\) of \(H\) whose translates by \(\L_{K}\) cover \(H\) (see \cref{sec:integral_lattices}). Since \(\ell\) is surjective it suffices to construct a bounded subset \(T\) of \(U\) such that
       \[
-        U = \bigcup_{\e \in \mc{O}_{K}^{\ast}}j(\e)T.
+        U = \bigcup_{\e}j(\e)T.
       \]
-      Indeed, if such \(T\) exists then any \(\mathbf{z} \in T\) satisfies \(|\Norm_{K_{\R}}(\mathbf{z})| = \prod_{\s}|z_{\s}| = 1\) and hence each \(z_{\s}\) is bounded above and away from zero because \(T\) is bounded. Setting \(M = \ell(T)\), it follows that \(M\) is also bounded (because \(\log|z|\) is continuous) and
+      Indeed, if such a \(T\) exists then any \(\mathbf{z} \in T\) satisfies \(|\Norm_{K_{\R}}(\mathbf{z})| = 1\) which forces every component of \(\mathbf{z}\) is absolutely bounded above and away from zero because \(T\) is bounded. Setting \(M = \ell(T)\), it follows that \(M\) is also bounded and
       \[
         H = \bigcup_{\l}(M+\l).
       \]
-      It now suffices to construct such a subset \(T\). For every \(\s\), fix constants \(c_{\s} > 0\) satisfying
+      To construct \(T\), fix constants \(c_{\s} > 0\) satisfying \(c_{\s} = c_{\conj{\s}}\) and
       \[
-        c_{\s} = c_{\conj{\s}} \quad \text{and} \quad \prod_{\s}c_{\s} > \left(\frac{2}{\pi}\right)^{r_{2}}\sqrt{|D_{K}|},
+        \prod_{\s}c_{\s} > \left(\frac{2}{\pi}\right)^{r_{2}}\sqrt{|\D_{K}|}.
       \]
-      and set \(C = \prod_{\s}c_{\s}\). Now consider the bounded subset
+      Also set \(C = \prod_{\s}c_{\s}\). Now consider the bounded subset
       \[
         Z = \{\mathbf{z} \in K_{\R}:|z_{\s}| < c_{\s} \text{ for all } \s\}.
       \]
-      For any \(\mathbf{w} \in U\), we have
+      By construction, the absolute value of the norm of any element of \(Z\) is at most \(C\). For any \(\mathbf{w} \in K_{\R}^{\ast}\), we can form the bounded subset
       \[
-        \mathbf{w}Z = \{\mathbf{z} \in K_{\R}:|z_{\s}| < |w_{\s}|c_{\s} \text{ for all } \s\},
+        \mathbf{w}Z = \{\mathbf{z} \in K_{\R}:|z_{\s}| < |w_{\s}|c_{\s} \text{ for all } \s\}.
       \]
-      and \(\prod_{\s}|w_{\s}|c_{\s} = \Norm_{K_{\R}}(\mathbf{w})C = C\) so that \(\mathbf{w}Z\) is also bounded. By \cref{prop:Minkowski_space_isomorphism}, the volume of \(\mathbf{w}Z\) is \(2^{r_{2}}\) times the volume of
+      Letting \(\mathbf{u} \in U\), the absolute value of the norm of any element of \(\mathbf{u}Z\) is at most \(C\). By \cref{prop:Minkowski_space_isomorphism}, the volume of \(\mathbf{u}Z\) is then \(2^{r_{2}}\) times the volume of
       \[
-        X = \{\mathbf{x} \in \R^{n}:|x_{\rho}| < c_{\rho} \text{ and } x_{\tau}^{2}+x_{\conj{\tau}}^{2} < c_{\tau}^{2} \text{ for all } \rho \text{ and } \tau\},
+        X = \{\mathbf{x} \in \R^{n}:x_{\rho}^{2} < c_{\rho}^{2} \text{ and } x_{\tau}^{2}+x_{\conj{\tau}}^{2} < c_{\tau}^{2} \text{ for all } \rho \text{ and } \tau\},
       \]
-      which is \(\prod_{\rho}(2c_{\rho})\prod_{\tau}(\pi c_{\tau}^{2}) = C2^{r_{1}}\pi^{r_{2}}\) because \(X\) is the product of \(r_{1}\) many intervals each of length \(2c_{\rho}\) and \(r_{2}\) many disks each of of radius \(c_{\tau}\). Thus \(\Vol(\mathbf{w}Z) = C2^{r_{K}+1}\pi^{r_{2}}\). By \cref{prop:covolume_of_fractional_ideal_under_j}, \(V_{j(\mc{O}_{K})} = \sqrt{|D_{K}|}\) and our choice of \(C\) gives
+      which is \(C2^{r_{1}}\pi^{r_{2}}\) because \(X\) is the product of \(r_{1}\) many intervals each of length \(2c_{\rho}\) and \(r_{2}\) many disks each of of radius \(c_{\tau}\). Thus \(\Vol(\mathbf{u}Z) = C2^{r_{K}+1}\pi^{r_{2}}\). By \cref{prop:covolume_of_fractional_ideal_under_j}, \(V_{j(\mc{O}_{K})} = \sqrt{|\D_{K}|}\) and our choice of \(C\) gives
       \[
-        \Vol(\mathbf{w}Z) > 2^{n}V_{j(\mc{O}_{K})}.
+        \Vol(\mathbf{u}Z) > 2^{n}V_{j(\mc{O}_{K})}.
       \]
-      Since \(j(\mc{O}_{K})\) is a complete lattice in \(K_{\R}\), Minkowski's lattice point theorem implies that there exists some nonzero \(\a \in \mc{O}_{K}\) such that \(j(\a) \in \mathbf{w}Z\). Now by \cref{lem:finitely_many_elements_of_fixed_norm}, there exist finitely many nonzero elements \(\a_{1},\ldots,\a_{m}\) of \(\mc{O}_{K}\) such that every \(\a \in \mc{O}_{K}\) with \(0 < \Norm_{K}(\a) \le C\) is equal to \(\a_{i}\) for some \(1 \le i \le m\) by multiplying by a unit. Set
+      By Minkowski's lattice point theorem (see \cref{sec:integral_lattices}), there exists a nonzero element of \(j(\mc{O}_{K}) \cap \mathbf{u}Z\). Now from \cref{lem:finitely_many_elements_of_fixed_norm}, let \(\a_{1},\ldots,\a_{m}\) be a complete set of representatives of \(\mc{O}_{K}\) whose field norm is at most \(C\) up to multiplication by a unit. Set
       \[
-        T = U \cap \left(\bigcup_{1 \le i \le m}j(\a_{i})^{-1}Z\right).
+        T = U \cap \left(\bigcup_{i}j(\a_{i})^{-1}Z\right).
       \]
-      Then \(T\) is a bounded subset of \(U\) since \(Z\) is a bounded subset of \(K_{\R}\) (and thus the \(j(\a_{i})^{-1}Z\) are too). We now claim that
+      Then \(T\) is a bounded subset of \(U\) since the \(j(\a_{i})^{-1}Z\) are. We now claim that
       \[
-        U = \bigcup_{\e \in \mc{O}_{K}^{\ast}}j(\e)T.
+        U = \bigcup_{\e}j(\e)T.
       \]
-      Indeed, since \(\mathbf{w}^{-1} \in U\) for any \(\mathbf{w} \in U\)  we have shown implies that there exists a nonzero \(\a \in \mc{O}_{K}\) such that \(j(\a) \in \mathbf{w}^{-1}Z\). Hence \(j(\a) = \mathbf{w}^{-1}\mathbf{z}\) for some \(\mathbf{z} \in Z\). But as
+      The reverse inclusion holds because each \(j(\e)T\) is a subset of \(U\). For the forward inclusion, let \(\mathbf{u} \in U\). Then \(\mathbf{u}^{-1} \in U\) whence there exists a nonzero element of \(j(\mc{O}_{K}) \cap \mathbf{u}^{-1}Z\). This means \(j(\a) = \mathbf{u}^{-1}\mathbf{z}\) for some \(\a \in \mc{O}_{K}\) and \(\mathbf{z} \in Z\) with
       \[
-        |\Norm_{K}(\a)| = |\Norm_{K_{\R}}(j(\a))| = |\Norm_{K_{\R}}(\mathbf{w}^{-1}\mathbf{z})| = |\Norm_{K_{\R}}(\mathbf{z})| < C,
+        |\Norm_{K}(\a)| < C.
       \]
-      it follows that there exists an \(\a_{i}\) and \(\e \in \mc{O}_{K}^{\ast}\) such that \(\a_{i} = \a\e\). Writing \(\mathbf{w} = j(\a)^{-1}\mathbf{z}\) (recall that \(K_{\R}\) is commutative), we have 
+      But then there exists an \(\a_{i}\) and \(\e \in \mc{O}_{K}^{\ast}\) such that \(\a_{i} = \a\e\). Writing \(\mathbf{u} = j(\a)^{-1}\mathbf{z}\), a short computation shows 
       \[
-        \mathbf{w} = j(\a)^{-1}\mathbf{z} = j(\a_{i}\e^{-1})^{-1}\mathbf{z} = j(\e)j(\a_{i})^{-1}\mathbf{z},
+        \mathbf{u} = j(\e)j(\a_{i})^{-1}\mathbf{z},
       \]
-      where the last equality holds because \(j\) is a \(\Q\)-embedding. As \(\mathbf{w},j(\e) \in U\), we see that \(j(\a_{i})^{-1}\mathbf{z} \in U\) and thus \(j(\a_{i})^{-1}\mathbf{z} \in T\). But then \(\mathbf{w} \in j(\e)T \subset U\) as desired.
+      As \(\mathbf{u},j(\e) \in U\), we see that \(j(\a_{i})^{-1}\mathbf{z} \in U\) and thus \(j(\a_{i})^{-1}\mathbf{z} \in T\). But then \(\mathbf{u} \in j(\e)T\) proving the forward inclusion.
     \end{proof}
 
-    By \cref{thm:unit_group_complete_lattice}, there exist elements \(\e_{1},\ldots,\e_{r_{K}}\) of \(\mc{O}_{K}^{\ast}\) such that \(\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is a basis for the unit lattice \(\L\) by taking the preimage under \(j\) of any basis for \(\L\). We say that \(\e_{1},\ldots,\e_{r_{K}}\) are a \textbf{system of fundamental units}\index{system of fundamental units} of \(K\) and we call any such element a \textbf{fundamental unit}\index{fundamental unit} for \(K\). The structure theorem for \(\mc{O}_{K}^{\ast}\) known as \textbf{Dirichlet's unit theorem}\index{Dirichlet's unit theorem} says that \(\mc{O}_{K}^{\ast}\) is a product of a root of unity in \(K\) and powers of fundamental units:
+    In view of this result, there exist units \(\e_{1},\ldots,\e_{r_{K}}\) of \(K\) such that \(\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is a basis for the unit lattice \(\L_{K}\). Indeed, such elements are obtained by taking the preimage under \(j\) of any basis for \(\L_{K}/\Z\). Accordingly, we say that \(\e_{1},\ldots,\e_{r_{K}}\) is a \textbf{system of fundamental units}\index{system of fundamental units} for \(K\) and we call any such element a \textbf{fundamental unit}\index{fundamental unit} for \(K\). \textbf{Dirichlet's unit theorem}\index{Dirichlet's unit theorem} determines the group structure of the units of \(K\) and says that \(\mc{O}_{K}^{\ast}\) is a direct product of the root of unity in \(K\) and products of powers of fundamental units.
 
     \begin{theorem*}[Dirichlet's unit theorem]
-      Let \(K\) be a number field of signature \((r_{1},r_{2})\). Then
+      Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then
       \[
         \mc{O}_{K}^{\ast} \cong \mu(K) \x \Z^{r_{K}}.
       \]
@@ -436,39 +437,38 @@
       \[
         \e = \w\e_{1}^{\nu_{1}} \cdots \e_{r_{K}}^{\nu_{r_{K}}},
       \]
-      for some \(\w \in \mu(K)\) and \(\nu_{i} \in \Z\) for \(1 \le i \le r_{K}\).
+      for some \(\w \in \mu(K)\) and integers \(\nu_{i}\).
     \end{theorem*}
     \begin{proof}
-      By \cref{prop:exact_sequence_for_Dirichlets_unit_theorem} we have an exact sequence
-
-      \begin{center}
-        \begin{tikzcd}
-          1 \arrow{r} & \mu(K) \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r}{\l} & \L \arrow{r} & 0,
-        \end{tikzcd}
-      \end{center}
-
-      and by \cref{thm:unit_group_complete_lattice} we know that \(\L\) is a free abelian group of rank \(r_{K}\). Let \(\e_{1},\ldots,\e_{r_{K}}\) be a system of fundamental units for \(K\) and let \(E\) be the subgroup of \(\mc{O}_{K}^{\ast}\) generated by them. Then \(\l\) induces an isomorphism between \(E\) and \(\L\) so that \(\mu(K) \cap E = \{1\}\) because the sequence is exact. As \(\mu(K)\) and \(E\) are subgroups, \(\mu(K) \cap E = \{1\}\) implies \(\mc{O}_{K}^{\ast} \cong \mu(K) \x E\). Since \(E \cong \Z^{r_{K}}\) (because \(\L \cong \Z^{r_{K}}\)), we have \(\mc{O}_{K}^{\ast} \cong \mu(K) \x \Z^{r_{K}}\). Moreover, from the isomorphism \(E \cong \Z^{r_{K}}\) we see that any element of \(E\) is of the form \(\e_{1}^{\nu_{1}} \cdots \e_{r_{K}}^{\nu_{r_{K}}}\) with \(\nu_{i} \in \Z\) for \(1 \le i \le r_{K}\). This completes the proof.
+      As \(\L_{K}\) is a free \(\Z\)-module by \cref{thm:unit_group_complete_lattice}, the short exact sequence in \cref{prop:exact_sequence_for_Dirichlets_unit_theorem} splits. Whence
+      \[
+        \mc{O}_{K}^{\ast} \cong \mu(K) \x \Z^{r_{K}},
+      \]
+      because the rank of \(\L_{K}\) is \(r_{K}\). This proves the first statement. For the second statement, let \(\e_{1},\ldots,\e_{r_{K}}\) be a system of fundamental units for \(K\) and let \(E\) be the subgroup of \(\mc{O}_{K}^{\ast}\) generated by them. Then \cref{prop:exact_sequence_for_Dirichlets_unit_theorem} and the first isomorphism theorem together show that \(\l\) induces an isomorphism \(E \cong \Z^{r_{K}}\). Then
+      \[
+        \mc{O}_{K}^{\ast} \cong \mu(K) \x E,
+      \]
+      from which the second statement follows.
     \end{proof}
 
-    Note that Dirichlet's unit theorem also implies that \(\L\) is a complete lattice in \(H\) (by the definition of \(\l\)). In other words, we may reference this result instead of \cref{thm:unit_group_complete_lattice}. We will now discuss the covolume \(V_{\L}\) of \(\L\). Let \(\e_{1},\ldots,\e_{r_{K}}\) be a system of fundamental units for \(K\). Then \(\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is a basis for \(\L\). Setting
+    Recall from \cref{thm:unit_group_complete_lattice} that \(\L_{K}\) is a complete integral lattice of \(H\). The determination of its covolume \(V_{\L_{K}}\) it important as it measures how dense the units of \(K\) are. To this end, let \(\e_{1},\ldots,\e_{r_{K}}\) be a system of fundamental units for \(K\) so that \(\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is a basis for \(\L_{K}/\Z\). Setting
     \[
-      \l_{0} = \frac{1}{\sqrt{r_{K}+1}}\mathbf{1},
+      \l_{0} = \frac{\mathbf{1}}{\sqrt{r_{K}+1}},
     \]
-    we see that \(\l_{0}\) is a unit vector in \(\R^{r_{K}+1}\) since \(\|\mathbf{1}\| = r_{K}+1\) and is orthogonal to \(H\) because \(\Trace_{\R^{r_{K}+1}/\R}(\l_{0}) = \sqrt{r_{K}+1}\) is nonzero. As \(\l_{0}\) is orthogonal to \(\L \subset H\), we see that \(\l_{0},\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is a basis for the complete lattice \(\L' = \Z\l_{0}+\L\) in \(\R^{r_{K}+1}\). Since \(\l_{0}\) is a unit vector, the volume of the fundamental domain for \(\L'\) in \(\R^{r_{K}+1}\) is equal to the volume of the fundamental domain for \(\L\) in \(\H\). By \cref{prop:covolume_equals_volume_of_fundamental_domain}, the corresponding covolumes are equal which is to say \(V_{\L} = V_{\L'}\). So it suffices to compute \(V_{\L'}\). The generator matrix \(P\) for \(\L'\) associated to the basis \(\l_{0},\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is given by
+    we see that \(\l_{0}\) is a unit vector in \(\R^{r_{K}+1}\) orthogonal to \(H\). Whence \(\l_{0}\) is orthogonal to \(\L\) and it follows that \(\l_{0},\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is a basis for the complete integral lattice \(\L_{K}' = \Z\l_{0}+\L_{K}\) of \(\R^{r_{K}+1}\). Since \(\l_{0}\) is a unit vector, the volume of a fundamental domain for \(\L_{K}'\) in \(\R^{r_{K}+1}\) is equal to the volume of a fundamental domain for \(\L_{K}\) in \(H\). This means that the corresponding covolumes are equal (see \cref{sec:integral_lattices}) which is to say \(V_{\L_{K}} = V_{\L_{K}'}\). So it suffices to compute \(V_{\L_{K}'}\). The associated generator matrix for \(\L_{K}'\) is given by
     \[
-      P = \begin{pmatrix} \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & \vdots & & \vdots \\ \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1} \end{pmatrix}.
+      \begin{pmatrix} \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & \vdots & & \vdots \\ \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1} \end{pmatrix}.
     \]
-    Adding all of the rows to a fixed row results in
+    Adding all of the rows to an arbitrary fixed row results in
     \[
-      P' = \begin{pmatrix} \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & \vdots & & \vdots \\ \sqrt{r_{K}+1} & 0 & & 0 \\ \vdots & \vdots & & \vdots \\ \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1} \end{pmatrix},
+      \begin{pmatrix} \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & \vdots & & \vdots \\ \sqrt{r_{K}+1} & 0 & & 0 \\ \vdots & \vdots & & \vdots \\ \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1} \end{pmatrix},
     \]
-    because \(\l(\e) \in H\) for all \(\e \in \mc{O}_{K}^{\ast}\). As \(P'\) differs from \(P\) be row addition, their determinants are the same. Cofactor expanding along the row with all zeros except the first entry, and that this row is arbitrary, shows
-    \begin{equation}\label{equ:covolume_of_unit_lattice}
-      V_{\L} = \sqrt{r_{K}+1}R_{K},
-    \end{equation}
+    which has the same determinant as that of the generator matrix. Cofactor expanding along the row with all zeros except the first entry shows
+    \[
+      V_{\L_{K}} = \sqrt{r_{K}+1}R_{K},
+    \]
     where \(R_{K}\) is the absolute value of the determinant of any rank \(r_{K}\) minor of
     \[
       \begin{pmatrix} \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & & \vdots \\ \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1}  \end{pmatrix}.
     \]
-    We call \(R_{K}\) the \textbf{regulator}\index{regulator} of \(K\). Since \(V_{\L}\) is independent of the choice of basis, the regulator \(R_{K}\) is independent of any choice of a system of fundamental units for \(K\). Moreover, since \(H\) is a real inner product space we see that the regulator is roughly a measure of the density of the fundamental units in \(K\) (recall \cref{prop:covolume_equals_volume_of_fundamental_domain}). The smaller the regulator the more dense the fundamental units are.
-    \fi
+    Indeed, we may choose any rank \(r_{K}\) minor since the cofactor expansion was along an arbitrary row. We call \(R_{K}\) the \textbf{regulator}\index{regulator} of \(K\). Since the covolume \(V_{\L_{K}}\) of \(\L_{K}\) is independent of the choice of basis for \(\L_{K}/\Z\), the regulator \(R_{K}\) is independent of the choice of a system of fundamental units for \(K\). The regulator is a rough measure of the density of the units for \(K\) in the sense that smaller the regulator is the more dense the units are.

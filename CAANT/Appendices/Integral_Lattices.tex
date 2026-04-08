@@ -1,43 +1,43 @@
   \section{Integral Lattices}\label{sec:integral_lattices}
-    Let \(F\) be a characteristic zero field and \(V\) be an \(\F\)-vector space of dimension \(n\) with nondegenerate symmetric inner product \(\<\cdot,\cdot\>\). We say that a subset \(\L\) of \(V\) is a \textit{lattice} if \(\L\) is a free \(\Z\)-module. In particular, any lattice \(\L\) is of the form
+    Let \(F\) be a characteristic zero field and \(V\) be an \(\F\)-vector space of dimension \(n\) with nondegenerate symmetric inner product \(\<\cdot,\cdot\>\). We say that a subset \(\L\) of \(V\) is a \textbf{integral lattice}\index{integral lattice} if \(\L\) is a free \(\Z\)-module. In particular, any integral lattice \(\L\) is of the form
     \[
       \L = \Z v_{1}+\cdots+\Z v_{m},
     \]
-    for some linearly independent vectors \(v_{1},\ldots,v_{m}\) of \(V\) with \(m \le n\). We say \(\L\) is \textit{complete} if \(n = m\). This means \(v_{1},\ldots,v_{n}\) is necessarily a basis of \(V\). If \(e_{1},\ldots,e_{n}\) is an orthonormal basis for \(V\), write
+    for some linearly independent vectors \(v_{1},\ldots,v_{m}\) of \(V\) with \(m \le n\). We say \(\L\) is \textbf{complete}\index{complete} if \(n = m\). This means \(v_{1},\ldots,v_{n}\) is necessarily a basis of \(V\). If \(e_{1},\ldots,e_{n}\) is an orthonormal basis for \(V\), write
     \[
       v_{i} = \sum_{i}v_{i,j}e_{j},
     \]
-    with \(v_{i,j} \in F\), and define the associated \textit{generator matrix} \(P\) by
+    with \(v_{i,j} \in F\), and define the associated \textbf{generator matrix}\index{generator matrix} \(P\) by
     \[
       P = \begin{pmatrix} v_{1,1} & \cdots & v_{n,1} \\ \vdots & & \vdots \\ v_{1,n} & \cdots & v_{n,n} \end{pmatrix}.
     \]
-    Then \(P\) is the base change matrix from \(e_{1},\ldots,e_{n}\) to \(v_{1},\ldots,v_{n}\). The \textit{covolume} \(V_{\L}\) of a complete lattice \(\L\) is defined to be
+    Then \(P\) is the base change matrix from \(e_{1},\ldots,e_{n}\) to \(v_{1},\ldots,v_{n}\). The \textbf{covolume}\index{covolume} \(V_{\L}\) of a complete integral lattice \(\L\) is defined to be
     \[
       V_{\L} = |\det(P)|.
     \]
     As the base change matrix between any two orthonormal basses is an orthogonal matrix and hence has determinant \(\pm 1\), the covolume is independent of the choice of bases. In the case where \(V\) is a real or complex vector space, we will always take \(e_{1},\ldots,e_{n}\) to be the standard basis.
     
-    If \(\L\) is a complete lattice in \(V\) then the \textit{dual} \(\L^{\vee}\) of \(\L\) is defined by
+    If \(\L\) is a complete integral lattice in \(V\) then the \textbf{dual}\index{dual} \(\L^{\vee}\) of \(\L\) is defined by
     \[
       \L^{\vee} = \{v \in V:\<\l,v\> \in \Z \text{ for all } \l \in \L\}.
     \]
-    In other words, the dual lattice consists of all of the vectors in \(V\) whose inner product with elements of the lattice are integers. Clearly the dual lattice is an abelian group. Less clear is that the dual lattice turns out to always be a complete lattice.
+    In other words, the dual integral lattice consists of all of the vectors in \(V\) whose inner product with elements of the integral lattice are integers. Clearly the dual integral lattice is an abelian group. Less clear is that the dual integral lattice turns out to always be complete.
 
     \begin{proposition}\label{prop:dual_lattice_exists}
-      If \(v_{1},\ldots,v_{n}\) is a basis for a complete lattice \(\L\) then the dual basis \(v_{1}^{\vee},\ldots,v_{n}^{\vee}\) is a basis for \(\L^{\vee}\). In particular, \(\L^{\vee}\) is a complete lattice.
+      If \(v_{1},\ldots,v_{n}\) is a basis for a complete integral lattice \(\L\) then the dual basis \(v_{1}^{\vee},\ldots,v_{n}^{\vee}\) is a basis for \(\L^{\vee}\). In particular, \(\L^{\vee}\) is a complete integral lattice.
     \end{proposition}
     \begin{proof}
       Let \(v \in V\) and write
       \[
         v = \sum_{j}a_{i}v_{j}^{\vee},
       \]
-      with \(v_{j}^{\vee} \in \R\). Since the dual basis is determined by \(\<v_{i},v_{j}^{\vee}\> = \d_{i,j}\), it follows that \(v \in \L^{\vee}\) if and only if \(v_{j}^{\vee} \in \Z\). This means \(v_{1}^{\vee},\ldots,v_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a free \(\Z\)-module and thus is a complete lattice.
+      with \(v_{j}^{\vee} \in \R\). Since the dual basis is determined by \(\<v_{i},v_{j}^{\vee}\> = \d_{i,j}\), it follows that \(v \in \L^{\vee}\) if and only if \(v_{j}^{\vee} \in \Z\). This means \(v_{1}^{\vee},\ldots,v_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a free \(\Z\)-module and thus is a complete integral lattice.
     \end{proof}
 
-    Since the dual of the dual basis is the original basis, \((\L^{\vee})^{\vee} = \L\). We say that \(\L\) is \textit{self-dual} if \(\L^{\vee} = \L\). For example, the lattice \(\Z^{n}\) is self-dual because the standard basis is self-dual. It also turns out that the covolume of the dual lattice is the inverse of the volume of the original lattice.
+    Since the dual of the dual basis is the original basis, \((\L^{\vee})^{\vee} = \L\). We say that \(\L\) is \textbf{self-dual}\index{self-dual} if \(\L^{\vee} = \L\). For example, the integral lattice \(\Z^{n}\) is self-dual because the standard basis is self-dual. It also turns out that the covolume of the dual integral lattice is the inverse of the volume of the original integral lattice.
 
     \begin{proposition}\label{prop:covolume_of_dual_is_inverse}
-      Let \(\L\) be a complete lattice in \(V\). Then
+      Let \(\L\) be a complete integral lattice in \(V\). Then
       \[
         V_{\L^{\vee}} = \frac{1}{V_{\L}}.
       \]
@@ -61,7 +61,7 @@
     Moreover, any translation of \(\mc{M}\) by an element of \(\L\) is also a fundamental domain. As we might expect, the covolume of \(\L\) is equal to the volume of \(\mc{M}\).
 
     \begin{proposition}\label{prop:covolume_equals_volume_of_fundamental_domain}
-      Let \(\L\) be a complete lattice in a finite dimensional real inner product space \(V\) and let \(\mc{M}\) be a fundamental domain for \(\L\). Then
+      Let \(\L\) be a complete integral lattice in a finite dimensional real inner product space \(V\) and let \(\mc{M}\) be a fundamental domain for \(\L\). Then
       \[
         V_{\L} = \Vol(\mc{M}).
       \]
@@ -77,32 +77,32 @@
       \]
     \end{proof}
 
-    This result shows that the covolume of a complete lattice in a real inner product space is a measure of the density of the lattice. The smaller the covolume the smaller the fundamental domain and the more dense the lattice is.
+    This result shows that the covolume of a complete integral lattice in a real inner product space is a measure of the density of the integral lattice. The smaller the covolume the smaller the fundamental domain and the more dense the integral lattice is.
     
-    It turns out that for a real inner product space, being a lattice is equivalent to being a discrete subgroup.
+    It turns out that for a real inner product space, being an integral lattice is equivalent to being a discrete subgroup.
 
     \begin{proposition}\label{prop:lattice_if_and_only_if_discrete_subgroup}
-      Let \(\L\) be a subset of a finite dimensional real inner product space \(V\). Then \(\L\) is a lattice if and only if it is a discrete subgroup.
+      Let \(\L\) be a subset of a finite dimensional real inner product space \(V\). Then \(\L\) is an integral lattice if and only if it is a discrete subgroup.
     \end{proposition}
     \begin{proof}
-      It is clear that if \(\L\) is a lattice then it is a discrete subgroup. So suppose \(\L\) is a discrete subgroup. Then \(\L\) is closed. Let \(V'\) be the subspace spanned by \(\L\) and let its dimension be \(m\). Choosing a basis \(v'_{1},\ldots,v'_{m}\) of \(V'\), set
+      It is clear that if \(\L\) is an integral lattice then it is a discrete subgroup. So suppose \(\L\) is a discrete subgroup. Then \(\L\) is closed. Let \(V'\) be the subspace spanned by \(\L\) and let its dimension be \(m\). Choosing a basis \(v'_{1},\ldots,v'_{m}\) of \(V'\), set
       \[
         \L' = \Z v'_{1}+\cdots+\Z v'_{m}.
       \]
-      Then \(\L'\) is a complete lattice in \(V'\) and \(\L' \subseteq \L \subset V\). We claim \(\L/\L'\) is finite. To see this, let \(\l\) be a representative of a coset in \(\L/\L'\) and let \(\mc{M}'\) be a fundamental domain for \(\L'\) in \(V'\). As \(\mc{M}'\) is a fundamental domain, there exists unique \(w' \in \mc{M}'\) and \(\l' \in \L'\) such that \(\l = w'+\l'\). But then \(w' = \l-\l' \in \mc{M}' \cap \L\) and since \(\mc{M}' \cap \L\) is closed, discrete, and compact, it must be finite. Hence there are finitely many \(w'\) and thus finitely many cosets in \(\L/\L'\). Letting \(|\L/\L'| = q\), we have \(q\L \subseteq \L'\) and therefore
+      Then \(\L'\) is a complete integral lattice in \(V'\) and \(\L' \subseteq \L \subset V\). We claim \(\L/\L'\) is finite. To see this, let \(\l\) be a representative of a coset in \(\L/\L'\) and let \(\mc{M}'\) be a fundamental domain for \(\L'\) in \(V'\). As \(\mc{M}'\) is a fundamental domain, there exists unique \(w' \in \mc{M}'\) and \(\l' \in \L'\) such that \(\l = w'+\l'\). But then \(w' = \l-\l' \in \mc{M}' \cap \L\) and since \(\mc{M}' \cap \L\) is closed, discrete, and compact, it must be finite. Hence there are finitely many \(w'\) and thus finitely many cosets in \(\L/\L'\). Letting \(|\L/\L'| = q\), we have \(q\L \subseteq \L'\) and therefore
       \[
         \L \subseteq \L' = \Z\frac{1}{q}v'_{1}+\cdots+\Z\frac{1}{q}v'_{m}.
       \]
-      In particular, \(\L\) is a subgroup of a free \(\Z\)-module and therefore is a free \(\Z\)-module itself. This means \(\L\) is a lattice.
+      In particular, \(\L\) is a subgroup of a free \(\Z\)-module and therefore is a free \(\Z\)-module itself. This means \(\L\) is an integral lattice.
     \end{proof}
 
-    As for complete lattices in \(V\), they are equivalent to the existence of a bounded set whose translates cover \(V\).
+    As for complete integral lattices in \(V\), they are equivalent to the existence of a bounded set whose translates cover \(V\).
 
     \begin{proposition}\label{prop:complete_lattice_if_and_only_if_bounded_translates_cover}
-      Let \(\L\) be a lattice in a finite dimensional real inner product space \(V\). Then \(\L\) complete if and only if there exists a bounded subset \(M\) of \(V\) whose translates by \(\L\) cover \(V\).
+      Let \(\L\) be an integral lattice in a finite dimensional real inner product space \(V\). Then \(\L\) complete if and only if there exists a bounded subset \(M\) of \(V\) whose translates by \(\L\) cover \(V\).
     \end{proposition}
     \begin{proof}
-      First suppose \(\L\) is complete. Then we may take \(M = \mc{M}\) to be a fundamental domain of \(\L\) which is bounded and whose translates by \(\L\) cover \(V\). Now suppose \(\L\) is a lattice and there exists a bounded subset \(M\) of \(V\) whose translates by \(\L\) cover \(V\). Let \(W\) be the subspace of \(V\) spanned by \(\L\). Then \(W\) is closed. Moreover, \(\L\) is complete if and only if \(V = W\) and this is what we will show. So let \(v \in V\). Since the translates of \(M\) by \(\L\) cover \(V\), for every positive integer \(n\) we may write
+      First suppose \(\L\) is complete. Then we may take \(M = \mc{M}\) to be a fundamental domain of \(\L\) which is bounded and whose translates by \(\L\) cover \(V\). Now suppose \(\L\) is an integral lattice and there exists a bounded subset \(M\) of \(V\) whose translates by \(\L\) cover \(V\). Let \(W\) be the subspace of \(V\) spanned by \(\L\). Then \(W\) is closed. Moreover, \(\L\) is complete if and only if \(V = W\) and this is what we will show. So let \(v \in V\). Since the translates of \(M\) by \(\L\) cover \(V\), for every positive integer \(n\) we may write
       \[
         nv = w_{n}+\l_{n},
       \]
@@ -113,10 +113,10 @@
       and is an element of \(W\). Thus \(V = W\) which means \(\L\) is complete.
     \end{proof}
 
-    The most important result we will require about lattices is \textit{Minkowski's lattice point theorem} which states that, under some mild conditions, a set of sufficiently large volume in \(V\) contains a nonzero point of a complete lattice.
+    The most important result we will require about integral lattices is \textbf{Minkowski's lattice point theorem}\index{Minkowski's lattice point theorem} which states that, under some mild conditions, a set of sufficiently large volume in \(V\) contains a nonzero point of a complete integral lattice.
 
     \begin{theorem*}[Minkowski's lattice point theorem]
-      Suppose \(\L\) is a complete lattice in a real inner product space \(V\) of dimension \(n\). Let \(X \subset V\) is a compact convex symmetric set. If
+      Suppose \(\L\) is a complete integral lattice in a real inner product space \(V\) of dimension \(n\). Let \(X \subset V\) is a compact convex symmetric set. If
       \[
         \Vol(X) \ge 2^{n}V_{\L},
       \]
