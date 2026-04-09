@@ -1177,11 +1177,23 @@
     \end{proof}
 
     \subsection*{Number Fields}
-      We now turn to the setting of a number field \(K\). Let \(S\) denote a finite set of primes of \(\mc{O}_{K}\) and let \(X\) denote the set of all primes that do not belong to \(S\). The \textbf{ring of \(S\)-integers}\index{ring of \(S\)-integers} \(\mc{O}_{K}^{S}\) of \(K\) is defined by
+      We now turn to the setting of a number field \(K\). Let \(S\) denote a finite set of primes of \(\mc{O}_{K}\) and let \(X\) denote the set of all primes that do not belong to \(S\). The \textbf{ring of \(S\)-integers}\index{ring of \(S\)-integers} \(\mc{O}_{K,S}\) of \(K\) is defined by
       \[
-        \mc{O}_{K}^{S} = \mc{O}_{K}(X).
+        \mc{O}_{K,S} = \mc{O}_{K}(X).
       \]
-      We call any \(\a \in \mc{O}_{K}^{S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl^{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}^{S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K}^{S}\) of \(K\) is the class number of \(\Cl^{S}(K)\). The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \((\mc{O}_{K}^{S})^{\ast}\) of \(\mc{O}_{K}^{S}\) and we call any element of \((\mc{O}_{K}^{S})^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
+      We call any \(\a \in \mc{O}_{K,S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl_{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K,S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K,S}\) of \(K\) is the class number of \(\Cl_{S}(K)\). There is a simple relationship between the \(S\)-class number and the class number \(h_{K}\). Indeed, \cref{prop:ideal_class_group_localization_exact_sequence} gives an isomorphism
+      \[
+        \Cl_{S}(K) \cong \Cl(K)/\<\mf{p}P(\mc{O}_{K}):\mf{p} \in S\>.
+      \]
+      Whence
+      \begin{equation}\label{equ:S_class_number}
+        h_{K,S} = \frac{h_{K}}{|\<\mf{p}P(\mc{O}_{K}):\mf{p} \in S\>|},
+      \end{equation}
+      so that the \(S\)-class number is generally smaller than the class number. The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \(\mc{O}_{K,S}^{\ast}\) of \(\mc{O}_{K,S}\) and we call any element of \(\mc{O}_{K,S}^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\). Similar to class numbers, there is a relationship between the \(S\)-unit group \(\mc{O}_{K,S}^{\ast}\) and the unit group \(\mc{O}_{K}^{\ast}\). For \cref{prop:ideal_class_group_localization_exact_sequence} gives an isomorphism
+      \[
+        \mc{O}_{K,S}^{\ast} \cong \mc{O}_{K}^{\ast} \x \Z^{|S|},
+      \]
+      which shows that the \(S\)-unit group is generally larger than the unit group.
   \section{Orders}
     Recall that Dedekind domains are one-dimensional noetherian domains that are also integrally closed domains. An order will relax the condition of being integrally closed, and surprisingly, we will still be able to deduce similar information as we did for Dedekind domains. More precisely, for any integral domain \(\smc{O}\) with field of fractions \(K\), we define its \textbf{conductor}\index{conductor} \(\mf{q}_{\smc{O}}\) to be
     \[

@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {4.2}Traces and Norms}{27}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Dedekind Domains}{38}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Localization}{50}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Orders}{58}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Orders}{59}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Prime Splitting}{66}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Ramification}{77}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Differents and Discriminants}{83}{section.4.8}%
