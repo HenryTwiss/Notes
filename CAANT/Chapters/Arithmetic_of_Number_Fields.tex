@@ -1182,14 +1182,10 @@
         \mc{O}_{K,S} = \mc{O}_{K}(X).
       \]
       We call any \(\a \in \mc{O}_{K,S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl_{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K,S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K,S}\) of \(K\) is the class number of \(\Cl_{S}(K)\). There is a simple relationship between the \(S\)-class number and the class number \(h_{K}\). Indeed, \cref{prop:ideal_class_group_localization_exact_sequence} gives an isomorphism
-      \[
-        \Cl_{S}(K) \cong \Cl(K)/\<\mf{p}P(\mc{O}_{K}):\mf{p} \in S\>.
-      \]
-      Whence
-      \begin{equation}\label{equ:S_class_number}
-        h_{K,S} = \frac{h_{K}}{|\<\mf{p}P(\mc{O}_{K}):\mf{p} \in S\>|},
+      \begin{equation}\label{equ:S_class_group_isomorphism}
+        \Cl_{S}(K) \cong \Cl(K)/\<\mf{p}P(\mc{O}_{K}):\mf{p} \in S\>,
       \end{equation}
-      so that the \(S\)-class number is generally smaller than the class number. The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \(\mc{O}_{K,S}^{\ast}\) of \(\mc{O}_{K,S}\) and we call any element of \(\mc{O}_{K,S}^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\). Similar to class numbers, there is a relationship between the \(S\)-unit group \(\mc{O}_{K,S}^{\ast}\) and the unit group \(\mc{O}_{K}^{\ast}\). For \cref{prop:ideal_class_group_localization_exact_sequence} gives an isomorphism
+      so that the \(S\)-class group is generally smaller than the class group. The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \(\mc{O}_{K,S}^{\ast}\) of \(\mc{O}_{K,S}\) and we call any element of \(\mc{O}_{K,S}^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\). Similar to class numbers, there is a relationship between the \(S\)-unit group \(\mc{O}_{K,S}^{\ast}\) and the unit group \(\mc{O}_{K}^{\ast}\). For \cref{prop:ideal_class_group_localization_exact_sequence} gives an isomorphism
       \[
         \mc{O}_{K,S}^{\ast} \cong \mc{O}_{K}^{\ast} \x \Z^{|S|},
       \]
@@ -1208,7 +1204,7 @@
       For the forward implication, suppose \(\mf{q}_{\smc{O}}\) is an integral ideal of \(\smc{O}\). Then there is some nonzero \(\a \in \mf{q}_{\smc{O}}\) with \(\a\conj{\smc{O}} \subseteq \smc{O}\). Whence \(\a\conj{\smc{O}}\) is an ideal of \(\smc{O}\) and hence a finitely generated \(\smc{O}\)-module as \(\smc{O}\) is noetherian. But then \(\conj{\smc{O}}\) is a finitely generated \(\smc{O}\)-module. For the reverse implication, let \(\frac{\eta_{1}}{\d_{1}},\ldots,\frac{\eta_{r}}{\d_{r}}\) be generators of \(\conj{\smc{O}}\) as an \(\smc{O}\)-module. Then \(\d = \prod_{i}\d_{i}\) is nonzero with \(\d\conj{\smc{O}} \subset \smc{O}\). Whence \(\d \in \mf{q}_{\smc{O}}\).
     \end{proof}
     
-    Accordingly, an \textbf{order}\index{order} \(\smc{O}\) is a one-dimensional noetherian domain whose conductor is an integral ideal of \(\smc{O}\). If \(\smc{O}\) has field of fractions \(K\) then this last condition is equivalent to the normalization \(\conj{\smc{O}}\) being a finitely generated \(\smc{O}\)-module. This means \(\smc{O}\) is a Dedekind domain if and only if it is an integrally closed domain which happens if and only if the conductor is \(\smc{O}\) itself. In fact, the normalization of an order is always a Dedekind domain.
+    Accordingly, an \textbf{order}\index{order} \(\smc{O}\) is a one-dimensional noetherian domain whose conductor is an integral ideal of \(\smc{O}\). Whence the conductor is also an integral ideal of \(\conj{\smc{O}}\). In view of the previous result, the conductor being an integral ideal of \(\smc{O}\) is equivalent to the normalization \(\conj{\smc{O}}\) being a finitely generated \(\smc{O}\)-module. This means \(\smc{O}\) is a Dedekind domain if and only if it is an integrally closed domain which happens if and only if the conductor is \(\smc{O}\) itself. In fact, the normalization of an order is always a Dedekind domain.
 
     \begin{proposition}\label{prop:normalization_of_order_is_Dedekind}
       Let \(\smc{O}\) be an order with field of fractions \(K\). Then \(\conj{\smc{O}}\) is a Dedekind domain with field of fractions \(K\).
@@ -1234,11 +1230,14 @@
     \[
       \Pic(\smc{O}) = I(\smc{O})/P(\smc{O}).
     \]
-    Of course, in the case \(\smc{O}\) is a Dedekind domain, the Picard group is precisely the ideal class group which is to say
+    A class of \(\Pic(\smc{O})\) is called an \textbf{Picard class}\index{Picard class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. The \textbf{class number}\index{class number} \(h_{\smc{O}}\) of \(\smc{O}\) is defined by
+    \[
+      h_{\smc{O}} = |\Pic(\smc{O})|.
+    \]
+    The class number is a measure of the degree of failure for every invertible ideal to be principal. Of course, in the case \(\smc{O}\) is a Dedekind domain, the Picard group is precisely the ideal class group and the corresponding class numbers are equal. This is to say that
     \[
       \Pic(\smc{O}) = \Cl(\smc{O}).
     \]
-    A class of \(\Pic(\smc{O})\) is called an \textbf{Picard class}\index{Picard class} of \(\smc{O}\). As every fractional ideal \(\mf{f}\) can be expressed as \(\mf{f} = \frac{1}{\d}\mf{a}\) for some nonzero \(\d \in \smc{O}\) and integral ideal \(\mf{a}\), we have \(\d\mf{f} = \mf{a}\) and it follows that every ideal class can be represented by an integral ideal. 
     The \textbf{unit group}\index{unit group} of \(\smc{O}\) is defined to be \(\smc{O}^{\ast}\). That is, the unit group is the group of units in \(\smc{O}\). The Picard and unit groups of \(\smc{O}\) fit into a short exact sequence analogous to \cref{prop:ideal_class_group_exact_sequence}.
 
     \begin{proposition}\label{prop:Picard_class_group_exact_sequence}
@@ -1366,7 +1365,7 @@
 
     With this formulation of the Picard group, it is possible to obtain a long exact sequence relating the Picard and ideal class groups of \(\smc{O}\) and its normalization \(\conj{\smc{O}}\).
 
-    \begin{proposition}
+    \begin{proposition}\label{prop:long_exact_sequence_orders}
       Let \(\smc{O}\) be an order with field of fractions \(K\). Then there is a long exact sequence
       \begin{center}
         \begin{tikzcd}
@@ -1387,11 +1386,11 @@
       \[
         I(\smc{O}) \cong \bigop_{\mf{p}}P(\smc{O}_{\mf{p}}) \quad \text{and} \quad I(\conj{\smc{O}}) \cong \bigop_{\conj{\mf{p}}}P(\conj{\smc{O}}_{\conj{\mf{p}}}).
       \]
-      By \cref{prop:localization_of_integral_closure_is_integral_closure}, \(\conj{\smc{O}}_{\mf{p}}\) is the normalization of \(\smc{O}_{\mf{p}}\). Then \cref{prop:localization_of_Dedekind_is_Dedekind,prop:normalization_of_order_is_Dedekind} together show that \(\conj{\smc{O}}_{\mf{p}}\) is also a Dedekind domain. But as \(\smc{O}_{\mf{p}}\) is local and an order by \cref{prop:localization_preserves_orders}, there is a unique prime which coincides with the unique maximal ideal. It follows that every prime of \(\conj{\smc{O}}_{\mf{p}}\) is above this prime and therefore there can only be finitely many primes. Then \(\conj{\smc{O}}_{\mf{p}}\) is a principal ideal domain by \cref{prop:Dedekind_with_finite_primes_is_PID}. From \cref{prop:localization_prime_bijection}, the primes of \(\conj{\smc{O}}_{\mf{p}}\) correspond bijectively to the primes \(\conj{\mf{p}}\) of \(\conj{\smc{O}}\) contained in \(\mf{p}\). As \(\conj{\smc{O}}_{\conj{\mf{p}}}\) is a discrete valuation ring by \cref{thm:Dedekind_if_and_only_if_all_localizations_are_discrete_valuation_rings}, \(P(\conj{\smc{O}}_{\conj{\mf{p}}}) \cong \Z\) and we obtain and isomorphism
+      By \cref{prop:localization_of_Dedekind_is_Dedekind,prop:normalization_of_order_is_Dedekind}, \(\conj{\smc{O}}_{\mf{p}}\) is a Dedekind domain. But as \(\smc{O}_{\mf{p}}\) is local and an order by \cref{prop:localization_preserves_orders}, \(\mf{p}_{\mf{p}}\) is the unique prime which is also the unique maximal ideal of \(\smc{O}_{\mf{p}}\). It follows that every prime \(\conj{\mf{p}}_{\mf{p}}\) of \(\conj{\smc{O}}_{\mf{p}}\) is above \(\mf{p}_{\mf{p}}\) which happens if and only if \(\mf{p} \subseteq \conj{\mf{p}}\) by \cref{prop:localization_prime_bijection}. In particular, there can only be finitely many primes whence \(\conj{\smc{O}}_{\mf{p}}\) is a principal ideal domain by \cref{prop:Dedekind_with_finite_primes_is_PID}. As \(\conj{\smc{O}}_{\conj{\mf{p}}}\) is a discrete valuation ring by \cref{thm:Dedekind_if_and_only_if_all_localizations_are_discrete_valuation_rings}, we obtain an isomorphism
       \[
-        P(\conj{\smc{O}}_{\mf{p}}) \cong \bigop_{\conj{\mf{p}} \subseteq \mf{p}}P(\conj{\smc{O}}_{\conj{\mf{p}}}),
+        P(\conj{\smc{O}}_{\mf{p}}) \cong \bigop_{\mf{p} \subseteq \conj{\mf{p}}}P(\conj{\smc{O}}_{\conj{\mf{p}}}),
       \]
-      since \(\conj{\smc{O}}_{\mf{p}}\) is a principal ideal domain. Then from our previous isomorphisms, we obtain
+      induced by localization. Since we have isomorphisms \(K^{\ast}/\smc{O}_{\mf{p}}^{\ast} \cong P(\smc{O}_{\mf{p}})\) and \(K^{\ast}/\conj{\smc{O}}_{\mf{p}}^{\ast} \cong P(\conj{\smc{O}}_{\conj{\mf{p}}})\) induced by the maps \(\k \mapsto \k\smc{O}\) and \(\k \mapsto \k\conj{\smc{O}}\) respectively, our previous work gives isomorphisms
       \[
         I(\smc{O}) \cong \bigop_{\mf{p}}K^{\ast}/\smc{O}_{\mf{p}}^{\ast} \quad \text{and} \quad I(\conj{\smc{O}}) \cong \bigop_{\mf{p}}K^{\ast}/\conj{\smc{O}}_{\mf{p}}^{\ast},
       \]
@@ -1442,7 +1441,48 @@
     \[
       \mf{p}_{1} \cdots \mf{p}_{k} \subseteq \mf{q}_{\smc{O}},
     \]
-    for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{q}_{\smc{O}}\) is a prime and thus one of the \(\mf{p}_{i}\). In view of the previous result, this means that only finitely many primes of \(\smc{O}\) are irregular and they are exactly the primes which are not invertible. Moreover, there is exactly one prime of \(\conj{\smc{O}}\) above each of these primes and they are the exactly the prime factors of \(\mf{q}_{\smc{O}}\) in \(\conj{\smc{O}}\). This is a concrete description of the failure to which \(\smc{O}\) is not integrally closed in terms of the conductor \(\mf{q}_{\smc{O}}\).
+    for some primes \(\mf{p}_{1},\ldots,\mf{p}_{k}\). Since \(\smc{O}\) is one-dimensional, every maximal ideal containing \(\mf{q}_{\smc{O}}\) is a prime and thus one of the \(\mf{p}_{i}\). In view of the previous result, this means that only finitely many primes of \(\smc{O}\) are irregular and they are exactly the primes which are not invertible. This is a concrete description of the failure to which \(\smc{O}\) is not integrally closed in terms of the conductor \(\mf{q}_{\smc{O}}\).
+
+    Using the concept of regular primes, it is also possible to give a more refined description of the direct sum term in \cref{prop:long_exact_sequence_orders}.
+
+    \begin{proposition}\label{prop:quotient_of_quotient_of_conductor_isomorphism}
+      Let \(\smc{O}\) be an order with field of fractions \(K\). Then there is an isomorphism
+      \[
+        (\conj{\smc{O}}/\mf{q}_{\smc{O}})^{\ast}/(\smc{O}/\mf{q}_{\smc{O}})^{\ast} \cong \bigop_{\mf{p}}\conj{\smc{O}}_{\mf{p}}^{\ast}/\smc{O}_{\mf{p}}^{\ast},
+      \]
+      induced by natural projection.
+    \end{proposition}
+    \begin{proof}
+      As the conductor \(\mf{q}_{\smc{O}}\) is both an integral ideal of \(\smc{O}\) and its normalization \(\conj{\smc{O}}\), \cref{prop:localized_Chinese_remainder_theorem} gives isomorphisms
+      \[
+        \smc{O}/\mf{q}_{\smc{O}} \cong \bigop_{\mf{p}}\smc{O}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}} \quad \text{and} \quad \conj{\smc{O}}/\mf{q}_{\smc{O}} \cong \bigop_{\conj{\mf{p}}}\conj{\smc{O}}_{\conj{\mf{p}}}/(\mf{q}_{\smc{O}})_{\conj{\mf{p}}},
+      \]
+      induced by natural projection. By \cref{prop:localization_of_Dedekind_is_Dedekind,prop:normalization_of_order_is_Dedekind}, \(\conj{\smc{O}}_{\mf{p}}\) is a Dedekind domain. But as \(\smc{O}_{\mf{p}}\) is local and an order by \cref{prop:localization_preserves_orders}, \(\mf{p}_{\mf{p}}\) is the unique prime which is also the unique maximal ideal of \(\smc{O}_{\mf{p}}\). It follows that every prime \(\conj{\mf{p}}_{\mf{p}}\) of \(\conj{\smc{O}}_{\mf{p}}\) is above \(\mf{p}_{\mf{p}}\) which happens if and only if \(\mf{p} \subseteq \conj{\mf{p}}\) by \cref{prop:localization_prime_bijection}. By \cref{prop:localized_Chinese_remainder_theorem} again, we have an isomorphism
+      \[
+        \conj{\smc{O}}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}} \cong \bigop_{\mf{p} \subseteq \conj{\mf{p}}}\conj{\smc{O}}_{\conj{\mf{p}}}/(\mf{q}_{\smc{O}})_{\conj{\mf{p}}},
+      \]
+      induced by natural projection. Whence our previous isomorphisms together imply
+      \[
+        (\smc{O}/\mf{q}_{\smc{O}})^{\ast} \cong \bigop_{\mf{p}}(\smc{O}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast} \quad \text{and} \quad (\conj{\smc{O}}/\mf{q}_{\smc{O}})^{\ast} \cong \bigop_{\mf{p}}(\conj{\smc{O}}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast},
+      \]
+      and we obtain an isomorphism
+      \[
+        (\conj{\smc{O}}/\mf{q}_{\smc{O}})^{\ast}/(\smc{O}/\mf{q}_{\smc{O}})^{\ast} \cong \bigop_{\mf{p}}(\conj{\smc{O}}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast}/(\smc{O}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast},
+      \]
+      induced by natural projection. Now suppose \(\mf{p}\) is irregular and consider the homomorphism
+      \[
+        \phi:\conj{\smc{O}}_{\mf{p}}^{\ast} \to (\conj{\smc{O}}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast}/(\smc{O}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast} \qquad \a \mapsto (\a+(\mf{q}_{\smc{O}})_{\mf{p}})(\smc{O}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast},
+      \]
+      induced by natural projection. Note that \(\phi\) is surjective if the homomorphism
+      \[
+        \pi:\conj{\smc{O}}_{\mf{p}}^{\ast} \to (\conj{\smc{O}}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast} \qquad \a \mapsto \a+(\mf{q}_{\smc{O}})_{\mf{p}},
+      \]
+      given by natural projection is. To see that this map is surjective, recall that an element of a ring is invertible if and only if it is not contained in any maximal ideal. By the fourth isomorphism theorem, the preimages of the maximal ideals of \((\conj{\smc{O}}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})\) under natural projection are maximal ideals of \(\conj{\smc{O}}_{\mf{p}}\) containing \((\mf{q}_{\smc{O}})_{\mf{p}}\). These preimages constitute all of the maximal ideals of \(\conj{\smc{O}}_{\mf{p}}\) since every maximal ideal of \(\conj{\smc{O}}_{\mf{p}}\) is a prime which must be above \(\mf{p}_{\mf{p}}\) and irregularity implies \(\mf{q}_{\smc{O}} \subseteq \mf{p}\) by \cref{prop:regular_primes_relative_to_conductor}. Therefore \(\pi\), and hence \(\phi\) as well, is surjective. Clearly \(\smc{O}_{\mf{p}}^{\ast} \subseteq \ker\phi\). But \(\ker\phi\) is also a subgroup of \(\conj{\smc{O}}_{\mf{p}}^{\ast}\) which is contained in \(\smc{O}_{\mf{p}}\). Whence \(\ker\phi = \smc{O}_{\mf{p}}^{\ast}\). The first isomorphism theorem then implies
+      \[
+        \conj{\smc{O}}_{\mf{p}}^{\ast}/\smc{O}_{\mf{p}}^{\ast} \cong (\conj{\smc{O}}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast}/(\smc{O}_{\mf{p}}/(\mf{q}_{\smc{O}})_{\mf{p}})^{\ast},
+      \]
+      provided \(\mf{p}\) is irregular. If \(\mf{p}\) is regular, then \(\smc{O}_{\mf{p}}\) is an integrally closed domain and \cref{prop:regular_primes_relative_to_conductor} implies \((\mf{q}_{\smc{O}})_{\mf{p}} = \smc{O}_{\mf{p}}\). Therefore the isomorphism holds as well because all quotients are trivial. This completes the proof.
+    \end{proof}
 
     \subsection*{Number Fields}
       We now turn to the setting of a number field \(K\) of degree \(n\). An \textbf{order}\index{order} \(\smc{O}\) of \(K\) is an order satisfying
@@ -1459,7 +1499,6 @@
     \[
       \mf{p}\mc{O} = \mf{P}_{1}^{e_{\mf{p}}(\mf{P}_{1})} \cdots \mf{P}_{r}^{e_{\mf{p}}(\mf{P}_{r})}.
     \]
-
     Something can also be said about the residue class fields \(\F_{\mf{P}}\) and \(\F_{\mf{p}}\). Consider the homomorphism
     \[
       \phi:\smc{O} \to \F_{\mf{P}} \qquad \a \mapsto \a+\mf{P},
@@ -1863,8 +1902,7 @@
     \[
       n = ref.
     \]
-
-    We define the \textbf{decomposition group}\index{decomposition group} \(D_{\mf{p}}(\mf{P})\) of \(\mf{P}\) over \(\mf{p}\) is defined to by
+    We define the \textbf{decomposition group}\index{decomposition group} \(D_{\mf{p}}(\mf{P})\) of \(\mf{P}\) over \(\mf{p}\) by
     \[
       D_{\mf{p}}(\mf{P}) = \{\tau \in \Gal(L/K):\tau(\mf{P}) = \mf{P}\}.
     \]

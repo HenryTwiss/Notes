@@ -298,7 +298,23 @@
 
     Generally speaking, the class number of \(K\) is one of the most difficult pieces of arithmetic data about \(K\) to compute. For example, it is still unknown if there are infinitely many number fields of class number \(1\). That is to say, it is unknown if there are infinitely many number fields such that their ring of integers are principal ideal domains.
 
-    In fact, it is always possible to modify the ring of integers to make it a principal ideal domain. In view of \cref{equ:S_class_number}, the \(S\)-class number \(h_{K,S}\) is also finite. Therefore it is possible to choose \(S\) large enough (consisting of all the prime factors for a complete set of representatives for ideal classes say) such that \(h_{K,S} = 1\). This means we can always find a finite set of primes \(S\) such that the ring of \(S\)-integers of \(K\) is a principal ideal domain.
+    The \(S\)-class number \(h_{K,S}\), where \(S\) is a finite set of primes of \(K\), is also finite. For \cref{equ:S_class_group_isomorphism} implies
+    \[
+      h_{K,S} = \frac{h_{K}}{|\<\mf{p}P(\mc{O}_{K}):\mf{p} \in S\>|},
+    \]
+    so that the \(S\)-class number is finite and generally smaller than the class number. In fact, it is therefore possible to choose \(S\) large enough (consisting of all the prime factors for a complete set of representatives for ideal classes say) such that \(h_{K,S} = 1\). This means we can always find a finite set of primes \(S\) such that the ring of \(S\)-integers of \(K\) is a principal ideal domain.
+
+    It also turns out that the class number \(h_{\smc{O}}\) of the Picard group of an order \(\smc{O}\) of \(K\) is finite. Indeed, \cref{prop:long_exact_sequence_orders,prop:quotient_of_quotient_of_conductor_isomorphism} give a long exact sequence
+    \begin{center}
+        \begin{tikzcd}
+          1 \arrow{r} & \smc{O}^{\ast} \arrow{r} & \mc{O}_{K}^{\ast} \arrow{d} \\ && (\mc{O}_{K}/\mf{q}_{\smc{O}})^{\ast}/(\smc{O}/\mf{q}_{\smc{O}})^{\ast} \arrow{d} \\ && \Pic(\smc{O}) \arrow{r} & \Cl(K) \arrow{r} & 1.
+        \end{tikzcd}
+      \end{center}
+    By \cref{prop:norm_and_field_norms_are_identical}, the quotient \(\mc{O}_{K}/\mf{q}_{\smc{O}}\) is finite whence \((\mc{O}_{K}/\mf{q}_{\smc{O}})^{\ast}/(\smc{O}/\mf{q}_{\smc{O}})^{\ast}\) is as well. Exactness then implies \(\mc{O}_{K}^{\ast}/\smc{O}^{\ast}\) is also finite and that
+    \[
+      h_{\smc{O}} = \frac{h_{K}}{|\mc{O}_{K}^{\ast}/\smc{O}^{\ast}|}\frac{|(\mc{O}_{K}/\mf{q}_{\smc{O}})^{\ast}|}{|(\smc{O}/\mf{q}_{\smc{O}})^{\ast}|},
+    \]
+    so \(h_{\smc{O}}\) is finite too. This identity also shows that the class number of an order is generally larger than the class number of \(K\).
   \section{Dirichlet's Unit Theorem}
     Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). We define the \textbf{rank}\index{rank} \(r_{K}\) of \(K\) by
     \[
