@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {4.4}Localization}{50}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Orders}{59}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Prime Splitting}{68}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Ramification}{78}{section.4.7}%
+\contentsline {section}{\numberline {4.7}Ramification}{79}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Differents and Discriminants}{85}{section.4.8}%
 \contentsline {chapter}{\numberline {5}Geometry of Number Fields}{93}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Minkowski Space}{93}{section.5.1}%

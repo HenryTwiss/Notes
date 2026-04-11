@@ -886,7 +886,11 @@
       \[
         \mf{f} = \frac{1}{d}\mf{a},
       \]
-      for some nonzero \(d \in \Z\) and integral ideal \(\mf{a}\). The \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). The \textbf{class number}\index{class number} \(h_{K}\) of \(K\) is the class number of \(\mc{O}_{K}\). The \textbf{unit group}\index{unit group} of \(K\) is the unit group of \(\mc{O}_{K}\) and we call any element of \(\mc{O}_{K}^{\ast}\) a \textbf{unit}\index{unit} of \(K\) (this is slightly abusive as every element of \(K^{\ast}\) is invertible). Note that the integral ideals of \(K\) admit prime factorizations. One of our core investigations will be to understand how the principal integral ideal \(p\mc{O}_{K}\) factors into a product of primes of \(K\) for any prime \(p\). We will also leverage geometric ideas to show that the class number is finite and completely describe the unit group.
+      for some nonzero \(d \in \Z\) and integral ideal \(\mf{a}\). We will write \(I(K)\) and \(P(K)\) for the group of fractional ideals of \(\mc{O}_{K}\) and the subgroup of principal fractional ideals respectively. The \textbf{ideal class group}\index{ideal class group} \(\Cl(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K}\). In particular,
+      \[
+        \Cl(K) = I(K)/P(K).
+      \]
+      The \textbf{class number}\index{class number} \(h_{K}\) of \(K\) is the class number of \(\mc{O}_{K}\). The \textbf{unit group}\index{unit group} of \(K\) is the unit group of \(\mc{O}_{K}\) and we call any element of \(\mc{O}_{K}^{\ast}\) a \textbf{unit}\index{unit} of \(K\) (this is slightly abusive as every element of \(K^{\ast}\) is invertible). Note that the integral ideals of \(K\) admit prime factorizations. One of our core investigations will be to understand how the principal integral ideal \(p\mc{O}_{K}\) factors into a product of primes of \(K\) for any prime \(p\). We will also leverage geometric ideas to show that the class number is finite and completely describe the unit group.
 
       Now suppose \(L/K/\Q\) is an extension of number fields. Then \(L/K/\Q\) is a finite separable tower. Moreover, \(\mc{O}_{L}/\mc{O}_{K}/\Z\) is a tower of Dedekind extensions of \(L/K/\Q\) by \cref{prop:integral_closure_is_transitive,prop:integral_closure_of_Dedekind_is_Dedekind}. In particular, \(\mc{O}_{L}/\mc{O}_{K}\) is a Dedekind extension of \(L/K\).
   \section{Localization}
@@ -1181,15 +1185,15 @@
       \[
         \mc{O}_{K,S} = \mc{O}_{K}(X).
       \]
-      We call any \(\a \in \mc{O}_{K,S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl_{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K,S}\). The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K,S}\) of \(K\) is the class number of \(\Cl_{S}(K)\). There is a simple relationship between the \(S\)-class number and the class number \(h_{K}\). Indeed, \cref{prop:ideal_class_group_localization_exact_sequence} gives an isomorphism
-      \begin{equation}\label{equ:S_class_group_isomorphism}
-        \Cl_{S}(K) \cong \Cl(K)/\<\mf{p}P(\mc{O}_{K}):\mf{p} \in S\>,
-      \end{equation}
-      so that the \(S\)-class group is generally smaller than the class group. The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \(\mc{O}_{K,S}^{\ast}\) of \(\mc{O}_{K,S}\) and we call any element of \(\mc{O}_{K,S}^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\). Similar to class numbers, there is a relationship between the \(S\)-unit group \(\mc{O}_{K,S}^{\ast}\) and the unit group \(\mc{O}_{K}^{\ast}\). For \cref{prop:ideal_class_group_localization_exact_sequence} gives an isomorphism
+      We call any \(\a \in \mc{O}_{K,S}\) an \textbf{algebraic \(S\)-integer}\index{algebraic \(S\)-integer}.  We will write \(I_{S}(K)\) and \(P_{S}(K)\) for the group of fractional ideals of \(\mc{O}_{K,S}\) and the subgroup of principal fractional ideals respectively. The \textbf{\(S\)-class group}\index{\(S\)-class group} \(\Cl_{S}(K)\) of \(K\) is the ideal class group of \(\mc{O}_{K,S}\). In particular,
       \[
-        \mc{O}_{K,S}^{\ast} \cong \mc{O}_{K}^{\ast} \x \Z^{|S|},
+        \Cl_{S}(K) = I_{S}(K)/P_{S}(K).
       \]
-      which shows that the \(S\)-unit group is generally larger than the unit group.
+      The \textbf{\(S\)-class number}\index{\(S\)-class number} \(h_{K,S}\) of \(K\) is the class number of \(\mc{O}_{K,S}\). There is a simple relationship between the \(S\)-class number \(h_{K,S}\) and the class number \(h_{K}\). Indeed, \cref{prop:ideal_class_group_localization_exact_sequence} gives an isomorphism
+      \begin{equation}\label{equ:S_class_group_isomorphism}
+        \Cl_{S}(K) \cong \Cl(K)/\<\mf{p}P(K):\mf{p} \in S\>,
+      \end{equation}
+      so that the \(S\)-class group is generally smaller than the class group. The \textbf{\(S\)-unit group}\index{\(S\)-unit group} of \(K\) is the unit group \(\mc{O}_{K,S}^{\ast}\) of \(\mc{O}_{K,S}\) and we call any element of \(\mc{O}_{K,S}^{\ast}\) an \textbf{\(S\)-unit}\index{\(S\)-unit} of \(K\).
   \section{Orders}
     Recall that Dedekind domains are one-dimensional noetherian domains that are also integrally closed domains. An order will relax the condition of being integrally closed, and surprisingly, we will still be able to deduce similar information as we did for Dedekind domains. More precisely, for any integral domain \(\smc{O}\) with field of fractions \(K\), we define its \textbf{conductor}\index{conductor} \(\mf{q}_{\smc{O}}\) to be
     \[
