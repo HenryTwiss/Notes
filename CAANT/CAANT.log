@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  11 APR 2026 23:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  12 APR 2026 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -703,7 +703,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...3}Dirichlet Convolution}{117}{section.6.3}
+l.28 ...rline {7}Dirichlet Series}{110}{chapter.7}
                                                   % [1
 
 ])
@@ -780,46 +780,50 @@ Chapter 5.
 
 
 
-] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106]) [107] [108
+] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106]) [107]
+Chapter 6.
+[108
 
 
+
+] [109
 
 ]
 \openout2 = `Chapters/Dirichlet_Series.aux'.
 
  (./Chapters/Dirichlet_Series.tex
-Chapter 6.
-[109
+Chapter 7.
+[110
 
 
-] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123]) [124]
+] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]) [125]
 \openout2 = `Chapters/Analytic_L-functions.aux'.
 
  (./Chapters/Analytic_L-functions.tex
-Chapter 7.
-[125
-
-
-
-
-] [126]
-Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 64.
- [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142]) [143]
 Chapter 8.
+[126
+
+
+
+
+] [127]
+Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 64.
+ [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142]) [143]
+Chapter 9.
 [144
 
 
 
 ]
-Chapter 9.
+Chapter 10.
 [145
 
 ]
-Chapter 10.
+Chapter 11.
 [146
 
 ]
-Chapter 11.
+Chapter 12.
 [147
 
 ]
@@ -855,21 +859,21 @@ Appendix A.
 
  (./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Geometry_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux) (./Appendices/Integral_Lattices.aux) (./Appendices/Poisson_Summation.aux) (./Appendices/The_Gamma_Function.aux))
 Package rerunfilecheck Info: File `CAANT.out' has not changed.
-(rerunfilecheck)             Checksum: B59218080A40116238FBCFB98F0C9F14;8098.
+(rerunfilecheck)             Checksum: 7E7C9C45967C88E27D60DEC2D7148920;8336.
  ) 
 Here is how much of TeX's memory you used:
- 28022 strings out of 478268
- 570242 string characters out of 5846347
- 812277 words of memory out of 5000000
- 45112 multiletter control sequences out of 15000+600000
+ 28024 strings out of 478268
+ 570264 string characters out of 5846347
+ 812283 words of memory out of 5000000
+ 45113 multiletter control sequences out of 15000+600000
  491403 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2083b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on CAANT.pdf (178 pages, 911584 bytes).
+Output written on CAANT.pdf (178 pages, 911513 bytes).
 PDF statistics:
- 2209 PDF objects out of 2487 (max. 8388607)
- 1959 compressed objects within 20 object streams
- 618 named destinations out of 1000 (max. 500000)
- 365 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2215 PDF objects out of 2487 (max. 8388607)
+ 1965 compressed objects within 20 object streams
+ 619 named destinations out of 1000 (max. 500000)
+ 373 words of extra memory for PDF output out of 10000 (max. 10000000)
 
