@@ -298,13 +298,23 @@
 
     Generally speaking, the class number of \(K\) is one of the most difficult pieces of arithmetic data about \(K\) to compute. For example, it is still unknown if there are infinitely many number fields of class number \(1\). That is to say, it is unknown if there are infinitely many number fields such that their ring of integers are principal ideal domains.
 
-    The \(S\)-class number \(h_{K,S}\), where \(S\) is a finite set of primes of \(K\), is also finite. For \cref{equ:S_class_group_isomorphism} implies
+    Let \(S\) be a finite set of primes of \(K\). The \(S\)-class number \(h_{K,S}\) is also finite. In this setting, the long exact sequence in \cref{prop:ideal_class_group_localization_exact_sequence} takes the form
+    \begin{center}
+      \begin{tikzcd}
+        1 \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r} & \mc{O}_{K,S}^{\ast} \arrow{r} & \Z^{|S|} \arrow{r} & \Cl(K) \arrow{r} & \Cl_{S}(K) \arrow{r} & 1,
+      \end{tikzcd}
+    \end{center}
+    implying
+    \[
+      \Cl_{S}(K) \cong \Cl(K)/\<\mf{p}P(K):\mf{p} \in S\>.
+    \]
+    Whence
     \[
       h_{K,S} = \frac{h_{K}}{|\<\mf{p}P(K):\mf{p} \in S\>|},
     \]
-    so that the \(S\)-class number is finite and generally smaller than the class number. In fact, it is therefore possible to choose \(S\) large enough (consisting of all the prime factors for a complete set of representatives for ideal classes say) such that \(h_{K,S} = 1\). This means we can always find a finite set of primes \(S\) such that the ring of \(S\)-integers of \(K\) is a principal ideal domain.
+    which shows that the \(S\)-class number of \(K\) is finite and generally smaller than the class number of \(K\). In fact, finiteness implies that it is possible to choose \(S\) large enough (consisting of all the prime factors for a complete set of integral ideal representatives) such that \(h_{K,S} = 1\). This means we can always find a finite set of primes \(S\) such that the ring of \(S\)-integers of \(K\) is a principal ideal domain.
 
-    It also turns out that the class number \(h_{\smc{O}}\) of the Picard group of an order \(\smc{O}\) of \(K\) is finite. Indeed, \cref{prop:long_exact_sequence_orders,prop:quotient_of_quotient_of_conductor_isomorphism} give a long exact sequence
+    Let \(\smc{O}\) be an order of \(K\). Then the class number \(h_{\smc{O}}\) is finite as well. In this setting and using \cref{prop:quotient_of_quotient_of_conductor_isomorphism}, the long exact sequence in \cref{prop:long_exact_sequence_orders} takes the form
     \begin{center}
         \begin{tikzcd}
           1 \arrow{r} & \smc{O}^{\ast} \arrow{r} & \mc{O}_{K}^{\ast} \arrow{d} \\ && (\mc{O}_{K}/\mf{q}_{\smc{O}})^{\ast}/(\smc{O}/\mf{q}_{\smc{O}})^{\ast} \arrow{d} \\ && \Pic(\smc{O}) \arrow{r} & \Cl(K) \arrow{r} & 1.
@@ -490,3 +500,21 @@
       \begin{pmatrix} \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & & \vdots \\ \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1}  \end{pmatrix}.
     \]
     Indeed, we may choose any rank \(r_{K}\) minor since the cofactor expansion was along an arbitrary row. We call \(R_{K}\) the \textbf{regulator}\index{regulator} of \(K\). Since the covolume \(V_{\L_{K}}\) of \(\L_{K}\) is independent of the choice of basis for \(\L_{K}/\Z\), the regulator \(R_{K}\) is independent of the choice of a system of fundamental units for \(K\). The regulator is a rough measure of the density of the units for \(K\) in the sense that smaller the regulator is the more dense the units are.
+
+    Let \(S\) be a finite set of primes of \(K\). Then it is a simple matter to determine the structure of the \(S\)-unit group of \(\mc{O}_{K,S}\). As the ideal class group is finite, the long exact sequence \cref{prop:ideal_class_group_localization_exact_sequence} in this setting contracts to the short exact sequence
+    \begin{center}
+      \begin{tikzcd}
+        1 \arrow{r} & \mc{O}_{K}^{\ast} \arrow{r} & \mc{O}_{K,S}^{\ast} \arrow{r} & \Z^{|S|} \arrow{r} & 1,
+      \end{tikzcd}
+    \end{center}
+    which splits because \(\Z^{|S|}\) is a free \(\Z\)-module. This fact and Dedekind's unit theorem together imply
+    \[
+      \mc{O}_{K,S}^{\ast} \cong \mu(K) \x \Z^{r_{K}+|S|}.
+    \]
+    So the rank of the \(S\)-unit group of \(K\) is generally larger than the rank of the unit group of \(K\).
+
+    Let \(\smc{O}\) be an order of \(K\). Then we can also describe the structure of the unit group of \(\smc{O}\). Indeed, we have already shown \(\mc{O}_{K}^{\ast}/\smc{O}^{\ast}\) is finite. By the structure theorem for finitely generated modules over principal ideal domains, \(\smc{O}^{\ast}\) must have the same rank as \(\mc{O}_{K}^{\ast}\). Then Dirichlet's unit theorem implies
+    \[
+      \smc{O}^{\ast} \cong \mu(\smc{O}) \x \Z^{r_{K}},
+    \]
+    for some subgroup \(\mu(\smc{O})\) of \(\mu(K)\). Therefore the unit group of \(\smc{O}\) is generally smaller than the unit group of \(K\).

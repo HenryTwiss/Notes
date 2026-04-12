@@ -129,22 +129,22 @@
 \indexentry{ring of \(S\)-integers|hyperpage}{58}
 \indexentry{algebraic \(S\)-integer|hyperpage}{58}
 \indexentry{\(S\)-class group|hyperpage}{58}
-\indexentry{\(S\)-class number|hyperpage}{59}
-\indexentry{\(S\)-unit group|hyperpage}{59}
-\indexentry{\(S\)-unit|hyperpage}{59}
+\indexentry{\(S\)-class number|hyperpage}{58}
+\indexentry{\(S\)-unit group|hyperpage}{58}
+\indexentry{\(S\)-unit|hyperpage}{58}
 \indexentry{conductor|hyperpage}{59}
 \indexentry{order|hyperpage}{59}
 \indexentry{Picard group|hyperpage}{60}
 \indexentry{Picard class|hyperpage}{60}
 \indexentry{class number|hyperpage}{60}
 \indexentry{unit group|hyperpage}{60}
-\indexentry{regular|hyperpage}{66}
-\indexentry{irregular|hyperpage}{66}
-\indexentry{order|hyperpage}{68}
+\indexentry{regular|hyperpage}{65}
+\indexentry{irregular|hyperpage}{65}
+\indexentry{order|hyperpage}{67}
 \indexentry{maxiaml order|hyperpage}{68}
 \indexentry{ramification index|hyperpage}{68}
-\indexentry{residue class extension|hyperpage}{69}
-\indexentry{inertia degree|hyperpage}{69}
+\indexentry{residue class extension|hyperpage}{68}
+\indexentry{inertia degree|hyperpage}{68}
 \indexentry{fundamental equality|hyperpage}{70}
 \indexentry{inert|hyperpage}{71}
 \indexentry{nonsplit|hyperpage}{71}
@@ -156,9 +156,9 @@
 \indexentry{unramified|hyperpage}{71}
 \indexentry{ramified|hyperpage}{71}
 \indexentry{totally ramified|hyperpage}{71}
-\indexentry{Dedekind-Kummer theorem|hyperpage}{72}
-\indexentry{norm|hyperpage}{76}
-\indexentry{ideal norm|hyperpage}{76}
+\indexentry{Dedekind-Kummer theorem|hyperpage}{71}
+\indexentry{norm|hyperpage}{75}
+\indexentry{ideal norm|hyperpage}{75}
 \indexentry{inert|hyperpage}{77}
 \indexentry{nonsplit|hyperpage}{77}
 \indexentry{split|hyperpage}{77}
@@ -167,37 +167,37 @@
 \indexentry{ramified|hyperpage}{77}
 \indexentry{totally ramified|hyperpage}{77}
 \indexentry{ideal norm|hyperpage}{77}
-\indexentry{inert|hyperpage}{78}
-\indexentry{nonsplit|hyperpage}{78}
-\indexentry{split|hyperpage}{78}
-\indexentry{totally split|hyperpage}{78}
-\indexentry{unramified|hyperpage}{78}
-\indexentry{ramified|hyperpage}{78}
-\indexentry{totally ramified|hyperpage}{78}
-\indexentry{ideal norm|hyperpage}{78}
-\indexentry{norm|hyperpage}{78}
-\indexentry{norm|hyperpage}{78}
-\indexentry{conjugate|hyperpage}{79}
-\indexentry{ramification index|hyperpage}{80}
-\indexentry{inertia degree|hyperpage}{80}
-\indexentry{decomposition group|hyperpage}{80}
-\indexentry{decomposition field|hyperpage}{80}
-\indexentry{inertia group|hyperpage}{83}
-\indexentry{inertia field|hyperpage}{83}
-\indexentry{ramification index|hyperpage}{85}
-\indexentry{inertia degree|hyperpage}{85}
+\indexentry{inert|hyperpage}{77}
+\indexentry{nonsplit|hyperpage}{77}
+\indexentry{split|hyperpage}{77}
+\indexentry{totally split|hyperpage}{77}
+\indexentry{unramified|hyperpage}{77}
+\indexentry{ramified|hyperpage}{77}
+\indexentry{totally ramified|hyperpage}{77}
+\indexentry{ideal norm|hyperpage}{77}
+\indexentry{norm|hyperpage}{77}
+\indexentry{norm|hyperpage}{77}
+\indexentry{conjugate|hyperpage}{78}
+\indexentry{ramification index|hyperpage}{79}
+\indexentry{inertia degree|hyperpage}{79}
+\indexentry{decomposition group|hyperpage}{79}
+\indexentry{decomposition field|hyperpage}{79}
+\indexentry{inertia group|hyperpage}{82}
+\indexentry{inertia field|hyperpage}{82}
+\indexentry{ramification index|hyperpage}{84}
+\indexentry{inertia degree|hyperpage}{84}
 \indexentry{\(\smc{O}\)-lattice|hyperpage}{85}
 \indexentry{complete|hyperpage}{85}
 \indexentry{dual|hyperpage}{85}
-\indexentry{self-dual|hyperpage}{86}
-\indexentry{complement|hyperpage}{87}
-\indexentry{different|hyperpage}{87}
+\indexentry{self-dual|hyperpage}{85}
+\indexentry{complement|hyperpage}{86}
+\indexentry{different|hyperpage}{86}
 \indexentry{discriminant|hyperpage}{87}
-\indexentry{tamely ramified|hyperpage}{90}
-\indexentry{widely ramified|hyperpage}{90}
-\indexentry{complement|hyperpage}{92}
-\indexentry{different|hyperpage}{92}
-\indexentry{discriminant|hyperpage}{92}
+\indexentry{tamely ramified|hyperpage}{89}
+\indexentry{widely ramified|hyperpage}{89}
+\indexentry{complement|hyperpage}{91}
+\indexentry{different|hyperpage}{91}
+\indexentry{discriminant|hyperpage}{91}
 \indexentry{signature|hyperpage}{93}
 \indexentry{canonical embedding|hyperpage}{93}
 \indexentry{Minkowski space|hyperpage}{94}
@@ -208,7 +208,7 @@
 \indexentry{Minkowski embedding|hyperpage}{95}
 \indexentry{Minkowski bound|hyperpage}{100}
 \indexentry{rank|hyperpage}{102}
-\indexentry{logarithmic embedding|hyperpage}{102}
+\indexentry{logarithmic embedding|hyperpage}{103}
 \indexentry{norm-one hypersurface|hyperpage}{103}
 \indexentry{trace-zero hyperplane|hyperpage}{103}
 \indexentry{unit lattice|hyperpage}{103}
