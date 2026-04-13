@@ -3,7 +3,7 @@
   \[
     (u)_{k} = u(u+1) \cdots (u+(k-1)),
   \]
-  for the Pochhammer symbol.
+  for the Pochhammer symbol. Also, all sums and products over zeros of a complex function will be counted with multiplicity and ordered with respect to the size of the ordinate.
   \section{Analytic Data}
     An \textbf{analytic \(L\)-function}\index{analytic \(L\)-function} \(L(s)\) is a Dirichlet series
     \[
@@ -14,11 +14,11 @@
       \item[\textbf{Analyticity:}] There exists a nonnegative integer \(m_{L}\) such that the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s > 1\) and admits meromorphic continuation to \(\C\) with at most a pole at \(s = 1\) of order \(m_{L}\). Moreover, \((s-1)^{m_{L}}L(s)\) is order \(1\).
       \item[\textbf{Functional Equation:}] There is a positive integer \(q_{L}\), called the \textbf{conductor}\index{conductor} of \(L(s)\), a positive integer \(d_{L}\) called the \textbf{degree}\index{degree} of \(L(s)\), complex numbers \((\mu_{j})_{j \le d_{L}}\) called the \textbf{gamma parameters}\index{gamma parameters} of \(L(s)\) that are either real or occur in conjugate pairs and satisfy \(\Re(\mu_{j}) \ge 0\), and a complex number \(\e_{L}\) called the \textbf{root number}\index{root number} of \(L(s)\) with \(|\e_{L}| = 1\), all of which determine functions
       \[
-        \L_{L}(s) = q_{L}^{\frac{s}{2}}\g_{L}(s)L(s) \quad \text{and} \quad \g_{L}(s) = \pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right),
+        \L(s,L) = q_{L}^{\frac{s}{2}}\g(s,L)L(s) \quad \text{and} \quad \g(s,L) = \pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right),
       \]
       called the \textbf{completion}\index{completion} of \(L(s)\) and the \textbf{gamma factor}\index{gamma factor} of \(L(s)\) respectively, satisfying
       \[
-        \L_{L}(s) = \e_{L}\conj{\L_{L}(1-\conj{s})}.
+        \L(s,L) = \e_{L}\conj{\L(1-\conj{s},L)}.
       \]
       This is called the \textbf{functional equation}\index{functional equation} of \(L(s)\). The tuple \((\e_{L},q_{L},\mu_{1},\ldots,\mu_{d_{L}})\) is called the \textbf{functional equation data}\index{functional equation data} of \(L(s)\).
       \item[\textbf{Euler product:}] For every prime \(p\), there exist complex numbers \((\a_{j}(p))_{j \le d_{L}}\) called the \textbf{Euler parameters}\index{Euler parameters} of \(L(s)\) at \(p\) satisfying \(|\a_{j}(p)| \le p^{\theta}\) for some \(0 \le \theta < 1\) and are such that \(L(s)\) admits the Euler product
@@ -44,13 +44,13 @@
       \item The bound \(\Re(\mu_{j}) \ge 0\) ensures that the gamma factor is holomorphic in the half-plane \(\s > 0\). As this factor is then guaranteed to be finite and nonzero at \(s = 1\), the completion possesses a pole at \(s = 1\) of order \(r\). By the functional equation, the completion also has a pole at \(s = 0\) of the same order.
       \item If we merely assume \((s-1)^{m_{L}}L(s)\) is finite order then the functional equation forces the order to be \(1\). This can be deduced by considering the entire function
       \[
-        s^{m_{L}}(s-1)^{m_{L}}\L_{L}(s),
+        s^{m_{L}}(s-1)^{m_{L}}\L(s,L),
       \]
       and applying the Phragm\'en-Lindel\"of convexity principle in vertical strips.
       \item The condition that the root number satisfies \(|\e_{L}| = 1\) isn't strictly necessary. For applying the functional equation twice shows \(|\e_{L}|^{2} = 1\).
       \item As the gamma function is conjugation-equivariant and the gamma parameters are real or occur in conjugate pairs, the gamma factor is also conjugation-equivariant. This means that we can write the functional equation in the form
       \[
-        q_{L}^{\frac{s}{2}}\g_{L}(s)L(s) = \e_{L}q_{L}^{\frac{1-s}{2}}\g_{L}(1-s)\conj{L(1-\conj{s})}.
+        q_{L}^{\frac{s}{2}}\g(s,L)L(s) = \e_{L}q_{L}^{\frac{1-s}{2}}\g(1-s,L)\conj{L(1-\conj{s})}.
       \]
       \item The Euler product implies that the coefficients \(a_{L}(n)\) are multiplicative and are determined on prime powers by
       \[
@@ -93,19 +93,15 @@
       for some positive integer \(c\) since the factorizations are distinct. This is impossible and thus the factorization is unique.
     \end{proof}
 
-    To an analytic \(L\)-function \(L(s)\), we associate its \textbf{analytic conductor}\index{analytic conductor} \(\mf{q}_{L}(s)\) defined by
+    To an analytic \(L\)-function \(L(s)\), we associate its \textbf{analytic conductor}\index{analytic conductor} \(\mf{q}(s,L)\) defined by
     \[
-      \mf{q}_{L}(s) = q_{L}\mf{q}_{L,\infty}(s),
+      \mf{q}(s,L) = q_{L}\mf{q}_{\infty}(s,L),
     \]
     where
     \[
-      \mf{q}_{L,\infty}(s) = \prod_{j}(|s+\mu_{j}|+3).
+      \mf{q}_{\infty}(s,L) = \prod_{j}(|s+\mu_{j}|+3).
     \]
-    The choice of \(3\) in \(|s+\mu_{j}|+3\) is a matter of convenience as could use any positive constant. In particular, it is useful when taking logarithms as \(\log(|s+\mu_{j}|+3) \ge 1\). For legibility, we will also write
-    \[
-      \mf{q}_{L}(t) = \mf{q}_{L}\left(\frac{1}{2}+it\right) \quad \text{and} \quad \mf{q}_{L,\infty}(t) = \mf{q}_{L,\infty}\left(\frac{1}{2}+it\right),
-    \]
-    when it is clear \(s = \frac{1}{2}+it\). Estimates for the analytic conductor follow from those of the gamma function. Recall from Stirling's formula that
+    The choice of \(3\) in \(|s+\mu_{j}|+3\) is a matter of convenience as could use any positive constant. In particular, it is useful when taking logarithms as \(\log(|s+\mu_{j}|+3) \ge 1\). Estimates for the analytic conductor follow from those of the gamma function. Recall from Stirling's formula that
     \begin{equation}\label{equ:vertical_strip_gamma_estimates}
       \G(s) \ll_{\e} (|t|+3)^{\s-\frac{1}{2}}e^{-\frac{\pi}{2}|t|} \quad \text{and} \quad \frac{1}{\G(s)} \ll (|t|+3)^{\frac{1}{2}-\s}e^{\frac{\pi}{2}|t|},
     \end{equation}
@@ -115,15 +111,15 @@
     \]
     for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from the poles of \(\G(1-s)\). Then the estimates
      \begin{equation}\label{equ:gamma_factor_analytic_conductor_estimate}
-      \frac{\g_{L}(1-s)}{\g_{L}(s)} \ll_{\e} \mf{q}_{L,\infty}(s)^{\frac{1}{2}-\s} \quad \text{and} \quad q_{L}^{\frac{1}{2}-s}\frac{\g_{L}(1-s)}{\g_{L}(s)} \ll_{\e} \mf{q}_{L}(s)^{\frac{1}{2}-\s},
+      \frac{\g(1-s,L)}{\g(s,L)} \ll_{\e} \mf{q}_{\infty}(s,L)^{\frac{1}{2}-\s} \quad \text{and} \quad q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)} \ll_{\e} \mf{q}(s,L)^{\frac{1}{2}-\s},
     \end{equation}
-    hold for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from the poles of \(\g_{L}(1-s)\). An associated estimate can be obtain for the logarithmic derivative of the analytic conductor. Recall from the logarithm of Stirling's formula that
+    hold for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from the poles of \(\g(1-s,L)\). An associated estimate can be obtain for the logarithmic derivative of the analytic conductor. Recall from the logarithm of Stirling's formula that
     \[
       \frac{\G'}{\G}(s) \ll \log(|s|+3),
     \]
     provided \(\s\) is bounded and \(s\) is at least distance \(\e\) away from the poles of the gamma function. Then the estimates
     \begin{equation}\label{equ:digamma_gamma_factor_analytic_conductor_estimate}
-      \frac{\g_{L}'}{\g_{L}}(s) \ll_{\e} \log\mf{q}_{L,\infty}(s) \quad \text{and} \quad \log{q_{L}}+\frac{\g_{L}'}{\g_{L}}(s) \ll_{\e} \log\mf{q}_{L}(s),
+      \frac{\g'}{\g}(s,L) \ll_{\e} \log\mf{q}_{\infty}(s,L) \quad \text{and} \quad \log{q_{L}}+\frac{\g'}{\g}(s,L) \ll_{\e} \log\mf{q}(s,L),
     \end{equation}
     hold for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from the poles of the gamma factor.
     
@@ -162,7 +158,7 @@
 
     In the half-plane \(\s > 1\) we may study the analytic properties of \(L(s)\) via its Dirichlet series. Using the functional equation, we may write
     \[
-      L(s) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g_{L}(1-s)}{\g_{L}(s)}\conj{L(1-\conj{s})}.
+      L(s) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)}\conj{L(1-\conj{s})}.
     \]
     This permits the study of \(L(s)\) in the half-plane \(\s < 0\) by using the Dirichlet series of \(\conj{L(1-\conj{s})}\) and the the functional equation data. The interior of the critical strip is exactly the region where we cannot use either of these methods to study the analytic properties of \(L(s)\). Of course, anything may be possible on the boundary lines \(\s = 0\) and \(\s = 1\) (for example Landau's theorem).
   \section{The Approximate Functional Equation}
@@ -177,7 +173,7 @@
     \begin{proof}
       Observe that \((s-1)^{m_{L}}L(s) \ll_{\e} (|t|+3)^{m_{L}}\) on the vertical line \(\s = \max(1+\e,\s_{2})\). Now suppose \(\s = \min(-\e,\s_{1})\). On this vertical line, the functional equation and \cref{equ:gamma_factor_analytic_conductor_estimate} together show
       \[
-        L(s) \ll_{\e} \mf{q}_{L}(s)^{\frac{1}{2}-\s}\conj{L(1-\conj{s})}.
+        L(s) \ll_{\e} \mf{q}(s,L)^{\frac{1}{2}-\s}\conj{L(1-\conj{s})}.
       \]
       Hence there exists a positive constant \(A''\) with
       \[
@@ -190,72 +186,64 @@
       provided \(\s\) is bounded. Assuming \(s\) is at least distance \(\e\) away from the possible pole at \(s = 1\), diving by \((s-1)^{m_{L}}\) completes the proof.
     \end{proof}
 
-    We are almost ready to prove the approximate function equation for an analytic \(L\)-function \(L(s)\). The formula itself consists of two sums representing the Dirichlet series at \(s\) and a dualized Dirichlet series at \(1-s\) as well as a potential residue term. The dual sum comes equip with a term containing the data of the functional equation. Both sums will also be dampened by a smooth cutoff function. In the statement of the approximate function equation, we will make use of a test function \(\Phi(u)\). We require \(\Phi(u)\) be an even holomorphic function bounded in the vertical strip \(|\tau| < a+1\) for some \(a > 1\) and such that \(\Phi(0) = 1\). For \(s\) in the critical strip, we let \(V_{L,s}(y)\) be the inverse Mellin transform
+    We are almost ready to prove the approximate function equation for an analytic \(L\)-function \(L(s)\). The formula itself consists of two sums representing the Dirichlet series at \(s\) and a dualized Dirichlet series at \(1-s\) as well as a potential residue term. The dual sum comes equip with a term containing the data of the functional equation. Both sums will also be dampened by a smooth cutoff function. In the statement of the approximate function equation, we will make use of a test function \(\Phi(u)\). We require \(\Phi(u)\) be an even holomorphic function bounded in the vertical strip \(|\tau| < a+1\) for some \(a > 1\) and such that \(\Phi(0) = 1\). For \(s\) in the critical strip, we let \(V_{s}(y,L)\) be the inverse Mellin transform
     \[
-      V_{L,s}(y) = \frac{1}{2\pi i}\int_{(a)}\frac{\g_{L}(s+u)}{\g_{L}(s)}\Phi(u)y^{-u}\frac{du}{u},
+      V_{s}(y,L) = \frac{1}{2\pi i}\int_{(a)}\frac{\g(s+u,L)}{\g(s,L)}\Phi(u)y^{-u}\frac{du}{u},
     \]
-    defined for \(y > 0\). For legibility, we will write
-    \[
-      V_{L,t}(y) = V_{L,\frac{1}{2}+it}(y),
-    \]
-    when it is clear \(s = \frac{1}{2}+it\). Stirling's formula implies
+    defined for \(y > 0\). Stirling's formula implies
     \[
       \frac{\G(s+u)}{\G(s)} \ll_{\e} \frac{(|t+r|+3)^{\s+\tau-\frac{1}{2}}}{(|t|+3)^{\s-\frac{1}{2}}}e^{-\frac{\pi}{2}(|t+r|-|t|)},
     \]
     for \(s\) in the critical strip and bounded \(\tau\) provided \(s+u\) is at least distance \(\e\) away from the poles of the gamma function. Whence
     \begin{equation}\label{equ:gamma_factor_s_and_u_estimate}
-      \frac{\g_{L}(s+u)}{\g_{L}(s)} \ll_{\e} \frac{\mf{q}_{\infty}(s+u)^{\frac{\s+\tau}{2}-\frac{1}{4}}}{\mf{q}_{\infty}(s)^{\frac{\s}{2}-\frac{1}{4}}}e^{-d_{L}\frac{\pi}{2}(|t+r|-|t|)},
+      \frac{\g(s+u,L)}{\g(s,L)} \ll_{\e} \frac{\mf{q}_{\infty}(s+u)^{\frac{\s+\tau}{2}-\frac{1}{4}}}{\mf{q}_{\infty}(s)^{\frac{\s}{2}-\frac{1}{4}}}e^{-d_{L}\frac{\pi}{2}(|t+r|-|t|)},
     \end{equation}
-    for \(s\) in the critical strip and bounded \(\tau\) provided \(s+u\) is at least distance \(\e\) away from the poles of the gamma factor. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded and hence \(V_{L,s}(y)\) is smooth. The function \(V_{L,s}(y)\) is the smooth cutoff function mentioned previously. We will also let \(\e_{L}(s)\) be given by
+    for \(s\) in the critical strip and bounded \(\tau\) provided \(s+u\) is at least distance \(\e\) away from the poles of the gamma factor. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded and hence \(V_{s}(y,L)\) is smooth. The function \(V_{s}(y,L)\) is the smooth cutoff function mentioned previously. We will also let \(\e(s,L)\) be given by
     \[
-      \e_{L}(s) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g_{L}(1-s)}{\g_{L}(s)}.
+      \e(s,L) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)}.
     \]
-    For legibility, we write
-    \[
-      \e_{L}(t) = \e_{L}\left(\frac{1}{2}+it\right),
-    \]
-    when it is clear \(s = \frac{1}{2}+it\). This term appears as a factor in the dual sum accounting for the functional equation data. We now prove the \textbf{approximate function equation}\index{approximate function equation}:
+    This term appears as a factor in the dual sum accounting for the functional equation data. We now prove the \textbf{approximate function equation}\index{approximate function equation}:
 
     \begin{theorem*}[Approximate functional equation]
       Suppose \(L(s)\) is an analytic \(L\)-function, \(\Phi(u)\) is an even holomorphic function bounded in the vertical strip \(|\tau| < a+1\) for some \(a > 1\) and such that \(\Phi(0) = 1\), and let \(X > 0\). Then for \(s\) in the critical strip, we have
       \[
-        L(s) = \sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{L,s}\left(\frac{n}{\sqrt{q_{L}}X}\right)+\e_{L}(s)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{1-s}}V_{L,1-s}\left(\frac{nX}{\sqrt{q_{L}}}\right)+\frac{R_{L}(s,X)}{q_{L}^{\frac{s}{2}}\g_{L}(s)},
+        L(s) = \sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{s}\left(\frac{n}{\sqrt{q_{L}}X},L\right)+\e(s,L)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{1-s}}V_{1-s}\left(\frac{nX}{\sqrt{q_{L}}},L\right)+\frac{R(s,X,L)}{q_{L}^{\frac{s}{2}}\g(s,L)},
       \]
-      where \(R_{L}(s,X)\) is given by
+      where \(R(s,X,L)\) is given by
       \[
-        R_{L}(s,X) = \Res_{u = 1-s}\frac{\L_{L}(s+u)\Phi(u)X^{u}}{u}+\Res_{u = -s}\frac{\L_{L}(s+u)\Phi(u)X^{u}}{u}.
+        R(s,X,L) = \Res_{u = 1-s}\frac{\L(s+u,L)\Phi(u)X^{u}}{u}+\Res_{u = -s}\frac{\L(s+u,L)\Phi(u)X^{u}}{u}.
       \]
     \end{theorem*}
     \begin{proof}
       Consider the integral
       \[
-        \frac{1}{2\pi i}\int_{(a)}\L_{L}(s+u)\Phi(u)X^{u}\,\frac{du}{u}.
+        \frac{1}{2\pi i}\int_{(a)}\L(s+u,L)\Phi(u)X^{u}\,\frac{du}{u}.
       \]    
-      Stirling's formula shows that \(\g_{L}(s+u)\) exhibits exponential decay while \(L(s+u)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), it follows that the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded. We will evaluate the integral in two ways. On the one hand, we can expand \(L(s+u)\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that this is
+      Stirling's formula shows that \(\g(s+u,L)\) exhibits exponential decay while \(L(s+u)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), it follows that the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded. We will evaluate the integral in two ways. On the one hand, we can expand \(L(s+u)\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that this is
       \[
-        q_{L}^{\frac{s}{2}}\g_{L}(s)\sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{L,s}\left(\frac{n}{\sqrt{q_{L}}X}\right).
+        q_{L}^{\frac{s}{2}}\g(s,L)\sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{s}\left(\frac{n}{\sqrt{q_{L}}X},L\right).
       \]
       On the other hand, we can shift the line of integration to \((-a)\). In doing so we pass by a simple pole at \(u = 0\) and possible poles at \(u = 1-s\) and \(u = -s\) giving
       \[
-        \frac{1}{2\pi i}\int_{(-a)}\L_{L}(s+u)\Phi(u)X^{u}\,\frac{du}{u}+\L_{L}(s)+R_{L}(s,X).
+        \frac{1}{2\pi i}\int_{(-a)}\L(s+u,L)\Phi(u)X^{u}\,\frac{du}{u}+\L(s,L)+R(s,X,L).
       \]
       Apply the functional equation and perform the change of variables \(u \mapsto -u\) to rewrite this as
       \[
-        -\e_{L}\frac{1}{2\pi i}\int_{(a)}\conj{\L_{L}(1-\conj{s+u})}\Phi(u)X^{-u}\,\frac{du}{u}+\L_{L}(s)+R_{L}(s,X).
+        -\e_{L}\frac{1}{2\pi i}\int_{(a)}\conj{\L(1-\conj{s+u},L)}\Phi(u)X^{-u}\,\frac{du}{u}+\L(s,L)+R(s,X,L).
       \]
       Analogous to the above, we can now expand \(\conj{L(1-\conj{s+u})}\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that our previous expression becomes
       \[
-        -\e_{L}q_{L}^{\frac{1-s}{2}}\g_{L}(1-s)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{1-s}}V_{L,s}\left(\frac{nX}{\sqrt{q_{L}}}\right)+\L_{L}(s)+R_{L}(s,X).
+        -\e_{L}q_{L}^{\frac{1-s}{2}}\g(1-s,L)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{1-s}}V_{s}\left(\frac{nX}{\sqrt{q_{L}}},L\right)+\L(s,L)+R(s,X,L).
       \]
       Equating these two evaluations and isolating the completion gives
       \begin{align*}
-        \L_{L}(s) &= q_{L}^{\frac{s}{2}}\g_{L}(s)\sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{L,s}\left(\frac{n}{\sqrt{q_{L}}X}\right) \\
-        &+ \e_{L}q_{L}^{\frac{1-s}{2}}\g_{L}(1-s)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{1-s}}V_{L,1-s}\left(\frac{nX}{\sqrt{q_{L}}}\right)+R_{L}(s,X).
+        \L(s,L) &= q_{L}^{\frac{s}{2}}\g(s,L)\sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{s}\left(\frac{n}{\sqrt{q_{L}}X},L\right) \\
+        &+ \e_{L}q_{L}^{\frac{1-s}{2}}\g(1-s,L)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{1-s}}V_{1-s}\left(\frac{nX}{\sqrt{q_{L}}},L\right)+R(s,X,L).
       \end{align*}
-      Diving by \(q_{L}^{\frac{s}{2}}\g_{L}(s)\) completes the proof.
+      Diving by \(q_{L}^{\frac{s}{2}}\g(s,L)\) completes the proof.
     \end{proof}
 
-    Let us now show how \(V_{L,s}(y)\) has the effect of dampening the two dual sums appearing on the right-hand side of the approximate functional equation. In practice, it is common to choose \(\Phi(u)\) such that it has exponential decay and we can make the vertical strip on which it is bounded arbitrarily wide. For example, let
+    Let us now show how \(V_{s}(y,L)\) has the effect of dampening the two dual sums appearing on the right-hand side of the approximate functional equation. In practice, it is common to choose \(\Phi(u)\) such that it has exponential decay and we can make the vertical strip on which it is bounded arbitrarily wide. For example, let
     \[
       \Phi(u) = \cos^{-4d_{L}M}\left(\frac{\pi u}{4M}\right),
     \]
@@ -263,61 +251,61 @@
     \begin{equation}\label{equ:choice_for_V_decay_estimate}
      \cos^{-4d_{L}M}\left(\frac{\pi u}{4M}\right) \ll_{\e} e^{-d_{L}\pi|r|},
     \end{equation}
-    for \(|\tau| < (2M-1)+1\) provided \(u\) is at least distance \(\e\) away from the poles of \(\Phi(u)\). Therefore \(\Phi(u)\) admits exponential decay. For this choice of \(\Phi(u)\), \(V_{L,s}(y)\) and its derivatives will possess rapid decay.
+    for \(|\tau| < (2M-1)+1\) provided \(u\) is at least distance \(\e\) away from the poles of \(\Phi(u)\). Therefore \(\Phi(u)\) admits exponential decay. For this choice of \(\Phi(u)\), \(V_{s}(y,L)\) and its derivatives will possess rapid decay.
 
     \begin{proposition}\label{prop:V_function_decay}
-      Let \(L(s)\) be an analytic \(L\)-function, set \(\Phi(u) = \cos^{-4d_{L}M}\left(\frac{\pi u}{4M}\right)\) for some positive integer \(M\), and let \(V_{L,s}(y)\) be the inverse Mellin transform defined by
+      Let \(L(s)\) be an analytic \(L\)-function, set \(\Phi(u) = \cos^{-4d_{L}M}\left(\frac{\pi u}{4M}\right)\) for some positive integer \(M\), and let \(V_{s}(y,L)\) be the inverse Mellin transform defined by
       \[
-        V_{L,s}(y) = \frac{1}{2\pi i}\int_{(2M-1)}\frac{\g_{L}(s+u)}{\g_{L}(s)}\Phi(u)y^{-u}\frac{du}{u}.
+        V_{s}(y,L) = \frac{1}{2\pi i}\int_{(2M-1)}\frac{\g(s+u,L)}{\g(s,L)}\Phi(u)y^{-u}\frac{du}{u}.
       \]
-      Then for \(s\) in the critical strip, any nonnegative integer \(k\), and positive integer \(N\) with \(N < 2M\), \(V_{L,s}(y)\) satisfies the estimates
+      Then for \(s\) in the critical strip, any nonnegative integer \(k\), and positive integer \(N\) with \(N < 2M\), \(V_{s}(y,L)\) satisfies the estimates
       \[
-        (-y)^{k}V_{L,s}^{(k)}(y) = \begin{cases} \d_{k,0}+O_{\e}\left(\left(\frac{y}{\sqrt{\mf{q}_{L,\infty}(s)}}\right)^{N}\right) & \text{if \(y \ll \sqrt{\mf{q}_{L,\infty}(s)}\)}, \\ O_{\e}\left(\left(\frac{y}{\sqrt{\mf{q}_{L,\infty}(s)}}\right)^{-N}\right) & \text{if \(y \gg \sqrt{\mf{q}_{L,\infty}(s)}\)}. \end{cases}
+        (-y)^{k}V_{s}^{(k)}(y,L) = \begin{cases} \d_{k,0}+O_{\e}\left(\left(\frac{y}{\sqrt{\mf{q}_{\infty}(s,L)}}\right)^{N}\right) & \text{if \(y \ll \sqrt{\mf{q}_{\infty}(s,L)}\)}, \\ O_{\e}\left(\left(\frac{y}{\sqrt{\mf{q}_{\infty}(s,L)}}\right)^{-N}\right) & \text{if \(y \gg \sqrt{\mf{q}_{\infty}(s,L)}\)}. \end{cases}
       \]
       In particular,
       \[
-        (-y)^{k}V_{L,s}^{(k)}(y) \ll_{\e} \left(1+\frac{y}{\sqrt{\mf{q}_{L,\infty}(s)}}\right)^{-N}.
+        (-y)^{k}V_{s}^{(k)}(y,L) \ll_{\e} \left(1+\frac{y}{\sqrt{\mf{q}_{\infty}(s,L)}}\right)^{-N}.
       \]
     \end{proposition}
     \begin{proof}
-      As we have already seen, the integrand defining \(V_{L,s}(y)\) admits exponential decay. This permits us to differentiate under the integral sign and shift the line of integration. The former shows
+      As we have already seen, the integrand defining \(V_{s}(y,L)\) admits exponential decay. This permits us to differentiate under the integral sign and shift the line of integration. The former shows
       \[
-        (-y)^{k}V_{L,s}^{(k)}(y) = \frac{1}{2\pi i}\int_{(2M-1)}\frac{\g_{L}(s+u)}{\g_{L}(s)}\Phi(u)(u)_{k}y^{-u}\frac{du}{u}.
+        (-y)^{k}V_{s}^{(k)}(y,L) = \frac{1}{2\pi i}\int_{(2M-1)}\frac{\g(s+u,L)}{\g(s,L)}\Phi(u)(u)_{k}y^{-u}\frac{du}{u}.
       \]
       Shifting to \((-N)\), we pass by a simple pole at \(u = 0\) of residue \(1\) if and only if \(k = 0\). This gives
       \[
-        (-y)^{k}V_{L,s}^{(k)}(y) = \d_{k,0}+\frac{1}{2\pi i}\int_{(-N)}\frac{\g_{L}(s+u)}{\g_{L}(s)}\Phi(u)(u)_{k}y^{-u}\frac{du}{u}.
+        (-y)^{k}V_{s}^{(k)}(y,L) = \d_{k,0}+\frac{1}{2\pi i}\int_{(-N)}\frac{\g(s+u,L)}{\g(s,L)}\Phi(u)(u)_{k}y^{-u}\frac{du}{u}.
       \]
       This integrand also exhibits exponential decay since the Pochhammer symbol grows polynomially. Therefore the integral is dominated by the contribution when \(u \ll 1\) and the \cref{equ:gamma_factor_s_and_u_estimate,equ:choice_for_V_decay_estimate} together show
       \[
-        (-y)^{k}V_{L,s}^{(k)}(y) = \d_{k,0}+O_{\e}\left(\left(\frac{y}{\sqrt{\mf{q}_{L,\infty}(s)}}\right)^{N}\right).
+        (-y)^{k}V_{s}^{(k)}(y,L) = \d_{k,0}+O_{\e}\left(\left(\frac{y}{\sqrt{\mf{q}_{\infty}(s,L)}}\right)^{N}\right).
       \]
       If we instead shift to \((N)\), we do not pass by any poles and obtain
       \[
-        (-y)^{k}V_{L,s}^{(k)}(y) = \frac{1}{2\pi i}\int_{(N)}\frac{\g_{L}(s+u)}{\g_{L}(s)}\Phi(u)(u)_{k}y^{-u}\frac{du}{u}.
+        (-y)^{k}V_{s}^{(k)}(y,L) = \frac{1}{2\pi i}\int_{(N)}\frac{\g(s+u,L)}{\g(s,L)}\Phi(u)(u)_{k}y^{-u}\frac{du}{u}.
       \]
       An analogous argument to estimate the remaining integral shows
       \[
-        (-y)^{k}V_{L,s}^{(k)}(y) = O_{\e}\left(\left(\frac{y}{\sqrt{\mf{q}_{L,\infty}(s)}}\right)^{-N}\right).
+        (-y)^{k}V_{s}^{(k)}(y,L) = O_{\e}\left(\left(\frac{y}{\sqrt{\mf{q}_{\infty}(s,L)}}\right)^{-N}\right).
       \]
-      From these \(O\)-estimates we obtain nontrivial bounds in the ranges \(y \ll \sqrt{\mf{q}_{L,\infty}(s)}\) and \(y \gg \sqrt{\mf{q}_{L,\infty}(s)}\) respectively. Combining both of these estimates produces the bound
+      From these \(O\)-estimates we obtain nontrivial bounds in the ranges \(y \ll \sqrt{\mf{q}_{\infty}(s,L)}\) and \(y \gg \sqrt{\mf{q}_{\infty}(s,L)}\) respectively. Combining both of these estimates produces the bound
       \[
-        (-y)^{k}V_{L,s}^{(k)}(y) \ll_{\e} \left(1+\frac{y}{\sqrt{\mf{q}_{L,\infty}(s)}}\right)^{-N}.
+        (-y)^{k}V_{s}^{(k)}(y,L) \ll_{\e} \left(1+\frac{y}{\sqrt{\mf{q}_{\infty}(s,L)}}\right)^{-N}.
       \]
     \end{proof}
 
-    With our choice of \(\Phi(u)\), this result shows that \(V_{L,s}(y)\) is essentially \(1\) up to some admissible error for \(y \ll \sqrt{\mf{q}_{L,\infty}(s)}\) and exhibits rapid decay thereafter as we can take \(M\) (and hence \(N\)) to be arbitrarily large.
+    With our choice of \(\Phi(u)\), this result shows that \(V_{s}(y,L)\) is essentially \(1\) up to some admissible error for \(y \ll \sqrt{\mf{q}_{\infty}(s,L)}\) and exhibits rapid decay thereafter as we can take \(M\) (and hence \(N\)) to be arbitrarily large.
     
-    In a similar spirit to the approximate functional equation, a useful summation formula can be derived from the functional equation. Let \(\psi(y)\) be a smooth weight where \(\Psi(s)\) is its Mellin transform. Then we will let \(\psi_{L}(y)\) be the inverse Mellin transform
+    In a similar spirit to the approximate functional equation, a useful summation formula can be derived from the functional equation. Let \(\psi(y)\) be a smooth weight where \(\Psi(s)\) is its Mellin transform. Then we will let \(\psi(y,L)\) be the inverse Mellin transform
     \[
-      \psi_{L}(y) = \frac{1}{2\pi i}\int_{(a)}q_{L}^{s}\frac{\g_{L}(s)}{\g_{L}(1-s)}y^{-s}\Psi(1-s)\,ds,
+      \psi(y,L) = \frac{1}{2\pi i}\int_{(a)}q_{L}^{s}\frac{\g(s,L)}{\g(1-s,L)}y^{-s}\Psi(1-s)\,ds,
     \]
-    defined for \(y > 0\) where \(a > 1\). By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly bounded and hence \(\psi_{L}(y)\) is smooth for \(y > 0\). Our result is the following:
+    defined for \(y > 0\) where \(a > 1\). By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly bounded and hence \(\psi(y,L)\) is smooth for \(y > 0\). Our result is the following:
 
     \begin{theorem}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\psi(y)\) be a smooth weight where \(\Psi(s)\) is its Mellin transform. Then
       \[
-        \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{\e_{L}}{\sqrt{q_{L}}}\sum_{n \ge 1}\conj{a_{L}(n)}\psi_{L}(n)+R_{L}\Psi(1),
+        \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{\e_{L}}{\sqrt{q_{L}}}\sum_{n \ge 1}\conj{a_{L}(n)}\psi(n,L)+R_{L}\Psi(1),
       \]
       where \(R_{L}\) is given by
       \[
@@ -335,20 +323,20 @@
       \]
       Apply the functional equation to rewrite this equality in the form
       \[
-        \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(1-a)}\e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g_{L}(1-s)}{\g_{L}(s)}\conj{L(1-\conj{s})}\Psi(s)\,ds+R_{L}\Psi(1).
+        \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(1-a)}\e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)}\conj{L(1-\conj{s})}\Psi(s)\,ds+R_{L}\Psi(1).
       \]
       Performing the change of variables \(s \mapsto 1-s\) in this latter integral gives
       \[
-        \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(a)}\e_{L}q_{L}^{s-\frac{1}{2}}\frac{\g_{L}(s)}{\g_{L}(1-s)}\conj{L(\conj{s})}\Psi(1-s)\,ds+R_{L}\Psi(1).
+        \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(a)}\e_{L}q_{L}^{s-\frac{1}{2}}\frac{\g(s,L)}{\g(1-s,L)}\conj{L(\conj{s})}\Psi(1-s)\,ds+R_{L}\Psi(1).
       \]
       The proof is complete upon expanding \(\conj{L(\conj{s})}\) as a Dirichlet series, interchanging the sum and integral by absolute boundedness of the integral, and factoring out \(\frac{\e_{L}}{\sqrt{q_{L}}}\).
     \end{proof}
   \section{The Riemann Hypothesis and Nontrivial Zeros}
     The zeros of an \(L\)-functions \(L(s)\) has interesting behavior. From the Euler product we immediately see that \(L(s)\) has no zeros in the half-plane \(\s > 1\). We can use the functional equation to determine the zeros for \(\s < 0\). Indeed, write the functional equation in the form
     \[
-      L(s) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g_{L}(1-s)}{\g_{L}(s)}\conj{L(1-\conj{s})}.
+      L(s) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)}\conj{L(1-\conj{s})}.
     \] 
-    So for \(\s < 0\), we see that \(\conj{L(1-\conj{s})}\) is nonzero. Moreover, \(\g_{L}(1-s)\) is as well. Together this means that for \(\s < 0\) the poles of \(\g_{L}(s)\) are zeros of \(L(s)\). Such a zero is called a \textbf{trivial zero}\index{trivial zero} of \(L(s)\). From the definition of the gamma factor, they are all simple and of the form \(s = -(\mu_{j}+2n)\) for some gamma parameter \(\mu_{j}\) and some nonnegative integer \(n\).
+    So for \(\s < 0\), we see that \(\conj{L(1-\conj{s})}\) is nonzero. Moreover, \(\g(1-s,L)\) is as well. Together this means that for \(\s < 0\) the poles of \(\g(s,L)\) are zeros of \(L(s)\). Such a zero is called a \textbf{trivial zero}\index{trivial zero} of \(L(s)\). From the definition of the gamma factor, they are all simple and of the form \(s = -(\mu_{j}+2n)\) for some gamma parameter \(\mu_{j}\) and some nonnegative integer \(n\).
     
     Any other zero of \(L(s)\) is called a \textbf{nontrivial zero}\index{nontrivial zero} and it necessarily lies inside of the critical strip. Let \(\rho\) be a nontrivial zero of \(L(s)\). Then the functional equation implies that \(1-\conj{\rho}\) is also a nontrivial zero of \(L(s)\). This means that nontrivial zeros occur in pairs
     \[
@@ -414,7 +402,7 @@
     \begin{theorem}\label{thm:convexity_bound_for_L_function_in_critial_strip}
       Let \(L(s)\) be an analytic \(L\)-function. Then for \(-\e \le \s \le 1+\e\), we have
       \[
-        L(s) \ll_{\e} \mf{q}_{L}(s)^{\frac{1-\s}{2}+\e},
+        L(s) \ll_{\e} \mf{q}(s,L)^{\frac{1-\s}{2}+\e},
       \]
       provided \(s\) is at least distance \(\e\) away from the possible pole at \(s = 1\).
     \end{theorem}
@@ -425,25 +413,25 @@
       \]
       Just past the left edge along the vertical line \(\s = -\e\), the functional equation and \cref{equ:gamma_factor_analytic_conductor_estimate} together imply the bound
       \[
-        (s-1)^{r_{L}}L(s) \ll_{\e} (s-1)^{r_{L}}\mf{q}_{L}(s)^{\frac{1}{2}+\e}.
+        (s-1)^{r_{L}}L(s) \ll_{\e} (s-1)^{r_{L}}\mf{q}(s,L)^{\frac{1}{2}+\e}.
       \]
       By the Phragm\'en-Lindel\"of convexity principle, we obtain
       \[
-        (s-1)^{r_{L}}L(s) \ll_{\e} (s-1)^{r_{L}}\mf{q}_{L}(s)^{\frac{1-\s}{2}+\e},
+        (s-1)^{r_{L}}L(s) \ll_{\e} (s-1)^{r_{L}}\mf{q}(s,L)^{\frac{1-\s}{2}+\e},
       \]
       provided \(-\e \le \s \le 1+\e\). Assuming \(s\) is at least distance \(\e\) away from the possible pole at \(s = 1\), dividing by \((s-1)^{r_{L}}\) completes the proof.
     \end{proof}
     
     At the critical line this theorem produces the bound
     \[
-      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}_{L}(t)^{\frac{1}{4}+\e}.
+      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e}.
     \]
     This is known as the \textbf{convexity bound}\index{convexity bound} for \(L(s)\). The \textbf{Lindel\"of hypothesis}\index{Lindel\"of hypothesis} for \(L(s)\) says that the exponent can be reduced to \(\e\):
 
     \begin{conjecture*}[Lindel\"of hypothesis, \(L(s)\)]
       The analytic \(L\)-function \(L(s)\) satisfies
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}_{L}(t)^{\e}.
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}.
       \]
     \end{conjecture*}
 
@@ -452,13 +440,13 @@
     \begin{conjecture*}[Selberg class Lindel\"of hypothesis]
       Any Selberg class \(L\)-function \(L(s)\) satisfies
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}_{L}(t)^{\e}.
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}.
       \]
     \end{conjecture*}
 
     Like the Riemann hypothesis, we have been unable to prove the Lindel\"of hypothesis for any analytic \(L\)-function. However, in practice the Lindel\"of hypothesis is more tractable. Generally speaking, any improvement upon the exponent in the convexity bound in any aspect of the analytic conductor is called a \textbf{subconvexity estimate}\index{subconvexity estimate} (or a \textbf{convexity breaking bound}\index{convexity breaking bound}). In the uniform case, we would like to prove bounds of the form
     \[
-      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}_{L}(t)^{\d+\e},
+      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\d+\e},
     \]
     for some \(0 \le \d \le \frac{1}{4}\). The convexity bound says that we may take \(\d = \frac{1}{4}\) while the Lindel\"of hypothesis for \(L(s)\) implies that we may take \(\d = 0\). Any uniform subconvexity estimate would give a \(\d\) strictly less than \(\frac{1}{4}\). Subconvexity estimates are viewed with great interest. This is primarily because of their connection to the Lindel\"of hypothesis, but also because any improvement upon the convexity bound in any aspect of the analytic conductor often has drastic consequences in applications.
 
@@ -468,7 +456,7 @@
     
     With a little more work, we can obtain a a similar bound for the derivatives of analytic \(L\)-functions. First observe that \cref{thm:convexity_bound_for_L_function_in_critial_strip} gives the estimate
     \[
-      L(s) \ll_{\e} \mf{q}_{L}(t)^{\frac{1}{4}+\e},
+      L(s) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e},
     \]
     in the vertical strip \(\left|\s-\frac{1}{2}\right| \le \frac{\e}{2}\). This is just slightly stronger than the convexity bound. By Cauchy's integral formula, we may write
     \[
@@ -476,7 +464,7 @@
     \]
     where \(\eta\) is the circle about \(\frac{1}{2}+it\) of radius \(\frac{\e}{2}\). The parameterization \(u \mapsto \frac{1}{2}+it+\frac{\e}{2}e^{i\t}\) for \(\eta\) shows that
     \[
-      L^{(k)}\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}_{L}(t)^{\frac{1}{4}+\e}.
+      L^{(k)}\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e}.
     \]
     This is known as the \textbf{convexity bound}\index{convexity bound} for \(L^{(k)}(s)\).
 
@@ -494,89 +482,85 @@
     \]
     This shows that smooth dyadic weights exist. For any \(t \in \R\) and \(X > 0\), set
     \[
-      A_{L,\w}(t,X) = \sum_{n \ge 1}a_{L}(n)n^{-it}\w\left(\frac{n}{X}\right).
+      A_{\w}(t,X,L) = \sum_{n \ge 1}a_{L}(n)n^{-it}\w\left(\frac{n}{X}\right).
     \]
-    and write
-    \[
-      A_{L,\w}(X) = A_{L,\w}(0,X).
-    \]
-    Our result estimates \(L(s)\) at \(s = \frac{1}{2}+it\) in terms of \(A_{L,\w}(t,X)\).
+    Our result estimates \(L(s)\) at \(s = \frac{1}{2}+it\) in terms of \(A_{\w}(t,X,L)\).
 
     \begin{theorem}\label{thm:critical_line_estimate}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\w(y)\) be a smooth dyadic weight. Then
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}_{L}(t)^{\e}\sup_{X \ll \sqrt{\mf{q}_{L}(t)}}\left(\frac{|A_{L,\w}(t,X)|}{\sqrt{X}}\right).
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
     \end{theorem}
     \begin{proof}
       Take \(s = \frac{1}{2}+it\), \(X = 1\), and \(\Phi(u) = \cos^{-4d_{L}M}\left(\frac{\pi u}{4M}\right)\) for some large positive integer \(M\) in the approximate functional equation. This permits us to write
       \begin{align*}
-        L\left(\frac{1}{2}+it\right) &= \sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{L,t}\left(\frac{n}{\sqrt{q_{L}}}\right) \\
-        &+ \e_{L}(t)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{L,t}\left(\frac{n}{\sqrt{q_{L}}}\right)+\frac{R_{L}\left(\frac{1}{2}+it,1\right)}{q_{L}^{\frac{1}{4}+i\frac{t}{2}}\g_{L}\left(\frac{1}{2}+it\right)}.
+        L\left(\frac{1}{2}+it\right) &= \sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}},L\right) \\
+        &+ \e\left(\frac{1}{2}+it,L\right)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}},L\right)+\frac{R\left(\frac{1}{2}+it,1,L\right)}{q_{L}^{\frac{1}{4}+i\frac{t}{2}}\g\left(\frac{1}{2}+it,L\right)}.
       \end{align*}
-      \cref{equ:gamma_factor_analytic_conductor_estimate} implies \(\e_{L}(t) \ll 1\) while \cref{equ:vertical_strip_gamma_estimates,equ:choice_for_V_decay_estimate} together imply that the residue term exhibits exponential decay. This implies that right-hand side of the approximate functional equation is
+      \cref{equ:gamma_factor_analytic_conductor_estimate} implies \(\e\left(\frac{1}{2}+it,L\right) \ll 1\) while \cref{equ:vertical_strip_gamma_estimates,equ:choice_for_V_decay_estimate} together imply that the residue term exhibits exponential decay. This implies that right-hand side of the approximate functional equation is
       \begin{align*}
-        O\left(\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{L,t}\left(\frac{n}{\sqrt{q_{L}}}\right)\right)+O\left(\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{L,-t}\left(\frac{n}{\sqrt{q_{L}}}\right)\right)+O(e^{-|t|}).
+        O\left(\sum_{n \ge 1}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}},L\right)\right)+O\left(\sum_{n \ge 1}\frac{\conj{a_{L}(n)}n^{it}}{\sqrt{n}}V_{\frac{1}{2}-it}\left(\frac{n}{\sqrt{q_{L}}},L\right)\right)+O(e^{-|t|}).
       \end{align*}
-      We now turn to estimating the remaining sums which will be accomplished by applying the smooth dyadic weight. Consider the first sum. By our choice of \(\Phi(u)\), the estimates in \cref{prop:V_function_decay} are valid which implies that the summands exhibit rapid decay for \(n \gg \sqrt{\mf{q}_{L}(t)}\). Whence the sum is say
+      We now turn to estimating the remaining sums which will be accomplished by applying the smooth dyadic weight. Consider the first sum. By our choice of \(\Phi(u)\), the estimates in \cref{prop:V_function_decay} are valid which implies that the summands exhibit rapid decay for \(n \gg \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}\). Whence the sum is say
       \[
-        \sum_{n \ll \sqrt{\mf{q}_{L}(t)}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{L,t}\left(\frac{n}{\sqrt{q_{L}}}\right)+O_{\e}\left(\mf{q}_{L}(t)^{\e}\right)
+        \sum_{n \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}},L\right)+O_{\e}\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\right)
       \]
       Now write 
       \[
-        V_{L,s}(y) = \sum_{k \in \Z}\w\left(\frac{y}{2^{k}}\right)V_{L,s}(y).
+        V_{s}(y,L) = \sum_{k \in \Z}\w\left(\frac{y}{2^{k}}\right)V_{s}(y,L).
       \]
       Apply this identity to the sum and interchange the resulting two sums by local finiteness to obtain
       \[
-        \sum_{k \in \Z}\sum_{n \ll \sqrt{\mf{q}_{L}(t)}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{2^{k}\sqrt{q_{L}}}\right)V_{L,t}\left(\frac{n}{\sqrt{q_{L}}}\right).
+        \sum_{k \in \Z}\sum_{n \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{2^{k}\sqrt{q_{L}}}\right)V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}},L\right).
       \]
-      By compact support of the smooth dyadic weight, for each \(k\) the inner sum over \(n\) is supported on the dyadic block \(n \asymp X_{k}\) where \(X_{k} = 2^{k}\sqrt{q_{L}}\). As \(n \ll \sqrt{\mf{q}_{L}(t)}\), the summands which contribute must satisfy \(k \ll \log\mf{q}_{L,\infty}(t)\). Therefore our double sum can be expressed as
+      By compact support of the smooth dyadic weight, for each \(k\) the inner sum over \(n\) is supported on the dyadic block \(n \asymp X_{k}\) where \(X_{k} = 2^{k}\sqrt{q_{L}}\). As \(n \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}\), the summands which contribute must satisfy \(k \ll \log\mf{q}_{\infty}\left(\frac{1}{2}+it,L\right)\). Therefore our double sum can be expressed as
       \[
-        \sum_{k \ll \log\mf{q}_{L,\infty}(t)}\sum_{n \asymp X_{k}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{X_{k}}\right)V_{L,t}\left(\frac{n}{\sqrt{q_{L}}}\right).
+        \sum_{k \ll \log\mf{q}_{\infty}\left(\frac{1}{2}+it,L\right)}\sum_{n \asymp X_{k}}\frac{a_{L}(n)n^{-it}}{\sqrt{n}}\w\left(\frac{n}{X_{k}}\right)V_{\frac{1}{2}+it}\left(\frac{n}{\sqrt{q_{L}}},L\right).
       \]
-      Let \(V_{L,k}(y) = \frac{1}{\sqrt{y}}V_{L,t}\left(\frac{y}{\sqrt{q_{L}}}\right)\). By Abel summation, the inner sum is \(O\) of
+      Let \(V(y) = \frac{1}{\sqrt{y}}V_{\frac{1}{2}+it}\left(\frac{y}{\sqrt{q_{L}}},L\right)\). By Abel summation, the inner sum is \(O\) of
       \[
-        \sup_{n \asymp X_{k}}|A_{L,\w}(X_{k},t)|\left|V_{L,k}(n)\right|+\int_{u \asymp X_{k}}|A_{L,\w}(u,t)||V_{L,k}'(u)|\,du.
+        \sup_{n \asymp X_{k}}|A_{\w}(X_{k},t,L)|\left|V(n)\right|+\int_{u \asymp X_{k}}|A_{\w}(u,t,L)||V'(u)|\,du.
       \]
       In view of \cref{prop:V_function_decay}, we have the estimates
       \[
-        V_{L,k}(y) = O\left(\frac{1}{\sqrt{y}}\right) \quad \text{and} \quad V'_{k}(y) = O\left(\frac{1}{y^{\frac{3}{2}}}\right),
+        V(y) = O\left(\frac{1}{\sqrt{y}}\right) \quad \text{and} \quad V'(y) = O\left(\frac{1}{y^{\frac{3}{2}}}\right),
       \]
-      for \(y \ll \sqrt{\mf{q}_{L}(t)}\). Whence our previous expression is \(O\) of
+      for \(y \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}\). Whence our previous expression is \(O\) of
       \[
-        \sup_{X \asymp X_{k}}\left(\frac{|A_{L,\w}(t,X)|}{\sqrt{X}}\right).
+        \sup_{X \asymp X_{k}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
-      As there are \(O_{\e}\left(\mf{q}_{L}(t)^{\e}\right)\) many such \(k\), the bound above implies that our sum is \(O_{\e}\) of
+      As there are \(O_{\e}\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\right)\) many such \(k\), the bound above implies that our sum is \(O_{\e}\) of
       \[
-        \mf{q}_{L}(t)^{\e}\sup_{X \ll \sqrt{\mf{q}_{L}(t)}}\left(\frac{|A_{L,\w}(t,X)|}{\sqrt{X}}\right).
+        \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right).
       \]
       The estimate for the second sum is treated analogously. Thus
       \[
-        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}_{L}(t)^{\e}\sup_{X \ll \sqrt{\mf{q}_{L}(t)}}\left(\frac{|A_{L,\w}(t,X)|}{\sqrt{X}}\right),
+        L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right),
       \]
       upon absorbing smaller order error terms.
     \end{proof}
 
-    As any useful estimate for the sum \(A_{L,\w}(t,X)\) will be in terms of powers of \(X\), the supremum in \cref{thm:central_value_estimate} will automatically pick out the largest possible bound when \(X\) is the square root of the analytic conductor. This means that the savings of \(\sqrt{X}\) in the denominator is essentially as large as possible. For example, we obtain the convexity bound as an application. Since the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s < 1\), we have a bound of shape
+    As any useful estimate for the sum \(A_{\w}(t,X,L)\) will be in terms of powers of \(X\), the supremum in \cref{thm:central_value_estimate} will automatically pick out the largest possible bound when \(X\) is the square root of the analytic conductor. This means that the savings of \(\sqrt{X}\) in the denominator is essentially as large as possible. For example, we obtain the convexity bound as an application. Since the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s < 1\), we have a bound of shape
     \[
       \sum_{n \le X}|a_{L}(n)| \ll_{\e} X^{1+\e}.
     \]
-    Then \(A_{L,\w}(t,X) \ll_{\e} X^{1+\e}\) as well and we obtain
+    Then \(A_{\w}(t,X,L) \ll_{\e} X^{1+\e}\) as well and we obtain
     \begin{equation}\label{equ:coefficient_sum_trivial_bound}
-      \sup_{X \ll \sqrt{\mf{q}_{L}(t)}}\frac{|A_{L,\w}(t,X)|}{\sqrt{X}} \ll_{\e} \mf{q}_{L}(t)^{\frac{1}{4}+\e},
+      \sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\frac{|A_{\w}(t,X,L)|}{\sqrt{X}} \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}+\e},
     \end{equation}
-    which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{L,\w}(t,X)\). In fact, the expected cancellation should be \(O\left(\mf{q}_{L}(t)^{\frac{1}{4}}\right)\) in light of the aforementioned bound. This means we expect \(A_{L,\w}(t,X)\) to exhibit square-root cancellation in the sense
+    which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{\w}(t,X,L)\). In fact, the expected cancellation should be \(O\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}\right)\) in light of the aforementioned bound. This means we expect \(A_{\w}(t,X,L)\) to exhibit square-root cancellation in the sense
     \[
-      A_{L,\w}(t,X) \ll_{\e} X^{\frac{1}{2}+\e}.
+      A_{\w}(t,X,L) \ll_{\e} X^{\frac{1}{2}+\e}.
     \]
     As the coefficients \(a_{L}(n)\) may very well be real, the expected cancellation must come from the terms \(n^{-it} = e^{-it\log(n)}\) which acts on the coefficients \(a_{L}(n)\) by rotation. In effect, we should think of the terms \(a_{L}(n)n^{-it}\) as modeling identically distributed random variables. 
 
-    The case when \(t = 0\) is deserving of unique importance. In this case, we are estimating the value of \(L(s)\) at the central point. The value of \(L(s)\) at the central point is called the \textbf{central value}\index{central value} of \(L(s)\). Many important properties about \(L(s)\) can be connected to its central value. Any argument used to estimate the central value of an \(L\)-function is called a \textbf{central value estimate}\index{central value estimate}. Taking \(t = 0\) in \cref{thm:critical_line_estimate} gives a way to obtain central value estimates.
+    The case when \(t = 0\) deserves special interest as we are estimating the value of an \(L\)-function at the central point. The value of \(L(s)\) at the central point is called the \textbf{central value}\index{central value} of \(L(s)\). Many important properties about an \(L\)-function can be connected to its central value. Any argument used to estimate the central value of an \(L\)-function is called a \textbf{central value estimate}\index{central value estimate}. Taking \(t = 0\) in \cref{thm:critical_line_estimate} gives a way to obtain central value estimates.
 
     \begin{theorem}\label{thm:central_value_estimate}
       Let \(L(s)\) be an analytic \(L\)-function and let \(\w(y)\) be a smooth dyadic weight. Then
       \[
-        L\left(\frac{1}{2}\right) \ll_{\e} \mf{q}\left(L\right)^{\e}\max_{X \ll \sqrt{\mf{q}\left(L\right)}}\left(\frac{|A_{L,\w}(X)|}{\sqrt{X}}\right).
+        L\left(\frac{1}{2}\right) \ll_{\e} \mf{q}\left(\frac{1}{2},L\right)^{\e}\max_{X \ll \sqrt{\mf{q}\left(\frac{1}{2},L\right)}}\left(\frac{|A_{\w}(0,X,L)|}{\sqrt{X}}\right).
       \]
     \end{theorem}
     \begin{proof}
@@ -601,86 +585,77 @@
     \]
     We call \(\L_{L}(n)\) the \textbf{Von Mangoldt coefficients}\index{Von Mangoldt coefficients} of \(L(s)\).
 
-    There is an incredibly useful formula for the logarithmic derivative of \(L(s)\) which is often the starting point for deeper analytic investigations. To deduce it, we require a more complete understanding of the completion \(\L_{L}(s)\). First observe that the zeros \(\rho\) of \(\L_{L}(s)\) are contained within the critical strip. Indeed, by our earlier discussion of zeros, \(\L_{L}(s)\) is nonzero for \(\s > 1\) and the functional equation implies that \(\L_{L}(s)\) is nonzero for \(\s < 0\) too. This means that the zeros of \(\L_{L}(s)\) are exactly nontrivial zeros of \(L(s)\). Now let us setup some notation. We define \(\xi_{L}(s)\) by
+    There is an incredibly useful formula for the logarithmic derivative of \(L(s)\) which is often the starting point for deeper analytic investigations. To deduce it, we require a more complete understanding of the completion \(\L(s,L)\). First observe that the zeros \(\rho\) of \(\L(s,L)\) are contained within the critical strip. Indeed, by our earlier discussion of zeros, \(\L(s,L)\) is nonzero for \(\s > 1\) and the functional equation implies that \(\L(s,L)\) is nonzero for \(\s < 0\) too. This means that the zeros of \(\L(s,L)\) are exactly nontrivial zeros of \(L(s)\). Now let us setup some notation. We define \(\xi(s,L)\) by
     \[
-      \xi_{L}(s) = (s(1-s))^{r_{L}}\L_{L}(s).
+      \xi(s,L) = (s(1-s))^{r_{L}}\L(s,L).
     \]
-    Then \(\xi_{L}(s)\) is just \(\L_{L}(s)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi_{L}(s)\) is entire. The functional equation also implies
+    The functional equation implies
     \[
-      \xi_{L}(s) = \e_{L}\conj{\xi_{L}(1-\conj{s})}.
+      \xi(s,L) = \e_{L}\conj{\xi(1-\conj{s},L)}.
     \]
-    Our result will compute the Hadamard factorization of \(\xi_{L}(s)\) and taking its logarithmic derivative will give a formula relating the logarithmic derivative of \(L(s)\) to the zeros of \(L(s)\).
+    In fact, \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula and that \((s-1)^{r_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
+    \[
+      \xi(s,L) = e^{A_{L}+B_{L}s}\prod_{\rho \neq 0,1}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
+    \]
+    for some constants \(A_{L}\) and \(B_{L}\) and that the sum
+    \[
+      \sum_{\rho \neq 0,1}\frac{1}{|\rho|^{1+\e}},
+    \]
+    is convergent. Our next result will utilize the Hadamard factorization of \(\xi(s,L)\) to produce a formula relating the logarithmic derivative of \(L(s)\) to its zeros.
 
     \begin{proposition}\label{prop:explicit_formula_log_derivative}
-      For any analytic \(L\)-function \(L(s)\), there exist constants \(A_{L}\) and \(B_{L}\) such that
+      For any analytic \(L\)-function \(L(s)\), we have
       \[
-        \xi_{L}(s) = e^{A_{L}+B_{L}s}\prod_{\rho \neq 0,1}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
-      \]
-      and hence the sum
-      \[
-        \sum_{\rho \neq 0,1}\frac{1}{|\rho|^{1+\e}},
-      \]
-      is convergent provided the product and sum are both counted with multiplicity and ordered with respect to the size of the ordinate. Moreover,
-      \[
-        -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{1}{2}\log{q_{L}}+\frac{\g_{L}'}{\g_{L}}(s)-B_{L}-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
+        -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{1}{2}\log{q_{L}}+\frac{\g'}{\g}(s,L)-B_{L}-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
       \] 
     \end{proposition}
     \begin{proof}
-      Recall that \(\xi_{L}(s)\) is entire and its zeros are exactly the nontrivial zeros of \(L(s)\). We claim \(\xi_{L}(s)\) is of order \(1\). This follows from Stirling's formula and that \((s-1)^{r_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
+      We will compute the logarithmic derivative of \(\xi(s,L)\) in two ways. On the one hand, taking the logarithmic derivative of the definition of \(\xi(s,L)\) yields
       \[
-        \xi_{L}(s) = e^{A_{L}+B_{L}s}\prod_{\rho \neq 0,1}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
-      \]
-      for some constants \(A_{L}\) and \(B_{L}\) and that the desired sum converges. This proves the first statement. We will compute the logarithmic derivative of \(\xi_{L}(s)\) in two ways to prove the second statement. On the one hand, taking the logarithmic derivative of the definition of \(\xi_{L}(s)\) yields
-      \[
-        \frac{\xi_{L}'}{\xi_{L}}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{1}{2}\log{q_{L}}+\frac{\g_{L}'}{\g_{L}}(s)+\frac{L'}{L}(s).
+        \frac{\xi'}{\xi}(s,L) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{1}{2}\log{q_{L}}+\frac{\g'}{\g}(s,L)+\frac{L'}{L}(s).
       \]
       On the other hand, taking the logarithmic derivative of the Hadamard factorization gives
       \[
-        \frac{\xi_{L}'}{\xi_{L}}(s) = B_{L}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
+        \frac{\xi'}{\xi}(s,L) = B_{L}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
       \]
       Equating these expressions to obtain
       \[
-        B_{L}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{1}{2}\log{q_{L}}+\frac{\g_{L}'}{\g_{L}}(s)+\frac{L'}{L}(s).
+        B_{L}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{1}{2}\log{q_{L}}+\frac{\g'}{\g}(s,L)+\frac{L'}{L}(s).
       \]
-      This is equivalent to the second statement.
+      This is equivalent to the desired formula.
     \end{proof}
 
     Explicit evaluation of the constants \(A_{L}\) and \(B_{L}\) can be challenging and heavily depend upon the particular \(L\)-function under investigation. However, useful estimates are not too difficult to obtain and this is often sufficient for applications.
   \iffalse\section{Zero Density}
-    The deepest subject of the theory of \(L\)-functions is arguably the distribution of the zeros of \(L\)-functions. Here we introduce a method of counting zeros of \(L\)-functions and gaining a very simple understanding of their density as a result. We first require an immensely useful lemma:
+    The distribution of the zeros of an \(L\)-function is central to how the \(L\)-function encodes arithmetic information about its coefficients. Here we introduce a method of counting zeros of \(L\)-functions which gives a simple understanding of their density. We first require an immensely useful lemma.
 
     \begin{lemma}\label{lem:powerful_L-function_approximation_lemma}
-      Let \(L(s)\) be an \(L\)-function. The following statements hold:
+      Let \(L(s)\) be an \(L\)-function. The following properties hold:
       \begin{enumerate}[label*=(\roman*)]
         \item The constant \(B_{L}\) satisfies
         \[
-          \Re(B_{L}) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{\rho}\right),
+          \Re(B_{L}) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{\rho}\right).
         \]
-        where the sum is counted with multiplicity and ordered with respect to the size of the ordinate.
-        \item For any \(T \ge 0\), the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(iT,f)})\).
+        \item For any nonnegative \(T\), the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(iT,L)})\).
         \item For \(\s > 1\), we have
         \[
           \Re\left(\frac{1}{s-\rho}\right) > 0 \quad \text{and} \quad \Re\left(\frac{1}{s+\mu_{j}}\right) > 0.
         \]
-        \item We have
+        \item We may write
         \[
-          -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}-\sum_{|s+\mu_{j}| < 1}\frac{1}{s+\mu_{j}}-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\frac{1}{s-\rho}+O(\log{\mf{q}_{L}(s)}),
+          -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}-\sum_{|s+\mu_{j}| < 1}\frac{1}{s+\mu_{j}}-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\frac{1}{s-\rho}+O(\log{\mf{q}(s,L)}),
         \]
-        for any \(s\) in the vertical strip \(-\frac{1}{2} \le \s \le 2\). Moreover, in this vertical strip we also have
-        \[
-          \Re\left(-\frac{L'}{L}(s)\right) \le \Re\left(\frac{r_{L}}{s}\right)+\Re\left(\frac{r_{L}}{s-1}\right)-\sum_{|s+\mu_{j}| < 1}\Re\left(\frac{1}{s+\mu_{j}}\right)-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\Re\left(\frac{1}{s-\rho}\right)+O(\log{\mf{q}_{L}(s)}),
-        \]
-        and we may discard any term in either sum if \(1 < \s \le 2\).
+        for any \(s\) in the vertical strip \(-\frac{1}{2} \le \s \le 2\).
       \end{enumerate}
     \end{lemma}
     \begin{proof}
-      We will prove each statement separately.
+      We will prove the properties separately.
       \begin{enumerate}[label*=(\roman*)]
-        \item To prove (i), first recall that  \(B(\conj{f}) = \conj{B_{L}}\). Then \cref{equ:log_derivative_2} and the functional equation together imply
+        \item Taking the logarithmic derivative of the Hadamard factorization of \(\xi(s,L)\) gives
         \[
-          2\Re(B_{L}) = B_{L}+B(\conj{f}) = -\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{1-s-\conj{\rho}}+\frac{1}{\rho}+\frac{1}{\conj{\rho}}\right),
+          B_{L} = \frac{\xi'}{\xi}(s,L)-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
         \]
-        where we have made use of the fact that the nontrivial zeros occur is pairs \(\rho\) and \(1-\conj{\rho}\) where the latter is also a nontrivial zero of \(L(1-s)\). Now fix \(s\) such that it does not coincide with the ordinate of a nontrivial zero. Then \(s\) is bounded away from all of the nontrivial zeros and it follows that \(\frac{1}{(s-\rho)}+\frac{1}{(1-s-\conj{\rho})} \ll \frac{1}{\rho^{2}}\) and \(\frac{1}{\rho}+\frac{1}{\conj{\rho}} \ll \frac{1}{\rho^{2}}\). Therefore the sums
+        Now let \(s > 1\). Then \(s\) is bounded away from all of the nontrivial zeros and it follows that \(\frac{1}{(s-\rho)}+\frac{1}{(1-s-\conj{\rho})} \ll \frac{1}{\rho^{2}}\) and \(\frac{1}{\rho}+\frac{1}{\conj{\rho}} \ll \frac{1}{\rho^{2}}\). Therefore the sums
         \[
           \sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{1-s-\conj{\rho}}\right) \quad \text{and} \quad \sum_{\rho \neq 0,1}\left(\frac{1}{\rho}+\frac{1}{\conj{\rho}}\right),
         \]
@@ -695,11 +670,11 @@
         \end{equation}
         provided \(\s > 2\). For the second quantity, \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} implies
         \begin{equation}\label{equ:log_conductor_gamma_factor_bound_analytic_conductor}
-          \frac{1}{2}\log{q_{L}}+\frac{\g_{L}'}{\g_{L}}(s) \ll \log{\mf{q}_{L}(s)},
+          \frac{1}{2}\log{q_{L}}+\frac{\g'}{\g}(s,L) \ll \log{\mf{q}(s,L)},
         \end{equation}
         for \(\s > 0\). Now fix \(T \ge 0\) and let \(s = 3+iT\). Taking the real part of the formula for the negative logarithmic derivative in \cref{prop:explicit_formula_log_derivative} and combining \cref{equ:log_derivative_bound_conductor,equ:log_conductor_gamma_factor_bound_analytic_conductor} with (i) results in
         \[
-          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) \ll \log{\mf{q}(iT,f)}.
+          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) \ll \log{\mf{q}(iT,L)}.
         \]
         But as
         \[
@@ -707,7 +682,7 @@
         \]
         we obtain
         \begin{equation}\label{equ_sum_of_nontrivial_zeros_log_analytic_conductor_bound}
-          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} \ll \log{\mf{q}(iT,f)},
+          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} \ll \log{\mf{q}(iT,L)},
         \end{equation}
         which is stronger than the first statement of (ii) since all of the terms in the sum are positive. The second statement is also clear.
         \item For (iii), just observe that
@@ -718,11 +693,11 @@
         where the first bound holds because \(\b \le 1\) and the second bound holds because \(\Re(\mu_{j}) > -1\).
         \item To deduce (iv), let \(s\) be such that \(-\frac{1}{2} \le \s \le 2\). Using \cref{equ:log_derivative_bound_conductor}, we can write
         \[
-          -\frac{L'}{L}(s) = -\frac{L'}{L}(s)+\frac{L'}{L}(3+it,f)+O(\log{\mf{q}_{L}(s)}).
+          -\frac{L'}{L}(s) = -\frac{L'}{L}(s)+\frac{L'}{L}(3+it,f)+O(\log{\mf{q}(s,L)}).
         \]
         Applying the formula for the negative logarithmic derivative in \cref{prop:explicit_formula_log_derivative} to the two terms on the right-hand side and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} for \(\s > 0\), we get
         \[
-          -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{\g_{L}'}{\g_{L}}(s)-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}-\frac{1}{3+it-\rho}\right)+O(\log{\mf{q}_{L}(s)}).
+          -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{\g'}{\g}(s,L)-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}-\frac{1}{3+it-\rho}\right)+O(\log{\mf{q}(s,L)}).
         \]
         We now estimate the remaining sum. Retain the first part of the terms for which \(|s-\rho| < 1\). The contribution from the second part of these terms is \(O(\log{\mf{q}(it,f)})\) by (ii). For those terms with \(|s-\rho| \ge 1\), we have
         \[
@@ -730,19 +705,19 @@
         \]
         Therefore from \cref{equ_sum_of_nontrivial_zeros_log_analytic_conductor_bound}, the contribution of these terms is \(O(\log{\mf{q}(it,f)})\) too. It follows that
         \[
-          -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{\g_{L}'}{\g_{L}}(s)-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\frac{1}{s-\rho}+O(\log{\mf{q}_{L}(s)}).
+          -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}+\frac{\g'}{\g}(s,L)-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\frac{1}{s-\rho}+O(\log{\mf{q}(s,L)}).
         \]
-        Applying \(\frac{\G'}{\G}(s+1) = \frac{\G'}{\G}(s)+\frac{1}{s}\) to \(\frac{\g_{L}'}{\g_{L}}(s)\) and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
+        Applying \(\frac{\G'}{\G}(s+1) = \frac{\G'}{\G}(s)+\frac{1}{s}\) to \(\frac{\g'}{\g}(s,L)\) and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
         \[
-          \frac{\g_{L}'}{\g_{L}}(s) = -\sum_{|s+\mu_{j}| < 1}\frac{1}{s+\mu_{j}}+O(\log{\mf{q}_{L,\infty}(s)}).
+          \frac{\g'}{\g}(s,L) = -\sum_{|s+\mu_{j}| < 1}\frac{1}{s+\mu_{j}}+O(\log{\mf{q}_{\infty}(s,L)}).
         \]
         Then we obtain
         \[
-          -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}-\sum_{|s+\mu_{j}| < 1}\frac{1}{s+\mu_{j}}-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\frac{1}{s-\rho}+O(\log{\mf{q}_{L}(s)}),
+          -\frac{L'}{L}(s) = \frac{r_{L}}{s}+\frac{r_{L}}{s-1}-\sum_{|s+\mu_{j}| < 1}\frac{1}{s+\mu_{j}}-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\frac{1}{s-\rho}+O(\log{\mf{q}(s,L)}),
         \]
         which is the first statement of (iv). For second statement, tak the real part of this estimate and write it as
         \[
-          \sum_{|s+\mu_{j}| < 1}\Re\left(\frac{1}{s+\mu_{j}}\right)+\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\Re\left(\frac{1}{s-\rho}\right) \le \Re\left(-\frac{L'}{L}(s)\right)+\Re\left(\frac{r_{L}}{s}\right)+\Re\left(\frac{r_{L}}{s-1}\right)+O(\log{\mf{q}_{L}(s)}).
+          \sum_{|s+\mu_{j}| < 1}\Re\left(\frac{1}{s+\mu_{j}}\right)+\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\Re\left(\frac{1}{s-\rho}\right) \le \Re\left(-\frac{L'}{L}(s)\right)+\Re\left(\frac{r_{L}}{s}\right)+\Re\left(\frac{r_{L}}{s-1}\right)+O(\log{\mf{q}(s,L)}).
         \]
         Now observe that we can discard any of the terms in either sum provided \(1 < \s \le 2\) by (iii).
       \end{enumerate}
@@ -757,7 +732,7 @@
     \begin{theorem}\label{thm:zero_counting}
       For any \(L\)-function \(L(s)\) and \(T \ge 1\),
       \[
-        N(T,f) = \frac{T}{\pi}\log\left(\frac{QT^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,f)}).
+        N(T,f) = \frac{T}{\pi}\log\left(\frac{QT^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}).
       \]
       In particular,
       \[
@@ -773,9 +748,9 @@
       \[
         N(T,f) = N'(T,f)+N_{L}'(T)+O(\log{\mf{q}(f)}),
       \]
-      where \(O(\log{\mf{q}(f)})\) accounts for the possible real nontrivial zeros. There are finitely many such nontrivial zeros because the interval \(0 \le s \le 1\) is compact. We will estimate \(N'(T,f)\) and in doing so we may assume \(L(s)\) does not vanish on the line \(t = T\) by varying \(T\) by a sufficiently small constant, if necessary, and observing that \(N(T,f)\) is modified by a quantity of size \(O(\log{\mf{q}(iT,f)})\) by \cref{lem:powerful_L-function_approximation_lemma} (i). Since the nontrivial zeros are isolated, let \(\d > 0\) be small enough such that \(\L_{L}(s)\) has no nontrivial zeros for \(-\d \le t < 0\). Then by our previous comments and the argument principle,
+      where \(O(\log{\mf{q}(f)})\) accounts for the possible real nontrivial zeros. There are finitely many such nontrivial zeros because the interval \(0 \le s \le 1\) is compact. We will estimate \(N'(T,f)\) and in doing so we may assume \(L(s)\) does not vanish on the line \(t = T\) by varying \(T\) by a sufficiently small constant, if necessary, and observing that \(N(T,f)\) is modified by a quantity of size \(O(\log{\mf{q}(iT,L)})\) by \cref{lem:powerful_L-function_approximation_lemma} (i). Since the nontrivial zeros are isolated, let \(\d > 0\) be small enough such that \(\L(s,L)\) has no nontrivial zeros for \(-\d \le t < 0\). Then by our previous comments and the argument principle,
       \[
-        N'(T,f) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi_{L}'}{\xi_{L}}(s)\,ds+O(\log{\mf{q}(iT,f)}),
+        N'(T,f) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds+O(\log{\mf{q}(iT,L)}),
       \]
 
       \begin{figure}[ht]
@@ -822,24 +797,24 @@
 
       where \(\eta = \sum_{1 \le i \le 6}\eta_{i}\) is the contour in \cref{fig:zero_counting_contour}. Since \(\log(s) = \log{|s|}+i\arg(s)\), we have
       \[
-        \frac{1}{2\pi i}\int_{\eta}\frac{\xi_{L}'}{\xi_{L}}(s)\,ds = \frac{1}{2\pi i}\int_{\eta}\frac{d}{ds}\log{|\xi_{L}(s)|}\,ds+\frac{1}{2\pi }\int_{\eta}\frac{d}{ds}\arg\xi_{L}(s)\,ds = \frac{1}{2\pi}\D_{\eta}\arg(\xi_{L}(s)),
+        \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds = \frac{1}{2\pi i}\int_{\eta}\frac{d}{ds}\log{|\xi(s,L)|}\,ds+\frac{1}{2\pi }\int_{\eta}\frac{d}{ds}\arg\xi(s,L)\,ds = \frac{1}{2\pi}\D_{\eta}\arg(\xi(s,L)),
       \]
-      where the last equality holds by noting that \(\eta\) is closed so that the first integral vanishes. For convenience, set \(\eta_{L} = \eta_{1}+\eta_{2}+\eta_{3}\) and \(\eta_{R} = \eta_{4}+\eta_{5}+\eta_{6}\). Recall that we have already shown \(\xi_{L}(\conj{s}) = \conj{(\xi_{L}(s))}\). Using this fact along with the functional equation and that \(-\arg(s) = \arg(\conj{s})\), we compute
+      where the last equality holds by noting that \(\eta\) is closed so that the first integral vanishes. For convenience, set \(\eta_{L} = \eta_{1}+\eta_{2}+\eta_{3}\) and \(\eta_{R} = \eta_{4}+\eta_{5}+\eta_{6}\). Recall that we have already shown \(\xi(\conj{s},L) = \conj{(\xi(s,L))}\). Using this fact along with the functional equation and that \(-\arg(s) = \arg(\conj{s})\), we compute
       \begin{align*}
-        \D_{\eta_{L}}\arg(\xi_{L}(s)) &= \D_{\eta_{L}}\arg\left(\e_{L}\xi_{L}(1-s)\right) \\
-        &= -\D_{\conj{\eta_{R}}}\arg\left(\e_{L}\xi_{L}(s)\right) \\
+        \D_{\eta_{L}}\arg(\xi(s,L)) &= \D_{\eta_{L}}\arg\left(\e_{L}\xi(1-s,L)\right) \\
+        &= -\D_{\conj{\eta_{R}}}\arg\left(\e_{L}\xi(s,L)\right) \\
         &= \D_{\conj{\eta_{R}}}\arg\left(\conj{\e_{L}}\xi(\conj{s},f)\right) \\
-        &= \D_{\eta_{R}}\arg\left(\conj{\e_{L}}\xi_{L}(s)\right) \\
-        &= \D_{\eta_{R}}\arg\left(\conj{\e_{L}}\right)+\D_{\eta_{R}}\arg(\xi_{L}(s)) \\
-        &= \D_{\eta_{R}}\arg(\xi_{L}(s)).
+        &= \D_{\eta_{R}}\arg\left(\conj{\e_{L}}\xi(s,L)\right) \\
+        &= \D_{\eta_{R}}\arg\left(\conj{\e_{L}}\right)+\D_{\eta_{R}}\arg(\xi(s,L)) \\
+        &= \D_{\eta_{R}}\arg(\xi(s,L)).
       \end{align*}
       In other words, the change in argument along \(\eta_{L}\) is equal to the change in argument along \(\eta_{R}\) and so
       \[
-        \frac{1}{2\pi i}\int_{\eta}\frac{\xi_{L}'}{\xi_{L}}(s)\,ds = \frac{1}{\pi}\D_{\eta_{L}}\arg\xi_{L}(s).
+        \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds = \frac{1}{\pi}\D_{\eta_{L}}\arg\xi(s,L).
       \]
       Thus to estimate the integral, we estimate the change in argument along \(\eta_{L}\) of each factor in
       \[
-        \xi_{L}(s) = (s(1-s))^{r_{L}}Q^{\frac{s}{2}}\pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right)L(s).
+        \xi(s,L) = (s(1-s))^{r_{L}}Q^{\frac{s}{2}}\pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right)L(s).
       \]
       For the factor \((s(1-s))^{r_{L}}\), we first have
       \[
@@ -875,22 +850,22 @@
       \[
         \D_{\eta_{L}}\arg(L(s)) = \Im\left(\int_{\eta_{L}}\frac{L'}{L}(s)\,ds\right).
       \]
-      By \cref{equ:log_derivative_bound_conductor}, the integral is \(O(\log{q_{L}})\) on \(\eta_{2}\). On \(\eta_{1}\) and \(\eta_{3}\), \cref{lem:powerful_L-function_approximation_lemma} (ii) and (iv) together imply that the integral is \(O(\log{\mf{q}(iT,f)})\). It follows that
+      By \cref{equ:log_derivative_bound_conductor}, the integral is \(O(\log{q_{L}})\) on \(\eta_{2}\). On \(\eta_{1}\) and \(\eta_{3}\), \cref{lem:powerful_L-function_approximation_lemma} (ii) and (iv) together imply that the integral is \(O(\log{\mf{q}(iT,L)})\). It follows that
       \begin{equation}\label{equ:zero_counting_5}
-        \D_{\eta_{L}}\arg(L(s)) = O(\log{\mf{q}(iT,f)}).
+        \D_{\eta_{L}}\arg(L(s)) = O(\log{\mf{q}(iT,L)}).
       \end{equation}
       Combining \cref{equ:zero_counting_1,equ:zero_counting_2,equ:zero_counting_3,equ:zero_counting_4,equ:zero_counting_5} results in
       \[
-        \frac{1}{\pi}\D_{\eta_{L}}\arg\xi_{L}(s) = \frac{T}{2\pi}\log\left(\frac{T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,f)}),
+        \frac{1}{\pi}\D_{\eta_{L}}\arg\xi(s,L) = \frac{T}{2\pi}\log\left(\frac{T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}),
       \]
       and therefore
       \[
-        N'(T,f) = \frac{T}{2\pi}\log\left(\frac{T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,f)}),
+        N'(T,f) = \frac{T}{2\pi}\log\left(\frac{T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}),
       \]
       The asymptotic formula follows from this estimate and that the same exact estimate holds for \(N_{L}'(T)\) by using the \(L\)-function \(L(s)\). We obtain the asymptotic equality at once from the asymptotic formula.
     \end{proof}
 
-    It is worth noting that the main term in the proof of \cref{thm:zero_counting} comes from the change in argument of \(Q^{\frac{s}{2}}\g_{L}(s)\) along \(\eta_{3}\) (equivalently \(\eta_{4}\)). Moreover, the contribution from \(L(s)\) is only to the error term. This is a good example of how analytic information of an \(L\)-function is intrinsically connected to its gamma factor. Also, with \cref{thm:zero_counting} we can derive our zero density estimate. The asymptotic equivalence in \cref{thm:zero_counting} can be interpreted as saying that for large \(T\) the density of \(N(T,f)\) is approximately \(\frac{1}{\pi}\log\left(\frac{QT^{d_{L}}}{(2\pi e)^{d_{L}}}\right)\). Since this grows as \(T \to \infty\), we see that the nontrivial zeros tend to accumulate farther up the critical strip with logarithmic growth. We can dispense with this accumulation. If \(\rho = \b+i\g\) is a nontrivial zero of \(L(s)\) then we call \(\rho_{\text{unf}} = \b+i\w\) the \textbf{unfolded nontrivial zero}\index{unfolded nontrivial zero} corresponding to \(\rho\) where
+    It is worth noting that the main term in the proof of \cref{thm:zero_counting} comes from the change in argument of \(Q^{\frac{s}{2}}\g(s,L)\) along \(\eta_{3}\) (equivalently \(\eta_{4}\)). Moreover, the contribution from \(L(s)\) is only to the error term. This is a good example of how analytic information of an \(L\)-function is intrinsically connected to its gamma factor. Also, with \cref{thm:zero_counting} we can derive our zero density estimate. The asymptotic equivalence in \cref{thm:zero_counting} can be interpreted as saying that for large \(T\) the density of \(N(T,f)\) is approximately \(\frac{1}{\pi}\log\left(\frac{QT^{d_{L}}}{(2\pi e)^{d_{L}}}\right)\). Since this grows as \(T \to \infty\), we see that the nontrivial zeros tend to accumulate farther up the critical strip with logarithmic growth. We can dispense with this accumulation. If \(\rho = \b+i\g\) is a nontrivial zero of \(L(s)\) then we call \(\rho_{\text{unf}} = \b+i\w\) the \textbf{unfolded nontrivial zero}\index{unfolded nontrivial zero} corresponding to \(\rho\) where
     \[
       \w = \frac{\g}{\pi}\log\left(\frac{Q|\g|^{d_{L}}}{(2\pi e)^{d_{L}}}\right).
     \]
@@ -1050,9 +1025,8 @@
       Let \(\psi(y)\) be a positive bump function with compact support and let \(\Psi(s)\) denote its Mellin transform. Set \(\phi(y) = y^{-1}\psi(y^{-1})\) so that its Mellin transform satisfies \(\Phi(s) = \Psi(1-s)\). Then for any \(L\)-function \(L(s)\), we have
       \begin{align*}
         \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{f}}(n)\phi(n)\right) &= \psi(1)\log{q_{L}}+r_{L}\Psi(1) \\
-        &+ \frac{1}{2\pi i}\int_{\left(\frac{1}{2}\right)}\left(\frac{\g_{L}'}{\g_{L}}(s)+\frac{\g_{L}'}{\g_{L}}(1-s,L)\right)\Psi(s)\,ds-\sum_{\rho}\Psi(\rho),
+        &+ \frac{1}{2\pi i}\int_{\left(\frac{1}{2}\right)}\left(\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)\right)\Psi(s)\,ds-\sum_{\rho}\Psi(\rho).
       \end{align*}
-      where the sum is counted with multiplicity and ordered with respect to the size of the ordinate.
     \end{theorem*}
     \begin{proof}
       By smoothed Perron's formula, we have
@@ -1065,11 +1039,11 @@
       \]
       For the latter integral, the functional equation and that \(q(\conj{f}) = Q\) together imply
       \[
-        -\frac{L'}{L}(s) = \log{q_{L}}+\frac{\g_{L}'}{\g_{L}}(s)+\frac{\g_{L}'}{\g_{L}}(1-s,L)+\frac{L'}{L}(1-s,L).
+        -\frac{L'}{L}(s) = \log{q_{L}}+\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)+\frac{L'}{L}(1-s,L).
       \]
       Thus
       \[
-        \frac{1}{2\pi i}\int_{(-\d)}-\frac{L'}{L}(s)\Phi(s)\,ds = \frac{1}{2\pi i}\int_{(-\d)}\left(\log{q_{L}}+\frac{\g_{L}'}{\g_{L}}(s)+\frac{\g_{L}'}{\g_{L}}(1-s,L)+\frac{L'}{L}(1-s,L)\right)\Psi(s)\,ds.
+        \frac{1}{2\pi i}\int_{(-\d)}-\frac{L'}{L}(s)\Phi(s)\,ds = \frac{1}{2\pi i}\int_{(-\d)}\left(\log{q_{L}}+\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)+\frac{L'}{L}(1-s,L)\right)\Psi(s)\,ds.
       \]
       The integral over the first term on the right-hand side is \(\psi(1)\log{q_{L}}\) by Mellin inversion. As for the last term, smoothed Perron's formula and that \(\Phi(s) = \Psi(1-s)\) together give
       \[
@@ -1078,9 +1052,9 @@
       So altogether, we have
       \begin{align*}
         \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{f}}(n)\phi(n)\right) &= \psi(1)\log{q_{L}}+r_{L}\Psi(1) \\
-        &+ \frac{1}{2\pi i}\int_{(-\d)}\left(\frac{\g_{L}'}{\g_{L}}(s)+\frac{\g_{L}'}{\g_{L}}(1-s,L)\right)\Psi(s)\,ds-\sum_{\rho}\Psi(\rho).
+        &+ \frac{1}{2\pi i}\int_{(-\d)}\left(\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)\right)\Psi(s)\,ds-\sum_{\rho}\Psi(\rho).
       \end{align*}
-      Lastly, we note that by \cref{equ:approximtion_for_digamma,prop:smoothing_function_Mellin_inverse_vertical_strips}, the remaining integrand has rapid decay and therefore is locally absolutely uniformly convergent. Shifting the line of integration to \(\left(\frac{1}{2}\right)\), we pass over no poles because the residues of \(\frac{\g_{L}'}{\g_{L}}(1-s,L)\) are negative of those of \(\frac{\g_{L}'}{\g_{L}}(s)\) for \(\s \ge -\d\) (the nontrivial zeros of \(L(s)\) occur in pairs \(\rho\) and \(1-\conj{\rho}\)). This completes the proof. 
+      Lastly, we note that by \cref{equ:approximtion_for_digamma,prop:smoothing_function_Mellin_inverse_vertical_strips}, the remaining integrand has rapid decay and therefore is locally absolutely uniformly convergent. Shifting the line of integration to \(\left(\frac{1}{2}\right)\), we pass over no poles because the residues of \(\frac{\g}{\g}(1-s,L)\) are negative of those of \(\frac{\g'}{\g}(s,L)\) for \(\s \ge -\d\) (the nontrivial zeros of \(L(s)\) occur in pairs \(\rho\) and \(1-\conj{\rho}\)). This completes the proof. 
     \end{proof}
 
     The explicit formula is a very useful tool for analytic investigations. Since \(\L_{L}(n)\) is essentially a weighted sum over prime powers, the explicit formula can be thought of as expressing a smoothed weighted sum over primes for \(f\) in terms of the zeros of \(L(s)\).
