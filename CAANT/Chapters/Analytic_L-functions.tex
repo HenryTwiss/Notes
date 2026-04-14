@@ -658,7 +658,7 @@
         \[
           -\Re\left(\frac{L'}{L}(s)\right) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}),
         \]
-        for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from \(s = 0\) and \(s = 1\) and the nontrivial zeros of \(L(s)\). In addition, we may discard any finite number of terms in the sum if \(\s > 1\).
+        for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from \(s = 0\), \(s = 1\), the nontrivial zeros of \(L(s)\), and the poles of the gamma factor. In addition, we may discard any finite number of terms in the sum if \(\s > 1\).
       \end{enumerate}
     \end{lemma}
     \begin{proof}
@@ -687,7 +687,7 @@
         \]
         This proves the first statement. The second statement follows at once since all of the terms in the sum are positive at any least \(\frac{1}{2}\).
         \item Let \(\s > 1\). Then these estimates follow from direct computation since any nontrivial zero \(\rho\) satisfies \(\b \le 1\) while any gamma parameter \(\mu_{j}\) satisfies \(\Re(\mu_{j}) \ge 0\).
-        \item First suppose \(s\) in the vertical strip \(-\frac{1}{2} \le \s \le 2\) and at least distance \(\e\) away from \(s = 0\) and \(s = 1\). Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} and (i) gives
+        \item First suppose \(s\) in the vertical strip \(-\frac{1}{2} \le \s \le 2\) and is at least distance \(\e\) away from \(s = 0\), \(s = 1\), the nontrivial zeros of \(L(s)\), and the poles of the gamma factor. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} and (i) gives
         \[
           -\Re\left(\frac{L'}{L}(s)\right) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}).
         \]
@@ -695,32 +695,33 @@
       \end{enumerate}
     \end{proof}
 
-    \iffalse With \cref{lem:powerful_L-function_approximation_lemma} in hand, we can deduce a result which estimates the number of nontrivial zeros in a box. Accordingly, for any \(T \ge 0\) we define
+    With this lemma we can deduce a result which estimates the number of nontrivial zeros of \(L(s)\) in a box. For any positive \(T\), define
     \[
-      N(T,f) = |\{\rho = \b+i\g \in \C:L(\rho,f) = 0 \text{ with } 0 \le \b \le 1 \text{ and } |\g| \le T\}|.
+      N(T,L) = |\{\rho = \b+i\g \in \C:L(\rho) = 0 \text{ with } 0 \le \b \le 1 \text{ and } |\g| \le T\}|.
     \]
-    In other words, \(N(T,f)\) is the number of nontrivial zeros of \(L(s)\) with ordinate in \([-T,T]\). We will prove the following asymptotic formula for \(N(T,f)\):
+    In other words, \(N(T,L)\) is the number of nontrivial zeros of \(L(s)\) with ordinate in \([-T,T]\). We will prove an asymptotic formula for \(N(T,L)\).
 
     \begin{theorem}\label{thm:zero_counting}
-      For any \(L\)-function \(L(s)\) and \(T \ge 1\),
+      For any analytic \(L\)-function \(L(s)\) and \(T \ge 1\), we have
       \[
-        N(T,f) = \frac{T}{\pi}\log\left(\frac{QT^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}).
+        N(T,L) = \frac{T}{\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}).
       \]
       In particular,
       \[
-        \frac{N(T,f)}{T} \sim \frac{1}{\pi}\log\left(\frac{QT^{d_{L}}}{(2\pi e)^{d_{L}}}\right).
+        \frac{N(T,L)}{T} \sim \frac{1}{\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right).
       \]
     \end{theorem}
+    \iffalse
     \begin{proof}
       Let \(T \ge 1\) and set
       \[
-        N'(T,f) = \left|\{\rho = \b+i\g \in \C:L(\rho,f) = 0 \text{ with } 0 \le \b \le 1 \text{ and } 0 < \g \le T\}\right|.
+        N'(T,f) = \left|\{\rho = \b+i\g \in \C:L(\rho) = 0 \text{ with } 0 \le \b \le 1 \text{ and } 0 < \g \le T\}\right|.
       \]
       As the nontrivial zeros occur in pairs \(\rho\) and \(1-\conj{\rho}\) where the latter is also a nontrivial zero of \(L(s)\), it follows that
       \[
-        N(T,f) = N'(T,f)+N_{L}'(T)+O(\log{\mf{q}(f)}),
+        N(T,L) = N'(T,f)+N_{L}'(T)+O(\log{\mf{q}(f)}),
       \]
-      where \(O(\log{\mf{q}(f)})\) accounts for the possible real nontrivial zeros. There are finitely many such nontrivial zeros because the interval \(0 \le s \le 1\) is compact. We will estimate \(N'(T,f)\) and in doing so we may assume \(L(s)\) does not vanish on the line \(t = T\) by varying \(T\) by a sufficiently small constant, if necessary, and observing that \(N(T,f)\) is modified by a quantity of size \(O(\log{\mf{q}(iT,L)})\) by \cref{lem:powerful_L-function_approximation_lemma} (i). Since the nontrivial zeros are isolated, let \(\d > 0\) be small enough such that \(\L(s,L)\) has no nontrivial zeros for \(-\d \le t < 0\). Then by our previous comments and the argument principle,
+      where \(O(\log{\mf{q}(f)})\) accounts for the possible real nontrivial zeros. There are finitely many such nontrivial zeros because the interval \(0 \le s \le 1\) is compact. We will estimate \(N'(T,f)\) and in doing so we may assume \(L(s)\) does not vanish on the line \(t = T\) by varying \(T\) by a sufficiently small constant, if necessary, and observing that \(N(T,L)\) is modified by a quantity of size \(O(\log{\mf{q}(iT,L)})\) by \cref{lem:powerful_L-function_approximation_lemma} (i). Since the nontrivial zeros are isolated, let \(\d > 0\) be small enough such that \(\L(s,L)\) has no nontrivial zeros for \(-\d \le t < 0\). Then by our previous comments and the argument principle,
       \[
         N'(T,f) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds+O(\log{\mf{q}(iT,L)}),
       \]
@@ -786,7 +787,7 @@
       \]
       Thus to estimate the integral, we estimate the change in argument along \(\eta_{L}\) of each factor in
       \[
-        \xi(s,L) = (s(1-s))^{m_{L}}Q^{\frac{s}{2}}\pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right)L(s).
+        \xi(s,L) = (s(1-s))^{m_{L}}q_{L}^{\frac{s}{2}}\pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right)L(s).
       \]
       For the factor \((s(1-s))^{m_{L}}\), we first have
       \[
@@ -800,9 +801,9 @@
       \begin{equation}\label{equ:zero_counting_1}
         \D_{\eta_{L}}(s(1-s))^{m_{L}} = O\left(\frac{1}{T}\right).
       \end{equation}
-      For the factor \(Q^{\frac{s}{2}}\), we use that \(\arg(s) = \Im(\log(s))\) and compute
+      For the factor \(q_{L}^{\frac{s}{2}}\), we use that \(\arg(s) = \Im(\log(s))\) and compute
       \begin{equation}\label{equ:zero_counting_2}
-        \D_{\eta_{L}}\arg{Q^{\frac{s}{2}}} = \log{q_{L}}\left(\frac{T}{2}+\frac{\d}{2}\right) = \frac{T}{2}\log{q_{L}}+O(1).
+        \D_{\eta_{L}}\arg{q_{L}^{\frac{s}{2}}} = \log{q_{L}}\left(\frac{T}{2}+\frac{\d}{2}\right) = \frac{T}{2}\log{q_{L}}+O(1).
       \end{equation}
       For the factor \(\pi^{-\frac{d_{L}s}{2}}\), we use that \(\arg(s) = \Im(\log(s))\) and compute
       \begin{equation}\label{equ:zero_counting_3}
@@ -837,13 +838,13 @@
       The asymptotic formula follows from this estimate and that the same exact estimate holds for \(N_{L}'(T)\) by using the \(L\)-function \(L(s)\). We obtain the asymptotic equality at once from the asymptotic formula.
     \end{proof}
 
-    It is worth noting that the main term in the proof of \cref{thm:zero_counting} comes from the change in argument of \(Q^{\frac{s}{2}}\g(s,L)\) along \(\eta_{3}\) (equivalently \(\eta_{4}\)). Moreover, the contribution from \(L(s)\) is only to the error term. This is a good example of how analytic information of an analytic \(L\)-function is intrinsically connected to its gamma factor. Also, with \cref{thm:zero_counting} we can derive our zero density estimate. The asymptotic equivalence in \cref{thm:zero_counting} can be interpreted as saying that for large \(T\) the density of \(N(T,f)\) is approximately \(\frac{1}{\pi}\log\left(\frac{QT^{d_{L}}}{(2\pi e)^{d_{L}}}\right)\). Since this grows as \(T \to \infty\), we see that the nontrivial zeros tend to accumulate farther up the critical strip with logarithmic growth. We can dispense with this accumulation. If \(\rho = \b+i\g\) is a nontrivial zero of \(L(s)\) then we call \(\rho_{\text{unf}} = \b+i\w\) the \textbf{unfolded nontrivial zero}\index{unfolded nontrivial zero} corresponding to \(\rho\) where
+    It is worth noting that the main term in the proof of \cref{thm:zero_counting} comes from the change in argument of \(q_{L}^{\frac{s}{2}}\g(s,L)\) along \(\eta_{3}\) (equivalently \(\eta_{4}\)). Moreover, the contribution from \(L(s)\) is only to the error term. This is a good example of how analytic information of an analytic \(L\)-function is intrinsically connected to its gamma factor. Also, with \cref{thm:zero_counting} we can derive our zero density estimate. The asymptotic equivalence in \cref{thm:zero_counting} can be interpreted as saying that for large \(T\) the density of \(N(T,L)\) is approximately \(\frac{1}{\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)\). Since this grows as \(T \to \infty\), we see that the nontrivial zeros tend to accumulate farther up the critical strip with logarithmic growth. We can dispense with this accumulation. If \(\rho = \b+i\g\) is a nontrivial zero of \(L(s)\) then we call \(\rho_{\text{unf}} = \b+i\w\) the \textbf{unfolded nontrivial zero}\index{unfolded nontrivial zero} corresponding to \(\rho\) where
     \[
-      \w = \frac{\g}{\pi}\log\left(\frac{Q|\g|^{d_{L}}}{(2\pi e)^{d_{L}}}\right).
+      \w = \frac{\g}{\pi}\log\left(\frac{q_{L}|\g|^{d_{L}}}{(2\pi e)^{d_{L}}}\right).
     \]
     Now for any \(W \ge 0\), define
     \[
-      N_{\text{unf}}(W,f) = |\{\rho_{\text{unf}} = \b+i\w \in \C:L(\rho,f) = 0 \text{ with } 0 \le \b \le 1 \text{ and } |\w| \le W\}|.
+      N_{\text{unf}}(W,f) = |\{\rho_{\text{unf}} = \b+i\w \in \C:L(\rho) = 0 \text{ with } 0 \le \b \le 1 \text{ and } |\w| \le W\}|.
     \]
     In other words, \(N_{\text{unf}}(T,f)\) is the number of unfolded nontrivial zeros of \(L(s)\) with ordinate in \([-W,W]\). We then have the following well-known result:
 
@@ -856,7 +857,7 @@
     \begin{proof}
       Consider the function \(f(t)\) defined by
       \[
-        f(t) = \frac{t}{\pi}\log\left(\frac{Q|t|^{d_{L}}}{(2\pi e)^{d_{L}}}\right),
+        f(t) = \frac{t}{\pi}\log\left(\frac{q_{L}|t|^{d_{L}}}{(2\pi e)^{d_{L}}}\right),
       \]
       for real \(t\). Since \(f(t)\) is a strictly increasing continuous function, it has an inverse \(g(w)\) for real \(w\). It follows that \(|\w| \le W\) if and only if \(|\rho| \le g(W)\) and so \(N_{\text{unf}}(W,f) = N(g(W),f)\). But by \cref{thm:zero_counting} and that \(g(w)\) is the inverse of \(f(t)\), we have \(N(g(W),f) \sim W\). Then
       \[
