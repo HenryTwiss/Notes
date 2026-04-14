@@ -3,7 +3,7 @@
   \[
     (u)_{k} = u(u+1) \cdots (u+(k-1)),
   \]
-  for the Pochhammer symbol. Also, all sums and products over zeros of a complex function will be counted with multiplicity and ordered with respect to the size of the ordinate.
+  for the Pochhammer symbol. We will also make use of various properties of the gamma function developed in \cref{sec:the_gamma_function}. Also, all sums and products over zeros of a complex function will be counted with multiplicity and ordered with respect to the size of the ordinate.
   \section{Analytic Data}
     An \textbf{analytic \(L\)-function}\index{analytic \(L\)-function} \(L(s)\) is a Dirichlet series
     \[
@@ -105,7 +105,7 @@
     \[
       \mf{q}(L) = \mf{q}(0,L) \quad \text{and} \quad \mf{q}_{\infty}(L) = \mf{q}_{\infty}(0,L).
     \]
-    The choice of \(3\) in \(|s+\mu_{j}|+3\) is a matter of convenience as could use any positive constant. In particular, it is useful when taking logarithms as \(\log(|s+\mu_{j}|+3) \ge 1\). Estimates for the analytic conductor follow from those of the gamma function. Recall from Stirling's formula that
+    The choice of \(3\) in \(|s+\mu_{j}|+3\) is a matter of convenience as could use any positive constant. In particular, it is useful when taking logarithms as \(\log(|s+\mu_{j}|+3) \ge 1\). Estimates for the analytic conductor follow from those of the gamma function. Recall from Stirling's formula (see \cref{sec:the_gamma_function}) that
     \begin{equation}\label{equ:vertical_strip_gamma_estimates}
       \G(s) \ll_{\e} (|t|+3)^{\s-\frac{1}{2}}e^{-\frac{\pi}{2}|t|} \quad \text{and} \quad \frac{1}{\G(s)} \ll (|t|+3)^{\frac{1}{2}-\s}e^{\frac{\pi}{2}|t|},
     \end{equation}
@@ -117,7 +117,7 @@
      \begin{equation}\label{equ:gamma_factor_analytic_conductor_estimate}
       \frac{\g(1-s,L)}{\g(s,L)} \ll_{\e} \mf{q}_{\infty}(s,L)^{\frac{1}{2}-\s} \quad \text{and} \quad q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)} \ll_{\e} \mf{q}(s,L)^{\frac{1}{2}-\s},
     \end{equation}
-    hold for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from the poles of \(\g(1-s,L)\). An associated estimate can be obtain for the logarithmic derivative of the analytic conductor. Recall from the logarithm of Stirling's formula that
+    hold for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from the poles of \(\g(1-s,L)\). An associated estimate can be obtain for the logarithmic derivative of the analytic conductor. Recall from the logarithm of Stirling's formula (see \cref{sec:the_gamma_function}) that
     \[
       \frac{\G'}{\G}(s) \ll \log(|s|+3),
     \]
@@ -194,7 +194,7 @@
     \[
       V_{s}(y,L) = \frac{1}{2\pi i}\int_{(a)}\frac{\g(s+u,L)}{\g(s,L)}\Phi(u)y^{-u}\frac{du}{u},
     \]
-    defined for \(y > 0\). Stirling's formula implies
+    defined for \(y > 0\). Stirling's formula (see \cref{sec:the_gamma_function}) implies
     \[
       \frac{\G(s+u)}{\G(s)} \ll_{\e} \frac{(|t+r|+3)^{\s+\tau-\frac{1}{2}}}{(|t|+3)^{\s-\frac{1}{2}}}e^{-\frac{\pi}{2}(|t+r|-|t|)},
     \]
@@ -223,7 +223,7 @@
       \[
         \frac{1}{2\pi i}\int_{(a)}\L(s+u,L)\Phi(u)X^{u}\,\frac{du}{u}.
       \]    
-      Stirling's formula shows that \(\g(s+u,L)\) exhibits exponential decay while \(L(s+u)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), it follows that the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded. We will evaluate the integral in two ways. On the one hand, we can expand \(L(s+u)\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that this is
+      Stirling's formula (see \cref{sec:the_gamma_function}) shows that \(\g(s+u,L)\) exhibits exponential decay while \(L(s+u)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), it follows that the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded. We will evaluate the integral in two ways. On the one hand, we can expand \(L(s+u)\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that this is
       \[
         q_{L}^{\frac{s}{2}}\g(s,L)\sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{s}\left(\frac{n}{\sqrt{q_{L}}X},L\right).
       \]
@@ -601,7 +601,7 @@
     \begin{equation}
       \xi(s,L) = \e_{L}\conj{\xi(1-\conj{s},L)},
     \end{equation}
-    which we refer to as the \textbf{functional equation}\index{functional equation} of \(\xi(s,L)\). Observe that \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
+    which we refer to as the \textbf{functional equation}\index{functional equation} of \(\xi(s,L)\). Observe that \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula (see \cref{sec:the_gamma_function}) and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
     \[
       \xi(s,L) = e^{A_{L}+B_{L}s}\prod_{\rho \neq 0,1}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
     \]
@@ -644,22 +644,21 @@
         \[
           \Re(B_{L}) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{\rho}\right).
         \]
-        \item For any nonnegative \(T\), we have
+        \item For any nonnegative \(t\), we have
         \[
-          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} \ll \log{\mf{q}(iT,L)}.
+          \sum_{\rho \neq 0,1}\frac{1}{1+(t-\g)^{2}} \ll \log{\mf{q}(it,L)}.
         \]
-        In particular, the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(iT,L)})\).
+        In particular, the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|t-\g| \le 1\) is \(O(\log{\mf{q}(it,L)})\).
         \item The bounds
         \[
           \Re\left(\frac{1}{s-\rho}\right) > 0 \quad \text{and} \quad \Re\left(\frac{1}{s+\mu_{j}}\right) > 0,
         \]
         hold provided \(\s > 1\).
         \item We may write
-        \begin{align*}
-          -\Re\left(\frac{L'}{L}(s)\right) &= \Re\left(\frac{m_{L}}{s}\right)+\Re\left(\frac{m_{L}}{s-1}\right) \\
-          &- \sum_{|s+\mu_{j}| < 1}\Re\left(\frac{1}{s+\mu_{j}}\right)-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\Re\left(\frac{1}{s-\rho}\right)+O(\log{\mf{q}(s,L)}),
-        \end{align*}
-        for any \(s\) in the vertical strip \(-\frac{1}{2} \le \s \le 2\) provided \(s \neq 0,1\). In addition, we may discard any term in either sum if \(1 < \s < \le 2\).
+        \[
+          -\Re\left(\frac{L'}{L}(s)\right) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}),
+        \]
+        for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from \(s = 0\) and \(s = 1\) and the nontrivial zeros of \(L(s)\). In addition, we may discard any finite number of terms in the sum if \(\s > 1\).
       \end{enumerate}
     \end{lemma}
     \begin{proof}
@@ -674,38 +673,25 @@
           2\Re(B_{L}) = -2\sum_{\rho \neq 0,1}\Re\left(\frac{1}{\rho}\right),
         \]
         which is equivalent to the claim.
-        \item Let \(s = 3+iT\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} along with (i) gives
+        \item Let \(s = 3+it\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} along with (i) gives
         \[
-          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) \ll \log{\mf{q}(iT,L)}.
+          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) \ll \log{\mf{q}(it,L)}.
         \]
         For our choice of \(s\), we have
         \[
-          \frac{2}{9+(T-\g)^{2}} \le \Re\left(\frac{1}{s-\rho}\right) \le \frac{3}{4+(T-\g)^{2}},
+          \frac{2}{9+(t-\g)^{2}} \le \Re\left(\frac{1}{s-\rho}\right) \le \frac{3}{4+(t-\g)^{2}},
         \]
         whence
         \[
-          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} \ll \log{\mf{q}(iT,L)}.
+          \sum_{\rho \neq 0,1}\frac{1}{1+(t-\g)^{2}} \ll \log{\mf{q}(it,L)}.
         \]
         This proves the first statement. The second statement follows at once since all of the terms in the sum are positive at any least \(\frac{1}{2}\).
-        \item These estimates follow from direct computation since any nontrivial zero \(\rho\) satisfies \(\b \le 1\) while any gamma parameter \(\mu_{j}\) satisfies \(\Re(\mu_{j}) \ge 0\).
-        \item Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using (i) gives
-        \begin{align*}
-          -\Re\left(\frac{L'}{L}(s)\right) &= \Re\left(\frac{m_{L}}{s}\right)+\Re\left(\frac{m_{L}}{s-1}\right) \\
-          &+ \Re\left(\frac{\g'}{\g}(s,L)\right)-\sum_{\rho \neq 0,1}\frac{1}{s-\rho}+O(\log{q_{L}}).
-        \end{align*}
-        \iffalse Applying \(\frac{\G'}{\G}(s+1) = \frac{\G'}{\G}(s)+\frac{1}{s}\) to \(\frac{\g'}{\g}(s,L)\) and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
+        \item Let \(\s > 1\). Then these estimates follow from direct computation since any nontrivial zero \(\rho\) satisfies \(\b \le 1\) while any gamma parameter \(\mu_{j}\) satisfies \(\Re(\mu_{j}) \ge 0\).
+        \item First suppose \(s\) in the vertical strip \(-\frac{1}{2} \le \s \le 2\) and at least distance \(\e\) away from \(s = 0\) and \(s = 1\). Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} and (i) gives
         \[
-          \frac{\g'}{\g}(s,L) = -\sum_{|s+\mu_{j}| < 1}\frac{1}{s+\mu_{j}}+O(\log{\mf{q}_{\infty}(s,L)}).
+          -\Re\left(\frac{L'}{L}(s)\right) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}).
         \]
-        Then we obtain
-        \[
-          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{|s+\mu_{j}| < 1}\frac{1}{s+\mu_{j}}-\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\frac{1}{s-\rho}+O(\log{\mf{q}(s,L)}),
-        \]
-        which is the first statement of (iv). For second statement, tak the real part of this estimate and write it as
-        \[
-          \sum_{|s+\mu_{j}| < 1}\Re\left(\frac{1}{s+\mu_{j}}\right)+\sum_{\substack{|s-\rho| < 1 \\ \rho \neq 0,1}}\Re\left(\frac{1}{s-\rho}\right) \le \Re\left(-\frac{L'}{L}(s)\right)+\Re\left(\frac{m_{L}}{s}\right)+\Re\left(\frac{m_{L}}{s-1}\right)+O(\log{\mf{q}(s,L)}).
-        \]
-        Now observe that we can discard any of the terms in either sum provided \(1 < \s \le 2\) by (iii).\fi
+        By (iii), any term is the sum is positive and bounded provided \(\s > 1\) so that we may discard finitely many.
       \end{enumerate}
     \end{proof}
 
