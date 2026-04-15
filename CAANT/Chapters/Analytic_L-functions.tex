@@ -135,23 +135,23 @@
     \begin{figure}[ht]
       \centering
       \begin{tikzpicture}[scale=1.5]
-        \def\xmin{-0.5} \def\xmax{3}
+        \def\xmin{-0.5} \def\xmax{3.5}
         \def\ymin{-0.5} \def\ymax{2}
         \draw[thick] (\xmin,0) -- (\xmax,0);
         \draw[thick] (0,\ymin) -- (0,\ymax);
-        \draw[thick] (2,\ymin) -- (2,\ymax);
-        \draw[dashed] (1,\ymin) -- (1,\ymax);
+        \draw[thick] (3,\ymin) -- (3,\ymax);
+        \draw[dashed] (1.5,\ymin) -- (1.5,\ymax);
 
         \node at (0,0) [below right] {\tiny{\(0\)}};
         \node at (0,0) [circle,fill,inner sep=1pt]{};
-        \node at (1,0) [below right] {\tiny{\(\frac{1}{2}\)}};
-        \node at (1,0) [circle,fill,inner sep=1pt]{};
-        \node at (2,0) [below right] {\tiny{\(1\)}};
-        \node at (2,0) [circle,fill,inner sep=1pt]{};
+        \node at (1.5,0) [below right] {\tiny{\(\frac{1}{2}\)}};
+        \node at (1.5,0) [circle,fill,inner sep=1pt]{};
+        \node at (3,0) [below right] {\tiny{\(1\)}};
+        \node at (3,0) [circle,fill,inner sep=1pt]{};
 
         \begin{scope}
-          \path[clip] (0,\ymin) -- (0,\ymax) -- (2,\ymax) -- (2,\ymin) -- cycle;
-          \fill[gray,opacity=0.3] (0,\ymin) rectangle (2,\ymax);
+          \path[clip] (0,\ymin) -- (0,\ymax) -- (3,\ymax) -- (3,\ymin) -- cycle;
+          \fill[gray,opacity=0.3] (0,\ymin) rectangle (3,\ymax);
         \end{scope}
       \end{tikzpicture}
       \caption{The critical strip.}
@@ -355,32 +355,32 @@
     \begin{figure}[ht]
       \centering
       \begin{tikzpicture}[scale=1.5]
-        \def\xmin{-0.5} \def\xmax{2.5}
-        \def\ymin{-1} \def\ymax{1}
+        \def\xmin{-0.5} \def\xmax{3.5}
+        \def\ymin{-1.5} \def\ymax{1.5}
         \draw[thick] (\xmin,0) -- (\xmax,0);
         \draw[thick] (0,\ymin) -- (0,\ymax);
-        \draw[thick] (2,\ymin) -- (2,\ymax);
-        \draw[dashed] (1,\ymin) -- (1,\ymax);
+        \draw[thick] (3,\ymin) -- (3,\ymax);
+        \draw[dashed] (1.5,\ymin) -- (1.5,\ymax);
 
-        \node at (1.5,0.5) [circle,fill,inner sep=1pt]{};
-        \node at (1.5,0.5) [below] {\tiny{\(1-\conj{\rho}\)}};
-        \node at (0.5,0.5) [circle,fill,inner sep=1pt]{};
-        \node at (0.5,0.5) [below] {\tiny{\(\rho\)}};
-        \node at (1.5,-0.5) [circle,fill,inner sep=1pt]{};
-        \node at (1.5,-0.5) [below] {\tiny{\(1-\rho\)}};
-        \node at (0.5,-0.5) [circle,fill,inner sep=1pt]{};
-        \node at (0.5,-0.5) [below] {\tiny{\(\conj{\rho}\)}};
+        \node at (2.25,0.5) [circle,fill,inner sep=1pt]{};
+        \node at (2.25,0.5) [below] {\tiny{\(1-\conj{\rho}\)}};
+        \node at (0.75,0.5) [circle,fill,inner sep=1pt]{};
+        \node at (0.75,0.5) [below] {\tiny{\(\rho\)}};
+        \node at (2.25,-0.5) [circle,fill,inner sep=1pt]{};
+        \node at (2.25,-0.5) [below] {\tiny{\(1-\rho\)}};
+        \node at (0.75,-0.5) [circle,fill,inner sep=1pt]{};
+        \node at (0.75,-0.5) [below] {\tiny{\(\conj{\rho}\)}};
 
         \node at (0,0) [below right] {\tiny{\(0\)}};
         \node at (0,0) [circle,fill,inner sep=1pt]{};
-        \node at (1,0) [below right] {\tiny{\(\frac{1}{2}\)}};
-        \node at (1,0) [circle,fill,inner sep=1pt]{};
-        \node at (2,0) [below right] {\tiny{\(1\)}};
-        \node at (2,0) [circle,fill,inner sep=1pt]{};
+        \node at (1.5,0) [below right] {\tiny{\(\frac{1}{2}\)}};
+        \node at (1.5,0) [circle,fill,inner sep=1pt]{};
+        \node at (3,0) [below right] {\tiny{\(1\)}};
+        \node at (3,0) [circle,fill,inner sep=1pt]{};
 
         \begin{scope}
-          \path[clip] (0,\ymin) -- (0,\ymax) -- (2,\ymax) -- (2,\ymin) -- cycle;
-          \fill[gray,opacity=0.3] (0,\ymin) rectangle (2,\ymax);
+          \path[clip] (0,\ymin) -- (0,\ymax) -- (3,\ymax) -- (3,\ymin) -- cycle;
+          \fill[gray,opacity=0.3] (0,\ymin) rectangle (3,\ymax);
         \end{scope}
         \end{tikzpicture}
       \caption{Symmetric nontrivial zeros.}
@@ -644,11 +644,11 @@
         \[
           \Re(B_{L}) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{\rho}\right).
         \]
-        \item For any nonnegative \(t\), we have
+        \item For any nonnegative \(T\), we have
         \[
-          \sum_{\rho \neq 0,1}\frac{1}{1+(t-\g)^{2}} \ll \log{\mf{q}(it,L)}.
+          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} = O(\log{\mf{q}(iT,L)}).
         \]
-        In particular, the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|t-\g| \le 1\) is \(O(\log{\mf{q}(it,L)})\).
+        In particular, the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(iT,L)})\).
         \item The bounds
         \[
           \Re\left(\frac{1}{s-\rho}\right) > 0 \quad \text{and} \quad \Re\left(\frac{1}{s+\mu_{j}}\right) > 0,
@@ -673,17 +673,17 @@
           2\Re(B_{L}) = -2\sum_{\rho \neq 0,1}\Re\left(\frac{1}{\rho}\right),
         \]
         which is equivalent to the claim.
-        \item Let \(s = 3+it\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} along with (i) gives
+        \item Let \(s = 3+iT\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} along with (i) gives
         \[
-          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) \ll \log{\mf{q}(it,L)}.
+          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(iT,L)}).
         \]
         For our choice of \(s\), we have
         \[
-          \frac{2}{9+(t-\g)^{2}} \le \Re\left(\frac{1}{s-\rho}\right) \le \frac{3}{4+(t-\g)^{2}},
+          \frac{2}{9+(T-\g)^{2}} \le \Re\left(\frac{1}{s-\rho}\right) \le \frac{3}{4+(T-\g)^{2}},
         \]
         whence
         \[
-          \sum_{\rho \neq 0,1}\frac{1}{1+(t-\g)^{2}} \ll \log{\mf{q}(it,L)}.
+          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} = O(\log{\mf{q}(iT,L)}).
         \]
         This proves the first statement. The second statement follows at once since all of the terms in the sum are positive at any least \(\frac{1}{2}\).
         \item Let \(\s > 1\). Then these estimates follow from direct computation since any nontrivial zero \(\rho\) satisfies \(\b \le 1\) while any gamma parameter \(\mu_{j}\) satisfies \(\Re(\mu_{j}) \ge 0\).
@@ -699,7 +699,7 @@
     \[
       N(T,L) = |\{\rho = \b+i\g \in \C:L(\rho) = 0 \text{ with } 0 \le \b \le 1 \text{ and } |\g| \le T\}|.
     \]
-    In other words, \(N(T,L)\) is the number of nontrivial zeros of \(L(s)\) with ordinate in \([-T,T]\). We will prove an asymptotic formula for \(N(T,L)\).
+    In other words, \(N(T,L)\) is the number of nontrivial zeros of \(L(s)\) whose ordinate belongs to \([-T,T]\). We will use the argument principle to deduce an asymptotic formula for \(N(T,L)\) which will describe how the nontrivial zeros are distributed in the critical strip.
 
     \begin{theorem}\label{thm:zero_counting}
       For any analytic \(L\)-function \(L(s)\) and \(T \ge 1\), we have
@@ -711,68 +711,66 @@
         \frac{N(T,L)}{T} \sim \frac{1}{\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right).
       \]
     \end{theorem}
-    \iffalse
     \begin{proof}
       Let \(T \ge 1\) and set
       \[
-        N'(T,f) = \left|\{\rho = \b+i\g \in \C:L(\rho) = 0 \text{ with } 0 \le \b \le 1 \text{ and } 0 < \g \le T\}\right|.
+        N'(T,L) = \left|\{\rho = \b+i\g \in \C:L(\rho) = 0 \text{ with } 0 \le \b \le 1 \text{ and } 0 < \g \le T\}\right|.
       \]
-      As the nontrivial zeros occur in pairs \(\rho\) and \(1-\conj{\rho}\) where the latter is also a nontrivial zero of \(L(s)\), it follows that
+      As the nontrivial zeros occur in pairs \(\rho\) and \(1-\conj{\rho}\), it follows that
       \[
-        N(T,L) = N'(T,f)+N_{L}'(T)+O(\log{\mf{q}(f)}),
+        N(T,L) = 2N'(T,L)+O(\log{\mf{q}(f)}),
       \]
-      where \(O(\log{\mf{q}(f)})\) accounts for the possible real nontrivial zeros. There are finitely many such nontrivial zeros because the interval \(0 \le s \le 1\) is compact. We will estimate \(N'(T,f)\) and in doing so we may assume \(L(s)\) does not vanish on the line \(t = T\) by varying \(T\) by a sufficiently small constant, if necessary, and observing that \(N(T,L)\) is modified by a quantity of size \(O(\log{\mf{q}(iT,L)})\) by \cref{lem:powerful_L-function_approximation_lemma} (i). Since the nontrivial zeros are isolated, let \(\d > 0\) be small enough such that \(\L(s,L)\) has no nontrivial zeros for \(-\d \le t < 0\). Then by our previous comments and the argument principle,
-      \[
-        N'(T,f) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds+O(\log{\mf{q}(iT,L)}),
-      \]
-
+      where \(O(\log{\mf{q}(f)})\) accounts for the possible real nontrivial zeros of which there are finitely many. We will estimate \(N'(T,L)\) and in doing so we may assume \(L(s)\) does not vanish on the line \(t = T\) by varying \(T\) by a sufficiently small constant, if necessary, and observing that \(N'(T,L)\) is modified by a quantity of size \(O(\log{\mf{q}(iT,L)})\) by \cref{lem:powerful_L-function_approximation_lemma} (ii). Let \(\d > 0\) be sufficiently small such that \(\L(s,L)\) has no nontrivial zeros for \(-\d \le t < 0\). Also let \(\eta = \sum_{1 \le i \le 6}\eta_{i}\) be the rectangular contour \cref{fig:zero_counting_contour} where the horizontal lines are along \(t = T\) and \(t = -\d\) and the vertical lines are along \(\s = -\e\) and \(\s = 1+\e\).
+    
       \begin{figure}[ht]
         \centering
-        \begin{tikzpicture}[scale=3]
-          \def\xmin{-1.5} \def\xmax{2.5}
+        \begin{tikzpicture}[scale=1.5]
+          \def\xmin{-0.5} \def\xmax{3.5}
           \def\ymin{-0.5} \def\ymax{2}
           \draw[thick] (\xmin,0) -- (\xmax,0);
           \draw[thick] (0,\ymin) -- (0,\ymax);
-          \draw[thick] (1,\ymin) -- (1,\ymax);
-          \draw[dashed] (0.5,\ymin) -- (0.5,\ymax);
+          \draw[thick] (3,\ymin) -- (3,\ymax);
+          \draw[dashed] (1.5,\ymin) -- (1.5,\ymax);
 
-          \draw[->-] (0.5,-0.1) -- (2,-0.1);
-          \draw[->-] (2,-0.1) -- (2,1.5);
-          \draw[->-] (2,1.5) -- (0.5,1.5);
-          \draw[->-] (0.5,1.5) -- (-1,1.5);
-          \draw[->-] (-1,1.5) -- (-1,-0.1);
-          \draw[->-] (-1,-0.1) -- (0.5,-0.1);
+          \node at (0,0) [below right] {\tiny{\(0\)}};
+          \node at (0,0) [circle,fill,inner sep=1pt]{};
+          \node at (3,0) [below right] {\tiny{\(1\)}};
+          \node at (3,0) [circle,fill,inner sep=1pt]{};
 
-          \node at (1.25,-0.1) [below] {\tiny{\(\eta_{1}\)}};
-          \node at (2,0.7) [right] {\tiny{\(\eta_{2}\)}};
-          \node at (1.25,1.5) [above] {\tiny{\(\eta_{3}\)}};
-          \node at (-0.25,1.5) [above] {\tiny{\(\eta_{4}\)}};
-          \node at (-1,0.7) [left] {\tiny{\(\eta_{5}\)}};
-          \node at (-0.25,-0.1) [below] {\tiny{\(\eta_{6}\)}};
+          \draw[->-] (1.5,-0.25) -- (3.25,-0.25);
+          \draw[->-] (3.25,-0.25) -- (3.25,1.5);
+          \draw[->-] (3.25,1.5) -- (1.5,1.5);
+          \draw[->-] (1.5,1.5) -- (-0.25,1.5);
+          \draw[->-] (-0.25,1.5) -- (-0.25,-0.25);
+          \draw[->-] (-0.25,-0.25) -- (1.5,-0.25);
 
-          \node at (2,-0.1) [circle,fill,inner sep=1pt]{};
-          \node at (2,1.5) [circle,fill,inner sep=1pt]{};
-          \node at (0.5,1.5) [circle,fill,inner sep=1pt]{};
-          \node at (-1,1.5) [circle,fill,inner sep=1pt]{};
-          \node at (-1,-0.1) [circle,fill,inner sep=1pt]{};
-          \node at (0.5,-0.1) [circle,fill,inner sep=1pt]{};
+          \node at (2.375,-0.25) [below] {\tiny{\(\eta_{1}\)}};
+          \node at (3.25,0.625) [right] {\tiny{\(\eta_{2}\)}};
+          \node at (2.375,1.5) [above] {\tiny{\(\eta_{3}\)}};
+          \node at (0.625,1.5) [above] {\tiny{\(\eta_{4}\)}};
+          \node at (-0.25,0.625) [left] {\tiny{\(\eta_{5}\)}};
+          \node at (0.625,-0.25) [below] {\tiny{\(\eta_{6}\)}};
 
-          \node at (2,-0.1) [below] {\tiny{\(3-i\d\)}};
-          \node at (2,1.5) [above] {\tiny{\(3+iT\)}};
-          \node at (0.5,1.5) [above right] {\tiny{\(\frac{1}{2}+iT\)}};
-          \node at (-1,1.5) [above] {\tiny{\(-2+iT\)}};
-          \node at (-1,-0.1) [below] {\tiny{\(-2-i\d\)}};
-          \node at (0.5,-0.1) [below right] {\tiny{\(\frac{1}{2}-i\d\)}};
+          \node at (1.5,-0.25) [circle,fill,inner sep=1pt]{};
+          \node at (3.25,-0.25) [circle,fill,inner sep=1pt]{};
+          \node at (3.25,1.5) [circle,fill,inner sep=1pt]{};
+          \node at (1.5,1.5) [circle,fill,inner sep=1pt]{};
+          \node at (-0.25,1.5) [circle,fill,inner sep=1pt]{};
+          \node at (-0.25,-0.25) [circle,fill,inner sep=1pt]{};
         \end{tikzpicture}
         \caption{A zero counting contour.}
         \label{fig:zero_counting_contour}
       \end{figure}
 
-      where \(\eta = \sum_{1 \le i \le 6}\eta_{i}\) is the contour in \cref{fig:zero_counting_contour}. Since \(\log(s) = \log{|s|}+i\arg(s)\), we have
+      Then by our previous comments and the argument principle, we may write
       \[
-        \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds = \frac{1}{2\pi i}\int_{\eta}\frac{d}{ds}\log{|\xi(s,L)|}\,ds+\frac{1}{2\pi }\int_{\eta}\frac{d}{ds}\arg\xi(s,L)\,ds = \frac{1}{2\pi}\D_{\eta}\arg(\xi(s,L)),
+        N'(T,L) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds+O(\log{\mf{q}(iT,L)}),
       \]
-      where the last equality holds by noting that \(\eta\) is closed so that the first integral vanishes. For convenience, set \(\eta_{L} = \eta_{1}+\eta_{2}+\eta_{3}\) and \(\eta_{R} = \eta_{4}+\eta_{5}+\eta_{6}\). Recall that we have already shown \(\xi(\conj{s},L) = \conj{(\xi(s,L))}\). Using this fact along with the functional equation and that \(-\arg(s) = \arg(\conj{s})\), we compute
+      and where
+      \[
+        \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds = \frac{1}{2\pi}\D_{\eta}\arg(\xi(s,L)).
+      \]
+      For convenience, set \(\eta_{L} = \eta_{1}+\eta_{2}+\eta_{3}\) and \(\eta_{R} = \eta_{4}+\eta_{5}+\eta_{6}\). \iffalse Recall that we have already shown \(\xi(\conj{s},L) = \conj{(\xi(s,L))}\). Using this fact along with the functional equation and that \(-\arg(s) = \arg(\conj{s})\), we compute
       \begin{align*}
         \D_{\eta_{L}}\arg(\xi(s,L)) &= \D_{\eta_{L}}\arg\left(\e_{L}\xi(1-s,L)\right) \\
         &= -\D_{\conj{\eta_{R}}}\arg\left(\e_{L}\xi(s,L)\right) \\
@@ -833,11 +831,12 @@
       \]
       and therefore
       \[
-        N'(T,f) = \frac{T}{2\pi}\log\left(\frac{T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}),
+        N'(T,L) = \frac{T}{2\pi}\log\left(\frac{T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}),
       \]
-      The asymptotic formula follows from this estimate and that the same exact estimate holds for \(N_{L}'(T)\) by using the \(L\)-function \(L(s)\). We obtain the asymptotic equality at once from the asymptotic formula.
+      The asymptotic formula follows from this estimate and that the same exact estimate holds for \(N'(T,L)\) by using the \(L\)-function \(L(s)\). We obtain the asymptotic equality at once from the asymptotic formula. \fi
     \end{proof}
 
+    \iffalse 
     It is worth noting that the main term in the proof of \cref{thm:zero_counting} comes from the change in argument of \(q_{L}^{\frac{s}{2}}\g(s,L)\) along \(\eta_{3}\) (equivalently \(\eta_{4}\)). Moreover, the contribution from \(L(s)\) is only to the error term. This is a good example of how analytic information of an analytic \(L\)-function is intrinsically connected to its gamma factor. Also, with \cref{thm:zero_counting} we can derive our zero density estimate. The asymptotic equivalence in \cref{thm:zero_counting} can be interpreted as saying that for large \(T\) the density of \(N(T,L)\) is approximately \(\frac{1}{\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)\). Since this grows as \(T \to \infty\), we see that the nontrivial zeros tend to accumulate farther up the critical strip with logarithmic growth. We can dispense with this accumulation. If \(\rho = \b+i\g\) is a nontrivial zero of \(L(s)\) then we call \(\rho_{\text{unf}} = \b+i\w\) the \textbf{unfolded nontrivial zero}\index{unfolded nontrivial zero} corresponding to \(\rho\) where
     \[
       \w = \frac{\g}{\pi}\log\left(\frac{q_{L}|\g|^{d_{L}}}{(2\pi e)^{d_{L}}}\right).

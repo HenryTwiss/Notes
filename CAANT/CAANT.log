@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  14 APR 2026 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  15 APR 2026 19:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -808,52 +808,52 @@ Chapter 8.
 
 ] [127]
 Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 64.
- [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145]) [146]
+ [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146]) [147]
 Chapter 9.
-[147
+[148
 
 
 
 ]
 Chapter 10.
-[148
-
-]
-Chapter 11.
 [149
 
 ]
-Chapter 12.
+Chapter 11.
 [150
 
 ]
-Appendix A.
+Chapter 12.
 [151
+
+]
+Appendix A.
+[152
 
 ]
 \openout2 = `Appendices/Integral_Lattices.aux'.
 
- (./Appendices/Integral_Lattices.tex [152
+ (./Appendices/Integral_Lattices.tex [153
 
-] [153] [154]) [155]
+] [154] [155]) [156]
 \openout2 = `Appendices/Poisson_Summation.aux'.
 
- (./Appendices/Poisson_Summation.tex [156
+ (./Appendices/Poisson_Summation.tex [157
 
 
 
-] [157] [158] [159] [160]) [161]
+] [158] [159] [160] [161]) [162]
 \openout2 = `Appendices/The_Gamma_Function.aux'.
 
- (./Appendices/The_Gamma_Function.tex [162
+ (./Appendices/The_Gamma_Function.tex [163
 
 
 
-] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174]) [175] (./CAANT.ind [176
+] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175]) [176] (./CAANT.ind [177
 
 
 
-] [177] [178])
+] [178] [179])
 \tf@thm=\write7
 \openout7 = `CAANT.thm'.
 
@@ -862,18 +862,18 @@ Package rerunfilecheck Info: File `CAANT.out' has not changed.
 (rerunfilecheck)             Checksum: 5487782EC2123174C5B4248165249340;8454.
  ) 
 Here is how much of TeX's memory you used:
- 28046 strings out of 478268
- 570572 string characters out of 5846347
- 812479 words of memory out of 5000000
- 45119 multiletter control sequences out of 15000+600000
+ 28053 strings out of 478268
+ 570702 string characters out of 5846347
+ 812567 words of memory out of 5000000
+ 45123 multiletter control sequences out of 15000+600000
  491403 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2083b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on CAANT.pdf (181 pages, 921548 bytes).
+Output written on CAANT.pdf (182 pages, 926168 bytes).
 PDF statistics:
- 2260 PDF objects out of 2487 (max. 8388607)
- 2006 compressed objects within 21 object streams
- 635 named destinations out of 1000 (max. 500000)
+ 2269 PDF objects out of 2487 (max. 8388607)
+ 2014 compressed objects within 21 object streams
+ 638 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

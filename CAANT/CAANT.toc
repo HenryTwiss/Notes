@@ -37,11 +37,11 @@
 \contentsline {section}{\numberline {8.4}The Lindel\"of Hypothesis and Estimates on the Critical Line}{137}{section.8.4}%
 \contentsline {section}{\numberline {8.5}Logarithmic Derivatives}{142}{section.8.5}%
 \contentsline {section}{\numberline {8.6}Zero Density}{144}{section.8.6}%
-\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Moments]}}{147}{chapter.9}%
-\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{148}{chapter.10}%
-\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{149}{chapter.11}%
-\contentsline {chapter}{\numberline {12}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{150}{chapter.12}%
-\contentsline {chapter}{\numberline {A}Appendices}{151}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Integral Lattices}{152}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Poisson Summation}{156}{section.A.2}%
-\contentsline {section}{\numberline {A.3}The Gamma Function}{162}{section.A.3}%
+\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Moments]}}{148}{chapter.9}%
+\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{149}{chapter.10}%
+\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{150}{chapter.11}%
+\contentsline {chapter}{\numberline {12}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{151}{chapter.12}%
+\contentsline {chapter}{\numberline {A}Appendices}{152}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Integral Lattices}{153}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Poisson Summation}{157}{section.A.2}%
+\contentsline {section}{\numberline {A.3}The Gamma Function}{163}{section.A.3}%

@@ -260,59 +260,60 @@
 \contentsline {lemma}{{Lemma}{8.6.{1}}{}}{144}{theorem.8.6.1}%
 \contentsline {proof}{{\proofname }{125}{}}{145}{proof.125}%
 \contentsline {theorem}{{Theorem}{8.6.{2}}{}}{146}{theorem.8.6.2}%
-\contentsline {proposition}{{Proposition}{A.1.{1}}{}}{152}{theorem.A.1.1}%
-\contentsline {proof}{{\proofname }{126}{}}{152}{proof.126}%
-\contentsline {proposition}{{Proposition}{A.1.{2}}{}}{153}{theorem.A.1.2}%
+\contentsline {proof}{{\proofname }{126}{}}{146}{proof.126}%
+\contentsline {proposition}{{Proposition}{A.1.{1}}{}}{153}{theorem.A.1.1}%
 \contentsline {proof}{{\proofname }{127}{}}{153}{proof.127}%
-\contentsline {proposition}{{Proposition}{A.1.{3}}{}}{153}{theorem.A.1.3}%
-\contentsline {proof}{{\proofname }{128}{}}{153}{proof.128}%
-\contentsline {proposition}{{Proposition}{A.1.{4}}{}}{154}{theorem.A.1.4}%
+\contentsline {proposition}{{Proposition}{A.1.{2}}{}}{154}{theorem.A.1.2}%
+\contentsline {proof}{{\proofname }{128}{}}{154}{proof.128}%
+\contentsline {proposition}{{Proposition}{A.1.{3}}{}}{154}{theorem.A.1.3}%
 \contentsline {proof}{{\proofname }{129}{}}{154}{proof.129}%
-\contentsline {proposition}{{Proposition}{A.1.{5}}{}}{154}{theorem.A.1.5}%
-\contentsline {proof}{{\proofname }{130}{}}{154}{proof.130}%
-\contentsline {theorem*}{{Theorem}{11}{Minkowski's lattice point theorem}}{155}{theorem*.11}%
+\contentsline {proposition}{{Proposition}{A.1.{4}}{}}{155}{theorem.A.1.4}%
+\contentsline {proof}{{\proofname }{130}{}}{155}{proof.130}%
+\contentsline {proposition}{{Proposition}{A.1.{5}}{}}{155}{theorem.A.1.5}%
 \contentsline {proof}{{\proofname }{131}{}}{155}{proof.131}%
-\contentsline {proposition}{{Proposition}{A.2.{1}}{}}{156}{theorem.A.2.1}%
+\contentsline {theorem*}{{Theorem}{11}{Minkowski's lattice point theorem}}{156}{theorem*.11}%
 \contentsline {proof}{{\proofname }{132}{}}{156}{proof.132}%
-\contentsline {theorem}{{Theorem}{A.2.{2}}{}}{157}{theorem.A.2.2}%
-\contentsline {theorem*}{{Theorem}{12}{Dirichlet-Jodan test}}{157}{theorem*.12}%
-\contentsline {theorem*}{{Theorem}{13}{Poisson summation}}{157}{theorem*.13}%
-\contentsline {proof}{{\proofname }{133}{}}{158}{proof.133}%
-\contentsline {corollary}{{Corollary}{A.2.{3}}{}}{159}{theorem.A.2.3}%
+\contentsline {proposition}{{Proposition}{A.2.{1}}{}}{157}{theorem.A.2.1}%
+\contentsline {proof}{{\proofname }{133}{}}{157}{proof.133}%
+\contentsline {theorem}{{Theorem}{A.2.{2}}{}}{158}{theorem.A.2.2}%
+\contentsline {theorem*}{{Theorem}{12}{Dirichlet-Jodan test}}{158}{theorem*.12}%
+\contentsline {theorem*}{{Theorem}{13}{Poisson summation}}{158}{theorem*.13}%
 \contentsline {proof}{{\proofname }{134}{}}{159}{proof.134}%
-\contentsline {theorem}{{Theorem}{A.2.{4}}{}}{159}{theorem.A.2.4}%
-\contentsline {proof}{{\proofname }{135}{}}{159}{proof.135}%
-\contentsline {proposition}{{Proposition}{A.2.{5}}{}}{160}{theorem.A.2.5}%
+\contentsline {corollary}{{Corollary}{A.2.{3}}{}}{160}{theorem.A.2.3}%
+\contentsline {proof}{{\proofname }{135}{}}{160}{proof.135}%
+\contentsline {theorem}{{Theorem}{A.2.{4}}{}}{160}{theorem.A.2.4}%
 \contentsline {proof}{{\proofname }{136}{}}{160}{proof.136}%
-\contentsline {corollary}{{Corollary}{A.2.{6}}{}}{161}{theorem.A.2.6}%
+\contentsline {proposition}{{Proposition}{A.2.{5}}{}}{161}{theorem.A.2.5}%
 \contentsline {proof}{{\proofname }{137}{}}{161}{proof.137}%
-\contentsline {proposition}{{Proposition}{A.3.{1}}{}}{162}{theorem.A.3.1}%
+\contentsline {corollary}{{Corollary}{A.2.{6}}{}}{162}{theorem.A.2.6}%
 \contentsline {proof}{{\proofname }{138}{}}{162}{proof.138}%
-\contentsline {theorem}{{Theorem}{A.3.{2}}{}}{163}{theorem.A.3.2}%
+\contentsline {proposition}{{Proposition}{A.3.{1}}{}}{163}{theorem.A.3.1}%
 \contentsline {proof}{{\proofname }{139}{}}{163}{proof.139}%
-\contentsline {proposition}{{Proposition}{A.3.{3}}{}}{163}{theorem.A.3.3}%
+\contentsline {theorem}{{Theorem}{A.3.{2}}{}}{164}{theorem.A.3.2}%
 \contentsline {proof}{{\proofname }{140}{}}{164}{proof.140}%
-\contentsline {theorem*}{{Theorem}{14}{Euler's reflection formula}}{164}{theorem*.14}%
-\contentsline {proof}{{\proofname }{141}{}}{164}{proof.141}%
-\contentsline {theorem}{{Theorem}{A.3.{4}}{}}{166}{theorem.A.3.4}%
-\contentsline {proof}{{\proofname }{142}{}}{166}{proof.142}%
-\contentsline {theorem*}{{Theorem}{15}{Legendre's duplication formula}}{167}{theorem*.15}%
+\contentsline {proposition}{{Proposition}{A.3.{3}}{}}{164}{theorem.A.3.3}%
+\contentsline {proof}{{\proofname }{141}{}}{165}{proof.141}%
+\contentsline {theorem*}{{Theorem}{14}{Euler's reflection formula}}{165}{theorem*.14}%
+\contentsline {proof}{{\proofname }{142}{}}{165}{proof.142}%
+\contentsline {theorem}{{Theorem}{A.3.{4}}{}}{167}{theorem.A.3.4}%
 \contentsline {proof}{{\proofname }{143}{}}{167}{proof.143}%
-\contentsline {lemma}{{Lemma}{A.3.{5}}{}}{168}{theorem.A.3.5}%
+\contentsline {theorem*}{{Theorem}{15}{Legendre's duplication formula}}{168}{theorem*.15}%
 \contentsline {proof}{{\proofname }{144}{}}{168}{proof.144}%
-\contentsline {theorem}{{Theorem}{A.3.{6}}{}}{169}{theorem.A.3.6}%
+\contentsline {lemma}{{Lemma}{A.3.{5}}{}}{169}{theorem.A.3.5}%
 \contentsline {proof}{{\proofname }{145}{}}{169}{proof.145}%
-\contentsline {theorem*}{{Theorem}{16}{Stirling's formula}}{169}{theorem*.16}%
-\contentsline {proof}{{\proofname }{146}{}}{169}{proof.146}%
-\contentsline {corollary}{{Corollary}{A.3.{7}}{}}{172}{theorem.A.3.7}%
-\contentsline {proof}{{\proofname }{147}{}}{172}{proof.147}%
-\contentsline {corollary}{{Corollary}{A.3.{8}}{}}{173}{theorem.A.3.8}%
+\contentsline {theorem}{{Theorem}{A.3.{6}}{}}{170}{theorem.A.3.6}%
+\contentsline {proof}{{\proofname }{146}{}}{170}{proof.146}%
+\contentsline {theorem*}{{Theorem}{16}{Stirling's formula}}{170}{theorem*.16}%
+\contentsline {proof}{{\proofname }{147}{}}{170}{proof.147}%
+\contentsline {corollary}{{Corollary}{A.3.{7}}{}}{173}{theorem.A.3.7}%
 \contentsline {proof}{{\proofname }{148}{}}{173}{proof.148}%
-\contentsline {corollary}{{Corollary}{A.3.{9}}{}}{173}{theorem.A.3.9}%
-\contentsline {proof}{{\proofname }{149}{}}{173}{proof.149}%
-\contentsline {proposition}{{Proposition}{A.3.{10}}{}}{174}{theorem.A.3.10}%
+\contentsline {corollary}{{Corollary}{A.3.{8}}{}}{174}{theorem.A.3.8}%
+\contentsline {proof}{{\proofname }{149}{}}{174}{proof.149}%
+\contentsline {corollary}{{Corollary}{A.3.{9}}{}}{174}{theorem.A.3.9}%
 \contentsline {proof}{{\proofname }{150}{}}{174}{proof.150}%
-\contentsline {corollary}{{Corollary}{A.3.{11}}{}}{174}{theorem.A.3.11}%
+\contentsline {proposition}{{Proposition}{A.3.{10}}{}}{175}{theorem.A.3.10}%
 \contentsline {proof}{{\proofname }{151}{}}{175}{proof.151}%
-\contentsline {corollary}{{Corollary}{A.3.{12}}{}}{175}{theorem.A.3.12}%
-\contentsline {proof}{{\proofname }{152}{}}{175}{proof.152}%
+\contentsline {corollary}{{Corollary}{A.3.{11}}{}}{175}{theorem.A.3.11}%
+\contentsline {proof}{{\proofname }{152}{}}{176}{proof.152}%
+\contentsline {corollary}{{Corollary}{A.3.{12}}{}}{176}{theorem.A.3.12}%
+\contentsline {proof}{{\proofname }{153}{}}{176}{proof.153}%
