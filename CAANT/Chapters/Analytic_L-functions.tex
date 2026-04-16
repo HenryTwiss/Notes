@@ -200,7 +200,7 @@
     \]
     for \(s\) in the critical strip and bounded \(\tau\) provided \(s+u\) is at least distance \(\e\) away from the poles of the gamma function. Whence
     \begin{equation}\label{equ:gamma_factor_s_and_u_estimate}
-      \frac{\g(s+u,L)}{\g(s,L)} \ll_{\e} \frac{\mf{q}_{\infty}(s+u)^{\frac{\s+\tau}{2}-\frac{1}{4}}}{\mf{q}_{\infty}(s)^{\frac{\s}{2}-\frac{1}{4}}}e^{-d_{L}\frac{\pi}{2}(|t+r|-|t|)},
+      \frac{\g(s+u,L)}{\g(s,L)} \ll_{\e} \frac{\mf{q}_{\infty}(s+u,L)^{\frac{\s+\tau}{2}-\frac{1}{4}}}{\mf{q}_{\infty}(s,L)^{\frac{\s}{2}-\frac{1}{4}}}e^{-d_{L}\frac{\pi}{2}(|t+r|-|t|)},
     \end{equation}
     for \(s\) in the critical strip and bounded \(\tau\) provided \(s+u\) is at least distance \(\e\) away from the poles of the gamma factor. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded and hence \(V_{s}(y,L)\) is smooth. The function \(V_{s}(y,L)\) is the smooth cutoff function mentioned previously. We will also let \(\e(s,L)\) be given by
     \[
@@ -639,9 +639,9 @@
       B_{L}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) = -\conj{B_{L}}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-(1-\conj{\rho})}-\frac{1}{\conj{\rho}}\right).
     \]
     As the nontrivial zeros occur in pairs \(\rho\) and \(1-\conj{\rho}\), isolating \(B_{L}\) shows that
-    \[
+    \begin{equation}\label{equ:B_L_real_part}
       \Re(B_{L}) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{\rho}\right).
-    \]
+    \end{equation}
   \section{Zero Density Estimates}
     The distribution of the zeros of an analytic \(L\)-function is central to how the \(L\)-function encodes arithmetic information about its coefficients. Here we introduce a method of counting zeros of \(L\)-functions which gives a simple understanding of their density. We first require an immensely useful lemma.
 
@@ -663,7 +663,7 @@
     \begin{proof}
       We will prove the properties separately.
       \begin{enumerate}[label*=(\roman*)]
-        \item Let \(s = \s+iT\) for some \(\s > 1+\t\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} along with (i) gives
+        \item Let \(s = \s+iT\) for some \(\s > 1+\t\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate,equ:B_L_real_part} gives
         \[
           \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(iT,L)}).
         \]
@@ -674,7 +674,7 @@
         which implies the first statement. The second statement follows from the first as all of the terms in the sum are positive and at least \(\frac{1}{2}\).
         \item Let \(s = \s+iT\) with \(\s\) bounded and nonnegative \(T\). Also suppose \(s\) is at least distance \(\e\) away from \(s = 0\), \(s = 1\), the nontrivial zeros of \(L(s)\), and the poles of the gamma factor. Invoking \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
         \[
-          -\frac{L'}{L}(s) = -\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right)+O_{\e}(\log{\mf{q}(iT,L)}).
+          -\frac{L'}{L}(s) = -\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}).
         \]
         A short computation shows
         \[
