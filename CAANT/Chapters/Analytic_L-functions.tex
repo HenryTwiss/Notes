@@ -655,9 +655,9 @@
         In particular, the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(iT,L)})\).
         \item Suppose \(s = \s+iT\) for bounded \(\s\) and nonnegative \(T\). Then
         \[
-          -\frac{L'}{L}(s) = -\sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(s,L)}),
+          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(s,L)}),
         \]
-        provided \(s\) is at least distance \(\e\) away from \(s = 0\), \(s = 1\), the nontrivial zeros of \(L(s)\), and the poles of the gamma factor.
+        provided \(s\) is at least distance \(\e\) away from the nontrivial zeros of \(L(s)\) and the poles of the gamma factor and \(s \neq 0,1\).
       \end{enumerate}
     \end{lemma}
     \begin{proof}
@@ -672,9 +672,9 @@
           \Re\left(\frac{1}{s-\rho}\right) \gg \frac{1}{1+(T-\g)^{2}},
         \]
         which implies the first statement. The second statement follows from the first as all of the terms in the sum are positive and at least \(\frac{1}{2}\).
-        \item Let \(s = \s+iT\) with \(\s\) bounded and nonnegative \(T\). Also suppose \(s\) is at least distance \(\e\) away from \(s = 0\), \(s = 1\), the nontrivial zeros of \(L(s)\), and the poles of the gamma factor. Invoking \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
+        \item Let \(s = \s+iT\) with \(\s\) bounded and nonnegative \(T\). Also suppose \(s\) is at least distance \(\e\) away from the nontrivial zeros of \(L(s)\) and the poles of the gamma factor and \(s \neq 0,1\). Invoking \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
         \[
-          -\frac{L'}{L}(s) = -\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}).
+          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}).
         \]
         A short computation shows
         \[
@@ -690,7 +690,7 @@
         \]
         Altogether, this shows
         \[
-          -\frac{L'}{L}(s) = -\sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(s,L)}),
+          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(s,L)}),
         \]
         as claimed.  
       \end{enumerate}
@@ -795,8 +795,7 @@
       \[
         \D_{\eta_{R}}\arg\left(\pi^{-\frac{d_{L}s}{2}}\right) = \frac{T}{2}\log\left(\frac{1}{\pi^{d_{L}}}\right)+O(1),
       \]
-      respectively
-      For the product of gamma factors, first observe that the logarithm of Stirling's formula (see \cref{sec:the_gamma_function}) gives
+      respectively. For the product of gamma functions, first observe that the logarithm of Stirling's formula (see \cref{sec:the_gamma_function}) gives
       \[
         \log\G(s) = \frac{1}{2}\log(2\pi)+\left(s-\frac{1}{2}\right)\log(s)-s+O\left(\frac{1}{s}\right),
       \]
@@ -804,19 +803,19 @@
       \[
         \D_{\eta_{R}}\arg\G\left(\frac{s+\mu_{j}}{2}\right) = \frac{T}{2}\log\left(\frac{T}{2e}\right)+O(1),
       \]
-      and it follows that the contribution for the product of gamma factors is
+      and it follows that the contribution from the product of gamma functions is
       \[
         \D_{\eta_{R}}\arg\left(\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right)\right) = \frac{T}{2}\log\left(\frac{T^{d_{L}}}{(2e)^{d_{L}}}\right)+O(1).
       \]
-      For the contribution from \(L(s)\), write
+      For \(L(s)\), being by observing that
       \[
         \D_{\eta_{R}}\arg(L(s)) = \Im\left(\int_{\eta_{R}}\frac{L'}{L}(s)\,ds\right).
       \]
       As the logarithmic derivative of \(L(s)\) is absolutely bounded for \(\s = 1+\t+\d\), the integral is \(O(1)\) on \(\eta_{2}\). On \(\eta_{1}\) and \(\eta_{3}\), use \cref{lem:powerful_L-function_approximation_lemma} (ii) to write
       \[
-        \Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{L'}{L}(s)\,ds\right) = \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{1}{s-\rho}\,ds\right)+O(\log\mf{q}(iT,L))
+        \Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{L'}{L}(s)\,ds\right) = \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{1}{s-\rho}\,ds\right)+O(\log\mf{q}(iT,L)),
       \]
-      Each summand is \(\D_{\eta_{1} \cup \eta_{3}}\arg(s-\rho) = O(1)\). As there are \(O(\log\mf{q}(iT,L))\) many terms by \cref{lem:powerful_L-function_approximation_lemma} (i), it follows that
+      as \(s\) is bounded away from \(0\) and \(1\). Each summand is \(\D_{\eta_{1} \cup \eta_{3}}\arg(s-\rho) = O(1)\). As there are \(O(\log\mf{q}(iT,L))\) many terms by \cref{lem:powerful_L-function_approximation_lemma} (i), it follows that
       \[
         \D_{\eta_{R}}\arg(L(s)) = O(\log{\mf{q}(iT,L)}).
       \]
@@ -824,7 +823,7 @@
       \[
         N'(T,L) = \frac{T}{2\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}),
       \]
-      and the asymptotic formula follows. The asymptotic equivalence follows immediately since it is a strictly weaker asymptotic.
+      from which the asymptotic formula follows. The asymptotic equivalence is immediate since it is a strictly weaker asymptotic.
     \end{proof}
 
     It is worth noting that the main term in the asymptotic formula of the previous result comes from the change in argument of \(q_{L}^{\frac{s}{2}}\g(s,L)\) along \(\eta_{3}\) (and \(\eta_{4}\) by the functional equation). In particular, the contribution from \(L(s)\) is only to the error term. This is a good example of how information of an analytic \(L\)-function is intrinsically connected to its gamma factor.
@@ -862,7 +861,7 @@
     \end{proof}
 
     We interpret this result as saying that the unfolded nontrivial zeros are evenly spaced opposed to \cref{thm:zero_counting} which say that they tend to accumulate up the critical strip.
-  \iffalse\section{Zero-free Regions}
+  \section{Zero-free Regions}
     Although the Riemann hypothesis for any analytic \(L\)-function remains out of reach, some progress has been made to understand regions inside of the critical strip for which there are no nontrivial zeros except for possibly one real exception. Such a region is said to be a \textbf{zero-free region}\index{zero-free region}. We will derive a standard zero-free region for any analytic \(L\)-function under some mild assumptions. First we require a lemma.
 
     \begin{lemma}\label{lem:non-vanshing_at_1_lemma}
@@ -872,27 +871,27 @@
       \]
     \end{lemma}
     \begin{proof}
-      There are finitely many nontrivial real zeros \(\b\) belonging to the interval \(\frac{1}{2} \le s \le 1\). Fix \(\s > 1\). Applying \cref{lem:powerful_L-function_approximation_lemma} (iv) while discarding all the terms in the sum except those corresponding to these real zeros, we obtain the inequality
+      There are finitely many nontrivial real zeros \(\b\) belonging to the interval \(\frac{1}{2} \le s \le 1\). Now take \(s > 1\) and observe that the real parts of the terms \(\frac{m_{L}}{s}\) and \(\frac{1}{s-\rho}\) in \cref{lem:powerful_L-function_approximation_lemma} (ii) are positive. So upon taking the real part of this formula, we may discard all of these terms except those corresponding to the real nontrivial zeros. This result in
       \[
-        \sum_{\b}\Re\left(\frac{1}{\s-\b}\right) = \Re\left(\frac{L'}{L}(\s,f)\right)+O(\log{\mf{q}(L)}).
+        \sum_{\b}\Re\left(\frac{1}{\s-\b}\right) = \frac{m_{L}}{\s-1}+\Re\left(\frac{L'}{L}(\s)\right)+O(\log{\mf{q}(L)}),
       \]
-      To estimate \(\Re\left(\frac{L'}{L}(\s,f)\right)\), we first note that as \(\Re(\L_{L}(n)) \ge 0\) provided \((n,q_{L}) = 1\) by assumption, the Dirichlet series of \(\frac{L'^{(q_{L})}}{L^{(q_{L})}}(s)\) shows that
+      where the left-hand side is positive. To estimate \(\Re\left(\frac{L'}{L}(\s)\right)\), recall that \(\Re(\L_{L}(n)) \ge 0\) provided \((n,q_{L}) = 1\) by assumption. Whence
       \[
-        \Re\left(\frac{L^{(q_{L})'}}{L^{(q_{L})}}(\s,f)\right) \le 0.
+        \Re\left(\frac{L^{(q_{L})'}}{L^{(q_{L})}}(\s)\right) \le 0.
       \]
-      This gives an estimate for the contribution of the Euler factors of \(L(s)\) corresponding to unramified primes. For the contribution of the Euler factors corresponding to ramified primes, we use \cref{equ:log_derivaive_direct_computation} to compute
+      This provides an estimate for the contribution of the Euler factors of \(L(s)\) corresponding to unramified primes. For the contribution corresponding to ramified primes, a short computation with an application of the bound \(|\a_{j}(p)| \le \frac{p}{2}\) shows
       \[
-        \Re\left(\frac{L'_{q_{L}}}{L_{q_{L}}}(\s,f)\right) \le \left|\frac{L'_{q_{L}}}{L_{q_{L}}}(\s,f)\right| = \left|\sum_{p \mid q_{L}}\sum_{j}\frac{\a_{j}(p)\log(p)}{(1-\a_{j}(p)p^{-\s})p^{\s}}\right| \le d_{L}\sum_{p \mid q_{L}}\log(p) \le d_{L}\log(q_{L}),
+        \Re\left(\frac{L_{(q_{L})}'}{L_{(q_{L})}}(\s)\right) \le d_{L}\log(q_{L}).
       \]
-      where in the second inequality we have made use of the assumption \(|\a_{j}(p)| \le \frac{p}{2}\) for ramified primes \(p\) to conclude that \(\left|\frac{\a_{j}(p)}{(1-\a_{j}(p)p^{-\s})p^{\s}}\right| \le 1\). These estimates together imply
+      These estimates together imply
       \[
-        \sum_{j}\frac{1}{\s-\b_{j}} < \frac{m_{L}}{\s-1}+O(\log{d_{L}\mf{q}(L)}).
+        \sum_{\b}\Re\left(\frac{1}{\s-\b}\right) < \frac{m_{L}}{\s-1}+O(\log(d_{L}\mf{q}(L))).
       \]
-      From this inequality we see that \(\b_{j} \neq 1\). For if some \(\b_{j} = 1\), \(m_{L} < 0\) and the right-hand side is negative for \(\s\) sufficiently close to \(1\) contradicting the positivity of the left-hand side. Thus \(L(1) \neq 0\) and hence \(m_{L} \ge 0\). As there are finitely many \(\b_{j}\), there exists a \(c > 0\) such that the \(\b_{j}\) satisfy
+      From this inequality we see that \(\b \neq 1\). For if some \(\b = 1\), we have \(m_{L} < 0\) whence the right-hand side is negative for \(\s\) sufficiently close to \(1\) contradicting positivity of the left-hand side. Thus \(L(1) \neq 0\) and hence \(m_{L} \ge 0\). As there are finitely many \(\b\), there exists a positive constant \(c\) such that the \(\b\) satisfy
       \[
-        \b_{j} \ge 1-\frac{c}{d_{L}(m_{L}+1)\log{\mf{q}(L)}}.
+        \b \ge 1-\frac{c}{d_{L}(m_{L}+1)\log{\mf{q}(L)}}.
       \]
-      Setting \(\s = 1+\frac{2c}{d_{L}\log{\mf{q}(L)}}\) and choosing \(c\) smaller, if necessary, we guarantee \(1 < \s \le 2\). Then the two inequalities above together imply
+      Setting \(\s = 1+\frac{2c}{d_{L}\log{\mf{q}(L)}}\) \iffalse and choosing \(c\) smaller, if necessary, we guarantee \(1 < \s \le 2\). Then the two inequalities above together imply
       \[
         \frac{nd_{L}\log{\mf{q}(L)}}{2c+\frac{c}{(m_{L}+1)}} < \left(\frac{m_{L}}{2c}+O(1)\right)d_{L}\log{\mf{q}(L)}.
       \]
@@ -904,10 +903,10 @@
       \[
         \s \ge 1-\frac{c}{d_{L}(m_{L}+1)\log{\mf{q}(L)}}.
       \]
-      This completes the proof.
+      This completes the proof.\fi
     \end{proof}
 
-    We can now prove our zero-free region result:
+    \iffalse We can now prove our zero-free region result:
 
     \begin{theorem}\label{thm:zero_free_region_generic}
       Let \(L(s)\) be an analytic \(L\)-function with at most a simple pole at \(s = 1\), \(\Re(\L_{L}(n)) \ge 0\) provided \((n,q_{L}) = 1\), and \(|\a_{j}(p)| \le \frac{p}{2}\) for ramified primes \(p\). Then there exists a constant \(c > 0\) such that \(L(s)\) has no zeros in the region
