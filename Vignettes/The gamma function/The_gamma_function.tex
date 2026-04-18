@@ -25,15 +25,15 @@
     both integrals are locally absolutely uniformly convergent in this half-plane. Also note that \(\G(s)\) is real for \(s > 0\). The most basic properties of \(\G(s)\) are collected in the following result:
 
     \begin{proposition}\label{prop:Factorial_properties_of_gamma_function}
-      \(\G(s)\) satisfies
+      The gamma function satisfies
       \[
-         \G(1) = 1 \quad \text{and} \quad \G(s+1) = s\G(s).
+          \G(1) = 1 \quad \text{and} \quad \G(s+1) = s\G(s).
       \]
       In particular,
       \[
         \G(n) = (n-1)!,
       \]
-      for any positive integer \(n\). Also,
+      for any positive integer \(n\). Also, the gamma function is conjugation-equivariant which is to say
       \[
         \G(\conj{s}) = \conj{\G(s)}.
       \]
@@ -173,11 +173,11 @@
       \[
         \int_{\eta}\frac{z^{s+1}}{z+1}\,dz.
       \]
-      We will evaluate this integral in the limit as \(R \to \infty\) and then as \(\e \to 0\). The contour encloses the only pole of the integrand which is simple at \(z = -1\) and of residue \(e^{\pi i(s-1)}\) (after taking the branch cut \(\log_{0}\) of the logarithm along the positive real axis). So, on the one hand, the residue theorem gives
+      We will evaluate this integral in the limit as \(R \to \infty\) and then as \(\e \to 0\). The contour encloses the only pole of the integrand which is simple at \(z = -1\) and of residue \(e^{\pi i(s-1)}\) (after taking the branch cut \(\log_{0}\) of the logarithm along the positive real line). So, on the one hand, the residue theorem gives
       \[
         \int_{\eta}\frac{z^{s-1}}{z+1}\,dz = 2\pi ie^{\pi i(s-1)},
       \]
-      where in the last equality we have used that \(\log_{0}(-1) = i\pi\) (since this is the branch cut of the logarithm along the positive real axis). On the other hand, the integral is a sum along all four contours. Clearly
+      where in the last equality we have used that \(\log_{0}(-1) = i\pi\) (since this is the branch cut of the logarithm along the positive real line). On the other hand, the integral is a sum along all four contours. Clearly
       \[
         \lim_{\e \to 0}\lim_{R \to \infty}\int_{\eta_{1}}\frac{z^{s+1}}{z+1}\,dz = \int_{0}^{\infty}\frac{x^{s-1}}{x+1}\,dx.
       \]
@@ -490,7 +490,7 @@
       This is equivalent to the desired asymptotic.
     \end{proof}
 
-    We can use \cref{equ:weaker_Stirling_formula_1} to obtain weaker estimates valid on the negative real axis away from the poles of the gamma function.
+    We can use \cref{equ:weaker_Stirling_formula_1} to obtain weaker estimates valid on the negative real line away from the poles of the gamma function.
 
     \begin{corollary}\label{equ:weaker_Stirling_formula_2}
       Suppose \(\s\) is bounded. Then
@@ -594,7 +594,7 @@
       as desired.
     \end{proof}
 
-    We can use \cref{equ:weaker_approximtion_for_digamma_1} to obtain a weaker estimate valid on the negative real axis away from the poles of the gamma function.
+    We can use \cref{equ:weaker_approximtion_for_digamma_1} to obtain a weaker estimate valid on the negative real line away from the poles of the gamma function.
 
     \begin{corollary}\label{equ:weaker_approximtion_for_digamma_2}
       Suppose \(\s\) is bounded and \(s\) is at least distance \(\e\) away from the poles of the gamma function in this vertical strip. Then

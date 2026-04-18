@@ -242,6 +242,8 @@
 \indexentry{unramified|hyperpage}{127}
 \indexentry{ramified|hyperpage}{127}
 \indexentry{Selberg class|hyperpage}{127}
+\indexentry{dual|hyperpage}{128}
+\indexentry{self-dual|hyperpage}{128}
 \indexentry{primitive|hyperpage}{128}
 \indexentry{Selberg's orthogonality conjecture|hyperpage}{128}
 \indexentry{analytic conductor|hyperpage}{129}
@@ -256,35 +258,36 @@
 \indexentry{convexity bound|hyperpage}{138}
 \indexentry{Lindel\"of hypothesis|hyperpage}{138}
 \indexentry{Selberg class Lindel\"of hypothesis|hyperpage}{138}
-\indexentry{subconvexity estimate|hyperpage}{138}
-\indexentry{convexity breaking bound|hyperpage}{138}
-\indexentry{Burgess bound|hyperpage}{138}
-\indexentry{Weyl bound|hyperpage}{138}
+\indexentry{subconvexity estimate|hyperpage}{139}
+\indexentry{convexity breaking bound|hyperpage}{139}
+\indexentry{Burgess bound|hyperpage}{139}
+\indexentry{Weyl bound|hyperpage}{139}
 \indexentry{convexity bound|hyperpage}{139}
 \indexentry{smooth dyadic weight|hyperpage}{139}
 \indexentry{central value|hyperpage}{142}
 \indexentry{central value estimate|hyperpage}{142}
-\indexentry{Von Mangoldt coefficients|hyperpage}{143}
+\indexentry{von Mangoldt coefficients|hyperpage}{143}
 \indexentry{functional equation|hyperpage}{143}
 \indexentry{unfolded nontrivial zero|hyperpage}{149}
-\indexentry{zero-free region|hyperpage}{149}
-\indexentry{integral lattice|hyperpage}{156}
-\indexentry{complete|hyperpage}{156}
-\indexentry{generator matrix|hyperpage}{156}
-\indexentry{covolume|hyperpage}{156}
-\indexentry{dual|hyperpage}{156}
-\indexentry{self-dual|hyperpage}{157}
-\indexentry{Minkowski's lattice point theorem|hyperpage}{159}
-\indexentry{Fourier transform|hyperpage}{160}
-\indexentry{Fourier coefficient|hyperpage}{160}
-\indexentry{Fourier series|hyperpage}{160}
-\indexentry{Dirichlet-Jordan test|hyperpage}{161}
-\indexentry{Poisson summation|hyperpage}{161}
-\indexentry{Schwarz class|hyperpage}{164}
-\indexentry{gamma function|hyperpage}{166}
-\indexentry{functional equation|hyperpage}{166}
-\indexentry{beta function|hyperpage}{167}
-\indexentry{Euler's reflection formula|hyperpage}{168}
-\indexentry{Legendre's duplication formula|hyperpage}{170}
-\indexentry{Stirling's formula|hyperpage}{173}
-\indexentry{digamma function|hyperpage}{177}
+\indexentry{zero-free region|hyperpage}{150}
+\indexentry{Siegel zero|hyperpage}{152}
+\indexentry{integral lattice|hyperpage}{158}
+\indexentry{complete|hyperpage}{158}
+\indexentry{generator matrix|hyperpage}{158}
+\indexentry{covolume|hyperpage}{158}
+\indexentry{dual|hyperpage}{158}
+\indexentry{self-dual|hyperpage}{159}
+\indexentry{Minkowski's lattice point theorem|hyperpage}{161}
+\indexentry{Fourier transform|hyperpage}{162}
+\indexentry{Fourier coefficient|hyperpage}{162}
+\indexentry{Fourier series|hyperpage}{162}
+\indexentry{Dirichlet-Jordan test|hyperpage}{163}
+\indexentry{Poisson summation|hyperpage}{163}
+\indexentry{Schwarz class|hyperpage}{166}
+\indexentry{gamma function|hyperpage}{168}
+\indexentry{functional equation|hyperpage}{168}
+\indexentry{beta function|hyperpage}{169}
+\indexentry{Euler's reflection formula|hyperpage}{170}
+\indexentry{Legendre's duplication formula|hyperpage}{172}
+\indexentry{Stirling's formula|hyperpage}{175}
+\indexentry{digamma function|hyperpage}{179}

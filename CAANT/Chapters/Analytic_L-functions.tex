@@ -59,7 +59,13 @@
       In other words, \(a_{L}(p^{k})\) is the complete symmetric polynomial of degree \(k\) in the Euler parameters at \(p\). If the Ramanujan bound holds, then it follows that \(a_{L}(n) \ll \s_{d_{L}}(n)\). This implies the slightly weaker, but more practical, estimate \(a_{L}(n) \ll_{\e} n^{\e}\).
     \end{enumerate}
 
-    It it clear from the definition that analytic \(L\)-functions are closed under multiplication and that the degree is additive. Moreover, this closure respects Selberg class \(L\)-functions. This makes the set of analytic \(L\)-functions into a graded commutative semigroup where the grading is induced by degree. It follows that there exist irreducible elements with respect to the grading and we say that an analytic \(L\)-function is \textbf{primitive}\index{primitive} if it such an irreducible. Clearly any analytic \(L\)-function of degree \(1\) is primitive. Moreover, every analytic \(L\)-function factors into a product of primitive \(L\)-functions. Such a factorization is only conjectured to be unique for Selberg class \(L\)-functions. A sufficient condition would be \textbf{Selberg's orthogonality conjecture}\index{Selberg's orthogonality conjecture}.
+    We will also define the \textbf{dual}\index{dual} \(\conj{L}(s)\) of \(L(s)\) by
+    \[
+      \conj{L}(s) = \conj{L(\conj{s})}.
+    \]
+    Analytic \(L\)-functions are closed under duals. Indeed, \(\conj{L}(s)\) is an analytic \(L\)-function with coefficients \(a_{\conj{L}}(n) = \conj{a_{L}(n)}\), a pole at \(s = 1\) of order \(m_{\conj{L}} = m_{L}\), conductor \(q_{\conj{L}} = q_{L}\), degree \(d_{\conj{L}} = d_{L}\), gamma parameters \((\conj{\mu_{j}})_{j \le d_{L}}\), root number \(\e_{\conj{L}} = \conj{\e_{L}}\), and Euler parameters \((\conj{\a_{j}(p)})_{j \le d_{L}}\) at \(p\). Moreover, the dual of \(L(s)\) is Selberg class if \(L(s)\) is. We also say \(L(s)\) is \textbf{self-dual}\index{self-dual} if it is equal to its dual. This is equivalent to the coefficients \(a_{L}(n)\) being real.
+
+    It is clear from the definition that analytic \(L\)-functions are closed under multiplication and that the degree is additive. Moreover, this closure respects Selberg class \(L\)-functions. This makes the set of analytic \(L\)-functions into a graded commutative semigroup where the grading is induced by degree. It follows that there exist irreducible elements with respect to the grading and we say that an analytic \(L\)-function is \textbf{primitive}\index{primitive} if it such an irreducible. Clearly any analytic \(L\)-function of degree \(1\) is primitive. Moreover, every analytic \(L\)-function factors into a product of primitive \(L\)-functions. Such a factorization is only conjectured to be unique for Selberg class \(L\)-functions. A sufficient condition would be \textbf{Selberg's orthogonality conjecture}\index{Selberg's orthogonality conjecture}.
 
     \begin{conjecture*}[Selberg's orthogonality conjecture]
       For any two primitive Selberg class \(L\)-functions \(L_{1}(s)\) and \(L_{2}(s)\), we have
@@ -136,7 +142,7 @@
       \centering
       \begin{tikzpicture}[scale=1.5]
         \def\xmin{-0.5} \def\xmax{3.5}
-        \def\ymin{-0.5} \def\ymax{2}
+        \def\ymin{-1} \def\ymax{2}
         \draw[thick] (\xmin,0) -- (\xmax,0);
         \draw[thick] (0,\ymin) -- (0,\ymax);
         \draw[thick] (3,\ymin) -- (3,\ymax);
@@ -298,7 +304,7 @@
       \]
     \end{proof}
 
-    With our choice of \(\Phi(u)\), this result shows that \(V_{s}(y,L)\) is essentially \(1\) up to some admissible error for \(y \ll \sqrt{\mf{q}_{\infty}(s,L)}\) and exhibits rapid decay thereafter as we can take \(M\) (and hence \(N\)) to be arbitrarily large.
+    With our choice of \(\Phi(u)\), this result shows that \(V_{s}(y,L)\) is essentially \(1\) for \(y \ll \sqrt{\mf{q}_{\infty}(s,L)}\) and exhibits rapid decay thereafter as we can take \(M\) (and hence \(N\)) to be arbitrarily large.
     
     In a similar spirit to the approximate functional equation, a useful summation formula can be derived from the functional equation. Let \(\psi(y)\) be a smooth weight where \(\Psi(s)\) is its Mellin transform. Then we will let \(\psi(y,L)\) be the inverse Mellin transform
     \[
@@ -340,7 +346,7 @@
     \[
       L(s) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)}\conj{L(1-\conj{s})}.
     \] 
-    So for \(\s < 0\), we see that \(\conj{L(1-\conj{s})}\) is nonzero. Moreover, \(\g(1-s,L)\) is as well. Together this means that for \(\s < 0\) the poles of \(\g(s,L)\) are zeros of \(L(s)\). Such a zero is called a \textbf{trivial zero}\index{trivial zero} of \(L(s)\). From the definition of the gamma factor, they are all simple and of the form \(s = -(\mu_{j}+2n)\) for some gamma parameter \(\mu_{j}\) and some nonnegative integer \(n\).
+    So for \(\s < 0\), we see that \(\conj{L(1-\conj{s})}\) is nonzero. Moreover, \(\g(1-s,L)\) is as well. Together this means that for \(\s < 0\) the poles of \(\g(s,L)\) are zeros of \(L(s)\). Such a zero is called a \textbf{trivial zero}\index{trivial zero} of \(L(s)\). From the definition of the gamma factor, they are all simple and of the form \(s = -(\mu_{j}+2n)\) for some gamma parameter \(\mu_{j}\) and nonnegative integer \(n\).
     
     Any other zero of \(L(s)\) is called a \textbf{nontrivial zero}\index{nontrivial zero} and it necessarily lies inside of the critical strip. Let \(\rho\) be a nontrivial zero of \(L(s)\). Then the functional equation implies that \(1-\conj{\rho}\) is also a nontrivial zero of \(L(s)\). This means that nontrivial zeros occur in pairs
     \[
@@ -382,7 +388,7 @@
       \label{fig:symmetric_nontrivial_zeros}
     \end{figure}
 
-    It is possible to say more when \(L(s)\) takes real values for \(s > 1\). For in this case, the Schwarz reflection principle implies \(L(\conj{s}) = \conj{L(s)}\) and that \(L(s)\) takes real values on the entire real axis save for the possible pole at \(s = 1\). It follows from the functional equation that \(\conj{\rho}\) and \(1-\rho\) are also nontrivial zeros. Therefore the nontrivial zeros of \(L(s)\) come in sets of four
+    It is possible to say more when \(L(s)\) takes real values for \(s > 1\). For in this case, the Schwarz reflection principle implies \(L(\conj{s}) = \conj{L(s)}\) and that \(L(s)\) takes real values on the entire real line save for the possible pole at \(s = 1\). It follows from the functional equation that \(\conj{\rho}\) and \(1-\rho\) are also nontrivial zeros. Therefore the nontrivial zeros of \(L(s)\) come in sets of four
     \[
       \rho, \quad \conj{\rho}, \quad 1-\rho, \quad \text{and} \quad 1-\conj{\rho},
     \]
@@ -547,7 +553,7 @@
       \[
         L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}\sup_{X \ll \sqrt{\mf{q}\left(\frac{1}{2}+it,L\right)}}\left(\frac{|A_{\w}(t,X,L)|}{\sqrt{X}}\right),
       \]
-      upon absorbing smaller order error terms.
+      upon absorbing smaller order \(O\)-estimates.
     \end{proof}
 
     As any useful estimate for the sum \(A_{\w}(t,X,L)\) will be in terms of powers of \(X\), the supremum in \cref{thm:central_value_estimate} will automatically pick out the largest possible bound when \(X\) is the square root of the analytic conductor. This means that the savings of \(\sqrt{X}\) in the denominator is essentially as large as possible. For example, we obtain the convexity bound as an application. Since the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s < 1\), we have a bound of shape
@@ -592,7 +598,7 @@
     \[
       \L_{L}(n) = \begin{cases} \sum_{j}\a_{j}(p)^{k}\log(p) & \text{if \(n = p^{k}\)}, \\ 0 & \text{otherwise}. \end{cases}
     \]
-    We call \(\L_{L}(n)\) the \textbf{Von Mangoldt coefficients}\index{Von Mangoldt coefficients} of \(L(s)\).
+    We call \(\L_{L}(n)\) the \textbf{von Mangoldt coefficients}\index{von Mangoldt coefficients} of \(L(s)\).
 
     There is an incredibly useful formula for the logarithmic derivative of \(L(s)\) which is often the starting point for deeper analytic investigations. To deduce it, we require a more complete understanding of the completion \(\L(s,L)\). First observe that the zeros \(\rho\) of \(\L(s,L)\) are contained within the critical strip. Indeed, by our earlier discussion of zeros, \(\L(s,L)\) is nonzero for \(\s > 1\) and the functional equation implies that \(\L(s,L)\) is nonzero for \(\s < 0\) too. This means that the zeros of \(\L(s,L)\) are exactly nontrivial zeros of \(L(s)\). Now let us setup some notation. We define \(\xi(s,L)\) by
     \[
@@ -663,11 +669,11 @@
     \begin{proof}
       We will prove the properties separately.
       \begin{enumerate}[label*=(\roman*)]
-        \item Let \(s = \s+iT\) for some \(\s > 1+\t\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate,equ:B_L_real_part} gives
+        \item Let \(s = \s+iT\) for some \(\s > 1+\t\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate,equ:B_L_real_part} together gives
         \[
-          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(iT,L)}).
+          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(iT,L)}),
         \]
-        For our choice of \(s\), we have
+        upon absorbing all other terms into the \(O\)-estimate. For our choice of \(s\), we have
         \[
           \Re\left(\frac{1}{s-\rho}\right) \gg \frac{1}{1+(T-\g)^{2}},
         \]
@@ -684,7 +690,7 @@
         \[
           \sum_{\substack{\rho \neq 0,1 \\ |T-\g| > 1}}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) \ll \sum_{\substack{\rho \neq 0,1 \\ |T-\g| > 1}}\frac{1}{|\g|^{2}}+\sum_{\substack{\rho \neq 0,1 \\ |T-\g| > 1}}\frac{1}{|T-\g|^{2}}.
         \]
-        The first \(O\)-estimate on the right-hand side is \(O(1)\) by \cref{Hadamard_zero_sum_for_xi}. As we are restricting to nontrivial zeros such that \(|T-\g| > 1\) in the second sum, it is \(O(\log{\mf{q}(s,L)})\) by (i). Also, (i) implies
+        The first sum on the right-hand side is \(O(1)\) by \cref{Hadamard_zero_sum_for_xi}. As we are restricting to nontrivial zeros such that \(|T-\g| > 1\) in the second sum, it is \(O(\log{\mf{q}(s,L)})\) by (i). Also, (i) implies
         \[
           \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{\rho} = O_{\e}(\log{\mf{q}(s,L)}).
         \]
@@ -727,7 +733,7 @@
         \centering
         \begin{tikzpicture}[scale=1.5]
           \def\xmin{-0.5} \def\xmax{3.5}
-          \def\ymin{-0.5} \def\ymax{2}
+          \def\ymin{-1} \def\ymax{2}
           \draw[thick] (\xmin,0) -- (\xmax,0);
           \draw[thick] (0,\ymin) -- (0,\ymax);
           \draw[thick] (3,\ymin) -- (3,\ymax);
@@ -815,7 +821,7 @@
       \[
         \Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{L'}{L}(s)\,ds\right) = \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{1}{s-\rho}\,ds\right)+O(\log\mf{q}(iT,L)),
       \]
-      as \(s\) is bounded away from \(0\) and \(1\). Each summand is \(\D_{\eta_{1} \cup \eta_{3}}\arg(s-\rho) = O(1)\). As there are \(O(\log\mf{q}(iT,L))\) many terms by \cref{lem:powerful_L-function_approximation_lemma} (i), it follows that
+      where we have absorbed the terms corresponding to \(0\) and \(1\) into the \(O\)-estimate. Each summand is \(\D_{\eta_{1} \cup \eta_{3}}\arg(s-\rho) = O(1)\). As there are \(O(\log\mf{q}(iT,L))\) many terms by \cref{lem:powerful_L-function_approximation_lemma} (i), it follows that
       \[
         \D_{\eta_{R}}\arg(L(s)) = O(\log{\mf{q}(iT,L)}).
       \]
@@ -862,134 +868,118 @@
 
     We interpret this result as saying that the unfolded nontrivial zeros are evenly spaced opposed to \cref{thm:zero_counting} which say that they tend to accumulate up the critical strip.
   \section{Zero-free Regions}
-    Although the Riemann hypothesis for any analytic \(L\)-function remains out of reach, some progress has been made to understand regions inside of the critical strip for which there are no nontrivial zeros except for possibly one real exception. Such a region is said to be a \textbf{zero-free region}\index{zero-free region}. We will derive a standard zero-free region for any analytic \(L\)-function under some mild assumptions. First we require a lemma.
+    Although the Riemann hypothesis for any analytic \(L\)-function remains out of reach, some progress has been made to understand regions inside of the critical strip for which there are no nontrivial zeros except for possibly one real exception. Such a region is said to be a \textbf{zero-free region}\index{zero-free region}. We will derive a standard zero-free region for any analytic \(L\)-function under a mild assumption about the real part of its logarithmic derivative. First we require a lemma which bounds the possible amount of real zeros.
 
     \begin{lemma}\label{lem:non-vanshing_at_1_lemma}
-      Let \(L(s)\) be an analytic \(L\)-function such that \(\Re(\L_{L}(n)) \ge 0\) provided \((n,q_{L}) = 1\). Also suppose \(|\a_{j}(p)| \le \frac{p}{2}\) for ramified primes \(p\). Then \(L(1) \neq 0\) whence \(m_{L} \ge 0\). Moreover, there exists a constant \(c > 0\) such that \(L(s)\) has at most \(m_{L}\) real zeros in the region
+      Let \(L(s)\) be an analytic \(L\)-function such that the real part of the logarithmic derivative of \(L(s)\) is nonpositive for \(\s > 1\). Then \(L(1) \neq 0\) whence \(m_{L} \ge 0\). Moreover, there exists a positive constant \(c\) such that \(L(s)\) has at most \(m_{L}\) real zeros in the region
       \[
-        \s \ge 1-\frac{c}{d_{L}(m_{L}+1)\log{\mf{q}(L)}}.
+        \s \ge 1-\frac{c}{(m_{L}+1)\log{\mf{q}(L)}}.
       \]
     \end{lemma}
     \begin{proof}
-      There are finitely many nontrivial real zeros \(\b\) belonging to the interval \(\frac{1}{2} \le s \le 1\). Now take \(s > 1\) and observe that the real parts of the terms \(\frac{m_{L}}{s}\) and \(\frac{1}{s-\rho}\) in \cref{lem:powerful_L-function_approximation_lemma} (ii) are positive. So upon taking the real part of this formula, we may discard all of these terms except those corresponding to the real nontrivial zeros. This result in
+      Observe that the real parts of the terms corresponding to the nontrivial zeros in \cref{lem:powerful_L-function_approximation_lemma} (ii) are positive provided \(\s > 1\). Letting \(s = \s\) and taking the real part of this formula, we obtain the inequality
       \[
-        \sum_{\b}\Re\left(\frac{1}{\s-\b}\right) = \frac{m_{L}}{\s-1}+\Re\left(\frac{L'}{L}(\s)\right)+O(\log{\mf{q}(L)}),
+        \sum_{\b}\Re\left(\frac{1}{\s-\b}\right) \le \frac{m_{L}}{\s-1}+\Re\left(\frac{L'}{L}(\s)\right)+O(\log{\mf{q}(L)}),
       \]
-      where the left-hand side is positive. To estimate \(\Re\left(\frac{L'}{L}(\s)\right)\), recall that \(\Re(\L_{L}(n)) \ge 0\) provided \((n,q_{L}) = 1\) by assumption. Whence
+      upon discarding all of the terns corresponding to nontrivial zeros except those which are real and absorbing the term corresponding to \(0\) into the \(O\)-estimate. Also note that the left-hand side is positive. As the real part of the logarithmic derivative of \(L(s)\) is nonpositive for \(\s > 1\) by assumption, we further have
       \[
-        \Re\left(\frac{L^{(q_{L})'}}{L^{(q_{L})}}(\s)\right) \le 0.
+        \sum_{\b}\Re\left(\frac{1}{\s-\b}\right) \le \frac{m_{L}}{\s-1}+O(\log{\mf{q}(L)}).
       \]
-      This provides an estimate for the contribution of the Euler factors of \(L(s)\) corresponding to unramified primes. For the contribution corresponding to ramified primes, a short computation with an application of the bound \(|\a_{j}(p)| \le \frac{p}{2}\) shows
+      From this inequality we see that \(\b \neq 1\). For if some \(\b = 1\), we have \(m_{L} < 0\) whence the right-hand side is negative for \(\s\) sufficiently close to \(1\) contradicting positivity of the left-hand side. Thus \(L(1) \neq 0\) and hence \(m_{L} \ge 0\) proving the first statement.
+      
+      For the second statement, recall that \(L(s)\) is nonzero for \(\s > 1\). Letting \(c\) be a positive constant, there are finitely many, say \(n\), real zeros \(\b\) satisfying
       \[
-        \Re\left(\frac{L_{(q_{L})}'}{L_{(q_{L})}}(\s)\right) \le d_{L}\log(q_{L}).
+        \b \ge 1-\frac{c}{(m_{L}+1)\log{\mf{q}(L)}}.
       \]
-      These estimates together imply
+      Setting \(\s = 1+\frac{2c}{\log{\mf{q}(L)}}\), a short computation using the previous two inequalities gives
       \[
-        \sum_{\b}\Re\left(\frac{1}{\s-\b}\right) < \frac{m_{L}}{\s-1}+O(\log(d_{L}\mf{q}(L))).
+        \frac{n\log{\mf{q}(L)}}{2c+\frac{c}{(m_{L}+1)}} \le \left(\frac{m_{L}}{2c}+O(1)\right)\log{\mf{q}(L)}.
       \]
-      From this inequality we see that \(\b \neq 1\). For if some \(\b = 1\), we have \(m_{L} < 0\) whence the right-hand side is negative for \(\s\) sufficiently close to \(1\) contradicting positivity of the left-hand side. Thus \(L(1) \neq 0\) and hence \(m_{L} \ge 0\). As there are finitely many \(\b\), there exists a positive constant \(c\) such that the \(\b\) satisfy
+      Isolating \(n\) yields
       \[
-        \b \ge 1-\frac{c}{d_{L}(m_{L}+1)\log{\mf{q}(L)}}.
+        n \le m_{L}+\frac{m_{L}}{2(m_{L}+1)}+O(c).
       \]
-      Setting \(\s = 1+\frac{2c}{d_{L}\log{\mf{q}(L)}}\) \iffalse and choosing \(c\) smaller, if necessary, we guarantee \(1 < \s \le 2\). Then the two inequalities above together imply
+      Taking \(c\) smaller, if necessary, shows \(n \le m_{L}\). As \(L(s)\) is nonzero for \(\s > 1\), it follows that there are at most \(m_{L}\) real zeros in the region
       \[
-        \frac{nd_{L}\log{\mf{q}(L)}}{2c+\frac{c}{(m_{L}+1)}} < \left(\frac{m_{L}}{2c}+O(1)\right)d_{L}\log{\mf{q}(L)}.
+        \s \ge 1-\frac{c}{(m_{L}+1)\log{\mf{q}(L)}}.
       \]
-      Isolating \(n\), we see that
-      \[
-        n < m_{L}+\frac{m_{L}}{2(m_{L}+1)}+O(c),
-      \]
-      and taking \(c\) smaller, if necessary, we have \(n \le m_{L}\). As \(L(s)\) is nonzero for \(\s > 1\), it follows that there are at most \(m_{L}\) real zeros satisfying
-      \[
-        \s \ge 1-\frac{c}{d_{L}(m_{L}+1)\log{\mf{q}(L)}}.
-      \]
-      This completes the proof.\fi
     \end{proof}
 
-    \iffalse We can now prove our zero-free region result:
+    We can now prove our zero-free region result.
 
     \begin{theorem}\label{thm:zero_free_region_generic}
-      Let \(L(s)\) be an analytic \(L\)-function with at most a simple pole at \(s = 1\), \(\Re(\L_{L}(n)) \ge 0\) provided \((n,q_{L}) = 1\), and \(|\a_{j}(p)| \le \frac{p}{2}\) for ramified primes \(p\). Then there exists a constant \(c > 0\) such that \(L(s)\) has no zeros in the region
+      Let \(L(s)\) be an analytic \(L\)-function with at most a simple pole at \(s = 1\). Also assume that the real part of the logarithmic derivative of \(L(s)\) is nonpositive for \(\s > 1\). Then there exists a positive constant \(c\) such that \(L(s)\) has no zeros in the region
       \[
-        \s \ge 1-\frac{c}{d_{L}^{2}\log(\mf{q}(L)(|t|+3))},
+        \s \ge 1-\frac{c}{\log(\mf{q}(L)(|t|+3))},
       \]
-      except for possibly one simple real zero \(\b_{f}\) with \(\b_{f} < 1\) in the case \(L(s)\) has a simple pole at \(s = 1\).
+      except for possibly one simple real zero \(\b_{L}\) with \(\b_{L} < 1\) the case \(L(s)\) has a simple pole at \(s = 1\).
     \end{theorem}
     \begin{proof}
-      For real \(t\), let \(L(s,g)\) be the \(L\)-function defined by
+      For real \(r\), let \(M(s)\) be the \(L\)-function defined by
       \[
-        L(s,g) = L^{3}(s)L^{3}(s,L)L^{4}(s+it,f)L^{4}(s+it,L)L(s+2it,f)L(s+2it,L).
+        M(s) = L^{3}(s)\conj{L}^{3}(s)L^{4}(s+ir)\conj{L}^{4}(s-ir)L(s+2ir)\conj{L}(s-2ir).
       \]
-      Then \(d_{g} = 16d_{L}\) and \(\mf{q}(g)\) satisfies
+      Then \(d_{M} = 16d_{L}\) and \(\mf{q}(M)\) satisfies
       \[
-        \mf{q}(g) \le \mf{q}(L)^{6}\mf{q}(it,f)^{8}\mf{q}(2it,f)^{2} \le \mf{q}(L)^{16d_{L}}(|t|+3)^{10d_{L}} < (\mf{q}(L)(|t|+3))^{16d_{L}}.
+        \mf{q}(M) < \mf{q}(L)^{16}(|r|+3)^{10}.
       \]
-      We claim that \(\Re(\L_{g}(n)) \ge 0\) for \((n,q_{L}) = 1\). To see this, let \(p\) be an unramified prime. The local parameters of \(L(s,g)\) at \(p\) are \(\a_{j}(p)\) and \(\conj{\a_{j}(p)}\) both with multiplicity three, \(\a_{j}(p)p^{-it}\) and \(\conj{\a_{j}(p)}p^{-it}\) both with multiplicity four, and \(\a_{j}(p)p^{-2it}\) and \(\conj{\a_{j}(p)}p^{-2it}\) both with multiplicity one. So for any \(k \ge 1\), the sum of \(k\)-th powers of these local parameters is
+      As the real part of the logarithmic derivative of \(L(s)\) is nonpositive for \(\s > 1\), the same holds for the dual of \(L(s)\) whence \(M(s)\) as well. Now let \(\rho = \b+i\g\) be a complex nontrivial zero of \(L(s)\). Setting \(r = \g\), \(M(s)\) has a real nontrivial zero at \(s = \b\) of order at least \(8\) and a pole at \(s = 1\) of order at most \(6\). From \cref{lem:non-vanshing_at_1_lemma}, it follows that there is a positive constant \(c\) for which \(M(s)\) can have at most \(6\) real nontrivial zeros in the region
       \[
-        \sum_{j}\left(6\Re(\a_{j}(p)^{k})+8\Re(\a_{j}(p)^{k})p^{-kit}+2\Re(\a_{j}(p)^{k})p^{-2kit}\right).
+        \s \ge 1-\frac{c}{\log(\mf{q}(L)(|\g|+3))}.
       \]
-      The real part of this expression is
+      Therefore the region
       \[
-          (6+8\cos\log(p^{kt})+2\cos\log(p^{2kt}))\Re(\L_{L}(p^{k})) = 4(1+\cos\log(p^{kt}))^{2}\Re(\L_{L}(p^{k})) \ge 0,
-      \]
-      where we have made use of the identity \(3+4\cos(x)+\cos(2x) = 2(1+\cos(x))^{2}\). It follows that \(\Re(\L_{g}(n)) \ge 0\) for \((n,q_{L}) = 1\). Therefore the conditions of \cref{lem:non-vanshing_at_1_lemma} are satisfied for \(L(s,g)\). Now let \(\rho = \b+i\g\) be a complex nontrivial zero of \(L(s)\). Setting \(t = \g\), \(L(s,g)\) has a real nontrivial zero at \(s = \b\) of order at least \(8\) and a pole at \(s = 1\) of order \(6\). That is, \(r_{g} = 6\). But \cref{lem:non-vanshing_at_1_lemma} implies that \(L(s,g)\) can have at most \(6\) real nontrivial zeros in the given region. Letting the constant for the region in \cref{lem:non-vanshing_at_1_lemma} be \(c'\), it follows that \(\b\) must satisfy
-      \[
-        \b < 1-\frac{c'}{d_{g}(r_{g}+1)\log{\mf{q}(g)}} < 1-\frac{c'}{1792d_{L}^{2}\log(\mf{q}(L)(|\g|+3))}.
-      \]
-
-      Take \(c = \frac{c'}{1792}\). Now let \(\b\) be a real nontrivial zero of \(L(s)\). Since \(\Re(\L_{L}(n)) \ge 0\) and \(L(s)\) has at most a simple pole at \(s = 1\), \cref{lem:non-vanshing_at_1_lemma} implies, upon shrinking \(c\) if necessary, that there is at most one simple real zero \(\b_{f}\) in the desired region and it can only occur if \(L(s)\) has a simple pole at \(s = 1\). Note that if \(\b_{f}\) exists then \(\b_{f} < 1\) because \(L(s)\) is nonzero for \(\s > 1\) and has a simple pole at \(s = 1\). This completes the proof.
+        \s \ge 1-\frac{c}{\log(\mf{q}(L)(|t|+3))}.
+      \] 
+      does not contain any complex nontrivial zeros of \(L(s)\). \cref{lem:non-vanshing_at_1_lemma} also implies upon taking \(c\) smaller, if necessary, that there is at most one simple real zero \(\b_{L}\) in this region and it can only occur if \(L(s)\) has a simple pole at \(s = 1\). Note that if \(\b_{L}\) exists then \(\b_{L} < 1\) because \(L(s)\) is nonzero for \(\s > 1\) and has a simple pole at \(s = 1\). This completes the proof.
     \end{proof}
     
-    Some comments are in order. First observe that the larger \(c\) can be taken in \cref{thm:zero_free_region_generic}, the closer the curve bounding the zero-free region approaches the line \(\s = \frac{1}{2}\). Since we only know \(c > 0\) (and we do not have a nonzero lower bound), \(c\) could be quite small and so we are only guaranteed a zero-free region very close to the line \(\s = 1\). This means that the possible simple real zero \(\b_{f}\) could be very close to \(1\). Moreover, as the zeros of \(L(s)\) occur in pairs \(\rho\) and \(1-\conj{\rho}\), the zero-free region in \cref{thm:zero_free_region_generic} implies a symmetric zero-free region about the critical line with at most one real zero in each half as displayed in \cref{fig:symmetric_zero_free_region}.
+    Some comments about this result are in order. First observe that the larger \(c\) can be taken the closer the curve bounding the zero-free region approaches the critical line. As we do not have a nonzero lower bound for \(c\), this constant could be quite small and so we are only guaranteed a zero-free region very close to the line \(\s = 1\). This means that the possible simple real zero \(\b_{L}\) could be very close to \(1\). Moreover, as the nontrivial zeros of \(L(s)\) occur in pairs \(\rho\) and \(1-\conj{\rho}\), the zero-free region implies a symmetric zero-free region about the critical line with at most one real zero in each half as displayed in \cref{fig:symmetric_zero_free_region}. It is possible to obtain stronger zero-free regions in certain cases but this is heavily dependent upon the particular analytic \(L\)-function under investigation. In many cases it is possible to augment the proof of \cref{thm:zero_free_region_generic} to make the constant \(c\) effective and such results have important applications.
 
     \begin{figure}[ht]
       \centering
-      \begin{tikzpicture}[scale=3]
-        \def\xmin{-0.5} \def\xmax{2.5}
-        \def\ymin{-1} \def\ymax{1}
+      \begin{tikzpicture}[scale=1.5]
+        \def\xmin{-0.5} \def\xmax{3.5}
+        \def\ymin{-1.5} \def\ymax{1.5}
         \draw[thick] (\xmin,0) -- (\xmax,0);
         \draw[thick] (0,\ymin) -- (0,\ymax);
-        \draw[thick] (2,\ymin) -- (2,\ymax);
-        \draw[dashed] (1,\ymin) -- (1,\ymax);
+        \draw[thick] (3,\ymin) -- (3,\ymax);
+        \draw[dashed] (1.5,\ymin) -- (1.5,\ymax);
 
-        \node at (1.825,0) [circle,fill,inner sep=1pt]{};
-        \node at (1.825,0) [below] {\tiny{\(\b_{f}\)}};
-        \node at (0.175,0) [circle,fill,inner sep=1pt]{};
-        \node at (0.175,0) [below] {\tiny{\(1-\b_{f}\)}};
+        \node at (2.7,0) [circle,fill,inner sep=1pt]{};
+        \node at (2.7,0) [below] {\tiny{\(\b_{L}\)}};
+        \node at (0.3,0) [circle,fill,inner sep=1pt]{};
+        \node at (0.3,0) [below] {\tiny{\(1-\b_{L}\)}};
 
-        \draw[domain=-1:1,variable=\y] plot({1.75-((0.1)/ln(3+10*abs(\y)))},\y);
-        \draw[domain=-1:1,variable=\y] plot({0.25+((0.1)/ln(3+10*abs(\y)))},\y);
+        \draw[domain=-1.5:1.5,variable=\y] plot({2.5-((0.15)/ln(4+10*abs(\y)))},\y);
+        \draw[domain=-1.5:1.5,variable=\y] plot({0.5+((0.15)/ln(4+10*abs(\y)))},\y);
 
-        \fill [gray,opacity=0.3,domain=-1:1,variable=\y]
-        (1.5,1)
-        -- (2,1) 
-        -- (2,-1)
-        -- (1.5,-1)
-        -- plot({1.75-((0.1)/ln(3+10*abs(\y)))},\y)
+        \fill [gray,opacity=0.3,domain=-1.5:1.5,variable=\y]
+        (2.5,1.5)
+        -- (3,1.5) 
+        -- (3,-1.5)
+        -- (2.5,-1.5)
+        -- plot({2.5-((0.15)/ln(4+10*abs(\y)))},\y)
         -- cycle;
 
-        \fill [gray,opacity=0.3,domain=-1:1,variable=\y]
-        (0.5, 1)
-        -- (0,1) 
-        -- (0,-1)
-        -- (0,-1)
-        -- plot({0.25+((0.1)/ln(3+10*abs(\y)))},\y)
+        \fill [gray,opacity=0.3,domain=-1.5:1.5,variable=\y]
+        (0.5, 1.5)
+        -- (0,1.5) 
+        -- (0,-1.5)
+        -- (0,-1.5)
+        -- plot({0.5+((0.15)/ln(4+10*abs(\y)))},\y)
         -- cycle;
         \end{tikzpicture}
-      \caption{The symmetric zero-free region in \cref{thm:zero_free_region_generic}.}
+      \caption{A symmetric zero-free region.}
       \label{fig:symmetric_zero_free_region}
     \end{figure}
-
-    In full generality, \cref{thm:zero_free_region_generic} is the best result that one can hope for. It is possible to obtain better zero-free regions in certain cases but this heavily depends upon the particular \(L\)-function of interest and hence the arithmetic object \(f\) attached to \(L(s)\). In many cases it is possible to augment the proof of \cref{thm:zero_free_region_generic} to make the constant \(c\) effective and such results have important applications. The possible simple zero \(\b_{f}\) in \cref{thm:zero_free_region_generic} satisfying
-    \[
-      1-\frac{c}{d_{L}^{2}\log(3\mf{q}(L))} \le \b_{f} < 1
-    \]
-    is referred to as a \textbf{Siegel zero}\index{Siegel zero} (or \textbf{exceptional zero}\index{exceptional zero}). Such zeros are conjectured to not exist and it is a very interesting question to see how the presence of a Siegel zero can affect the behavior of the associated \(L\)-function. If \(L(s)\) is of Selberg class, the conclusion of \cref{thm:zero_free_region_generic} is expected to hold without the possibly of a Siegel zero since \(L(s)\) is expected to satisfy the Riemann hypothesis. Nevertheless, we can often satisfy the assumptions of \cref{thm:zero_free_region_generic}. Indeed, if \(\a_{i}(p) \ge 0\) then the assumptions are satisfied immediately. If not, since \(|\a_{i}(p)| \le 1\) the assumptions will hold for \(\z(s)L(s)\) provided \(L(s)\) does not have a pole at \(s = 1\). This is often possible to prove in practice since \(L(s)\) is expected to be entire unless \(\a_{i}(p) \ge 0\).
-  \fi\iffalse\section{The Explicit Formula}
-    A formula somewhat analogous to the approximate functional equation can be derived for the negative logarithmic derivative of any \(L\)-function. This formula is called the \textbf{explicit formula}\index{explicit formula}:
+    
+    The possible simple zero \(\b_{L}\) in \cref{thm:zero_free_region_generic} is referred to as a \textbf{Siegel zero}\index{Siegel zero}. Such real zeros are conjectured to not exist. For example, Siegel zeros are conjectured to not exist for Selberg class \(L\)-functions in view of the Selberg class Riemann hypothesis. Nevertheless, it is an interesting question to see how the presence of a Siegel zero can affect the behavior of the associated analytic \(L\)-function.
+  \iffalse\section{The Explicit Formula}
+    A formula somewhat analogous to the approximate functional equation can be derived for the negative logarithmic derivative of any analytic \(L\)-function. This formula is called the \textbf{explicit formula}\index{explicit formula}:
 
     \begin{theorem*}[Explict Formula]
-      Let \(\psi(y)\) be a positive bump function with compact support and let \(\Psi(s)\) denote its Mellin transform. Set \(\phi(y) = y^{-1}\psi(y^{-1})\) so that its Mellin transform satisfies \(\Phi(s) = \Psi(1-s)\). Then for any \(L\)-function \(L(s)\), we have
+      Let \(\psi(y)\) be a positive bump function with compact support and let \(\Psi(s)\) denote its Mellin transform. Set \(\phi(y) = y^{-1}\psi(y^{-1})\) so that its Mellin transform satisfies \(\Phi(s) = \Psi(1-s)\). Then for any analytic \(L\)-function \(L(s)\), we have
       \begin{align*}
         \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{f}}(n)\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1) \\
         &+ \frac{1}{2\pi i}\int_{\left(\frac{1}{2}\right)}\left(\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)\right)\Psi(s)\,ds-\sum_{\rho}\Psi(\rho).

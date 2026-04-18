@@ -414,11 +414,6 @@
           \node at (0.5,0.75) [circle,fill,inner sep=1pt]{};
           \node at (2.5,0.75) [circle,fill,inner sep=1pt]{};
           \node at (2.5,-0.75) [circle,fill,inner sep=1pt]{};
-
-          %\node at (0.5,-0.75) [below] {\tiny{\(c-iT\)}};
-          %\node at (0.5,0.75) [above] {\tiny{\(c+iT\)}};
-          %\node at (2.5,0.75) [above] {\tiny{\(d+iT\)}};
-          %\node at (2.5,-0.75) [below] {\tiny{\(d-iT\)}};
         \end{tikzpicture}
         \caption{A rectangular contour.}
         \label{fig:discontinuous_integral_contour_1}
@@ -462,9 +457,6 @@
 
           \node at (0.5,-0.75) [circle,fill,inner sep=1pt]{};
           \node at (0.5,0.75) [circle,fill,inner sep=1pt]{};
-
-          %\node at (0.5,-0.75) [below] {\tiny{\(c-iT\)}};
-          %\node at (0.5,0.75) [above] {\tiny{\(c+iT\)}};
         \end{tikzpicture}
         \caption{A semicircular contour.}
         \label{fig:discontinuous_integral_contour_2}
@@ -510,11 +502,6 @@
           \node at (0.5,0.75) [circle,fill,inner sep=1pt]{};
           \node at (-2,0.75) [circle,fill,inner sep=1pt]{};
           \node at (-2,-0.75) [circle,fill,inner sep=1pt]{};
-
-          %\node at (0.5,-0.75) [below] {\tiny{\(c-iT\)}};
-          %\node at (0.5,0.75) [above] {\tiny{\(c+iT\)}};
-          %\node at (-2,0.75) [above] {\tiny{\(-d+iT\)}};
-          %\node at (-2,-0.75) [below] {\tiny{\(-d-iT\)}};
         \end{tikzpicture}
         \caption{A rectangular contour.}
         \label{fig:discontinuous_integral_contour_3}
@@ -542,9 +529,6 @@
 
           \node at (0.5,-0.75) [circle,fill,inner sep=1pt]{};
           \node at (0.5,0.75) [circle,fill,inner sep=1pt]{};
-
-          %\node at (0.5,-0.75) [below] {\tiny{\(c-iT\)}};
-          %\node at (0.5,0.75) [above] {\tiny{\(c+iT\)}};
         \end{tikzpicture}
         \caption{A semicircular contour.}
         \label{fig:discontinuous_integral_contour_4}
@@ -589,7 +573,7 @@
     \begin{corollary}
       Let \(D(s)\) be a Dirichlet series with coefficient \(a(n)\) and finite and nonnegative abscissa of absolute convergence \(\s_{a}\). Then for any \(c > \s_{a}\) and \(0 < T < X^{c}\), we have
       \[
-        A^{\ast}(X) = \frac{1}{2\pi i}\int_{c-iT}^{c+iT}D(s)X^{s}\,\frac{ds}{s}+O_{c}\left(\frac{X^{c}}{T}\right),
+        A^{\ast}(X) = \frac{1}{2\pi i}\int_{c-iT}^{c+iT}D(s)X^{s}\,\frac{ds}{s}+O\left(\frac{X^{c}}{T}\right).
       \]
     \end{corollary}
     \begin{proof}
@@ -597,12 +581,12 @@
       \[
         \min\left(1,\frac{1}{T\log\left(\frac{X}{n}\right)}\right) \ll \frac{X^{c}}{T}.
       \]
-      Also, \cref{prop:Dirichlet_series_polynomial_bound_from_absolute_convergence} guarantees \(a(X) \ll X^{c}\). These estimates and that \(D(s)\) is absolutely convergent at \(s = c\) together imply that error term in truncated Perron's formula is \(O_{c}\left(\frac{X^{c}}{T}\right)\). The claim follows.
+      Also, \cref{prop:Dirichlet_series_polynomial_bound_from_absolute_convergence} guarantees \(a(X) \ll X^{c}\). These estimates and that \(D(s)\) is absolutely convergent at \(s = c\) together imply that error term in truncated Perron's formula is \(O\left(\frac{X^{c}}{T}\right)\). The claim follows.
     \end{proof}
 
     Having discussed truncated Perron's formula, we turn to the variant where we instead introduce a smoothing function. We call \(\psi(y)\) a \textbf{smooth weight}\index{smooth weight} if it is a positive bump function whose support is bounded away from zero. For any \(X > 0\), we set
     \[
-      A_{\psi}(X) = \sum_{n \ge 1}a(n)\psi\left(\frac{n}{X}\right),
+      A_{\psi}(X) = \sum_{n \ge 1}a(n)\psi\left(\frac{n}{X}\right).
     \]
     We distinguish between two cases. The first is when we choose \(\psi(y)\) to assign weight \(1\) or \(0\) to the coefficients and we obtain sums such as
     \[
