@@ -20,8 +20,8 @@
       \[
         \L(s,L) = \e_{L}\conj{\L(1-\conj{s},L)}.
       \]
-      This is called the \textbf{functional equation}\index{functional equation} of \(L(s)\). The tuple \((\e_{L},q_{L},\mu_{1},\ldots,\mu_{d_{L}})\) is called the \textbf{functional equation data}\index{functional equation data} of \(L(s)\).
-      \item[\textbf{Euler product:}] For every prime \(p\), there exist complex numbers \((\a_{j}(p))_{j \le d_{L}}\) called the \textbf{Euler parameters}\index{Euler parameters} of \(L(s)\) at \(p\) satisfying \(|\a_{j}(p)| \le p^{\theta}\) for some \(0 \le \theta < 1\) and are such that \(L(s)\) admits the Euler product
+      This is called the \textbf{functional equation}\index{functional equation} for \(L(s)\). The tuple \((\e_{L},q_{L},\mu_{1},\ldots,\mu_{d_{L}})\) is called the \textbf{functional equation data}\index{functional equation data} of \(L(s)\).
+      \item[\textbf{Euler product:}] For every prime \(p\), there exist complex numbers \((\a_{j}(p))_{j \le d_{L}}\) called the \textbf{Euler parameters}\index{Euler parameters} of \(L(s)\) at \(p\) satisfying \(|\a_{j}(p)| \le p^{\t_{L}}\) for some \(0 \le \t_{L} < 1\) and are such that \(L(s)\) admits the Euler product
       \[
         L(s) = \prod_{p}(1-\a_{1}(p)p^{-s})^{-1} \cdots (1-\a_{d_{L}}(p)p^{-s})^{-1},
       \]
@@ -35,7 +35,7 @@
     An analytic \(L\)-function is said to be \textbf{Selberg class}\index{Selberg class} if it satisfies the following additional property:
 
     \begin{enumerate}[align=left]
-      \item[\textbf{Ramanujan bound:}] We may take \(\theta = 0\) so that \(|\a_{j}(p)| \le 1\).
+      \item[\textbf{Ramanujan bound:}] We may take \(\t_{L} = 0\) so that \(|\a_{j}(p)| \le 1\).
     \end{enumerate}
 
     Some comments on the definition of analytic \(L\)-functions are in order.
@@ -63,7 +63,11 @@
     \[
       \conj{L}(s) = \conj{L(\conj{s})}.
     \]
-    Analytic \(L\)-functions are closed under duals. Indeed, \(\conj{L}(s)\) is an analytic \(L\)-function with coefficients \(a_{\conj{L}}(n) = \conj{a_{L}(n)}\), a pole at \(s = 1\) of order \(m_{\conj{L}} = m_{L}\), conductor \(q_{\conj{L}} = q_{L}\), degree \(d_{\conj{L}} = d_{L}\), gamma parameters \((\conj{\mu_{j}})_{j \le d_{L}}\), root number \(\e_{\conj{L}} = \conj{\e_{L}}\), and Euler parameters \((\conj{\a_{j}(p)})_{j \le d_{L}}\) at \(p\). Moreover, the dual of \(L(s)\) is Selberg class if \(L(s)\) is. We also say \(L(s)\) is \textbf{self-dual}\index{self-dual} if it is equal to its dual. This is equivalent to the coefficients \(a_{L}(n)\) being real.
+    Analytic \(L\)-functions are closed under duals. Indeed, \(\conj{L}(s)\) is an analytic \(L\)-function with coefficients \(a_{\conj{L}}(n) = \conj{a_{L}(n)}\), a pole at \(s = 1\) of order \(m_{\conj{L}} = m_{L}\), conductor \(q_{\conj{L}} = q_{L}\), degree \(d_{\conj{L}} = d_{L}\), gamma parameters \((\conj{\mu_{j}})_{j \le d_{L}}\), root number \(\e_{\conj{L}} = \conj{\e_{L}}\), and Euler parameters \((\conj{\a_{j}(p)})_{j \le d_{L}}\) at \(p\). Moreover, the dual of \(L(s)\) is Selberg class if \(L(s)\) is. We also say \(L(s)\) is \textbf{self-dual}\index{self-dual} if it is equal to its dual. This is equivalent to the coefficients \(a_{L}(n)\) being real. In any case, we can express the functional equation as
+    \[
+      q_{L}^{\frac{s}{2}}\g(s,L)L(s) = \e_{L}q_{L}^{\frac{1-s}{2}}\g(1-s,L)\conj{L}(1-s).
+    \]
+    So the functional equation relates an analytic \(L\)-function with its dual. This formula will also be useful when taking derivatives of the functional equation.
 
     It is clear from the definition that analytic \(L\)-functions are closed under multiplication and that the degree is additive. Moreover, this closure respects Selberg class \(L\)-functions. This makes the set of analytic \(L\)-functions into a graded commutative semigroup where the grading is induced by degree. It follows that there exist irreducible elements with respect to the grading and we say that an analytic \(L\)-function is \textbf{primitive}\index{primitive} if it such an irreducible. Clearly any analytic \(L\)-function of degree \(1\) is primitive. Moreover, every analytic \(L\)-function factors into a product of primitive \(L\)-functions. Such a factorization is only conjectured to be unique for Selberg class \(L\)-functions. A sufficient condition would be \textbf{Selberg's orthogonality conjecture}\index{Selberg's orthogonality conjecture}.
 
@@ -208,7 +212,7 @@
     \begin{equation}\label{equ:gamma_factor_s_and_u_estimate}
       \frac{\g(s+u,L)}{\g(s,L)} \ll_{\e} \frac{\mf{q}_{\infty}(s+u,L)^{\frac{\s+\tau}{2}-\frac{1}{4}}}{\mf{q}_{\infty}(s,L)^{\frac{\s}{2}-\frac{1}{4}}}e^{-d_{L}\frac{\pi}{2}(|t+r|-|t|)},
     \end{equation}
-    for \(s\) in the critical strip and bounded \(\tau\) provided \(s+u\) is at least distance \(\e\) away from the poles of the gamma factor. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded and hence \(V_{s}(y,L)\) is smooth. The function \(V_{s}(y,L)\) is the smooth cutoff function mentioned previously. We will also let \(\e(s,L)\) be given by
+    for \(s\) in the critical strip and bounded \(\tau\) provided \(s+u\) is at least distance \(\e\) away from the poles of the gamma factor. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly convergent and hence \(V_{s}(y,L)\) is smooth. The function \(V_{s}(y,L)\) is the smooth cutoff function mentioned previously. We will also let \(\e(s,L)\) be given by
     \[
       \e(s,L) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)}.
     \]
@@ -216,7 +220,7 @@
     \[
       R(s,X,L) = \Res_{u = 1-s}\frac{\L(s+u,L)\Phi(u)X^{u}}{u}+\Res_{u = -s}\frac{\L(s+u,L)\Phi(u)X^{u}}{u}.
     \]
-    This is the potential residue term that appears in the approximate functional equation. Observe that it vanishes provided \(s \neq 0,1\). We now prove the \textbf{approximate function equation}\index{approximate function equation} of \(L(s)\).
+    This is the potential residue term that appears in the approximate functional equation. Observe that it vanishes provided \(s \neq 0,1\). We now prove the \textbf{approximate function equation}\index{approximate function equation} for \(L(s)\).
 
     \begin{theorem*}[Approximate functional equation]
       Suppose \(L(s)\) is an analytic \(L\)-function, \(\Phi(u)\) is an even holomorphic function bounded in the vertical strip \(|\tau| < a+1\) for some \(a > 1\) and such that \(\Phi(0) = 1\), and let \(X > 0\). Then for \(s\) in the critical strip, we have
@@ -229,7 +233,7 @@
       \[
         \frac{1}{2\pi i}\int_{(a)}\L(s+u,L)\Phi(u)X^{u}\,\frac{du}{u}.
       \]    
-      Stirling's formula (see \cref{sec:the_gamma_function}) shows that \(\g(s+u,L)\) exhibits exponential decay while \(L(s+u)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), it follows that the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly bounded. We will evaluate the integral in two ways. On the one hand, we can expand \(L(s+u)\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that this is
+      Stirling's formula (see \cref{sec:the_gamma_function}) shows that \(\g(s+u,L)\) exhibits exponential decay while \(L(s+u)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), it follows that the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly convergent. We will evaluate the integral in two ways. On the one hand, we can expand \(L(s+u)\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that this is
       \[
         q_{L}^{\frac{s}{2}}\g(s,L)\sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{s}\left(\frac{n}{\sqrt{q_{L}}X},L\right).
       \]
@@ -304,13 +308,13 @@
       \]
     \end{proof}
 
-    With our choice of \(\Phi(u)\), this result shows that \(V_{s}(y,L)\) is essentially \(1\) for \(y \ll \sqrt{\mf{q}_{\infty}(s,L)}\) and exhibits rapid decay thereafter as we can take \(M\) (and hence \(N\)) to be arbitrarily large.
+    With our choice of \(\Phi(u)\), this result shows that \(V_{s}(y,L)\) is essentially \(1\) for \(y \ll \sqrt{\mf{q}_{\infty}(s,L)}\) and has rapid decay thereafter as we can take \(M\) (and hence \(N\)) to be arbitrarily large.
     
     In a similar spirit to the approximate functional equation, a useful summation formula can be derived from the functional equation. Let \(\psi(y)\) be a smooth weight where \(\Psi(s)\) is its Mellin transform. Then we will let \(\psi(y,L)\) be the inverse Mellin transform
     \[
       \psi(y,L) = \frac{1}{2\pi i}\int_{(a)}q_{L}^{s}\frac{\g(s,L)}{\g(1-s,L)}y^{-s}\Psi(1-s)\,ds,
     \]
-    defined for \(y > 0\) where \(a > 1\). By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly bounded and hence \(\psi(y,L)\) is smooth for \(y > 0\). We will also set
+    defined for \(y > 0\) where \(a > 1\). By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly convergent and hence \(\psi(y,L)\) is smooth for \(y > 0\). We will also set
     \[
       R_{L} = \Res_{s = 1}L(s).
     \]
@@ -327,7 +331,7 @@
       \[
         \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(a)}L(s)\Psi(s)\,ds.
       \]
-      By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly bounded which permits us to shift the line of integration. Shifting to \((1-a)\), we pass by a potential pole at \(s = 1\) and obtain
+      By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly convergent which permits us to shift the line of integration. Shifting to \((1-a)\), we pass by a potential pole at \(s = 1\) and obtain
       \[
         \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(1-a)}L(s)\Psi(s)\,ds+R_{L}\Psi(1).
       \]
@@ -396,14 +400,14 @@
 
     The \textbf{Riemann hypothesis}\index{Riemann hypothesis} for \(L(s)\) says that this symmetry should be as simple as possible.
 
-    \begin{conjecture*}[Riemann hypothesis, \(L(s)\)]
-      The nontrivial zeros of the analytic \(L\)-function \(L(s)\) all lie on the vertical line \(\s = \frac{1}{2}\).
+    \begin{conjecture*}[Riemann hypothesis]
+      All of the nontrivial zeros of the analytic \(L\)-function \(L(s)\) lie on the vertical line \(\s = \frac{1}{2}\).
     \end{conjecture*}
 
     While stated as a conjecture, we not expect the Riemann hypothesis to hold for just any analytic \(L\)-function. We do however expect it to hold for Selberg class \(L\)-functions. In particular, the \textbf{Selberg class Riemann hypothesis}\index{Selberg class Riemann hypothesis} says that this symmetry should hold for any Selberg class \(L\)-function:
 
     \begin{conjecture*}[Selberg class Riemann hypothesis]
-      The nontrivial zeros of any Selberg class \(L\)-function \(L(s)\) lie on the vertical line \(\s = \frac{1}{2}\).
+      All of nontrivial zeros of any Selberg class \(L\)-function \(L(s)\) lie on the vertical line \(\s = \frac{1}{2}\).
     \end{conjecture*}
 
     So far, the Riemann hypothesis remains completely out of reach for any analytic \(L\)-function and thus the Selberg class Riemann hypothesis does as well.
@@ -439,7 +443,7 @@
     \]
     This is known as the \textbf{convexity bound}\index{convexity bound} for \(L(s)\). The \textbf{Lindel\"of hypothesis}\index{Lindel\"of hypothesis} for \(L(s)\) says that the exponent can be reduced to \(\e\):
 
-    \begin{conjecture*}[Lindel\"of hypothesis, \(L(s)\)]
+    \begin{conjecture*}[Lindel\"of hypothesis]
       The analytic \(L\)-function \(L(s)\) satisfies
       \[
         L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\e}.
@@ -586,11 +590,11 @@
     \[
       \log L(s) = -\sum_{p}\sum_{j}\log(1-\a_{j}(p)p^{-s}).
     \]
-    Moreover, the bound \(|\a_{j}(p)| \le p^{\theta}\) ensures that \(|\a_{j}(p)p^{-s}| < 1\) in this half-plane. Therefore the Taylor series of the logarithm is valid in this region and we may further write
+    Moreover, the bound \(|\a_{j}(p)| \le p^{\t_{L}}\) ensures that \(|\a_{j}(p)p^{-s}| < 1\) in this half-plane. Therefore the Taylor series of the logarithm is valid in this region and we may further write
     \[
       \log L(s) = \sum_{p}\sum_{j}\sum_{k \ge 1}\frac{\a_{j}(p)^{k}}{kp^{ks}}.
     \]
-    While this triple sum converges for \(\s > 1\), the bound \(|\a_{j}(p)p^{-s}| < p^{\theta-\s}\) only guarantees absolutely convergence for \(\s > 1+\theta\). It is in this half-plane that we may differentiate termwise. A short computation shows
+    While this triple sum converges for \(\s > 1\), the bound \(|\a_{j}(p)p^{-s}| < p^{\t_{L}-\s}\) only guarantees absolutely convergence for \(\s > 1+\t_{L}\). It is in this half-plane that we may differentiate termwise. A short computation shows
     \[
        \frac{L'}{L}(s) = -\sum_{n \ge 1}\frac{\L_{L}(n)}{n^{s}},
     \]
@@ -608,7 +612,7 @@
     \begin{equation}
       \xi(s,L) = \e_{L}\conj{\xi(1-\conj{s},L)},
     \end{equation}
-    which we refer to as the \textbf{functional equation}\index{functional equation} of \(\xi(s,L)\). Observe that \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula (see \cref{sec:the_gamma_function}) and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
+    which we refer to as the \textbf{functional equation}\index{functional equation} for \(\xi(s,L)\). Observe that \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula (see \cref{sec:the_gamma_function}) and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
     \[
       \xi(s,L) = e^{A_{L}+B_{L}s}\prod_{\rho \neq 0,1}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
     \]
@@ -669,7 +673,7 @@
     \begin{proof}
       We will prove the properties separately.
       \begin{enumerate}[label*=(\roman*)]
-        \item Let \(s = \s+iT\) for some \(\s > 1+\t\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate,equ:B_L_real_part} together gives
+        \item Let \(s = \s+iT\) for some \(\s > 1+\t_{L}\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate,equ:B_L_real_part} together gives
         \[
           \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(iT,L)}),
         \]
@@ -769,7 +773,7 @@
         \label{fig:zero_counting_contour}
       \end{figure}
 
-      Let \(\eta = \sum_{i}\eta_{i}\) be the rectangular contour \cref{fig:zero_counting_contour} where the horizontal lines are along \(t = T\) and \(t = -\d\) and the vertical lines are along \(\s = -(\t+\d)\) and \(\s = 1+\t+\d\). Then by our previous comments and the argument principle, we may write
+      Let \(\eta = \sum_{i}\eta_{i}\) be the rectangular contour \cref{fig:zero_counting_contour} where the horizontal lines are along \(t = T\) and \(t = -\d\) and the vertical lines are along \(\s = -(\t_{L}+\d)\) and \(\s = 1+\t_{L}+\d\). Then by our previous comments and the argument principle, we may write
       \[
         N'(T,L) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds+O(\log{\mf{q}(iT,L)}),
       \]
@@ -817,7 +821,7 @@
       \[
         \D_{\eta_{R}}\arg(L(s)) = \Im\left(\int_{\eta_{R}}\frac{L'}{L}(s)\,ds\right).
       \]
-      As the logarithmic derivative of \(L(s)\) is absolutely bounded for \(\s = 1+\t+\d\), the integral is \(O(1)\) on \(\eta_{2}\). On \(\eta_{1}\) and \(\eta_{3}\), use \cref{lem:powerful_L-function_approximation_lemma} (ii) to write
+      As the logarithmic derivative of \(L(s)\) is absolutely bounded for \(\s = 1+\t_{L}+\d\), the integral is \(O(1)\) on \(\eta_{2}\). On \(\eta_{1}\) and \(\eta_{3}\), use \cref{lem:powerful_L-function_approximation_lemma} (ii) to write
       \[
         \Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{L'}{L}(s)\,ds\right) = \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{1}{s-\rho}\,ds\right)+O(\log\mf{q}(iT,L)),
       \]
@@ -908,33 +912,33 @@
     We can now prove our zero-free region result.
 
     \begin{theorem}\label{thm:zero_free_region_generic}
-      Let \(L(s)\) be an analytic \(L\)-function with at most a simple pole at \(s = 1\). Also assume that the real part of the logarithmic derivative of \(L(s)\) is nonpositive for \(\s > 1\). Then there exists a positive constant \(c\) such that \(L(s)\) has no zeros in the region
+      Let \(L(s)\) be an analytic \(L\)-function such that the real part of the logarithmic derivative of \(L(s)\) is nonpositive for \(\s > 1\). Then there exists a positive constant \(c\) such that \(L(s)\) has no zeros in the region
       \[
         \s \ge 1-\frac{c}{\log(\mf{q}(L)(|t|+3))},
       \]
-      except for possibly one simple real zero \(\b_{L}\) with \(\b_{L} < 1\) the case \(L(s)\) has a simple pole at \(s = 1\).
+      except for at most \(m_{L}\) many real zeros \(\b\) each with \(\b < 1\).
     \end{theorem}
     \begin{proof}
       For real \(r\), let \(M(s)\) be the \(L\)-function defined by
       \[
-        M(s) = L^{3}(s)\conj{L}^{3}(s)L^{4}(s+ir)\conj{L}^{4}(s-ir)L(s+2ir)\conj{L}(s-2ir).
+        M(s) = L^{m_{L}}(s)\conj{L}^{m_{L}}(s)L^{2m_{L}}(s+ir)\conj{L}^{2m_{L}}(s-ir).
       \]
-      Then \(d_{M} = 16d_{L}\) and \(\mf{q}(M)\) satisfies
+      Then \(d_{M} = 6m_{L}d_{L}\) and \(\mf{q}(M)\) satisfies
       \[
-        \mf{q}(M) < \mf{q}(L)^{16}(|r|+3)^{10}.
+        \mf{q}(M) < \mf{q}(L)^{6m_{L}}(|r|+3)^{4m_{L}}.
       \]
-      As the real part of the logarithmic derivative of \(L(s)\) is nonpositive for \(\s > 1\), the same holds for the dual of \(L(s)\) whence \(M(s)\) as well. Now let \(\rho = \b+i\g\) be a complex nontrivial zero of \(L(s)\). Setting \(r = \g\), \(M(s)\) has a real nontrivial zero at \(s = \b\) of order at least \(8\) and a pole at \(s = 1\) of order at most \(6\). From \cref{lem:non-vanshing_at_1_lemma}, it follows that there is a positive constant \(c\) for which \(M(s)\) can have at most \(6\) real nontrivial zeros in the region
+      As the real part of the logarithmic derivative of \(L(s)\) is nonpositive for \(\s > 1\), the same holds \(M(s)\) as well. Now let \(\rho = \b+i\g\) be a complex nontrivial zero of \(L(s)\). Setting \(r = \g\), \(M(s)\) has a real nontrivial zero at \(s = \b\) of multiplicity at least \(4m_{L}\) and a pole at \(s = 1\) of order at most \(2m_{L}\). From \cref{lem:non-vanshing_at_1_lemma}, it follows that there is a positive constant \(c\) for which \(M(s)\) can have at most \(2m_{L}\) real nontrivial zeros in the region
       \[
         \s \ge 1-\frac{c}{\log(\mf{q}(L)(|\g|+3))}.
       \]
       Therefore the region
       \[
-        \s \ge 1-\frac{c}{\log(\mf{q}(L)(|t|+3))}.
+        \s \ge 1-\frac{c}{\log(\mf{q}(L)(|t|+3))},
       \] 
-      does not contain any complex nontrivial zeros of \(L(s)\). \cref{lem:non-vanshing_at_1_lemma} also implies upon taking \(c\) smaller, if necessary, that there is at most one simple real zero \(\b_{L}\) in this region and it can only occur if \(L(s)\) has a simple pole at \(s = 1\). Note that if \(\b_{L}\) exists then \(\b_{L} < 1\) because \(L(s)\) is nonzero for \(\s > 1\) and has a simple pole at \(s = 1\). This completes the proof.
+      does not contain any complex nontrivial zeros of \(L(s)\). Now let \(\b\) be a real nontrivial zero of \(L(s)\). Setting \(r = 0\), \(M(s)\) has a real nontrivial zero at \(s = \b\) of multiplicity at least \(6m_{L}\) and a pole at \(s = 1\) of order at most \(6m_{L}^{2}\). Whence \cref{lem:non-vanshing_at_1_lemma} implies upon taking \(c\) smaller, if necessary, that there are at most \(m_{L}\) many real zeros in this region. If such a real zero \(\b\) exists then \(\b < 1\) because \(L(s)\) is nonzero for \(\s > 1\) and must have a pole at \(s = 1\). This completes the proof.
     \end{proof}
     
-    Some comments about this result are in order. First observe that the larger \(c\) can be taken the closer the curve bounding the zero-free region approaches the critical line. As we do not have a nonzero lower bound for \(c\), this constant could be quite small and so we are only guaranteed a zero-free region very close to the line \(\s = 1\). This means that the possible simple real zero \(\b_{L}\) could be very close to \(1\). Moreover, as the nontrivial zeros of \(L(s)\) occur in pairs \(\rho\) and \(1-\conj{\rho}\), the zero-free region implies a symmetric zero-free region about the critical line with at most one real zero in each half as displayed in \cref{fig:symmetric_zero_free_region}. It is possible to obtain stronger zero-free regions in certain cases but this is heavily dependent upon the particular analytic \(L\)-function under investigation. In many cases it is possible to augment the proof of \cref{thm:zero_free_region_generic} to make the constant \(c\) effective and such results have important applications.
+    Some comments about this result are in order. First observe that the larger \(c\) can be taken the closer the curve bounding the zero-free region approaches the critical line. As we do not have a nonzero lower bound for \(c\), this constant could be quite small and so we are only guaranteed a zero-free region very close to the line \(\s = 1\). This means that the possible real zeros could be very close to \(1\). Moreover, as the nontrivial zeros of \(L(s)\) occur in pairs \(\rho\) and \(1-\conj{\rho}\), the zero-free region implies a symmetric zero-free region about the critical line with at most one real zero in each half as displayed in \cref{fig:symmetric_zero_free_region}. It is possible to obtain stronger zero-free regions in certain cases but this is heavily dependent upon the particular analytic \(L\)-function under investigation. In many cases it is possible to augment the proof of \cref{thm:zero_free_region_generic} to make the constant \(c\) effective and such results have important applications.
 
     \begin{figure}[ht]
       \centering
@@ -947,9 +951,9 @@
         \draw[dashed] (1.5,\ymin) -- (1.5,\ymax);
 
         \node at (2.7,0) [circle,fill,inner sep=1pt]{};
-        \node at (2.7,0) [below] {\tiny{\(\b_{L}\)}};
+        \node at (2.7,0) [below] {\tiny{\(\b\)}};
         \node at (0.3,0) [circle,fill,inner sep=1pt]{};
-        \node at (0.3,0) [below] {\tiny{\(1-\b_{L}\)}};
+        \node at (0.3,0) [below] {\tiny{\(1-\b\)}};
 
         \draw[domain=-1.5:1.5,variable=\y] plot({2.5-((0.15)/ln(4+10*abs(\y)))},\y);
         \draw[domain=-1.5:1.5,variable=\y] plot({0.5+((0.15)/ln(4+10*abs(\y)))},\y);
@@ -974,45 +978,43 @@
       \label{fig:symmetric_zero_free_region}
     \end{figure}
     
-    The possible simple zero \(\b_{L}\) in \cref{thm:zero_free_region_generic} is referred to as a \textbf{Siegel zero}\index{Siegel zero}. Such real zeros are conjectured to not exist. For example, Siegel zeros are conjectured to not exist for Selberg class \(L\)-functions in view of the Selberg class Riemann hypothesis. Nevertheless, it is an interesting question to see how the presence of a Siegel zero can affect the behavior of the associated analytic \(L\)-function.
-  \iffalse\section{The Explicit Formula}
-    A formula somewhat analogous to the approximate functional equation can be derived for the negative logarithmic derivative of any analytic \(L\)-function. This formula is called the \textbf{explicit formula}\index{explicit formula}:
+    A possible real zero \(\b\) in \cref{thm:zero_free_region_generic} is referred to as a \textbf{Siegel zero}\index{Siegel zero}. Such real zeros are conjectured to not exist. For example, Siegel zeros are conjectured to not exist for Selberg class \(L\)-functions in view of the Selberg class Riemann hypothesis. Nevertheless, it is an interesting question to see how the presence of a Siegel zero can affect the behavior of the associated analytic \(L\)-function.
+  \section{The Explicit Formula}
+
+    There is a formula, somewhat analogous to the approximate functional equation, that relates a weighted sum of the von Mangoldt coefficients of any analytic \(L\)-function \(L(s)\) to a sum over its nontrivial zeros. This is called the \textbf{explicit formula}\index{explicit formula} for \(L(s)\).
 
     \begin{theorem*}[Explict Formula]
-      Let \(\psi(y)\) be a positive bump function with compact support and let \(\Psi(s)\) denote its Mellin transform. Set \(\phi(y) = y^{-1}\psi(y^{-1})\) so that its Mellin transform satisfies \(\Phi(s) = \Psi(1-s)\). Then for any analytic \(L\)-function \(L(s)\), we have
+      Let \(\psi(y)\) be a smooth weight where \(\Psi(s)\) is its Mellin transform. Set \(\phi(y) = y^{-1}\psi(y^{-1})\) so that its Mellin transform satisfies \(\Phi(s) = \Psi(1-s)\). Then for any analytic \(L\)-function \(L(s)\), we have
       \begin{align*}
-        \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{f}}(n)\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1) \\
-        &+ \frac{1}{2\pi i}\int_{\left(\frac{1}{2}\right)}\left(\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)\right)\Psi(s)\,ds-\sum_{\rho}\Psi(\rho).
+        \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{L}}(n)\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1)-\sum_{\rho}\Psi(\rho) \\
+        &+ \frac{1}{2\pi i}\int_{\left(\frac{1}{2}\right)}\left(\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)\right)\Psi(s)\,ds.
       \end{align*}
     \end{theorem*}
     \begin{proof}
-      By smoothed Perron's formula, we have
+      By smoothed Perron's formula implies
       \[
-        \sum_{n \ge 1}\L_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(c)}-\frac{L'}{L}(s)\Phi(s)\,ds,
+        \sum_{n \ge 1}\L_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(a)}-\frac{L'}{L}(s)\Phi(s)\,ds,
       \]
-      for any \(c > 1\). Since the trivial zeros are isolated, let \(\d > 0\) be such that there are no trivial zeros in the vertical strip \(-2\d \le \s < 0\). By \cref{prop:smoothing_function_Mellin_inverse_vertical_strips,prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay and therefore is locally absolutely uniformly convergent. Shifting the line of integration to \((-\d)\), we pass by simple poles at \(s = 1\) and \(s = \rho\) for every nontrivial zero \(\rho\) obtaining
+      for any \(a > 1+\t_{L}\). Let \(\e > 0\) be such that there are no trivial zeros in the vertical strip \(-2\e \le \s < 0\). As the logarithmic derivative is absolutely bounded for \(\s > 1+\t_{L}\), \cref{prop:L_function_bounded_in_vertical_strips} implies that the integrand has rapid decay and therefore the integral is locally absolutely uniformly convergent. This permits us to shift the line of integration. Shifting to \((-\e)\), we pass by simple poles at \(s = 1\) and \(s = \rho\) for every nontrivial zero \(\rho\) obtaining
       \[
-        \sum_{n \ge 1}\L_{L}(n)\psi(n) = m_{L}\Psi(1)-\sum_{\rho}\Psi(\rho)+\frac{1}{2\pi i}\int_{(-\d)}-\frac{L'}{L}(s)\Psi(s)\,ds.
+        \sum_{n \ge 1}\L_{L}(n)\psi(n) = m_{L}\Psi(1)-\sum_{\rho}\Psi(\rho)+\frac{1}{2\pi i}\int_{(-\e)}-\frac{L'}{L}(s)\Psi(s)\,ds.
       \]
-      For the latter integral, the functional equation and that \(q(\conj{f}) = q_{L}\) together imply
+      Now take the logarithmic derivative of the functional equation to obtain
       \[
-        -\frac{L'}{L}(s) = \log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)+\frac{L'}{L}(1-s,L).
+        -\frac{L'}{L}(s) = \log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)+\frac{\conj{L}'}{\conj{L}}(1-s).
       \]
-      Thus
+      Thus the remaining integral above may be expressed as
       \[
-        \frac{1}{2\pi i}\int_{(-\d)}-\frac{L'}{L}(s)\Phi(s)\,ds = \frac{1}{2\pi i}\int_{(-\d)}\left(\log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)+\frac{L'}{L}(1-s,L)\right)\Psi(s)\,ds.
+        \frac{1}{2\pi i}\int_{(-\e)}\left(\log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)+\frac{\conj{L}'}{\conj{L}}(1-s)\right)\Psi(s)\,ds.
       \]
       The integral over the first term on the right-hand side is \(\psi(1)\log(q_{L})\) by Mellin inversion. As for the last term, smoothed Perron's formula and that \(\Phi(s) = \Psi(1-s)\) together give
       \[
-        \frac{1}{2\pi i}\int_{(-\d)}-\frac{L'}{L}(1-s,L)\Psi(s)\,ds = \sum_{n \ge 1}\L_{\conj{f}}(n)\phi(n).
+        \frac{1}{2\pi i}\int_{(-\e)}-\frac{\conj{L}'}{\conj{L}}(1-s)\Psi(s)\,ds = \sum_{n \ge 1}\L_{\conj{L}}(n)\phi(n).
       \]
-      So altogether, we have
+      Whence
       \begin{align*}
-        \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{f}}(n)\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1) \\
-        &+ \frac{1}{2\pi i}\int_{(-\d)}\left(\frac{\g'}{\g}(s,L)+\frac{\g}{\g}(1-s,L)\right)\Psi(s)\,ds-\sum_{\rho}\Psi(\rho).
+        \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{L}}(n)\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1)-\sum_{\rho}\Psi(\rho) \\
+        &+ \frac{1}{2\pi i}\int_{(-\e)}\left(\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)\right)\Psi(s)\,ds.
       \end{align*}
-      Lastly, we note that by \cref{equ:approximtion_for_digamma,prop:smoothing_function_Mellin_inverse_vertical_strips}, the remaining integrand has rapid decay and therefore is locally absolutely uniformly convergent. Shifting the line of integration to \(\left(\frac{1}{2}\right)\), we pass over no poles because the residues of \(\frac{\g}{\g}(1-s,L)\) are negative of those of \(\frac{\g'}{\g}(s,L)\) for \(\s \ge -\d\) (the nontrivial zeros of \(L(s)\) occur in pairs \(\rho\) and \(1-\conj{\rho}\)). This completes the proof. 
+      The remaining integrand has rapid decay by \cref{prop:smoothing_function_Mellin_inverse_vertical_strips,equ:digamma_gamma_factor_analytic_conductor_estimate} and so the integral is locally absolutely uniformly convergent. Therefore we may shift the line of integration. Shifting to \(\left(\frac{1}{2}\right)\), we pass over no poles. This completes the proof. 
     \end{proof}
-
-    The explicit formula is a very useful tool for analytic investigations. Since \(\L_{L}(n)\) is essentially a weighted sum over prime powers, the explicit formula can be thought of as expressing a smoothed weighted sum over primes for \(f\) in terms of the zeros of \(L(s)\).
-  \fi

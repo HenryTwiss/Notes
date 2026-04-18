@@ -38,11 +38,12 @@
 \contentsline {section}{\numberline {8.5}Logarithmic Derivatives}{143}{section.8.5}%
 \contentsline {section}{\numberline {8.6}Zero Density Estimates}{145}{section.8.6}%
 \contentsline {section}{\numberline {8.7}Zero-free Regions}{150}{section.8.7}%
-\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Moments]}}{153}{chapter.9}%
-\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{154}{chapter.10}%
-\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{155}{chapter.11}%
-\contentsline {chapter}{\numberline {12}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{156}{chapter.12}%
-\contentsline {chapter}{\numberline {A}Appendices}{157}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Integral Lattices}{158}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Poisson Summation}{162}{section.A.2}%
-\contentsline {section}{\numberline {A.3}The Gamma Function}{168}{section.A.3}%
+\contentsline {section}{\numberline {8.8}The Explicit Formula}{152}{section.8.8}%
+\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Moments]}}{154}{chapter.9}%
+\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{155}{chapter.10}%
+\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{156}{chapter.11}%
+\contentsline {chapter}{\numberline {12}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{157}{chapter.12}%
+\contentsline {chapter}{\numberline {A}Appendices}{158}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Integral Lattices}{159}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Poisson Summation}{163}{section.A.2}%
+\contentsline {section}{\numberline {A.3}The Gamma Function}{169}{section.A.3}%

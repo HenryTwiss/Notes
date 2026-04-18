@@ -46,7 +46,7 @@
       Since the integral is \(O\left(\frac{1}{\s-\s_{0}}\right)\), the sum is \(o(1)\) for \(s\) in the desired sector. The first statement follows by uniform Cauchy's criterion. Taking the limit as \(H \to \infty\) proves the second statement. 
     \end{proof}
     
-    We will want to keep track of where Dirichlet series converge absolutely. Let \(\s_{c}\) be the infimum of all \(\s\) for which \(D(s)\) converges. We call \(\s_{c}\) the \textbf{abscissa of convergence}\index{abscissa of convergence} of \(D(s)\). Similarly, let \(\s_{a}\) be the infimum of all \(\s\) for which \(D(s)\) converges absolutely. We call \(\s_{a}\) the \textbf{abscissa of absolute convergence}\index{abscissa of absolute convergence} of \(D(s)\). As the summands of \(D(s)\) are holomorphic, the convergence is locally absolutely uniform for \(\s > \s_{a}\) (actually uniform in sectors) and so \(D(s)\) is holomorphic in this half-plane.  
+    We will want to keep track of where Dirichlet series converge absolutely. Let \(\s_{c}\) be the infimum of all \(\s\) for which \(D(s)\) converges. We call \(\s_{c}\) the \textbf{abscissa of convergence}\index{abscissa of convergence} of \(D(s)\). Similarly, let \(\s_{a}\) be the infimum of all \(\s\) for which \(D(s)\) converges absolutely. We call \(\s_{a}\) the \textbf{abscissa of absolute convergence}\index{abscissa of absolute convergence} of \(D(s)\). As the summands of \(D(s)\) are holomorphic, convergence is locally absolutely uniform for \(\s > \s_{a}\) (actually uniform in sectors) and so \(D(s)\) is holomorphic in this half-plane.  
     
     The abscissas \(\s_{c}\) and \(\s_{a}\) act as the boundaries of convergence and absolute convergence respectively. Anything can happen on the lines \(\s = \s_{c}\) and \(\s = \s_{a}\), but to the right of them we have convergence and absolute convergence of \(D(s)\) respectively. It turns out that \(\s_{a}\) is never far from \(\s_{c}\) provided \(\s_{c}\) is finite.
 
@@ -600,7 +600,7 @@
     \[
       \Psi(s) = \int_{0}^{\infty}\psi(y)y^{s}\,\frac{dy}{y}.
     \]
-    As \(\psi(y)\) has compact support, the integral defining \(\Psi(s)\) is a locally absolutely uniformly bounded on \(\C\). In particular, \(\Psi(s)\) is holomorphic and Mellin inversion implies that \(\psi(y)\) is the Mellin inverse of \(\Psi(s)\). As for nice properties, \(\Psi(s)\) exhibit rapid decay.
+    As \(\psi(y)\) has compact support, the integral defining \(\Psi(s)\) is a locally absolutely uniformly convergent. In particular, \(\Psi(s)\) is holomorphic and Mellin inversion implies that \(\psi(y)\) is the Mellin inverse of \(\Psi(s)\). As for nice properties, \(\Psi(s)\) exhibit rapid decay.
 
     \begin{proposition}\label{prop:smoothing_function_Mellin_inverse_vertical_strips}
       Suppose \(\psi(y)\) is smooth weight and let \(\Psi(s)\) be its Mellin transform. Then for bounded \(\s\), we have
