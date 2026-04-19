@@ -14,9 +14,9 @@
       \item[\textbf{Analyticity:}] There exists a nonnegative integer \(m_{L}\) such that the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s > 1\) and admits meromorphic continuation to \(\C\) with at most a pole at \(s = 1\) of order \(m_{L}\). Moreover, \((s-1)^{m_{L}}L(s)\) is order \(1\).
       \item[\textbf{Functional Equation:}] There is a positive integer \(q_{L}\), called the \textbf{conductor}\index{conductor} of \(L(s)\), a positive integer \(d_{L}\) called the \textbf{degree}\index{degree} of \(L(s)\), complex numbers \((\mu_{j})_{j \le d_{L}}\) called the \textbf{gamma parameters}\index{gamma parameters} of \(L(s)\) that are either real or occur in conjugate pairs and satisfy \(\Re(\mu_{j}) \ge 0\), and a complex number \(\e_{L}\) called the \textbf{root number}\index{root number} of \(L(s)\) with \(|\e_{L}| = 1\), all of which determine functions
       \[
-        \L(s,L) = q_{L}^{\frac{s}{2}}\g(s,L)L(s) \quad \text{and} \quad \g(s,L) = \pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right),
+        \g(s,L) = \pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right) \quad \text{and} \quad \L(s,L) = q_{L}^{\frac{s}{2}}\g(s,L)L(s),
       \]
-      called the \textbf{completion}\index{completion} of \(L(s)\) and the \textbf{gamma factor}\index{gamma factor} of \(L(s)\) respectively, satisfying
+      called the \textbf{gamma factor}\index{gamma factor} of \(L(s)\) and the \textbf{completion}\index{completion} of \(L(s)\) respectively, where the latter satisfies
       \[
         \L(s,L) = \e_{L}\conj{\L(1-\conj{s},L)}.
       \]
@@ -63,11 +63,11 @@
     \[
       \conj{L}(s) = \conj{L(\conj{s})}.
     \]
-    Analytic \(L\)-functions are closed under duals. Indeed, \(\conj{L}(s)\) is an analytic \(L\)-function with coefficients \(a_{\conj{L}}(n) = \conj{a_{L}(n)}\), a pole at \(s = 1\) of order \(m_{\conj{L}} = m_{L}\), conductor \(q_{\conj{L}} = q_{L}\), degree \(d_{\conj{L}} = d_{L}\), gamma parameters \((\conj{\mu_{j}})_{j \le d_{L}}\), root number \(\e_{\conj{L}} = \conj{\e_{L}}\), and Euler parameters \((\conj{\a_{j}(p)})_{j \le d_{L}}\) at \(p\). Moreover, the dual of \(L(s)\) is Selberg class if \(L(s)\) is. We also say \(L(s)\) is \textbf{self-dual}\index{self-dual} if it is equal to its dual. This is equivalent to the coefficients \(a_{L}(n)\) being real. In any case, we can express the functional equation as
+    Analytic \(L\)-functions are closed under duals. Indeed, \(\conj{L}(s)\) is an analytic \(L\)-function with coefficients \(a_{\conj{L}}(n) = \conj{a_{L}(n)}\), a pole at \(s = 1\) of order \(m_{\conj{L}} = m_{L}\), conductor \(q_{\conj{L}} = q_{L}\), degree \(d_{\conj{L}} = d_{L}\), gamma parameters \((\conj{\mu_{j}})_{j \le d_{L}}\), root number \(\e_{\conj{L}} = \conj{\e_{L}}\), gamma factor \(\g(s,\conj{L}) = \g(s,L)\), completion \(\L(s,\conj{L}) = \conj{\L(\conj{s},L)}\), and Euler parameters \((\conj{\a_{j}(p)})_{j \le d_{L}}\) at \(p\). Moreover, the dual of \(L(s)\) is Selberg class if \(L(s)\) is. We also say \(L(s)\) is \textbf{self-dual}\index{self-dual} if it is equal to its dual. This is equivalent to the coefficients \(a_{L}(n)\) being real. In any case, we can express the functional equation as
     \[
-      q_{L}^{\frac{s}{2}}\g(s,L)L(s) = \e_{L}q_{L}^{\frac{1-s}{2}}\g(1-s,L)\conj{L}(1-s).
+      \L(s,L) = \e_{L}\L(1-s,\conj{L}),
     \]
-    So the functional equation relates an analytic \(L\)-function with its dual. This formula will also be useful when taking derivatives of the functional equation.
+    so the functional equation relates an analytic \(L\)-function with its dual. This formula will also be useful when taking derivatives of the functional equation.
 
     It is clear from the definition that analytic \(L\)-functions are closed under multiplication and that the degree is additive. Moreover, this closure respects Selberg class \(L\)-functions. This makes the set of analytic \(L\)-functions into a graded commutative semigroup where the grading is induced by degree. It follows that there exist irreducible elements with respect to the grading and we say that an analytic \(L\)-function is \textbf{primitive}\index{primitive} if it such an irreducible. Clearly any analytic \(L\)-function of degree \(1\) is primitive. Moreover, every analytic \(L\)-function factors into a product of primitive \(L\)-functions. Such a factorization is only conjectured to be unique for Selberg class \(L\)-functions. A sufficient condition would be \textbf{Selberg's orthogonality conjecture}\index{Selberg's orthogonality conjecture}.
 
@@ -243,9 +243,9 @@
       \]
       Apply the functional equation and perform the change of variables \(u \mapsto -u\) to rewrite this as
       \[
-        -\e_{L}\frac{1}{2\pi i}\int_{(a)}\conj{\L(1-\conj{s+u},L)}\Phi(u)X^{-u}\,\frac{du}{u}+\L(s,L)+R(s,X,L).
+        -\e_{L}\frac{1}{2\pi i}\int_{(a)}\L(1-(s+u),\conj{L})\Phi(u)X^{-u}\,\frac{du}{u}+\L(s,L)+R(s,X,L).
       \]
-      Analogous to the above, we can now expand \(\conj{L(1-\conj{s+u})}\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that our previous expression becomes
+      Analogous to the above, we can now expand \(\conj{L}(1-(s+u))\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that our previous expression becomes
       \[
         -\e_{L}q_{L}^{\frac{1-s}{2}}\g(1-s,L)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{1-s}}V_{s}\left(\frac{nX}{\sqrt{q_{L}}},L\right)+\L(s,L)+R(s,X,L).
       \]
@@ -602,17 +602,17 @@
     \[
       \L_{L}(n) = \begin{cases} \sum_{j}\a_{j}(p)^{k}\log(p) & \text{if \(n = p^{k}\)}, \\ 0 & \text{otherwise}. \end{cases}
     \]
-    We call \(\L_{L}(n)\) the \textbf{von Mangoldt coefficients}\index{von Mangoldt coefficients} of \(L(s)\).
+    We call \(\L_{L}(n)\) the \textbf{von Mangoldt coefficients}\index{von Mangoldt coefficients} of \(L(s)\). Also observe that the dual satisfies \(\L_{\conj{L}}(n) = \conj{\L_{L}(n)}\).
 
     There is an incredibly useful formula for the logarithmic derivative of \(L(s)\) which is often the starting point for deeper analytic investigations. To deduce it, we require a more complete understanding of the completion \(\L(s,L)\). First observe that the zeros \(\rho\) of \(\L(s,L)\) are contained within the critical strip. Indeed, by our earlier discussion of zeros, \(\L(s,L)\) is nonzero for \(\s > 1\) and the functional equation implies that \(\L(s,L)\) is nonzero for \(\s < 0\) too. This means that the zeros of \(\L(s,L)\) are exactly nontrivial zeros of \(L(s)\). Now let us setup some notation. We define \(\xi(s,L)\) by
     \[
       \xi(s,L) = (s(1-s))^{m_{L}}\L(s,L).
     \]
-    The functional equation implies
+    Observe that the dual satisfies \(\xi(s,\conj{L}) = \conj{\xi(\conj{s},L)}\). In any case, the functional equation implies
     \begin{equation}
       \xi(s,L) = \e_{L}\conj{\xi(1-\conj{s},L)},
     \end{equation}
-    which we refer to as the \textbf{functional equation}\index{functional equation} for \(\xi(s,L)\). Observe that \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula (see \cref{sec:the_gamma_function}) and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
+    which we refer to as the \textbf{functional equation}\index{functional equation} for \(\xi(s,L)\). Now \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula (see \cref{sec:the_gamma_function}) and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
     \[
       \xi(s,L) = e^{A_{L}+B_{L}s}\prod_{\rho \neq 0,1}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
     \]
@@ -986,7 +986,7 @@
     \begin{theorem*}[Explict Formula]
       Let \(\psi(y)\) be a smooth weight where \(\Psi(s)\) is its Mellin transform. Set \(\phi(y) = y^{-1}\psi(y^{-1})\) so that its Mellin transform satisfies \(\Phi(s) = \Psi(1-s)\). Then for any analytic \(L\)-function \(L(s)\), we have
       \begin{align*}
-        \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{L}}(n)\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1)-\sum_{\rho}\Psi(\rho) \\
+        \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\conj{\L_{L}(n)}\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1)-\sum_{\rho}\Psi(\rho) \\
         &+ \frac{1}{2\pi i}\int_{\left(\frac{1}{2}\right)}\left(\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)\right)\Psi(s)\,ds.
       \end{align*}
     \end{theorem*}
@@ -1009,11 +1009,11 @@
       \]
       The integral over the first term on the right-hand side is \(\psi(1)\log(q_{L})\) by Mellin inversion. As for the last term, smoothed Perron's formula and that \(\Phi(s) = \Psi(1-s)\) together give
       \[
-        \frac{1}{2\pi i}\int_{(-\e)}-\frac{\conj{L}'}{\conj{L}}(1-s)\Psi(s)\,ds = \sum_{n \ge 1}\L_{\conj{L}}(n)\phi(n).
+        \frac{1}{2\pi i}\int_{(-\e)}-\frac{\conj{L}'}{\conj{L}}(1-s)\Psi(s)\,ds = \sum_{n \ge 1}\conj{\L_{L}(n)}\phi(n).
       \]
       Whence
       \begin{align*}
-        \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\L_{\conj{L}}(n)\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1)-\sum_{\rho}\Psi(\rho) \\
+        \sum_{n \ge 1}\left(\L_{L}(n)\psi(n)+\conj{\L_{L}(n)}\phi(n)\right) &= \psi(1)\log(q_{L})+m_{L}\Psi(1)-\sum_{\rho}\Psi(\rho) \\
         &+ \frac{1}{2\pi i}\int_{(-\e)}\left(\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)\right)\Psi(s)\,ds.
       \end{align*}
       The remaining integrand has rapid decay by \cref{prop:smoothing_function_Mellin_inverse_vertical_strips,equ:digamma_gamma_factor_analytic_conductor_estimate} and so the integral is locally absolutely uniformly convergent. Therefore we may shift the line of integration. Shifting to \(\left(\frac{1}{2}\right)\), we pass over no poles. This completes the proof. 
