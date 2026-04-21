@@ -411,7 +411,7 @@
     \end{conjecture*}
 
     So far, the Riemann hypothesis remains completely out of reach for any analytic \(L\)-function and thus the Selberg class Riemann hypothesis does as well.
-  \section{The Lindel\"of Hypothesis and Estimates on the Critical Line}
+  \section{The Lindel\"of Hypothesis and Moments}
     Instead of asking about the zeros of an analytic \(L\)-function \(L(s)\) on the critical line we can ask about its growth there. Let us begin this investigation by deriving an upper bound for \(L(s)\) on the critical line using the Phragm\'en-Lindel\"of convexity principle. This amounts to a more refined version of the argument used in \cref{prop:L_function_bounded_in_vertical_strips} for the critical strip.
 
     \begin{theorem}\label{thm:convexity_bound_for_L_function_in_critial_strip}
@@ -483,6 +483,53 @@
     \]
     This is known as the \textbf{convexity bound}\index{convexity bound} for \(L^{(k)}(s)\).
 
+    While both the Riemann and Lindel\"of hypotheses remain out of reach for any analytic \(L\)-function \(L(s)\), the latter is more tractable because the convexity bound gives a weak estimate. Unfortunately, breaking the convexity bound for any analytic \(L\)-function is a very daunting task requiring extremely modern techniques. This approach of breaking convexity to study the Lindel\"of hypothesis is quite direct. However, there is an indirect approach by considering averages of the analytic \(L\)-function in question. This is the study of moments of \(L\)-functions. For any analytic \(L\)-function \(L(s)\) and positive integer \(k\), we define the \(k\)-th \textbf{moment}\index{moment} of \(L(s)\), namely \(M_{k}(T,L)\), by
+    \[
+      M_{k}(T,L) = \int_{0}^{T}\left|L\left(\frac{1}{2}+it\right)\right|^{k}\,dt,
+    \]
+    for any positive \(T\). It is useful to think of \(M_{k}(T,L)\) as a \(k\)-th power average of \(L\left(\frac{1}{2}+it\right)\). One of the fundamental reasons why the study of moments is useful is that sufficient estimates for \(M_{2k}(T,L)\) in \(T\) is equivalent to the Lindel\"of hypothesis.
+
+    \begin{proposition}\label{prop:equivalence_Lindelof_hypothesis_and_moments}
+      Let \(L(s)\) be an analytic \(L\)-function. The truth of the Lindel\"of hypothesis for \(L(s)\) is equivalent to the estimate
+      \[
+        M_{2k}(T,L) \ll_{\e} T^{1+\e},
+      \]
+      for all positive integers \(k\).
+    \end{proposition}
+    \begin{proof}
+      First suppose the Lindel\"of hypothesis for \(L(s)\) holds. Then we obtain the estimate
+      \[
+        M_{2k}(T,L) \ll_{\e} T^{1+\e},
+      \]
+      at once for all \(k\). Now suppose that \(M_{2k}(T,L) \ll_{\e} T^{1+\e}\) for all \(k\). If the Lindel\"of hypothesis for \(L(s)\) is false then there is some \(\d > 0\) and positive unbounded sequence \((t_{n})_{n \ge 1}\) such that
+      \[
+        \left|L\left(\frac{1}{2}+it_{n}\right)\right| > C\mf{q}\left(\frac{1}{2}+it_{n},L\right)^{\d},
+      \]
+      for any positive constant \(C\). In particular, we may write
+        \[
+        \left|L\left(\frac{1}{2}+it_{n}\right)\right| > Ct_{n}^{d_{L}\d}.
+      \]
+      The convexity bound for \(L(s)\) implies the weaker estimate \(\left|L'\left(\frac{1}{2}+it\right)\right| \le C't^{d_{L}}\) for some positive constant \(C'\) provided \(t\) is bounded away from zero. Now write
+      \[
+        \left|L\left(\frac{1}{2}+it\right)-L\left(\frac{1}{2}+it_{n}\right)\right| = \left|\int_{t_{n}}^{t}L'\left(\frac{1}{2}+ir\right)\,dr\right|.
+      \]
+      Taking \(C = 2C'\), a short computation using these results shows that
+      \[
+        \left|L\left(\frac{1}{2}+it\right)-L\left(\frac{1}{2}+it_{n}\right)\right| \le \frac{C}{2}t^{d_{L}\d},
+      \]
+      provided \(t\) is bounded away from zero and satisfies \(|t-t_{n}| \le t_{n}^{d_{L}(\d-1)}\). For such \(t\), it follows that
+      \[
+        \left|L\left(\frac{1}{2}+it\right)\right| > \frac{C}{2}t_{n}^{d_{L}\d}.
+      \]
+      Now take \(T = \frac{4}{3}t_{n}\) so that the interval \((t_{n}-t_{n}^{d_{L}(\d-1)},t_{n}+t_{n}^{d_{L}(\d-1)})\) is contained in \(\left(\frac{T}{2},T\right)\). Then
+      \[
+        M_{2k}(T,L) > 2\left(\frac{C}{2}\right)^{2k}\left(\frac{3}{4}\right)^{(2k+1)d_{L}\d-d_{L}}T^{(2k+1)d_{L}\d-d_{L}}.
+      \]
+      This is a contradiction for sufficiently large \(k\) which completes the proof.
+    \end{proof}
+
+    The usefulness of this result is that the difficulty of proving the Lindel\"of hypothesis for \(L(s)\) has been transferred to proving sufficient asymptotics for the moments \(M_{2k}(T,L)\) each of which should, heuristically speaking, be an easier problem to resolve on its own.
+  \section{Estimates on the Critical Line}
     We now turn to the question of how to obtain estimates on the critical line. There are many methods one can apply often depending upon the particular analytic \(L\)-function of interest. Here we will provide a method that works in vast generality and reduces the estimation of \(L\left(\frac{1}{2}+it\right)\) to that of estimating smoothed finite sums of coefficients. To achieve this we need to establish the existence of certain bump functions. We say that a function \(\w(y)\) is a \textbf{smooth dyadic weight}\index{smooth dyadic weight} if it is a positive bump function supported in \([1-\d,2+\d]\) and such that
     \[
       \sum_{k \in \Z}\w\left(\frac{y}{2^{k}}\right) = 1,
@@ -584,58 +631,7 @@
     \end{theorem}
     \begin{proof}
       Take \(t = 0\) in \cref{thm:critical_line_estimate}.
-    \end{proof}
-  \section{Moments}
-    While both the Riemann and Lindel\"of hypotheses remain out of reach for any analytic \(L\)-function \(L(s)\), the latter is more tractable because the convexity bound gives the estimate
-    \[
-      L\left(\frac{1}{2}+it\right) \ll_{\e} \mf{q}\left(\frac{1}{2}+it,L\right)^{\d+\e},
-    \]
-    with \(\d = \frac{1}{4}\) whereas the Lindel\"of hypothesis claims that we can take \(\d = 0\). As we have already mentioned, breaking the convexity bound \(\d = \frac{1}{4}\) is a very daunting task requiring extremely modern techniques. This approach of breaking convexity to study the Lindel\"of hypothesis is quite direct. There is an indirect approach by considering averages of the analytic \(L\)-function in question. This is the study of moments of \(L\)-functions. For any analytic \(L\)-function \(L(s)\) and positive integer \(k\), we define the \(k\)-th \textbf{moment}\index{moment} of \(L(s)\), namely \(M_{k}(T,L)\), by
-    \[
-      M_{k}(T,L) = \int_{0}^{T}\left|L\left(\frac{1}{2}+it\right)\right|^{k}\,dt,
-    \]
-    for any positive \(T\). It is useful to think of \(M_{k}(T,L)\) as a \(k\)-th power average of \(L\left(\frac{1}{2}+it\right)\). One of the fundamental reasons why the study of moments is useful is that sufficient estimates for \(M_{2k}(T,L)\) in \(T\) is equivalent to the Lindel\"of hypothesis.
-
-    \begin{proposition}\label{prop:equivalence_Lindelof_hypothesis_and_moments}
-      Let \(L(s)\) be an analytic \(L\)-function. The truth of the Lindel\"of hypothesis for \(L(s)\) is equivalent to the estimate
-      \[
-        M_{2k}(T,L) \ll_{\e} T^{1+\e},
-      \]
-      for all positive integers \(k\).
-    \end{proposition}
-    \begin{proof}
-      First suppose the Lindel\"of hypothesis for \(L(s)\) holds. Then we obtain the estimate
-      \[
-        M_{2k}(T,L) \ll_{\e} T^{1+\e},
-      \]
-      at once for all \(k\). Now suppose that \(M_{2k}(T,L) \ll_{\e} T^{1+\e}\) for all \(k\). If the Lindel\"of hypothesis for \(L(s)\) is false then there is some \(\d > 0\) and positive unbounded sequence \((t_{n})_{n \ge 1}\) such that
-      \[
-        \left|L\left(\frac{1}{2}+it_{n}\right)\right| > C\mf{q}\left(\frac{1}{2}+it_{n},L\right)^{\d},
-      \]
-      for any positive constant \(C\). In particular, we may write
-        \[
-        \left|L\left(\frac{1}{2}+it_{n}\right)\right| > Ct_{n}^{d_{L}\d}.
-      \]
-      The convexity bound for \(L(s)\) implies the weaker estimate \(\left|L'\left(\frac{1}{2}+it\right)\right| \le C't^{d_{L}}\) for some positive constant \(C'\) provided \(t\) is bounded away from zero. Now write
-      \[
-        \left|L\left(\frac{1}{2}+it\right)-L\left(\frac{1}{2}+it_{n}\right)\right| = \left|\int_{t_{n}}^{t}L'\left(\frac{1}{2}+ir\right)\,dr\right|.
-      \]
-      Taking \(C = 2C'\), a short computation using these results shows that
-      \[
-        \left|L\left(\frac{1}{2}+it\right)-L\left(\frac{1}{2}+it_{n}\right)\right| \le \frac{C}{2}t^{d_{L}\d},
-      \]
-      provided \(t\) is bounded away from zero and satisfies \(|t-t_{n}| \le t_{n}^{d_{L}(\d-1)}\). For such \(t\), it follows that
-      \[
-        \left|L\left(\frac{1}{2}+it\right)\right| > \frac{C}{2}t_{n}^{d_{L}\d}.
-      \]
-      Now take \(T = \frac{4}{3}t_{n}\) so that the interval \((t_{n}-t_{n}^{d_{L}(\d-1)},t_{n}+t_{n}^{d_{L}(\d-1)})\) is contained in \(\left(\frac{T}{2},T\right)\). Then
-      \[
-        M_{2k}(T,L) > 2\left(\frac{C}{2}\right)^{2k}\left(\frac{3}{4}\right)^{(2k+1)d_{L}\d-d_{L}}T^{(2k+1)d_{L}\d-d_{L}}.
-      \]
-      This is a contradiction for sufficiently large \(k\) which completes the proof.
-    \end{proof}
-
-    The usefulness of this result is that the difficulty of proving the Lindel\"of hypothesis for \(L(s)\) has been transferred to proving sufficient asymptotics for the moments \(M_{2k}(T,L)\) each of which should, heuristically speaking, be an easier problem to resolve on its own.
+    \end{proof}  
   \section{Logarithmic Derivatives}
     Recall that \(L(s)\) nonzero in the half-plane \(\s > 1\). As this region is simply connected, there exists a unique holomorphic logarithm \(\log L(s)\) there. By absolute convergence of the Euler product, we may write
     \[
