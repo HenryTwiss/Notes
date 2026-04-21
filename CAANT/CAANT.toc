@@ -35,15 +35,16 @@
 \contentsline {section}{\numberline {8.2}The Approximate Functional Equation}{131}{section.8.2}%
 \contentsline {section}{\numberline {8.3}The Riemann Hypothesis and Nontrivial Zeros}{136}{section.8.3}%
 \contentsline {section}{\numberline {8.4}The Lindel\"of Hypothesis and Estimates on the Critical Line}{137}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Logarithmic Derivatives}{143}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Zero Density Estimates}{145}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Zero-free Regions}{150}{section.8.7}%
-\contentsline {section}{\numberline {8.8}The Explicit Formula}{152}{section.8.8}%
-\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Moments]}}{154}{chapter.9}%
-\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{155}{chapter.10}%
-\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{156}{chapter.11}%
-\contentsline {chapter}{\numberline {12}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{157}{chapter.12}%
-\contentsline {chapter}{\numberline {A}Appendices}{158}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Integral Lattices}{159}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Poisson Summation}{163}{section.A.2}%
-\contentsline {section}{\numberline {A.3}The Gamma Function}{169}{section.A.3}%
+\contentsline {section}{\numberline {8.5}Moments}{143}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Logarithmic Derivatives}{144}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Zero Density Estimates}{146}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Zero-free Regions}{151}{section.8.8}%
+\contentsline {section}{\numberline {8.9}The Explicit Formula}{154}{section.8.9}%
+\contentsline {chapter}{\numberline {9}\leavevmode {\color {red}\sf Todo: [Moments]}}{156}{chapter.9}%
+\contentsline {chapter}{\numberline {10}\leavevmode {\color {red}\sf Todo: [Analytic Theory of the Riemann Zeta Function]}}{157}{chapter.10}%
+\contentsline {chapter}{\numberline {11}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dirichlet \(L\)-functions]}}{158}{chapter.11}%
+\contentsline {chapter}{\numberline {12}\leavevmode {\color {red}\sf Todo: [Analytic Theory of Dedekind Zeta Functions]}}{159}{chapter.12}%
+\contentsline {chapter}{\numberline {A}Appendices}{160}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Integral Lattices}{161}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Poisson Summation}{165}{section.A.2}%
+\contentsline {section}{\numberline {A.3}The Gamma Function}{171}{section.A.3}%
