@@ -1,4 +1,5 @@
 \chapter{Dirichlet Characters and Exponential Sums}
+  We will make minor use of Poisson summation for functions satisfying the Dirichlet-Jordan test as stated in \cref{sec:Poisson_summation}. 
   \section{Dirichlet Characters}
     Let \(m\) be a positive integer. A multiplicative homomorphism
     \[
@@ -455,7 +456,7 @@
       \[
         f(x) = \begin{cases} e^{\frac{2\pi ix^{2}}{m}} & \text{if \(x \in [0,m]\),} \\ 0 & \text{if \(x \notin [0,m]\).} \end{cases}
       \]
-      Then \(f(x)\) is of bounded variation with compact support and has jump discontinuities only at \(x = 0\) and \(x = m\). Therefore Poisson summation applies where \(f(n)\) is understood to be the average of the left-hand and right-hand limits at points of discontinuity and the sums are ordered symmetrically with respect to the size of the index. On the one hand, this means
+      Then \(f(x)\) satisfies the Dirichlet-Jordan test and therefore Poisson summation applies where \(f(n)\) is understood to be the average of the left-hand and right-hand limits at points of discontinuity (see \cref{sec:Poisson_summation}). On the one hand, we have
       \[
         \sum_{n \in \Z}f(n) = g(m).
       \]

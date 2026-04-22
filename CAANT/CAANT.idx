@@ -19,277 +19,277 @@
 \indexentry{von Mangoldt function|hyperpage}{4}
 \indexentry{Dirichlet convolution|hyperpage}{4}
 \indexentry{M\"obius inversion|hyperpage}{5}
-\indexentry{Dirichlet character|hyperpage}{7}
-\indexentry{modulus|hyperpage}{7}
-\indexentry{principal|hyperpage}{7}
-\indexentry{trivial Dirichlet character|hyperpage}{7}
-\indexentry{zero extension|hyperpage}{8}
-\indexentry{Dirichlet orthogonality relations|hyperpage}{8}
-\indexentry{induced|hyperpage}{9}
-\indexentry{primitive|hyperpage}{9}
-\indexentry{imprimitive|hyperpage}{9}
-\indexentry{conductor|hyperpage}{9}
-\indexentry{real|hyperpage}{10}
-\indexentry{complex|hyperpage}{10}
-\indexentry{order|hyperpage}{10}
-\indexentry{quadratic|hyperpage}{11}
-\indexentry{cubic|hyperpage}{11}
-\indexentry{even|hyperpage}{11}
-\indexentry{odd|hyperpage}{11}
-\indexentry{fundamental discriminant|hyperpage}{11}
+\indexentry{Dirichlet character|hyperpage}{6}
+\indexentry{modulus|hyperpage}{6}
+\indexentry{principal|hyperpage}{6}
+\indexentry{trivial Dirichlet character|hyperpage}{6}
+\indexentry{zero extension|hyperpage}{7}
+\indexentry{Dirichlet orthogonality relations|hyperpage}{7}
+\indexentry{induced|hyperpage}{8}
+\indexentry{primitive|hyperpage}{8}
+\indexentry{imprimitive|hyperpage}{8}
+\indexentry{conductor|hyperpage}{8}
+\indexentry{real|hyperpage}{9}
+\indexentry{complex|hyperpage}{9}
+\indexentry{order|hyperpage}{9}
+\indexentry{quadratic|hyperpage}{10}
+\indexentry{cubic|hyperpage}{10}
+\indexentry{even|hyperpage}{10}
+\indexentry{odd|hyperpage}{10}
+\indexentry{fundamental discriminant|hyperpage}{10}
+\indexentry{Ramanujan sum|hyperpage}{12}
 \indexentry{Ramanujan sum|hyperpage}{13}
-\indexentry{Ramanujan sum|hyperpage}{14}
-\indexentry{Gauss sum|hyperpage}{14}
-\indexentry{epsilon factor|hyperpage}{16}
-\indexentry{quadratic Gauss sum|hyperpage}{17}
-\indexentry{epsilon factor|hyperpage}{20}
-\indexentry{integral|hyperpage}{24}
-\indexentry{integral|hyperpage}{24}
-\indexentry{integral closure|hyperpage}{25}
-\indexentry{integrally closed|hyperpage}{25}
-\indexentry{normalization|hyperpage}{25}
-\indexentry{integrally closed domain|hyperpage}{25}
-\indexentry{number field|hyperpage}{27}
-\indexentry{degree|hyperpage}{27}
-\indexentry{quadratic|hyperpage}{27}
-\indexentry{cubic|hyperpage}{27}
-\indexentry{algebraic number|hyperpage}{27}
-\indexentry{ring of integers|hyperpage}{27}
-\indexentry{algebraic integer|hyperpage}{27}
-\indexentry{trace|hyperpage}{28}
-\indexentry{norm|hyperpage}{28}
-\indexentry{field trace|hyperpage}{28}
-\indexentry{field norm|hyperpage}{28}
-\indexentry{field trace|hyperpage}{28}
-\indexentry{field norm|hyperpage}{28}
-\indexentry{trace matrix|hyperpage}{31}
-\indexentry{discriminant|hyperpage}{31}
-\indexentry{discriminant|hyperpage}{31}
-\indexentry{trace form|hyperpage}{32}
-\indexentry{embedding matrix|hyperpage}{33}
-\indexentry{integral basis|hyperpage}{34}
+\indexentry{Gauss sum|hyperpage}{13}
+\indexentry{epsilon factor|hyperpage}{15}
+\indexentry{quadratic Gauss sum|hyperpage}{16}
+\indexentry{epsilon factor|hyperpage}{19}
+\indexentry{integral|hyperpage}{23}
+\indexentry{integral|hyperpage}{23}
+\indexentry{integral closure|hyperpage}{24}
+\indexentry{integrally closed|hyperpage}{24}
+\indexentry{normalization|hyperpage}{24}
+\indexentry{integrally closed domain|hyperpage}{24}
+\indexentry{number field|hyperpage}{26}
+\indexentry{degree|hyperpage}{26}
+\indexentry{quadratic|hyperpage}{26}
+\indexentry{cubic|hyperpage}{26}
+\indexentry{algebraic number|hyperpage}{26}
+\indexentry{ring of integers|hyperpage}{26}
+\indexentry{algebraic integer|hyperpage}{26}
+\indexentry{trace|hyperpage}{27}
+\indexentry{norm|hyperpage}{27}
+\indexentry{field trace|hyperpage}{27}
+\indexentry{field norm|hyperpage}{27}
+\indexentry{field trace|hyperpage}{27}
+\indexentry{field norm|hyperpage}{27}
+\indexentry{trace matrix|hyperpage}{30}
+\indexentry{discriminant|hyperpage}{30}
+\indexentry{discriminant|hyperpage}{30}
+\indexentry{trace form|hyperpage}{31}
+\indexentry{embedding matrix|hyperpage}{32}
+\indexentry{integral basis|hyperpage}{33}
+\indexentry{monogenic|hyperpage}{36}
+\indexentry{field trace|hyperpage}{37}
+\indexentry{field norm|hyperpage}{37}
+\indexentry{field trace|hyperpage}{37}
+\indexentry{field norm|hyperpage}{37}
+\indexentry{trace form|hyperpage}{37}
+\indexentry{integral basis|hyperpage}{37}
+\indexentry{discriminant|hyperpage}{37}
 \indexentry{monogenic|hyperpage}{37}
-\indexentry{field trace|hyperpage}{38}
-\indexentry{field norm|hyperpage}{38}
-\indexentry{field trace|hyperpage}{38}
-\indexentry{field norm|hyperpage}{38}
-\indexentry{trace form|hyperpage}{38}
-\indexentry{integral basis|hyperpage}{38}
-\indexentry{discriminant|hyperpage}{38}
-\indexentry{monogenic|hyperpage}{38}
-\indexentry{integral ideal|hyperpage}{38}
-\indexentry{prime|hyperpage}{38}
-\indexentry{fractional ideal|hyperpage}{38}
-\indexentry{principal|hyperpage}{38}
-\indexentry{inverse|hyperpage}{38}
-\indexentry{invertible|hyperpage}{39}
-\indexentry{Dedekind domain|hyperpage}{39}
-\indexentry{prime factorization|hyperpage}{42}
-\indexentry{prime factors|hyperpage}{42}
-\indexentry{divides|hyperpage}{42}
-\indexentry{exactly divides|hyperpage}{42}
-\indexentry{greatest common divisor|hyperpage}{43}
-\indexentry{least common multiple|hyperpage}{43}
-\indexentry{relatively prime|hyperpage}{43}
-\indexentry{ideal class group|hyperpage}{43}
-\indexentry{ideal class|hyperpage}{43}
-\indexentry{class number|hyperpage}{44}
-\indexentry{unit group|hyperpage}{44}
-\indexentry{residue class field|hyperpage}{46}
-\indexentry{Dedekind extension|hyperpage}{48}
-\indexentry{above|hyperpage}{48}
-\indexentry{below|hyperpage}{48}
-\indexentry{contraction|hyperpage}{49}
-\indexentry{integral ideal|hyperpage}{49}
-\indexentry{prime|hyperpage}{49}
-\indexentry{fractional ideal|hyperpage}{49}
-\indexentry{ideal class group|hyperpage}{49}
-\indexentry{class number|hyperpage}{49}
-\indexentry{unit group|hyperpage}{49}
-\indexentry{unit|hyperpage}{49}
-\indexentry{multiplicative|hyperpage}{50}
+\indexentry{integral ideal|hyperpage}{37}
+\indexentry{prime|hyperpage}{37}
+\indexentry{fractional ideal|hyperpage}{37}
+\indexentry{principal|hyperpage}{37}
+\indexentry{inverse|hyperpage}{37}
+\indexentry{invertible|hyperpage}{38}
+\indexentry{Dedekind domain|hyperpage}{38}
+\indexentry{prime factorization|hyperpage}{41}
+\indexentry{prime factors|hyperpage}{41}
+\indexentry{divides|hyperpage}{41}
+\indexentry{exactly divides|hyperpage}{41}
+\indexentry{greatest common divisor|hyperpage}{42}
+\indexentry{least common multiple|hyperpage}{42}
+\indexentry{relatively prime|hyperpage}{42}
+\indexentry{ideal class group|hyperpage}{42}
+\indexentry{ideal class|hyperpage}{42}
+\indexentry{class number|hyperpage}{43}
+\indexentry{unit group|hyperpage}{43}
+\indexentry{residue class field|hyperpage}{45}
+\indexentry{Dedekind extension|hyperpage}{47}
+\indexentry{above|hyperpage}{47}
+\indexentry{below|hyperpage}{47}
+\indexentry{contraction|hyperpage}{48}
+\indexentry{integral ideal|hyperpage}{48}
+\indexentry{prime|hyperpage}{48}
+\indexentry{fractional ideal|hyperpage}{48}
+\indexentry{ideal class group|hyperpage}{48}
+\indexentry{class number|hyperpage}{48}
+\indexentry{unit group|hyperpage}{48}
+\indexentry{unit|hyperpage}{48}
+\indexentry{multiplicative|hyperpage}{49}
+\indexentry{localization|hyperpage}{49}
+\indexentry{localization|hyperpage}{49}
 \indexentry{localization|hyperpage}{50}
 \indexentry{localization|hyperpage}{50}
-\indexentry{localization|hyperpage}{51}
-\indexentry{localization|hyperpage}{51}
-\indexentry{localization|hyperpage}{51}
-\indexentry{localization|hyperpage}{51}
-\indexentry{local|hyperpage}{51}
-\indexentry{localization|hyperpage}{55}
-\indexentry{localization|hyperpage}{55}
-\indexentry{localization|hyperpage}{55}
-\indexentry{localization|hyperpage}{55}
-\indexentry{discrete valuation ring|hyperpage}{55}
-\indexentry{uniformizer|hyperpage}{55}
+\indexentry{localization|hyperpage}{50}
+\indexentry{localization|hyperpage}{50}
+\indexentry{local|hyperpage}{50}
+\indexentry{localization|hyperpage}{54}
+\indexentry{localization|hyperpage}{54}
+\indexentry{localization|hyperpage}{54}
+\indexentry{localization|hyperpage}{54}
+\indexentry{discrete valuation ring|hyperpage}{54}
+\indexentry{uniformizer|hyperpage}{54}
+\indexentry{valuation|hyperpage}{54}
 \indexentry{valuation|hyperpage}{55}
+\indexentry{local|hyperpage}{55}
 \indexentry{valuation|hyperpage}{56}
-\indexentry{local|hyperpage}{56}
-\indexentry{valuation|hyperpage}{57}
-\indexentry{exponential valuation|hyperpage}{57}
-\indexentry{ring of \(S\)-integers|hyperpage}{58}
-\indexentry{algebraic \(S\)-integer|hyperpage}{58}
-\indexentry{\(S\)-class group|hyperpage}{58}
-\indexentry{\(S\)-class number|hyperpage}{58}
-\indexentry{\(S\)-unit group|hyperpage}{58}
-\indexentry{\(S\)-unit|hyperpage}{58}
-\indexentry{conductor|hyperpage}{59}
-\indexentry{order|hyperpage}{59}
-\indexentry{Picard group|hyperpage}{60}
-\indexentry{Picard class|hyperpage}{60}
-\indexentry{class number|hyperpage}{60}
-\indexentry{unit group|hyperpage}{60}
-\indexentry{regular|hyperpage}{65}
-\indexentry{irregular|hyperpage}{65}
-\indexentry{order|hyperpage}{67}
-\indexentry{maxiaml order|hyperpage}{68}
-\indexentry{ramification index|hyperpage}{68}
-\indexentry{residue class extension|hyperpage}{68}
-\indexentry{inertia degree|hyperpage}{68}
-\indexentry{fundamental equality|hyperpage}{70}
-\indexentry{inert|hyperpage}{71}
-\indexentry{nonsplit|hyperpage}{71}
-\indexentry{split|hyperpage}{71}
-\indexentry{totally split|hyperpage}{71}
-\indexentry{unramified|hyperpage}{71}
-\indexentry{ramified|hyperpage}{71}
-\indexentry{totally ramified|hyperpage}{71}
-\indexentry{unramified|hyperpage}{71}
-\indexentry{ramified|hyperpage}{71}
-\indexentry{totally ramified|hyperpage}{71}
-\indexentry{Dedekind-Kummer theorem|hyperpage}{71}
-\indexentry{norm|hyperpage}{75}
-\indexentry{ideal norm|hyperpage}{75}
-\indexentry{inert|hyperpage}{77}
-\indexentry{nonsplit|hyperpage}{77}
-\indexentry{split|hyperpage}{77}
-\indexentry{totally split|hyperpage}{77}
-\indexentry{unramified|hyperpage}{77}
-\indexentry{ramified|hyperpage}{77}
-\indexentry{totally ramified|hyperpage}{77}
-\indexentry{ideal norm|hyperpage}{77}
-\indexentry{inert|hyperpage}{77}
-\indexentry{nonsplit|hyperpage}{77}
-\indexentry{split|hyperpage}{77}
-\indexentry{totally split|hyperpage}{77}
-\indexentry{unramified|hyperpage}{77}
-\indexentry{ramified|hyperpage}{77}
-\indexentry{totally ramified|hyperpage}{77}
-\indexentry{ideal norm|hyperpage}{77}
-\indexentry{norm|hyperpage}{77}
-\indexentry{norm|hyperpage}{77}
-\indexentry{conjugate|hyperpage}{78}
-\indexentry{ramification index|hyperpage}{79}
-\indexentry{inertia degree|hyperpage}{79}
-\indexentry{decomposition group|hyperpage}{79}
-\indexentry{decomposition field|hyperpage}{79}
-\indexentry{inertia group|hyperpage}{82}
-\indexentry{inertia field|hyperpage}{82}
-\indexentry{ramification index|hyperpage}{84}
-\indexentry{inertia degree|hyperpage}{84}
-\indexentry{\(\smc{O}\)-lattice|hyperpage}{85}
-\indexentry{complete|hyperpage}{85}
-\indexentry{dual|hyperpage}{85}
-\indexentry{self-dual|hyperpage}{85}
-\indexentry{complement|hyperpage}{86}
-\indexentry{different|hyperpage}{86}
-\indexentry{discriminant|hyperpage}{87}
-\indexentry{tamely ramified|hyperpage}{89}
-\indexentry{widely ramified|hyperpage}{89}
-\indexentry{complement|hyperpage}{91}
-\indexentry{different|hyperpage}{91}
-\indexentry{discriminant|hyperpage}{91}
-\indexentry{signature|hyperpage}{93}
-\indexentry{canonical embedding|hyperpage}{93}
-\indexentry{Minkowski space|hyperpage}{94}
-\indexentry{Minkowski inner product|hyperpage}{94}
-\indexentry{Minkowski measure|hyperpage}{94}
-\indexentry{Minkowski trace|hyperpage}{94}
-\indexentry{Minkowski norm|hyperpage}{94}
-\indexentry{Minkowski embedding|hyperpage}{95}
-\indexentry{Minkowski bound|hyperpage}{100}
-\indexentry{rank|hyperpage}{102}
-\indexentry{logarithmic embedding|hyperpage}{103}
-\indexentry{norm-one hypersurface|hyperpage}{103}
-\indexentry{trace-zero hyperplane|hyperpage}{103}
-\indexentry{unit lattice|hyperpage}{103}
-\indexentry{system of fundamental units|hyperpage}{106}
-\indexentry{fundamental unit|hyperpage}{106}
-\indexentry{Dirichlet's unit theorem|hyperpage}{106}
-\indexentry{regulator|hyperpage}{107}
-\indexentry{Dirichlet series|hyperpage}{110}
-\indexentry{abscissa of convergence|hyperpage}{111}
-\indexentry{abscissa of absolute convergence|hyperpage}{111}
-\indexentry{Landau's theorem|hyperpage}{115}
-\indexentry{Euler product|hyperpage}{117}
-\indexentry{degree|hyperpage}{117}
-\indexentry{(classical) Perron's formula|hyperpage}{119}
+\indexentry{exponential valuation|hyperpage}{56}
+\indexentry{ring of \(S\)-integers|hyperpage}{57}
+\indexentry{algebraic \(S\)-integer|hyperpage}{57}
+\indexentry{\(S\)-class group|hyperpage}{57}
+\indexentry{\(S\)-class number|hyperpage}{57}
+\indexentry{\(S\)-unit group|hyperpage}{57}
+\indexentry{\(S\)-unit|hyperpage}{57}
+\indexentry{conductor|hyperpage}{58}
+\indexentry{order|hyperpage}{58}
+\indexentry{Picard group|hyperpage}{59}
+\indexentry{Picard class|hyperpage}{59}
+\indexentry{class number|hyperpage}{59}
+\indexentry{unit group|hyperpage}{59}
+\indexentry{regular|hyperpage}{64}
+\indexentry{irregular|hyperpage}{64}
+\indexentry{order|hyperpage}{66}
+\indexentry{maxiaml order|hyperpage}{67}
+\indexentry{ramification index|hyperpage}{67}
+\indexentry{residue class extension|hyperpage}{67}
+\indexentry{inertia degree|hyperpage}{67}
+\indexentry{fundamental equality|hyperpage}{69}
+\indexentry{inert|hyperpage}{70}
+\indexentry{nonsplit|hyperpage}{70}
+\indexentry{split|hyperpage}{70}
+\indexentry{totally split|hyperpage}{70}
+\indexentry{unramified|hyperpage}{70}
+\indexentry{ramified|hyperpage}{70}
+\indexentry{totally ramified|hyperpage}{70}
+\indexentry{unramified|hyperpage}{70}
+\indexentry{ramified|hyperpage}{70}
+\indexentry{totally ramified|hyperpage}{70}
+\indexentry{Dedekind-Kummer theorem|hyperpage}{70}
+\indexentry{norm|hyperpage}{74}
+\indexentry{ideal norm|hyperpage}{74}
+\indexentry{inert|hyperpage}{76}
+\indexentry{nonsplit|hyperpage}{76}
+\indexentry{split|hyperpage}{76}
+\indexentry{totally split|hyperpage}{76}
+\indexentry{unramified|hyperpage}{76}
+\indexentry{ramified|hyperpage}{76}
+\indexentry{totally ramified|hyperpage}{76}
+\indexentry{ideal norm|hyperpage}{76}
+\indexentry{inert|hyperpage}{76}
+\indexentry{nonsplit|hyperpage}{76}
+\indexentry{split|hyperpage}{76}
+\indexentry{totally split|hyperpage}{76}
+\indexentry{unramified|hyperpage}{76}
+\indexentry{ramified|hyperpage}{76}
+\indexentry{totally ramified|hyperpage}{76}
+\indexentry{ideal norm|hyperpage}{76}
+\indexentry{norm|hyperpage}{76}
+\indexentry{norm|hyperpage}{76}
+\indexentry{conjugate|hyperpage}{77}
+\indexentry{ramification index|hyperpage}{78}
+\indexentry{inertia degree|hyperpage}{78}
+\indexentry{decomposition group|hyperpage}{78}
+\indexentry{decomposition field|hyperpage}{78}
+\indexentry{inertia group|hyperpage}{81}
+\indexentry{inertia field|hyperpage}{81}
+\indexentry{ramification index|hyperpage}{83}
+\indexentry{inertia degree|hyperpage}{83}
+\indexentry{\(\smc{O}\)-lattice|hyperpage}{84}
+\indexentry{complete|hyperpage}{84}
+\indexentry{dual|hyperpage}{84}
+\indexentry{self-dual|hyperpage}{84}
+\indexentry{complement|hyperpage}{85}
+\indexentry{different|hyperpage}{85}
+\indexentry{discriminant|hyperpage}{86}
+\indexentry{tamely ramified|hyperpage}{88}
+\indexentry{widely ramified|hyperpage}{88}
+\indexentry{complement|hyperpage}{90}
+\indexentry{different|hyperpage}{90}
+\indexentry{discriminant|hyperpage}{90}
+\indexentry{signature|hyperpage}{92}
+\indexentry{canonical embedding|hyperpage}{92}
+\indexentry{Minkowski space|hyperpage}{93}
+\indexentry{Minkowski inner product|hyperpage}{93}
+\indexentry{Minkowski measure|hyperpage}{93}
+\indexentry{Minkowski trace|hyperpage}{93}
+\indexentry{Minkowski norm|hyperpage}{93}
+\indexentry{Minkowski embedding|hyperpage}{94}
+\indexentry{Minkowski bound|hyperpage}{99}
+\indexentry{rank|hyperpage}{101}
+\indexentry{logarithmic embedding|hyperpage}{102}
+\indexentry{norm-one hypersurface|hyperpage}{102}
+\indexentry{trace-zero hyperplane|hyperpage}{102}
+\indexentry{unit lattice|hyperpage}{102}
+\indexentry{system of fundamental units|hyperpage}{105}
+\indexentry{fundamental unit|hyperpage}{105}
+\indexentry{Dirichlet's unit theorem|hyperpage}{105}
+\indexentry{regulator|hyperpage}{106}
+\indexentry{Dirichlet series|hyperpage}{108}
+\indexentry{abscissa of convergence|hyperpage}{109}
+\indexentry{abscissa of absolute convergence|hyperpage}{109}
+\indexentry{Landau's theorem|hyperpage}{113}
+\indexentry{Euler product|hyperpage}{115}
+\indexentry{degree|hyperpage}{115}
+\indexentry{(classical) Perron's formula|hyperpage}{117}
+\indexentry{Perron's formula|hyperpage}{121}
+\indexentry{smooth weight|hyperpage}{122}
+\indexentry{unweighted|hyperpage}{122}
+\indexentry{weighted|hyperpage}{122}
 \indexentry{Perron's formula|hyperpage}{123}
-\indexentry{smooth weight|hyperpage}{124}
-\indexentry{unweighted|hyperpage}{124}
-\indexentry{weighted|hyperpage}{124}
-\indexentry{Perron's formula|hyperpage}{125}
-\indexentry{analytic \(L\)-function|hyperpage}{126}
-\indexentry{conductor|hyperpage}{126}
-\indexentry{degree|hyperpage}{126}
-\indexentry{gamma parameters|hyperpage}{126}
-\indexentry{root number|hyperpage}{126}
-\indexentry{gamma factor|hyperpage}{127}
-\indexentry{completion|hyperpage}{127}
-\indexentry{functional equation|hyperpage}{127}
-\indexentry{functional equation data|hyperpage}{127}
-\indexentry{Euler parameters|hyperpage}{127}
-\indexentry{Euler factor|hyperpage}{127}
-\indexentry{unramified|hyperpage}{127}
-\indexentry{ramified|hyperpage}{127}
-\indexentry{Selberg class|hyperpage}{127}
-\indexentry{dual|hyperpage}{128}
-\indexentry{self-dual|hyperpage}{128}
-\indexentry{primitive|hyperpage}{128}
-\indexentry{Selberg's orthogonality conjecture|hyperpage}{128}
-\indexentry{analytic conductor|hyperpage}{129}
-\indexentry{critical strip|hyperpage}{130}
-\indexentry{critical line|hyperpage}{130}
-\indexentry{central point|hyperpage}{130}
-\indexentry{approximate function equation|hyperpage}{132}
-\indexentry{trivial zero|hyperpage}{136}
-\indexentry{nontrivial zero|hyperpage}{136}
-\indexentry{Riemann hypothesis|hyperpage}{137}
-\indexentry{Selberg class Riemann hypothesis|hyperpage}{137}
-\indexentry{convexity bound|hyperpage}{138}
-\indexentry{Lindel\"of hypothesis|hyperpage}{138}
-\indexentry{Selberg class Lindel\"of hypothesis|hyperpage}{138}
-\indexentry{subconvexity estimate|hyperpage}{139}
-\indexentry{convexity breaking bound|hyperpage}{139}
-\indexentry{Burgess bound|hyperpage}{139}
-\indexentry{Weyl bound|hyperpage}{139}
-\indexentry{convexity bound|hyperpage}{139}
-\indexentry{moment|hyperpage}{139}
-\indexentry{smooth dyadic weight|hyperpage}{141}
-\indexentry{central value|hyperpage}{143}
-\indexentry{central value estimate|hyperpage}{143}
-\indexentry{von Mangoldt coefficients|hyperpage}{144}
-\indexentry{functional equation|hyperpage}{145}
-\indexentry{unfolded nontrivial zero|hyperpage}{150}
-\indexentry{zero-free region|hyperpage}{151}
-\indexentry{Siegel zero|hyperpage}{153}
-\indexentry{explicit formula|hyperpage}{154}
-\indexentry{integral lattice|hyperpage}{160}
-\indexentry{complete|hyperpage}{160}
-\indexentry{generator matrix|hyperpage}{160}
-\indexentry{covolume|hyperpage}{160}
-\indexentry{dual|hyperpage}{160}
-\indexentry{self-dual|hyperpage}{161}
-\indexentry{Minkowski's lattice point theorem|hyperpage}{163}
-\indexentry{Fourier transform|hyperpage}{164}
-\indexentry{Fourier coefficient|hyperpage}{164}
-\indexentry{Fourier series|hyperpage}{164}
-\indexentry{Dirichlet-Jordan test|hyperpage}{165}
-\indexentry{Poisson summation|hyperpage}{165}
-\indexentry{Schwarz class|hyperpage}{168}
-\indexentry{gamma function|hyperpage}{170}
-\indexentry{functional equation|hyperpage}{170}
-\indexentry{beta function|hyperpage}{171}
-\indexentry{Euler's reflection formula|hyperpage}{172}
-\indexentry{Legendre's duplication formula|hyperpage}{174}
-\indexentry{Stirling's formula|hyperpage}{177}
-\indexentry{digamma function|hyperpage}{181}
+\indexentry{analytic \(L\)-function|hyperpage}{124}
+\indexentry{conductor|hyperpage}{124}
+\indexentry{degree|hyperpage}{124}
+\indexentry{gamma parameters|hyperpage}{124}
+\indexentry{root number|hyperpage}{124}
+\indexentry{gamma factor|hyperpage}{125}
+\indexentry{completion|hyperpage}{125}
+\indexentry{functional equation|hyperpage}{125}
+\indexentry{functional equation data|hyperpage}{125}
+\indexentry{Euler parameters|hyperpage}{125}
+\indexentry{Euler factor|hyperpage}{125}
+\indexentry{unramified|hyperpage}{125}
+\indexentry{ramified|hyperpage}{125}
+\indexentry{Selberg class|hyperpage}{125}
+\indexentry{dual|hyperpage}{126}
+\indexentry{self-dual|hyperpage}{126}
+\indexentry{primitive|hyperpage}{126}
+\indexentry{Selberg's orthogonality conjecture|hyperpage}{126}
+\indexentry{analytic conductor|hyperpage}{127}
+\indexentry{critical strip|hyperpage}{128}
+\indexentry{critical line|hyperpage}{128}
+\indexentry{central point|hyperpage}{128}
+\indexentry{approximate function equation|hyperpage}{130}
+\indexentry{trivial zero|hyperpage}{134}
+\indexentry{nontrivial zero|hyperpage}{134}
+\indexentry{Riemann hypothesis|hyperpage}{135}
+\indexentry{Selberg class Riemann hypothesis|hyperpage}{135}
+\indexentry{convexity bound|hyperpage}{136}
+\indexentry{Lindel\"of hypothesis|hyperpage}{136}
+\indexentry{Selberg class Lindel\"of hypothesis|hyperpage}{136}
+\indexentry{subconvexity estimate|hyperpage}{137}
+\indexentry{convexity breaking bound|hyperpage}{137}
+\indexentry{Burgess bound|hyperpage}{137}
+\indexentry{Weyl bound|hyperpage}{137}
+\indexentry{convexity bound|hyperpage}{137}
+\indexentry{moment|hyperpage}{137}
+\indexentry{smooth dyadic weight|hyperpage}{139}
+\indexentry{central value|hyperpage}{141}
+\indexentry{central value estimate|hyperpage}{141}
+\indexentry{von Mangoldt coefficients|hyperpage}{142}
+\indexentry{functional equation|hyperpage}{143}
+\indexentry{unfolded nontrivial zero|hyperpage}{148}
+\indexentry{zero-free region|hyperpage}{149}
+\indexentry{Siegel zero|hyperpage}{151}
+\indexentry{explicit formula|hyperpage}{152}
+\indexentry{integral lattice|hyperpage}{155}
+\indexentry{complete|hyperpage}{155}
+\indexentry{generator matrix|hyperpage}{155}
+\indexentry{covolume|hyperpage}{155}
+\indexentry{dual|hyperpage}{155}
+\indexentry{self-dual|hyperpage}{156}
+\indexentry{Minkowski's lattice point theorem|hyperpage}{158}
+\indexentry{Fourier transform|hyperpage}{159}
+\indexentry{Fourier coefficient|hyperpage}{159}
+\indexentry{Fourier series|hyperpage}{159}
+\indexentry{Dirichlet-Jordan test|hyperpage}{160}
+\indexentry{Poisson summation|hyperpage}{161}
+\indexentry{Schwarz class|hyperpage}{163}
+\indexentry{gamma function|hyperpage}{165}
+\indexentry{functional equation|hyperpage}{165}
+\indexentry{beta function|hyperpage}{166}
+\indexentry{Euler's reflection formula|hyperpage}{167}
+\indexentry{Legendre's duplication formula|hyperpage}{169}
+\indexentry{Stirling's formula|hyperpage}{172}
+\indexentry{digamma function|hyperpage}{176}

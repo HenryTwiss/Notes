@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  21 APR 2026 23:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  22 APR 2026 00:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -593,7 +593,7 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
 
 Writing index file CAANT.idx
-(./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Geometry_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux) (./Appendices/Integral_Lattices.aux) (./Appendices/Poisson_Summation.aux) (./Appendices/The_Gamma_Function.aux))
+(./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Geometry_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux) (./Appendices/Integral_Lattices.aux) (./Appendices/The_Fourier_Transform.aux) (./Appendices/Poisson_Summation.aux) (./Appendices/The_Gamma_Function.aux))
 \openout1 = `CAANT.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -703,7 +703,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...rline {7}Dirichlet Series}{110}{chapter.7}
+l.31 ...}Analytic \(L\)-functions}{124}{chapter.6}
                                                   % [1
 
 ])
@@ -731,26 +731,22 @@ Package hyperref Info: bookmark level for unknown proof defaults to 0 on input l
  [4]
 Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 112.
 ) [5]
+\openout2 = `Chapters/Dirichlet_Characters_and_Exponential_Sums.aux'.
+
+ (./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
 Chapter 2.
 [6
 
 
 
-]
-\openout2 = `Chapters/Dirichlet_Characters_and_Exponential_Sums.aux'.
-
- (./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
-Chapter 3.
-[7
-
 
 ]
-Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 23.
- [8]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 59.
- [9] [10] [11] [12] [13] [14] [15]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 284.
- [16] [17] [18] [19] [20] [21]) [22] [23
+Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 24.
+ [7]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 60.
+ [8] [9] [10] [11] [12] [13] [14]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 285.
+ [15] [16] [17] [18] [19] [20]) [21] [22
 
 
 
@@ -758,118 +754,109 @@ Package hyperref Info: bookmark level for unknown corollary defaults to 0 on inp
 \openout2 = `Chapters/Arithmetic_of_Number_Fields.aux'.
 
  (./Chapters/Arithmetic_of_Number_Fields.tex
-Chapter 4.
-[24
+Chapter 3.
+[23
 
 
 ]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 58.
- [25] [26]
+ [24] [25]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 114.
- [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
+ [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 494.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91]) [92]
+) [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]) [91]
 \openout2 = `Chapters/Geometry_of_Number_Fields.aux'.
 
  (./Chapters/Geometry_of_Number_Fields.tex
-Chapter 5.
-[93
+Chapter 4.
+[92
 
 
 
 
-] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106]) [107]
-Chapter 6.
-[108
+] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105]) [106] [107
 
 
-
-] [109
 
 ]
 \openout2 = `Chapters/Dirichlet_Series.aux'.
 
  (./Chapters/Dirichlet_Series.tex
-Chapter 7.
-[110
+Chapter 5.
+[108
 
 
-] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]) [125]
+] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]) [123]
 \openout2 = `Chapters/Analytic_L-functions.aux'.
 
  (./Chapters/Analytic_L-functions.tex
-Chapter 8.
-[126
+Chapter 6.
+[124
 
 
 
 
-] [127]
+] [125]
 Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 74.
- [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154]) [155]
-Chapter 9.
-[156
-
-
-
-]
-Chapter 10.
-[157
-
-]
-Chapter 11.
-[158
-
-]
+ [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152]) [153]
 Appendix A.
-[159
+[154
+
+
 
 ]
 \openout2 = `Appendices/Integral_Lattices.aux'.
 
- (./Appendices/Integral_Lattices.tex [160
+ (./Appendices/Integral_Lattices.tex [155
 
-] [161] [162]) [163]
+] [156] [157]) [158]
+\openout2 = `Appendices/The_Fourier_Transform.aux'.
+
+ (./Appendices/The_Fourier_Transform.tex [159
+
+
+
+]) [160]
 \openout2 = `Appendices/Poisson_Summation.aux'.
 
- (./Appendices/Poisson_Summation.tex [164
+ (./Appendices/Poisson_Summation.tex [161
 
 
 
-] [165] [166] [167] [168]) [169]
+] [162] [163]) [164]
 \openout2 = `Appendices/The_Gamma_Function.aux'.
 
- (./Appendices/The_Gamma_Function.tex [170
+ (./Appendices/The_Gamma_Function.tex [165
 
 
 
-] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182]) [183] (./CAANT.ind [184
+] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175] [176] [177]) [178] (./CAANT.ind [179
 
 
 
-] [185] [186])
+] [180] [181])
 \tf@thm=\write7
 \openout7 = `CAANT.thm'.
 
- (./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Geometry_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux) (./Appendices/Integral_Lattices.aux) (./Appendices/Poisson_Summation.aux) (./Appendices/The_Gamma_Function.aux))
+ (./CAANT.aux (./Chapters/Arithmetic_Functions.aux) (./Chapters/Dirichlet_Characters_and_Exponential_Sums.aux) (./Chapters/Arithmetic_of_Number_Fields.aux) (./Chapters/Geometry_of_Number_Fields.aux) (./Chapters/Dirichlet_Series.aux) (./Chapters/Analytic_L-functions.aux) (./Appendices/Integral_Lattices.aux) (./Appendices/The_Fourier_Transform.aux) (./Appendices/Poisson_Summation.aux) (./Appendices/The_Gamma_Function.aux))
 Package rerunfilecheck Info: File `CAANT.out' has not changed.
-(rerunfilecheck)             Checksum: 3C142FD991A3EE1B916C5EA19E0F5EFE;8772.
+(rerunfilecheck)             Checksum: DAFA4459E471A2BCFCF46EEE5A831CA7;7507.
  ) 
 Here is how much of TeX's memory you used:
- 28154 strings out of 478268
- 572813 string characters out of 5846347
- 813265 words of memory out of 5000000
- 45206 multiletter control sequences out of 15000+600000
- 491403 words of font info for 115 fonts, out of 8000000 for 9000
+ 28167 strings out of 478268
+ 574101 string characters out of 5846347
+ 814659 words of memory out of 5000000
+ 45223 multiletter control sequences out of 15000+600000
+ 490790 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2083b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on CAANT.pdf (189 pages, 965961 bytes).
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on CAANT.pdf (184 pages, 941797 bytes).
 PDF statistics:
- 2352 PDF objects out of 2487 (max. 8388607)
- 2088 compressed objects within 21 object streams
- 656 named destinations out of 1000 (max. 500000)
- 397 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2299 PDF objects out of 2487 (max. 8388607)
+ 2044 compressed objects within 21 object streams
+ 647 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

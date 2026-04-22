@@ -836,6 +836,9 @@ INPUT Chapters/Analytic_L-functions.aux
 INPUT ./Appendices/Integral_Lattices.aux
 INPUT Appendices/Integral_Lattices.aux
 INPUT Appendices/Integral_Lattices.aux
+INPUT ./Appendices/The_Fourier_Transform.aux
+INPUT Appendices/The_Fourier_Transform.aux
+INPUT Appendices/The_Fourier_Transform.aux
 INPUT ./Appendices/Poisson_Summation.aux
 INPUT Appendices/Poisson_Summation.aux
 INPUT Appendices/Poisson_Summation.aux
@@ -966,7 +969,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 OUTPUT CAANT.toc
 INPUT ./Chapters/Arithmetic_Functions.tex
 INPUT ./Chapters/Arithmetic_Functions.tex
@@ -990,7 +992,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss17.tfm
 INPUT ./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
 INPUT ./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
 INPUT ./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
@@ -1088,6 +1089,16 @@ INPUT ./Appendices/Integral_Lattices.tex
 INPUT Appendices/Integral_Lattices.tex
 INPUT ./Appendices/Integral_Lattices.tex
 INPUT Appendices/Integral_Lattices.tex
+INPUT ./Appendices/The_Fourier_Transform.tex
+INPUT ./Appendices/The_Fourier_Transform.tex
+INPUT ./Appendices/The_Fourier_Transform.tex
+OUTPUT Appendices/The_Fourier_Transform.aux
+INPUT ./Appendices/The_Fourier_Transform.tex
+INPUT ./Appendices/The_Fourier_Transform.tex
+INPUT ./Appendices/The_Fourier_Transform.tex
+INPUT Appendices/The_Fourier_Transform.tex
+INPUT ./Appendices/The_Fourier_Transform.tex
+INPUT Appendices/The_Fourier_Transform.tex
 INPUT ./Appendices/Poisson_Summation.tex
 INPUT ./Appendices/Poisson_Summation.tex
 INPUT ./Appendices/Poisson_Summation.tex
@@ -1135,6 +1146,9 @@ INPUT Chapters/Analytic_L-functions.aux
 INPUT ./Appendices/Integral_Lattices.aux
 INPUT Appendices/Integral_Lattices.aux
 INPUT Appendices/Integral_Lattices.aux
+INPUT ./Appendices/The_Fourier_Transform.aux
+INPUT Appendices/The_Fourier_Transform.aux
+INPUT Appendices/The_Fourier_Transform.aux
 INPUT ./Appendices/Poisson_Summation.aux
 INPUT Appendices/Poisson_Summation.aux
 INPUT Appendices/Poisson_Summation.aux
@@ -1158,8 +1172,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

@@ -1,12 +1,12 @@
 # Fdb version 3
-["makeindex Poisson_Summation.idx"] 1775097467 "Poisson_Summation.idx" "Poisson_Summation.ind" "Poisson_Summation" 1775577220
-  "Poisson_Summation.idx" 0 -1 0 "pdflatex"
+["makeindex Poisson_Summation.idx"] 1776833426 "Poisson_Summation.idx" "Poisson_Summation.ind" "Poisson_Summation" 1776833476
+  "Poisson_Summation.idx" 1776833437 84 3455a3a358cd2c5580e8bf916708934e "pdflatex"
   (generated)
   "Poisson_Summation.ilg"
   "Poisson_Summation.ind"
-["pdflatex"] 1775577220 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Poisson Summation/Poisson_Summation.tex" "Poisson_Summation.pdf" "Poisson_Summation" 1775577220
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Poisson Summation/Poisson_Summation.tex" 1775577219 15173 a612ab9dff220bd71a10348140c7b988 ""
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1772735856 5446 b8e8c4c981b5aeb2a22d0d715bd1341b ""
+["pdflatex"] 1776833476 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Poisson Summation/Poisson_Summation.tex" "Poisson_Summation.pdf" "Poisson_Summation" 1776833476
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Poisson Summation/Poisson_Summation.tex" 1776833475 10597 2ce4eb8771e8ea305e317c9ea8848394 ""
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1776627554 5445 43aa2dd86096c037b87786ce22e1e358 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -52,7 +52,6 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb" 1248133631 38151 b99966dad75d57fae7995e2606557fa7 ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb" 1248133631 35479 892d27442ef9ef29ce1ee57aa0e8a665 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -194,10 +193,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Poisson_Summation.aux" 1775577220 2465 1b38cf78fdd7b6b2140dd4032f6fb712 "pdflatex"
-  "Poisson_Summation.ind" 0 -1 0 "makeindex Poisson_Summation.idx"
-  "Poisson_Summation.out" 1775577220 131 f63035683b372262b96f85d2074ed66b "pdflatex"
-  "Poisson_Summation.tex" 1775577219 15173 a612ab9dff220bd71a10348140c7b988 ""
+  "Poisson_Summation.aux" 1776833476 2039 9237d4f56b877c48ec8df078214912b1 "pdflatex"
+  "Poisson_Summation.ind" 1776833426 128 ed4c6d9ca77ed26cd27aab7ba030c0e0 "makeindex Poisson_Summation.idx"
+  "Poisson_Summation.out" 1776833476 131 f63035683b372262b96f85d2074ed66b "pdflatex"
+  "Poisson_Summation.tex" 1776833475 10597 2ce4eb8771e8ea305e317c9ea8848394 ""
   (generated)
   "Poisson_Summation.aux"
   "Poisson_Summation.idx"

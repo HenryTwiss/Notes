@@ -1,279 +1,279 @@
 \begin{theindex}
 
-  \item (classical) Perron's formula, \hyperpage{119}
-  \item \(S\)-class group, \hyperpage{58}
-  \item \(S\)-class number, \hyperpage{58}
-  \item \(S\)-unit, \hyperpage{58}
-  \item \(S\)-unit group, \hyperpage{58}
-  \item \(\smc{O}\)-lattice, \hyperpage{85}
+  \item (classical) Perron's formula, \hyperpage{117}
+  \item \(S\)-class group, \hyperpage{57}
+  \item \(S\)-class number, \hyperpage{57}
+  \item \(S\)-unit, \hyperpage{57}
+  \item \(S\)-unit group, \hyperpage{57}
+  \item \(\smc{O}\)-lattice, \hyperpage{84}
 
   \indexspace
 
-  \item above, \hyperpage{48}
-  \item abscissa of absolute convergence, \hyperpage{111}
-  \item abscissa of convergence, \hyperpage{111}
+  \item above, \hyperpage{47}
+  \item abscissa of absolute convergence, \hyperpage{109}
+  \item abscissa of convergence, \hyperpage{109}
   \item additive, \hyperpage{2}
-  \item algebraic \(S\)-integer, \hyperpage{58}
-  \item algebraic integer, \hyperpage{27}
-  \item algebraic number, \hyperpage{27}
-  \item analytic \(L\)-function, \hyperpage{126}
-  \item analytic conductor, \hyperpage{129}
-  \item approximate function equation, \hyperpage{132}
+  \item algebraic \(S\)-integer, \hyperpage{57}
+  \item algebraic integer, \hyperpage{26}
+  \item algebraic number, \hyperpage{26}
+  \item analytic \(L\)-function, \hyperpage{124}
+  \item analytic conductor, \hyperpage{127}
+  \item approximate function equation, \hyperpage{130}
   \item arithmetic, \hyperpage{2}
 
   \indexspace
 
-  \item below, \hyperpage{48}
-  \item beta function, \hyperpage{171}
-  \item Burgess bound, \hyperpage{139}
+  \item below, \hyperpage{47}
+  \item beta function, \hyperpage{166}
+  \item Burgess bound, \hyperpage{137}
 
   \indexspace
 
-  \item canonical embedding, \hyperpage{93}
-  \item central point, \hyperpage{130}
-  \item central value, \hyperpage{143}
-  \item central value estimate, \hyperpage{143}
+  \item canonical embedding, \hyperpage{92}
+  \item central point, \hyperpage{128}
+  \item central value, \hyperpage{141}
+  \item central value estimate, \hyperpage{141}
   \item characteristic function of square-free integers, \hyperpage{3}
-  \item class number, \hyperpage{44}, \hyperpage{49}, \hyperpage{60}
-  \item complement, \hyperpage{86}, \hyperpage{91}
-  \item complete, \hyperpage{85}, \hyperpage{160}
+  \item class number, \hyperpage{43}, \hyperpage{48}, \hyperpage{59}
+  \item complement, \hyperpage{85}, \hyperpage{90}
+  \item complete, \hyperpage{84}, \hyperpage{155}
   \item completely additive, \hyperpage{2}
   \item completely multiplicative, \hyperpage{2}
-  \item completion, \hyperpage{127}
-  \item complex, \hyperpage{10}
-  \item conductor, \hyperpage{9}, \hyperpage{59}, \hyperpage{126}
-  \item conjugate, \hyperpage{78}
+  \item completion, \hyperpage{125}
+  \item complex, \hyperpage{9}
+  \item conductor, \hyperpage{8}, \hyperpage{58}, \hyperpage{124}
+  \item conjugate, \hyperpage{77}
   \item constant function, \hyperpage{2}
-  \item contraction, \hyperpage{49}
-  \item convexity bound, \hyperpage{138, 139}
-  \item convexity breaking bound, \hyperpage{139}
-  \item covolume, \hyperpage{160}
-  \item critical line, \hyperpage{130}
-  \item critical strip, \hyperpage{130}
-  \item cubic, \hyperpage{11}, \hyperpage{27}
+  \item contraction, \hyperpage{48}
+  \item convexity bound, \hyperpage{136, 137}
+  \item convexity breaking bound, \hyperpage{137}
+  \item covolume, \hyperpage{155}
+  \item critical line, \hyperpage{128}
+  \item critical strip, \hyperpage{128}
+  \item cubic, \hyperpage{10}, \hyperpage{26}
 
   \indexspace
 
-  \item decomposition field, \hyperpage{79}
-  \item decomposition group, \hyperpage{79}
-  \item Dedekind domain, \hyperpage{39}
-  \item Dedekind extension, \hyperpage{48}
-  \item Dedekind-Kummer theorem, \hyperpage{71}
-  \item degree, \hyperpage{27}, \hyperpage{117}, \hyperpage{126}
-  \item different, \hyperpage{86}, \hyperpage{91}
-  \item digamma function, \hyperpage{181}
-  \item Dirichlet character, \hyperpage{7}
+  \item decomposition field, \hyperpage{78}
+  \item decomposition group, \hyperpage{78}
+  \item Dedekind domain, \hyperpage{38}
+  \item Dedekind extension, \hyperpage{47}
+  \item Dedekind-Kummer theorem, \hyperpage{70}
+  \item degree, \hyperpage{26}, \hyperpage{115}, \hyperpage{124}
+  \item different, \hyperpage{85}, \hyperpage{90}
+  \item digamma function, \hyperpage{176}
+  \item Dirichlet character, \hyperpage{6}
   \item Dirichlet convolution, \hyperpage{4}
-  \item Dirichlet orthogonality relations, \hyperpage{8}
-  \item Dirichlet series, \hyperpage{110}
-  \item Dirichlet's unit theorem, \hyperpage{106}
-  \item Dirichlet-Jordan test, \hyperpage{165}
-  \item discrete valuation ring, \hyperpage{55}
-  \item discriminant, \hyperpage{31}, \hyperpage{38}, \hyperpage{87}, 
-		\hyperpage{91}
-  \item divides, \hyperpage{42}
+  \item Dirichlet orthogonality relations, \hyperpage{7}
+  \item Dirichlet series, \hyperpage{108}
+  \item Dirichlet's unit theorem, \hyperpage{105}
+  \item Dirichlet-Jordan test, \hyperpage{160}
+  \item discrete valuation ring, \hyperpage{54}
+  \item discriminant, \hyperpage{30}, \hyperpage{37}, \hyperpage{86}, 
+		\hyperpage{90}
+  \item divides, \hyperpage{41}
   \item divisor function, \hyperpage{3}
-  \item dual, \hyperpage{85}, \hyperpage{128}, \hyperpage{160}
+  \item dual, \hyperpage{84}, \hyperpage{126}, \hyperpage{155}
 
   \indexspace
 
-  \item embedding matrix, \hyperpage{33}
-  \item epsilon factor, \hyperpage{16}, \hyperpage{20}
-  \item Euler factor, \hyperpage{127}
-  \item Euler parameters, \hyperpage{127}
-  \item Euler product, \hyperpage{117}
-  \item Euler's reflection formula, \hyperpage{172}
+  \item embedding matrix, \hyperpage{32}
+  \item epsilon factor, \hyperpage{15}, \hyperpage{19}
+  \item Euler factor, \hyperpage{125}
+  \item Euler parameters, \hyperpage{125}
+  \item Euler product, \hyperpage{115}
+  \item Euler's reflection formula, \hyperpage{167}
   \item Euler's totient function, \hyperpage{3}
-  \item even, \hyperpage{11}
-  \item exactly divides, \hyperpage{42}
-  \item explicit formula, \hyperpage{154}
-  \item exponential valuation, \hyperpage{57}
+  \item even, \hyperpage{10}
+  \item exactly divides, \hyperpage{41}
+  \item explicit formula, \hyperpage{152}
+  \item exponential valuation, \hyperpage{56}
 
   \indexspace
 
-  \item field norm, \hyperpage{28}, \hyperpage{38}
-  \item field trace, \hyperpage{28}, \hyperpage{38}
-  \item Fourier coefficient, \hyperpage{164}
-  \item Fourier series, \hyperpage{164}
-  \item Fourier transform, \hyperpage{164}
-  \item fractional ideal, \hyperpage{38}, \hyperpage{49}
-  \item functional equation, \hyperpage{127}, \hyperpage{145}, 
-		\hyperpage{170}
-  \item functional equation data, \hyperpage{127}
-  \item fundamental discriminant, \hyperpage{11}
-  \item fundamental equality, \hyperpage{70}
-  \item fundamental unit, \hyperpage{106}
+  \item field norm, \hyperpage{27}, \hyperpage{37}
+  \item field trace, \hyperpage{27}, \hyperpage{37}
+  \item Fourier coefficient, \hyperpage{159}
+  \item Fourier series, \hyperpage{159}
+  \item Fourier transform, \hyperpage{159}
+  \item fractional ideal, \hyperpage{37}, \hyperpage{48}
+  \item functional equation, \hyperpage{125}, \hyperpage{143}, 
+		\hyperpage{165}
+  \item functional equation data, \hyperpage{125}
+  \item fundamental discriminant, \hyperpage{10}
+  \item fundamental equality, \hyperpage{69}
+  \item fundamental unit, \hyperpage{105}
 
   \indexspace
 
-  \item gamma factor, \hyperpage{127}
-  \item gamma function, \hyperpage{170}
-  \item gamma parameters, \hyperpage{126}
-  \item Gauss sum, \hyperpage{14}
+  \item gamma factor, \hyperpage{125}
+  \item gamma function, \hyperpage{165}
+  \item gamma parameters, \hyperpage{124}
+  \item Gauss sum, \hyperpage{13}
   \item generalized sum of divisors function, \hyperpage{3}
-  \item generator matrix, \hyperpage{160}
-  \item greatest common divisor, \hyperpage{43}
+  \item generator matrix, \hyperpage{155}
+  \item greatest common divisor, \hyperpage{42}
 
   \indexspace
 
-  \item ideal class, \hyperpage{43}
-  \item ideal class group, \hyperpage{43}, \hyperpage{49}
-  \item ideal norm, \hyperpage{75}, \hyperpage{77}
+  \item ideal class, \hyperpage{42}
+  \item ideal class group, \hyperpage{42}, \hyperpage{48}
+  \item ideal norm, \hyperpage{74}, \hyperpage{76}
   \item identity function, \hyperpage{3}
-  \item imprimitive, \hyperpage{9}
+  \item imprimitive, \hyperpage{8}
   \item indicator function, \hyperpage{2}
-  \item induced, \hyperpage{9}
-  \item inert, \hyperpage{71}, \hyperpage{77}
-  \item inertia degree, \hyperpage{68}, \hyperpage{79}, \hyperpage{84}
-  \item inertia field, \hyperpage{82}
-  \item inertia group, \hyperpage{82}
-  \item integral, \hyperpage{24}
-  \item integral basis, \hyperpage{34}, \hyperpage{38}
-  \item integral closure, \hyperpage{25}
-  \item integral ideal, \hyperpage{38}, \hyperpage{49}
-  \item integral lattice, \hyperpage{160}
-  \item integrally closed, \hyperpage{25}
-  \item integrally closed domain, \hyperpage{25}
-  \item inverse, \hyperpage{38}
-  \item invertible, \hyperpage{39}
-  \item irregular, \hyperpage{65}
+  \item induced, \hyperpage{8}
+  \item inert, \hyperpage{70}, \hyperpage{76}
+  \item inertia degree, \hyperpage{67}, \hyperpage{78}, \hyperpage{83}
+  \item inertia field, \hyperpage{81}
+  \item inertia group, \hyperpage{81}
+  \item integral, \hyperpage{23}
+  \item integral basis, \hyperpage{33}, \hyperpage{37}
+  \item integral closure, \hyperpage{24}
+  \item integral ideal, \hyperpage{37}, \hyperpage{48}
+  \item integral lattice, \hyperpage{155}
+  \item integrally closed, \hyperpage{24}
+  \item integrally closed domain, \hyperpage{24}
+  \item inverse, \hyperpage{37}
+  \item invertible, \hyperpage{38}
+  \item irregular, \hyperpage{64}
 
   \indexspace
 
-  \item Landau's theorem, \hyperpage{115}
-  \item least common multiple, \hyperpage{43}
-  \item Legendre's duplication formula, \hyperpage{174}
-  \item Lindel\"of hypothesis, \hyperpage{138}
+  \item Landau's theorem, \hyperpage{113}
+  \item least common multiple, \hyperpage{42}
+  \item Legendre's duplication formula, \hyperpage{169}
+  \item Lindel\"of hypothesis, \hyperpage{136}
   \item Liouville's function, \hyperpage{3}
-  \item local, \hyperpage{51}, \hyperpage{56}
-  \item localization, \hyperpage{50, 51}, \hyperpage{55}
+  \item local, \hyperpage{50}, \hyperpage{55}
+  \item localization, \hyperpage{49, 50}, \hyperpage{54}
   \item logarithm, \hyperpage{3}
-  \item logarithmic embedding, \hyperpage{103}
+  \item logarithmic embedding, \hyperpage{102}
 
   \indexspace
 
   \item M\"obius function, \hyperpage{3}
   \item M\"obius inversion, \hyperpage{5}
-  \item maxiaml order, \hyperpage{68}
-  \item Minkowski bound, \hyperpage{100}
-  \item Minkowski embedding, \hyperpage{95}
-  \item Minkowski inner product, \hyperpage{94}
-  \item Minkowski measure, \hyperpage{94}
-  \item Minkowski norm, \hyperpage{94}
-  \item Minkowski space, \hyperpage{94}
-  \item Minkowski trace, \hyperpage{94}
-  \item Minkowski's lattice point theorem, \hyperpage{163}
-  \item modulus, \hyperpage{7}
-  \item moment, \hyperpage{139}
-  \item monogenic, \hyperpage{37, 38}
-  \item multiplicative, \hyperpage{2}, \hyperpage{50}
+  \item maxiaml order, \hyperpage{67}
+  \item Minkowski bound, \hyperpage{99}
+  \item Minkowski embedding, \hyperpage{94}
+  \item Minkowski inner product, \hyperpage{93}
+  \item Minkowski measure, \hyperpage{93}
+  \item Minkowski norm, \hyperpage{93}
+  \item Minkowski space, \hyperpage{93}
+  \item Minkowski trace, \hyperpage{93}
+  \item Minkowski's lattice point theorem, \hyperpage{158}
+  \item modulus, \hyperpage{6}
+  \item moment, \hyperpage{137}
+  \item monogenic, \hyperpage{36, 37}
+  \item multiplicative, \hyperpage{2}, \hyperpage{49}
 
   \indexspace
 
-  \item nonsplit, \hyperpage{71}, \hyperpage{77}
-  \item nontrivial zero, \hyperpage{136}
-  \item norm, \hyperpage{28}, \hyperpage{75}, \hyperpage{77}
-  \item norm-one hypersurface, \hyperpage{103}
-  \item normalization, \hyperpage{25}
-  \item number field, \hyperpage{27}
+  \item nonsplit, \hyperpage{70}, \hyperpage{76}
+  \item nontrivial zero, \hyperpage{134}
+  \item norm, \hyperpage{27}, \hyperpage{74}, \hyperpage{76}
+  \item norm-one hypersurface, \hyperpage{102}
+  \item normalization, \hyperpage{24}
+  \item number field, \hyperpage{26}
   \item number of distinct prime factors function, \hyperpage{4}
 
   \indexspace
 
-  \item odd, \hyperpage{11}
-  \item order, \hyperpage{10}, \hyperpage{59}, \hyperpage{67}
+  \item odd, \hyperpage{10}
+  \item order, \hyperpage{9}, \hyperpage{58}, \hyperpage{66}
 
   \indexspace
 
-  \item Perron's formula, \hyperpage{123}, \hyperpage{125}
-  \item Picard class, \hyperpage{60}
-  \item Picard group, \hyperpage{60}
-  \item Poisson summation, \hyperpage{165}
-  \item prime, \hyperpage{38}, \hyperpage{49}
-  \item prime factorization, \hyperpage{42}
-  \item prime factors, \hyperpage{42}
-  \item primitive, \hyperpage{9}, \hyperpage{128}
-  \item principal, \hyperpage{7}, \hyperpage{38}
+  \item Perron's formula, \hyperpage{121}, \hyperpage{123}
+  \item Picard class, \hyperpage{59}
+  \item Picard group, \hyperpage{59}
+  \item Poisson summation, \hyperpage{161}
+  \item prime, \hyperpage{37}, \hyperpage{48}
+  \item prime factorization, \hyperpage{41}
+  \item prime factors, \hyperpage{41}
+  \item primitive, \hyperpage{8}, \hyperpage{126}
+  \item principal, \hyperpage{6}, \hyperpage{37}
 
   \indexspace
 
-  \item quadratic, \hyperpage{11}, \hyperpage{27}
-  \item quadratic Gauss sum, \hyperpage{17}
+  \item quadratic, \hyperpage{10}, \hyperpage{26}
+  \item quadratic Gauss sum, \hyperpage{16}
 
   \indexspace
 
-  \item Ramanujan sum, \hyperpage{13, 14}
-  \item ramification index, \hyperpage{68}, \hyperpage{79}, 
-		\hyperpage{84}
-  \item ramified, \hyperpage{71}, \hyperpage{77}, \hyperpage{127}
-  \item rank, \hyperpage{102}
-  \item real, \hyperpage{10}
-  \item regular, \hyperpage{65}
-  \item regulator, \hyperpage{107}
-  \item relatively prime, \hyperpage{43}
-  \item residue class extension, \hyperpage{68}
-  \item residue class field, \hyperpage{46}
-  \item Riemann hypothesis, \hyperpage{137}
-  \item ring of \(S\)-integers, \hyperpage{58}
-  \item ring of integers, \hyperpage{27}
-  \item root number, \hyperpage{126}
+  \item Ramanujan sum, \hyperpage{12, 13}
+  \item ramification index, \hyperpage{67}, \hyperpage{78}, 
+		\hyperpage{83}
+  \item ramified, \hyperpage{70}, \hyperpage{76}, \hyperpage{125}
+  \item rank, \hyperpage{101}
+  \item real, \hyperpage{9}
+  \item regular, \hyperpage{64}
+  \item regulator, \hyperpage{106}
+  \item relatively prime, \hyperpage{42}
+  \item residue class extension, \hyperpage{67}
+  \item residue class field, \hyperpage{45}
+  \item Riemann hypothesis, \hyperpage{135}
+  \item ring of \(S\)-integers, \hyperpage{57}
+  \item ring of integers, \hyperpage{26}
+  \item root number, \hyperpage{124}
 
   \indexspace
 
-  \item Schwarz class, \hyperpage{168}
-  \item Selberg class, \hyperpage{127}
-  \item Selberg class Lindel\"of hypothesis, \hyperpage{138}
-  \item Selberg class Riemann hypothesis, \hyperpage{137}
-  \item Selberg's orthogonality conjecture, \hyperpage{128}
-  \item self-dual, \hyperpage{85}, \hyperpage{128}, \hyperpage{161}
-  \item Siegel zero, \hyperpage{153}
-  \item signature, \hyperpage{93}
-  \item smooth dyadic weight, \hyperpage{141}
-  \item smooth weight, \hyperpage{124}
-  \item split, \hyperpage{71}, \hyperpage{77}
-  \item Stirling's formula, \hyperpage{177}
-  \item subconvexity estimate, \hyperpage{139}
+  \item Schwarz class, \hyperpage{163}
+  \item Selberg class, \hyperpage{125}
+  \item Selberg class Lindel\"of hypothesis, \hyperpage{136}
+  \item Selberg class Riemann hypothesis, \hyperpage{135}
+  \item Selberg's orthogonality conjecture, \hyperpage{126}
+  \item self-dual, \hyperpage{84}, \hyperpage{126}, \hyperpage{156}
+  \item Siegel zero, \hyperpage{151}
+  \item signature, \hyperpage{92}
+  \item smooth dyadic weight, \hyperpage{139}
+  \item smooth weight, \hyperpage{122}
+  \item split, \hyperpage{70}, \hyperpage{76}
+  \item Stirling's formula, \hyperpage{172}
+  \item subconvexity estimate, \hyperpage{137}
   \item sum of divisors function, \hyperpage{3}
-  \item system of fundamental units, \hyperpage{106}
+  \item system of fundamental units, \hyperpage{105}
 
   \indexspace
 
-  \item tamely ramified, \hyperpage{89}
+  \item tamely ramified, \hyperpage{88}
   \item total number of prime divisors function, \hyperpage{4}
-  \item totally ramified, \hyperpage{71}, \hyperpage{77}
-  \item totally split, \hyperpage{71}, \hyperpage{77}
-  \item trace, \hyperpage{28}
-  \item trace form, \hyperpage{32}, \hyperpage{38}
-  \item trace matrix, \hyperpage{31}
-  \item trace-zero hyperplane, \hyperpage{103}
-  \item trivial Dirichlet character, \hyperpage{7}
-  \item trivial zero, \hyperpage{136}
+  \item totally ramified, \hyperpage{70}, \hyperpage{76}
+  \item totally split, \hyperpage{70}, \hyperpage{76}
+  \item trace, \hyperpage{27}
+  \item trace form, \hyperpage{31}, \hyperpage{37}
+  \item trace matrix, \hyperpage{30}
+  \item trace-zero hyperplane, \hyperpage{102}
+  \item trivial Dirichlet character, \hyperpage{6}
+  \item trivial zero, \hyperpage{134}
 
   \indexspace
 
-  \item unfolded nontrivial zero, \hyperpage{150}
-  \item uniformizer, \hyperpage{55}
-  \item unit, \hyperpage{49}
-  \item unit group, \hyperpage{44}, \hyperpage{49}, \hyperpage{60}
-  \item unit lattice, \hyperpage{103}
-  \item unramified, \hyperpage{71}, \hyperpage{77}, \hyperpage{127}
-  \item unweighted, \hyperpage{124}
+  \item unfolded nontrivial zero, \hyperpage{148}
+  \item uniformizer, \hyperpage{54}
+  \item unit, \hyperpage{48}
+  \item unit group, \hyperpage{43}, \hyperpage{48}, \hyperpage{59}
+  \item unit lattice, \hyperpage{102}
+  \item unramified, \hyperpage{70}, \hyperpage{76}, \hyperpage{125}
+  \item unweighted, \hyperpage{122}
 
   \indexspace
 
-  \item valuation, \hyperpage{55--57}
-  \item von Mangoldt coefficients, \hyperpage{144}
+  \item valuation, \hyperpage{54--56}
+  \item von Mangoldt coefficients, \hyperpage{142}
   \item von Mangoldt function, \hyperpage{4}
 
   \indexspace
 
-  \item weighted, \hyperpage{124}
-  \item Weyl bound, \hyperpage{139}
-  \item widely ramified, \hyperpage{89}
+  \item weighted, \hyperpage{122}
+  \item Weyl bound, \hyperpage{137}
+  \item widely ramified, \hyperpage{88}
 
   \indexspace
 
-  \item zero extension, \hyperpage{8}
-  \item zero-free region, \hyperpage{151}
+  \item zero extension, \hyperpage{7}
+  \item zero-free region, \hyperpage{149}
 
 \end{theindex}

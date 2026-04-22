@@ -13,25 +13,25 @@
   \date{}
   \maketitle
   \section{Integral Lattices}
-    Let \(F\) be a characteristic zero field and \(V\) be an \(\F\)-vector space of dimension \(n\) with nondegenerate symmetric inner product \(\<\cdot,\cdot\>\). We say that a subset \(\L\) of \(V\) is a \textit{integral lattice} if \(\L\) is a free \(\Z\)-module. In particular, any integral lattice \(\L\) is of the form
+    Let \(F\) be a characteristic zero field and \(V\) be an \(\F\)-vector space of dimension \(n\) with nondegenerate symmetric inner product \(\<\cdot,\cdot\>\). We say that a subset \(\L\) of \(V\) is a \textbf{integral lattice} if \(\L\) is a free \(\Z\)-module. In particular, any integral lattice \(\L\) is of the form
     \[
       \L = \Z v_{1}+\cdots+\Z v_{m},
     \]
-    for some linearly independent vectors \(v_{1},\ldots,v_{m}\) of \(V\) with \(m \le n\). We say \(\L\) is \textit{complete} if \(n = m\). This means \(v_{1},\ldots,v_{n}\) is necessarily a basis of \(V\). If \(e_{1},\ldots,e_{n}\) is an orthonormal basis for \(V\), write
+    for some linearly independent vectors \(v_{1},\ldots,v_{m}\) of \(V\) with \(m \le n\). We say \(\L\) is \textbf{complete} if \(n = m\). This means \(v_{1},\ldots,v_{n}\) is necessarily a basis of \(V\). If \(e_{1},\ldots,e_{n}\) is an orthonormal basis for \(V\), write
     \[
       v_{i} = \sum_{i}v_{i,j}e_{j},
     \]
-    with \(v_{i,j} \in F\), and define the associated \textit{generator matrix} \(P\) by
+    with \(v_{i,j} \in F\), and define the associated \textbf{generator matrix} \(P\) by
     \[
       P = \begin{pmatrix} v_{1,1} & \cdots & v_{n,1} \\ \vdots & & \vdots \\ v_{1,n} & \cdots & v_{n,n} \end{pmatrix}.
     \]
-    Then \(P\) is the base change matrix from \(e_{1},\ldots,e_{n}\) to \(v_{1},\ldots,v_{n}\). The \textit{covolume} \(V_{\L}\) of a complete integral lattice \(\L\) is defined to be
+    Then \(P\) is the base change matrix from \(e_{1},\ldots,e_{n}\) to \(v_{1},\ldots,v_{n}\). The \textbf{covolume} \(V_{\L}\) of a complete integral lattice \(\L\) is defined to be
     \[
       V_{\L} = |\det(P)|.
     \]
     As the base change matrix between any two orthonormal basses is an orthogonal matrix and hence has determinant \(\pm 1\), the covolume is independent of the choice of bases. In the case where \(V\) is a real or complex vector space, we will always take \(e_{1},\ldots,e_{n}\) to be the standard basis.
     
-    If \(\L\) is a complete integral lattice in \(V\) then the \textit{dual} \(\L^{\vee}\) of \(\L\) is defined by
+    If \(\L\) is a complete integral lattice in \(V\) then the \textbf{dual} \(\L^{\vee}\) of \(\L\) is defined by
     \[
       \L^{\vee} = \{v \in V:\<\l,v\> \in \Z \text{ for all } \l \in \L\}.
     \]
@@ -48,7 +48,7 @@
       with \(v_{j}^{\vee} \in \R\). Since the dual basis is determined by \(\<v_{i},v_{j}^{\vee}\> = \d_{i,j}\), it follows that \(v \in \L^{\vee}\) if and only if \(v_{j}^{\vee} \in \Z\). This means \(v_{1}^{\vee},\ldots,v_{n}^{\vee}\) is a basis for \(\L^{\vee}\) as a free \(\Z\)-module and thus is a complete integral lattice.
     \end{proof}
 
-    Since the dual of the dual basis is the original basis, \((\L^{\vee})^{\vee} = \L\). We say that \(\L\) is \textit{self-dual} if \(\L^{\vee} = \L\). For example, the integral lattice \(\Z^{n}\) is self-dual because the standard basis is self-dual. It also turns out that the covolume of the dual integral lattice is the inverse of the volume of the original integral lattice.
+    Since the dual of the dual basis is the original basis, \((\L^{\vee})^{\vee} = \L\). We say that \(\L\) is \textbf{self-dual} if \(\L^{\vee} = \L\). For example, the integral lattice \(\Z^{n}\) is self-dual because the standard basis is self-dual. It also turns out that the covolume of the dual integral lattice is the inverse of the volume of the original integral lattice.
 
     \begin{proposition}\label{prop:covolume_of_dual_is_inverse}
       Let \(\L\) be a complete integral lattice in \(V\). Then
@@ -127,7 +127,7 @@
       and is an element of \(W\). Thus \(V = W\) which means \(\L\) is complete.
     \end{proof}
 
-    The most important result we will require about integral lattices is \textit{Minkowski's lattice point theorem} which states that, under some mild conditions, a set of sufficiently large volume in \(V\) contains a nonzero point of a complete integral lattice.
+    The most important result we will require about integral lattices is \textbf{Minkowski's lattice point theorem} which states that, under some mild conditions, a set of sufficiently large volume in \(V\) contains a nonzero point of a complete integral lattice.
 
     \begin{theorem*}[Minkowski's lattice point theorem]
       Suppose \(\L\) is a complete integral lattice in a real inner product space \(V\) of dimension \(n\). Let \(X \subset V\) is a compact convex symmetric set. If
