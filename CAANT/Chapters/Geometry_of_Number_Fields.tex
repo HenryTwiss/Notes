@@ -1,5 +1,5 @@
 \chapter{Geometry of Number Fields}
-  Throughout, all rings will be understood to be commutative and with unity. We will also use the theory of integral lattices in \cref{sec:integral_lattices} and some results of the beta function is \cref{sec:the_gamma_function}.
+  Throughout, all rings will be understood to be commutative and with unity. We will also use the theory of integral lattices in \cref{ch:integral_lattices} and some results of the beta function is \cref{ch:the_gamma_function}.
   \section{Minkowski Space}
     Let \(K\) be number field of degree \(n\). If \(\s \in \Hom_{\Q}(K,\conj{\Q})\) then either \(\s\) is real or complex and in the latter case it is has a paired \(\Q\)-embedding \(\conj{\s}\) which is the complex conjugate of \(\s\). Accordingly, let \(r_{1}\) and \(2r_{2}\) be the number of real and complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) respectively. We call the pair \((r_{1},r_{2})\) the \textbf{signature}\index{signature} of \(K\) and it satisfies the relation
     \[
@@ -179,7 +179,7 @@
       \[
         \Vol(\l X) = 2^{n}V_{\s_{K}(\mf{f}^{-1})}.
       \]
-      By Minkowski's lattice point theorem (see \cref{sec:integral_lattices}), there exists a nonzero element of \(\s_{K}(\mf{f}^{-1}) \cap \l X\). Whence there is a nonzero \(\a \in \mf{f}^{-1}\) such that \(\s_{K}(\a) \in \l X\). Moreover, \(\a\mf{f} \subseteq \mc{O}_{K}\) so that \(\mf{a} = \a\mf{f}\) is an integral ideal in the same class as \(\mf{f}\). Using \cref{prop:norm_and_field_norms_are_identical,prop:formulas_for_trace_and_norm}, a short computation shows
+      By Minkowski's lattice point theorem (see \cref{ch:integral_lattices}), there exists a nonzero element of \(\s_{K}(\mf{f}^{-1}) \cap \l X\). Whence there is a nonzero \(\a \in \mf{f}^{-1}\) such that \(\s_{K}(\a) \in \l X\). Moreover, \(\a\mf{f} \subseteq \mc{O}_{K}\) so that \(\mf{a} = \a\mf{f}\) is an integral ideal in the same class as \(\mf{f}\). Using \cref{prop:norm_and_field_norms_are_identical,prop:formulas_for_trace_and_norm}, a short computation shows
       \[
         \Norm_{K}(\mf{a}) \le \l^{n}M\Norm_{K}(\mf{f}).
       \]
@@ -249,7 +249,7 @@
       \[
         I_{0,k}(1) = \int_{0}^{1}r_{k}(1-r_{k})^{2k-2}I_{0,k-1}(1)\,dr_{k} = \frac{1}{2k}I_{0,k-1}(1),
       \]
-      because the latter integral is the beta function \(B(1,2k-1)\) (see \cref{sec:the_gamma_function}). Upon repeating this procedure \(k-1\) times results in
+      because the latter integral is the beta function \(B(1,2k-1)\) (see \cref{ch:the_gamma_function}). Upon repeating this procedure \(k-1\) times results in
       \[
         I_{0,k}(1) = \frac{1}{k!}.
       \]
@@ -397,7 +397,7 @@
       Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). Then \(\L_{K}\) is a complete integral lattice of \(H\). In particular, \(\L_{K}\) is a free \(Z\)-module of rank \(r_{K}\).
     \end{theorem}
     \begin{proof}
-      We will begin by showing that \(\L_{K}\) is a lattice of \(H\). Since \(\l\) is a homomorphism, \(\L_{K}\) is a subgroup of \(H\). Therefore \(\L_{K}\) is a lattice if and only if it is discrete (see \cref{sec:integral_lattices}). To prove this, we will show that for any positive constant \(c\), the compact subset 
+      We will begin by showing that \(\L_{K}\) is a lattice of \(H\). Since \(\l\) is a homomorphism, \(\L_{K}\) is a subgroup of \(H\). Therefore \(\L_{K}\) is a lattice if and only if it is discrete (see \cref{ch:integral_lattices}). To prove this, we will show that for any positive constant \(c\), the compact subset 
       \[
         X = \{\mathbf{x} \in \R^{r_{K}+1}:|x_{\rho}| \le c \text{ and } |x_{\tau}| \le 2c \text{ for all } \rho \text{ and } \tau\},
       \]
@@ -407,7 +407,7 @@
       \]
       and hence it contains finitely many elements of \(j(\mc{O}_{K}^{\ast})\) which is a subset of the complete integral lattice \(j(\mc{O}_{K})\) of \(K_{\R}\). Whence \(\ell^{-1}(X) \cap j(\mc{O}_{K}^{\ast})\) is finite. The image of this intersection under \(\ell\) is exactly \(X \cap \L_{K}\). Whence \(X \cap \L_{K}\) is finite too. Therefore \(\L_{K}\) is discrete and thus a lattice of \(H\).
       
-      We now show that \(\L_{K}\) is a complete integral lattice of \(H\) and since \(H\) is a real vector space of dimension \(r_{K}\), this will prove the claim about the rank of \(\L_{K}\) as well. It is enough to show that there is a bounded subset \(M\) of \(H\) whose translates by \(\L_{K}\) cover \(H\) (see \cref{sec:integral_lattices}). Since \(\ell\) is surjective it suffices to construct a bounded subset \(T\) of \(U\) such that
+      We now show that \(\L_{K}\) is a complete integral lattice of \(H\) and since \(H\) is a real vector space of dimension \(r_{K}\), this will prove the claim about the rank of \(\L_{K}\) as well. It is enough to show that there is a bounded subset \(M\) of \(H\) whose translates by \(\L_{K}\) cover \(H\) (see \cref{ch:integral_lattices}). Since \(\ell\) is surjective it suffices to construct a bounded subset \(T\) of \(U\) such that
       \[
         U = \bigcup_{\e}j(\e)T.
       \]
@@ -435,7 +435,7 @@
       \[
         \Vol(\mathbf{u}Z) > 2^{n}V_{j(\mc{O}_{K})}.
       \]
-      By Minkowski's lattice point theorem (see \cref{sec:integral_lattices}), there exists a nonzero element of \(j(\mc{O}_{K}) \cap \mathbf{u}Z\). Now from \cref{lem:finitely_many_elements_of_fixed_norm}, let \(\a_{1},\ldots,\a_{m}\) be a complete set of representatives of \(\mc{O}_{K}\) whose field norm is at most \(C\) up to multiplication by a unit. Set
+      By Minkowski's lattice point theorem (see \cref{ch:integral_lattices}), there exists a nonzero element of \(j(\mc{O}_{K}) \cap \mathbf{u}Z\). Now from \cref{lem:finitely_many_elements_of_fixed_norm}, let \(\a_{1},\ldots,\a_{m}\) be a complete set of representatives of \(\mc{O}_{K}\) whose field norm is at most \(C\) up to multiplication by a unit. Set
       \[
         T = U \cap \left(\bigcup_{i}j(\a_{i})^{-1}Z\right).
       \]
@@ -483,7 +483,7 @@
     \[
       \l_{0} = \frac{\mathbf{1}}{\sqrt{r_{K}+1}},
     \]
-    we see that \(\l_{0}\) is a unit vector in \(\R^{r_{K}+1}\) orthogonal to \(H\). Whence \(\l_{0}\) is orthogonal to \(\L\) and it follows that \(\l_{0},\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is a basis for the complete integral lattice \(\L_{K}' = \Z\l_{0}+\L_{K}\) of \(\R^{r_{K}+1}\). Since \(\l_{0}\) is a unit vector, the volume of a fundamental domain for \(\L_{K}'\) in \(\R^{r_{K}+1}\) is equal to the volume of a fundamental domain for \(\L_{K}\) in \(H\). This means that the corresponding covolumes are equal (see \cref{sec:integral_lattices}) which is to say \(V_{\L_{K}} = V_{\L_{K}'}\). So it suffices to compute \(V_{\L_{K}'}\). The associated generator matrix for \(\L_{K}'\) is given by
+    we see that \(\l_{0}\) is a unit vector in \(\R^{r_{K}+1}\) orthogonal to \(H\). Whence \(\l_{0}\) is orthogonal to \(\L\) and it follows that \(\l_{0},\l(\e_{1}),\ldots,\l(\e_{r_{K}})\) is a basis for the complete integral lattice \(\L_{K}' = \Z\l_{0}+\L_{K}\) of \(\R^{r_{K}+1}\). Since \(\l_{0}\) is a unit vector, the volume of a fundamental domain for \(\L_{K}'\) in \(\R^{r_{K}+1}\) is equal to the volume of a fundamental domain for \(\L_{K}\) in \(H\). This means that the corresponding covolumes are equal (see \cref{ch:integral_lattices}) which is to say \(V_{\L_{K}} = V_{\L_{K}'}\). So it suffices to compute \(V_{\L_{K}'}\). The associated generator matrix for \(\L_{K}'\) is given by
     \[
       \begin{pmatrix} \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{1} & \cdots & \l(\e_{r_{K}})_{1} \\ \vdots & \vdots & & \vdots \\ \frac{1}{\sqrt{r_{K}+1}} & \l(\e_{1})_{r_{K}+1} & \cdots & \l(\e_{r_{K}})_{r_{K}+1} \end{pmatrix}.
     \]

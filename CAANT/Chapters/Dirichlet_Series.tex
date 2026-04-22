@@ -360,7 +360,7 @@
       The identity is \cref{equ:integral_rep_for_Dirichlet_series}.
     \end{proof}
 
-    Classical Perron's formula is not always useful in applications because often it is necessary to estimate the integral of the Dirichlet series. As the integral need not be absolutely bounded, this would require nontrivial estimates for the Dirichlet series in vertical strips. Fortunately, there are two ways to correct for this defect each of which leads to a different variant of Perron's formula. The first is to truncate the integral while the latter is to introduce a smoothing function. In the former case, a careful estimation of the error term is often necessary while the latter case requires estimates for the smoothing function. Both variants can be equally useful and the choice of which to use is often dependent upon what methods are available in the current setting.
+    Classical Perron's formula is not always useful in applications because often it is necessary to estimate the integral of the Dirichlet series. As the integral need not be absolutely convergent, this would require nontrivial estimates for the Dirichlet series in vertical strips. Fortunately, there are two ways to correct for this defect each of which leads to a different variant of Perron's formula. The first is to truncate the integral while the latter is to introduce a smoothing function. In the former case, a careful estimation of the error term is often necessary while the latter case requires estimates for the smoothing function. Both variants can be equally useful and the choice of which to use is often dependent upon what methods are available in the current setting.
     
     Let us first focus on the truncated variant. To state it, we will need to setup some notation and prove a lemma. For \(c > 0\) and \(T > 0\), consider the integrals
     \[
@@ -568,7 +568,7 @@
       As \(D(s)\) converges absolutely, we may interchange the sum and the integral. The statement follows.
     \end{proof}
 
-    Since the integral in truncated Perron's formula is over a finite vertical line, the integral is automatically absolutely bounded. There is also a mor crude variant of truncated Perron's formula that follows as a corollary:
+    Since the integral in truncated Perron's formula is over a finite vertical line, the integral is automatically absolutely convergent. There is also a mor crude variant of truncated Perron's formula that follows as a corollary:
 
     \begin{corollary}
       Let \(D(s)\) be a Dirichlet series with coefficient \(a(n)\) and finite and nonnegative abscissa of absolute convergence \(\s_{a}\). Then for any \(c > \s_{a}\) and \(0 < T < X^{c}\), we have
@@ -657,4 +657,4 @@
       which is the first statement. For the second, take \(X = 1\).
     \end{proof}
 
-    The integral in smoothed Perron's formula is absolutely bounded (this permitted the interchange of the sum and integral). In practice, this means that the integral can be estimated directly and we do not need to truncate. The compensation for this is that we have introduced a weighting factor to the sum of coefficients.
+    The integral in smoothed Perron's formula is absolutely convergent (this permitted the interchange of the sum and integral). In practice, this means that the integral can be estimated directly and we do not need to truncate. The compensation for this is that we have introduced a weighting factor to the sum of coefficients.

@@ -38,8 +38,8 @@
 \contentsline {section}{\numberline {6.7}Zero Density Estimates}{144}{section.6.7}%
 \contentsline {section}{\numberline {6.8}Zero-free Regions}{149}{section.6.8}%
 \contentsline {section}{\numberline {6.9}The Explicit Formula}{152}{section.6.9}%
-\contentsline {chapter}{\numberline {A}Appendices}{154}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Integral Lattices}{155}{section.A.1}%
-\contentsline {section}{\numberline {A.2}The Fourier Transform}{159}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Poisson Summation}{161}{section.A.3}%
-\contentsline {section}{\numberline {A.4}The Gamma Function}{165}{section.A.4}%
+\contentsline {chapter}{\numberline {A}Integral Lattices}{154}{appendix.A}%
+\contentsline {chapter}{\numberline {B}The Fourier Transform}{159}{appendix.B}%
+\contentsline {chapter}{\numberline {C}The Mellin Transform}{161}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Poisson Summation}{162}{appendix.D}%
+\contentsline {chapter}{\numberline {E}The Gamma Function}{167}{appendix.E}%

@@ -839,6 +839,9 @@ INPUT Appendices/Integral_Lattices.aux
 INPUT ./Appendices/The_Fourier_Transform.aux
 INPUT Appendices/The_Fourier_Transform.aux
 INPUT Appendices/The_Fourier_Transform.aux
+INPUT ./Appendices/The_Mellin_Transform.aux
+INPUT Appendices/The_Mellin_Transform.aux
+INPUT Appendices/The_Mellin_Transform.aux
 INPUT ./Appendices/Poisson_Summation.aux
 INPUT Appendices/Poisson_Summation.aux
 INPUT Appendices/Poisson_Summation.aux
@@ -1099,6 +1102,16 @@ INPUT ./Appendices/The_Fourier_Transform.tex
 INPUT Appendices/The_Fourier_Transform.tex
 INPUT ./Appendices/The_Fourier_Transform.tex
 INPUT Appendices/The_Fourier_Transform.tex
+INPUT ./Appendices/The_Mellin_Transform.tex
+INPUT ./Appendices/The_Mellin_Transform.tex
+INPUT ./Appendices/The_Mellin_Transform.tex
+OUTPUT Appendices/The_Mellin_Transform.aux
+INPUT ./Appendices/The_Mellin_Transform.tex
+INPUT ./Appendices/The_Mellin_Transform.tex
+INPUT ./Appendices/The_Mellin_Transform.tex
+INPUT Appendices/The_Mellin_Transform.tex
+INPUT ./Appendices/The_Mellin_Transform.tex
+INPUT Appendices/The_Mellin_Transform.tex
 INPUT ./Appendices/Poisson_Summation.tex
 INPUT ./Appendices/Poisson_Summation.tex
 INPUT ./Appendices/Poisson_Summation.tex
@@ -1149,6 +1162,9 @@ INPUT Appendices/Integral_Lattices.aux
 INPUT ./Appendices/The_Fourier_Transform.aux
 INPUT Appendices/The_Fourier_Transform.aux
 INPUT Appendices/The_Fourier_Transform.aux
+INPUT ./Appendices/The_Mellin_Transform.aux
+INPUT Appendices/The_Mellin_Transform.aux
+INPUT Appendices/The_Mellin_Transform.aux
 INPUT ./Appendices/Poisson_Summation.aux
 INPUT Appendices/Poisson_Summation.aux
 INPUT Appendices/Poisson_Summation.aux
