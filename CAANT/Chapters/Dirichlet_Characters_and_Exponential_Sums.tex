@@ -456,15 +456,15 @@
       \[
         f(x) = \begin{cases} e^{\frac{2\pi ix^{2}}{m}} & \text{if \(x \in [0,m]\),} \\ 0 & \text{if \(x \notin [0,m]\).} \end{cases}
       \]
-      Then \(f(x)\) is absolutely integrable and
+      Then \(f(x)\) is absolutely integrable and piecewise smooth. Then
       \[
         \sum_{n \in \Z}f(x+n),
       \]
-      is piecewise continuously differentiable. Therefore Poisson summation applies where \(f(n)\) is understood to be the average of the left-hand and right-hand limits at jump discontinuities. On the one hand, we have
+      is absolutely convergent and also piecewise smooth by the Weierstrass \(M\)-test. Therefore Poisson summation applies where \(f(n)\) is understood to be the average of the left-hand and right-hand limits at jump discontinuities. On the one hand, this means
       \[
         \sum_{n \in \Z}f(n) = g(m).
       \]
-      On the other hand, Poisson summation gives
+      On the other hand, we have
       \[
         \sum_{n \in \Z}f(n) = \sum_{t \in \Z}\sqrt{m}e^{-\frac{2\pi it^{2}m}{4}}\int_{\frac{t\sqrt{m}}{2}}^{\sqrt{m}+\frac{t\sqrt{m}}{2}}e^{2\pi ix^{2}}\,dx.
       \]

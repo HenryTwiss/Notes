@@ -69,11 +69,11 @@
   The link between the Fourier transform and Fourier series is given by \textbf{Poisson summation}\index{Poisson summation} which says that these two expressions are the same under some mild assumptions.
 
   \begin{theorem}
-    Let \(f(x)\) be an absolutely integrable function on \(\R\) and such that
+    Let \(f(x)\) be an absolutely integrable function on \(\R\). Also suppose
     \[
       F(x) = \sum_{n \in \Z}f(x+n),
     \]
-    is piecewise continuously differentiable on \(\R\). Then
+    is a piecewise continuously differentiable function on \(\R\). Then
     \[
       \sum_{n \in \Z}f(x+n) = \sum_{t \in \Z}(\mc{F}f)(t)e^{2\pi itx},
     \]
@@ -99,9 +99,7 @@
     This proves the first statement. Setting \(x = 0\) proves the second statement.
   \end{proof}
 
-  In practical settings, we need a class of functions \(f(x)\) for which the assumptions of Poisson summation hold. We say that \(f(x)\) is of \textbf{Schwarz class}\index{Schwarz class} if \(f(x)\) is smooth and has rapid decay along with all of its derivatives. If \(f(x)\) is of Schwarz class, the rapid decay implies that \(f(x)\) and all of its derivatives are absolutely integrable on \(\R\). Moreover, \(F(x) = \sum_{n \in \Z}f(x+n)\) and all of its derivatives are locally absolutely uniformly convergent by the Weierstrass \(M\)-test. The uniform limit theorem then ensures \(F(x)\) is smooth and thus the conditions of Poisson summation are satisfied. It turns out that in most practical applications we only needed to ensure \(f(x)\) is Schwarz class.
-
-  We now introduce the prototypical Schwarz class function and compute its Fourier transform. This function is \(f(x) = e^{-2\pi x^{2}}\) and is of  particularly interest because it is essentially invariant under the Fourier transform.
+  In practical settings, we need a class of functions \(f(x)\) for which the average constructed in Poisson summation has nice properties. We say that \(f(x)\) is of \textbf{Schwarz class}\index{Schwarz class} if \(f(x)\) is smooth and has rapid decay along with all of its derivatives. The prototypical Schwarz class function is \(f(x) = e^{-2\pi x^{2}}\). Conveniently, this function is essentially its own Fourier transform.
 
   \begin{proposition}\label{prop:Fourier_transform_of_exponential_single_variable}
     Let \(\a\) be positive and and set \(f(x) = e^{-2\pi\a x^{2}}\). Then
