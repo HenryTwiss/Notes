@@ -24,10 +24,11 @@
       \[
         \Psi(s) = (\mc{M}\psi)(s).
       \]
-      Conversely, suppose \(\psi(x)\) is a piecewise smooth function on \((0,\infty)\) taking the average of its left-hand and right-hand limits at any jump discontinuity and such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
+      Conversely, suppose \(\psi(x)\) is a piecewise continuously differentiable function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
       \[
-        \psi(x) = (\mc{M}^{-1}\Psi)(x).
+        \psi(x) = (\mc{M}^{-1}\Psi)(x),
       \]
+      where \(\psi(x)\) is understood to mean the average of its left-hand and right-hand limits at jump discontinuities.
     \end{theorem*}
   \section{The Gamma Function}\label{sec:the_gamma_function}
     The \textbf{gamma function}\index{gamma function} \(\G(s)\) is defined by the integral
