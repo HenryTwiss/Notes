@@ -17,14 +17,14 @@
     \]
     for any positive \(x\). This integral is locally absolutely uniformly convergent precisely because of the asymptotic satisfies by \(\Psi(s)\).
 
-    It is an useful question to know under what conditions the inverse Mellin transform of a Mellin transforms returns the original function. This result is known as Mellin inversion and it turns out that the assumptions needed are quite mild.
+    It is useful to know under what conditions the inverse Mellin transform of a Mellin transform returns the original function. This result is known as Mellin inversion and it turns out that the assumptions needed are quite mild.
 
     \begin{theorem*}[Mellin inversion]
       Let \(\Psi(s)\) be a holomorphic function on the vertical strip \(a < \s < b\) and such that \(\Psi(s) = O_{\e}((|t|+3)^{-(c+\e)})\) for some \(c \ge 1\). If \(\psi(x)\) is the inverse Mellin transform of \(\Psi(x)\), then
       \[
         \Psi(s) = (\mc{M}\psi)(s).
       \]
-      Conversely, suppose \(\psi(x)\) is piecewise smooth on \((0,\infty)\) taking the average of its left-hand and right-hand limits at any jump discontinuity and such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
+      Conversely, suppose \(\psi(x)\) is a piecewise smooth function on \((0,\infty)\) taking the average of its left-hand and right-hand limits at any jump discontinuity and such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
       \[
         \psi(x) = (\mc{M}^{-1}\Psi)(x).
       \]
@@ -310,7 +310,7 @@
       \[ 
         \frac{1}{\G(s)}\int_{0}^{\infty}\frac{x^{s-1}}{\left(\frac{x}{n}+1\right)^{n}}\,dx.
       \]
-      We now take the limit as \(n \to \infty\). By \cref{equ:limit_form_of_exponential} and that \(\left(\frac{x}{n}+1\right)^{n}\) is monotonically increasing in \(n\), we may employ the monotone convergence theorem to interchange the limit and integral giving
+      We now take the limit as \(n \to \infty\). By \cref{equ:limit_form_of_exponential} and that \(\left(\frac{x}{n}+1\right)^{n}\) is monotonically increasing in \(n\), we may interchange the limit and integral by monotone convergence giving
       \[
         \lim_{n \to \infty}\frac{1}{\G(s)}\int_{0}^{\infty}\frac{x^{s-1}}{\left(\frac{x}{n}+1\right)^{n}}\,dx = \frac{1}{\G(s)}\int_{0}^{\infty}e^{-x}x^{s-1}\,dx = 1.
       \]

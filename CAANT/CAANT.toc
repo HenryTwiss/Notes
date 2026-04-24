@@ -42,8 +42,8 @@
 \contentsline {section}{\numberline {A.1}Integral Lattices}{154}{section.A.1}%
 \contentsline {chapter}{\numberline {B}Real Analysis}{159}{appendix.B}%
 \contentsline {section}{\numberline {B.1}Fourier Series}{159}{section.B.1}%
-\contentsline {section}{\numberline {B.2}The Fourier Transform}{160}{section.B.2}%
+\contentsline {section}{\numberline {B.2}The Fourier Transform}{159}{section.B.2}%
 \contentsline {section}{\numberline {B.3}Poisson Summation}{161}{section.B.3}%
-\contentsline {chapter}{\numberline {C}Complex Analysis}{165}{appendix.C}%
-\contentsline {section}{\numberline {C.1}The Mellin Transform}{165}{section.C.1}%
-\contentsline {section}{\numberline {C.2}The Gamma Function}{166}{section.C.2}%
+\contentsline {chapter}{\numberline {C}Complex Analysis}{163}{appendix.C}%
+\contentsline {section}{\numberline {C.1}The Mellin Transform}{163}{section.C.1}%
+\contentsline {section}{\numberline {C.2}The Gamma Function}{164}{section.C.2}%

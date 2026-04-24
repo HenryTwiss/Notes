@@ -18,7 +18,7 @@
     \]
     As the base change matrix between any two orthonormal basses is an orthogonal matrix and hence has determinant \(\pm 1\), the covolume is independent of the choice of bases. In the case where \(V\) is a real or complex vector space, we will always take \(e_{1},\ldots,e_{n}\) to be the standard basis.
     
-    If \(\L\) is a complete integral lattice in \(V\) then the \textbf{dual}\index{dual} \(\L^{\vee}\) of \(\L\) is defined by
+    If \(\L\) is a complete integral lattice of \(V\) then the \textbf{dual}\index{dual} \(\L^{\vee}\) of \(\L\) is defined by
     \[
       \L^{\vee} = \{v \in V:\<\l,v\> \in \Z \text{ for all } \l \in \L\}.
     \]
@@ -38,7 +38,7 @@
     Since the dual of the dual basis is the original basis, \((\L^{\vee})^{\vee} = \L\). We say that \(\L\) is \textbf{self-dual}\index{self-dual} if \(\L^{\vee} = \L\). For example, the integral lattice \(\Z^{n}\) is self-dual because the standard basis is self-dual. It also turns out that the covolume of the dual integral lattice is the inverse of the volume of the original integral lattice.
 
     \begin{proposition}\label{prop:covolume_of_dual_is_inverse}
-      Let \(\L\) be a complete integral lattice in \(V\). Then
+      Let \(\L\) be a complete integral lattice of \(V\). Then
       \[
         V_{\L^{\vee}} = \frac{1}{V_{\L}}.
       \]
@@ -62,7 +62,7 @@
     Moreover, any translation of \(\mc{M}\) by an element of \(\L\) is also a fundamental domain. As we might expect, the covolume of \(\L\) is equal to the volume of \(\mc{M}\).
 
     \begin{proposition}\label{prop:covolume_equals_volume_of_fundamental_domain}
-      Let \(\L\) be a complete integral lattice in a finite dimensional real inner product space \(V\) and let \(\mc{M}\) be a fundamental domain for \(\L\). Then
+      Let \(\L\) be a complete integral lattice of a finite dimensional real inner product space \(V\) and let \(\mc{M}\) be a fundamental domain for \(\L\). Then
       \[
         V_{\L} = \Vol(\mc{M}).
       \]
@@ -78,7 +78,7 @@
       \]
     \end{proof}
 
-    This result shows that the covolume of a complete integral lattice in a real inner product space is a measure of the density of the integral lattice. The smaller the covolume the smaller the fundamental domain and the more dense the integral lattice is.
+    This result shows that the covolume of a complete integral lattice of a real inner product space is a measure of the density of the integral lattice. The smaller the covolume the smaller the fundamental domain and the more dense the integral lattice is.
     
     It turns out that for a real inner product space, being an integral lattice is equivalent to being a discrete subgroup.
 
@@ -90,7 +90,7 @@
       \[
         \L' = \Z v'_{1}+\cdots+\Z v'_{m}.
       \]
-      Then \(\L'\) is a complete integral lattice in \(V'\) and \(\L' \subseteq \L \subset V\). We claim \(\L/\L'\) is finite. To see this, let \(\l\) be a representative of a coset in \(\L/\L'\) and let \(\mc{M}'\) be a fundamental domain for \(\L'\) in \(V'\). As \(\mc{M}'\) is a fundamental domain, there exists unique \(w' \in \mc{M}'\) and \(\l' \in \L'\) such that \(\l = w'+\l'\). But then \(w' = \l-\l' \in \mc{M}' \cap \L\) and since \(\mc{M}' \cap \L\) is closed, discrete, and compact, it must be finite. Hence there are finitely many \(w'\) and thus finitely many cosets in \(\L/\L'\). Letting \(|\L/\L'| = q\), we have \(q\L \subseteq \L'\) and therefore
+      Then \(\L'\) is a complete integral lattice of \(V'\) and \(\L' \subseteq \L \subset V\). We claim \(\L/\L'\) is finite. To see this, let \(\l\) be a representative of a coset in \(\L/\L'\) and let \(\mc{M}'\) be a fundamental domain for \(\L'\) in \(V'\). As \(\mc{M}'\) is a fundamental domain, there exists unique \(w' \in \mc{M}'\) and \(\l' \in \L'\) such that \(\l = w'+\l'\). But then \(w' = \l-\l' \in \mc{M}' \cap \L\) and since \(\mc{M}' \cap \L\) is closed, discrete, and compact, it must be finite. Hence there are finitely many \(w'\) and thus finitely many cosets in \(\L/\L'\). Letting \(|\L/\L'| = q\), we have \(q\L \subseteq \L'\) and therefore
       \[
         \L \subseteq \L' = \Z\frac{1}{q}v'_{1}+\cdots+\Z\frac{1}{q}v'_{m}.
       \]
@@ -100,7 +100,7 @@
     As for complete integral lattices in \(V\), they are equivalent to the existence of a bounded set whose translates cover \(V\).
 
     \begin{proposition}\label{prop:complete_lattice_if_and_only_if_bounded_translates_cover}
-      Let \(\L\) be an integral lattice in a finite dimensional real inner product space \(V\). Then \(\L\) complete if and only if there exists a bounded subset \(M\) of \(V\) whose translates by \(\L\) cover \(V\).
+      Let \(\L\) be an integral lattice of a finite dimensional real inner product space \(V\). Then \(\L\) complete if and only if there exists a bounded subset \(M\) of \(V\) whose translates by \(\L\) cover \(V\).
     \end{proposition}
     \begin{proof}
       First suppose \(\L\) is complete. Then we may take \(M = \mc{M}\) to be a fundamental domain of \(\L\) which is bounded and whose translates by \(\L\) cover \(V\). Now suppose \(\L\) is an integral lattice and there exists a bounded subset \(M\) of \(V\) whose translates by \(\L\) cover \(V\). Let \(W\) be the subspace of \(V\) spanned by \(\L\). Then \(W\) is closed. Moreover, \(\L\) is complete if and only if \(V = W\) and this is what we will show. So let \(v \in V\). Since the translates of \(M\) by \(\L\) cover \(V\), for every positive integer \(n\) we may write
@@ -117,7 +117,7 @@
     The most important result we will require about integral lattices is \textbf{Minkowski's lattice point theorem}\index{Minkowski's lattice point theorem} which states that, under some mild conditions, a set of sufficiently large volume in \(V\) contains a nonzero point of a complete integral lattice.
 
     \begin{theorem*}[Minkowski's lattice point theorem]
-      Suppose \(\L\) is a complete integral lattice in a real inner product space \(V\) of dimension \(n\). Let \(X \subset V\) is a compact convex symmetric set. If
+      Suppose \(\L\) is a complete integral lattice of a real inner product space \(V\) of dimension \(n\). Let \(X \subset V\) is a compact convex symmetric set. If
       \[
         \Vol(X) \ge 2^{n}V_{\L},
       \]

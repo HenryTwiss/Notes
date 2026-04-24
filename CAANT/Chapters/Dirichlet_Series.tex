@@ -70,27 +70,27 @@
       Then \(a(n) = b(n)\).
     \end{proposition}
     \begin{proof}
-      Set \(c(n) = a(n)-b(n)\) so that it suffices to prove \(c(n) = 0\). Take \(\s \ge \s_{a}\) so that \(D(s)\) converges absolutely. Letting \(\s \to \infty\), the dominated convergence theorem implies
+      Set \(c(n) = a(n)-b(n)\) so that it suffices to prove \(c(n) = 0\). Take \(\s \ge \s_{a}\) so that \(D(s)\) converges absolutely. Letting \(\s \to \infty\), we have
       \[
-        \lim_{\s \to \infty}D(\s) = a(1) \quad \text{and} \quad \lim_{\s \to \infty}D(\s) = b(1).
+        \lim_{\s \to \infty}D(\s) = a(1) \quad \text{and} \quad \lim_{\s \to \infty}D(\s) = b(1),
       \]
-      Whence \(c(1) = 0\). Assume by induction that \(c(n) = 0\) for \(n \le N\) and consider the Dirichlet series
+      upon interchanging the limit and the sum by absolute convergence. Whence \(c(1) = 0\). Assume by induction that \(c(n) = 0\) for \(n \le N\) and consider the Dirichlet series
       \[
         \sum_{n \ge 1}\frac{c(n)}{n^{s}}.
       \]
       Its abscissa of absolute convergence is \(\s_{a}\). As
       \[
-        \sum_{n > N}\frac{c(n)}{n^{s}} = 0,
+        \sum_{n \le N}\frac{c(n)}{n^{s}} = 0,
       \]
       by assumption, it follows that
       \[
         c(N+1) = -\sum_{n > N}c(n)\left(\frac{N}{n}\right)^{\s}.
       \]
-      Letting \(\s \to \infty\), the dominated convergence theorem implies
+      Take \(\s \ge \s_{a}\) so that sum on the right-hand side converges absolutely. Letting \(\s \to \infty\), we have
       \[
-        \lim_{\s \to \infty}\left(-\sum_{n > N}c(n)\left(\frac{N}{n}\right)^{\s}\right) = 0.
+        \lim_{\s \to \infty}\left(-\sum_{n > N}c(n)\left(\frac{N}{n}\right)^{\s}\right) = 0,
       \]
-      Hence \(c(N+1) = 0\) which completes the proof.
+      upon interchanging the limit and sum by absolute convergence. Hence \(c(N+1) = 0\) which completes the proof.
     \end{proof}
 
     We will now introduce several resulting concerning the growth and average growth of the coefficients of a Dirichlet series. For legibility, it will be useful to introduce some notation. If \(D(s)\) is a Dirichlet series with coefficients \(a(n)\) then for \(X > 0\), we set
