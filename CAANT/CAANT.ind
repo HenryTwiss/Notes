@@ -24,7 +24,7 @@
   \indexspace
 
   \item below, \hyperpage{47}
-  \item beta function, \hyperpage{168}
+  \item beta function, \hyperpage{167}
   \item Burgess bound, \hyperpage{137}
 
   \indexspace
@@ -61,13 +61,12 @@
   \item Dedekind-Kummer theorem, \hyperpage{70}
   \item degree, \hyperpage{26}, \hyperpage{115}, \hyperpage{124}
   \item different, \hyperpage{85}, \hyperpage{90}
-  \item digamma function, \hyperpage{178}
+  \item digamma function, \hyperpage{177}
   \item Dirichlet character, \hyperpage{6}
   \item Dirichlet convolution, \hyperpage{4}
   \item Dirichlet orthogonality relations, \hyperpage{7}
   \item Dirichlet series, \hyperpage{108}
   \item Dirichlet's unit theorem, \hyperpage{105}
-  \item Dirichlet-Jordan test, \hyperpage{160}
   \item discrete valuation ring, \hyperpage{54}
   \item discriminant, \hyperpage{30}, \hyperpage{37}, \hyperpage{86}, 
 		\hyperpage{90}
@@ -82,7 +81,7 @@
   \item Euler factor, \hyperpage{125}
   \item Euler parameters, \hyperpage{125}
   \item Euler product, \hyperpage{115}
-  \item Euler's reflection formula, \hyperpage{169}
+  \item Euler's reflection formula, \hyperpage{168}
   \item Euler's totient function, \hyperpage{3}
   \item even, \hyperpage{10}
   \item exactly divides, \hyperpage{41}
@@ -94,11 +93,11 @@
   \item field norm, \hyperpage{27}, \hyperpage{37}
   \item field trace, \hyperpage{27}, \hyperpage{37}
   \item Fourier coefficient, \hyperpage{159}
-  \item Fourier series, \hyperpage{160}
-  \item Fourier transform, \hyperpage{159}
+  \item Fourier series, \hyperpage{159}
+  \item Fourier transform, \hyperpage{160}
   \item fractional ideal, \hyperpage{37}, \hyperpage{48}
   \item functional equation, \hyperpage{125}, \hyperpage{143}, 
-		\hyperpage{168}
+		\hyperpage{166}
   \item functional equation data, \hyperpage{125}
   \item fundamental discriminant, \hyperpage{10}
   \item fundamental equality, \hyperpage{69}
@@ -107,7 +106,7 @@
   \indexspace
 
   \item gamma factor, \hyperpage{125}
-  \item gamma function, \hyperpage{167}
+  \item gamma function, \hyperpage{166}
   \item gamma parameters, \hyperpage{124}
   \item Gauss sum, \hyperpage{13}
   \item generalized sum of divisors function, \hyperpage{3}
@@ -135,6 +134,7 @@
   \item integrally closed, \hyperpage{24}
   \item integrally closed domain, \hyperpage{24}
   \item inverse, \hyperpage{37}
+  \item inverse Mellin transform, \hyperpage{165}
   \item invertible, \hyperpage{38}
   \item irregular, \hyperpage{64}
 
@@ -142,7 +142,7 @@
 
   \item Landau's theorem, \hyperpage{113}
   \item least common multiple, \hyperpage{42}
-  \item Legendre's duplication formula, \hyperpage{172}
+  \item Legendre's duplication formula, \hyperpage{170}
   \item Lindel\"of hypothesis, \hyperpage{136}
   \item Liouville's function, \hyperpage{3}
   \item local, \hyperpage{50}, \hyperpage{55}
@@ -155,7 +155,7 @@
   \item M\"obius function, \hyperpage{3}
   \item M\"obius inversion, \hyperpage{5}
   \item maxiaml order, \hyperpage{67}
-  \item Mellin transform, \hyperpage{161}
+  \item Mellin transform, \hyperpage{165}
   \item Minkowski bound, \hyperpage{99}
   \item Minkowski embedding, \hyperpage{94}
   \item Minkowski inner product, \hyperpage{93}
@@ -189,7 +189,7 @@
   \item Perron's formula, \hyperpage{121}, \hyperpage{123}
   \item Picard class, \hyperpage{59}
   \item Picard group, \hyperpage{59}
-  \item Poisson summation, \hyperpage{162}
+  \item Poisson summation, \hyperpage{161}
   \item prime, \hyperpage{37}, \hyperpage{48}
   \item prime factorization, \hyperpage{41}
   \item prime factors, \hyperpage{41}
@@ -221,7 +221,7 @@
 
   \indexspace
 
-  \item Schwarz class, \hyperpage{165}
+  \item Schwarz class, \hyperpage{163}
   \item Selberg class, \hyperpage{125}
   \item Selberg class Lindel\"of hypothesis, \hyperpage{136}
   \item Selberg class Riemann hypothesis, \hyperpage{135}
@@ -232,7 +232,7 @@
   \item smooth dyadic weight, \hyperpage{139}
   \item smooth weight, \hyperpage{122}
   \item split, \hyperpage{70}, \hyperpage{76}
-  \item Stirling's formula, \hyperpage{174}
+  \item Stirling's formula, \hyperpage{173}
   \item subconvexity estimate, \hyperpage{137}
   \item sum of divisors function, \hyperpage{3}
   \item system of fundamental units, \hyperpage{105}

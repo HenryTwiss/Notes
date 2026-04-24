@@ -3,7 +3,7 @@
   \[
     (u)_{k} = u(u+1) \cdots (u+(k-1)),
   \]
-  for the Pochhammer symbol. We will also make use of various properties of the gamma function developed in \cref{ch:the_gamma_function}. Also, all sums and products over zeros of a complex function will be counted with multiplicity and ordered with respect to the size of the ordinate.
+  for the Pochhammer symbol. We will also make use of the gamma function developed in \cref{sec:the_gamma_function} especially Stirling's formula as well as the Mellin transform and the corresponding inversion theorem developed in \cref{sec:The_Mellin_transform}. Also, all sums and products over zeros of a complex function will be counted with multiplicity and ordered with respect to the size of the ordinate.
   \section{Analytic Data}
     An \textbf{analytic \(L\)-function}\index{analytic \(L\)-function} \(L(s)\) is a Dirichlet series
     \[
@@ -115,7 +115,7 @@
     \[
       \mf{q}(L) = \mf{q}(0,L) \quad \text{and} \quad \mf{q}_{\infty}(L) = \mf{q}_{\infty}(0,L).
     \]
-    The choice of \(3\) in \(|s+\mu_{j}|+3\) is a matter of convenience as could use any positive constant. In particular, it is useful when taking logarithms as \(\log(|s+\mu_{j}|+3) \ge 1\). Estimates for the analytic conductor follow from those of the gamma function. Recall from Stirling's formula (see \cref{ch:the_gamma_function}) that
+    The choice of \(3\) in \(|s+\mu_{j}|+3\) is a matter of convenience as could use any positive constant. In particular, it is useful when taking logarithms as \(\log(|s+\mu_{j}|+3) \ge 1\). Estimates for the analytic conductor follow from those of the gamma function. Recall from Stirling's formula that
     \begin{equation}\label{equ:vertical_strip_gamma_estimates}
       \G(s) \ll_{\e} (|t|+3)^{\s-\frac{1}{2}}e^{-\frac{\pi}{2}|t|} \quad \text{and} \quad \frac{1}{\G(s)} \ll (|t|+3)^{\frac{1}{2}-\s}e^{\frac{\pi}{2}|t|},
     \end{equation}
@@ -127,7 +127,7 @@
      \begin{equation}\label{equ:gamma_factor_analytic_conductor_estimate}
       \frac{\g(1-s,L)}{\g(s,L)} \ll_{\e} \mf{q}_{\infty}(s,L)^{\frac{1}{2}-\s} \quad \text{and} \quad q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)} \ll_{\e} \mf{q}(s,L)^{\frac{1}{2}-\s},
     \end{equation}
-    hold for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from the poles of \(\g(1-s,L)\). An associated estimate can be obtain for the logarithmic derivative of the analytic conductor. Recall from the logarithm of Stirling's formula (see \cref{ch:the_gamma_function}) that
+    hold for bounded \(\s\) provided \(s\) is at least distance \(\e\) away from the poles of \(\g(1-s,L)\). An associated estimate can be obtain for the logarithmic derivative of the analytic conductor. Recall from the logarithm of Stirling's formula that
     \[
       \frac{\G'}{\G}(s) \ll \log(|s|+3),
     \]
@@ -204,7 +204,7 @@
     \[
       V_{s}(y,L) = \frac{1}{2\pi i}\int_{(a)}\frac{\g(s+u,L)}{\g(s,L)}\Phi(u)y^{-u}\frac{du}{u},
     \]
-    defined for \(y > 0\). Stirling's formula (see \cref{ch:the_gamma_function}) implies
+    defined for \(y > 0\). Stirling's formula implies
     \[
       \frac{\G(s+u)}{\G(s)} \ll_{\e} \frac{(|t+r|+3)^{\s+\tau-\frac{1}{2}}}{(|t|+3)^{\s-\frac{1}{2}}}e^{-\frac{\pi}{2}(|t+r|-|t|)},
     \]
@@ -233,7 +233,7 @@
       \[
         \frac{1}{2\pi i}\int_{(a)}\L(s+u,L)\Phi(u)X^{u}\,\frac{du}{u}.
       \]    
-      Stirling's formula (see \cref{ch:the_gamma_function}) shows that \(\g(s+u,L)\) exhibits exponential decay while \(L(s+u)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), it follows that the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly convergent. We will evaluate the integral in two ways. On the one hand, we can expand \(L(s+u)\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that this is
+      Stirling's formula shows that \(\g(s+u,L)\) exhibits exponential decay while \(L(s+u)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}. Since \(\Phi(u)\) is bounded in the vertical strip \(|\tau| < a+1\), it follows that the integrand exhibits exponential decay. Therefore the integral is locally absolutely uniformly convergent. We will evaluate the integral in two ways. On the one hand, we can expand \(L(s+u)\) inside the integrand as a Dirichlet series and by absolute boundedness of the integral we may interchange the sum and integral. A short computation shows that this is
       \[
         q_{L}^{\frac{s}{2}}\g(s,L)\sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{s}\left(\frac{n}{\sqrt{q_{L}}X},L\right).
       \]
@@ -314,7 +314,7 @@
     \[
       \psi(y,L) = \frac{1}{2\pi i}\int_{(a)}q_{L}^{s}\frac{\g(s,L)}{\g(1-s,L)}y^{-s}\Psi(1-s)\,ds,
     \]
-    defined for \(y > 0\) where \(a > 1\). By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly convergent and hence \(\psi(y,L)\) is smooth for \(y > 0\). We will also set
+    defined for \(y > 0\) where \(a > 1\). By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay via \cref{prop:smoothing_function_Mellin_inverse_vertical_strips}. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly convergent and hence \(\psi(y,L)\) is smooth for \(y > 0\). We will also set
     \[
       R_{L} = \Res_{s = 1}L(s).
     \]
@@ -331,7 +331,7 @@
       \[
         \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(a)}L(s)\Psi(s)\,ds.
       \]
-      By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly convergent which permits us to shift the line of integration. Shifting to \((1-a)\), we pass by a potential pole at \(s = 1\) and obtain
+      By our choice of \(\psi(y)\), its inverse Mellin transform \(\Psi(s)\) has rapid decay via \cref{prop:smoothing_function_Mellin_inverse_vertical_strips}. Since \(L(s)\) has at most polynomial growth by \cref{prop:L_function_bounded_in_vertical_strips}, the integrand has rapid decay as well. Therefore the integral is locally absolutely uniformly convergent which permits us to shift the line of integration. Shifting to \((1-a)\), we pass by a potential pole at \(s = 1\) and obtain
       \[
         \sum_{n \ge 1}a_{L}(n)\psi(n) = \frac{1}{2\pi i}\int_{(1-a)}L(s)\Psi(s)\,ds+R_{L}\Psi(1).
       \]
@@ -659,7 +659,7 @@
     \begin{equation}
       \xi(s,L) = \e_{L}\conj{\xi(1-\conj{s},L)},
     \end{equation}
-    which we refer to as the \textbf{functional equation}\index{functional equation} for \(\xi(s,L)\). Now \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula (see \cref{ch:the_gamma_function}) and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
+    which we refer to as the \textbf{functional equation}\index{functional equation} for \(\xi(s,L)\). Now \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
     \[
       \xi(s,L) = e^{A_{L}+B_{L}s}\prod_{\rho \neq 0,1}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
     \]
@@ -852,7 +852,7 @@
       \[
         \D_{\eta_{R}}\arg\left(\pi^{-\frac{d_{L}s}{2}}\right) = \frac{T}{2}\log\left(\frac{1}{\pi^{d_{L}}}\right)+O(1),
       \]
-      respectively. For the product of gamma functions, first observe that the logarithm of Stirling's formula (see \cref{ch:the_gamma_function}) gives
+      respectively. For the product of gamma functions, first observe that the logarithm of Stirling's formula gives
       \[
         \log\G(s) = \frac{1}{2}\log(2\pi)+\left(s-\frac{1}{2}\right)\log(s)-s+O\left(\frac{1}{s}\right),
       \]

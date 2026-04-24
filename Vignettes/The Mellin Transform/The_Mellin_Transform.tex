@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{import}
+\input{/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex}
+
+%=================%
+%  Title & Index  %
+%=================%
+\title{The Mellin Transform}
+\author{Henry Twiss}
+\makeindex
+
+\begin{document}
+  \date{}
+  \maketitle
+  Throughout, \(s = \s+it\) and \(u = \tau+ir\) will stand for complex variables with \(\s\), \(\tau\), \(t\), and \(r\) real.
+  \section{The Mellin Transform}\label{sec:The_Mellin_transform}
+    Throughout, \(s = \s+it\) and \(u = \tau+ir\) will stand for complex variables with \(\s\), \(\tau\), \(t\), and \(r\) real.
+
+    Let \(\psi(\mathbf{x})\) be a function on \((0,\infty)^{n}\) such that \(\psi(\mathbf{x}) = O_{\e}(\min(\mathbf{x}^{-(\mathbf{a}+\e)},\mathbf{x}^{-(\mathbf{b}+\e)}))\) with \(\mathbf{a} < \mathbf{b}\). Its \textbf{Mellin transform}\index{Mellin transform} \((\mc{M}\psi)(\mathbf{s})\) is defined by
+    \[
+      (\mc{M}\psi)(\mathbf{s}) = \int_{0}^{\infty}\!\cdots\!\int_{0}^{\infty}\psi(\mathbf{x})\mathbf{x}^{\mathbf{s}-\mathbf{1}}\,d\mathbf{x}.
+    \]
+    for \(\mathbf{a} < \boldsymbol{\s} < \mathbf{b}\). This integral is locally absolutely uniformly convergent precisely because of the asymptotic satisfied by \(\psi(\mathbf{x})\) upon writing
+    \[
+      (\mc{M}\psi)(\mathbf{s}) = \int_{0}^{1}\!\cdots\!\int_{0}^{1}\psi(\mathbf{x})\mathbf{x}^{\mathbf{s}-\mathbf{1}}\,d\mathbf{x}+\cdots+\int_{1}^{\infty}\!\cdots\!\int_{1}^{\infty}\psi(\mathbf{x})\mathbf{x}^{\mathbf{s}-\mathbf{1}}\,d\mathbf{x},
+    \]
+    where we have decomposed the integral into the \(2^n\) subregions according to if \(0 \le x_{i} \le 1\) or \(x _{i} \ge 1\). Of course, if \(\psi(\mathbf{x})\) exhibits rapid decay then its Mellin transform is locally absolutely uniformly convergent in the tube domain \(\boldsymbol{\s} > \mathbf{a}\). In any case, the Mellin transform is holomorphic in the corresponding region.
+
+    One of the most important properties about the Mellin transform is that it can be inverted. Let \(\Psi(\mathbf{s})\) be a holomorphic function on the tube domain \(\mathbf{a} < \boldsymbol{\s} < \mathbf{b}\) and such that \(\Psi(\mathbf{s}) = O_{\e}((|\mathbf{t}|+\mathbf{3})^{-(\mathbf{c}+\e)})\) for some \(\mathbf{c} \ge \mathbf{1}\). Then its \textbf{inverse Mellin transform}\index{inverse Mellin transform} \((\mc{M}^{-1}\Psi)(\mathbf{x})\) is defined by
+    \[
+      (\mc{M}^{-1}\Psi)(\mathbf{x}) = \frac{1}{(2\pi i)^{n}}\int_{(\tau_{n})}\!\cdots\!\int_{(\tau_{1})}\Psi(\mathbf{s})\mathbf{x}^{-\mathbf{s}}\,d\mathbf{s},
+    \]
+    for any \(\mathbf{x} > \mathbf{0}\) and \(\mathbf{a} < \boldsymbol{\tau} < \mathbf{b}\). This integral is independent of \(\boldsymbol{\tau}\) and locally absolutely uniformly convergent precisely because of the asymptotic satisfies by \(\Psi(\mathbf{s})\).
+
+    \iffalse
+    It is useful question to know under what conditions the inverse Mellin transform of a Mellin transforms returns the original function. This result is known as Mellin inversion and it turns out that the assumptions needed are quite mild.
+
+    \begin{theorem*}[Mellin inversion]
+      Let \(\Psi(\mathbf{s})\) be a holomorphic function on the vertical strip \(a < \s < b\) and such that \(\Psi(\mathbf{s}) = O_{\e}((|t|+3)^{-(c+\e)})\) for some \(c \ge 1\). If \(\psi(\mathbf{x})\) is the inverse Mellin transform of \(\Psi(x)\), then
+      \[
+        \Psi(\mathbf{s}) = (\mc{M}\psi)(\mathbf{s}).
+      \]
+      Conversely, suppose \(\psi(\mathbf{x})\) is piecewise continuous on \((0,\infty)\) taking the average of its left-hand and right-hand limits at any jump discontinuity and such that \(\psi(\mathbf{x}) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(\mathbf{s})\) is the Mellin transform of \(\psi(\mathbf{x})\), then
+      \[
+        \psi(\mathbf{x}) = (\mc{M}^{-1}\Psi)(\mathbf{x}).
+      \]
+    \end{theorem*}
+    \fi
+\end{document}

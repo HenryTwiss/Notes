@@ -1,5 +1,5 @@
 \chapter{Dirichlet Series}
-  Throughout, \(s = \s+it\) and \(s_{0} = \s_{0}+it_{0}\) will stand for complex variables with \(\s\), \(\s_{0}\), \(t\), and \(t_{0}\) real.
+  Throughout, \(s = \s+it\) and \(s_{0} = \s_{0}+it_{0}\) will stand for complex variables with \(\s\), \(\s_{0}\), \(t\), and \(t_{0}\) real. We will also use the Mellin transform and the corresponding inversion theorem developed in \cref{sec:The_Mellin_transform}.
   \section{Convergence Properties}
     A \textbf{Dirichlet series}\index{Dirichlet series} \(D(s)\) is a sum of the form
     \[
@@ -328,7 +328,7 @@
     \[
       A^{\ast}(X) = \asum_{n \le X}a(n),
     \]
-    where the \(\ast\) indicates that the last term is multiplied by \(\frac{1}{2}\) if \(X\) is an integer. This slight modification of \(A(X)\) accounts for the fact that Mellin inversion returns the average at a jump discontinuity. We would like to relate \(A^{\ast}(X)\) to the inverse Mellin transform of \(D(s)\). We will prove several variants of this basic idea. The first being \textbf{(classical) Perron's formula}\index{(classical) Perron's formula} which is a consequence of Abel summation and Mellin inversion applied to Dirichlet series.
+    where the \(\ast\) indicates that the last term is multiplied by \(\frac{1}{2}\) if \(X\) is an integer. This slight modification of \(A(X)\) accounts for the fact that Mellin inversion returns the average of the left-hand and right-hand limits at a jump discontinuity. We would like to relate \(A^{\ast}(X)\) to the inverse Mellin transform of \(D(s)\). We will prove several variants of this basic idea. The first being \textbf{(classical) Perron's formula}\index{(classical) Perron's formula} which is a consequence of Abel summation and Mellin inversion applied to Dirichlet series.
 
     \begin{theorem*}[Perron's formula, classical]
       Let \(D(s)\) be a Dirichlet series with coefficient \(a(n)\) and finite and nonnegative abscissa of absolute convergence \(\s_{a}\). Then for any \(c > \s_{a}\), we have
@@ -600,7 +600,7 @@
     \[
       \Psi(s) = \int_{0}^{\infty}\psi(y)y^{s}\,\frac{dy}{y}.
     \]
-    As \(\psi(y)\) has compact support, the integral defining \(\Psi(s)\) is a locally absolutely uniformly convergent. In particular, \(\Psi(s)\) is holomorphic and Mellin inversion implies that \(\psi(y)\) is the Mellin inverse of \(\Psi(s)\). As for nice properties, \(\Psi(s)\) exhibit rapid decay.
+    As \(\psi(y)\) has compact support bounded away from zero, the integral defining \(\Psi(s)\) is a locally absolutely uniformly convergent. In particular, \(\Psi(s)\) is entire and Mellin inversion implies that \(\psi(y)\) is the Mellin inverse of \(\Psi(s)\). As for nice properties, \(\Psi(s)\) exhibit rapid decay.
 
     \begin{proposition}\label{prop:smoothing_function_Mellin_inverse_vertical_strips}
       Suppose \(\psi(y)\) is smooth weight and let \(\Psi(s)\) be its Mellin transform. Then for bounded \(\s\), we have
