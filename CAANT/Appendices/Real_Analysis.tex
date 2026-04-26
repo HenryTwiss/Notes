@@ -1,133 +1,134 @@
 \chapter{Real Analysis}
-  Throughout, all sums over \(\Z\) are assumed to be ordered symmetrically.
-\section{Fourier Series}\label{sec:Fourier_series}
-  Suppose \(f(x)\) is \(1\)-periodic and integrable on \([0,1]\). Then we define the \(n\)-th \textbf{Fourier coefficient}\index{Fourier coefficient} \(\hat{f}(t)\) of \(f(x)\) by
-  \[
-    \hat{f}(t) = \int_{0}^{1}f(x)e^{-2\pi itx}\,dx.
-  \]
-  The \textbf{Fourier series}\index{Fourier series} \(S_{f}(x)\) is defined by
-  \[
-    S_{f}(x) = \sum_{t \in \Z}\hat{f}(t)e^{2\pi itx}.
-  \]
-  A crucial question is where the Fourier series of \(f(x)\) converges, if at all, and if so does it even converge to \(f(x)\) itself. Under quite reasonable conditions the Fourier series converges uniformly to the function itself.
+  Throughout, all sums over \(\Z\) are assumed to be ordered symmetrically if they are not absolutely convergent.
+  \section{The Fourier Transform}\label{sec:the_Fourier_transform}
+    Let \(f(x)\) be an absolutely integrable function on \(\R\). The \textbf{Fourier transform}\index{Fourier transform} \((\mc{F}f)(\xi)\) of \(f\) is defined by
+    \[
+      (\mc{F}f)(\xi) = \int_{\R}f(x)e^{-2\pi i\xi x}\,dx,
+    \]
+    for real \(\xi\). The integral is absolutely convergent because \(f(x)\) is absolutely integrable. Let us first demonstrate some properties of the Fourier transform.
 
-  \begin{theorem}\label{thm:Fourier_series_1_dimensional}
-    Suppose \(f(x)\) is a piecewise continuously differentiable function on \(\R\) which is \(1\)-periodic. Then the Fourier series of \(f(x)\) converges everywhere. Moreover, it converges uniformly to \(f(x)\) on compact sets where \(f(x)\) is continuous and to the average of the left-hand and right-hand limits of \(f(x)\) at jump discontinuities. 
-  \end{theorem}
-\section{The Fourier Transform}\label{sec:the_Fourier_transform}
-  Let \(f(x)\) be an absolutely integrable function on \(\R\). The \textbf{Fourier transform}\index{Fourier transform} \((\mc{F}f)(\xi)\) of \(f\) is defined by
-  \[
-    (\mc{F}f)(\xi) = \int_{\R}f(x)e^{-2\pi i\xi x}\,dx,
-  \]
-  for real \(\xi\). It is absolutely convergent precisely because \(f(x)\) is absolutely integrable on \(\R\). Let us first demonstrate some properties of the Fourier transform.
+    \begin{proposition}
+      Let \(f(x)\) and \(g(x)\) be absolutely integrable on \(\R\). Then the following properties hold:
+      \begin{enumerate}[label*=(\roman*)]
+        \item For any real \(\a\) and \(\b\), we have
+        \[
+          (\mc{F}(\a f+\b g))(\xi) = \a(\mc{F}f)(\xi)+\b(\mc{F}g)(\xi).
+        \]
+        \item Suppose \(g(x) = f(x+\a)\) for some real \(\a\). Then
+        \[
+          (\mc{F}g)(\xi) = e^{2\pi i\<\a,\xi\>}(\mc{F}f)(\xi).
+        \]
+        \item Suppose \(g(x) = f(\a x)\) for some nonzero real \(\a\). Then
+        \[
+          (\mc{F}g)(\xi) = \frac{1}{|\a|}(\mc{F}f)\left(\frac{\xi}{\a}\right).
+        \]
+      \end{enumerate}
+    \end{proposition}
+    \begin{proof}
+      Property (i) is immediate from linearity of the integral while property (ii) follows by applying the change of variables \(x \mapsto x-\a\). Property (iii) is proved by performing the change of variables \(x \mapsto \a x\).
+    \end{proof}
 
-  \begin{proposition}
-    Let \(f(x)\) and \(g(x)\) be absolutely integrable on \(\R\). Then the following properties hold:
-    \begin{enumerate}[label*=(\roman*)]
-      \item For any real \(\a\) and \(\b\), we have
+    There is also an inverse transform. Let \(F(\xi)\) be an absolutely integrable function on \(\R\). Then the \textbf{inverse Fourier transform}\index{inverse Fourier transform} \((\mc{F}^{-1}F)(x)\) is defined by
+    \[
+      (\mc{F}^{-1}F)(x) = \int_{\R}F(\xi)e^{2\pi i\xi x}\,d\xi,
+    \]
+    for real \(x\). It is absolutely convergent because \(F(\xi)\) is absolutely integrable on \(\R\).
+
+    It is useful to know under what conditions the Fourier transform and the inverse Fourier transform are genuinely inverse operators. This result is known as Fourier inversion.
+
+    \begin{theorem*}[Fourier inversion]
+      Let \(f(x)\) be a piecewise continuous and absolutely integrable function on \(\R\). Assume that its Fourier transform \(F(\xi)\) is absolutely integrable on \(\R\). Then
       \[
-        (\mc{F}(\a f+\b g))(\xi) = \a(\mc{F}f)(\xi)+\b(\mc{F}g)(\xi).
+        f(x) = (\mc{F}^{-1}F)(x),
       \]
-      \item Suppose \(g(x) = f(x+\a)\) for some real \(\a\). Then
+      where \(f(x)\) is understood to mean the average of the left-hand and right-hand limits at jump discontinuities. Conversely, let \(F(\xi)\) be a piecewise continuous and absolutely integrable function on \(\R\). Assume that its inverse Fourier transform \(f(x)\) is absolutely integrable on \(\R\). Then
       \[
-        (\mc{F}g)(\xi) = e^{2\pi i\<\a,\xi\>}(\mc{F}f)(\xi).
+        F(\xi) = (\mc{F}f)(\xi),
       \]
-      \item Suppose \(g(x) = f(\a x)\) for some nonzero real \(\a\). Then
+      where it is understood that \(F(\xi)\) represents the average of the left-hand and right-hand limits at jump discontinuities
+    \end{theorem*}
+  \section{Fourier Series}\label{sec:Fourier_series}
+    Suppose \(f(x)\) is a \(1\)-periodic function on \(\R\) and integrable on \([0,1]\). Then the \(t\)-th \textbf{Fourier coefficient}\index{Fourier coefficient} \(\hat{f}(t)\) of \(f(x)\) is defined by
+    \[
+      \hat{f}(t) = \int_{0}^{1}f(x)e^{-2\pi itx}\,dx.
+    \]
+    Accordingly, the \textbf{Fourier series}\index{Fourier series} \(S_{f}(x)\) of \(f(x)\) is given by
+    \[
+      S_{f}(x) = \sum_{t \in \Z}\hat{f}(t)e^{2\pi itx}.
+    \]
+    A crucial question is where the Fourier series of \(f(x)\) converges, if at all, and if so does it even converge to \(f(x)\) itself. Under quite reasonable conditions the Fourier series converges uniformly to the function itself everywhere it is continuous.
+
+    \begin{theorem}\label{thm:Fourier_series_1_dimensional}
+      Suppose \(f(x)\) is a \(1\)-periodic piecewise smooth function on \(\R\). Then the Fourier series of \(f(x)\) converges everywhere. Moreover, it converges uniformly to \(f(x)\) on compact sets where \(f(x)\) is continuous and to the average of the left-hand and right-hand limits at jump discontinuities. 
+    \end{theorem}
+  \section{Poisson Summation}\label{sec:Poisson_summation}
+    Let \(f(x)\) be an absolutely integrable function on \(\R\). There are two natural methods of building a function from \(f(x)\) which is \(1\)-periodic. The first is to average \(f(x)\) over all translates by elements of \(\Z\) while the second is to consider the Fourier series of \(f(x)\). This gives us the two series
+    \[
+      \sum_{n \in \Z}f(x+n) \quad \text{and} \quad \sum_{t \in \Z}(\mc{F}f)(t)e^{2\pi itx}.
+    \]
+    The link between the Fourier transform and Fourier series is given by \textbf{Poisson summation}\index{Poisson summation} which says that these two expressions are the same under some mild assumptions.
+
+    \begin{theorem}
+      Let \(f(x)\) be a piecewise smooth function on \(\R\) such that \(f^{(k)}(x) = O_{\e}((|x|+3)^{-(1+\e)})\) for all nonnegative integers \(k\). Then
       \[
-        (\mc{F}g)(\xi) = \frac{1}{|\a|}(\mc{F}f)\left(\frac{\xi}{\a}\right).
+        \sum_{n \in \Z}f(x+n) = \sum_{t \in \Z}(\mc{F}f)(t)e^{2\pi itx},
       \]
-    \end{enumerate}
-  \end{proposition}
-  \begin{proof}
-    Property (i) is immediate from linearity of the integral while property (ii) follows by applying the change of variables \(x \mapsto x-\a\). Property (iii) is proved by performing the change of variables \(x \mapsto \a x\).
-  \end{proof}
+      where \(f(x+n)\) is understood to mean the average of the left-hand and right-hand limits at jump discontinuities. In particular,
+      \[
+        \sum_{n \in \Z}f(n) = \sum_{t \in \Z}(\mc{F}f)(t).
+      \]
+    \end{theorem}
+    \begin{proof}
+      As \(f(x) = O_{\e}((|x|+3)^{-(1+\e)})\), we see that \(f(x)\) is absolutely integrable on \(\R\). Now let
+      \[
+        F(x) = \sum_{n \in \Z}f(x+n),
+      \]
+      and observe that the same asymptotic implies \(F(x)\) is locally absolutely uniformly convergent on \(\R\) via the Weierstrass \(M\)-test. In fact, the since \(f^{(k)}(x) = O_{\e}((|x|+3)^{-(1+\e)})\) for all nonnegative integers \(k\), repeated application of the Weierstrass \(M\)-test and uniform limit theorem implies that \(F(x)\) is piecewise smooth. As \(F(x)\) is also clearly \(1\)-periodic, it admits a Fourier series converging everywhere by \cref{thm:Fourier_series_1_dimensional}. In particular, the Fourier series converges uniformly to \(F(x)\) on compact sets where \(F(x)\) is continuous and to the average of the left-hand and right-hand limits at jump discontinuities. In the latter case, we may interchange the limit and the sum by uniform convergence to see that this is simply the sum of the average of the left-hand and right-hand limits of \(f(x+n)\). Since \(F(x)\) is also absolutely integrable on \([0,1]\), we compute its \(t\)-th Fourier coefficient given by
+      \[
+        \hat{F}(t) = \int_{0}^{1}F(x)e^{-2\pi itx}\,dx.
+      \]
+      We may interchange of sum and integral by absolute convergent to obtain
+      \[
+        \hat{F}(t) = (\mc{F}f)(t).
+      \]
+      Whence
+      \[
+        \sum_{n \in \Z}f(x+n) = \sum_{t \in \Z}(\mc{F}f)(t)e^{2\pi itx}.
+      \]
+      This proves the first statement. Setting \(x = 0\) proves the second statement.
+    \end{proof}
 
-  The Fourier transform can also be inverted. Let \(F(\xi)\) be an absolutely integrable function on \(\R\). Then the \textbf{inverse Fourier transform}\index{inverse Fourier transform} \((\mc{F}^{-1}F)(x)\) is defined by
-  \[
-    (\mc{F}^{-1}F)(x) = \int_{\R}F(\xi)e^{2\pi i\xi x}\,d\xi,
-  \]
-  for real \(x\). It is absolutely convergent precisely because \(F(\xi)\) is absolutely integrable on \(\R\).
+    In practical settings, we need a class of functions for which Poisson summation is valid and whose Fourier transforms can be easily computed. We say that \(f(x)\) is of \textbf{Schwartz class}\index{Schwartz class} if \(f(x)\) is smooth and has rapid decay along with all of its derivatives. The prototypical Schwartz class function is \(e^{-\pi x^{2}}\). Conveniently, this function is its own Fourier transform.
 
-  It is useful to know under what conditions the inverse Fourier transform of a Fourier transform returns the original function. This result is known as Fourier inversion and the assumptions are fairly mild.
+    \begin{proposition}\label{prop:Fourier_transform_of_exponential_single_variable}
+      Let \(\a\) be positive and and set \(f(x) = e^{-2\pi\a x^{2}}\). Then
+      \[
+        (\mc{F}f)(\z) = \frac{e^{-\frac{\pi\z^{2}}{2\a}}}{\sqrt{2\a}}.
+      \]
+      In particular, \(e^{-\pi x^{2}}\) is its own Fourier transform.
+    \end{proposition}
+    \begin{proof}
+      Consider
+      \[
+        (\mc{F}f)(\z) = \int_{\R}e^{-2\pi(\a x^{2}+i\z x)}\,dx.
+      \]
+      The change of variables \(x \mapsto \frac{x}{\sqrt{\a}}\) transforms this integral into
+      \[
+        \frac{1}{\sqrt{\a}}\int_{\R}e^{-2\pi\left(x^{2}+\frac{i\z x}{\sqrt{\a}}\right)}\,dx.
+      \]
+      Complete the square in the exponent by observing
+      \[
+        x^{2}+\frac{i\z x}{\sqrt{\a}} = \left(x+\frac{i\z}{2\sqrt{\a}}\right)^{2}+\frac{\z^{2}}{4\a},
+      \]
+      so that the previous integral is equal to
+      \[
+        \frac{e^{-\frac{\pi\z^{2}}{2\a}}}{\sqrt{\a}}\int_{\R}e^{-2\pi\left(x+\frac{i\z}{2\sqrt{\a}}\right)^{2}}\,dx.
+      \]
+      By rapid decay of the integrand, the change of variables \(x \mapsto \frac{x}{\sqrt{2}}-\frac{i\z}{\sqrt{\a}}\) is permitted giving
+      \[
+        \frac{e^{-\frac{\pi\z^{2}}{2\a}}}{\sqrt{2\a}}\int_{\R}e^{-\pi x^{2}}\,dx = \frac{e^{-\frac{\pi\z^{2}}{2\a}}}{\sqrt{2\a}},
+      \]
+      because the remaining integral is the Gaussian integral. This proves the first statement. The second statement follows by taking \(\a = \frac{1}{2}\).
+    \end{proof}
 
-  \begin{theorem*}[Fourier inversion]
-    Let \(f(x)\) be a piecewise continuously differentiable and absolutely integrable function on \(\R\). Assume that its Fourier transform \(F(\xi)\) is absolutely integrable on \(\R\). Then
-    \[
-      f(x) = (\mc{F}^{-1}F)(x),
-    \]
-    where \(f(x)\) is understood to mean the average of its left-hand and right-hand limits at jump discontinuities. Conversely, let \(F(\xi)\) be a piecewise continuously differentiable and absolutely integrable function on \(\R\). Assume that its inverse Fourier transform \(f(x)\) is absolutely integrable on \(\R\). Then
-    \[
-      F(\xi) = (\mc{F}f)(\xi),
-    \]
-    where it is understood that \(F(\xi)\) represents the average of its left-hand and right-hand limits at jump discontinuities
-  \end{theorem*}
-\section{Poisson Summation}\label{sec:Poisson_summation}
-  Let \(f(x)\) be an absolutely integrable function on \(\R\). There are two natural methods of building a function from \(f(x)\) that is \(1\)-periodic. The first is to average \(f(x)\) over all translates by elements of \(\Z\) while the second is to consider the Fourier series of \(f(x)\). This gives us the two series
-  \[
-    \sum_{n \in \Z}f(x+n) \quad \text{and} \quad \sum_{t \in \Z}(\mc{F}f)(t)e^{2\pi itx}.
-  \]
-  The link between the Fourier transform and Fourier series is given by \textbf{Poisson summation}\index{Poisson summation} which says that these two expressions are the same under some mild assumptions.
-
-  \begin{theorem}
-    Let \(f(x)\) be an absolutely integrable function on \(\R\). Also suppose
-    \[
-      F(x) = \sum_{n \in \Z}f(x+n),
-    \]
-    is a piecewise continuously differentiable function on \(\R\). Then
-    \[
-      \sum_{n \in \Z}f(x+n) = \sum_{t \in \Z}(\mc{F}f)(t)e^{2\pi itx},
-    \]
-    where \(f(x+n)\) is understood to mean the average of its left-hand and right-hand limits at jump discontinuities. In particular,
-    \[
-      \sum_{n \in \Z}f(n) = \sum_{t \in \Z}(\mc{F}f)(t),
-    \]
-    where \(f(n)\) is understood to mean the average of its left-hand and right-hand limits at jump discontinuities.
-  \end{theorem}
-  \begin{proof}
-    Notice that \(F(x)\) converges locally absolutely uniformly by the absolute integrability of \(f(x)\). As \(F(x)\) is clearly \(1\)-periodic and piecewise continuously differentiable by assumption, it admits a Fourier series converging everywhere by \cref{thm:Fourier_series_1_dimensional}. In particular, the Fourier series converges uniformly to \(F(x)\) on compact sets where \(F(x)\) is continuous and to the average of the left-hand and right-hand limits at jump discontinuities. In the latter case, we may interchange the limit and the sum by absolute convergence to see that this is simply the sum of the average of the left-hand and right-hand limits of \(f(x+n)\). Since \(F(x)\) is absolutely integrable on \([0,1]\), we compute its \(t\)-th Fourier coefficient given by
-    \[
-      \hat{F}(t) = \int_{0}^{1}F(x)e^{-2\pi itx}\,dx.
-    \]
-    The absolute integrability of \(f(x)\) permits the interchange of sum and integral to obtain
-    \[
-      \hat{F}(t) = (\mc{F}f)(t).
-    \]
-    Whence
-    \[
-      \sum_{n \in \Z}f(x+n) = \sum_{t \in \Z}(\mc{F}f)(t)e^{2\pi itx}.
-    \]
-    This proves the first statement. Setting \(x = 0\) proves the second statement.
-  \end{proof}
-
-  In practical settings, we need a class of functions \(f(x)\) for which the average constructed in Poisson summation has nice properties. We say that \(f(x)\) is of \textbf{Schwarz class}\index{Schwarz class} if \(f(x)\) is smooth and has rapid decay along with all of its derivatives. The prototypical Schwarz class function is \(f(x) = e^{-2\pi x^{2}}\). Conveniently, this function is essentially its own Fourier transform.
-
-  \begin{proposition}\label{prop:Fourier_transform_of_exponential_single_variable}
-    Let \(\a\) be positive and and set \(f(x) = e^{-2\pi\a x^{2}}\). Then
-    \[
-      (\mc{F}f)(\z) = \frac{e^{-\frac{\pi\z^{2}}{2\a}}}{\sqrt{2\a}}.
-    \]
-    In particular, \(e^{-\pi x^{2}}\) is its own Fourier transform.
-  \end{proposition}
-  \begin{proof}
-    Consider
-    \[
-      (\mc{F}f)(\z) = \int_{\R}e^{-2\pi(\a x^{2}+i\z x)}\,dx.
-    \]
-    The change of variables \(x \mapsto \frac{x}{\sqrt{\a}}\) transforms this integral into
-    \[
-      \frac{1}{\sqrt{\a}}\int_{\R}e^{-2\pi\left(x^{2}+\frac{i\z x}{\sqrt{\a}}\right)}\,dx.
-    \]
-    Complete the square in the exponent by observing
-    \[
-      x^{2}+\frac{i\z x}{\sqrt{\a}} = \left(x+\frac{i\z}{2\sqrt{\a}}\right)^{2}+\frac{\z^{2}}{4\a},
-    \]
-    so that the previous integral is equal to
-    \[
-      \frac{e^{-\frac{\pi\z^{2}}{2\a}}}{\sqrt{\a}}\int_{\R}e^{-2\pi\left(x+\frac{i\z}{2\sqrt{\a}}\right)^{2}}\,dx.
-    \]
-    By rapid decay of the integrand, the change of variables \(x \mapsto \frac{x}{\sqrt{2}}-\frac{i\z}{\sqrt{\a}}\) is permitted giving
-    \[
-      \frac{e^{-\frac{\pi\z^{2}}{2\a}}}{\sqrt{2\a}}\int_{\R}e^{-\pi x^{2}}\,dx = \frac{e^{-\frac{\pi\z^{2}}{2\a}}}{\sqrt{2\a}},
-    \]
-    because the remaining integral is the Gaussian integral. This proves the first statement. The second statement follows by taking \(\a = \frac{1}{2}\).
-  \end{proof}
+    Clearly any Schwartz class function satisfies the conditions of Poisson summation. In fact, if \(f(x)\) is compactly supported and equal to a Schwartz function on its support then the conditions of Poisson summation are also satisfied. Moreover, the previous result also suggests that it should be relatively simple to compute the required Fourier transform appearing in Poisson summation.

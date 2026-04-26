@@ -452,15 +452,11 @@
       \]
     \end{theorem}
     \begin{proof}
-      The aim is to express \(g(m)\) as a periodic sum over \(\Z\) whose summands are compactly supported functions of bounded variation. For then we can apply Poisson summation to evaluate the sum in an alternative manner. To this end, consider the function
+      We will write the quadratic Gauss in a form to which Poisson summation can be applied. For then we can evaluate the quadratic Gauss sum by means of Fourier transforms. To this end, consider the function
       \[
-        f(x) = \begin{cases} e^{\frac{2\pi ix^{2}}{m}} & \text{if \(x \in [0,m]\),} \\ 0 & \text{if \(x \notin [0,m]\).} \end{cases}
+        f(x) = \begin{cases} e^{\frac{2\pi ix^{2}}{m}} & \text{if \(x \in [0,m]\),} \\ 0 & \text{if \(x \notin [0,m]\),} \end{cases}
       \]
-      Then \(f(x)\) is absolutely integrable and piecewise smooth. This implies
-      \[
-        \sum_{n \in \Z}f(x+n),
-      \]
-      is also piecewise smooth by the Weierstrass \(M\)-test. Therefore Poisson summation applies where \(f(n)\) is understood to be the average of the left-hand and right-hand limits at jump discontinuities. On the one hand, this means
+      which is piecewise smooth and compactly supported on \(\R\). Therefore Poisson summation applies. On the one hand, this means
       \[
         \sum_{n \in \Z}f(n) = g(m).
       \]

@@ -1,34 +1,34 @@
 \chapter{Complex Analysis}
   Throughout, \(s = \s+it\) and \(u = \tau+ir\) will stand for complex variables with \(\s\), \(\tau\), \(t\), and \(r\) real.
   \section{The Mellin Transform}\label{sec:The_Mellin_transform}
-    Let \(\psi(x)\) be a function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). Its \textbf{Mellin transform}\index{Mellin transform} \((\mc{M}\psi)(s)\) is defined by
+    Let \(\psi(x)\) be a function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). Then the \textbf{Mellin transform}\index{Mellin transform} \((\mc{M}\psi)(s)\) of \(\psi(x)\) is defined by
     \[
       (\mc{M}\psi)(s) = \int_{0}^{\infty}\psi(x)x^{s-1}\,dx.
     \]
-    for \(a < \s < b\). This integral is locally absolutely uniformly convergent precisely because of the asymptotic satisfied by \(\psi(x)\) upon writing
+    for \(a < \s < b\). This integral is locally absolutely uniformly convergent due to the asymptotic satisfied by \(\psi(x)\) upon writing
     \[
       (\mc{M}\psi)(s) = \int_{0}^{1}\psi(x)x^{s-1}\,dx+\int_{1}^{\infty}\psi(x)x^{s-1}\,dx.
     \]
-    Of course, if \(\psi(x)\) exhibits rapid decay then its Mellin transform is locally absolutely uniformly convergent in the half-plane \(\s > a\). In any case, the Mellin transform is holomorphic in the corresponding region.
+    Of course, if we may take \(a\) or \(b\) arbitrary large then the Mellin transform is locally absolutely uniformly convergent in the half-plane \(\s < b\) or \(\s > a\) respectively. In any case, the Mellin transform is holomorphic in the corresponding region.
 
-    One of the most important properties about the Mellin transform is that it can be inverted. Let \(\Psi(s)\) be a holomorphic function on the vertical strip \(a < \s < b\) and such that \(\Psi(s) = O_{\e}((|t|+3)^{-(c+\e)})\) for some \(c \ge 1\). Then its \textbf{inverse Mellin transform}\index{inverse Mellin transform} \((\mc{M}^{-1}\Psi)(x)\) is defined by
+    There is also an inverse transform. Let \(\Psi(s)\) be a holomorphic function on the vertical strip \(a < \s < b\) and such that \(\Psi(s) = O_{\e}((|t|+3)^{-(1+\e)})\). Then the \textbf{inverse Mellin transform}\index{inverse Mellin transform} \((\mc{M}^{-1}\Psi)(x)\) of \(\Psi(s)\) is defined by
     \[
-      (\mc{M}^{-1}\Psi)(x) = \frac{1}{2\pi i}\int_{(\s)}\Psi(s)x^{-s}\,ds,
+      (\mc{M}^{-1}\Psi)(x) = \frac{1}{2\pi i}\int_{(c)}\Psi(s)x^{-s}\,ds,
     \]
-    for any positive \(x\). This integral is locally absolutely uniformly convergent precisely because of the asymptotic satisfies by \(\Psi(s)\).
+    for any positive \(x\) and \(a < c < b\). This integral is independent of \(c\) and locally absolutely uniformly convergent because of the asymptotic satisfied by \(\Psi(s)\).
 
-    It is useful to know under what conditions the inverse Mellin transform of a Mellin transform returns the original function. This result is known as Mellin inversion and it turns out that the assumptions needed are quite mild.
+    It is useful to know under what conditions the Mellin transform and the inverse Mellin transform are genuinely inverse operators. This result is known as Mellin inversion.
 
     \begin{theorem*}[Mellin inversion]
-      Let \(\Psi(s)\) be a holomorphic function on the vertical strip \(a < \s < b\) and such that \(\Psi(s) = O_{\e}((|t|+3)^{-(c+\e)})\) for some \(c \ge 1\). If \(\psi(x)\) is the inverse Mellin transform of \(\Psi(x)\), then
+      Let \(\Psi(s)\) be a holomorphic function on the vertical strip \(a < \s < b\) and such that \(\Psi(s) = O_{\e}((|t|+3)^{-(1+\e)})\). If \(\psi(x)\) is the inverse Mellin transform of \(\Psi(x)\), then
       \[
         \Psi(s) = (\mc{M}\psi)(s).
       \]
-      Conversely, suppose \(\psi(x)\) is a piecewise continuously differentiable function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
+      Conversely, suppose \(\psi(x)\) is a piecewise continuous function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
       \[
         \psi(x) = (\mc{M}^{-1}\Psi)(x),
       \]
-      where \(\psi(x)\) is understood to mean the average of its left-hand and right-hand limits at jump discontinuities.
+      where \(\psi(x)\) is understood to mean the average of the left-hand and right-hand limits at jump discontinuities.
     \end{theorem*}
   \section{The Gamma Function}\label{sec:the_gamma_function}
     The \textbf{gamma function}\index{gamma function} \(\G(s)\) is defined by the integral
@@ -40,7 +40,7 @@
     \begin{proposition}\label{prop:Factorial_properties_of_gamma_function}
       The gamma function satisfies
       \[
-          \G(1) = 1 \quad \text{and} \quad \G(s+1) = s\G(s).
+        \G(1) = 1 \quad \text{and} \quad \G(s+1) = s\G(s).
       \]
       In particular,
       \[
@@ -90,11 +90,11 @@
     \]
     In order to deduce more analytic properties of the gamma function, we will introduce an auxiliary function that will be more amenable to study. The \textbf{beta function}\index{beta function} \(B(s,u)\) is defined by
     \[
-        B(s,u) = \int_{0}^{1}x^{s-1}(1-x)^{u-1}\,dx.
+      B(s,u) = \int_{0}^{1}x^{s-1}(1-x)^{u-1}\,dx.
     \]
     This defines a holomorphic function for \(\s > 0\) and \(\tau > 0\) since the integral is locally absolutely uniformly convergent in this region. At present, it does not seem apparent that the beta function is related to the gamma function at all. This will be resolved shortly. The beta function is symmetric, namely
     \[
-        B(s,u) = B(u,s),
+      B(s,u) = B(u,s),
     \]
     as it seen by performing the change of variables \(x \mapsto 1-x\) to the integral. The following result establishes the relationship between the beta function and the gamma function:
 
