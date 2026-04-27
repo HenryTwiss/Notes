@@ -1,21 +1,21 @@
 \chapter{Complex Analysis}
   Throughout, \(s = \s+it\) and \(u = \tau+ir\) will stand for complex variables with \(\s\), \(\tau\), \(t\), and \(r\) real.
   \section{The Mellin Transform}\label{sec:The_Mellin_transform}
-    Let \(\psi(x)\) be a function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). Then the \textbf{Mellin transform}\index{Mellin transform} \((\mc{M}\psi)(s)\) of \(\psi(x)\) is defined by
+    Let \(\psi(x)\) be a function on \((0,\infty)\). Then the \textbf{Mellin transform}\index{Mellin transform} \((\mc{M}\psi)(s)\) of \(\psi(x)\) is defined by
     \[
       (\mc{M}\psi)(s) = \int_{0}^{\infty}\psi(x)x^{s-1}\,dx.
     \]
-    for \(a < \s < b\). This integral is locally absolutely uniformly convergent due to the asymptotic satisfied by \(\psi(x)\) upon writing
+    This integral need not be convergent. However, if \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) for some \(a < b\) then it is locally absolutely uniformly convergent for \(a < \s < b\) upon writing
     \[
       (\mc{M}\psi)(s) = \int_{0}^{1}\psi(x)x^{s-1}\,dx+\int_{1}^{\infty}\psi(x)x^{s-1}\,dx.
     \]
     Of course, if we may take \(a\) or \(b\) arbitrary large then the Mellin transform is locally absolutely uniformly convergent in the half-plane \(\s < b\) or \(\s > a\) respectively. In any case, the Mellin transform is holomorphic in the corresponding region.
 
-    There is also an inverse transform. Let \(\Psi(s)\) be a holomorphic function on the vertical strip \(a < \s < b\) and such that \(\Psi(s) = O_{\e}((|t|+3)^{-(1+\e)})\). Then the \textbf{inverse Mellin transform}\index{inverse Mellin transform} \((\mc{M}^{-1}\Psi)(x)\) of \(\Psi(s)\) is defined by
+    There is also an inverse transform. Let \(\Psi(s)\) be a holomorphic function on the vertical strip \(a < \s < b\). Then the \textbf{inverse Mellin transform}\index{inverse Mellin transform} \((\mc{M}^{-1}\Psi)(x)\) of \(\Psi(s)\) is defined by
     \[
       (\mc{M}^{-1}\Psi)(x) = \frac{1}{2\pi i}\int_{(c)}\Psi(s)x^{-s}\,ds,
     \]
-    for any positive \(x\) and \(a < c < b\). This integral is independent of \(c\) and locally absolutely uniformly convergent because of the asymptotic satisfied by \(\Psi(s)\).
+    for any \(a < c < b\). This integral need not converge or even be independent of \(c\). Yet if \(\Psi(s) = O_{\e}((|t|+3)^{-(1+\e)})\) then the integral is locally absolutely uniformly convergent and independent of \(c\).
 
     It is useful to know under what conditions the Mellin transform and the inverse Mellin transform are genuinely inverse operators. This result is known as Mellin inversion.
 
@@ -24,7 +24,7 @@
       \[
         \Psi(s) = (\mc{M}\psi)(s).
       \]
-      Conversely, suppose \(\psi(x)\) is a piecewise continuous function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
+      Conversely, suppose \(\psi(x)\) is a piecewise smooth function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
       \[
         \psi(x) = (\mc{M}^{-1}\Psi)(x),
       \]
