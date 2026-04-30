@@ -1,6 +1,5 @@
 \begin{theindex}
 
-  \item (classical) Perron's formula, \hyperpage{117}
   \item \(S\)-class group, \hyperpage{57}
   \item \(S\)-class number, \hyperpage{57}
   \item \(S\)-unit, \hyperpage{57}
@@ -187,7 +186,8 @@
 
   \indexspace
 
-  \item Perron's formula, \hyperpage{121}, \hyperpage{123}
+  \item Perron's formula, \hyperpage{117}, \hyperpage{121}, 
+		\hyperpage{123}
   \item Picard class, \hyperpage{59}
   \item Picard group, \hyperpage{59}
   \item Poisson summation, \hyperpage{161}
