@@ -530,7 +530,7 @@
 
     The usefulness of this result is that the difficulty of proving the Lindel\"of hypothesis for \(L(s)\) has been transferred to proving sufficient asymptotics for the moments \(M_{2k}(T,L)\) each of which should, heuristically speaking, be an easier problem to resolve on its own.
   \section{Estimates on the Critical Line}
-    We now turn to the question of how to obtain estimates on the critical line. There are many methods one can apply often depending upon the particular analytic \(L\)-function of interest. Here we will provide a method that works in vast generality and reduces the estimation of \(L\left(\frac{1}{2}+it\right)\) to that of estimating smoothed finite sums of coefficients. To achieve this we need to establish the existence of certain bump functions. We say that a function \(\w(y)\) is a \textbf{smooth dyadic weight}\index{smooth dyadic weight} if it is a positive bump function supported in \([1-\d,2+\d]\) and such that
+    We now turn to the question of how to obtain estimates on the critical line. There are many methods one can apply often depending upon the particular analytic \(L\)-function of interest. Here we will provide a method that works in vast generality and reduces the estimation of \(L\left(\frac{1}{2}+it\right)\) to that of estimating smoothed finite sums of coefficients. To achieve this we need to establish the existence of certain bump functions. We say that a function \(\w(y)\) is a \textbf{smooth dyadic weight}\index{smooth dyadic weight} if it is a nonnegative bump function supported in \([1-\d,2+\d]\) and such that
     \[
       \sum_{k \in \Z}\w\left(\frac{y}{2^{k}}\right) = 1,
     \]
@@ -607,7 +607,7 @@
       upon absorbing smaller order \(O\)-estimates.
     \end{proof}
 
-    As any useful estimate for the sum \(A_{\w}(t,X,L)\) will be in terms of powers of \(X\), the supremum in \cref{thm:central_value_estimate} will automatically pick out the largest possible bound when \(X\) is the square root of the analytic conductor. This means that the savings of \(\sqrt{X}\) in the denominator is essentially as large as possible. For example, we obtain the convexity bound as an application. Since the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s < 1\), we have a bound of shape
+    If \(A_{\w}(t,X,L) \ll_{\e} X^{\frac{1}{2}+\d+\e}\) for some \(\d \ge 0\) then the supremum in \cref{thm:central_value_estimate} will automatically pick out the largest possible bound when \(X\) is the square root of the analytic conductor. This means that the savings of \(\sqrt{X}\) in the denominator is essentially as large as possible. For example, the convexity bound follows upon showing that we may take \(\d = \frac{1}{2}\). Since the Dirichlet series of \(L(s)\) is absolutely convergent for \(\s < 1\), we have a bound of shape
     \[
       \sum_{n \le X}|a_{L}(n)| \ll_{\e} X^{1+\e}.
     \]
@@ -617,9 +617,13 @@
     \end{equation}
     which gives the convexity bound. As we believe \(L(s)\) satisfies the Lindel\"of hypothesis, we should expect lots of cancellation in the sum \(A_{\w}(t,X,L)\). In fact, the expected cancellation should be \(O\left(\mf{q}\left(\frac{1}{2}+it,L\right)^{\frac{1}{4}}\right)\) in light of the aforementioned bound. This means we expect \(A_{\w}(t,X,L)\) to exhibit square-root cancellation in the sense
     \[
-      A_{\w}(t,X,L) \ll_{\e} X^{\frac{1}{2}+\e}.
+      A_{\w}(t,X,L) \ll_{\e} X^{\frac{1}{2}+\e},
     \]
-    As the coefficients \(a_{L}(n)\) may very well be real, the expected cancellation must come from the terms \(n^{-it} = e^{-it\log(n)}\) which acts on the coefficients \(a_{L}(n)\) by rotation. In effect, we should think of the terms \(a_{L}(n)n^{-it}\) as modeling identically distributed random variables. 
+    which is to say we may take \(\d = 0\). As the coefficients \(a_{L}(n)\) may very well be real, the expected cancellation must come from the terms \(n^{-it} = e^{-it\log(n)}\) which act on the coefficients \(a_{L}(n)\) by rotation. In effect, we should think of the terms \(a_{L}(n)n^{-it}\) as modeling identically distributed random variables. In order to exploit this cancellation via analytic methods, one can make use of smoothed Perron's formula. Letting \(\W(s)\) be the Mellin transform of \(\w(y)\), smooth Perron's formula gives
+    \[
+      A_{\w}(t,X,L) = \frac{1}{2\pi i}\int_{(c)}L\left(u+it\right)\W(u)X^{u}\,du,
+    \]
+    for any \(c > 1\). Then estimates for \(A_{\w}(t,X,L)\) can be obtained from those of this inverse Mellin transform.
 
     The case when \(t = 0\) deserves special interest as we are estimating the value of an analytic \(L\)-function at the central point. The value of \(L(s)\) at the central point is called the \textbf{central value}\index{central value} of \(L(s)\). Many important properties about an analytic \(L\)-function can be connected to its central value. Any argument used to estimate the central value of an analytic \(L\)-function is called a \textbf{central value estimate}\index{central value estimate}. Taking \(t = 0\) in \cref{thm:critical_line_estimate} gives a way to obtain central value estimates.
 
