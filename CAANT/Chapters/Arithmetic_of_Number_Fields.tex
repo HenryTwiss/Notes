@@ -963,39 +963,8 @@
     \[
       \smc{O}_{\mf{p}}^{\ast} = \smc{O}_{\mf{p}}-\mf{p}_{\mf{p}} \quad \text{and} \quad \smc{O}_{\mf{p}}^{\ast}+\mf{p}_{\mf{p}} = \smc{O}_{\mf{p}}^{\ast}.
     \]
-    In other words, the units of \(\smc{O}_{\mf{p}}\) are precisely the elements not in \(\mf{p}_{\mf{p}}\) and the sum of a unit of \(\smc{O}_{\mf{p}}\) and an element of \(\mf{p}_{\mf{p}}\) is again a unit of \(\smc{O}_{\mf{p}}\). If \(\mf{p}\) itself is maximal we can say more.
+    In other words, the units of \(\smc{O}_{\mf{p}}\) are precisely the elements not in \(\mf{p}_{\mf{p}}\) and the sum of a unit of \(\smc{O}_{\mf{p}}\) and an element of \(\mf{p}_{\mf{p}}\) is again a unit of \(\smc{O}_{\mf{p}}\).
 
-    \begin{proposition}\label{prop:localization_at_prime_is_local}
-      Let \(\smc{O}\) be an integral domain and \(\mf{p}\) be a prime of \(\smc{O}\). Then there is an embedding
-      \[
-        \smc{O}/\mf{p}^{n} \to \smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}^{n},
-      \]
-      induced by natural projection for every positive integer \(n\). In particular, this embedding identifies \(\smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}\) with the field of fractions of \(\smc{O}/\mf{p}\) when \(n  = 1\). Moreover, if \(\mf{p}\) is maximal we have an isomorphism
-      \[
-        \smc{O}/\mf{p}^{n} \cong \smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}^{n},
-      \]
-      induced by natural projection.
-    \end{proposition}
-    \begin{proof}
-      Consider the homomorphism
-      \[
-        \phi:\smc{O} \to \smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}^{n} \qquad \a \mapsto \a+\mf{p}_{\mf{p}}^{n},
-      \]
-      induced by natural projection. Note that \(\ker\phi = \mf{p}_{\mf{p}}^{n} \cap \smc{O}\). By \cref{prop:localization_prime_bijection}, \(\mf{p}_{\mf{p}} \cap \smc{O} = \mf{p}\) and induction together with primality of \(\mf{p}\) forces 
-      \[
-        \mf{p}_{\mf{p}}^{n} \cap \smc{O} = \mf{p}^{n}.
-      \]
-      Whence \(\ker\phi = \mf{p}^{n}\). Then the first isomorphism theorem induces the desired embedding. As \(\mf{p}_{\mf{p}}\) is maximal, \(\smc{O}_{\mf{p}}/\mf{p}_{\mf{p}}\) is a field and thus must be the field of fractions of \(\smc{O}/\mf{p}\) under this embedding when \(n = 1\). It remains to prove the last statement. So suppose \(\mf{p}\) is maximal. It suffices to show \(\phi\) is surjective. As \(\smc{O}_{\mf{p}}\) is local, every element not in \(\mf{p}_{\mf{p}}\) is a unit which is to say
-      \[
-        \smc{O}_{\mf{p}}^{\ast}+\mf{p}_{\mf{p}} = \smc{O}_{\mf{p}}.
-      \]
-      But \(\mf{p}\) is maximal so that \(\smc{O}/\mf{p}\) is a field whence \(\smc{O}_{\mf{p}}^{\ast} \subseteq \smc{O}+\mf{p}_{\mf{p}}\). This implies \(\smc{O}+\mf{p}_{\mf{p}} = \smc{O}_{\mf{p}}\). It follows by induction that
-      \[
-        \smc{O}+\mf{p}_{\mf{p}}^{n} = \smc{O}_{\mf{p}}.
-      \]
-      This shows surjectivity.
-    \end{proof}
-    
     In order for localization to be a useful tool in algebraic investigations, it must behave well with respect to what we have already developed. To this end, we will collect some useful properties about localization. Most importantly, intersections of localizations behave well with respect to fractional ideals and units and recover the original structure before localization.
 
     \begin{proposition}\label{prop:ring_is_intersection_of_all_localizations}
