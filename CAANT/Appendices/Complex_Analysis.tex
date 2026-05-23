@@ -5,7 +5,11 @@
     \[
       (\mc{M}\psi)(s) = \int_{0}^{\infty}\psi(x)x^{s-1}\,dx.
     \]
-    This integral need not be convergent. However, if \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) for some \(a < b\) then it is locally absolutely uniformly convergent for \(a < \s < b\) upon writing
+    This integral need not be convergent. However, if
+    \[
+      \psi(x) = \begin{cases} O_{\e}(x^{-a-\e}) & \text{if \(x \ll 1\)}, \\ O_{\e}(x^{-b+\e}) & \text{if \(x \gg 1\)}, \end{cases}
+    \]
+    for some \(a < b\) then it is locally absolutely uniformly convergent for \(a < \s < b\) upon writing
     \[
       (\mc{M}\psi)(s) = \int_{0}^{1}\psi(x)x^{s-1}\,dx+\int_{1}^{\infty}\psi(x)x^{s-1}\,dx.
     \]
@@ -24,7 +28,11 @@
       \[
         \Psi(s) = (\mc{M}\psi)(s).
       \]
-      Conversely, suppose \(\psi(x)\) is a piecewise smooth function on \((0,\infty)\) such that \(\psi(x) = O_{\e}(\min(x^{-(a+\e)},x^{-(b+\e)}))\) with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
+      Conversely, suppose \(\psi(x)\) is a piecewise smooth function on \((0,\infty)\) such that
+      \[
+        \psi(x) = \begin{cases} O_{\e}(x^{-a-\e}) & \text{if \(x \ll 1\)}, \\ O_{\e}(x^{-b+\e}) & \text{if \(x \gg 1\)}, \end{cases}
+      \]
+      with \(a < b\). If \(\Psi(s)\) is the Mellin transform of \(\psi(x)\), then
       \[
         \psi(x) = (\mc{M}^{-1}\Psi)(x),
       \]
@@ -35,7 +43,7 @@
     \[
       \G(s) = \int_{0}^{\infty}e^{-x}x^{s-1}\,dx.
     \]
-    Equivalently, \(\G(s)\) is the Mellin transform of \(e^{-x}\). As \(e^{-x}\) exhibits exponential decay, this defines a holomorphic function for \(\s > 0\). Also note that \(\G(s)\) is real for \(s > 0\). The most basic properties of \(\G(s)\) are collected in the following result:
+    Equivalently, \(\G(s)\) is the Mellin transform of \(e^{-x}\). As \(e^{-x}\) exhibits exponential decay and is bounded near zero, this defines a holomorphic function for \(\s > 0\). Also note that \(\G(s)\) is real for \(s > 0\). The most basic properties of \(\G(s)\) are collected in the following result:
 
     \begin{proposition}\label{prop:Factorial_properties_of_gamma_function}
       The gamma function satisfies

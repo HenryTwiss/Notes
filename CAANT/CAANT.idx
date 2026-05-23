@@ -273,25 +273,27 @@
 \indexentry{zero-free region|hyperpage}{148}
 \indexentry{Siegel zero|hyperpage}{150}
 \indexentry{explicit formula|hyperpage}{151}
-\indexentry{integral lattice|hyperpage}{153}
-\indexentry{complete|hyperpage}{153}
-\indexentry{generator matrix|hyperpage}{153}
-\indexentry{covolume|hyperpage}{153}
-\indexentry{dual|hyperpage}{153}
-\indexentry{self-dual|hyperpage}{154}
-\indexentry{Minkowski's lattice point theorem|hyperpage}{156}
-\indexentry{Fourier transform|hyperpage}{158}
-\indexentry{inverse Fourier transform|hyperpage}{159}
-\indexentry{Fourier coefficient|hyperpage}{159}
-\indexentry{Fourier series|hyperpage}{159}
-\indexentry{Poisson summation|hyperpage}{160}
-\indexentry{Schwartz class|hyperpage}{161}
-\indexentry{Mellin transform|hyperpage}{162}
-\indexentry{inverse Mellin transform|hyperpage}{162}
-\indexentry{gamma function|hyperpage}{163}
-\indexentry{functional equation|hyperpage}{163}
-\indexentry{beta function|hyperpage}{164}
-\indexentry{Euler's reflection formula|hyperpage}{165}
-\indexentry{Legendre's duplication formula|hyperpage}{167}
-\indexentry{Stirling's formula|hyperpage}{170}
-\indexentry{digamma function|hyperpage}{174}
+\indexentry{Riemann zeta function|hyperpage}{153}
+\indexentry{Jacobi theta function|hyperpage}{153}
+\indexentry{integral lattice|hyperpage}{156}
+\indexentry{complete|hyperpage}{156}
+\indexentry{generator matrix|hyperpage}{156}
+\indexentry{covolume|hyperpage}{156}
+\indexentry{dual|hyperpage}{156}
+\indexentry{self-dual|hyperpage}{157}
+\indexentry{Minkowski's lattice point theorem|hyperpage}{159}
+\indexentry{Fourier transform|hyperpage}{161}
+\indexentry{inverse Fourier transform|hyperpage}{162}
+\indexentry{Fourier coefficient|hyperpage}{162}
+\indexentry{Fourier series|hyperpage}{162}
+\indexentry{Poisson summation|hyperpage}{163}
+\indexentry{Schwartz class|hyperpage}{164}
+\indexentry{Mellin transform|hyperpage}{165}
+\indexentry{inverse Mellin transform|hyperpage}{165}
+\indexentry{gamma function|hyperpage}{166}
+\indexentry{functional equation|hyperpage}{167}
+\indexentry{beta function|hyperpage}{167}
+\indexentry{Euler's reflection formula|hyperpage}{168}
+\indexentry{Legendre's duplication formula|hyperpage}{171}
+\indexentry{Stirling's formula|hyperpage}{173}
+\indexentry{digamma function|hyperpage}{177}

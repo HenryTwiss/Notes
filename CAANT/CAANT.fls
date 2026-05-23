@@ -833,6 +833,9 @@ INPUT Chapters/Dirichlet_Series.aux
 INPUT ./Chapters/Analytic_L-functions.aux
 INPUT Chapters/Analytic_L-functions.aux
 INPUT Chapters/Analytic_L-functions.aux
+INPUT ./Chapters/The_Riemann_Zeta_Function.aux
+INPUT Chapters/The_Riemann_Zeta_Function.aux
+INPUT Chapters/The_Riemann_Zeta_Function.aux
 INPUT ./Appendices/Discrete_Geometry.aux
 INPUT Appendices/Discrete_Geometry.aux
 INPUT Appendices/Discrete_Geometry.aux
@@ -966,6 +969,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 OUTPUT CAANT.toc
 INPUT ./Chapters/Arithmetic_Functions.tex
 INPUT ./Chapters/Arithmetic_Functions.tex
@@ -1076,6 +1080,17 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT ./Chapters/The_Riemann_Zeta_Function.tex
+INPUT ./Chapters/The_Riemann_Zeta_Function.tex
+INPUT ./Chapters/The_Riemann_Zeta_Function.tex
+OUTPUT Chapters/The_Riemann_Zeta_Function.aux
+INPUT ./Chapters/The_Riemann_Zeta_Function.tex
+INPUT ./Chapters/The_Riemann_Zeta_Function.tex
+INPUT ./Chapters/The_Riemann_Zeta_Function.tex
+INPUT Chapters/The_Riemann_Zeta_Function.tex
+INPUT ./Chapters/The_Riemann_Zeta_Function.tex
+INPUT Chapters/The_Riemann_Zeta_Function.tex
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss17.tfm
 INPUT ./Appendices/Discrete_Geometry.tex
 INPUT ./Appendices/Discrete_Geometry.tex
 INPUT ./Appendices/Discrete_Geometry.tex
@@ -1130,6 +1145,9 @@ INPUT Chapters/Dirichlet_Series.aux
 INPUT ./Chapters/Analytic_L-functions.aux
 INPUT Chapters/Analytic_L-functions.aux
 INPUT Chapters/Analytic_L-functions.aux
+INPUT ./Chapters/The_Riemann_Zeta_Function.aux
+INPUT Chapters/The_Riemann_Zeta_Function.aux
+INPUT Chapters/The_Riemann_Zeta_Function.aux
 INPUT ./Appendices/Discrete_Geometry.aux
 INPUT Appendices/Discrete_Geometry.aux
 INPUT Appendices/Discrete_Geometry.aux
@@ -1154,6 +1172,8 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

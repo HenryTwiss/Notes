@@ -38,12 +38,16 @@
 \contentsline {section}{\numberline {6.7}Zero Density Estimates}{143}{section.6.7}%
 \contentsline {section}{\numberline {6.8}Zero-free Regions}{148}{section.6.8}%
 \contentsline {section}{\numberline {6.9}The Explicit Formula}{151}{section.6.9}%
-\contentsline {chapter}{\numberline {A}Discrete Geometry}{153}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Integral Lattices}{153}{section.A.1}%
-\contentsline {chapter}{\numberline {B}Real Analysis}{158}{appendix.B}%
-\contentsline {section}{\numberline {B.1}The Fourier Transform}{158}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Fourier Series}{159}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Poisson Summation}{160}{section.B.3}%
-\contentsline {chapter}{\numberline {C}Complex Analysis}{162}{appendix.C}%
-\contentsline {section}{\numberline {C.1}The Mellin Transform}{162}{section.C.1}%
-\contentsline {section}{\numberline {C.2}The Gamma Function}{163}{section.C.2}%
+\contentsline {chapter}{\numberline {7}The Riemann Zeta Function}{153}{chapter.7}%
+\contentsline {section}{\numberline {7.1}\leavevmode {\color {red}\sf Todo: [Analytic Properties]}}{153}{section.7.1}%
+\contentsline {section}{\numberline {7.2}\leavevmode {\color {red}\sf Todo: [The Prime Number Theorem]}}{155}{section.7.2}%
+\contentsline {section}{\numberline {7.3}\leavevmode {\color {red}\sf Todo: [A Second Moment Estimate]}}{155}{section.7.3}%
+\contentsline {chapter}{\numberline {A}Discrete Geometry}{156}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Integral Lattices}{156}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Real Analysis}{161}{appendix.B}%
+\contentsline {section}{\numberline {B.1}The Fourier Transform}{161}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Fourier Series}{162}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Poisson Summation}{163}{section.B.3}%
+\contentsline {chapter}{\numberline {C}Complex Analysis}{165}{appendix.C}%
+\contentsline {section}{\numberline {C.1}The Mellin Transform}{165}{section.C.1}%
+\contentsline {section}{\numberline {C.2}The Gamma Function}{166}{section.C.2}%
