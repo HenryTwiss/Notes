@@ -23,7 +23,7 @@
   \indexspace
 
   \item below, \hyperpage{47}
-  \item beta function, \hyperpage{167}
+  \item beta function, \hyperpage{173}
   \item Burgess bound, \hyperpage{136}
 
   \indexspace
@@ -35,7 +35,7 @@
   \item characteristic function of square-free integers, \hyperpage{3}
   \item class number, \hyperpage{43}, \hyperpage{48}, \hyperpage{58}
   \item complement, \hyperpage{85}, \hyperpage{90}
-  \item complete, \hyperpage{83}, \hyperpage{156}
+  \item complete, \hyperpage{83}, \hyperpage{162}
   \item completely additive, \hyperpage{2}
   \item completely multiplicative, \hyperpage{2}
   \item completion, \hyperpage{124}
@@ -46,7 +46,7 @@
   \item contraction, \hyperpage{48}
   \item convexity bound, \hyperpage{135, 136}
   \item convexity breaking bound, \hyperpage{136}
-  \item covolume, \hyperpage{156}
+  \item covolume, \hyperpage{162}
   \item critical line, \hyperpage{127}
   \item critical strip, \hyperpage{127}
   \item cubic, \hyperpage{10}, \hyperpage{26}
@@ -60,7 +60,7 @@
   \item Dedekind-Kummer theorem, \hyperpage{70}
   \item degree, \hyperpage{26}, \hyperpage{114}, \hyperpage{123}
   \item different, \hyperpage{85}, \hyperpage{90}
-  \item digamma function, \hyperpage{177}
+  \item digamma function, \hyperpage{183}
   \item Dirichlet character, \hyperpage{6}
   \item Dirichlet convolution, \hyperpage{4}
   \item Dirichlet orthogonality relations, \hyperpage{7}
@@ -71,7 +71,7 @@
 		\hyperpage{90}
   \item divides, \hyperpage{41}
   \item divisor function, \hyperpage{3}
-  \item dual, \hyperpage{83}, \hyperpage{125}, \hyperpage{156}
+  \item dual, \hyperpage{83}, \hyperpage{125}, \hyperpage{162}
 
   \indexspace
 
@@ -80,7 +80,7 @@
   \item Euler factor, \hyperpage{124}
   \item Euler parameters, \hyperpage{124}
   \item Euler product, \hyperpage{114}
-  \item Euler's reflection formula, \hyperpage{168}
+  \item Euler's reflection formula, \hyperpage{174}
   \item Euler's totient function, \hyperpage{3}
   \item even, \hyperpage{10}
   \item exactly divides, \hyperpage{41}
@@ -91,12 +91,12 @@
 
   \item field norm, \hyperpage{27}, \hyperpage{37}
   \item field trace, \hyperpage{27}, \hyperpage{37}
-  \item Fourier coefficient, \hyperpage{162}
-  \item Fourier series, \hyperpage{162}
-  \item Fourier transform, \hyperpage{161}
+  \item Fourier coefficient, \hyperpage{168}
+  \item Fourier series, \hyperpage{168}
+  \item Fourier transform, \hyperpage{167}
   \item fractional ideal, \hyperpage{37}, \hyperpage{48}
   \item functional equation, \hyperpage{124}, \hyperpage{142}, 
-		\hyperpage{167}
+		\hyperpage{173}
   \item functional equation data, \hyperpage{124}
   \item fundamental discriminant, \hyperpage{10}
   \item fundamental equality, \hyperpage{68}
@@ -105,11 +105,11 @@
   \indexspace
 
   \item gamma factor, \hyperpage{124}
-  \item gamma function, \hyperpage{166}
+  \item gamma function, \hyperpage{172}
   \item gamma parameters, \hyperpage{123}
   \item Gauss sum, \hyperpage{13}
   \item generalized sum of divisors function, \hyperpage{3}
-  \item generator matrix, \hyperpage{156}
+  \item generator matrix, \hyperpage{162}
   \item greatest common divisor, \hyperpage{42}
 
   \indexspace
@@ -129,12 +129,12 @@
   \item integral basis, \hyperpage{33}, \hyperpage{37}
   \item integral closure, \hyperpage{24}
   \item integral ideal, \hyperpage{37}, \hyperpage{48}
-  \item integral lattice, \hyperpage{156}
+  \item integral lattice, \hyperpage{162}
   \item integrally closed, \hyperpage{24}
   \item integrally closed domain, \hyperpage{24}
   \item inverse, \hyperpage{37}
-  \item inverse Fourier transform, \hyperpage{162}
-  \item inverse Mellin transform, \hyperpage{165}
+  \item inverse Fourier transform, \hyperpage{168}
+  \item inverse Mellin transform, \hyperpage{171}
   \item invertible, \hyperpage{38}
   \item irregular, \hyperpage{64}
 
@@ -146,7 +146,7 @@
 
   \item Landau's theorem, \hyperpage{112}
   \item least common multiple, \hyperpage{42}
-  \item Legendre's duplication formula, \hyperpage{171}
+  \item Legendre's duplication formula, \hyperpage{177}
   \item Lindel\"of hypothesis, \hyperpage{135}
   \item Liouville's function, \hyperpage{3}
   \item local, \hyperpage{50}, \hyperpage{54}
@@ -159,7 +159,7 @@
   \item M\"obius function, \hyperpage{3}
   \item M\"obius inversion, \hyperpage{5}
   \item maxiaml order, \hyperpage{66}
-  \item Mellin transform, \hyperpage{165}
+  \item Mellin transform, \hyperpage{171}
   \item Minkowski bound, \hyperpage{98}
   \item Minkowski embedding, \hyperpage{93}
   \item Minkowski inner product, \hyperpage{92}
@@ -167,7 +167,7 @@
   \item Minkowski norm, \hyperpage{92}
   \item Minkowski space, \hyperpage{92}
   \item Minkowski trace, \hyperpage{92}
-  \item Minkowski's lattice point theorem, \hyperpage{159}
+  \item Minkowski's lattice point theorem, \hyperpage{165}
   \item modulus, \hyperpage{6}
   \item moment, \hyperpage{136}
   \item monogenic, \hyperpage{36, 37}
@@ -194,7 +194,7 @@
 		\hyperpage{122}
   \item Picard class, \hyperpage{58}
   \item Picard group, \hyperpage{58}
-  \item Poisson summation, \hyperpage{163}
+  \item Poisson summation, \hyperpage{169}
   \item prime, \hyperpage{37}, \hyperpage{48}
   \item prime factorization, \hyperpage{41}
   \item prime factors, \hyperpage{41}
@@ -227,18 +227,18 @@
 
   \indexspace
 
-  \item Schwartz class, \hyperpage{164}
+  \item Schwartz class, \hyperpage{170}
   \item Selberg class, \hyperpage{124}
   \item Selberg class Lindel\"of hypothesis, \hyperpage{135}
   \item Selberg class Riemann hypothesis, \hyperpage{134}
   \item Selberg's orthogonality conjecture, \hyperpage{125}
-  \item self-dual, \hyperpage{84}, \hyperpage{125}, \hyperpage{157}
+  \item self-dual, \hyperpage{84}, \hyperpage{125}, \hyperpage{163}
   \item Siegel zero, \hyperpage{150}
   \item signature, \hyperpage{91}
   \item smooth dyadic weight, \hyperpage{138}
   \item smooth weight, \hyperpage{121}
   \item split, \hyperpage{69}, \hyperpage{75, 76}
-  \item Stirling's formula, \hyperpage{173}
+  \item Stirling's formula, \hyperpage{179}
   \item subconvexity estimate, \hyperpage{136}
   \item sum of divisors function, \hyperpage{3}
   \item system of fundamental units, \hyperpage{104}
