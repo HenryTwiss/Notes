@@ -139,7 +139,7 @@
     \begin{proposition}\label{prop:Dirichlet_series_coefficient_size_on_average}
       Suppose \(D(s)\) is a Dirichlet series with coefficients \(a(n)\) that converges absolutely at \(s = \a\) for some real \(\a\). Then
       \[
-        A(X) \ll X^{\a+\e} \quad \text{and} \quad |A|(X) \ll X^{\a+\e}.
+        A(X) \ll_{\e} X^{\a+\e} \quad \text{and} \quad |A|(X) \ll_{\e} X^{\a+\e}.
       \]
       In particular,
       \[
@@ -565,23 +565,7 @@
         A^{\ast}(X) &= \sum_{n \ge 1}a(n)\frac{1}{2\pi i}\int_{c-iT}^{c+iT}\frac{X^{s}}{n^{s}}\,\frac{ds}{s} \\
         &+ O\left(X^{c}\sum_{\substack{n \ge 1 \\ n \neq X}}\frac{|a(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right)+\d_{X}|a(X)|\frac{c}{T}\right).
       \end{align*}
-      As \(D(s)\) converges absolutely, we may interchange the sum and the integral. The statement follows.
-    \end{proof}
-
-    Since the integral in truncated Perron's formula is over a finite vertical line, the integral is automatically absolutely convergent. There is also a mor crude variant of truncated Perron's formula that follows as a corollary:
-
-    \begin{corollary}
-      Let \(D(s)\) be a Dirichlet series with coefficient \(a(n)\) and finite and nonnegative abscissa of absolute convergence \(\s_{a}\). Then for any \(c > \s_{a}\) and \(0 < T < X^{c}\), we have
-      \[
-        A^{\ast}(X) = \frac{1}{2\pi i}\int_{c-iT}^{c+iT}D(s)X^{s}\,\frac{ds}{s}+O\left(\frac{X^{c}}{T}\right).
-      \]
-    \end{corollary}
-    \begin{proof}
-      For \(0 < T < X^{c}\), we have
-      \[
-        \min\left(1,\frac{1}{T\log\left(\frac{X}{n}\right)}\right) \ll \frac{X^{c}}{T}.
-      \]
-      Also, \cref{prop:Dirichlet_series_polynomial_bound_from_absolute_convergence} guarantees \(a(X) \ll X^{c}\). These estimates and that \(D(s)\) is absolutely convergent at \(s = c\) together imply that error term in truncated Perron's formula is \(O\left(\frac{X^{c}}{T}\right)\). The claim follows.
+      As \(D(s)\) converges absolutely, we may interchange the sum and the integral. The first statement follows.
     \end{proof}
 
     Having discussed truncated Perron's formula, we turn to the variant where we instead introduce a smoothing function. We call \(\psi(y)\) a \textbf{smooth weight}\index{smooth weight} if it is a nonnegative bump function whose support is bounded away from zero. For any \(X > 0\), we set
@@ -650,7 +634,7 @@
       \[
         A_{\psi}(X) = \sum_{n \ge 1}\frac{a(n)}{2\pi i}\int_{(c)}\Psi(s)\left(\frac{n}{X}\right)^{-s}\,ds.
       \]
-      We may interchange the sum and integral by the absolute convergence of \(D(s)\) and \cref{prop:smoothing_function_Mellin_inverse_vertical_strips}. This gives
+      We may interchange the sum and integral by absolute convergence and \cref{prop:smoothing_function_Mellin_inverse_vertical_strips}. This gives
       \[
         A_{\psi}(X) = \frac{1}{2\pi i}\int_{(c)}D(s)\Psi(s)X^{s}\,ds,
       \]
