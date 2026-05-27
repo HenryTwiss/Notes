@@ -1065,7 +1065,7 @@
       The remaining integrand has rapid decay by \cref{prop:smoothing_function_Mellin_inverse_vertical_strips,equ:digamma_gamma_factor_analytic_conductor_estimate} and so the integral is locally absolutely uniformly convergent. Therefore we may shift the line of integration. Shifting to \(\left(\frac{1}{2}\right)\), we pass over no poles. This completes the proof. 
     \end{proof}
 
-    There is a much more useful variant which is obtained by applying truncated Perron's formula. For this, we need to introduce two related functions. For any analytic \(L\)-function \(L(s)\), we define \(\psi(x,L)\) by
+    There is a much more useful variant which is obtained by applying truncated Perron's formula and performing various estimates. For this, we need to introduce two related functions. For any analytic \(L\)-function \(L(s)\), we define \(\psi(x,L)\) by
     \[
       \psi(X,L) = \sum_{n \le X}\L_{L}(n),
     \]
@@ -1078,19 +1078,52 @@
     \begin{theorem*}[Explict Formula]
       For any analytic \(L\)-function \(L(s)\) and \(T > 0\). Then for any \(X > 0\), we have
       \[
+        \psi^{\ast}(X,L) = \todo{xxx}+O\left(\frac{X^{1+\t_{L}}\log^{2}(X)}{T}\right).
+      \]
+      In particular,
+      \[
         \psi^{\ast}(X,L) = \todo{xxx}.
       \]
     \end{theorem*}
     \begin{proof}
       Truncated Perron's formula gives
       \[
-        \psi^{\ast}(X,L)-J(X,T) \ll X^{c}\sum_{\substack{n \ge 1 \\ n \neq X}}\frac{|\L_{L}(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right)+\d_{X}|\L_{L}(X)|\frac{c}{T},
+        \psi^{\ast}(X,L)-J(X,T) \ll X^{c}\sum_{\substack{n \ge 1 \\ n \neq X}}\frac{|\L_{L}(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right)+\d_{X}\frac{|\L_{L}(X)|}{T},
       \]
       where
       \[
         J(X,T) = \frac{1}{2\pi i}\int_{c-iT}^{c+iT}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s},
       \]
-      for any \(c > 1+\t_{L}\) and \(\d_{X} = 0\) unless \(X\) is a prime power. We will begin by bounding the above sum on the right-hand side of the previous estimate. \todo{xxx}
+      for any \(c > 1+\t_{L}\) and \(\d_{X} = 0\) unless \(X\) is a prime power. We will now by bounding the above sum. In the ranges \(n \ll X\) and \(n \gg X\), we have \(\log\left(\frac{X}{n}\right) \gg 1\) so that
+      \[
+        \min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \frac{1}{T}.
+      \]
+      In the former case, the sum is finite so that the contribution of these \(n\) is
+      \[
+        X^{c}\sum_{\substack{n \ll X \\ n \neq X}}\frac{|\L_{L}(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \frac{X^{c}}{T}.
+      \]
+      In the latter case, we estimate the sum by absolute converge so that the contribution of these \(n\) is
+      \[
+        X^{c}\sum_{\substack{n \gg X \\ n \neq X}}\frac{|\L_{L}(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \frac{X^{c}}{T}.
+      \]
+      In the range \(n \asymp X\), the Taylor expansion of the logarithm gives \(\log\left(\frac{X}{n}\right) \asymp \frac{X-n}{X}\) so that
+      \[
+        \min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \min\left(1,\frac{X}{T|X-n|}\right).
+      \]
+      Whence
+      \[
+        X^{c}\sum_{\substack{n \asymp X \\ n \neq X}}\frac{|\L_{L}(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \sum_{\substack{n \asymp X \\ |n-X| \le \frac{X}{T}}}|\L_{L}(n)|+\frac{X}{T}\sum_{\substack{n \asymp X \\ |n-X| > \frac{X}{T}}}\frac{|\L_{L}(n)|}{|X-n|}.
+      \]
+      Using the estimate \(\L_{L}(n) \ll n^{\t_{L}}\log(n)\) and approximating the last sum on the right-hand side by its corresponding integral, we obtain
+      \[
+        X^{c}\sum_{\substack{n \asymp X \\ n \neq X}}\frac{|\L_{L}(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll 
+        \frac{X^{1+\t_{L}}\log(X)}{T}+\frac{X^{1+\t_{L}}\log^{2}(X)}{T}.
+      \]
+      Taking \(c = 1+\t_{L}+\frac{1}{\log(X)}\) implies \(X^{c} = eX^{1+\t_{L}}\) so that the the second term on the right-hand side above dominates in view of the fact \(\L_{L}(X) \ll X^{\t_{L}}\log(X)\) for the \(\d_{X}\frac{|\L_{L}(X)|}{T}\) term. Whence
+      \[
+        \psi^{\ast}(X,L)-J(X,T) \ll \frac{X^{1+\t_{L}}\log^{2}(X)}{T}.
+      \]
+      We will now estimate the integral \(J(X,T)\). \todo{xxx}
     \end{proof}
 
 

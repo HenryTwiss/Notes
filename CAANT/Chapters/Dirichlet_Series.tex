@@ -102,7 +102,7 @@
     \begin{proposition}\label{prop:Dirichlet_series_polynomial_bound_from_absolute_convergence}
       Suppose \(D(s)\) is a Dirichlet series with coefficients \(a(n)\) that converges absolutely at \(s = \a\) for some real \(\a\). Then
       \[
-        a(n) \ll_{\e} n^{\a+\e}.
+        a(n) \ll n^{\a}.
       \]
       In particular, if \(D(s)\) has finite abscissa of absolute convergence \(\s_{a}\) then
       \[
@@ -110,26 +110,22 @@
       \]
     \end{proposition}
     \begin{proof}
-      Necessarily \(\s_{a} \le \a\) and so \(D(s)\) converges absolutely in the half-plane \(\s > \a\). Write
+      Write
       \[
-        |a(n)| \le n^{\a+\e}\sum_{n \ge 1}\frac{|a(n)|}{n^{\a+\e}}.
+        |a(n)| \le n^{\a}\sum_{n \ge 1}\frac{|a(n)|}{n^{\a}}.
       \]
-      The sum is \(O_{\e}(1)\) because \(D(s)\) is absolutely convergent for \(\s > \a\). The first estimate follows at once. The second is immediate from the first and the definition of the abscissa of absolute convergence.
+      The sum is \(O(1)\) because \(D(s)\) is absolutely convergent at \(\s = \a\). The first estimate follows at once. The second is immediate from the first and the definition of the abscissa of absolute convergence upon setting \(\a = \s_{a}+\e\).
     \end{proof}
     
     It is natural to be curious about the converse, namely, is it possible to determine an upper bound on the abscissa of absolute convergence if we know a polynomial bound for the coefficients. This is indeed possible.
     
     \begin{proposition}\label{prop:Dirichlet_series_convergence_polynomial_bound}
-      Suppose \(D(s)\) is a Dirichlet series whose coefficients satisfy the estimate \(a(n) \ll_{\a} n^{\a}\) for some real \(\a\). Then the abscissa of absolute convergence satisfies \(\s_{a} \le \a+1\).
+      Suppose \(D(s)\) is a Dirichlet series whose coefficients satisfy the estimate \(a(n) \ll n^{\a}\) for some real \(\a\). Then the abscissa of absolute convergence satisfies \(\s_{a} \le \a+1\).
     \end{proposition}
     \begin{proof}
-      Let \(\s > \a+1\). It suffices to show convergence of the series
+      Let \(\s > \a+1\). As
       \[
-        \sum_{n \ge 1}\frac{|a(n)|}{n^{\s}}.
-      \]
-      As
-      \[
-        \sum_{n \ge 1}\frac{|a(n)|}{n^{\s}} \ll_{\a} \sum_{n \ge 1}\frac{1}{n^{\s-\a}},
+        \sum_{n \ge 1}\frac{|a(n)|}{n^{\s}} \ll \sum_{n \ge 1}\frac{1}{n^{\s-\a}},
       \]
       and the latter series converges, the proof is complete.
     \end{proof}
@@ -139,7 +135,7 @@
     \begin{proposition}\label{prop:Dirichlet_series_coefficient_size_on_average}
       Suppose \(D(s)\) is a Dirichlet series with coefficients \(a(n)\) that converges absolutely at \(s = \a\) for some real \(\a\). Then
       \[
-        A(X) \ll_{\e} X^{\a+\e} \quad \text{and} \quad |A|(X) \ll_{\e} X^{\a+\e}.
+        A(X) \ll X^{\a} \quad \text{and} \quad |A|(X) \ll X^{\a}.
       \]
       In particular,
       \[
@@ -147,11 +143,11 @@
       \]
     \end{proposition}
     \begin{proof}
-      Necessarily \(\s_{a} \le \a\) and so \(D(s)\) converges absolutely in the half-plane \(\s > \a\). Write
+      Write
       \[
-        \sum_{n \le X}|a(n)| \le X^{\a+\e}\sum_{n \ge 1}\frac{|a(n)|}{n^{\a+\e}}.
+        \sum_{n \le X}|a(n)| \le X^{\a}\sum_{n \ge 1}\frac{|a(n)|}{n^{\a}}.
       \]
-      The sum is \(O_{\e}(1)\) because \(D(s)\) is absolutely convergent for \(\s > \a\). As \(A(x) \ll |A|(x)\), the first statement follows at once. The second is immediate from the first and the definition of the abscissa of absolute convergence.
+      The sum is \(O(1)\) because \(D(s)\) is absolutely convergent at \(s = \a\). As \(A(x) \ll |A|(x)\), the first statement follows at once. The second is immediate from the first and the definition of the abscissa of absolute convergence upon setting \(\a = \s_{a}+\e\).
     \end{proof}
     
     It turns out that if \(A(X)\) is bounded then \(\s_{c}\) is negative.
@@ -174,7 +170,7 @@
     Unfortunately, it is not often the case that \(A(X)\) is bounded as this is quite a strong condition for most Dirichlet series. Fortunately, we can still obtain nice result analogous to that of \cref{prop:Dirichlet_series_convergence_polynomial_bound} if we assume \(|A|(X)\) grows at most polynomially.
 
     \begin{proposition}\label{prop:Dirichlet_series_convergence_polynomial_bound_average}
-      Suppose \(D(s)\) is a Dirichlet series such that \(|A|(X) \ll_{\a} X^{\a}\) for some \(\a \ge 0\). Then the abscissa of absolute convergence satisfies \(\s_{a} \le \a\).
+      Suppose \(D(s)\) is a Dirichlet series such that \(|A|(X) \ll X^{\a}\) for some \(\a \ge 0\). Then the abscissa of absolute convergence satisfies \(\s_{a} \le \a\).
     \end{proposition}
     \begin{proof}
       Let \(\s > \a\). It suffices to show convergence of the series
@@ -185,16 +181,16 @@
       \[
         \sum_{n \le X}\frac{|a(n)|}{n^{\s}} = \frac{|A|(X)}{X^{\s}}+\s\int_{1}^{X}|A|(u)u^{-(\s+1)}\,du.
       \]
-      In view of the bound \(|A|(X) \ll_{\a} X^{\a}\), take the limit as \(X \to \infty\) to obtain
+      In view of the bound \(|A|(X) \ll X^{\a}\), take the limit as \(X \to \infty\) to obtain
       \[
         \sum_{n \ge 1}\frac{|a(n)|}{n^{\s}} = \s\int_{1}^{\infty}|A|(u)u^{-(\s+1)}\,du.
       \]
       Direct evaluation shows that the integral is bounded. Therefore our series is bounded and hence must converge.
     \end{proof}
 
-    Unfortunately, \cref{prop:Dirichlet_series_convergence_polynomial_bound_average} does not immediately imply a sharper upper bound for the abscissa of absolute convergence than that of \cref{prop:Dirichlet_series_convergence_polynomial_bound}. This is because if \(a(n) \ll_{\a} n^{\a}\) then the trivial bounds for \(A(X)\) and \(|A(X)|\) are
+    Unfortunately, \cref{prop:Dirichlet_series_convergence_polynomial_bound_average} does not immediately imply a sharper upper bound for the abscissa of absolute convergence than that of \cref{prop:Dirichlet_series_convergence_polynomial_bound}. This is because if \(a(n) \ll n^{\a}\) then the trivial bounds for \(A(X)\) and \(|A(X)|\) are
     \[
-      A(X) \ll_{\a} X^{\a+1} \quad \text{and} \quad |A|(X) \ll_{\a} X^{\a+1}.
+      A(X) \ll X^{\a+1} \quad \text{and} \quad |A|(X) \ll X^{\a+1}.
     \]
     In particular, using the second bound in \cref{prop:Dirichlet_series_convergence_polynomial_bound_average} will give \(\s_{a} \le \a+1\). So if we want to obtain sharper upper bounds for the abscissa of absolute convergence then we must improve the polynomial bound for the coefficients directly. Unfortunately, this is often a daunting task in practice especially if the Dirichlet series is connected to a deep algebraic or arithmetic object. However, if we assume that the coefficients are nonnegative then \textbf{Landau's theorem}\index{Landau's theorem} provides a way of locating the abscissa of absolute convergence exactly:
 
@@ -375,7 +371,7 @@
       \]
       Moreover,
       \[
-        I(y,T)-\d(y) = \begin{cases} O\left(y^{c}\min\left(1,\frac{1}{T\log(y)}\right)\right) & \text{if \(y \neq 1\)}, \\ O\left(\frac{c}{T}\right) & \text{if \(y = 1\)}. \end{cases}
+        I(y,T)-\d(y) = \begin{cases} O\left(y^{c}\min\left(1,\frac{1}{T\log(y)}\right)\right) & \text{if \(y \neq 1\)}, \\ O\left(\frac{1}{T}\right) & \text{if \(y = 1\)}. \end{cases}
       \]
     \end{lemma}
     \begin{proof}
@@ -385,7 +381,7 @@
       \]
       Truncate the Laurent series of the inverse tangent after the first term  to write \(\tan^{-1}(t) = \frac{\pi}{2}+O\left(\frac{1}{t}\right)\). Then
       \[
-        I(1,T) = \frac{1}{2}+O\left(\frac{c}{T}\right),
+        I(1,T) = \frac{1}{2}+O\left(\frac{1}{T}\right),
       \] 
       and we see that \(\d(y) = \frac{1}{2}\). This proves everything when \(y = 1\). Now suppose \(y < 1\) and let \(d > c\). Let \(\eta = \eta_{1}+\cdots+\eta_{4}\) be the rectangular contour in \cref{fig:discontinuous_integral_contour_1} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = c\) and \(\s = d\). Consider
       \[
@@ -547,7 +543,7 @@
       Let \(D(s)\) be a Dirichlet series with coefficient \(a(n)\) and finite and nonnegative abscissa of absolute convergence \(\s_{a}\). Then for any \(c > \s_{a}\) and \(T > 0\), we have
       \begin{align*}
         A^{\ast}(X) &= \frac{1}{2\pi i}\int_{c-iT}^{c+iT}D(s)X^{s}\,\frac{ds}{s} \\
-        &+ O\left(X^{c}\sum_{\substack{n \ge 1 \\ n \neq X}}\frac{|a(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right)+\d_{X}|a(X)|\frac{c}{T}\right),
+        &+ O\left(X^{c}\sum_{\substack{n \ge 1 \\ n \neq X}}\frac{|a(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right)+\d_{X}|a(X)|\frac{1}{T}\right),
       \end{align*}
       where \(\d_{X} = 1,0\) according to if \(X\) is an integer or not.
     \end{theorem*}
@@ -558,14 +554,14 @@
       \]
       and
       \[
-        \d(y) = I(y,T)-\begin{cases} O\left(y^{c}\min\left(1,\frac{1}{T\log(y)}\right)\right) & \text{if \(y \neq 1\)}, \\ O\left(\frac{c}{T}\right) & \text{if \(y = 1\)}. \end{cases}
+        \d(y) = I(y,T)+\begin{cases} O\left(y^{c}\min\left(1,\frac{1}{T\log(y)}\right)\right) & \text{if \(y \neq 1\)}, \\ O\left(\frac{1}{T}\right) & \text{if \(y = 1\)}. \end{cases}
       \] 
       Substituting the second identity into the first and combining the \(O\)-estimates gives
       \begin{align*}
         A^{\ast}(X) &= \sum_{n \ge 1}a(n)\frac{1}{2\pi i}\int_{c-iT}^{c+iT}\frac{X^{s}}{n^{s}}\,\frac{ds}{s} \\
-        &+ O\left(X^{c}\sum_{\substack{n \ge 1 \\ n \neq X}}\frac{|a(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right)+\d_{X}|a(X)|\frac{c}{T}\right).
+        &+ O\left(X^{c}\sum_{\substack{n \ge 1 \\ n \neq X}}\frac{|a(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right)+\d_{X}\frac{|a(X)|}{T}\right).
       \end{align*}
-      As \(D(s)\) converges absolutely, we may interchange the sum and the integral. The first statement follows.
+      As \(D(s)\) converges absolutely, we may interchange the sum and the integral. The claim follows. 
     \end{proof}
 
     Having discussed truncated Perron's formula, we turn to the variant where we instead introduce a smoothing function. We call \(\psi(y)\) a \textbf{smooth weight}\index{smooth weight} if it is a nonnegative bump function whose support is bounded away from zero. For any \(X > 0\), we set
