@@ -38,16 +38,16 @@
 \contentsline {section}{\numberline {6.7}Zero Density Estimates}{143}{section.6.7}%
 \contentsline {section}{\numberline {6.8}Zero-free Regions}{148}{section.6.8}%
 \contentsline {section}{\numberline {6.9}The Explicit Formula}{151}{section.6.9}%
-\contentsline {chapter}{\numberline {7}The Riemann Zeta Function}{155}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Analytic Properties}{155}{section.7.1}%
-\contentsline {section}{\numberline {7.2}\leavevmode {\color {red}\sf Todo: [The Prime Number Theorem]}}{158}{section.7.2}%
-\contentsline {section}{\numberline {7.3}A Second Moment Estimate}{158}{section.7.3}%
-\contentsline {chapter}{\numberline {A}Discrete Geometry}{164}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Integral Lattices}{164}{section.A.1}%
-\contentsline {chapter}{\numberline {B}Real Analysis}{169}{appendix.B}%
-\contentsline {section}{\numberline {B.1}The Fourier Transform}{169}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Fourier Series}{170}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Poisson Summation}{171}{section.B.3}%
-\contentsline {chapter}{\numberline {C}Complex Analysis}{173}{appendix.C}%
-\contentsline {section}{\numberline {C.1}The Mellin Transform}{173}{section.C.1}%
-\contentsline {section}{\numberline {C.2}The Gamma Function}{174}{section.C.2}%
+\contentsline {chapter}{\numberline {7}The Riemann Zeta Function}{156}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analytic Properties}{156}{section.7.1}%
+\contentsline {section}{\numberline {7.2}\leavevmode {\color {red}\sf Todo: [The Prime Number Theorem]}}{159}{section.7.2}%
+\contentsline {section}{\numberline {7.3}A Second Moment Estimate}{159}{section.7.3}%
+\contentsline {chapter}{\numberline {A}Discrete Geometry}{165}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Integral Lattices}{165}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Real Analysis}{170}{appendix.B}%
+\contentsline {section}{\numberline {B.1}The Fourier Transform}{170}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Fourier Series}{171}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Poisson Summation}{172}{section.B.3}%
+\contentsline {chapter}{\numberline {C}Complex Analysis}{174}{appendix.C}%
+\contentsline {section}{\numberline {C.1}The Mellin Transform}{174}{section.C.1}%
+\contentsline {section}{\numberline {C.2}The Gamma Function}{175}{section.C.2}%

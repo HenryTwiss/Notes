@@ -705,12 +705,12 @@
     \begin{lemma}\label{lem:powerful_L-function_approximation_lemma}
       Let \(L(s)\) be an analytic \(L\)-function. Then the following properties hold:
       \begin{enumerate}[label*=(\roman*)]
-        \item For any \(T \ge 0\), we have
+        \item For any real \(T\), we have
         \[
-          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} = O(\log{\mf{q}(iT,L)}).
+          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} = O(\log{\mf{q}(T,L)}).
         \]
-        In particular, the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(iT,L)})\).
-        \item Suppose \(s = \s+iT\) for bounded \(\s\) and \(T \ge 0\). Then
+        In particular, the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(T,L)})\).
+        \item Suppose \(s = \s+iT\) for bounded \(\s\) and real \(T\). Then
         \[
           -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(s,L)}),
         \]
@@ -722,14 +722,14 @@
       \begin{enumerate}[label*=(\roman*)]
         \item Let \(s = \s+iT\) for some \(\s > 1+\t_{L}\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate,equ:B_L_real_part} together gives
         \[
-          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(iT,L)}),
+          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(T,L)}),
         \]
         upon absorbing all other terms into the \(O\)-estimate. For our choice of \(s\), we have
         \[
           \Re\left(\frac{1}{s-\rho}\right) \gg \frac{1}{1+(T-\g)^{2}},
         \]
         which implies the first statement. The second statement follows from the first as all of the terms in the sum are positive and at least \(\frac{1}{2}\).
-        \item Let \(s = \s+iT\) with \(\s\) bounded and \(T \ge 0\). Also suppose \(s\) is at least distance \(\e\) away from the nontrivial zeros of \(L(s)\) and the poles of the gamma factor and \(s \neq 0,1\). Invoking \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
+        \item Let \(s = \s+iT\) with \(\s\) bounded. Also suppose \(s\) is at least distance \(\e\) away from the nontrivial zeros of \(L(s)\) and the poles of the gamma factor and \(s \neq 0,1\). Invoking \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
         \[
           -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}).
         \]
@@ -762,7 +762,7 @@
     \begin{theorem}\label{thm:zero_counting}
       For any analytic \(L\)-function \(L(s)\) and \(T \ge 1\), we have
       \[
-        N(T,L) = \frac{T}{\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}).
+        N(T,L) = \frac{T}{\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(T,L)}).
       \]
       In particular,
       \[
@@ -778,7 +778,7 @@
       \[
         N(T,L) = 2N'(T,L)+O(1),
       \]
-      where \(O(1)\) accounts for the possible real nontrivial zeros of which there are finitely many. We will estimate \(N'(T,L)\) and in doing so we may assume \(L(s)\) does not have a nontrivial zero in the horizontal strip \(T-\d \le t \le T+\d\) for some \(\d > 0\) by varying \(T\) by a sufficiently small constant, if necessary, and observing that \(N'(T,L)\) is modified by a quantity of size \(O(\log{\mf{q}(iT,L)})\) by \cref{lem:powerful_L-function_approximation_lemma} (i). Taking \(\d\) smaller, if necessary, we may additionally assume \(\L(s,L)\) has no nontrivial zeros in the horizontal strip \(-\d \le t < 0\).
+      where \(O(1)\) accounts for the possible real nontrivial zeros of which there are finitely many. We will estimate \(N'(T,L)\) and in doing so we may assume \(L(s)\) does not have a nontrivial zero in the horizontal strip \(T-\d \le t \le T+\d\) for some \(\d > 0\) by varying \(T\) by a sufficiently small constant, if necessary, and observing that \(N'(T,L)\) is modified by a quantity of size \(O(\log{\mf{q}(T,L)})\) by \cref{lem:powerful_L-function_approximation_lemma} (i). Taking \(\d\) smaller, if necessary, we may additionally assume \(\L(s,L)\) has no nontrivial zeros in the horizontal strip \(-\d \le t < 0\).
     
       \begin{figure}[ht]
         \centering
@@ -817,7 +817,7 @@
 
       Let \(\eta = \sum_{i}\eta_{i}\) be the rectangular contour in \cref{fig:zero_counting_contour} where the horizontal lines are along \(t = T\) and \(t = -\d\) and the vertical lines are along \(\s = 1+\t_{L}+\d\) and \(\s = -(\t_{L}+\d)\). Then by our previous comments and the argument principle, we may write
       \[
-        N'(T,L) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds+O(\log{\mf{q}(iT,L)}),
+        N'(T,L) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds+O(\log{\mf{q}(T,L)}),
       \]
       and where
       \[
@@ -865,15 +865,15 @@
       \]
       As the logarithmic derivative of \(L(s)\) is absolutely bounded for \(\s = 1+\t_{L}+\d\), the integral is \(O(1)\) on \(\eta_{2}\). On \(\eta_{1}\) and \(\eta_{3}\), use \cref{lem:powerful_L-function_approximation_lemma} (ii) to write
       \[
-        \Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{L'}{L}(s)\,ds\right) = \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{1}{s-\rho}\,ds\right)+O(\log\mf{q}(iT,L)),
+        \Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{L'}{L}(s)\,ds\right) = \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{1}{s-\rho}\,ds\right)+O(\log\mf{q}(T,L)),
       \]
-      where we have absorbed the terms corresponding to \(0\) and \(1\) into the \(O\)-estimate. Each summand is \(\D_{\eta_{1} \cup \eta_{3}}\arg(s-\rho) = O(1)\). As there are \(O(\log\mf{q}(iT,L))\) many terms by \cref{lem:powerful_L-function_approximation_lemma} (i), it follows that
+      where we have absorbed the terms corresponding to \(0\) and \(1\) into the \(O\)-estimate. Each summand is \(\D_{\eta_{1} \cup \eta_{3}}\arg(s-\rho) = O(1)\). As there are \(O(\log\mf{q}(T,L))\) many terms by \cref{lem:powerful_L-function_approximation_lemma} (i), it follows that
       \[
-        \D_{\eta_{R}}\arg(L(s)) = O(\log{\mf{q}(iT,L)}).
+        \D_{\eta_{R}}\arg(L(s)) = O(\log{\mf{q}(T,L)}).
       \]
       Combining our change in argument estimates gives
       \[
-        N'(T,L) = \frac{T}{2\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(iT,L)}),
+        N'(T,L) = \frac{T}{2\pi}\log\left(\frac{q_{L}T^{d_{L}}}{(2\pi e)^{d_{L}}}\right)+O(\log{\mf{q}(T,L)}),
       \]
       from which the asymptotic formula follows. The asymptotic equivalence is immediate since it is a strictly weaker asymptotic.
     \end{proof}
@@ -1097,7 +1097,7 @@
       \[
         X^{c}\sum_{\substack{n \gg X \\ n \neq X}}\frac{|\L_{L}(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \frac{X^{c}}{T}.
       \]
-      In the range \(n \asymp X\), the Taylor expansion of the logarithm gives \(\log\left(\frac{X}{n}\right) \asymp \frac{X-n}{X}\) so that
+      In the range \(n \asymp X\), the Taylor expansion of the logarithm gives \(\log\left(\frac{X}{n}\right) \ll \frac{X-n}{X}\) so that
       \[
         \min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \min\left(1,\frac{X}{T|X-n|}\right).
       \]
@@ -1114,7 +1114,11 @@
       \[
         \psi^{\ast}(X,L)-J(X,T) \ll \frac{X^{c}}{T}+\frac{X^{1+\t_{L}}\log^{2}(X)}{T}.
       \]
-      We will now estimate the integral \(J(X,T)\) by appealing to the residue theorem. Let \(T\) not coincide with the ordinate of a nontrivial zero and fix a positive \(U\) not coinciding with a trivial zero.
+      We will now estimate the integral \(J(X,T)\) by appealing to the residue theorem. Let \(T\) not coincide with the ordinate of a nontrivial zero. By \cref{lem:powerful_L-function_approximation_lemma} (i), the number of nontrivial zeros \(\rho\) of \(L(s)\) satisfying \(|\g\mp T| < 1\) is \(O(\log\mf{q}(T,L))\). Therefore, among the ordinates of these nontrivial zeros, there must be a gap of size \(O\left(\frac{1}{\log\mf{q}(T,L)}\right)\). So upon varying \(T\) by a bounded amount so that it belongs to this gap, we can ensure
+      \[
+        \g\mp T \gg \frac{1}{\log\mf{q}(T,L)},
+      \]
+      for all nontrivial zeros \(\rho\) as they occur in pairs \(\rho\) and \(1-\conj{\rho}\). Also, fix a positive \(U\) such that \(-U\) bounded away from the trivial zeros. Let \(\eta = \sum_{i}\eta_{i}\) be the rectangular contour in \cref{fig:explict_formula_contour} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = 1+c\) and \(\s = -U\).
 
       \begin{figure}[ht]
         \centering
@@ -1145,7 +1149,7 @@
         \label{fig:explict_formula_contour}
       \end{figure}
 
-      Let \(\eta = \sum_{i}\eta_{i}\) be the rectangular contour in \cref{fig:explict_formula_contour} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = 1+c\) and \(\s = -U\). In view of \cref{prop:explicit_formula_log_derivative}, the contour encloses a simple pole of the integrand at \(s = 1\) of residue \(m_{L}X\), a simple pole at \(s = \rho\) for every nontrivial zero \(\rho\) whose ordinate \(\g\) satisfies \(|\g| < T\) of residue \(-\frac{X^{\rho}}{\rho}\), a simple pole at \(s = -(\mu_{j}+2n)\) with \(n < \frac{U-\Re(\mu_{j})}{2}\) of residue \(\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}\), and a pole at \(s = 0\). Thus
+      In view of \cref{prop:explicit_formula_log_derivative}, the contour encloses a simple pole of the integrand at \(s = 1\) of residue \(m_{L}X\), a simple pole at \(s = \rho\) for every nontrivial zero \(\rho\) whose ordinate \(\g\) satisfies \(|\g| < T\) of residue \(-\frac{X^{\rho}}{\rho}\), a simple pole at \(s = -(\mu_{j}+2n)\) with \(n < \frac{U-\Re(\mu_{j})}{2}\) of residue \(\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}\), and a pole at \(s = 0\). Thus
       \[
         \frac{1}{2\pi i}\int_{\eta}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} = m_{L}X-\sum_{\substack{\rho \neq 0,1 \\ |\g| < T}}\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n < \frac{U-\Re(\mu_{j})}{2}}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right).
       \]
@@ -1153,8 +1157,51 @@
       \[
         J(X,T) = \frac{1}{2\pi i}\int_{\eta_{1}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s}.
       \]
-      For the integrals \todo{we estimate as follows}
-
+      For the integrals along \(\eta_{2}\) and \(\eta_{4}\), we require distinct estimates when \(-c \le \s \le 1+c\) and \(\s < -c\). For the former, \cref{lem:powerful_L-function_approximation_lemma} (ii) gives
+      \[
+        \frac{L'}{L}(s) = \sum_{|\g\mp T| < 1}\frac{1}{s-\rho}+O(\log\mf{q}(T,L)),
+      \]
+      for \(s = \s\pm iT\) with \(-c \le \s \le 1+c\). By our choice of \(T\), \(|s-\rho| \gg \frac{1}{\log\mf{q}(T,L)}\) so that each term in the sum is \(O(\log\mf{q}(T,L))\). There are at most \(O(\log\mf{q}(T,L))\) such terms by \cref{lem:powerful_L-function_approximation_lemma} (i) and so
+      \[
+        \frac{L'}{L}(s) = O(\log^{2}\mf{q}(T,L)),
+      \]
+      in this region. For the latter, take the logarithmic derivative of the functional equation to obtain
+      \[
+        -\frac{L'}{L}(s) = \log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)+\frac{\conj{L}'}{\conj{L}}(1-s).
+      \]
+      Let \(s\) be such that \(\s < -c\) and suppose \(s\) bounded away from the trivial zeros. Using \cref{digamma_gamma_factor_analytic_conductor_estimate} and that the logarithmic derivative on the right-hand side converges absolutely, we obtain a bound
+      \[
+        \frac{L'}{L}(s) = O(\log\mf{q}(s,L)),
+      \]
+      in this region. The previous two estimates imply
+      \[
+        \frac{1}{2\pi i}\int_{\eta_{2} \cup \eta_{4}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} \ll \frac{\log^{2}\mf{q}(T,L)}{T}\int_{-c}^{1+c}X^{\s}\,d\s+\frac{\log\mf{q}(T,L)}{T}\int_{-U}^{-c}X^{\s}\,d\s,
+      \]
+      whence
+      \[
+        \frac{1}{2\pi i}\int_{\eta_{2} \cup \eta_{4}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} \ll \frac{X^{1+c}\log^{2}\mf{q}(T,L)}{T\log(X)}+\frac{\log\mf{q}(T,L)}{TX^{c}\log(X)}.
+      \]
+      As for the vertical integral along \(\eta_{3}\), the previous estimate is logarithmic derivative of \(L(s)\) is also valid and we obtain
+      \[
+        \todo{xxx}
+      \]
+      
+      \iffalse
+      To estimate the vertical integral, we use \cref{equ:explicit_formula_zeta_proof_9} again to conclude that
+      \begin{equation}\label{equ:explicit_formula_zeta_proof_12}
+        \frac{1}{2\pi i}\int_{\eta_{3}}-\frac{\z'}{\z}(s)x^{s}\,\frac{ds}{s} \ll \frac{\log(U)}{U}\int_{-T}^{T}x^{-U}\,dt \ll \frac{T\log(U)}{Ux^{U}}.
+      \end{equation}
+      Combining \cref{equ:explicit_formula_zeta_proof_7,equ:explicit_formula_zeta_proof_11,equ:explicit_formula_zeta_proof_12} and taking the limit as \(U \to \infty\), the error term in \cref{equ:explicit_formula_zeta_proof_12} vanishes and the sum over \(m\) in \cref{equ:explicit_formula_zeta_proof_7} evaluates to \(\frac{1}{2}\log(1-x^{-2})\) (as we have already mentioned) giving
+      \begin{equation}\label{equ:explicit_formula_zeta_proof_13}
+        J(x,T) = x-\sum_{|\g| < T}\frac{x^{\rho}}{\rho}-\frac{\z'}{\z}(0)-\frac{1}{2}\log(1-x^{-2})+\frac{x\log^{2}(T)}{T\log(x)}.
+      \end{equation}
+      Substituting \cref{equ:explicit_formula_zeta_proof_13} into \cref{equ:explicit_formula_zeta_proof_6}, we at last obtain
+      \begin{equation}\label{equ:explicit_formula_zeta_proof_14}
+        \psi_{0}(x) = x-\sum_{|\g| < T}\frac{x^{\rho}}{\rho}-\frac{\z'}{\z}(0)-\frac{1}{2}\log(1-x^{-2})+\frac{x\log^{2}(xT)}{T}+\log(x)\min\left(1,\frac{x}{T\<x\>}\right),
+      \end{equation}
+      where the second to last term on the right-hand side is obtained by combining the error term in \cref{equ:explicit_formula_zeta_proof_11} with the first error term in \cref{equ:explicit_formula_zeta_proof_6}. The theorem follows by taking the limit as \(T \to \infty\).
+      \fi
+      
       We now set \(c = 1+\t_{L}+\frac{1}{\log(X)}\) so that \(X^{c} = eX^{1+\t_{L}}\) and then take the limit as \(T \to \infty\). It follows that
       \[
         \psi^{\ast}(X,L) = m_{L}X-\sum_{\rho \neq 0,1 }\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 1}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right),
