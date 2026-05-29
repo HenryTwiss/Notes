@@ -16,7 +16,7 @@
       \[
         \g(s,L) = \pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right) \quad \text{and} \quad \L(s,L) = q_{L}^{\frac{s}{2}}\g(s,L)L(s),
       \]
-      called the \textbf{gamma factor}\index{gamma factor} of \(L(s)\) and the \textbf{completion}\index{completion} of \(L(s)\) respectively, where the latter satisfies
+      called the \textbf{gamma factor}\index{gamma factor} of \(L(s)\) and the \textbf{completion}\index{completion} of \(L(s)\) respectively, where the latter admits meromorphic continuation to \(\C\) with at most poles at \(s = 0\) and \(s = 1\) and satisfies
       \[
         \L(s,L) = \e_{L}\conj{\L(1-\conj{s},L)}.
       \]
@@ -40,8 +40,9 @@
 
     Some comments on the definition of analytic \(L\)-functions are in order.
     \begin{enumerate}[label*=(\roman*)]
+      \item As the order of the pole \(m_{L}\) is nonnegative, it is assumed that \(L(1) \neq 0\) if \(m_{L} = 0\).
       \item As the Dirichlet series of \(L(s)\) converges absolutely for \(\s > 1\) its converges locally absolutely uniformly in this half-plane and therefore defines a holomorphic function there. Moreover, the Euler product necessarily converges locally absolutely uniformly in the same half-plane and hence defines a holomorphic function there as well which agrees with the Dirichlet series.
-      \item The bound \(\Re(\mu_{j}) \ge 0\) ensures that the gamma factor is holomorphic in the half-plane \(\s > 0\). As this factor is then guaranteed to be finite and nonzero at \(s = 1\), the completion possesses a pole at \(s = 1\) of order \(r\). By the functional equation, the completion also has a pole at \(s = 0\) of the same order.
+      \item The bound \(\Re(\mu_{j}) \ge 0\) ensures that the gamma factor is holomorphic in the half-plane \(\s > 0\). As this factor is then guaranteed to be finite and nonzero at \(s = 1\), the order of the pole at \(s = 1\) of the completion is \(m_{L}\). By the functional equation, order of the pole at \(s = 0\) is also \(m_{L}\).
       \item If we merely assume \((s-1)^{m_{L}}L(s)\) is finite order then the functional equation forces the order to be \(1\). This can be deduced by considering the entire function
       \[
         s^{m_{L}}(s-1)^{m_{L}}\L(s,L),
@@ -216,7 +217,7 @@
     \[
       R(s,X,L) = \Res_{u = 1-s}\frac{\L(s+u,L)\Phi(u)X^{u}}{u}+\Res_{u = -s}\frac{\L(s+u,L)\Phi(u)X^{u}}{u}.
     \]
-    This is the potential residue term that appears in the approximate functional equation. Observe that it vanishes provided \(s \neq 0,1\). We now prove the \textbf{approximate function equation}\index{approximate function equation} for \(L(s)\).
+    This is the potential residue term that appears in the approximate functional equation. Observe that it is zero provided \(s \neq 0,1\). We now prove the \textbf{approximate function equation}\index{approximate function equation} for \(L(s)\).
 
     \begin{theorem*}[Approximate functional equation]
       Suppose \(L(s)\) is an analytic \(L\)-function, \(\Phi(u)\) is an even holomorphic function bounded in the vertical strip \(|\tau| < c+1\) for some \(c > 1\) and such that \(\Phi(0) = 1\), and let \(X > 0\). Then for \(s\) in the critical strip, we have
@@ -342,13 +343,11 @@
       The proof is complete upon expanding \(\conj{L}(s)\) as a Dirichlet series, interchanging the sum and integral by absolute boundedness of the integral, and factoring out \(\frac{\e_{L}}{\sqrt{q_{L}}}\).
     \end{proof}
   \section{The Riemann Hypothesis and Nontrivial Zeros}
-    The zeros of an analytic \(L\)-functions \(L(s)\) has interesting behavior. From the Euler product we immediately see that \(L(s)\) has no zeros in the half-plane \(\s > 1\). We can use the functional equation to determine the zeros for \(\s < 0\). Indeed, write the functional equation in the form
+    The zeros of an analytic \(L\)-functions \(L(s)\) has interesting behavior which are classified into two categories: trivial and nontrivial zeros. To describe them, recall that the completion
     \[
-      L(s) = \e_{L}q_{L}^{\frac{1}{2}-s}\frac{\g(1-s,L)}{\g(s,L)}\conj{L}(1-s).
-    \] 
-    So for \(\s < 0\), we see that \(\conj{L}(1-s)\) is nonzero. Moreover, \(\g(1-s,L)\) is as well. Together this means that for \(\s < 0\) the poles of \(\g(s,L)\) are zeros of \(L(s)\). Such a zero is called a \textbf{trivial zero}\index{trivial zero} of \(L(s)\). From the definition of the gamma factor, they are all simple and of the form \(s = -(\mu_{j}+2n)\) for some gamma parameter \(\mu_{j}\) and nonnegative integer \(n\).
-    
-    Any other zero of \(L(s)\) is called a \textbf{nontrivial zero}\index{nontrivial zero} and it necessarily lies inside of the critical strip. Let \(\rho\) be a nontrivial zero of \(L(s)\). Then the functional equation implies that \(1-\conj{\rho}\) is also a nontrivial zero of \(L(s)\). This means that nontrivial zeros occur in pairs
+      \L(s,L) = q_{L}^{\frac{s}{2}}\g(s,L)L(s),
+    \]
+    admits meromorphic continuation to \(\C\) with at most poles at \(s = 0\) and \(s = 1\). As the gamma factor is never zero, any zero of the completion is necessarily a zero of \(L(s)\). A \textbf{trivial zero}\index{trivial zero} of \(L(s)\) is any zero that is not a zero of the completion. Accordingly, this means that the trivial zeros are also poles of \(\g(s,L)\) and as such must live in the region \(\s \le 0\). They are all of the form \(s = -(\mu_{j}+2n)\) for some gamma parameter \(\mu_{j}\) and nonnegative integer \(n\). A \textbf{nontrivial zero}\index{nontrivial zero} of \(L(s)\) is any zero that is also a zero of the completion. Then the zeros of the completion are exactly the nontrivial zeros of \(L(s)\). As \(\g(s,L)L(s)\) is holomorphic and nonzero for \(\s > 1\), the completion is nonzero in this region. By the functional equation, the completion is also nonzero for \(\s < 0\). This means that all of the zeros of the completion occur in the critical strip which is to say that the nontrivial zeros belong to the critical strip. Let \(\rho\) be a nontrivial zero of \(L(s)\). Then the functional equation implies that \(1-\conj{\rho}\) is also a nontrivial zero of \(L(s)\). This means that nontrivial zeros occur in pairs
     \[
       \rho \quad \text{and} \quad 1-\conj{\rho}.
     \]
@@ -651,28 +650,28 @@
     \]
     We call \(\L_{L}(n)\) the \textbf{von Mangoldt coefficients}\index{von Mangoldt coefficients} of \(L(s)\). Also observe that the dual satisfies \(\L_{\conj{L}}(n) = \conj{\L_{L}(n)}\).
 
-    There is an incredibly useful formula for the logarithmic derivative of \(L(s)\) which is often the starting point for deeper analytic investigations. To deduce it, we require a more complete understanding of the completion \(\L(s,L)\). First observe that the zeros \(\rho\) of \(\L(s,L)\) are contained within the critical strip. Indeed, by our earlier discussion of zeros, \(\L(s,L)\) is nonzero for \(\s > 1\) and the functional equation implies that \(\L(s,L)\) is nonzero for \(\s < 0\) too. This means that the zeros of \(\L(s,L)\) are exactly nontrivial zeros of \(L(s)\). Now let us setup some notation. We define \(\xi(s,L)\) by
+    There is an incredibly useful formula for the logarithmic derivative of \(L(s)\) which is often the starting point for deeper analytic investigations. To deduce it, we will work with a slightly modified version of the completion of \(L(s)\). Define \(\xi(s,L)\) by
     \[
       \xi(s,L) = (s(1-s))^{m_{L}}\L(s,L).
     \]
-    Observe that the dual satisfies \(\xi(s,\conj{L}) = \conj{\xi(\conj{s},L)}\). In any case, the functional equation implies
+    Then \(\xi(s,L)\) is just the completion with the potential poles at \(s = 0\) and \(s = 1\) removed so that it is nonzero there. In particular, \(\xi(s,L)\) is entire and all of its zeros are exactly the nontrivial zeros of \(L(s)\). Also observe that the dual satisfies \(\xi(s,\conj{L}) = \conj{\xi(\conj{s},L)}\) and the functional equation implies
     \[
       \xi(s,L) = \e_{L}\xi(1-s,\conj{L}),
     \]
-    which we refer to as the \textbf{functional equation}\index{functional equation} for \(\xi(s,L)\). Now \(\xi(s,L)\) is just \(\L(s,L)\) with the potential poles at \(s = 0\) and \(s = 1\) removed. This means \(\xi(s,L)\) is entire. In fact, it admits a Hadamard factorization. To see this, first observe that \(\xi(s,L)\) is of order \(1\) by Stirling's formula and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
+    which we refer to as the \textbf{functional equation}\index{functional equation} for \(\xi(s,L)\). Also, \(\xi(s,L)\) is of order \(1\) by Stirling's formula and that \((s-1)^{m_{L}}L(s)\) is of order \(1\). Then the Hadamard factorization theorem implies
     \[
-      \xi(s,L) = e^{A_{L}+B_{L}s}\prod_{\rho \neq 0,1}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
+      \xi(s,L) = e^{A_{L}+B_{L}s}\prod_{\rho}\left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}},
     \]
     for some constants \(A_{L}\) and \(B_{L}\) and that the sum
     \begin{equation}\label{Hadamard_zero_sum_for_xi}
-      \sum_{\rho \neq 0,1}\frac{1}{|\rho|^{1+\e}},
+      \sum_{\rho}\frac{1}{|\rho|^{1+\e}},
     \end{equation}
     is convergent. Our next result will utilize the Hadamard factorization of \(\xi(s,L)\) to produce a formula relating the logarithmic derivative of \(L(s)\) to its zeros.
 
     \begin{proposition}\label{prop:explicit_formula_log_derivative}
       For any analytic \(L\)-function \(L(s)\), we have
       \[
-        -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}+\frac{1}{2}\log(q_{L})+\frac{\g'}{\g}(s,L)-B_{L}-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
+        -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}+\frac{1}{2}\log(q_{L})+\frac{\g'}{\g}(s,L)-B_{L}-\sum_{\rho}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
       \]
     \end{proposition}
     \begin{proof}
@@ -682,22 +681,22 @@
       \]
       On the other hand, taking the logarithmic derivative of the Hadamard factorization gives
       \[
-        \frac{\xi'}{\xi}(s,L) = B_{L}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
+        \frac{\xi'}{\xi}(s,L) = B_{L}+\sum_{\rho}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right).
       \]
       Equating these expressions to obtain
       \[
-        B_{L}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}+\frac{1}{2}\log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{L'}{L}(s).
+        B_{L}+\sum_{\rho}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}+\frac{1}{2}\log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{L'}{L}(s).
       \]
       This is equivalent to the desired formula.
     \end{proof}
 
     Explicit evaluation of the constants \(A_{L}\) and \(B_{L}\) can be challenging and heavily depend upon the particular \(L\)-function under investigation. However, useful formulas are not too difficult to obtain. For example, \(B_{L}\) is related to a sum over nontrivial zeros. To see this, using the Hadamard factorization of \(\xi(s,L)\) to take the logarithmic derivative of both sides of the functional equation gives
     \[
-      B_{L}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) = -\conj{B_{L}}+\sum_{\rho \neq 0,1}\left(\frac{1}{s-(1-\conj{\rho})}-\frac{1}{\conj{\rho}}\right).
+      B_{L}+\sum_{\rho}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) = -\conj{B_{L}}+\sum_{\rho}\left(\frac{1}{s-(1-\conj{\rho})}-\frac{1}{\conj{\rho}}\right).
     \]
     As the nontrivial zeros occur in pairs \(\rho\) and \(1-\conj{\rho}\), isolating \(B_{L}\) shows that
     \begin{equation}\label{equ:B_L_real_part}
-      \Re(B_{L}) = -\sum_{\rho \neq 0,1}\Re\left(\frac{1}{\rho}\right).
+      \Re(B_{L}) = -\sum_{\rho}\Re\left(\frac{1}{\rho}\right).
     \end{equation}
   \section{Zero Density Estimates}
     The distribution of the zeros of an analytic \(L\)-function is central to how the \(L\)-function encodes arithmetic information about its coefficients. Here we introduce a method of counting zeros of \(L\)-functions which gives a simple understanding of their density. We first require an immensely useful lemma.
@@ -707,14 +706,14 @@
       \begin{enumerate}[label*=(\roman*)]
         \item For any real \(T\), we have
         \[
-          \sum_{\rho \neq 0,1}\frac{1}{1+(T-\g)^{2}} = O(\log{\mf{q}(T,L)}).
+          \sum_{\rho}\frac{1}{1+(T-\g)^{2}} = O(\log{\mf{q}(T,L)}).
         \]
-        In particular, the number of nontrivial zeros \(\rho = \b+i\g\) with \(\rho \neq 0,1\) and such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(T,L)})\).
-        \item Suppose \(s = \s+iT\) for bounded \(\s\) and real \(T\). Then
+        In particular, the number of nontrivial zeros of \(L(s)\) such that \(|T-\g| \le 1\) is \(O(\log{\mf{q}(T,L)})\).
+        \item Let \(s = \s+iT\) for any real \(T\). Then
         \[
-          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(s,L)}),
+          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\substack{\rho \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(T,L)}),
         \]
-        provided \(s\) is at least distance \(\e\) away from the nontrivial zeros of \(L(s)\) and the poles of the gamma factor and \(s \neq 0,1\).
+        provided \(\s\) is bounded, and \(s\) is at least distance \(\e\) away from the nontrivial zeros of \(L(s)\) and the poles of the gamma factor, and \(s \neq 0,1\).
       \end{enumerate}
     \end{lemma}
     \begin{proof}
@@ -722,7 +721,7 @@
       \begin{enumerate}[label*=(\roman*)]
         \item Let \(s = \s+iT\) for some \(\s > 1+\t_{L}\) so that the logarithmic derivative of \(L(s)\) is absolutely bounded. Taking the real part of the formula in \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate,equ:B_L_real_part} together gives
         \[
-          \sum_{\rho \neq 0,1}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(T,L)}),
+          \sum_{\rho}\Re\left(\frac{1}{s-\rho}\right) = O(\log{\mf{q}(T,L)}),
         \]
         upon absorbing all other terms into the \(O\)-estimate. For our choice of \(s\), we have
         \[
@@ -731,7 +730,7 @@
         which implies the first statement. The second statement follows from the first as all of the terms in the sum are positive and at least \(\frac{1}{2}\).
         \item Let \(s = \s+iT\) with \(\s\) bounded. Also suppose \(s\) is at least distance \(\e\) away from the nontrivial zeros of \(L(s)\) and the poles of the gamma factor and \(s \neq 0,1\). Invoking \cref{prop:explicit_formula_log_derivative} and using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} gives
         \[
-          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\rho \neq 0,1}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right)+O_{\e}(\log{\mf{q}(s,L)}).
+          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\rho}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right)+O_{\e}(\log{\mf{q}(T,L)}).
         \]
         A short computation shows
         \[
@@ -739,15 +738,15 @@
         \]
         and it follows that
         \[
-          \sum_{\substack{\rho \neq 0,1 \\ |T-\g| > 1}}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) \ll \sum_{\substack{\rho \neq 0,1 \\ |T-\g| > 1}}\frac{1}{|\g|^{2}}+\sum_{\substack{\rho \neq 0,1 \\ |T-\g| > 1}}\frac{1}{|T-\g|^{2}}.
+          \sum_{\substack{\rho \\ |T-\g| > 1}}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right) \ll \sum_{\substack{\rho \\ |T-\g| > 1}}\frac{1}{|\g|^{2}}+\sum_{\substack{\rho \\ |T-\g| > 1}}\frac{1}{|T-\g|^{2}}.
         \]
-        The first sum on the right-hand side is \(O(1)\) by \cref{Hadamard_zero_sum_for_xi}. As we are restricting to nontrivial zeros such that \(|T-\g| > 1\) in the second sum, it is \(O(\log{\mf{q}(s,L)})\) by (i). Also, (i) implies
+        The first sum on the right-hand side is \(O(1)\) by \cref{Hadamard_zero_sum_for_xi}. As we are restricting to nontrivial zeros such that \(|T-\g| > 1\) in the second sum, it is \(O(\log{\mf{q}(T,L)})\) by (i). Also, (i) implies
         \[
-          \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{\rho} = O_{\e}(\log{\mf{q}(s,L)}).
+          \sum_{\substack{\rho \\ |T-\g| \le 1}}\frac{1}{\rho} = O_{\e}(\log{\mf{q}(T,L)}).
         \]
         Altogether, this shows
         \[
-          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(s,L)}),
+          -\frac{L'}{L}(s) = \frac{m_{L}}{s}+\frac{m_{L}}{s-1}-\sum_{\substack{\rho \\ |T-\g| \le 1}}\frac{1}{s-\rho}+O_{\e}(\log{\mf{q}(T,L)}),
         \]
         as claimed.  
       \end{enumerate}
@@ -865,7 +864,7 @@
       \]
       As the logarithmic derivative of \(L(s)\) is absolutely bounded for \(\s = 1+\t_{L}+\d\), the integral is \(O(1)\) on \(\eta_{2}\). On \(\eta_{1}\) and \(\eta_{3}\), use \cref{lem:powerful_L-function_approximation_lemma} (ii) to write
       \[
-        \Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{L'}{L}(s)\,ds\right) = \sum_{\substack{\rho \neq 0,1 \\ |T-\g| \le 1}}\Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{1}{s-\rho}\,ds\right)+O(\log\mf{q}(T,L)),
+        \Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{L'}{L}(s)\,ds\right) = \sum_{\substack{\rho \\ |T-\g| \le 1}}\Im\left(\int_{\eta_{1} \cup \eta_{3}}\frac{1}{s-\rho}\,ds\right)+O(\log\mf{q}(T,L)),
       \]
       where we have absorbed the terms corresponding to \(0\) and \(1\) into the \(O\)-estimate. Each summand is \(\D_{\eta_{1} \cup \eta_{3}}\arg(s-\rho) = O(1)\). As there are \(O(\log\mf{q}(T,L))\) many terms by \cref{lem:powerful_L-function_approximation_lemma} (i), it follows that
       \[
@@ -1073,7 +1072,7 @@
     \begin{theorem*}[Explict Formula]
       For any analytic \(L\)-function \(L(s)\) and \(X > 0\), we have
       \[
-        \psi^{\ast}(X,L) = m_{L}X-\sum_{\rho \neq 0,1 }\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 1}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right).
+        \psi^{\ast}(X,L) = m_{L}X-\sum_{\rho }\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 0}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right).
       \]
     \end{theorem*}
     \begin{proof}
@@ -1149,10 +1148,11 @@
         \label{fig:explict_formula_contour}
       \end{figure}
 
-      In view of \cref{prop:explicit_formula_log_derivative}, the contour encloses a simple pole of the integrand at \(s = 1\) of residue \(m_{L}X\), a simple pole at \(s = \rho\) for every nontrivial zero \(\rho\) whose ordinate \(\g\) satisfies \(|\g| < T\) of residue \(-\frac{X^{\rho}}{\rho}\), a simple pole at \(s = -(\mu_{j}+2n)\) with \(n < \frac{U-\Re(\mu_{j})}{2}\) of residue \(\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}\), and a pole at \(s = 0\). Thus
-      \[
-        \frac{1}{2\pi i}\int_{\eta}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} = m_{L}X-\sum_{\substack{\rho \neq 0,1 \\ |\g| < T}}\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n < \frac{U-\Re(\mu_{j})}{2}}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right).
-      \]
+      In view of \cref{prop:explicit_formula_log_derivative}, the contour encloses a simple pole of the integrand at \(s = 1\) of residue \(m_{L}X\), a simple pole at \(s = \rho\) for every nontrivial zero \(\rho\) whose ordinate \(\g\) satisfies \(|\g| < T\) of residue \(-\frac{X^{\rho}}{\rho}\), a simple pole at \(s = -(\mu_{j}+2n)\) for every gamma parameter \(\mu_{j}\) and nonnegative \(n\) satisfying \(n < \frac{U-\Re(\mu_{j})}{2}\) of residue \(\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}\), and a pole at \(s = 0\). Thus
+      \begin{align*}
+        \frac{1}{2\pi i}\int_{\eta}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} &= m_{L}X-\sum_{\substack{\rho \\ |\g| < T}}\frac{X^{\rho}}{\rho} \\
+        &+ \sum_{j}\sum_{0 \le n < \frac{U-\Re(\mu_{j})}{2}}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right).
+      \end{align*}
       On the other hand, the integral is a sum along its four contours. Observe that
       \[
         J(X,T) = \frac{1}{2\pi i}\int_{\eta_{1}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s}.
@@ -1169,7 +1169,7 @@
       \[
         -\frac{L'}{L}(s) = \log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)+\frac{\conj{L}'}{\conj{L}}(1-s).
       \]
-      Let \(s\) be such that \(\s < -c\) and suppose \(s\) bounded away from the trivial zeros. Using \cref{digamma_gamma_factor_analytic_conductor_estimate} and that the logarithmic derivative on the right-hand side converges absolutely, we obtain a bound
+      Let \(s\) be such that \(\s < -c\) and suppose \(s\) bounded away from the trivial zeros. Using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} and that the logarithmic derivative on the right-hand side converges absolutely, we obtain a bound
       \[
         \frac{L'}{L}(s) = O(\log\mf{q}(s,L)),
       \]
@@ -1204,7 +1204,7 @@
       
       We now set \(c = 1+\t_{L}+\frac{1}{\log(X)}\) so that \(X^{c} = eX^{1+\t_{L}}\) and then take the limit as \(T \to \infty\). It follows that
       \[
-        \psi^{\ast}(X,L) = m_{L}X-\sum_{\rho \neq 0,1 }\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 1}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right),
+        \psi^{\ast}(X,L) = m_{L}X-\sum_{\rho }\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 0}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right),
       \]
       which proves the explicit formula.
     \end{proof}
