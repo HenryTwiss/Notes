@@ -220,7 +220,7 @@
     This is the potential residue term that appears in the approximate functional equation. Observe that it is zero provided \(s \neq 0,1\). We now prove the \textbf{approximate function equation}\index{approximate function equation} for \(L(s)\).
 
     \begin{theorem*}[Approximate functional equation]
-      Suppose \(L(s)\) is an analytic \(L\)-function, \(\Phi(u)\) is an even holomorphic function bounded in the vertical strip \(|\tau| < c+1\) for some \(c > 1\) and such that \(\Phi(0) = 1\), and let \(X > 0\). Then for \(s\) in the critical strip, we have
+      Suppose \(L(s)\) is an analytic \(L\)-function, \(\Phi(u)\) is an even holomorphic function bounded in the vertical strip \(|\tau| < c+1\) for some \(c > 1\) and such that \(\Phi(0) = 1\), and let \(X \ge 1\). Then for \(s\) in the critical strip, we have
       \[
         L(s) = \sum_{n \ge 1}\frac{a_{L}(n)}{n^{s}}V_{s}\left(\frac{n}{\sqrt{q_{L}}X},L\right)+\e(s,L)\sum_{n \ge 1}\frac{\conj{a_{L}(n)}}{n^{1-s}}V_{1-s}\left(\frac{nX}{\sqrt{q_{L}}},L\right)+\frac{R(s,X,L)}{q_{L}^{\frac{s}{2}}\g(s,L)}.
       \]
@@ -1070,7 +1070,12 @@
     for \(X > 0\) and where the \(\ast\) indicates that the last term is multiplied by \(\frac{1}{2}\) if \(X\) is an integer. In fact, this difference is not apparent unless \(X\) is a prime power for otherwise \(\L_{L}(X) = 0\). Nevertheless, \(\psi^{\ast}(x,L)\) is exactly \(\psi(x,L)\) except that its value is halfway between the left-hand and right-hand limits when \(X\) is a prime power. This modification is important because it will allow us to apply truncated Perron formulas directly. The relationship between \(\psi^{\ast}(X,L)\) and the nontrivial zeros of \(L(s)\) is known as the \textbf{explicit formula}\index{explicit formula} for \(L(s)\).
 
     \begin{theorem*}[Explict Formula]
-      For any analytic \(L\)-function \(L(s)\) and \(X > 0\), we have
+      For any analytic \(L\)-function \(L(s)\) and \(T \ge X > 1\), we have
+      \begin{align*}
+        \psi^{\ast}(X,L) &= m_{L}X-\sum_{\substack{\rho \\ |\g| < T}}\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 0}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right) \\
+        &+ O\left(\frac{X^{c}\log^{2}\mf{q}(T,L)}{T}\right).
+      \end{align*}
+      In particular,
       \[
         \psi^{\ast}(X,L) = m_{L}X-\sum_{\rho }\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 0}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right).
       \]
@@ -1117,7 +1122,7 @@
       \[
         \g\mp T \gg \frac{1}{\log\mf{q}(T,L)},
       \]
-      for all nontrivial zeros \(\rho\) as they occur in pairs \(\rho\) and \(1-\conj{\rho}\). Also, fix a positive \(U\) such that \(-U\) bounded away from the trivial zeros. Let \(\eta = \sum_{i}\eta_{i}\) be the rectangular contour in \cref{fig:explict_formula_contour} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = 1+c\) and \(\s = -U\).
+      for all nontrivial zeros \(\rho\) as they occur in pairs \(\rho\) and \(1-\conj{\rho}\). Also, choose a \(U > c-1\) with \(U \gg T\) and such that \(-U\) bounded away from the trivial zeros. Let \(\eta = \sum_{i}\eta_{i}\) be the rectangular contour in \cref{fig:explict_formula_contour} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = c\) and \(\s = -U\).
 
       \begin{figure}[ht]
         \centering
@@ -1148,7 +1153,7 @@
         \label{fig:explict_formula_contour}
       \end{figure}
 
-      In view of \cref{prop:explicit_formula_log_derivative}, the contour encloses a simple pole of the integrand at \(s = 1\) of residue \(m_{L}X\), a simple pole at \(s = \rho\) for every nontrivial zero \(\rho\) whose ordinate \(\g\) satisfies \(|\g| < T\) of residue \(-\frac{X^{\rho}}{\rho}\), a simple pole at \(s = -(\mu_{j}+2n)\) for every gamma parameter \(\mu_{j}\) and nonnegative \(n\) satisfying \(n < \frac{U-\Re(\mu_{j})}{2}\) of residue \(\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}\), and a pole at \(s = 0\). Thus
+      In view of \cref{prop:explicit_formula_log_derivative}, the contour encloses a simple pole of the integrand at \(s = 1\) of residue \(m_{L}X\), a simple pole at \(s = \rho\) for every nontrivial zero \(\rho\) whose ordinate \(\g\) satisfies \(|\g| < T\) of residue \(-\frac{X^{\rho}}{\rho}\), a simple pole at \(s = -(\mu_{j}+2n)\) for every gamma parameter \(\mu_{j}\) and nonnegative integer \(n\) satisfying \(n < \frac{U-\Re(\mu_{j})}{2}\) of residue \(\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}\), and double or simple pole at \(s = 0\) according to if \(L(0) = 0\) or not. Thus
       \begin{align*}
         \frac{1}{2\pi i}\int_{\eta}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} &= m_{L}X-\sum_{\substack{\rho \\ |\g| < T}}\frac{X^{\rho}}{\rho} \\
         &+ \sum_{j}\sum_{0 \le n < \frac{U-\Re(\mu_{j})}{2}}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right).
@@ -1157,11 +1162,11 @@
       \[
         J(X,T) = \frac{1}{2\pi i}\int_{\eta_{1}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s}.
       \]
-      For the integrals along \(\eta_{2}\) and \(\eta_{4}\), we require distinct estimates when \(-c \le \s \le 1+c\) and \(\s < -c\). For the former, \cref{lem:powerful_L-function_approximation_lemma} (ii) gives
+      For the integrals along \(\eta_{2}\) and \(\eta_{4}\), we require distinct estimates when \(1-c \le \s \le c\) and \(\s < 1-c\). For the former, \cref{lem:powerful_L-function_approximation_lemma} (ii) gives
       \[
         \frac{L'}{L}(s) = \sum_{|\g\mp T| < 1}\frac{1}{s-\rho}+O(\log\mf{q}(T,L)),
       \]
-      for \(s = \s\pm iT\) with \(-c \le \s \le 1+c\). By our choice of \(T\), \(|s-\rho| \gg \frac{1}{\log\mf{q}(T,L)}\) so that each term in the sum is \(O(\log\mf{q}(T,L))\). There are at most \(O(\log\mf{q}(T,L))\) such terms by \cref{lem:powerful_L-function_approximation_lemma} (i) and so
+      for \(s = \s\pm iT\) with \(1-c \le \s \le c\). By our choice of \(T\), \(|s-\rho| \gg \frac{1}{\log\mf{q}(T,L)}\) so that each term in the sum is \(O(\log\mf{q}(T,L))\). There are at most \(O(\log\mf{q}(T,L))\) such terms by \cref{lem:powerful_L-function_approximation_lemma} (i) and so
       \[
         \frac{L'}{L}(s) = O(\log^{2}\mf{q}(T,L)),
       \]
@@ -1169,42 +1174,40 @@
       \[
         -\frac{L'}{L}(s) = \log(q_{L})+\frac{\g'}{\g}(s,L)+\frac{\g'}{\g}(1-s,L)+\frac{\conj{L}'}{\conj{L}}(1-s).
       \]
-      Let \(s\) be such that \(\s < -c\) and suppose \(s\) bounded away from the trivial zeros. Using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} and that the logarithmic derivative on the right-hand side converges absolutely, we obtain a bound
+      Let \(s\) be such that \(\s < 1-c\) and suppose \(s\) bounded away from the trivial zeros. Using \cref{equ:digamma_gamma_factor_analytic_conductor_estimate} and that the logarithmic derivative on the right-hand side converges absolutely, we obtain a bound
       \[
         \frac{L'}{L}(s) = O(\log\mf{q}(s,L)),
       \]
-      in this region. The previous two estimates imply
+      in this region. The previous two estimates imply that the integrals along \(\eta_{2}\) and \(\eta_{4}\) are \(O\) of
       \[
-        \frac{1}{2\pi i}\int_{\eta_{2} \cup \eta_{4}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} \ll \frac{\log^{2}\mf{q}(T,L)}{T}\int_{-c}^{1+c}X^{\s}\,d\s+\frac{\log\mf{q}(T,L)}{T}\int_{-U}^{-c}X^{\s}\,d\s,
+        \frac{\log^{2}\mf{q}(T,L)}{T}\int_{1-c}^{c}X^{\s}\,d\s+\frac{\log\mf{q}(T,L)}{T}\int_{-U}^{1-c}X^{\s}\,d\s.
       \]
-      whence
+      Whence
       \[
-        \frac{1}{2\pi i}\int_{\eta_{2} \cup \eta_{4}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} \ll \frac{X^{1+c}\log^{2}\mf{q}(T,L)}{T\log(X)}+\frac{\log\mf{q}(T,L)}{TX^{c}\log(X)}.
+        \frac{1}{2\pi i}\int_{\eta_{2} \cup \eta_{4}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} \ll \frac{X^{c}\log^{2}\mf{q}(T,L)}{T\log(X)}+\frac{X^{1-c}\log\mf{q}(T,L)}{T\log(X)}.
       \]
-      As for the vertical integral along \(\eta_{3}\), the previous estimate is logarithmic derivative of \(L(s)\) is also valid and we obtain
+      As for the vertical integral along \(\eta_{3}\), the previous estimate of the logarithmic derivative of \(L(s)\) is also valid. Since \(U \gg T\), it is \(O\) of
       \[
-        \todo{xxx}
+        \frac{\log\mf{q}(U,L)}{U}\int_{-T}^{T}x^{-U}\,dt.
       \]
-      
-      \iffalse
-      To estimate the vertical integral, we use \cref{equ:explicit_formula_zeta_proof_9} again to conclude that
-      \begin{equation}\label{equ:explicit_formula_zeta_proof_12}
-        \frac{1}{2\pi i}\int_{\eta_{3}}-\frac{\z'}{\z}(s)x^{s}\,\frac{ds}{s} \ll \frac{\log(U)}{U}\int_{-T}^{T}x^{-U}\,dt \ll \frac{T\log(U)}{Ux^{U}}.
-      \end{equation}
-      Combining \cref{equ:explicit_formula_zeta_proof_7,equ:explicit_formula_zeta_proof_11,equ:explicit_formula_zeta_proof_12} and taking the limit as \(U \to \infty\), the error term in \cref{equ:explicit_formula_zeta_proof_12} vanishes and the sum over \(m\) in \cref{equ:explicit_formula_zeta_proof_7} evaluates to \(\frac{1}{2}\log(1-x^{-2})\) (as we have already mentioned) giving
-      \begin{equation}\label{equ:explicit_formula_zeta_proof_13}
-        J(x,T) = x-\sum_{|\g| < T}\frac{x^{\rho}}{\rho}-\frac{\z'}{\z}(0)-\frac{1}{2}\log(1-x^{-2})+\frac{x\log^{2}(T)}{T\log(x)}.
-      \end{equation}
-      Substituting \cref{equ:explicit_formula_zeta_proof_13} into \cref{equ:explicit_formula_zeta_proof_6}, we at last obtain
-      \begin{equation}\label{equ:explicit_formula_zeta_proof_14}
-        \psi_{0}(x) = x-\sum_{|\g| < T}\frac{x^{\rho}}{\rho}-\frac{\z'}{\z}(0)-\frac{1}{2}\log(1-x^{-2})+\frac{x\log^{2}(xT)}{T}+\log(x)\min\left(1,\frac{x}{T\<x\>}\right),
-      \end{equation}
-      where the second to last term on the right-hand side is obtained by combining the error term in \cref{equ:explicit_formula_zeta_proof_11} with the first error term in \cref{equ:explicit_formula_zeta_proof_6}. The theorem follows by taking the limit as \(T \to \infty\).
-      \fi
-      
-      We now set \(c = 1+\t_{L}+\frac{1}{\log(X)}\) so that \(X^{c} = eX^{1+\t_{L}}\) and then take the limit as \(T \to \infty\). It follows that
+      Then
       \[
-        \psi^{\ast}(X,L) = m_{L}X-\sum_{\rho }\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 0}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right),
+        \frac{1}{2\pi i}\int_{\eta_{3}}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} \ll \frac{T\log\mf{q}(U,L)}{X^{U}U}.
       \]
-      which proves the explicit formula.
+      Upon taking the limit as \(U \to \infty\), this term tends to zero and we find that
+      \begin{align*}
+        J(X,T) &= m_{L}X-\sum_{\substack{\rho \\ |\g| < T}}\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 0}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right) \\
+        &+ O\left(\frac{X^{c}\log^{2}\mf{q}(T,L)}{T\log(X)}\right),
+      \end{align*}
+      because the sum over \(n\) converges absolutely which permits the interchange of limit and sum. Our estimate for \(\psi^{\ast}(X,L)\) then becomes
+      \begin{align*}
+        \psi^{\ast}(X,L) &= m_{L}X-\sum_{\substack{\rho \\ |\g| < T}}\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 0}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right) \\
+        &+ O\left(\frac{X^{c}}{T}+\frac{X^{1+\t_{L}}\log^{2}(X)}{T}+\frac{X^{c}\log^{2}\mf{q}(T,L)}{T\log(X)}\right).
+      \end{align*}
+      We now set \(c = 1+\t_{L}+\frac{1}{\log(X)}\) so that \(X^{c} = eX^{1+\t_{L}}\) and we may write
+      \begin{align*}
+        \psi^{\ast}(X,L) &= m_{L}X-\sum_{\substack{\rho \\ |\g| < T}}\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{n \ge 0}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right) \\
+        &+ O\left(\frac{X^{c}\log^{2}\mf{q}(T,L)}{T}\right).
+      \end{align*}
+      This proves the first statement. Taking the limit as \(T \to \infty\) proves the second.
     \end{proof}
