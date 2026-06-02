@@ -172,15 +172,14 @@
       \[
         \int_{2}^{T}\sqrt{\log(t)}\,dt = T\sqrt{\log(T)}+O(T).
       \]
-      These estimates applied to \cref{equ:second_moment_zeta_asymptotic_equivalence_2} gives
+      These estimates applied to \cref{equ:second_moment_zeta_asymptotic_equivalence_2} give
       \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_3}
         \begin{aligned}
           M_{2}(T,\z) &= \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt \\
-          &+ O\left(\left(\int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt\right)^{\frac{1}{2}}\sqrt{T}\log^{\frac{1}{4}}(T)\right) \\
-          &+ O\left(T\sqrt{\log(T)}\right).
+          &+ O\left(\left(\int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt\right)^{\frac{1}{2}}\sqrt{T}\log^{\frac{1}{4}}(T)\right)+O\left(T\sqrt{\log(T)}\right).
         \end{aligned}
       \end{equation}
-      We now show that the common integral appearing in the first and second terms is asymptotically equivalent to \(T\log(T)\). Since the integral converges absolutely, we may expand the sum and interchange it with the integral to obtain
+      We now estimate the common integral appearing in the first and second terms. Since the integral converges absolutely, we may expand the sum and interchange it with the integral to obtain
       \[
         \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt = \sum_{n,m \ll \frac{T}{\sqrt{\log(T)}}}\int_{\max(2,t(n),t(m))}^{T}\frac{1}{n^{\frac{1}{2}+it}m^{\frac{1}{2}-it}}\,dt,
       \]
@@ -242,7 +241,7 @@
       which is the desired asymptotic formula. The asymptotic equivalence follows at once as it is a strictly weaker asymptotic.
     \end{proof}
     
-    A few comments about the proof of this second moment result. The error term in the asymptotic formula only saves \(\log^{\frac{1}{4}}(T)\) from the main term which is not much. In fact, much better error terms can be obtained using more refined analytic techniques. Nevertheless, as \(\log(T) \ll_{\e} T^{\e}\), the asymptotic equivalence implies that the necessary bound for the Riemann zeta function is satisfied for \cref{prop:equivalence_Lindelof_hypothesis_and_moments} in the case of the second moment.
+    A few comments about the proof of this second moment result. The error term in the asymptotic formula is not power saving as it is smaller by only a factor of \(\log^{\frac{1}{4}}(T)\) from the main term which is not much. In fact, much better error terms can be obtained using more refined analytic techniques. Nevertheless, as \(\log(T) \ll_{\e} T^{\e}\), the asymptotic equivalence implies that the necessary bound for the Riemann zeta function is satisfied for \cref{prop:equivalence_Lindelof_hypothesis_and_moments} in the case of the second moment.
 
     The main analytic data being fed into \cref{thm:second_moment_of_Riemann_zeta_asymptotic_equivalence} is the approximate functional equation for the Riemann zeta function. The main contribution from the resulting asymptotic, namely \cref{equ:second_moment_zeta_asymptotic_equivalence_1}, in \(M_{2}(T,\z)\) is \(T\log(T)\) which comes from the diagonal contribution in
     \[

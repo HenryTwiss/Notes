@@ -293,7 +293,7 @@
       Let \(L/K\) be a degree \(n\) separable extension and let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). Then \(d_{L/K}(\l_{1},\ldots,\l_{n}) \neq 0\).
     \end{proposition}
     \begin{proof}
-      Suppose by contradiction that \(d_{L/K}(\l_{1},\ldots,\l_{n}) = 0\). Then the trace matrix \(\Trace_{L/K}(\l_{1},\ldots,\l_{n})\) is not invertible. Therefore
+      Suppose by contradiction that \(d_{L/K}(\l_{1},\ldots,\l_{n}) = 0\). Then it follows that the trace matrix \(\Trace_{L/K}(\l_{1},\ldots,\l_{n})\) is not invertible. Therefore
       \[
         \Trace_{L/K}(\l_{1},\ldots,\l_{n})\begin{pmatrix} \k_{1} \\ \vdots \\ \k_{n} \end{pmatrix} = \mathbf{0},
       \]
@@ -311,7 +311,7 @@
     where \(\s_{1},\ldots,\s_{n}\) are the elements of \(\Hom_{K}(L,\conj{K})\). The discriminant turns out to be the square of the determinant of the embedding matrix.
 
     \begin{proposition}\label{disc_as_square_of_embedding_matrix}
-      Let \(L/K\) be a degree \(n\) separable extension. Then for any basis \(\l_{1},\ldots,\l_{n}\) of \(L/K\), we have
+      Let \(L/K\) be a degree \(n\) separable extension and let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\). Then
       \[
         d_{L/K}(\l_{1},\ldots,\l_{n}) = \det(M(\l_{1},\ldots,\l_{n}))^{2}.
       \]
@@ -419,7 +419,7 @@
       \[
         \Hom_{K}(L,\conj{K}) \cong \Hom_{K}(L_{1},\conj{K}) \x \Hom_{K}(L_{2},\conj{K}).
       \]
-      So letting \(\s_{1,1},\ldots,\s_{n_{1},1}\) and \(\s_{1,2},\ldots,\s_{n_{2},2}\) be the elements of \(\Hom_{K}(L_{1},\conj{K})\) and \(\Hom_{K}(L_{2},\conj{K})\) respectively, \(\s_{1,1}\s_{1,2},\ldots,\s_{n_{1},1}\s_{n_{2},2}\) are the elements of \(\Hom_{K}(L,\conj{K})\). In particular, we may view \(\s_{1,1},\ldots,\s_{n_{1},1}\) and \(\s_{1,2},\ldots,\s_{n_{2},2}\) as elements of \(\Hom_{K}(L,\conj{K})\) that act as the identity on \(L_{2}\) and \(L_{1}\) respectively. Then the \(n_{1}\) and \(n_{2}\) equations
+      We will now let \(\s_{1,1},\ldots,\s_{n_{1},1}\) and \(\s_{1,2},\ldots,\s_{n_{2},2}\) denote the elements of \(\Hom_{K}(L_{1},\conj{K})\) and \(\Hom_{K}(L_{2},\conj{K})\) respectively. Then \(\s_{1,1}\s_{1,2},\ldots,\s_{n_{1},1}\s_{n_{2},2}\) are the elements of \(\Hom_{K}(L,\conj{K})\) and we may view \(\s_{1,1},\ldots,\s_{n_{1},1}\) and \(\s_{1,2},\ldots,\s_{n_{2},2}\) as elements of \(\Hom_{K}(L,\conj{K})\) that act as the identity on \(L_{2}\) and \(L_{1}\) respectively. Then the \(n_{1}\) and \(n_{2}\) equations
       \[
         \sum_{k}\s_{i,1}(\b_{k,1})\a_{k,2} = \s_{i,1}(\b) \quad \text{and} \quad \sum_{\ell}\s_{j,2}(\b_{\ell,2})\a_{\ell,1} = \s_{j,2}(\b),
       \]
@@ -431,7 +431,7 @@
       \[
         M(\b_{1,2},\ldots,\b_{n_{2},2})\begin{pmatrix} \a_{1,1} \\ \vdots \\ \a_{n_{2},1} \end{pmatrix} = \begin{pmatrix} \s_{1,2}(\b) \\ \vdots \\ \s_{n_{2},2}(\b) \end{pmatrix},
       \]
-      respectively. The embedding matrices and column vectors on the right-hand sides all have entries in \(\mc{O}\). Cramer's rule together with \cref{disc_as_square_of_embedding_matrix} imply that \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\a_{i,2} \in \mc{O}\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\a_{j,1} \in \mc{O}\). As \(\mc{O}_{1} = L_{1} \cap \mc{O}\) and \(\mc{O}_{2} = L_{2} \cap \mc{O}\), we have \(\a_{i,2} \in \mc{O}_{2}\) and \(\a_{j,1} \in \mc{O}_{1}\). Expanding \(\a_{i,2}\) and \(\a_{j,1}\) show that \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\k_{i,j} \in \smc{O}\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\k_{i,j} \in \smc{O}\). From the identity
+      respectively. Observe that the embedding matrices and column vectors on the right-hand sides have entries in \(\mc{O}\). Then \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\a_{i,2} \in \mc{O}\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\a_{j,1} \in \mc{O}\) by Cramer's rule and \cref{disc_as_square_of_embedding_matrix} . As \(\mc{O}_{1} = L_{1} \cap \mc{O}\) and \(\mc{O}_{2} = L_{2} \cap \mc{O}\), we have \(\a_{i,2} \in \mc{O}_{2}\) and \(\a_{j,1} \in \mc{O}_{1}\). Expanding \(\a_{i,2}\) and \(\a_{j,1}\) show that \(d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})\k_{i,j} \in \smc{O}\) and \(d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})\k_{i,j} \in \smc{O}\). From the identity
       \[
         k_{i,j} = k_{i,j}(\a_{1}d_{L_{1}/K}(\b_{1,1},\ldots,\b_{n_{1},1})+\a_{2}d_{L_{2}/K}(\b_{1,2},\ldots,\b_{n_{2},2})),
       \]
@@ -2177,7 +2177,7 @@
       \[
         \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \mf{P}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset \cdots \supset \mf{P}^{e_{\mf{p}}(\mf{P})-1}/\mf{P}^{e_{\mf{p}}(\mf{P})} \supset 0,
       \]
-      of \(\F_{\mf{p}}\)-vector spaces. Upon choosing a basis for \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) adapted to the filtration, \cref{lem:prime_power_vector_space_isomorphism} gives an isomorphism
+      of \(\F_{\mf{p}}\)-vector spaces. Upon choosing a basis for \(\mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P})}\) adapted to the filtration, using \cref{lem:prime_power_vector_space_isomorphism} gives an isomorphism
       \[
         \mc{O}/\mf{P}^{e_{\mf{p}}(\mf{P}_{i})} \cong \bigop_{i}\mf{P}^{i}/\mf{P}^{i+1},
       \]
@@ -2232,7 +2232,7 @@
       \[
         \Trace_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}}(\conj{\b_{1}\b_{j}}) = 0.
       \]
-      This means that the first row of \(\Trace_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}}(\conj{\b_{1}},\ldots,\conj{\b_{e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P}_{i})}})\) is zero. Therefore \(d_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}} = 0\) completing the proof.
+      This means that the first row of \(\Trace_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}}(\conj{\b_{1}},\ldots,\conj{\b_{e_{\mf{p}}(\mf{P}_{i})f_{\mf{p}}(\mf{P}_{i})}})\) is zero. It follows that \(d_{(\mc{O}/\mf{P}_{i}^{e_{\mf{p}}(\mf{P}_{i})})/\F_{\mf{p}}} = 0\) completing the proof.
     \end{proof}
 
     In the case the reside class extensions are separable, factorizing \(\mf{d}_{\mc{O}/\smc{O}}\) into a product of primes shows that only finitely many primes of \(\smc{O}\) can ramify in \(\mc{O}/\smc{O}\).

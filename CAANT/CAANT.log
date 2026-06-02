@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  30 MAY 2026 10:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  2 JUN 2026 18:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -622,15 +622,15 @@ LaTeX Font Info:    ... okay on input line 13.
 * paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
 * v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=433.62001pt
+* \textwidth=469.75502pt
 * \textheight=650.43001pt
-* \oddsidemargin=18.0675pt
-* \evensidemargin=18.0675pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
 * \topmargin=-31.8738pt
 * \headheight=12.0pt
 * \headsep=19.8738pt
@@ -644,8 +644,8 @@ LaTeX Font Info:    ... okay on input line 13.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
+* \@twosidetrue
+* \@mparswitchtrue
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -699,14 +699,9 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./CAANT.toc
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.31 ...}Analytic \(L\)-functions}{123}{chapter.6}
-                                                  % [1
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-])
+] (./CAANT.toc [3])
 \tf@toc=\write6
 \openout6 = `CAANT.toc'.
 
@@ -718,55 +713,65 @@ l.20 \part{Multiplicative Number Theory}
                                          [1
 
 ]
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \part{Multiplicative Number Theory}
+                                         [2]
 \openout2 = `Chapters/Arithmetic_Functions.aux'.
 
  (./Chapters/Arithmetic_Functions.tex
 Chapter 1.
-[2
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28       \]
+              [3
 
 
-] [3]
+] [4]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 79.
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 83.
- [4]
+ [5]
 Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 112.
-) [5]
+) [6]
 \openout2 = `Chapters/Dirichlet_Characters_and_Exponential_Sums.aux'.
 
  (./Chapters/Dirichlet_Characters_and_Exponential_Sums.tex
 Chapter 2.
-[6
+[7
 
 
 
 
 ]
-Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 24.
- [7]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 60.
- [8] [9] [10] [11] [12] [13] [14]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 285.
- [15] [16] [17] [18] [19] [20]) [21] [22
+Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 27.
+ [8]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 63.
+ [9] [10] [11] [12] [13] [14] [15]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 288.
+ [16] [17] [18] [19] [20]) [21] [22
 
 
 
-]
+] [23] [24]
 \openout2 = `Chapters/Arithmetic_of_Number_Fields.aux'.
 
  (./Chapters/Arithmetic_of_Number_Fields.tex
 Chapter 3.
-[23
+[25
 
 
 ]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 58.
- [24] [25]
+ [26] [27]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 114.
- [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
+ [28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 494.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]) [90]
+) [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]) [90]
 \openout2 = `Chapters/Geometry_of_Number_Fields.aux'.
 
  (./Chapters/Geometry_of_Number_Fields.tex
@@ -780,27 +785,27 @@ Chapter 4.
 
 
 
-]
+] [107] [108]
 \openout2 = `Chapters/Dirichlet_Series.aux'.
 
  (./Chapters/Dirichlet_Series.tex
 Chapter 5.
-[107
+[109
 
 
-] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121]) [122]
+] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]) [123]
 \openout2 = `Chapters/Analytic_L-functions.aux'.
 
- (./Chapters/Analytic_L-functions.tex
+ (./Chapters/Analytic_L-functions.tex [124
+
+
+
+
+]
 Chapter 6.
-[123
-
-
-
-
-] [124]
+[125] [126]
 Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 75.
- [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155]) [156]
+ [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155]) [156]
 \openout2 = `Chapters/The_Riemann_Zeta_Function.aux'.
 
  (./Chapters/The_Riemann_Zeta_Function.tex
@@ -813,38 +818,38 @@ Chapter 7.
 ] [158] [159] [160] [161] [162] [163] [164]) [165]
 \openout2 = `Appendices/Discrete_Geometry.aux'.
 
- (./Appendices/Discrete_Geometry.tex
+ (./Appendices/Discrete_Geometry.tex [166
+
+
+
+
+]
 Appendix A.
-[166
-
-
-
-
-] [167] [168] [169]) [170]
+[167] [168] [169]) [170] [171]
 \openout2 = `Appendices/Real_Analysis.aux'.
 
- (./Appendices/Real_Analysis.tex
+ (./Appendices/Real_Analysis.tex [172
+
+
+
+
+]
 Appendix B.
-[171
-
-
-
-
-] [172] [173]) [174]
+[173] [174] [175]) [176]
 \openout2 = `Appendices/Complex_Analysis.aux'.
 
  (./Appendices/Complex_Analysis.tex
 Appendix C.
-[175
+[177
 
 
 
 
-] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188]) [189] (./CAANT.ind [190
+] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190]) [191] (./CAANT.ind [192
 
 
 
-] [191] [192])
+] [193] [194])
 \tf@thm=\write7
 \openout7 = `CAANT.thm'.
 
@@ -853,18 +858,18 @@ Package rerunfilecheck Info: File `CAANT.out' has not changed.
 (rerunfilecheck)             Checksum: CCC94B64DD666C66BD43D5FE6B7E5483;8837.
  ) 
 Here is how much of TeX's memory you used:
- 28245 strings out of 478268
- 576007 string characters out of 5846347
- 810957 words of memory out of 5000000
- 45269 multiletter control sequences out of 15000+600000
+ 28244 strings out of 478268
+ 575981 string characters out of 5846347
+ 816849 words of memory out of 5000000
+ 45268 multiletter control sequences out of 15000+600000
  491403 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,21n,107p,2083b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on CAANT.pdf (195 pages, 989386 bytes).
+Output written on CAANT.pdf (198 pages, 979425 bytes).
 PDF statistics:
- 2440 PDF objects out of 2487 (max. 8388607)
- 2173 compressed objects within 22 object streams
+ 2444 PDF objects out of 2487 (max. 8388607)
+ 2174 compressed objects within 22 object streams
  677 named destinations out of 1000 (max. 500000)
  429 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -383,12 +383,9 @@
       \[
         I(1,T) = \frac{1}{2}+O\left(\frac{1}{T}\right),
       \] 
-      and we see that \(\d(y) = \frac{1}{2}\). This proves everything when \(y = 1\). Now suppose \(y < 1\) and let \(d > c\). Let \(\eta = \eta_{1}+\cdots+\eta_{4}\) be the rectangular contour in \cref{fig:discontinuous_integral_contour_1} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = c\) and \(\s = d\). Consider
-      \[
-        \frac{1}{2\pi i}\int_{\eta}y^{s}\,\frac{ds}{s}.
-      \]
+      and we see that \(\d(y) = \frac{1}{2}\). This proves everything when \(y = 1\). Now suppose \(y < 1\) and let \(d > c\). Let \(\eta = \eta_{1}+\cdots+\eta_{4}\) be the rectangular contour in \cref{fig:discontinuous_integral_contour_1} where the horizontal lines are along \(t = \pm T\) and the vertical lines are along \(\s = c\) and \(\s = d\).
 
-      \begin{figure}[ht]
+      \begin{figure}[h]
         \centering
         \begin{tikzpicture}[scale=1.5]
           \def\xmin{-0.5} \def\xmax{3}
@@ -415,6 +412,10 @@
         \label{fig:discontinuous_integral_contour_1}
       \end{figure}
 
+      Consider
+      \[
+        \frac{1}{2\pi i}\int_{\eta}y^{s}\,\frac{ds}{s}.
+      \]
       We will evaluate this integral in the limit as \(d \to \infty\). The contour does not enclose the only pole of the integrand which is at \(s = 0\). So on the one hand, the residue theorem gives 
       \[
         \frac{1}{2\pi i}\int_{\eta}y^{s}\,\frac{ds}{s} = 0.
@@ -474,7 +475,7 @@
       \[
         I(y,T) = O(y^{c}).
       \]
-      Combining these two estimates for \(I(y,T)\) proves everything when \(y < 1\). Now suppose \(y > 1\) and let \(d < 0\). We argue as in the case \(y < 1\) except we use the the rectangular contour in \cref{fig:discontinuous_integral_contour_3}.
+      Combining these two estimates for \(I(y,T)\) proves everything when \(y < 1\). Now suppose \(y > 1\) and let \(d < 0\). We argue as in the case \(y < 1\) except the rectangular contour is now as in \cref{fig:discontinuous_integral_contour_3}.
 
       \begin{figure}[h]
         \centering
@@ -507,8 +508,8 @@
       \[
         I(y,T) = 1+O\left(\frac{y^{c}}{\log(y)T}\right),
       \]
-      and so \(\d(y) = 1\).
-      
+      and so \(\d(y) = 1\). The corresponding semicircular contour is given in \cref{fig:discontinuous_integral_contour_4}.
+
       \begin{figure}[h]
         \centering
         \begin{tikzpicture}[scale=1.5]
@@ -529,8 +530,8 @@
         \caption{A semicircular contour.}
         \label{fig:discontinuous_integral_contour_4}
       \end{figure}
-
-      We now modify the contour by using the semicircular one in \cref{fig:discontinuous_integral_contour_4}. Again, the contour encloses the simple pole of the integrand at \(s = 0\) whose residue is \(1\). Arguing analogously, we obtain
+      
+      This contour also encloses the simple pole of the integrand at \(s = 0\) whose residue is \(1\). Arguing analogously, we obtain
       \[
         I(y,T) = 1+O(y^{c}).
       \]
