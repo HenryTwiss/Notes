@@ -157,9 +157,9 @@
       \[
         \G(s)\G(1-s) = \int_{0}^{\infty}\frac{x^{s-1}}{x+1}\,dx,
       \]
-      so it suffices to show that the remaining integral is \(\frac{\pi}{\sin(\pi s)}\).
-
-      \begin{figure}[ht]
+      so it suffices to show that the remaining integral is \(\frac{\pi}{\sin(\pi s)}\). Let \(\eta = \sum_{i}\eta_{i}\) be the keyhole contour \cref{fig:reflection_formula_contour} where the large arc has radius \(R\) and the small arc has radius \(\e\).
+      
+      \begin{figure}[h]
         \centering
         \begin{tikzpicture}[scale=1.5]
           \def\xmin{-2.25} \def\xmax{2.25}
@@ -189,8 +189,8 @@
         \caption{A keyhole contour.}
         \label{fig:reflection_formula_contour}
       \end{figure}
-
-      Let \(\eta = \sum_{i}\eta_{i}\) be the keyhole contour \cref{fig:reflection_formula_contour} where the large arc has radius \(R\) and the small arc has radius \(\e\). Consider
+      
+      Consider
       \[
         \int_{\eta}\frac{z^{s+1}}{z+1}\,dz.
       \]
