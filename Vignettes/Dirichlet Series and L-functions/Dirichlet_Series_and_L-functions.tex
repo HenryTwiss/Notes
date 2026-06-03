@@ -426,7 +426,7 @@
           \label{fig:discontinuous_integral_contour_1}
         \end{figure}
 
-        Consider
+        \noindent Consider
         \[
           \frac{1}{2\pi i}\int_{\eta}y^{s}\,\frac{ds}{s}.
         \]
@@ -473,7 +473,7 @@
           \label{fig:discontinuous_integral_contour_2}
         \end{figure}
 
-        As before, the residue theorem gives
+        \noindent As before, the residue theorem gives
         \[
           \frac{1}{2\pi i}\int_{\eta}y^{s}\,\frac{ds}{s} = 0.
         \]
@@ -518,7 +518,7 @@
           \label{fig:discontinuous_integral_contour_3}
         \end{figure}
 
-        This time the the contour encloses the simple pole of the integrand at \(s = 0\) whose residue is \(1\). Arguing analogously, we find
+        \noindent This time the the contour encloses the simple pole of the integrand at \(s = 0\) whose residue is \(1\). Arguing analogously, we find
         \[
           I(y,T) = 1+O\left(\frac{y^{c}}{\log(y)T}\right),
         \]
@@ -545,7 +545,7 @@
           \label{fig:discontinuous_integral_contour_4}
         \end{figure}
         
-        This contour also encloses the simple pole of the integrand at \(s = 0\) whose residue is \(1\). Arguing analogously, we obtain
+        \noindent This contour also encloses the simple pole of the integrand at \(s = 0\) whose residue is \(1\). Arguing analogously, we obtain
         \[
           I(y,T) = 1+O(y^{c}).
         \]
@@ -793,6 +793,7 @@
       \[
         \left\{s \in \C:\left|\s-\frac{1}{2}\right| \le \frac{1}{2}\right\}.
       \]
+      The \textbf{critical line}\index{critical line} is the vertical line left invariant by the transformation \(s \mapsto 1-s\) which is also given by \(\s = \frac{1}{2}\). The critical line bisects the critical strip vertically. The \textbf{central point}\index{central point} is the fixed point of the transformation \(s \mapsto 1-s\), in other words, the point \(s = \frac{1}{2}\). Clearly the central point is also the center of the critical line. The critical strip, critical line, and central point are all displayed in \cref{fig:critical_strip}.
 
       \begin{figure}[h]
         \centering
@@ -819,8 +820,6 @@
         \caption{The critical strip.}
         \label{fig:critical_strip}
       \end{figure}
-
-      The \textbf{critical line}\index{critical line} is the vertical line left invariant by the transformation \(s \mapsto 1-s\) which is also given by \(\s = \frac{1}{2}\). The critical line bisects the critical strip vertically. The \textbf{central point}\index{central point} is the fixed point of the transformation \(s \mapsto 1-s\), in other words, the point \(s = \frac{1}{2}\). Clearly the central point is also the center of the critical line. The critical strip, critical line, and central point are all displayed in \cref{fig:critical_strip}.
 
       In the half-plane \(\s > 1\) we may study the analytic properties of \(L(s)\) via its Dirichlet series. Using the functional equation, we may write
       \[
@@ -1424,7 +1423,7 @@
           \label{fig:zero_counting_contour}
         \end{figure}
         
-        By our previous comments and the argument principle, we may write
+        \noindent By our previous comments and the argument principle, we may write
         \[
           N'(T,L) = \frac{1}{2\pi i}\int_{\eta}\frac{\xi'}{\xi}(s,L)\,ds+O(\log{\mf{q}(T,L)}),
         \]
@@ -1761,7 +1760,7 @@
           \label{fig:explict_formula_contour}
         \end{figure}
 
-        In view of \cref{prop:explicit_formula_log_derivative}, the contour encloses a simple pole of the integrand at \(s = 1\) of residue \(m_{L}X\), a simple pole at \(s = \rho\) for every nontrivial zero \(\rho\) whose ordinate \(\g\) satisfies \(|\g| < T\) of residue \(-\frac{X^{\rho}}{\rho}\), a simple pole at \(s = -(\mu_{j}+2n)\) for every gamma parameter \(\mu_{j}\) and nonnegative integer \(n\) satisfying \(n < \frac{U-\Re(\mu_{j})}{2}\) of residue \(\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}\), and double or simple pole at \(s = 0\) according to if \(L(0) = 0\) or not. Thus
+        \noindent In view of \cref{prop:explicit_formula_log_derivative}, the contour encloses a simple pole of the integrand at \(s = 1\) of residue \(m_{L}X\), a simple pole at \(s = \rho\) for every nontrivial zero \(\rho\) whose ordinate \(\g\) satisfies \(|\g| < T\) of residue \(-\frac{X^{\rho}}{\rho}\), a simple pole at \(s = -(\mu_{j}+2n)\) for every gamma parameter \(\mu_{j}\) and nonnegative integer \(n\) satisfying \(n < \frac{U-\Re(\mu_{j})}{2}\) of residue \(\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}\), and double or simple pole at \(s = 0\) according to if \(L(0) = 0\) or not. Thus
         \[
           \frac{1}{2\pi i}\int_{\eta}-\frac{L'}{L}(s)X^{s}\,\frac{ds}{s} = m_{L}X-\sum_{\substack{\rho \\ |\g| < T}}\frac{X^{\rho}}{\rho}+\sum_{j}\sum_{0 \le n < \frac{U-\Re(\mu_{j})}{2}}\frac{X^{-(\mu_{j}+2n)}}{\mu_{j}+2n}-\Res_{s = 0}\left(\frac{X^{s}}{s}\frac{L'}{L}(s)\right).
         \]
