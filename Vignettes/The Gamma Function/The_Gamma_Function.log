@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 14:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 15:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -688,40 +688,43 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 24.
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 39.
+) (./The_Gamma_Function.toc)
+\tf@toc=\write6
+\openout6 = `The_Gamma_Function.toc'.
+
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 25.
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 40.
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 52.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 53.
  [2]
-Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 121.
+Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 118.
  [3] [4] [5]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 274.
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 271.
  [6] [7] [8] [9] [10]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 465.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 462.
  [11] [12] [13]
-\tf@thm=\write6
-\openout6 = `The_Gamma_Function.thm'.
+\tf@thm=\write7
+\openout7 = `The_Gamma_Function.thm'.
 
  [14] (./The_Gamma_Function.aux)
 Package rerunfilecheck Info: File `The_Gamma_Function.out' has not changed.
 (rerunfilecheck)             Checksum: 4EE65995CF1EC5D997D575DEBDC7B971;406.
  ) 
 Here is how much of TeX's memory you used:
- 25567 strings out of 478268
- 508507 string characters out of 5846347
+ 25574 strings out of 478268
+ 508629 string characters out of 5846347
  757479 words of memory out of 5000000
- 43314 multiletter control sequences out of 15000+600000
+ 43317 multiletter control sequences out of 15000+600000
  479715 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,8n,107p,868b,1224s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on The_Gamma_Function.pdf (14 pages, 215043 bytes).
+Output written on The_Gamma_Function.pdf (14 pages, 215226 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 59 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

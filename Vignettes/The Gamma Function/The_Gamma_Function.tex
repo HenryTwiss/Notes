@@ -12,6 +12,7 @@
 \begin{document}
   \date{}
   \maketitle
+  \tableofcontents
   \section{The Gamma Function}\label{sec:The_Gamma_Function}
     Throughout, \(s = \s+it\) and \(u = \tau+ir\) will stand for complex variables with \(\s\), \(\tau\), \(t\), and \(r\) real.
     \subsection{Analytic Properties}
@@ -93,15 +94,11 @@
         \[
           \G(s)\G(u) = \int_{0}^{\infty}\int_{0}^{\infty}e^{-(x+y)}x^{s-1}y^{u-1}\,dx\,dy.
         \]
-        Change variables \((x,y) \mapsto (x,y-x)\) to obtain
+        The change of variables \((x,y) \mapsto (xy,y-xy)\) gives 
         \[
-          \int_{0}^{\infty}\int_{0}^{y}e^{-y}x^{s-1}(y-x)^{u-1}\,dx\,dy,
+          \int_{0}^{\infty}\int_{0}^{1}e^{-y}y(xy)^{s-1}(y-xy)^{u-1}\,dx\,dy,
         \]
-        The further change of variables \(x \mapsto xy\) gives
-        \[
-          \int_{0}^{\infty}\int_{0}^{1}e^{-y}(xy)^{s-1}(y-xy)^{u-1}\,dx\,dy.
-        \]
-        Then
+        as the Jacobian determinant is \(y\). Then
         \[
           \int_{0}^{\infty}\int_{0}^{1}e^{-y}(xy)^{s-1}(y-xy)^{u-1}\,dx\,dy = B(s,u)\G(s+u),
         \]
