@@ -44,7 +44,7 @@
 \contentsline {section}{\numberline {7.3}A Second Moment Estimate}{160}{section.7.3}%
 \contentsline {chapter}{\numberline {A}Discrete Geometry}{167}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Integral Lattices}{167}{section.A.1}%
-\contentsline {chapter}{\numberline {B}Real Analysis}{173}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Harmonic Analysis}{173}{appendix.B}%
 \contentsline {section}{\numberline {B.1}The Fourier Transform}{173}{section.B.1}%
 \contentsline {section}{\numberline {B.2}Fourier Series}{174}{section.B.2}%
 \contentsline {section}{\numberline {B.3}Poisson Summation}{175}{section.B.3}%

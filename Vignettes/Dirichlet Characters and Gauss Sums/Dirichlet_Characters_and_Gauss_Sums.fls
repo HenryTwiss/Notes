@@ -1,9 +1,9 @@
-PWD /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function
+PWD /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Characters and Gauss Sums
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function/The_Gamma_Function.tex
-OUTPUT The_Gamma_Function.log
+INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Characters and Gauss Sums/Dirichlet_Characters_and_Gauss_Sums.tex
+OUTPUT Dirichlet_Characters_and_Gauss_Sums.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -797,11 +797,11 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/p
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
-OUTPUT The_Gamma_Function.idx
-INPUT ./The_Gamma_Function.aux
-INPUT The_Gamma_Function.aux
-INPUT The_Gamma_Function.aux
-OUTPUT The_Gamma_Function.aux
+OUTPUT Dirichlet_Characters_and_Gauss_Sums.idx
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.aux
+INPUT Dirichlet_Characters_and_Gauss_Sums.aux
+INPUT Dirichlet_Characters_and_Gauss_Sums.aux
+OUTPUT Dirichlet_Characters_and_Gauss_Sums.aux
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -839,18 +839,18 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestri
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-INPUT ./The_Gamma_Function.out
-INPUT The_Gamma_Function.out
-INPUT ./The_Gamma_Function.out
-INPUT The_Gamma_Function.out
-INPUT ./The_Gamma_Function.out
-INPUT The_Gamma_Function.out
-INPUT ./The_Gamma_Function.out
-INPUT The_Gamma_Function.out
-OUTPUT The_Gamma_Function.pdf
-INPUT ./The_Gamma_Function.out
-INPUT ./The_Gamma_Function.out
-OUTPUT The_Gamma_Function.out
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.out
+INPUT Dirichlet_Characters_and_Gauss_Sums.out
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.out
+INPUT Dirichlet_Characters_and_Gauss_Sums.out
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.out
+INPUT Dirichlet_Characters_and_Gauss_Sums.out
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.out
+INPUT Dirichlet_Characters_and_Gauss_Sums.out
+OUTPUT Dirichlet_Characters_and_Gauss_Sums.pdf
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.out
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.out
+OUTPUT Dirichlet_Characters_and_Gauss_Sums.out
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -911,17 +911,18 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
-INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-OUTPUT The_Gamma_Function.thm
-INPUT The_Gamma_Function.aux
-INPUT ./The_Gamma_Function.out
-INPUT ./The_Gamma_Function.out
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+OUTPUT Dirichlet_Characters_and_Gauss_Sums.thm
+INPUT Dirichlet_Characters_and_Gauss_Sums.aux
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.out
+INPUT ./Dirichlet_Characters_and_Gauss_Sums.out
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
@@ -929,7 +930,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

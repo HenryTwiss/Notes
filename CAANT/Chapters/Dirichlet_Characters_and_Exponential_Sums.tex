@@ -200,7 +200,7 @@
       Now apply M\"obius inversion.
     \end{proof}
 
-    More general Ramanujan sums can be constructed by introducing a Dirichlet character. Let \(\chi\) be a Dirichlet character modulo \(m\). For any integer \(b\), the \textbf{Ramanujan sum}\index{Ramanujan sum} \(\tau(n,\chi)\) associated to \(\chi\) is given by
+    Gauss sums are a more general type of sum where we have introduced a Dirichlet character. Let \(\chi\) be a Dirichlet character modulo \(m\). For any integer \(b\), the \textbf{Gauss sum}\index{Gauss sum} \(\tau(b,\chi)\) associated to \(\chi\) is given by
     \[
       \tau(b,\chi) = \sum_{a \tmod{m}}\chi(a)e\left(\frac{ab}{m}\right).
     \]
@@ -212,7 +212,7 @@
     \[
       \tau(b,\chi) = \vphi(m)\d_{\chi,\chi_{m,0}}.
     \]
-    When \(b = 1\) we simply write \(\tau(\chi) = \tau(1,\chi)\) and call \(\tau(\chi)\) the \textbf{Gauss sum}\index{Gauss sum} associated to \(\chi\). The following proposition develops the basic properties of these Ramanujan sums:
+    When \(b = 1\) we simply write \(\tau(\chi) = \tau(1,\chi)\). The following proposition develops the basic properties of Gauss sums:
 
     \begin{proposition}\label{prop:Gauss_sum_reduction}
       Let \(\chi\) and \(\psi\) be nontrivial Dirichlet characters modulo \(m\) and \(n\) respectively and let \(b\) be an integer. Then the following properties hold:
@@ -276,7 +276,7 @@
       \[
         |\tau(\chi)|^{2} = \sum_{a \tmod{q}}\tau(a,\chi)e\left(-\frac{a}{q}\right).
       \]
-      Upon expanding the Ramanujan sum, another short computation gives
+      Upon expanding the Gauss sum \(\tau(a,\chi)\), another short computation gives
       \[
         |\tau(\chi)|^{2} = \sum_{a' \tmod{q}}\chi(a')\left(\sum_{a \tmod{q}}e\left(\frac{a(a'-1)}{q}\right)\right).
       \]
@@ -296,14 +296,14 @@
       \]
     \end{corollary}
     \begin{proof}
-      For the first statement, the identity is obvious if \(\chi\) is the trivial character as the Ramanujan sum is \(1\). So assume \(\chi\) is nontrivial. If \((b,q) = 1\) then this is exactly \cref{prop:Gauss_sum_reduction} (ii). If \((b,q) > 1\) then the identity follows from \cref{prop:Gauss_sum_reduction} (iii) and that \(\cchi(b) = 0\). This proves the first statement in full. For the second statement, observe that \(\tau(\chi) \neq 0\) by \cref{thm:Gauss_sum_modulus}. The second identity follows upon replacing \(\chi\) with \(\cchi\), dividing by \(\tau(\chi)\), and expanding the Ramanujan sum.
+      For the first statement, the identity is obvious if \(\chi\) is the trivial character as the Gauss sum is \(1\). So assume \(\chi\) is nontrivial. If \((b,q) = 1\) then this is exactly \cref{prop:Gauss_sum_reduction} (ii). If \((b,q) > 1\) then the identity follows from \cref{prop:Gauss_sum_reduction} (iii) and that \(\cchi(b) = 0\). This proves the first statement in full. For the second statement, observe that \(\tau(\chi) \neq 0\) by \cref{thm:Gauss_sum_modulus}. The second identity follows upon replacing \(\chi\) with \(\cchi\), dividing by \(\tau(\chi)\), and expanding the Gauss sum.
     \end{proof}
 
     For a Dirichlet character \(\chi\) modulo \(m\), we define the \textbf{epsilon factor}\index{epsilon factor} \(\e_{\chi}\) by
     \[
       \e_{\chi} = \frac{\tau(\chi)}{\sqrt{m}}.
     \]
-    When \(\chi\) is primitive, the epsilon factor lies on the unit circle by \cref{thm:Gauss_sum_modulus}. The question of the evaluation of Gauss sums, and hence Ramanujan sums, boils down to determining what value the epsilon factor is. This is the real difficultly in evaluating Gauss sums. However, when \(\chi\) is primitive there is a simple relationship between the epsilon factors \(\e_{\chi}\) and \(\e_{\cchi}\):
+    When \(\chi\) is primitive, the epsilon factor lies on the unit circle by \cref{thm:Gauss_sum_modulus}. The question of the evaluation of Gauss sums boils down to determining what value the epsilon factor is. This is the real difficultly in evaluating Gauss sums. However, when \(\chi\) is primitive there is a simple relationship between the epsilon factors \(\e_{\chi}\) and \(\e_{\cchi}\):
 
     \begin{proposition}\label{prop:epsilon_factor_relationship}
       Let \(\chi\) be a primitive Dirichlet character of conductor \(q\). Then
@@ -331,7 +331,7 @@
     \[
       g(b,m) = m.
     \]
-    If \(b = 1\) we write \(g(m) = g(1,m)\). It turns out that for square-free \(m\) the Ramanujan sum attached to the quadratic Dirichlet character modulo \(m\) given by the Jacobi symbol is precisely the quadratic Gauss sum. This takes some work to prove. The first step is to reduce to the case when \((b,m) = 1\).
+    If \(b = 1\) we write \(g(m) = g(1,m)\). It turns out that for square-free \(m\) the Gauss sum attached to the quadratic Dirichlet character modulo \(m\) given by the Jacobi symbol is precisely the quadratic Gauss sum. This takes some work to prove. The first step is to reduce to the case when \((b,m) = 1\).
 
     \begin{proposition}\label{prop:quadratic_Gauss_sum_relatively_prime_reduction}
       Let \(b\) and \(m\) be integers with \(m\) positive. Then
@@ -347,7 +347,7 @@
       The remaining sum is exactly \(g\left(\frac{b}{(b,m)},\frac{m}{(b,m)}\right)\) and the desired identity follows.
     \end{proof}
 
-    The second step is to deduce an equivalent formulation of the Ramanujan sum associated to quadratic Dirichlet characters given by Jacobi symbols. This will imply equivalence between the aforementioned exponential sums when the modulus is an odd prime.
+    The second step is to deduce an equivalent formulation of the Gauss sum associated to quadratic Dirichlet characters given by Jacobi symbols. This will imply equivalence between the aforementioned exponential sums when the modulus is an odd prime.
 
     \begin{proposition}\label{prop:Gauss_sum_equivalence_for_primes}
       Let \(b\) and \(m\) be integers with \(m\) positive, odd, and such that \((b,m) = 1\). Let \(\chi_{m}\) be the quadratic Dirichlet character modulo \(m\) given by the Jacobi symbol. Then
@@ -360,7 +360,7 @@
       \]
     \end{proposition}
     \begin{proof}
-      The first statement is obvious when \(m = 1\) since the Ramanujan sum is \(1\). So assume \(m > 1\). Now write the sum as
+      The first statement is obvious when \(m = 1\) since the Gauss sum is \(1\). So assume \(m > 1\). Now write the sum as
       \[
         \sum_{a \tmod{m}}e\left(\frac{ab}{m}\right)+\sum_{a \tmod{m}}\legendre{a}{m}e\left(\frac{ab}{m}\right).
       \]
@@ -430,7 +430,7 @@
       This completes the proof.
     \end{proof}
 
-    The properties in \cref{prop:quadratic_Gauss_sum_reduction} help to reduce the evaluation of quadratic Gauss sums. Thankfully, it is possible to completely evaluate quadratic Gauss sums when \(b = 1\) and therefore even some Ramanujan sums. As with the Gauss sum, we first deduce a fact about the modulus.
+    The properties in \cref{prop:quadratic_Gauss_sum_reduction} help to reduce the evaluation of quadratic Gauss sums. Thankfully, it is possible to completely evaluate quadratic Gauss sums when \(b = 1\). As with the Gauss sum, we first deduce a fact about the modulus.
 
     \begin{theorem}\label{thm:quadratic_Gauss_sum_modulus}
       Let \(m\) be a positive odd integer. Then

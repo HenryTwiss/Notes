@@ -1,11 +1,11 @@
 # Fdb version 3
-["makeindex The_Gamma_Function.idx"] 1775097550 "The_Gamma_Function.idx" "The_Gamma_Function.ind" "The_Gamma_Function" 1780504681
-  "The_Gamma_Function.idx" 0 -1 0 "pdflatex"
+["makeindex Dirichlet_Characters_and_Gauss_Sums.idx"] 1780504152 "Dirichlet_Characters_and_Gauss_Sums.idx" "Dirichlet_Characters_and_Gauss_Sums.ind" "Dirichlet_Characters_and_Gauss_Sums" 1780504593
+  "Dirichlet_Characters_and_Gauss_Sums.idx" 1780504593 899 28dbdabd68b9bbe7f65aab4f3a413c8c "pdflatex"
   (generated)
-  "The_Gamma_Function.ilg"
-  "The_Gamma_Function.ind"
-["pdflatex"] 1780504680 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function/The_Gamma_Function.tex" "The_Gamma_Function.pdf" "The_Gamma_Function" 1780504681
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Gamma Function/The_Gamma_Function.tex" 1780504680 33599 652df3e5224bb58aead0090fd4dea3f5 ""
+  "Dirichlet_Characters_and_Gauss_Sums.ilg"
+  "Dirichlet_Characters_and_Gauss_Sums.ind"
+["pdflatex"] 1780504592 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Characters and Gauss Sums/Dirichlet_Characters_and_Gauss_Sums.tex" "Dirichlet_Characters_and_Gauss_Sums.pdf" "Dirichlet_Characters_and_Gauss_Sums" 1780504593
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Characters and Gauss Sums/Dirichlet_Characters_and_Gauss_Sums.tex" 1780504592 44407 598cf8e3e5dce144657d88912f2135f9 ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1780494481 5474 634522508c12eba2da3658a12ba37cff ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -38,7 +38,6 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -187,14 +186,14 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "The_Gamma_Function.aux" 1780504681 8076 a41506753c3f678b52c18b140f3acdd5 "pdflatex"
-  "The_Gamma_Function.ind" 0 -1 0 "makeindex The_Gamma_Function.idx"
-  "The_Gamma_Function.out" 1780504681 406 4ee65995cf1ec5d997d575debdc7b971 "pdflatex"
-  "The_Gamma_Function.tex" 1780504680 33599 652df3e5224bb58aead0090fd4dea3f5 ""
+  "Dirichlet_Characters_and_Gauss_Sums.aux" 1780504593 7595 b572c6435b24ed696bf7fa529b9717be "pdflatex"
+  "Dirichlet_Characters_and_Gauss_Sums.ind" 1780504152 1033 4272ea9fee27809f3c08bcff2b98afe7 "makeindex Dirichlet_Characters_and_Gauss_Sums.idx"
+  "Dirichlet_Characters_and_Gauss_Sums.out" 1780504593 888 92c15f210a9e0f57550155456556c0a6 "pdflatex"
+  "Dirichlet_Characters_and_Gauss_Sums.tex" 1780504592 44407 598cf8e3e5dce144657d88912f2135f9 ""
   (generated)
-  "The_Gamma_Function.aux"
-  "The_Gamma_Function.idx"
-  "The_Gamma_Function.log"
-  "The_Gamma_Function.out"
-  "The_Gamma_Function.pdf"
-  "The_Gamma_Function.thm"
+  "Dirichlet_Characters_and_Gauss_Sums.aux"
+  "Dirichlet_Characters_and_Gauss_Sums.idx"
+  "Dirichlet_Characters_and_Gauss_Sums.log"
+  "Dirichlet_Characters_and_Gauss_Sums.out"
+  "Dirichlet_Characters_and_Gauss_Sums.pdf"
+  "Dirichlet_Characters_and_Gauss_Sums.thm"
