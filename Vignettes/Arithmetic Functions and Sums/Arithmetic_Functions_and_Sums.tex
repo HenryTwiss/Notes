@@ -5,7 +5,7 @@
 %=================%
 %  Title & Index  %
 %=================%
-\title{Arithmetic Functions and Sums}
+\title{Arithmetic Functions and Exponential Sums}
 \author{Henry Twiss}
 \makeindex
 
@@ -140,13 +140,62 @@
         As the first statement is equivalent to the second, we will prove the second statement. Convolving \(g = f \ast \mathbf{1}\) with \(\mu\) gives \(f = g \ast \mu\) in view of \cref{prop:Mobius_indicator}. This proves the forward implication. The reverse implication follows by convolving \(f = g \ast \mu\) with \(\mathbf{1}\) and arguing analogously.
       \end{proof}
     \subsection{\todo{Generating Series}}
+  \section{Asymptotics}
+    \subsection{Asymptotics of the Divisor Function}
+      It is essential to have a bound for the number of divisors \(\s_{0}(n)\) of a positive integer \(n\). A sufficient estimate is that \(\s_{0}(n)\) grows slower than any polynomial.
+
+      \begin{proposition}\label{prop:sum_of_divisors_growth_rate}
+        \phantom{ }
+        \[
+          \s_{0}(n) \ll_{\e} n^{\e}.
+        \]
+      \end{proposition}
+      \begin{proof}
+        Let \(n = p_{1}^{r_{1}} \cdots p_{k}^{r_{k}}\) be the prime factorization of \(n\) so that \(\s_{0}(n) = (r_{1}+1) \cdots (r_{k}+1)\). Then
+        \[
+          \frac{\s_{0}(n)}{n^{\e}} = \prod_{i}\frac{r_{i}+1}{p_{i}^{r_{i}\e}}.
+        \]
+        It suffices to show that the right-hand side is \(O_{\e}(1)\). For a prime \(p\), consider the nonnegative continuous function \(f_{p,\e}(x)\) defined by
+        \[
+          f_{p,\e}(x) = \frac{x+1}{p^{x\e}},
+        \]
+        for \(x \ge -1\). The derivative is easily seen to be
+        \[
+          f_{p,\e}'(x) = \frac{1-\log(p^{\e})(x+1)}{p^{x\e}},
+        \]
+        and is negative for \(\frac{1}{\log(p^{\e})}-1 < x\). Therefore \(f_{p,\e}(x)\) is eventually decreasing and so attains a maximum positive value. In particular, it attains some maximal positive value at a positive integer \(a_{p}\) amongst all positive integers because \(f_{p,\e}(-1) = 0\) and \(f_{p,\e}(x)\) is positive for \(x > -1\). Then the inequalities
+        \[
+          f_{p,\e}(a_{p}-1) \le f_{p,\e}(a_{p}) \quad \text{and} \quad f_{p,\e}(a_{p}+1) \le f_{p,\e}(a_{p}),
+        \]
+        are
+        \[
+          \frac{a_{p}}{p^{(a_{p}-1)\e}} \le \frac{a_{p}+1}{p^{a_{p}\e}} \quad \text{and} \quad \frac{a_{p}+2}{p^{(a_{p}+1)\e}} \le \frac{a_{p}+1}{p^{a_{p}\e}},
+        \]
+        respectively. Upon isolating \(a_{p}\) to obtain an upper bound in the first inequality and a lower bound in the second inequality, a short computation shows
+        \[
+          \frac{1}{p^{\e}-1}-1 \le a_{p} \le \frac{1}{p^{\e}-1}.
+        \]
+        Therefore we may take \(a_{p} = \left\lfloor \frac{1}{p^{\e}-1}-1 \right\rfloor\). Moreover,
+        \[
+          \frac{\frac{1}{p^{\e}-1}}{p^{\e\left(\frac{1}{p^{\e}-1}-1\right)}} \le f_{p}(a_{p}) \le \frac{\frac{1}{p^{\e}-1}+1}{p^{\e\left(\frac{1}{p^{\e}-1}\right)}}.
+        \]
+        Taking the logarithm yields
+        \[
+          \log\left(\frac{1}{p^{\e}-1}\right)-\log(p^{\e})\left(\frac{1}{p^{\e}-1}-1\right) \le \log(f_{p}(a_{p})) \le \log\left(\frac{1}{p^{\e}-1}+1\right)-\log(p^{\e})\left(\frac{1}{p^{\e}-1}\right).
+        \]
+        Taking the limit as \(p \to \infty\), a short computation shows that both the left-hand and right-hand sides tend to zero. Therefore \(\log(f_{p}(a_{p})) \to 0\) and hence \(f_{p}(a_{p}) \to 1\). This guarantees that the infinite product \(\prod_{p}f_{p,\e}(a_{p})\) converges to some positive value whence is \(O_{\e}(1)\). As
+        \[
+          \prod_{i}\frac{r_{i}+1}{p_{i}^{r_{i}\e}} \le \prod_{p}f_{p,\e}(a_{p}),
+        \]
+        the claim follows.
+      \end{proof}
   \section{Dirichlet Characters}
     Throughout, for any integers \(a\) and \(m\) the symbol \(\legendre{a}{m}\) will stand for the Kronecker symbol. In particular, it is the Jacobi symbol when \(m\) is a positive odd integer, and the Legendre symbol when \(m = p\) is a prime. Also, for any complex \(z\) we set
     \[
       e(z) = e^{2\pi iz}.
     \]
     \subsection{Dirichlet Characters}
-      Let \(m\) be a positive integer. A multiplicative homomorphism
+      One of the most important types of multiplicative functions are those that are periodic. These are the Dirichlet characters. Let \(m\) be a positive integer. A multiplicative homomorphism
       \[
         \chi:\Z \to \C,
       \]
@@ -283,7 +332,7 @@
         \[
           \chi_{D}(a) = \legendre{a}{|D|},
         \]
-        which is a Dirichlet character modulo \(|D|\). If \(D \equiv 12 \tmod{16}\) then \(\frac{D}{4} \equiv 3 \tmod{4}\) and the sign in quadratic reciprocity is \(\tlegendre{-1}{a}\) which is the primitive quadratic Dirichlet character modulo \(4\) as there are only two such Dirichlet characters and \(\legendre{-1}{a}\) is not principal. Whence
+        which is a Dirichlet character modulo \(|D|\). If \(D \equiv 12 \tmod{16}\) then \(\frac{D}{4} \equiv 3 \tmod{4}\) and the sign in quadratic reciprocity is \(\tlegendre{-1}{a}\) which is the primitive quadratic Dirichlet character modulo \(4\) as there are only two such Dirichlet characters and \(\legendre{-1}{a}\) is non-principal. Whence
         \[
           \chi_{D}(a) = \legendre{-1}{a}\legendre{a}{\left|\frac{D}{4}\right|},
         \]
@@ -295,7 +344,7 @@
         \[
           \chi_{D}(a) = \begin{cases} \legendre{a}{|D|} & \text{if \(D \equiv 1 \tmod{4}\)}, \\ \legendre{-1}{a}\legendre{a}{\left|\frac{D}{4}\right|} & \text{if \(\frac{D}{4} \equiv 3 \tmod{4}\)}, \\ \legendre{8}{a}\legendre{a}{\left|\frac{D}{8}\right|} & \text{if \(\frac{D}{8} \equiv 1 \tmod{4}\)}, \\ \legendre{-8}{a}\legendre{a}{\left|\frac{D}{8}\right|} & \text{if \(\frac{D}{8} \equiv 3 \tmod{4}\)}. \end{cases}
         \]
-        This proves \(\chi_{D}\) is a Dirichlet characters modulo \(|D|\). It is not hard to see that \(\chi_{D}\) is primitive. Indeed, we have already mentioned that the characters \(\tlegendre{-1}{a}\), \(\tlegendre{8}{a}\), and \(\tlegendre{-8}{a}\) are all primitive. Since \(D\), \(\frac{D}{4}\), and \(\frac{D}{8}\) are square-free according to their equivalences modulo \(4\) and \(D \neq 1\), it suffices to show that \(\chi_{p}\) is primitive for primes \(p\) with \(p \neq 2\) by \cref{prop:primitive_characters_multiplicative_relatively_prime}. This is immediate since \(p\) is prime and \(\chi_{p}\) is not principal. 
+        This proves \(\chi_{D}\) is a Dirichlet characters modulo \(|D|\). It is not hard to see that \(\chi_{D}\) is primitive. Indeed, we have already mentioned that the characters \(\tlegendre{-1}{a}\), \(\tlegendre{8}{a}\), and \(\tlegendre{-8}{a}\) are all primitive. Since \(D\), \(\frac{D}{4}\), and \(\frac{D}{8}\) are square-free according to their equivalences modulo \(4\) and \(D \neq 1\), it suffices to show that \(\chi_{p}\) is primitive for primes \(p\) with \(p \neq 2\) by \cref{prop:primitive_characters_multiplicative_relatively_prime}. This is immediate since \(p\) is prime and \(\chi_{p}\) is non-principal. 
         
         We now show that every primitive quadratic Dirichlet character is of the form \(\chi_{D}\) for some fundamental discriminant \(D\). By \cref{prop:primitive_characters_multiplicative_relatively_prime} again, it suffices to consider primitive quadratic Dirichlet character modulo a prime power \(p^{m}\).
         
@@ -313,12 +362,13 @@
       \end{proof}
 
       It follows from \cref{thm:fundamental_discriminant_character_primitive} that all quadratic Dirichlet characters are induced from some \(\chi_{D}\) including \(D = 1\) since this corresponds to the trivial Dirichlet character. In particular, so too are the quadratic Dirichlet characters given by Jacobi symbols.
-  \section{Sums}
+  \section{Exponential Sums}
     Throughout, for any integers \(a\) and \(m\) the symbol \(\legendre{a}{m}\) will stand for the Kronecker symbol. In particular, it is the Jacobi symbol when \(m\) is a positive odd integer, and the Legendre symbol when \(m = p\) is a prime. Also, for any complex \(z\) we set
     \[
       e(z) = e^{2\pi iz}.
     \]
-    \subsection{Character Sums}
+    \subsection{\todo{Exponenetial Sums}}
+      \todo{Discuss general exponential sums as well as complete and incomplete sums}
     \subsection{Gauss Sums}
       Let \(\chi\) be a Dirichlet character modulo \(m\). For any integer \(b\), the \textbf{Gauss sum}\index{Gauss sum} \(\tau(b,\chi)\) associated to \(\chi\) is given by
       \[
@@ -645,4 +695,126 @@
       \begin{proof}
         The claim follows immediately from \cref{thm:Gauss's_evaluation,prop:Gauss_sum_equivalence_for_primes}.
       \end{proof}
+    \subsection{Character Sums and the P\'olya-Vinogradov Inequality}
+      Character sums are one of the simplest type of incomplete exponential sums. Let \(\chi\) be a non-principal Dirichlet character modulo \(m\). The sum \(S_{\chi}(M,N)\) defined by
+      \[
+        S_{\chi}(M,N) = \sum_{M \le n \le M+N}\chi(n),
+      \]
+      for nonnegative \(M\) and \(N\), is called the \textbf{character sum}\index{character sum} of \(\chi\). If \(M = 0\), we write \(S_{\chi}(N) = S_{\chi}(0,N)\) for simplicity. An important question is how effectively can \(S_{\chi}(M,N)\) be estimated for various Dirichlet characters \(\chi\) and regimes of \(M\) and \(N\) relative to the modulus of \(\chi\). Since this is an exponential sum, we have the trivial bound
+      \[
+        S_{\chi}(M,N) \le N-1.
+      \]
+      On the other hand, by the Dirichlet orthogonality relations and that \(\chi\) is non-principal we have
+      \[
+        S_{\chi}(M,N) \le m.
+      \]
+      This second estimate is only an improvement upon the first in the regime \(m \ll N\). Surprisingly, we can obtain almost half-power savings in this estimate with very little work provided we introduce an implicit constant. We will require a small lemma.
+
+      \begin{lemma}\label{lem:Polya-Vinogradov_lemma}
+        Let \(f(x)\) be a integrable convex function on \(\left(a-\frac{b}{2},a+\frac{b}{2}\right)\) for some real \(a\) and positive \(b\). Then
+        \[
+          f(a) \le \frac{1}{b}\int_{a-\frac{b}{2}}^{a+\frac{b}{2}}f(x)\,dx.
+        \]
+      \end{lemma}
+      \begin{proof}
+        By the definition of convexity, write
+        \[
+          f(a) \le \frac{1}{2}f(x)+\frac{1}{2}f(2a-x).
+        \]
+        Integrate the left-hand side over \(\left(a-\frac{b}{2},a+\frac{b}{2}\right)\) yields
+        \[
+          \int_{a-\frac{b}{2}}^{a+\frac{b}{2}}f(a)\,dx = bf(a),
+        \]
+        while integrating the right-hand side over \(\left(a-\frac{b}{2},a+\frac{b}{2}\right)\) gives
+        \[
+          \int_{a-\frac{b}{2}}^{a+\frac{b}{2}}\left(\frac{1}{2}f(x)+\frac{1}{2}f(2a-x)\right)\,dx = \int_{a-\frac{b}{2}}^{a+\frac{b}{2}}f(x)\,dx,
+        \]
+        upon making the change of variables \(x \mapsto 2a-x\) in the second term. Hence
+        \[
+          bf(a) \le \int_{a-\frac{b}{2}}^{a+\frac{b}{2}}f(x)\,dx,
+        \]
+        which is equivalent to the claim.
+      \end{proof}
+      
+     The aforementioned improvement is known as the \textbf{P\'olya-Vinogradov inequality}\index{P\'olya-Vinogradov inequality} as it was proved independently by P\'olya and Vinogradov in 1918.
+
+      \begin{theorem*}[P\'olya-Vinogradov inequality]
+        Let \(\chi\) be a non-principal Dirichlet character modulo \(m\). Then for any nonnegative integers \(M\) and \(N\), we have
+        \[
+          S_{\chi}(M,N) \ll \sqrt{m}\log(m).
+        \]
+      \end{theorem*}
+      \begin{proof}
+        First suppose \(\chi\) is primitive of conductor \(q > 1\). Using \cref{cor:gauss_sum_primitive_formula}, write
+        \[
+          S_{\chi}(M,N) = \frac{1}{\tau(\cchi)}\sum_{a \tmod{q}}\cchi(a)\sum_{M \le n \le M+N}e\left(\frac{an}{q}\right).
+        \]
+        The inner sum is geometric and a short computation shows
+        \[
+          \sum_{M \le n \le M+N}e\left(\frac{an}{q}\right) = e\left(\frac{a\left(M+\frac{N-1}{2}\right)}{q}\right)\frac{\sin\left(\frac{\pi Na}{q}\right)}{\sin\left(\frac{\pi a}{q}\right)},
+        \]
+        upon using the identity \(\sin(x) = \frac{e^{ix}+e^{-ix}}{2i}\). This result together with \cref{thm:Gauss_sum_modulus} gives
+        \[
+          S_{\chi}(M,N) \ll \frac{1}{\sqrt{q}}\sum_{1 \le a \le q-1}\frac{1}{\sin\left(\frac{\pi a}{q}\right)}.
+        \]
+        The function \(\frac{1}{\sin(\pi x)}\) is easily checked to convex and integrable on \((0,1)\) (from checking its second derivative is positive). Invoking \cref{lem:Polya-Vinogradov_lemma} gives
+        \[
+          \frac{1}{\sqrt{q}}\sum_{1 \le a \le q-1}\frac{1}{\sin\left(\frac{\pi a}{q}\right)} \le \sqrt{q}\int_{\frac{1}{2q}}^{1-\frac{1}{2q}}\frac{1}{\sin(\pi x)}\,dx.
+        \]
+        The integrand is symmetric over \(\left(\frac{1}{2q},\frac{1}{2}\right)\) and \(\left(\frac{1}{2},1-\frac{1}{2q}\right)\). Whence the latter expression is equivalent to
+        \[
+          2\sqrt{q}\int_{\frac{1}{2q}}^{\frac{1}{2}}\frac{1}{\sin(\pi x)}\,dx
+        \]
+        Now \(\sin(\pi x) \ge 2x\) on the interval \([0,\frac{1}{2}]\). Applying this estimate shows
+        \[
+          2\sqrt{q}\int_{\frac{1}{2q}}^{\frac{1}{2}}\frac{1}{\sin(\pi x)}\,dx \ll \sqrt{q}\log(q).
+        \]
+        Therefore
+        \[
+          S_{\chi}(M,N) \ll \sqrt{q}\log(q).
+        \]
+        This proves the bound in the case \(\chi\) is primitive. Now suppose \(\chi\) is induced by the primitive character \(\wtilde{\chi}\) of conductor \(q > 1\). Then \(q \mid m\), and so we may write \(m = kq\) for some positive integer \(k\). Whence
+        \[
+          S_{\chi}(M,N) = \sum_{\substack{M \le n \le M+N \\ (n,k) = 1}}\wtilde{\chi}(n).
+        \]
+        Invoke \cref{prop:Mobius_indicator} to remove the relatively prime condition obtaining
+        \[
+          \sum_{d \mid k}\mu(d)\sum_{\substack{M \le n \le M+N \\ d \mid n}}\wtilde{\chi}(n).
+        \]
+        Now make the change of variables \(n \mapsto dn\) to get
+        \[
+          \sum_{d \mid k}\mu(d)\wtilde{\chi}(d)\sum_{\left\lfloor\frac{M}{d}\right\rfloor \le n \le \left\lfloor\frac{M+N}{d}\right\rfloor}\wtilde{\chi}(n).
+        \]
+        The inner sum is \(O(\sqrt{q}\log(q))\) by the primitive case and so
+        \[
+          S_{\chi}(M,N) \ll \s_{0}(k)\sqrt{q}\log(q),
+        \]
+        since there are \(\s_{0}(k)\) divisors of \(k\). The bound \(\s_{0}(k) \ll \sqrt{k}\) is implied by \cref{prop:sum_of_divisors_growth_rate}. This estimate together with \(\log(q) \le \log(m)\) gives
+        \[
+          S_{\chi}(M,N) \ll \sqrt{m}\log(m),
+        \]
+        as claimed.
+      \end{proof}
+
+      The P\'olya-Vinogradov inequality is particularly useful when \(N \gg m\). The following slight improvement was made in 1977 by Montgomery and Vaughn under the Riemann hypothesis for Dirichlet \(L\)-functions:
+
+      \begin{theorem}
+        Let \(\chi\) be a non-principal Dirichlet character modulo \(m\). Then for any \(M \ge 0\) and \(N \ge 1\),
+        \[
+          S_{\chi}(M,N) \ll \sqrt{m}\log{\log(m)},
+        \]
+        provided the Riemann hypothesis for Dirichlet \(L\)-functions holds.
+      \end{theorem}
+      
+      While this result is not much of an improvement from the P\'olya-Vinogradov inequality, it is sharp due to a result of Paley in 1932. This means that, quite remarkably, the P\'olya-Vinogradov inequality is almost optimal. Still, it is useful to have sharper estimates when \(N \ll m\). In 1963, Burgess made progress in this direction by proving the following result:
+
+      \begin{theorem}
+        Let \(\chi\) be a non-principal Dirichlet character modulo \(m > 1\) and \(M \ge 0\), \(N \ge 1\), and \(r \ge 1\) be integers. Then
+        \[
+          S_{\chi}(M,N) \ll_{\e} N^{1-\frac{1}{r}}m^{\frac{r+1}{4r^{2}}+\e},
+        \]
+        provided \(m\) is cube-free or \(r = 2\).
+      \end{theorem}
+
+      Burgess's result can be thought of as a blend between the aforementioned trivial bound and the P\'olya-Vinogradov inequality. Despite the proof being reasonably short, it requires machinery coming from finite fields.
   \end{document}

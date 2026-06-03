@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 15:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -696,36 +696,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 96.
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 100.
  [3]
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 100.
 Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 129.
- [4]
-Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 169.
- [5]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 205.
- [6] [7] [8] [9] [10] [11] [12] [13]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 432.
- [14] [15] [16] [17] [18]
+ [4] [5] [6]
+Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 218.
+ [7]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 254.
+ [8] [9] [10] [11] [12] [13] [14]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 482.
+ [15] [16] [17] [18] [19] [20] [21]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 713.
+ [22] [23]
 \tf@thm=\write7
 \openout7 = `Arithmetic_Functions_and_Sums.thm'.
 
- [19] (./Arithmetic_Functions_and_Sums.aux)
+ [24] (./Arithmetic_Functions_and_Sums.aux)
 Package rerunfilecheck Info: File `Arithmetic_Functions_and_Sums.out' has not changed.
-(rerunfilecheck)             Checksum: 0869239CFEAB77E8BCD53AF0FFABFA21;1763.
+(rerunfilecheck)             Checksum: 91F10617C47B1C19A6935D055A822A56;2554.
  ) 
 Here is how much of TeX's memory you used:
- 25398 strings out of 478268
- 503143 string characters out of 5846347
- 761208 words of memory out of 5000000
- 43094 multiletter control sequences out of 15000+600000
+ 25423 strings out of 478268
+ 503497 string characters out of 5846347
+ 761449 words of memory out of 5000000
+ 43103 multiletter control sequences out of 15000+600000
  481608 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 105i,17n,107p,1221b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,17n,107p,1221b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Arithmetic_Functions_and_Sums.pdf (19 pages, 246439 bytes).
+Output written on Arithmetic_Functions_and_Sums.pdf (24 pages, 271672 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 292 compressed objects within 3 object streams
- 102 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 399 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
+ 118 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

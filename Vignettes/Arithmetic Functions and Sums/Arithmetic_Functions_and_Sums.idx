@@ -11,34 +11,36 @@
 \indexentry{characteristic function of square-free integers|hyperpage}{2}
 \indexentry{Liouville's function|hyperpage}{2}
 \indexentry{Euler's totient function|hyperpage}{2}
-\indexentry{divisor function|hyperpage}{2}
+\indexentry{divisor function|hyperpage}{3}
 \indexentry{sum of divisors function|hyperpage}{3}
 \indexentry{generalized sum of divisors function|hyperpage}{3}
 \indexentry{number of distinct prime factors function|hyperpage}{3}
 \indexentry{total number of prime divisors function|hyperpage}{3}
 \indexentry{von Mangoldt function|hyperpage}{3}
-\indexentry{Dirichlet convolution|hyperpage}{3}
+\indexentry{Dirichlet convolution|hyperpage}{4}
 \indexentry{M\"obius inversion|hyperpage}{4}
-\indexentry{Dirichlet character|hyperpage}{5}
-\indexentry{modulus|hyperpage}{5}
-\indexentry{principal|hyperpage}{5}
-\indexentry{trivial Dirichlet character|hyperpage}{5}
-\indexentry{zero extension|hyperpage}{5}
-\indexentry{Dirichlet orthogonality relations|hyperpage}{5}
-\indexentry{induced|hyperpage}{6}
-\indexentry{primitive|hyperpage}{7}
-\indexentry{imprimitive|hyperpage}{7}
-\indexentry{conductor|hyperpage}{7}
-\indexentry{real|hyperpage}{8}
-\indexentry{complex|hyperpage}{8}
-\indexentry{order|hyperpage}{8}
-\indexentry{quadratic|hyperpage}{8}
-\indexentry{cubic|hyperpage}{8}
-\indexentry{even|hyperpage}{8}
-\indexentry{odd|hyperpage}{8}
-\indexentry{fundamental discriminant|hyperpage}{9}
-\indexentry{Gauss sum|hyperpage}{11}
-\indexentry{Ramanujan sum|hyperpage}{11}
-\indexentry{epsilon factor|hyperpage}{14}
-\indexentry{quadratic Gauss sum|hyperpage}{15}
-\indexentry{epsilon factor|hyperpage}{18}
+\indexentry{Dirichlet character|hyperpage}{6}
+\indexentry{modulus|hyperpage}{6}
+\indexentry{principal|hyperpage}{7}
+\indexentry{trivial Dirichlet character|hyperpage}{7}
+\indexentry{zero extension|hyperpage}{7}
+\indexentry{Dirichlet orthogonality relations|hyperpage}{7}
+\indexentry{induced|hyperpage}{8}
+\indexentry{primitive|hyperpage}{8}
+\indexentry{imprimitive|hyperpage}{8}
+\indexentry{conductor|hyperpage}{9}
+\indexentry{real|hyperpage}{10}
+\indexentry{complex|hyperpage}{10}
+\indexentry{order|hyperpage}{10}
+\indexentry{quadratic|hyperpage}{10}
+\indexentry{cubic|hyperpage}{10}
+\indexentry{even|hyperpage}{10}
+\indexentry{odd|hyperpage}{10}
+\indexentry{fundamental discriminant|hyperpage}{10}
+\indexentry{Gauss sum|hyperpage}{13}
+\indexentry{Ramanujan sum|hyperpage}{13}
+\indexentry{epsilon factor|hyperpage}{16}
+\indexentry{quadratic Gauss sum|hyperpage}{17}
+\indexentry{epsilon factor|hyperpage}{20}
+\indexentry{character sum|hyperpage}{21}
+\indexentry{P\'olya-Vinogradov inequality|hyperpage}{22}

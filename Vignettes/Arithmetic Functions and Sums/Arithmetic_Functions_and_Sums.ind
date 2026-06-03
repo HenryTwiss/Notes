@@ -5,42 +5,43 @@
 
   \indexspace
 
+  \item character sum, \hyperpage{21}
   \item characteristic function of square-free integers, \hyperpage{2}
   \item completely additive, \hyperpage{1}
   \item completely multiplicative, \hyperpage{1}
-  \item complex, \hyperpage{8}
-  \item conductor, \hyperpage{7}
+  \item complex, \hyperpage{10}
+  \item conductor, \hyperpage{9}
   \item constant function, \hyperpage{2}
-  \item cubic, \hyperpage{8}
+  \item cubic, \hyperpage{10}
 
   \indexspace
 
-  \item Dirichlet character, \hyperpage{5}
-  \item Dirichlet convolution, \hyperpage{3}
-  \item Dirichlet orthogonality relations, \hyperpage{5}
-  \item divisor function, \hyperpage{2}
+  \item Dirichlet character, \hyperpage{6}
+  \item Dirichlet convolution, \hyperpage{4}
+  \item Dirichlet orthogonality relations, \hyperpage{7}
+  \item divisor function, \hyperpage{3}
 
   \indexspace
 
-  \item epsilon factor, \hyperpage{14}, \hyperpage{18}
+  \item epsilon factor, \hyperpage{16}, \hyperpage{20}
   \item Euler's totient function, \hyperpage{2}
-  \item even, \hyperpage{8}
+  \item even, \hyperpage{10}
 
   \indexspace
 
-  \item fundamental discriminant, \hyperpage{9}
+  \item fundamental discriminant, \hyperpage{10}
 
   \indexspace
 
-  \item Gauss sum, \hyperpage{11}
+  \item Gauss sum, \hyperpage{13}
   \item generalized sum of divisors function, \hyperpage{3}
 
   \indexspace
 
   \item identity function, \hyperpage{2}
-  \item imprimitive, \hyperpage{7}
+  \item imprimitive, \hyperpage{8}
   \item indicator function, \hyperpage{2}
-  \item induced, \hyperpage{6}
+  \item induced, \hyperpage{8}
 
   \indexspace
 
@@ -51,7 +52,7 @@
 
   \item M\"obius function, \hyperpage{2}
   \item M\"obius inversion, \hyperpage{4}
-  \item modulus, \hyperpage{5}
+  \item modulus, \hyperpage{6}
   \item multiplicative, \hyperpage{1}
 
   \indexspace
@@ -60,23 +61,24 @@
 
   \indexspace
 
-  \item odd, \hyperpage{8}
-  \item order, \hyperpage{8}
+  \item odd, \hyperpage{10}
+  \item order, \hyperpage{10}
 
   \indexspace
 
-  \item primitive, \hyperpage{7}
-  \item principal, \hyperpage{5}
+  \item P\'olya-Vinogradov inequality, \hyperpage{22}
+  \item primitive, \hyperpage{8}
+  \item principal, \hyperpage{7}
 
   \indexspace
 
-  \item quadratic, \hyperpage{8}
-  \item quadratic Gauss sum, \hyperpage{15}
+  \item quadratic, \hyperpage{10}
+  \item quadratic Gauss sum, \hyperpage{17}
 
   \indexspace
 
-  \item Ramanujan sum, \hyperpage{11}
-  \item real, \hyperpage{8}
+  \item Ramanujan sum, \hyperpage{13}
+  \item real, \hyperpage{10}
 
   \indexspace
 
@@ -85,7 +87,7 @@
   \indexspace
 
   \item total number of prime divisors function, \hyperpage{3}
-  \item trivial Dirichlet character, \hyperpage{5}
+  \item trivial Dirichlet character, \hyperpage{7}
 
   \indexspace
 
@@ -93,6 +95,6 @@
 
   \indexspace
 
-  \item zero extension, \hyperpage{5}
+  \item zero extension, \hyperpage{7}
 
 \end{theindex}
