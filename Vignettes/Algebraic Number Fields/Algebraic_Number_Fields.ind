@@ -32,28 +32,28 @@
 
   \item decomposition field, \hyperpage{54}
   \item decomposition group, \hyperpage{54}
-  \item Dedekind domain, \hyperpage{15}
+  \item Dedekind domain, \hyperpage{16}
   \item Dedekind extension, \hyperpage{24}
   \item Dedekind-Kummer theorem, \hyperpage{46}
   \item degree, \hyperpage{4}
   \item different, \hyperpage{60}, \hyperpage{65}
   \item Dirichlet's unit theorem, \hyperpage{82}
   \item discrete valuation ring, \hyperpage{30}
-  \item discriminant, \hyperpage{8}, \hyperpage{14}, \hyperpage{61}, 
+  \item discriminant, \hyperpage{8}, \hyperpage{15}, \hyperpage{61}, 
 		\hyperpage{65}
   \item divides, \hyperpage{19}
   \item dual, \hyperpage{59}
 
   \indexspace
 
-  \item embedding matrix, \hyperpage{9}
+  \item embedding matrix, \hyperpage{10}
   \item exactly divides, \hyperpage{19}
   \item exponential valuation, \hyperpage{32}
 
   \indexspace
 
-  \item field norm, \hyperpage{5}, \hyperpage{14}
-  \item field trace, \hyperpage{5}, \hyperpage{14}
+  \item field norm, \hyperpage{6}, \hyperpage{14}
+  \item field trace, \hyperpage{6}, \hyperpage{14}
   \item fractional ideal, \hyperpage{15}, \hyperpage{26}
   \item fundamental equality, \hyperpage{44}
   \item fundamental unit, \hyperpage{82}
@@ -72,11 +72,11 @@
   \item inertia field, \hyperpage{56}
   \item inertia group, \hyperpage{56}
   \item integral, \hyperpage{1}
-  \item integral basis, \hyperpage{11}, \hyperpage{14}
-  \item integral closure, \hyperpage{2}
-  \item integral ideal, \hyperpage{15}, \hyperpage{25}
-  \item integrally closed, \hyperpage{2}
-  \item integrally closed domain, \hyperpage{2}
+  \item integral basis, \hyperpage{11}, \hyperpage{15}
+  \item integral closure, \hyperpage{3}
+  \item integral ideal, \hyperpage{15}, \hyperpage{26}
+  \item integrally closed, \hyperpage{3}
+  \item integrally closed domain, \hyperpage{3}
   \item inverse, \hyperpage{15}
   \item invertible, \hyperpage{15}
   \item irregular, \hyperpage{40}
@@ -85,7 +85,7 @@
 
   \item least common multiple, \hyperpage{19}
   \item local, \hyperpage{28}, \hyperpage{31}
-  \item localization, \hyperpage{26, 27}, \hyperpage{30}
+  \item localization, \hyperpage{26--28}, \hyperpage{30}
   \item logarithmic embedding, \hyperpage{79}
 
   \indexspace
@@ -98,7 +98,7 @@
   \item Minkowski norm, \hyperpage{71}
   \item Minkowski space, \hyperpage{71}
   \item Minkowski trace, \hyperpage{71}
-  \item monogenic, \hyperpage{14}
+  \item monogenic, \hyperpage{14, 15}
   \item multiplicative, \hyperpage{26}
 
   \indexspace
@@ -106,7 +106,7 @@
   \item nonsplit, \hyperpage{45}, \hyperpage{51, 52}
   \item norm, \hyperpage{5}, \hyperpage{50}, \hyperpage{52}
   \item norm-one hypersurface, \hyperpage{79}
-  \item normalization, \hyperpage{2}
+  \item normalization, \hyperpage{3}
   \item number field, \hyperpage{4}
 
   \indexspace
@@ -117,7 +117,7 @@
 
   \item Picard class, \hyperpage{35}
   \item Picard group, \hyperpage{35}
-  \item prime, \hyperpage{15}, \hyperpage{25}
+  \item prime, \hyperpage{15}, \hyperpage{26}
   \item prime factorization, \hyperpage{19}
   \item prime factors, \hyperpage{19}
   \item principal, \hyperpage{15}
@@ -136,7 +136,7 @@
   \item regulator, \hyperpage{83}
   \item relatively prime, \hyperpage{19}
   \item residue class extension, \hyperpage{43}
-  \item residue class field, \hyperpage{22}
+  \item residue class field, \hyperpage{23}
   \item ring of \(S\)-integers, \hyperpage{33}
   \item ring of integers, \hyperpage{4}
 
@@ -153,8 +153,8 @@
   \item totally ramified, \hyperpage{46}, \hyperpage{51, 52}
   \item totally split, \hyperpage{45}, \hyperpage{51, 52}
   \item trace, \hyperpage{5}
-  \item trace form, \hyperpage{9}, \hyperpage{14}
-  \item trace matrix, \hyperpage{7}
+  \item trace form, \hyperpage{9}, \hyperpage{15}
+  \item trace matrix, \hyperpage{8}
   \item trace-zero hyperplane, \hyperpage{79}
 
   \indexspace

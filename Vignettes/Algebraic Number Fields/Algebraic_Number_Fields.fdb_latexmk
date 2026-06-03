@@ -1,12 +1,12 @@
 # Fdb version 3
-["makeindex Algebraic_Number_Fields.idx"] 1780504800 "Algebraic_Number_Fields.idx" "Algebraic_Number_Fields.ind" "Algebraic_Number_Fields" 1780504881
-  "Algebraic_Number_Fields.idx" 1780504881 6951 454a8e500868c5cbffc1b1711e3a331a "pdflatex"
+["makeindex Algebraic_Number_Fields.idx"] 1780512838 "Algebraic_Number_Fields.idx" "Algebraic_Number_Fields.ind" "Algebraic_Number_Fields" 1780513351
+  "Algebraic_Number_Fields.idx" 1780513351 6952 152e8e4029fc1581ce7f1f4677ea382e "pdflatex"
   (generated)
   "Algebraic_Number_Fields.ilg"
   "Algebraic_Number_Fields.ind"
-["pdflatex"] 1780504880 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Algebraic Number Fields/Algebraic_Number_Fields.tex" "Algebraic_Number_Fields.pdf" "Algebraic_Number_Fields" 1780504881
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Algebraic Number Fields/Algebraic_Number_Fields.tex" 1780504880 299528 6d6ccf2eb5879044a590cd394608f155 ""
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1780494481 5474 634522508c12eba2da3658a12ba37cff ""
+["pdflatex"] 1780513350 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Algebraic Number Fields/Algebraic_Number_Fields.tex" "Algebraic_Number_Fields.pdf" "Algebraic_Number_Fields" 1780513351
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Algebraic Number Fields/Algebraic_Number_Fields.tex" 1780513348 299556 534a481debab56d17b13581d0fd302f4 ""
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1780512482 5480 1c1089c4f68d35449bb71f726253e7ea ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -178,6 +178,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty" 1612734870 13242 133e617c5eebffdd05e421624022b267 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def" 1645564115 14132 e8e7e61e51ade521a7238fac8362786c ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def" 1645564115 117004 ed1c2cc82bb9836e9d59549dd8c33098 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/xr-hyper.sty" 1645564115 5736 e455097c2dc48dad845a8283231ab31f ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty" 1586645574 6201 0ad8b5da8e12f60a88d546b2198a56f2 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1602274869 22521 d2fceb764a442a2001d257ef11db7618 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1644269979 29921 d0acc05a38bd4aa3af2017f0b7c137ce ""
@@ -198,17 +199,17 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575674187 9715 b051d5b493d9fe5f4bc251462d039e5f ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty" 1620507957 823 2375f30bf77af9357d3b4834b054bf52 ""
-  "/usr/local/texlive/2022/texmf-dist/tex/latex/tools/xr.sty" 1622581934 2607 3a4dc8491a154795e4b63abc389a0729 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty" 1635798903 56029 3f7889dab51d620aa43177c391b7b190 ""
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Algebraic_Number_Fields.aux" 1780504881 37174 c66a4f204869d155eef451de4b82c8e7 "pdflatex"
-  "Algebraic_Number_Fields.ind" 1780504800 5126 e9aafe2c9a4564c9d53930da8d2c52d1 "makeindex Algebraic_Number_Fields.idx"
-  "Algebraic_Number_Fields.out" 1780504881 2063 276affd8ff57d5dd2cea496ecf469614 "pdflatex"
-  "Algebraic_Number_Fields.tex" 1780504880 299528 6d6ccf2eb5879044a590cd394608f155 ""
+  "Algebraic_Number_Fields.aux" 1780513351 37234 06bcae1354e75b4abf80acce526dc693 "pdflatex"
+  "Algebraic_Number_Fields.ind" 1780512838 5131 33758e14ca3f69641d64316c01349b23 "makeindex Algebraic_Number_Fields.idx"
+  "Algebraic_Number_Fields.out" 1780513351 2105 e625d20bbfa0857bbbf9c347d00726dc "pdflatex"
+  "Algebraic_Number_Fields.tex" 1780513348 299556 534a481debab56d17b13581d0fd302f4 ""
+  "Algebraic_Number_Fields.toc" 1780513351 1169 ddcf31cc0ed33bd73e070df257b31270 "pdflatex"
   (generated)
   "Algebraic_Number_Fields.aux"
   "Algebraic_Number_Fields.idx"
@@ -216,3 +217,4 @@
   "Algebraic_Number_Fields.out"
   "Algebraic_Number_Fields.pdf"
   "Algebraic_Number_Fields.thm"
+  "Algebraic_Number_Fields.toc"

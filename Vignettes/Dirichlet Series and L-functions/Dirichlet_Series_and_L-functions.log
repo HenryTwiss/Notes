@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 13:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 15:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -118,6 +118,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box52
 \enit@count@id=\count274
 \enitdp@description=\count275
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/xr-hyper.sty
+Package: xr-hyper 2022-02-21 v7.00n eXternal References (DPC)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
  (/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -284,8 +286,6 @@ Package cleveref Info: `ntheorem' support loaded on input line 3055.
 Package cleveref Info: always capitalise cross-reference names on input line 7825.
 Package cleveref Info: always capitalise cross-reference names on input line 7852.
 Package cleveref Info: no abbreviation of names on input line 7852.
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/xr.sty
-Package: xr 2020-05-10 v5.06 eXternal References (DPC)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks44
 \pgfutil@tempdima=\dimen167
@@ -688,47 +688,71 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 24.
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 32.
+) (./Dirichlet_Series_and_L-functions.toc)
+\tf@toc=\write6
+\openout6 = `Dirichlet_Series_and_L-functions.toc'.
+
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 25.
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 79.
- [2] [3] [4]
-Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 211.
- [5] [6] [7]
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 294.
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 33.
+ [2]
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 80.
+ [3] [4] [5]
+Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 212.
+ [6] [7]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 295.
  [8] [9]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 363.
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 381.
- [10] [11] [12] [13] [14] [15] [16] [17]
-Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 730.
- [18]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 758.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 364.
+ [10]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 382.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13] [14] [15] [16] [17] [18]
+Package hyperref Info: bookmark level for unknown conjecture* defaults to 0 on input line 731.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 759.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45]
-\tf@thm=\write6
-\openout6 = `Dirichlet_Series_and_L-functions.thm'.
+) [19]
 
- [46] (./Dirichlet_Series_and_L-functions.aux)
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20] [21] [22] [23] [24]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]
+\tf@thm=\write7
+\openout7 = `Dirichlet_Series_and_L-functions.thm'.
+
+ [47] (./Dirichlet_Series_and_L-functions.aux)
 Package rerunfilecheck Info: File `Dirichlet_Series_and_L-functions.out' has not changed.
 (rerunfilecheck)             Checksum: 72A5AE7B99E2CA110B2FE4958C512DE4;2605.
  ) 
 Here is how much of TeX's memory you used:
- 25785 strings out of 478268
- 512664 string characters out of 5846347
- 766379 words of memory out of 5000000
- 43417 multiletter control sequences out of 15000+600000
+ 25799 strings out of 478268
+ 512998 string characters out of 5846347
+ 764549 words of memory out of 5000000
+ 43427 multiletter control sequences out of 15000+600000
  484391 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,14n,107p,1645b,1218s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Dirichlet_Series_and_L-functions.pdf (46 pages, 400973 bytes).
+Output written on Dirichlet_Series_and_L-functions.pdf (47 pages, 403171 bytes).
 PDF statistics:
- 558 PDF objects out of 1000 (max. 8388607)
- 467 compressed objects within 5 object streams
- 162 named destinations out of 1000 (max. 500000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 164 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,274 @@
+\documentclass[12pt]{article}
+\usepackage{import}
+\input{/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex}
+
+%=================%
+%  Title & Index  %
+%=================%
+\title{Arithmetic Functions and Sums}
+\author{Henry Twiss}
+\makeindex
+
+\begin{document}
+  \date{}
+  \maketitle
+  \tableofcontents
+  \section{The Riemann Zeta Function}
+    Throughout, \(s = \s+it\) will stand for complex variables with \(\s\) and \(t\) real. We will also make use of the gamma function developed in \cref{sec:the_gamma_function}. Also, all sums and products over zeros of a function will be counted with multiplicity and ordered symmetrically with respect to the size of the ordinate if they are not absolutely convergent.
+    \subsection{Analytic Properties}
+      The \textbf{Riemann zeta function}\index{Riemann zeta function} \(\z(s)\) is defined by the Dirichlet series
+      \[
+        \z(s) = \sum_{n \ge 1}\frac{1}{n^{s}}.
+      \]
+      As the coefficients are uniformly bounded and completely multiplicative, \(\z(s)\) is absolutely convergent for \(\s > 1\) and admits the following degree \(1\) Euler product
+      \[
+        \z(s) = \prod_{p}(1-p^{-s})^{-1},
+      \]
+      by \cref{prop:Dirichlet_series_Euler_product}.
+
+      Our primary aim is to show that the Riemann zeta function is a Selberg class \(L\)-function. In order to do this, we need to establish meromorphic continuation to the entire complex plane and prove a functional equation. These will be accomplished in tandem by developing and analyzing an integral representation for the Riemann zeta function that evolves from a Mellin transform. The function which we will take the Mellin transform of is closely related to the \textbf{Jacobi theta function}\index{Jacobi theta function} \(\vt(z)\) defined by
+      \[
+        \vt(z) = \sum_{n \in \Z}e^{2\pi in^{2}z},
+      \]
+      for \(z \in \H\). This function is locally absolutely uniformly convergent in this region by the Weierstrass \(M\)-test. Moreover, the sum of a geometric series implies
+      \[
+        \vt(z)-1 = O(e^{-2\pi y}),
+      \]
+      so that \(\vt(z)-1\) exhibits exponential decay. The essential result we will need about the Jacobi theta function is that it satisfies a transformation property. This will follow by an application of Poisson summation.
+
+      \begin{theorem}\label{thm:functional_equation_Jacobi_theta}
+        For \(z \in \H\),
+        \[
+          \vt(z) = \frac{1}{\sqrt{-2iz}}\vt\left(-\frac{1}{4z}\right).
+        \]
+      \end{theorem}
+      \begin{proof}
+        We will apply Poisson summation to the Jacobi theta function. By the identity theorem it suffices to verify the transformation formula for \(z = iy\) with \(y\) positive. So set
+        \[
+          f(x) = e^{-2\pi x^{2}y}.
+        \]
+        Then \(f(x)\) is Schwartz class. By \cref{prop:Fourier_transform_of_exponential_single_variable}, we have
+        \[
+          (\mc{F}f)(t) = \frac{e^{-\frac{\pi t^{2}}{2y}}}{\sqrt{2y}}.
+        \]
+        Poisson summation together with this identity gives the result.
+      \end{proof}
+
+      We can now introduce the function whose Mellin transform will essentially give the Riemann zeta function. This function \(\w(z)\) is defined by
+      \[
+        \w(z) = \sum_{n \ge 1}e^{\pi in^{2}z},
+      \]
+      for \(z \in \H\). It is related to the Jacobi theta function via
+      \[
+        \w(z) = \frac{\vt\left(\frac{z}{2}\right)-1}{2},
+      \]
+      and hence is locally absolutely uniformly convergent in this region. In particular, we have the estimates
+      \[
+        \w(iy) = \begin{cases} O\left(y^{-\frac{1}{2}}\right) & \text{if \(y \ll 1\)}, \\ O(e^{-\pi y}) & \text{if \(y \gg 1\)}, \end{cases}
+      \]
+      where the second estimate follows from the exponential decay of the Jacobi theta function and the first estimate from \cref{thm:functional_equation_Jacobi_theta}. Now consider the Mellin transform
+      \[
+        \int_{0}^{\infty}\w(iy)y^{\frac{s}{2}}\,\frac{dy}{y}.
+      \]
+      By the previous estimates, this integral is locally absolutely uniformly convergent for \(\s > 1\) and hence defines an analytic function there. This also permits the us to interchange the integral and the sum inside the integrand resulting in
+      \[
+        \int_{0}^{\infty}\w(iy)y^{\frac{s}{2}}\,\frac{dy}{y} = \sum_{n \ge 1}\int_{0}^{\infty}e^{-\pi n^{2}y}y^{\frac{s}{2}}\,\frac{dy}{y}.
+      \]
+      Under the change of variables \(y \mapsto \frac{y}{\pi n^{2}}\), the integral is realized as \(\G\left(\frac{s}{2}\right)\) and the sum becomes \(\z(s)\) giving
+      \[
+        \sum_{n \ge 1}\int_{0}^{\infty}e^{-\pi n^{2}y}y^{\frac{s}{2}}\,\frac{dy}{y} = \frac{\G\left(\frac{s}{2}\right)}{\pi^{\frac{s}{2}}}\z(s).
+      \]
+      As the reciprocal of the gamma function is entire, we obtain an integral representation
+      \begin{equation}\label{equ:integral_representation_zeta_1}
+        \z(s) = \frac{\pi^{\frac{s}{2}}}{\G\left(\frac{s}{2}\right)}\int_{0}^{\infty}\w(iy)y^{\frac{s}{2}}\,\frac{dy}{y}.
+      \end{equation}
+      This integral representation does not establish the meromorphic continuation of the Riemann zeta function to the entire complex plane because the integral does not converge for \(\s \le 1\) in the region where \(y \ll 1\) in view of the estimates we have just establishes. In order to bypass this obstruction, decompose the integral as
+      \begin{equation}\label{equ:symmetric_integral_zeta_split}
+        \int_{0}^{\infty}\w(iy)y^{\frac{s}{2}}\,\frac{dy}{y} = \int_{0}^{1}\w(iy)y^{\frac{s}{2}}\,\frac{dy}{y}+\int_{1}^{\infty}\w(iy)y^{\frac{s}{2}}\,\frac{dy}{y}.
+      \end{equation}
+      We will write the first piece in the same form as the second and symmetrize the result as much as possible. To this end, performing the change of variables \(y \mapsto \frac{1}{y}\) to the first piece gives
+      \[
+        \int_{1}^{\infty}\w\left(\frac{i}{y}\right)y^{-\frac{s}{2}}\,\frac{dy}{y}.
+      \]
+      A short computation using \cref{thm:functional_equation_Jacobi_theta} shows that
+      \[
+        \w\left(\frac{i}{y}\right) = \sqrt{y}\w(iy)+\frac{\sqrt{y}}{2}-\frac{1}{2}.
+      \]
+      The previous integral may then be expressed as
+      \[
+        \int_{1}^{\infty}\left(\sqrt{y}\w(iy)+\frac{\sqrt{y}}{2}-\frac{1}{2}\right)y^{-\frac{s}{2}}\,\frac{dy}{y},
+      \]
+      which is further equivalent to
+      \[
+        \int_{1}^{\infty}\w(iy)y^{\frac{1-s}{2}}\,\frac{dy}{y}-\frac{1}{s(1-s)},
+      \]
+      upon integrating the lat two terms. Substituting this result back into \cref{equ:symmetric_integral_zeta_split} and combining with \cref{equ:integral_representation_zeta_1} yields the integral representation
+      \begin{equation}\label{equ:integral_representation_zeta_final}
+        \z(s) = \frac{\pi^{\frac{s}{2}}}{\G\left(\frac{s}{2}\right)}\left[-\frac{1}{s(1-s)}+\int_{1}^{\infty}\w(iy)y^{\frac{1-s}{2}}\,\frac{dy}{y}+\int_{1}^{\infty}\w(iy)y^{\frac{s}{2}}\,\frac{dy}{y}\right].
+      \end{equation}
+      This integral representation gives meromorphic continuation since the two symmetric integrals are locally absolutely uniformly convergent on \(\C\) via the exponential decay of the integrands and that they are bounded near \(1\). The fractional term is holomorphic except for simple poles at \(s = 0\) and \(s = 1\). The meromorphic continuation to \(\C\) follows with possible simple poles at \(s = 0\) and \(s = 1\). In fact, there is no pole at \(s = 0\) because \(\G\left(\frac{s}{2}\right)\) has a simple pole at \(s = 0\) and so its reciprocal has a simple zero. At \(s = 1\), \(\G\left(\frac{s}{2}\right)\) is nonzero and so \(\z(s)\) has a simple pole. Therefore \(\z(s)\) has meromorphic continuation to all of \(\C\) with a simple pole at \(s = 1\).
+
+      A convenient consequence of this integral representation is that the functional equation is almost immediate. Indeed, applying the symmetry \(s \mapsto 1-s\) to \cref{equ:integral_representation_zeta_final} gives the functional equation
+      \[
+        \frac{\G\left(\frac{s}{2}\right)}{\pi^{\frac{s}{2}}}\z(s) = \frac{\G\left(\frac{1-s}{2}\right)}{\pi^{\frac{1-s}{2}}}\z(1-s).
+      \]
+      We identify the gamma factor and completion are 
+      \[
+        \g(s,\z) = \pi^{-\frac{s}{2}}\G\left(\frac{s}{2}\right) \quad \text{and} \quad \L(s,\z) = \pi^{-\frac{s}{2}}\G\left(\frac{s}{2}\right)\z(s),
+      \]
+      respectively. In particular, the conductor is \(1\) so that no primes ramify, the root number is also \(1\), and \(\z(s)\) is self-dual.
+      
+      It is straightforward to see that the order of \((s-1)\z(s)\) is \(1\). Indeed, as the integrals in \cref{equ:integral_representation_zeta_final} are locally absolutely uniformly convergent, computing the order amounts to estimating the gamma factor. Since the reciprocal of the gamma function is of order \(1\), it follows that \((s-1)\z(s)\) is of order \(1\) as well.
+
+      We now compute the residue of \(\z(s)\) at \(s = 1\). First observe that the only term in \cref{equ:integral_representation_zeta_final} contributing to the pole is \(-\frac{\pi^{\frac{s}{2}}}{\G\left(\frac{s}{2}\right)}\frac{1}{s(1-s)}\). As this pole is simple, the residue is given by the limit as \(s \to 1\) after removing the polar divisor. Whence a short computation shows
+      \[
+        \Res_{s = 1}\z(s) = 1.
+      \]
+      We summarize all of our work into the following theorem:
+
+      \begin{theorem}\label{thm:zeta_Selberg}
+        \(\z(s)\) is a Selberg class \(L\)-function with Euler product
+        \[
+          \z(s) = \prod_{p}(1-p^{-s})^{-1}.
+        \]
+        Moreover, it admits meromorphic continuation to \(\C\) with a simple pole at \(s = 1\) of residue \(1\) and possesses the functional equation
+        \[
+          \frac{\G\left(\frac{s}{2}\right)}{\pi^{\frac{s}{2}}}\z(s) = \frac{\G\left(\frac{1-s}{2}\right)}{\pi^{\frac{1-s}{2}}}\z(1-s).
+        \]
+      \end{theorem}
+    \subsection{\todo{The Prime Number Theorem}}
+    \subsection{A Second Moment Estimate}
+      We will discuss the second moment of the Riemann zeta function. Of primary aim is to prove an infamous result of Hardy and Littlewood. Throughout, we will also illustrate where main obstructions appear in the proof and how inputting more refined analytic data will lead to improved asymptotics. Throughout, it will be useful to recall that
+      \begin{equation}\label{equ:approximation_for_harmonic_sums}
+        \sum_{n \ll N}\frac{1}{n} = \log(N)+O(1),
+      \end{equation}
+      for any \(N \ge 1\), which follows from the definition of the Euler-Mascheroni constant. The aforementioned result of Hardy and Littlewood is an asymptotic equivalence for \(M_{2}(T,\z)\). Actually, we prove something slightly stronger:
+
+      \begin{theorem}\label{thm:second_moment_of_Riemann_zeta_asymptotic_equivalence}
+        For \(T > 2\),
+        \[
+          M_{2}(T,\z) = T\log(T)+O\left(T\log^{\frac{3}{4}}(T)\right).
+        \]
+        In particular,
+        \[
+          M_{2}(T,\z) \sim T\log(T).
+        \]
+      \end{theorem}
+      \begin{proof}
+        Take \(s = \frac{1}{2}+it\), \(X = \sqrt{\frac{t}{\log(t)}}\) for \(t \ge 2\), and \(\Phi(u) = \cos^{-4M}\left(\frac{\pi u}{4M}\right)\) for some large positive integer \(M\) in the approximate functional equation. Then we may write
+        \begin{align*}
+          \z\left(\frac{1}{2}+it\right) &= \sum_{n \ge 1}\frac{n^{-it}}{n^{\frac{1}{2}}}V_{\frac{1}{2}+it}\left(n\sqrt{\frac{\log(t)}{t}},\z\right) \\
+          &+ \e\left(\frac{1}{2}+it,\z\right)\sum_{n \ge 1}\frac{n^{it}}{n^{\frac{1}{2}}}V_{\frac{1}{2}-it}\left(n\sqrt{\frac{t}{\log(t)}},\z\right)+\frac{R\left(\frac{1}{2}+it,\sqrt{\frac{t}{\log(t)}},\z\right)}{\g\left(\frac{1}{2}+it,\z\right)}.
+        \end{align*}
+        First observe \(\e\left(\frac{1}{2}+it,\z\right) \ll 1\) by \cref{equ:gamma_factor_analytic_conductor_estimate} while \cref{equ:vertical_strip_gamma_estimates,equ:choice_for_V_decay_estimate} together show that the residue term exhibits exponential decay. By our choice of \(\Phi(u)\), the estimates in \cref{prop:V_function_decay} are valid. Whence the summands are bounded for \(n \ll \frac{t}{\sqrt{\log(t)}}\) and \(n \ll \sqrt{\log(t)}\) respectively and then exhibit rapid decay thereafter. Altogether, this means
+        \[
+          \z\left(\frac{1}{2}+it\right) = \sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}+O\left(\sum_{n \ll \sqrt{\log(t)}}\frac{1}{\sqrt{n}}\right),
+        \]
+        The estimate
+        \[
+          \sum_{n \ll \sqrt{\log(t)}}\frac{1}{\sqrt{n}} = O\left(\log^{\frac{1}{4}}(t)\right),
+        \]
+        follows upon bounding the sum by its associated integral. Whence we arrive at
+        \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_1}
+          \z\left(\frac{1}{2}+it\right) = \sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}+O\left(\log^{\frac{1}{4}}(t)\right).
+        \end{equation}
+        Applying this estimate to the definition of \(M_{2}(T,\z)\) and recalling that \(\z\left(\frac{1}{2}+it\right)\) is absolutely bounded for \(0 \le t \le 2\), yields
+        \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_2}
+          \begin{aligned}
+            M_{2}(T,\z) &= \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt \\
+            &+ O\left(\int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|\log^{\frac{1}{4}}(t)\,dt\right)+O\left(\int_{2}^{T}\sqrt{\log(t)}\,dt\right).
+          \end{aligned}
+        \end{equation}
+        We will now estimate each term in the right-hand side. For the second term, the Cauchy-Schwarz inequality gives
+        \[
+          \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|\log^{\frac{1}{4}}(t)\,dt = \left(\int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt\right)^{\frac{1}{2}}\left(\int_{2}^{T}\sqrt{\log(t)}\,dt\right)^{\frac{1}{2}}.
+        \]
+        Observe that the second integral on the right-hand side is the error term of \cref{equ:second_moment_zeta_asymptotic_equivalence_2}. To estimate it, a short application of integration by parts yields
+        \[
+          \int_{2}^{T}\sqrt{\log(t)}\,dt = T\sqrt{\log(T)}+O(T).
+        \]
+        These estimates applied to \cref{equ:second_moment_zeta_asymptotic_equivalence_2} give
+        \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_3}
+          \begin{aligned}
+            M_{2}(T,\z) &= \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt \\
+            &+ O\left(\left(\int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt\right)^{\frac{1}{2}}\sqrt{T}\log^{\frac{1}{4}}(T)\right)+O\left(T\sqrt{\log(T)}\right).
+          \end{aligned}
+        \end{equation}
+        We now estimate the common integral appearing in the first and second terms. Since the integral converges absolutely, we may expand the sum and interchange it with the integral to obtain
+        \[
+          \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt = \sum_{n,m \ll \frac{T}{\sqrt{\log(T)}}}\int_{\max(2,t(n),t(m))}^{T}\frac{1}{n^{\frac{1}{2}+it}m^{\frac{1}{2}-it}}\,dt,
+        \]
+        where \(t(x) = \inf\left\{t \ge 2:\frac{t}{\sqrt{\log(t)}} \gg x\right\}\). Separating the terms for which \(n = m\) or not, the right-hand side becomes
+        \[
+          \sum_{n \ll \frac{T}{\sqrt{\log(T)}}}\frac{T-n}{n}+ \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n \neq m}}\frac{1}{\sqrt{nm}}\int_{\max(2,t(n),t(m))}^{T}\left(\frac{m}{n}\right)^{it}\,dt.
+        \]
+        Upon splitting the first sum into two sums and computing the remaining integral, we find that
+        \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_4}
+          \begin{aligned}
+            \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2}\,dt &= T\sum_{n \ll \frac{T}{\sqrt{\log(T)}}}\frac{1}{n}+O\left(\sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n \neq m}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)}\right) \\
+            &+ O\left(\frac{T}{\sqrt{\log(T)}}\right).
+          \end{aligned}
+        \end{equation}
+        We will now estimate the first two terms on the right-hand side. For the first term, an application of \cref{equ:approximation_for_harmonic_sums} gives
+        \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_5}
+          T\sum_{n \ll \frac{T}{\sqrt{\log(T)}}}\frac{1}{n} = T\log\left(\frac{T}{\sqrt{\log(T)}}\right)+O(T).
+        \end{equation}
+        For the second sum, separate the terms for which \(n < \frac{m}{2}\) or not so that
+        \[
+          \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n \neq m}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)} = \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n < \frac{m}{2}}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)}+\sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n \ge \frac{m}{2} \\ n \neq m}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)}.
+        \]
+        In the first piece on the right-hand side, we have \(\log\left(\frac{m}{n}\right) \ge \log\left(2\right)\) so that \(\log\left(\frac{m}{n}\right)\) is bounded from below. Hence
+        \[
+          \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n < \frac{m}{2}}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)} = O\left(\left(\sum_{n \ll \frac{T}{\sqrt{\log(T)}}}\frac{1}{\sqrt{n}}\right)^{2}\right).
+        \]
+        The estimate
+        \[
+          \sum_{n \ll \frac{T}{\sqrt{\log(T)}}}\frac{1}{\sqrt{n}} = O\left(\frac{\sqrt{T}}{\log^{\frac{1}{4}}(T)}\right),
+        \]
+        follows upon bounding the sum by its associated integral. Whence
+        \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_6}
+          \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n < \frac{m}{2}}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)} = O\left(\frac{T}{\sqrt{\log(T)}}\right).
+        \end{equation}
+        For the second piece, write \(n = m-r\) where \(1 \le r \le \frac{m}{2}\) so that \(\log\left(\frac{m}{n}\right) = -\log(1-\frac{r}{m})\). Using Taylor series of the logarithm, it follows that \(\log\left(\frac{m}{n}\right) \ge \frac{r}{m}\). Whence
+        \[
+          \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n \ge \frac{m}{2} \\ n \neq m}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)} = O\left(\sum_{m \ll \frac{T}{\sqrt{\log(T)}}}\sum_{r \le \frac{m}{2}}\frac{1}{r}\right).
+        \]
+        To estimate the double sum, use \cref{equ:approximation_for_harmonic_sums} and observe that
+        \[
+          \sum_{m \ll \frac{T}{\sqrt{\log(T)}}}\left(\log(m)+O(1)\right) = \frac{T}{\sqrt{\log(T)}}\log\left(\frac{T}{\sqrt{\log(T)}}\right)+O\left(\frac{T}{\sqrt{\log(T)}}\right).
+        \]
+        Thus
+        \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_7}
+          \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n \ge \frac{m}{2} \\ n \neq m}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)} = O\left(T\sqrt{\log(T)}\right).
+        \end{equation}
+        Combining \cref{equ:second_moment_zeta_asymptotic_equivalence_6,equ:second_moment_zeta_asymptotic_equivalence_7} yields
+        \begin{equation}\label{equ:second_moment_zeta_asymptotic_equivalence_8}
+          \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n \neq m}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)} = O\left(T\sqrt{\log(T)}\right).
+        \end{equation}
+        Then \cref{equ:second_moment_zeta_asymptotic_equivalence_5,equ:second_moment_zeta_asymptotic_equivalence_8} together with \cref{equ:second_moment_zeta_asymptotic_equivalence_4} yields
+        \[
+          \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2} = T\log(T)+O\left(T\sqrt{\log(T)}\right).
+        \]
+        Applying this estimate to \cref{equ:second_moment_zeta_asymptotic_equivalence_3}, we at last obtain
+        \[
+          M_{2}(T,\z) = T\log(T)+O\left(T\log^{\frac{3}{4}}(T)\right).
+        \]
+        which is the desired asymptotic formula. The asymptotic equivalence follows at once as it is a strictly weaker asymptotic.
+      \end{proof}
+      
+      A few comments about the proof of this second moment result. The error term in the asymptotic formula is not power saving as it is smaller by only a factor of \(\log^{\frac{1}{4}}(T)\) from the main term which is not much. In fact, much better error terms can be obtained using more refined analytic techniques. Nevertheless, as \(\log(T) \ll_{\e} T^{\e}\), the asymptotic equivalence implies that the necessary bound for the Riemann zeta function is satisfied for \cref{prop:equivalence_Lindelof_hypothesis_and_moments} in the case of the second moment.
+
+      The main analytic data being fed into \cref{thm:second_moment_of_Riemann_zeta_asymptotic_equivalence} is the approximate functional equation for the Riemann zeta function. The main contribution from the resulting asymptotic, namely \cref{equ:second_moment_zeta_asymptotic_equivalence_1}, in \(M_{2}(T,\z)\) is \(T\log(T)\) which comes from the diagonal contribution in
+      \[
+        \int_{2}^{T}\left|\sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}\right|^{2} = \int_{2}^{T}\sum_{n,m \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}m^{\frac{1}{2}-it}}\,dt,
+      \]
+      occurring when \(n = m\), and is given by
+      \[
+        T\sum_{n \ll \frac{T}{\sqrt{\log(T)}}}\frac{1}{n}.
+      \]
+      This is also the longest sum arising from \cref{equ:second_moment_zeta_asymptotic_equivalence_2} of highest order (due to the factor of \(T\)). It should also be noted that the contribution for those terms when \(n \neq m\) and \(n \ge \frac{m}{2}\) comes very close to the main term. This sum is
+      \[
+        \sum_{\substack{n,m \ll \frac{T}{\sqrt{\log(T)}} \\ n \ge \frac{m}{2} \\ n \neq m}}\frac{1}{\sqrt{nm}\log\left(\frac{m}{n}\right)},
+      \]
+      and it was estimated to be \(O\left(T\sqrt{\log(T)}\right)\). If the length of our sum in \cref{equ:second_moment_zeta_asymptotic_equivalence_1} was increased by a factor of \(\sqrt{\log(t)}\) from \(\frac{t}{\sqrt{\log(t)}}\) to \(t\), then this term would contribute \(O\left(T\log(T)\right)\) which would ruin both the asymptotic formula and asymptotic equivalence. In essence, this means that the choice of the length of our sum in the proof of \cref{thm:second_moment_of_Riemann_zeta_asymptotic_equivalence} is essentially optimal.
+\end{document}

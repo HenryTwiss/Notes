@@ -12,6 +12,7 @@
 \begin{document}
   \date{}
   \maketitle
+  \tableofcontents
   \section{Arithmetic of Number Fields}
   Throughout, all rings will be understood to be commutative and with unity.
   \subsection{Integrality}
@@ -2472,7 +2473,7 @@
       \]
       and \(X\) is closed, \(\l \in X\) as well. Thus we have found a nonzero \(\l \in \L \cap X\).
     \end{proof}
-  \section{Minkowski Space}
+  \subsection{Minkowski Space}
     Let \(K\) be number field of degree \(n\). If \(\s \in \Hom_{\Q}(K,\conj{\Q})\) then either \(\s\) is real or complex and in the latter case it is has a paired \(\Q\)-embedding \(\conj{\s}\) which is the complex conjugate of \(\s\). Accordingly, let \(r_{1}\) and \(2r_{2}\) be the number of real and complex \(\Q\)-embeddings of \(K\) into \(\conj{\Q}\) respectively. We call the pair \((r_{1},r_{2})\) the \textbf{signature}\index{signature} of \(K\) and it satisfies the relation
     \[
       n = r_{1}+2r_{2}.
@@ -2632,7 +2633,7 @@
         V_{\s_{K}(\mf{f})} = \frac{|\det(M(\k_{1},\ldots,\k_{n}))|}{2^{r_{2}}}.
       \]
     \end{proof}
-  \section{Finiteness of the Class Number}
+  \subsection{Finiteness of the Class Number}
     Recall that the class number of a Dedekind domain is a measure of how much the Dedekind domain fails to be a principal ideal domain and even need not be finite from \cref{rem:general_class_number_not_finite}. However, we will show that the class number \(h_{K}\) for a number field \(K\) is always finite and thus \(\mc{O}_{K}\) only has finite failure from being a principal ideal domain. In doing so, we will also show that every ideal class is represented by an integral ideal of bounded norm.
 
     \begin{theorem}\label{equ:finitness_of_class_number}
@@ -2797,7 +2798,7 @@
       h_{\smc{O}} = \frac{h_{K}}{|\mc{O}_{K}^{\ast}/\smc{O}^{\ast}|}\frac{|(\mc{O}_{K}/\mf{q}_{\smc{O}})^{\ast}|}{|(\smc{O}/\mf{q}_{\smc{O}})^{\ast}|},
     \]
     so \(h_{\smc{O}}\) is finite too. This identity also shows that the class number of an order of \(K\) is generally larger than the class number of \(K\).
-  \section{Dirichlet's Unit Theorem}
+  \subsection{Dirichlet's Unit Theorem}
     Let \(K\) be a number field of degree \(n\) and signature \((r_{1},r_{2})\). We define the \textbf{rank}\index{rank} \(r_{K}\) of \(K\) by
     \[
       r_{K} = r_{1}+r_{2}-1.

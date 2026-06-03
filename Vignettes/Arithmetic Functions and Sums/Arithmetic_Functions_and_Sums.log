@@ -3,8 +3,8 @@ entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Algebraic Number Fields/Algebraic_Number_Fields.tex"
-(/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Algebraic Number Fields/Algebraic_Number_Fields.tex
+**"/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Arithmetic Functions and Sums/Arithmetic_Functions_and_Sums.tex"
+(/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Arithmetic Functions and Sums/Arithmetic_Functions_and_Sums.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -585,12 +585,12 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@layerboxsaved@background=\box67
 )
 \@indexfile=\write4
-\openout4 = `Algebraic_Number_Fields.idx'.
+\openout4 = `Arithmetic_Functions_and_Sums.idx'.
 
 
-Writing index file Algebraic_Number_Fields.idx
-(./Algebraic_Number_Fields.aux)
-\openout1 = `Algebraic_Number_Fields.aux'.
+Writing index file Arithmetic_Functions_and_Sums.idx
+(./Arithmetic_Functions_and_Sums.aux)
+\openout1 = `Arithmetic_Functions_and_Sums.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -658,9 +658,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
 LaTeX Info: Redefining \nameref on input line 12.
- (./Algebraic_Number_Fields.out) (./Algebraic_Number_Fields.out)
+ (./Arithmetic_Functions_and_Sums.out) (./Arithmetic_Functions_and_Sums.out)
 \@outlinefile=\write5
-\openout5 = `Algebraic_Number_Fields.out'.
+\openout5 = `Arithmetic_Functions_and_Sums.out'.
 
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -688,49 +688,44 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./Algebraic_Number_Fields.toc)
+) (./Arithmetic_Functions_and_Sums.toc)
 \tf@toc=\write6
-\openout6 = `Algebraic_Number_Fields.toc'.
+\openout6 = `Arithmetic_Functions_and_Sums.toc'.
 
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 25.
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 29.
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 73.
- [3] [4]
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 129.
- [5] [6] [7] [8] [9] [10]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 387.
- [11] [12] [13] [14]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 509.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [15] [16] [17]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 638.
- [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43]
-Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 1543.
- [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83]
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 96.
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 100.
+ [3]
+Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 129.
+ [4]
+Package hyperref Info: bookmark level for unknown proposition* defaults to 0 on input line 169.
+ [5]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 205.
+ [6] [7] [8] [9] [10] [11] [12] [13]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 432.
+ [14] [15] [16] [17] [18]
 \tf@thm=\write7
-\openout7 = `Algebraic_Number_Fields.thm'.
+\openout7 = `Arithmetic_Functions_and_Sums.thm'.
 
- [84] (./Algebraic_Number_Fields.aux)
-Package rerunfilecheck Info: File `Algebraic_Number_Fields.out' has not changed.
-(rerunfilecheck)             Checksum: E625D20BBFA0857BBBF9C347D00726DC;2105.
+ [19] (./Arithmetic_Functions_and_Sums.aux)
+Package rerunfilecheck Info: File `Arithmetic_Functions_and_Sums.out' has not changed.
+(rerunfilecheck)             Checksum: 70C9FAF365ADBCCA94B3AFD3CBBD3B21;1720.
  ) 
 Here is how much of TeX's memory you used:
- 26940 strings out of 478268
- 541380 string characters out of 5846347
- 787039 words of memory out of 5000000
- 44438 multiletter control sequences out of 15000+600000
- 483430 words of font info for 81 fonts, out of 8000000 for 9000
+ 25395 strings out of 478268
+ 503105 string characters out of 5846347
+ 761208 words of memory out of 5000000
+ 43092 multiletter control sequences out of 15000+600000
+ 480994 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 105i,21n,107p,2082b,1108s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Algebraic_Number_Fields.pdf (84 pages, 565658 bytes).
+ 105i,17n,107p,1221b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Arithmetic_Functions_and_Sums.pdf (19 pages, 236257 bytes).
 PDF statistics:
- 1001 PDF objects out of 1200 (max. 8388607)
- 866 compressed objects within 9 object streams
- 289 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

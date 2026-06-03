@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 13:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 14:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -118,6 +118,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box52
 \enit@count@id=\count274
 \enitdp@description=\count275
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/xr-hyper.sty
+Package: xr-hyper 2022-02-21 v7.00n eXternal References (DPC)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
  (/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -284,8 +286,6 @@ Package cleveref Info: `ntheorem' support loaded on input line 3055.
 Package cleveref Info: always capitalise cross-reference names on input line 7825.
 Package cleveref Info: always capitalise cross-reference names on input line 7852.
 Package cleveref Info: no abbreviation of names on input line 7852.
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/xr.sty
-Package: xr 2020-05-10 v5.06 eXternal References (DPC)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks44
 \pgfutil@tempdima=\dimen167
@@ -697,11 +697,7 @@ Package hyperref Info: bookmark level for unknown proof defaults to 0 on input l
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 52.
  [2]
 Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on input line 121.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3] [4] [5]
+ [3] [4] [5]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 274.
  [6] [7] [8] [9] [10]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 465.
@@ -714,10 +710,10 @@ Package rerunfilecheck Info: File `The_Gamma_Function.out' has not changed.
 (rerunfilecheck)             Checksum: 4EE65995CF1EC5D997D575DEBDC7B971;406.
  ) 
 Here is how much of TeX's memory you used:
- 25559 strings out of 478268
- 508305 string characters out of 5846347
- 757239 words of memory out of 5000000
- 43305 multiletter control sequences out of 15000+600000
+ 25567 strings out of 478268
+ 508507 string characters out of 5846347
+ 757479 words of memory out of 5000000
+ 43314 multiletter control sequences out of 15000+600000
  479715 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,8n,107p,868b,1224s stack positions out of 10000i,1000n,20000p,200000b,200000s

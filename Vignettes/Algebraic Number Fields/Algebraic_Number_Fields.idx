@@ -1,9 +1,9 @@
 \indexentry{integral|hyperpage}{1}
 \indexentry{integral|hyperpage}{1}
-\indexentry{integral closure|hyperpage}{2}
-\indexentry{integrally closed|hyperpage}{2}
-\indexentry{normalization|hyperpage}{2}
-\indexentry{integrally closed domain|hyperpage}{2}
+\indexentry{integral closure|hyperpage}{3}
+\indexentry{integrally closed|hyperpage}{3}
+\indexentry{normalization|hyperpage}{3}
+\indexentry{integrally closed domain|hyperpage}{3}
 \indexentry{number field|hyperpage}{4}
 \indexentry{degree|hyperpage}{4}
 \indexentry{quadratic|hyperpage}{4}
@@ -13,32 +13,32 @@
 \indexentry{algebraic integer|hyperpage}{4}
 \indexentry{trace|hyperpage}{5}
 \indexentry{norm|hyperpage}{5}
-\indexentry{field trace|hyperpage}{5}
-\indexentry{field norm|hyperpage}{5}
-\indexentry{field trace|hyperpage}{5}
-\indexentry{field norm|hyperpage}{5}
-\indexentry{trace matrix|hyperpage}{7}
+\indexentry{field trace|hyperpage}{6}
+\indexentry{field norm|hyperpage}{6}
+\indexentry{field trace|hyperpage}{6}
+\indexentry{field norm|hyperpage}{6}
+\indexentry{trace matrix|hyperpage}{8}
 \indexentry{discriminant|hyperpage}{8}
 \indexentry{discriminant|hyperpage}{8}
 \indexentry{trace form|hyperpage}{9}
-\indexentry{embedding matrix|hyperpage}{9}
+\indexentry{embedding matrix|hyperpage}{10}
 \indexentry{integral basis|hyperpage}{11}
 \indexentry{monogenic|hyperpage}{14}
 \indexentry{field trace|hyperpage}{14}
 \indexentry{field norm|hyperpage}{14}
 \indexentry{field trace|hyperpage}{14}
 \indexentry{field norm|hyperpage}{14}
-\indexentry{trace form|hyperpage}{14}
-\indexentry{integral basis|hyperpage}{14}
-\indexentry{discriminant|hyperpage}{14}
-\indexentry{monogenic|hyperpage}{14}
+\indexentry{trace form|hyperpage}{15}
+\indexentry{integral basis|hyperpage}{15}
+\indexentry{discriminant|hyperpage}{15}
+\indexentry{monogenic|hyperpage}{15}
 \indexentry{integral ideal|hyperpage}{15}
 \indexentry{prime|hyperpage}{15}
 \indexentry{fractional ideal|hyperpage}{15}
 \indexentry{principal|hyperpage}{15}
 \indexentry{inverse|hyperpage}{15}
 \indexentry{invertible|hyperpage}{15}
-\indexentry{Dedekind domain|hyperpage}{15}
+\indexentry{Dedekind domain|hyperpage}{16}
 \indexentry{prime factorization|hyperpage}{19}
 \indexentry{prime factors|hyperpage}{19}
 \indexentry{divides|hyperpage}{19}
@@ -50,13 +50,13 @@
 \indexentry{ideal class|hyperpage}{20}
 \indexentry{class number|hyperpage}{20}
 \indexentry{unit group|hyperpage}{20}
-\indexentry{residue class field|hyperpage}{22}
+\indexentry{residue class field|hyperpage}{23}
 \indexentry{Dedekind extension|hyperpage}{24}
 \indexentry{above|hyperpage}{25}
 \indexentry{below|hyperpage}{25}
 \indexentry{contraction|hyperpage}{25}
-\indexentry{integral ideal|hyperpage}{25}
-\indexentry{prime|hyperpage}{25}
+\indexentry{integral ideal|hyperpage}{26}
+\indexentry{prime|hyperpage}{26}
 \indexentry{fractional ideal|hyperpage}{26}
 \indexentry{ideal class group|hyperpage}{26}
 \indexentry{class number|hyperpage}{26}
@@ -68,7 +68,7 @@
 \indexentry{localization|hyperpage}{27}
 \indexentry{localization|hyperpage}{27}
 \indexentry{localization|hyperpage}{27}
-\indexentry{localization|hyperpage}{27}
+\indexentry{localization|hyperpage}{28}
 \indexentry{local|hyperpage}{28}
 \indexentry{localization|hyperpage}{30}
 \indexentry{localization|hyperpage}{30}
