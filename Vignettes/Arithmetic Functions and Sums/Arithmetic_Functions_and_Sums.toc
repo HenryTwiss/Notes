@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {3.1}Dirichlet Characters}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Quadratic Dirichlet Characters}{10}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Exponential Sums}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}\leavevmode {\color {red}\sf Todo: [Exponenetial Sums]}}{13}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Gauss Sums}{13}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.1}Exponential Sums}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Gauss Sums}{14}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Quadratic Gauss Sums}{17}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Character Sums and the P\'olya-Vinogradov Inequality}{21}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Character Sums and the P\'olya-Vinogradov Inequality}{22}{subsection.4.4}%
