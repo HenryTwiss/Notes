@@ -218,7 +218,7 @@
       \begin{proposition*}[Dirichlet orthogonality relations]
       Let \(\chi\) and \(\psi\) be Dirichlet characters modulo \(m\) and let \(a,b \in (\Z/m\Z)^{\ast}\). Then
       \[
-        \sum_{a \tmod{m}}(\chi\conj{\psi})(a) = \vphi(m)\d_{\chi,\psi} \quad \text{and} \quad \sum_{\chi \tmod{m}}\chi(a\conj{b}) = \vphi(m)\d_{a,b}.
+        \sum_{a \tmod{m}}(\chi\conj{\psi})(a) = \vphi(m)\d_{\chi,\psi} \quad \text{and} \quad \sum_{\chi \tmod{m}}\chi(ab^{-1}) = \vphi(m)\d_{a,b}.
       \]
       In particular,
       \[
@@ -230,7 +230,7 @@
         \[
           (\chi\conj{\psi})(b)\sum_{a \tmod{m}}(\chi\conj{\psi})(a) = \sum_{a \tmod{m}}(\chi\conj{\psi})(a),
         \]
-        in which case the sum vanishes. This proves the first identity. For the second, if \(a = b\) then the second sum is clearly \(\vphi(m)\). If \(a \neq b\), we claim that there exists a Dirichlet character \(\psi\) modulo \(m\) with \(\psi(a\conj{b}) \neq 1\). Set \(g = a\conj{b}\). The cyclic subgroup \(\<g\>\) of \((\Z/m\Z)^{\ast}\) has some order \(d > 1\). Consider the homomorphism
+        in which case the sum vanishes. This proves the first identity. For the second, if \(a = b\) then the second sum is clearly \(\vphi(m)\). If \(a \neq b\), we claim that there exists a Dirichlet character \(\psi\) modulo \(m\) with \(\psi(ab^{-1}) \neq 1\). Set \(g = ab^{-1}\). The cyclic subgroup \(\<g\>\) of \((\Z/m\Z)^{\ast}\) has some order \(d > 1\). Consider the homomorphism
         \[
           \psi_{d}:\<g\> \to \C \qquad g^{k} \mapsto e\left(\frac{k}{d}\right).
         \]
@@ -240,7 +240,7 @@
         \]
         This \(\psi\) is the desired Dirichlet character, A short computation shows
         \[
-          \psi(a\conj{b})\sum_{\chi \tmod{m}}\chi(a\conj{b}) = \sum_{\chi \tmod{m}}\chi(a\conj{b}),
+          \psi(ab^{-1})\sum_{\chi \tmod{m}}\chi(ab^{-1}) = \sum_{\chi \tmod{m}}\chi(ab^{-1}),
         \]
         in which case the sum vanishes. This proves the second identity and the first statement in its entirety. The second statement follows from the first upon taking \(\psi = \chi_{m,0}\) and \(b = 1\) respectively.
       \end{proof}
