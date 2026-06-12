@@ -285,7 +285,7 @@
         \]
         where \(N(d)\) be the number of primitive Dirichlet characters modulo \(d\). In particular, \(N(m)\) is given by
         \[
-          N(m) = \sum_{d \mid m}\phi(d)\mu\left(\frac{m}{d}\right)
+          N(m) = \sum_{d \mid m}\phi(d)\mu\left(\frac{m}{d}\right).
         \]
       \end{proposition}
       \begin{proof}
@@ -372,7 +372,7 @@
       \[
         S_{f} = \sum_{a \in A}e(f(a)),
       \]
-      where \(A\) is a finite set of integers and \(f\) is a complex function defined on \(A\). In many instances, \(f\) is an arithmetic function so that \(A\) may be any finite set of positive integers. In any case, it is fruitful to view \(S_{f}\) as a geometric walk in \(\C\) where the \(a\)-th step is in the direction \(e(f(a))\). Taking absolute values, we always have the trivial bound
+      where \(A\) is a finite set of integers and \(f\) is a complex function on \(A\). In many instances, \(f\) is an arithmetic function so that \(A\) may be any finite set of positive integers. In any case, it is fruitful to view \(S_{f}\) as a geometric walk in \(\C\) where the \(a\)-th step is in the direction \(e(f(a))\). Taking absolute values, we always have the trivial bound
       \[
         S_{f} \le |A|.
       \]
@@ -382,7 +382,7 @@
       \]
       Obtaining such estimates is highly dependent upon the particular choices of \(f\) and \(A\). Often we will have \(A\) depend upon various parameters and will want to obtain some type of cancellation in one or more of these parameters.
       
-      A particular type of exponential sum, where we expect close to square-root cancellation, are those of complete exponential sums. To define them, fix a integer \(m\) and let \(f\) be a complex function defined on \((\Z/m\Z)\) or \((\Z/m\Z)^{\ast}\). Then the corresponding exponential sum
+      A particular type of exponential sum, where we expect close to square-root cancellation, are those of complete exponential sums. To define them, fix a integer \(m\) and let \(f\) be a complex function on \((\Z/m\Z)\) or \((\Z/m\Z)^{\ast}\). Then the corresponding exponential sum
       \[
         S_{f,m} = \sum_{a \tmod{m}}e(f(a)) \quad \text{or} \quad S_{f,m} = \sum_{\substack{a \tmod{m} \\ (a,m) = 1}}e(f(a)),
       \]
@@ -419,7 +419,7 @@
       \begin{proof}
         The identity is obvious if \(m = 1\) since the Ramanujan sum is \(1\). So assume \(m > 1\). Every \(a\) modulo \(m\) is of the form \(a = a'd\) for some divisor \(d\) of \(m\) and \(a'\) modulo \(\frac{m}{d}\) with \(\left(a',\frac{m}{d}\right) = 1\). So summing \(r(b,d)\) over the divisors \(d\) of \(m\) gives
         \[
-          \sum_{d \mid m}r(b,d) = \sum_{a \tmod{m}}e\left(\frac{ab}{m}\right),
+          \sum_{d \mid m}r(b,d) = \sum_{a \tmod{m}}e\left(\frac{ab}{m}\right).
         \]
         If \(m \mid b\) the latter sum is \(m\) while if \(m \nmid b\) the sum vanishes as it is the sum of all \(m\)-th roots of unity. Thus
         \[
@@ -448,7 +448,7 @@
         \begin{enumerate}[label*=(\roman*)]
           \item This follows by direct computation.
           \item This follows by direct computation.
-          \item Let \(c\) be an integer with \((c,m) = 1\) and satisfying \(\chi(c) \neq 1\). Such a \(c\) exists because otherwise \(\chi\) the principal Dirichlet character modulo \(m\) and thus imprimitive. A short computation shows
+          \item We may assume \(m > 1\) otherwise the statement is vacuously true. Now let \(c\) be an integer with \((c,m) = 1\) and satisfying \(\chi(c) \neq 1\). Such a \(c\) exists because otherwise \(\chi\) is the principal Dirichlet character modulo \(m\) and thus imprimitive. A short computation shows
           \[
             \chi(c)\tau(b,\chi) = \tau(b,\chi),
           \]

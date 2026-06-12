@@ -1,14 +1,6 @@
-\contentsline {section}{\numberline {1}Congruence Subgroups}{1}{section.1}%
+\contentsline {section}{\numberline {1}Congruence Subgroups and Modular Curves}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Congruence Subgroups}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Modular Curves and Fundamental Domains}{5}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Cusps}{10}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}The Hyperbolic Measure}{14}{subsection.1.4}%
-\contentsline {section}{\numberline {2}The Theory of Modular Forms}{15}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Modular Forms}{15}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Poincar\'e and Eisenstein Series}{20}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Inner Product Spaces of Modular Forms}{27}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Double Coset Operators}{37}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Diamond and Hecke Operators}{39}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Atkin-Lehner Theory}{53}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}The Ramanujan-Petersson Conjecture}{61}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Twists of Modular Forms}{62}{subsection.2.8}%
+\contentsline {subsection}{\numberline {1.4}Geometric Exponential Sums}{13}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}The Hyperbolic Measure}{14}{subsection.1.5}%

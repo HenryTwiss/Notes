@@ -5,63 +5,17 @@
 \indexentry{Hecke congruence subgroup|hyperpage}{3}
 \indexentry{Fuchsian group|hyperpage}{5}
 \indexentry{modular curve|hyperpage}{6}
-\indexentry{standard fundamental domain|hyperpage}{6}
+\indexentry{standard fundamental domain|hyperpage}{7}
 \indexentry{cusp class|hyperpage}{10}
 \indexentry{cusp|hyperpage}{10}
 \indexentry{scaling matrix|hyperpage}{10}
 \indexentry{width|hyperpage}{10}
 \indexentry{reduced|hyperpage}{11}
-\indexentry{Bruhat decomposition|hyperpage}{11}
-\indexentry{generalized Kloosterman sum|hyperpage}{13}
-\indexentry{generalized Sali\'e sum|hyperpage}{13}
+\indexentry{Bruhat decomposition|hyperpage}{12}
+\indexentry{Kloosterman sum|hyperpage}{13}
+\indexentry{Sali\'e sum|hyperpage}{13}
 \indexentry{hyperbolic measure|hyperpage}{14}
 \indexentry{volume|hyperpage}{14}
-\indexentry{cocycle condition|hyperpage}{16}
-\indexentry{slash operator|hyperpage}{16}
-\indexentry{invariant|hyperpage}{16}
-\indexentry{modular form|hyperpage}{16}
-\indexentry{weight|hyperpage}{16}
-\indexentry{level|hyperpage}{16}
-\indexentry{nebentypus|hyperpage}{16}
-\indexentry{cusp form|hyperpage}{17}
-\indexentry{modularity condition|hyperpage}{17}
-\indexentry{modular|hyperpage}{17}
-\indexentry{singular|hyperpage}{17}
-\indexentry{growth condition|hyperpage}{17}
-\indexentry{holomorphic at the cusps|hyperpage}{17}
-\indexentry{Fourier series|hyperpage}{18}
-\indexentry{Fourier coefficients|hyperpage}{18}
-\indexentry{Hecke bound|hyperpage}{19}
-\indexentry{exponential decay at the cusps|hyperpage}{19}
-\indexentry{character|hyperpage}{19}
-\indexentry{Poincar\'e series|hyperpage}{20}
-\indexentry{index|hyperpage}{20}
-\indexentry{Eisenstein series|hyperpage}{22}
-\indexentry{Petersson inner product|hyperpage}{28}
-\indexentry{valence formula|hyperpage}{29}
-\indexentry{double slash operator|hyperpage}{37}
-\indexentry{double coset operator|hyperpage}{38}
-\indexentry{diamond operator|hyperpage}{39}
-\indexentry{Hecke operator|hyperpage}{40}
-\indexentry{diamond operator|hyperpage}{46}
-\indexentry{Hecke operator|hyperpage}{47}
-\indexentry{Hecke eigenvalues|hyperpage}{51}
-\indexentry{eigenform|hyperpage}{51}
-\indexentry{Hecke eigenform|hyperpage}{51}
-\indexentry{Hecke normalization|hyperpage}{51}
-\indexentry{Petersson normalization|hyperpage}{51}
-\indexentry{Hecke relations|hyperpage}{52}
-\indexentry{oldforms|hyperpage}{54}
-\indexentry{newforms|hyperpage}{54}
-\indexentry{oldform|hyperpage}{54}
-\indexentry{newform|hyperpage}{54}
-\indexentry{Atkin-Lehner operator|hyperpage}{54}
-\indexentry{primitive Hecke eigenform|hyperpage}{58}
-\indexentry{multiplicity one|hyperpage}{59}
-\indexentry{conjugate|hyperpage}{59}
-\indexentry{modular discriminant|hyperpage}{61}
-\indexentry{Ramanujan's \(\tau\) function|hyperpage}{61}
-\indexentry{Hecke polynomial|hyperpage}{61}
-\indexentry{Hecke roots|hyperpage}{61}
-\indexentry{Ramanujan-Petersson conjecture|hyperpage}{61}
-\indexentry{twist|hyperpage}{62}
+\indexentry{unfolding/folding method|hyperpage}{15}
+\indexentry{unfolding|hyperpage}{15}
+\indexentry{folding|hyperpage}{15}
