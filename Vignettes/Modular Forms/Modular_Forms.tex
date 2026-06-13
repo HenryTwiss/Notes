@@ -14,7 +14,7 @@
   \maketitle
   \tableofcontents
   \section{Congruence Subgroups and Modular Curves}
-    Throughout, \(z = x+iy\) will stand for a complex variable with \(x\) and \(y\) real. Accordingly, we set
+    For any complex \(z\) let
     \[
       e(z) = e^{2\pi iz}.
     \]
@@ -518,80 +518,68 @@
         The result follows as \(\H = \bigcup_{\g \in \G}\g\mc{F}\). Moreover, we can argue in reverse provided the right-hand side converges absolutely. This completes the proof.
       \end{proof}
 
-      The process of transforming the left-hand side into the right-hand side is called \textbf{unfolding}\index{unfolding} while transforming the right-hand into the left-hand side is called \textbf{folding}\index{folding}.     
-  \iffalse\section{The Theory of Modular Forms}
-    All sums and products over a quotient group will be consider to be over a complete set of representatives and we identify cosets with corresponding representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\). Also, for any complex \(z\) we set
+      The process of transforming the left-hand side into the right-hand side is called \textbf{unfolding}\index{unfolding} while transforming the right-hand into the left-hand side is called \textbf{folding}\index{folding}.
+  \section{Modular Forms}
+    For any complex \(z\) let
     \[
       e(z) = e^{2\pi iz}.
     \]
-    \subsection{\todo{Modular Forms}}
-      Define \(j(\a,z)\) by
+    Also, we will distinguish the primitive third root of unity \(\w = e^{\frac{2\pi i}{3}}\). All sums and products over a quotient group will be consider to be over a complete set of representatives and we identify cosets with corresponding representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\).
+    \subsection{Modularity}
+      For all all \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\) and \(z \in \H\), define \(j(\a,z)\) by
       \[
-        j(\a,z) = (cz+d),
+        j(\a,z) = (cz+d).
       \]
-      for all \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\) and \(z \in \H\). With this notation, \cref{equ:Mobius_transformation_imaginary_part} becomes
+      With this notation, \cref{equ:Mobius_transformation_imaginary_part} becomes
       \begin{equation}\label{equ:Mobius_transformation_imaginary_part_j}
-        \Im(\a z) = \det(\a)\frac{\Im(z)}{|j(\a,z)|^{2}}
+        \Im(\a z) = \det(\a)\frac{\Im(z)}{|j(\a,z)|^{2}}.
       \end{equation}
       There is a very useful property that \(j(\a,z)\) satisfies. To state it, let \(\a' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\). Then
       \[
-        \a\a' = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} a' & b' \\ c' & d' \end{pmatrix} = \begin{pmatrix} a'a+b'c & a'b+b'b \\ c'a+d'c & c'b+d'd \end{pmatrix},
+        \a\a' = \begin{pmatrix} a'a+b'c & a'b+b'b \\ c'a+d'c & c'b+d'd \end{pmatrix},
       \]
-      and we have
-      \begin{align*}
-        j(\a',\a z)j(\a,z) &= \left(c'\frac{az+b}{cz+d}+d'\right)(cz+d) \\
-        &= (c'(az+b)+d'(cz+d)) \\
-        &= (c'a+d'c)z+c'b+d'd) \\
-        &= j(\a'\a,z).
-      \end{align*}
-      The relation
+      and from this identity, a short computation shows
       \[
-        j(\a'\a,z) =  j(\a',\a z)j(\a,z),
+        j(\a'\a,z) =  j(\a',\a z)j(\a,z).
       \]
-      is called the \textbf{cocycle condition}\index{cocycle condition} for \(j(\a,z)\). For any integer \(k \ge 1\) and any \(\a \in \GL_{2}^{+}(\Q)\) we define the \textbf{slash operator}\index{slash operator} \(|_{k}\a:C(\H) \to C(\H)\) to be the linear operator given by
+      This identity is called the \textbf{cocycle condition}\index{cocycle condition} for \(j(\a,z)\). For any positive integer \(k\) and \(\a \in \GL_{2}^{+}(\Q)\), we define the \textbf{slash operator}\index{slash operator} \(|_{k}\a:C(\H) \to C(\H)\) to be the linear operator given by
       \[
         (f|_{k}\a)(z) = \det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z).
       \]
-      Note that for \(\g \in \SL_{2}(\Z)\), the slash operator takes the simpler form
+      In the case of \(\g \in \SL_{2}(\Z)\), the slash operator takes the simplified form
       \[
         (f|_{k}\g)(z) = j(\g,z)^{-k}f(\g z).
       \]
-      The cocycle condition implies that the slash operator is multiplicative. Indeed, if \(\a,\a' \in \GL_{2}^{+}(\Q)\) then
-      \begin{align*}
-        ((f|_{k}\a')|_{k}\a)(z) &= \det(\a)^{\frac{k}{2}}j(\a,z)^{-k}(f|_{k}\a')(\a z) \\
-        &= \det(\a'\a)^{\frac{k}{2}}j(\a',\a z)^{-k}j(\a,z)^{-k}f(\a'\a z) \\
-        &= \det(\a'\a)^{\frac{k}{2}}j(\a'\a,z)^{-k}f(\a'\a z) && \text{cocycle condition} \\
-        &= (f|_{k}\a'\a)(z).
-      \end{align*}
-      The slash operator also respects multiplication. Let \(f,g \in C(\H)\) and \(k,\ell \ge 1\). Then for any \(\a \in \GL_{2}^{+}(\Q)\), we have
-      \begin{align*}
-        ((fg)|_{k+\ell}\a)(z) &= \det(\a)^{\frac{k+\ell}{2}}j(\a,z)^{-(k+\ell)}(fg)(\a z) \\
-        &= \left(\det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z)\right)\left(\det(\a)^{\frac{\ell}{2}}j(\a,z)^{-\ell}g(\a z)\right) \\
-        &= ((f|_{k}\a)(z))((g|_{\ell}\a)(z)).
-      \end{align*}
-      If an operator commutes with the slash operators \(|_{k}\a\) for every \(\a \in \SL_{2}(\Q)\), we say that it is \textbf{invariant}\index{invariant}. Now let \(\G\) be a congruence subgroup of level \(N\) and let \(\nu:\G \to S^{1}\) be a finite order homomorphism such that \(\nu(\g_{\infty}) = 1\). We will now introduce modular forms. We say that a function \(f:\H \to \C\) is \textbf{modular form}\index{modular form} on \(\GH\) of \textbf{weight}\index{weight} \(k\), \textbf{level}\index{level} \(N\), and \textbf{nebentypus}\index{nebentypus} \(\nu\) if the following properties are satisfied:
+      In any case, the cocycle condition implies that the slash operator is multiplicative as short computations show
+      \[
+        (f|_{k}\a'\a)(z) = ((f|_{k}\a')|_{k}\a)(z) \quad \text{and} \quad ((fg)|_{k+\ell}\a)(z) = (f|_{k}\a)(z)(g|_{\ell}\a)(z),
+      \]
+      for \(f,g \in C(\H)\), positive integers \(k\) and \(\ell\), and any \(\a,\a' \in \GL_{2}^{+}(\Q)\). For fixed \(k\), an operator on \(C(\H)\) is said to be \textbf{invariant}\index{invariant} if it commutes with the slash operators \(|_{k}\a\) for every \(\a \in \SL_{2}(\Q)\).
+      
+      We can now introduce modular forms. Let \(\G\) be a congruence subgroup of level \(N\) and \(\nu:\G \to \C^{\ast}\) be a finite order homomorphism such that \(\nu(\g_{\infty}) = 1\). We say that a function \(f:\H \to \C\) is \textbf{modular form}\index{modular form} on \(\GH\) of \textbf{weight}\index{weight} \(k\), \textbf{level}\index{level} \(N\), and \textbf{nebentypus}\index{nebentypus} \(\nu\) if the following properties are satisfied:
       \begin{enumerate}[label*=(\roman*)]
         \item \(f\) is holomorphic on \(\H\).
         \item \((f|_{k}\g)(z) = \nu(\g)f(z)\) for all \(\g \in \G\).
-        \item \((f|_{k}\g)(z) = O(1)\) for all \(\g \in \SL_{2}(\Z)\) (or equivalently \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\)).
+        \item \((f|_{k}\g)(z) = O(1)\) for all \(\g \in \SL_{2}(\Z)\), or equivalently, \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\).
       \end{enumerate}
-      We say \(f\) is a (modular) \textbf{cusp form}\index{cusp form} if the additional property is satisfied:
+      Furthermore, we say \(f\) is a \textbf{cusp form}\index{cusp form} if the additional property is satisfied:
       \begin{enumerate}[label*=(\roman*)]
         \setcounter{enumi}{3}
-        \item For all cusps \(\mf{a}\) and any \(y > 0\), we have
+        \item For all cusps \(\mf{a}\) and positive \(y\), we have
         \[
           \int_{0}^{h_{\mf{a}}}(f|_{k}\s_{\mf{a}})(x+iy)\,dx = 0.
         \]
       \end{enumerate}
-      Property (ii) is called the \textbf{modularity condition}\index{modularity condition} and we say \(f\) is \textbf{modular}\index{modular}. In particular, \(f\) is a function on \(\mc{F}_{\G}\). The modularity condition can equivalently be expressed as
+      Property (ii) is called the \textbf{modularity condition}\index{modularity condition} and we say \(f\) is \textbf{modular}\index{modular}. The modularity condition can equivalently be expressed as
       \[
         f(\g z) = \nu(\g)j(\g,z)^{k}f(z).
       \]
-      Moreover, we say that the nebentypus \(\nu\) is \textbf{singular}\index{singular} at a cusp \(\mf{a}\) if \(\nu(\g_{\mf{a}}) = 1\). Equivalently, \(\nu(\g) = 1\) for every \(\g \in \G_{\mf{a}}\). Necessarily, a nebentypus must be singular at \(\infty\). Property (iii) is called the \textbf{growth condition}\index{growth condition} for modular forms and we say \(f\) is \textbf{holomorphic at the cusps}\index{holomorphic at the cusps}. By modularity, it suffices to verify the growth condition on a complete set scaling matrices for the cusp classes. Therefore we only have to check this condition for finitely many matrices since the number of cusp classes is finite. To see the equivalence in the growth condition, we will require a lemma.
+      Moreover, we say that the nebentypus \(\nu\) is \textbf{singular}\index{singular} at a cusp \(\mf{a}\) if \(\nu(\g_{\mf{a}}) = 1\). Equivalently, \(\nu(\g) = 1\) for every \(\g \in \G_{\mf{a}}\). Necessarily, a nebentypus must be singular at \(\infty\). Property (iii) is called the \textbf{growth condition}\index{growth condition} and we say \(f\) is \textbf{holomorphic at the cusps}\index{holomorphic at the cusps}. By modularity, it suffices to verify the growth condition on a complete set scaling matrices for the cusp classes. Therefore we only have to check this condition for finitely many matrices since the number of cusp classes is finite. To see the equivalence in the growth condition, we require the following lemma:
 
       \begin{lemma}
         Every \(\a \in \GL_{2}^{+}(\Q)\) can be written as \(\a = \g\eta\) for some \(\g \in \SL_{2}(\Z)\) and \(\eta \in \GL_{2}^{+}(\Q)\) with \(\eta = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix}\).
       \end{lemma}
+      \iffalse
       \begin{proof}
         Let \(r \ge 1\) be such that \(r\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Z)\). If \(c = 0\) then \(a \neq 0\) (otherwise \(\a\) is not invertible) and so \((a,c) \ge 1\). Set \(a' = \frac{a}{(a,c)}\) and \(c' = \frac{c}{(a,c)}\) so that \(a',c' \in \Z\) with \((a',c') = 1\). Then there exists \(\g \in \SL_{2}(\Z)\) with \(\g^{-1} = \begin{psmallmatrix} \ast & \ast \\ -c' & a' \end{psmallmatrix}\). Moreover, \(\g^{-1}r\a = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix} \in \GL_{2}^{+}(\Z)\). The claim is complete upon setting \(\eta = \g^{-1}\a\).
       \end{proof}
@@ -664,7 +652,7 @@
         Note that the Hecke bound only holds for the Fourier coefficients of cusp forms. In fact, as we will see it is not even an optimal bound.
       \end{remark}
 
-      Many of the modular forms we will study will be over the congruence subgroups \(\G(N)\), \(\G_{1}(N)\), and \(\G_{0}(N)\). To collect all of these cases, we will let \(\G\) be any of these congruence subgroups. There are a few important simplifications when working with \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) because \(ad-bc = 1\) and moreover \((d,N) = 1\). Thus \((d,q) = 1\) and we can define a function \(\nu_{\chi}:\G \to S^{1}\) by
+      Many of the modular forms we will study will be over the congruence subgroups \(\G(N)\), \(\G_{1}(N)\), and \(\G_{0}(N)\). To collect all of these cases, we will let \(\G\) be any of these congruence subgroups. There are a few important simplifications when working with \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) because \(ad-bc = 1\) and moreover \((d,N) = 1\). Thus \((d,q) = 1\) and we can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
       \[
         \nu_{\chi}(\g) = \chi(d).
       \]

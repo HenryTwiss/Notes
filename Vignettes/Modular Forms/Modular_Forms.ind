@@ -4,9 +4,11 @@
 
   \indexspace
 
+  \item cocycle condition, \hyperpage{16}
   \item congruence subgroup, \hyperpage{2}
   \item cusp, \hyperpage{10}
   \item cusp class, \hyperpage{10}
+  \item cusp form, \hyperpage{16}
 
   \indexspace
 
@@ -15,8 +17,17 @@
 
   \indexspace
 
+  \item growth condition, \hyperpage{17}
+
+  \indexspace
+
   \item Hecke congruence subgroup, \hyperpage{3}
+  \item holomorphic at the cusps, \hyperpage{17}
   \item hyperbolic measure, \hyperpage{14}
+
+  \indexspace
+
+  \item invariant, \hyperpage{16}
 
   \indexspace
 
@@ -24,12 +35,19 @@
 
   \indexspace
 
-  \item level, \hyperpage{2}
+  \item level, \hyperpage{2}, \hyperpage{16}
 
   \indexspace
 
+  \item modular, \hyperpage{17}
   \item modular curve, \hyperpage{6}
+  \item modular form, \hyperpage{16}
   \item modular group, \hyperpage{1}
+  \item modularity condition, \hyperpage{17}
+
+  \indexspace
+
+  \item nebentypus, \hyperpage{16}
 
   \indexspace
 
@@ -43,6 +61,8 @@
 
   \item Sali\'e sum, \hyperpage{13}
   \item scaling matrix, \hyperpage{10}
+  \item singular, \hyperpage{17}
+  \item slash operator, \hyperpage{16}
   \item standard fundamental domain, \hyperpage{7}
 
   \indexspace
@@ -56,6 +76,7 @@
 
   \indexspace
 
+  \item weight, \hyperpage{16}
   \item width, \hyperpage{10}
 
 \end{theindex}
