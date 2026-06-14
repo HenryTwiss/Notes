@@ -18,7 +18,7 @@
     \[
       e(z) = e^{2\pi iz}.
     \]
-    Also, we will distinguish the primitive third root of unity \(\w = e^{\frac{2\pi i}{3}}\). All sums and products over a quotient group will be consider to be over a complete set of representatives and we identify cosets with corresponding representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\).
+    Also, we will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). All sums and products over a quotient group will be consider to be over a complete set of representatives and we identify cosets with corresponding representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\).
     \subsection{Congruence Subgroups}
       To define congruence subgroups, we first need to introduce an associated group. We call \(\SL_{2}(\Z)\) the \textbf{modular group}\index{modular group} which is the group of matrices with integer entries and of determinant \(1\). We will distinguish two matrices
       \[
@@ -100,7 +100,7 @@
         Let \(\G\) be a congruence subgroup and \(\a \in \GL_{2}^{+}(\Q)\). Then \(\a^{-1}\G\a \cap \SL_{2}(\Z)\) is a congruence subgroup. In particular, if \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\) then \(\a^{-1}\G\a\) is a congruence subgroup.
       \end{lemma}
       \begin{proof}
-        Let the level of \(\G\) be \(N\) and choose a positive integer \(d\) such that \(d\a,d\a^{-1} \in \GL_{2}^{+}(\Z)\). Let \(M = d^{2}N\) and notice that any \(\g \in \G(M)\) is of the form
+        Let the level of \(\G\) be \(N\) and choose a positive integer \(r\) such that \(r\a,r\a^{-1} \in \GL_{2}^{+}(\Z)\). Let \(M = r^{2}N\) and notice that any \(\g \in \G(M)\) is of the form
         \[
           \g = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}+M\begin{pmatrix} k_{1} & k_{2} \\ k_{3} & k_{4} \end{pmatrix},
         \]
@@ -111,7 +111,9 @@
         As \(\G(N) = (I+N\Mat_{2}(\Z)) \cap \SL_{2}(\Z)\), it follows that \(\a\G(M)\a^{-1} \subseteq \G(N)\). Whence \(\G(M) \subseteq \a^{-1}\G\a\) because \(\G\) is of level \(N\). Intersecting with \(\SL_{2}(\Z)\) proves the first statement. The second statement is immediate.
       \end{proof}
 
-      Since congruence subgroups are preserved under intersection, this lemma further implies that \(\a^{-1}\G_{1}\a \cap \G_{2}\) is a congruence subgroup for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\). In this setting, consider the double coset
+      Note that in the case \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\), normality of principal congruence subgroups force \(\G\) and \(\a^{-1}\G\a\) to be of the same level. In particular, this will always happen whenever we conjugate by elements of the modular group.
+      
+      Also, since congruence subgroups are preserved under intersection, the previous lemma further implies that \(\a^{-1}\G_{1}\a \cap \G_{2}\) is a congruence subgroup for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\). In this setting, consider the double coset
       \[
         \G_{1}\a\G_{2} = \{\g_{1}\a\g_{2}:\g_{1} \in \G_{1} \text{ and } \g_{2} \in \G_{2}\}.
       \]
@@ -159,11 +161,11 @@
       \begin{equation}\label{equ:Mobius_transformation_imaginary_part}
         \Im(\a z) = \det(\a)\frac{\Im(z)}{|cz+d|^{2}},
       \end{equation}
-      Therefore \(\a\) preserves the sign of the imaginary part of \(z\) and therefore preserves the upper half-plane \(\H\), the lower half-plane \(\conj{\H}\), and the extended real line \(\hat{\R}\). This means \(\a\) restricts to an automorphism on these subspaces. In particular, \(\SL_{2}(\R)\) acts on \(\hat{\C}\) by M\"obius transformations and preserves \(\H\), \(\conj{\H}\), and \(\hat{\R}\). If \(\a \in \SL_{2}(\R)\) then we have the simplified relation
+      Therefore \(\a\) preserves the sign of the imaginary part of \(z\) and therefore preserves the upper half-plane \(\H\), the lower half-plane \(\conj{\H}\), and the extended real line \(\hat{\R}\). Whence \(\GL_{2}^{+}(\R)\) acts by automorphisms on these subspaces respectively. In the case of \(\GL_{2}^{+}(\Q)\), we also have a restricted action on \(\hat{\Q}\) by automorphisms since the entries of these matrices are rational. Moreover, if \(\a \in \SL_{2}(\R)\) then we have the simplified relation
       \begin{equation}\label{equ:Mobius_transformation_imaginary_part_simplified}
         \Im(\a z) = \frac{\Im(z)}{|cz+d|^{2}}.
       \end{equation}
-      An important restriction of this action is to the modular group \(\SL_{2}(\Z)\). Again, these matrices act on \(\hat{\C}\) by M\"obius transformations and preserves the aforementioned subspaces \(\H\), \(\conj{\H}\), and \(\hat{\R}\). Since the entries of any such matrix are integers, the action also preserves the extended rationals \(\hat{\Q}\).
+      An important restriction of this action is to the modular group \(\SL_{2}(\Z)\). Again, these matrices act on \(\hat{\C}\) by M\"obius transformations and preserves the aforementioned subspaces \(\H\), \(\conj{\H}\), \(\hat{\R}\), and \(\hat{\Q}\) respectively.
       
       We will primarily be interested in certain actions of subgroups of \(\SL_{2}(\R)\) on \(\H\). A \textbf{Fuchsian group}\index{Fuchsian group} is any discrete subgroup of \(\SL_{2}(\R)\) that acts properly discontinuously on \(\H\). The modular group is a prime example of a Fuchsian group.
 
@@ -436,7 +438,7 @@
     \subsection{Geometric Exponential Sums}
       We will now introduce two type of exponential sum associated to pairs of cusps. These are types of Kloosterman and Sali\'e sums. We being with the Kloosterman sums. For any \(c \in \mc{C}_{\mf{a},\mf{b}}\) and integers \(m\) and \(n\), the \textbf{Kloosterman sum}\index{Kloosterman sum} \(K_{\mf{a},\mf{b}}(m,n,c)\) relative to \(\mf{a}\) and \(\mf{b}\) is defined by
       \[
-        K_{\mf{a},\mf{b}}(m,n,c) = \sum_{\substack{d \in \mc{D}_{\mf{a},\mf{b}}(c) \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}e^{2\pi i\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}\right)}.
+        K_{\mf{a},\mf{b}}(m,n,c) = \sum_{\substack{d \in \mc{D}_{\mf{a},\mf{b}}(c) \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}e\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}\right).
       \]
       This sum is well-defined since \(a\) and \(d\) are determined modulo \(ch_{\mf{a}}\) and \(ch_{\mf{b}}\) respectively by the Bruhat decomposition. If \(m = n = 0\) then
       \[
@@ -444,7 +446,7 @@
       \]
       The Sali\'e sums are defined in a similar manner. For any \(c \in \mc{C}_{\mf{a},\mf{b}}\), integers \(m\) and \(n\), and Dirichlet character \(\chi\) of conductor \(q \mid c\), the \textbf{Sali\'e sum}\index{Sali\'e sum} \(S_{\chi,\mf{a},\mf{b}}(m,n,c)\) relative to \(\mf{a}\) and \(\mf{b}\) is defined by
       \[
-        S_{\chi,\mf{a},\mf{b}}(m,n,c) = \sum_{\substack{d \in \mc{D}_{\mf{a},\mf{b}}(c) \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\chi(d)e^{2\pi i\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}\right)}.
+        S_{\chi,\mf{a},\mf{b}}(m,n,c) = \sum_{\substack{d \in \mc{D}_{\mf{a},\mf{b}}(c) \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\chi(d)e\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}\right).
       \]
       Similar as before, this sum is well-defined since \(a\) and \(d\) are determined modulo \(ch_{\mf{a}}\) and \(ch_{\mf{b}}\) respectively by the Bruhat decomposition and that the conductor of \(\chi\) divides \(c\). The usual Kloosterman and Sali\'e sums can be obtained from those relative to cusps. Indeed, consider the case where \(\G = \SL_{2}(\Z)\) and \(\mf{a} = \mf{b} = \infty\). The Bruhat decomposition for \(\SL_{2}(\Z)\) shows that the entires \(a\) and \(d\) in \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix}\) are determined modulo \(c\) and so we may take \(d = a^{-1}\) because \(\det(\w_{c/d}) = 1\). Also, \(\mc{C}_{\infty,\infty} = \Z_{+}\) and \(\mc{D}_{\infty,\infty}(c) = (\Z/c\Z)^{\ast}\) because if \(\g = \begin{psmallmatrix} \ast & \ast \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z)\) we must have \((c,d) = 1\) as \(\det(\g) = 1\) and every such pair gives rise to a matrix in \(\SL_{2}(\Z)\). Whence
       \[
@@ -524,7 +526,7 @@
     \[
       e(z) = e^{2\pi iz}.
     \]
-    Also, we will distinguish the primitive third root of unity \(\w = e^{\frac{2\pi i}{3}}\). All sums and products over a quotient group will be consider to be over a complete set of representatives and we identify cosets with corresponding representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\).
+    Also, we will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). All sums and products over a quotient group will be consider to be over a complete set of representatives and we identify cosets with corresponding representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\).
     \subsection{Modularity}
       For all all \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\) and \(z \in \H\), define \(j(\a,z)\) by
       \[
@@ -556,11 +558,11 @@
       \]
       for \(f,g \in C(\H)\), positive integers \(k\) and \(\ell\), and any \(\a,\a' \in \GL_{2}^{+}(\Q)\). For fixed \(k\), an operator on \(C(\H)\) is said to be \textbf{invariant}\index{invariant} if it commutes with the slash operators \(|_{k}\a\) for every \(\a \in \SL_{2}(\Q)\).
       
-      We can now introduce modular forms. Let \(\G\) be a congruence subgroup of level \(N\) and \(\nu:\G \to \C^{\ast}\) be a finite order homomorphism such that \(\nu(\g_{\infty}) = 1\). We say that a function \(f:\H \to \C\) is \textbf{modular form}\index{modular form} on \(\GH\) of \textbf{weight}\index{weight} \(k\), \textbf{level}\index{level} \(N\), and \textbf{nebentypus}\index{nebentypus} \(\nu\) if the following properties are satisfied:
+      We can now introduce modular forms. Let \(\G\) be a congruence subgroup of level \(N\) and \(\nu:\G \to \C^{\ast}\) be a finite order homomorphism. We say that a function \(f:\H \to \C\) is \textbf{modular form}\index{modular form} on \(\GH\) of \textbf{weight}\index{weight} \(k\), \textbf{level}\index{level} \(N\), and \textbf{nebentypus}\index{nebentypus} \(\nu\) if the following properties are satisfied:
       \begin{enumerate}[label*=(\roman*)]
         \item \(f\) is holomorphic on \(\H\).
         \item \((f|_{k}\g)(z) = \nu(\g)f(z)\) for all \(\g \in \G\).
-        \item \((f|_{k}\g)(z) = O(1)\) for all \(\g \in \SL_{2}(\Z)\), or equivalently, \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\).
+        \item \((f|_{k}\g)(z) = O(1)\) for all \(\g \in \SL_{2}(\Z)\).
       \end{enumerate}
       Furthermore, we say \(f\) is a \textbf{cusp form}\index{cusp form} if the additional property is satisfied:
       \begin{enumerate}[label*=(\roman*)]
@@ -574,66 +576,78 @@
       \[
         f(\g z) = \nu(\g)j(\g,z)^{k}f(z).
       \]
-      Moreover, we say that the nebentypus \(\nu\) is \textbf{singular}\index{singular} at a cusp \(\mf{a}\) if \(\nu(\g_{\mf{a}}) = 1\). Equivalently, \(\nu(\g) = 1\) for every \(\g \in \G_{\mf{a}}\). Necessarily, a nebentypus must be singular at \(\infty\). Property (iii) is called the \textbf{growth condition}\index{growth condition} and we say \(f\) is \textbf{holomorphic at the cusps}\index{holomorphic at the cusps}. By modularity, it suffices to verify the growth condition on a complete set scaling matrices for the cusp classes. Therefore we only have to check this condition for finitely many matrices since the number of cusp classes is finite. To see the equivalence in the growth condition, we require the following lemma:
+      Moreover, we say that the nebentypus \(\nu\) is \textbf{regular}\index{regular} at a cusp \(\mf{a}\) if \(\nu(\g_{\mf{a}}) = 1\). Equivalently, \(\nu(\g) = 1\) for every \(\g \in \G_{\mf{a}}\). Property (iii) is called the \textbf{growth condition}\index{growth condition} and we say \(f\) is \textbf{holomorphic at the cusps}\index{holomorphic at the cusps}. By modularity, it suffices to verify the growth condition on a complete set scaling matrices for the cusp classes. Therefore we only have to check this condition for finitely many matrices since the number of cusp classes is finite. Also, the growth condition is equivalent to \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\). To see this, we require a lemma.
 
       \begin{lemma}
         Every \(\a \in \GL_{2}^{+}(\Q)\) can be written as \(\a = \g\eta\) for some \(\g \in \SL_{2}(\Z)\) and \(\eta \in \GL_{2}^{+}(\Q)\) with \(\eta = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix}\).
       \end{lemma}
-      \iffalse
       \begin{proof}
-        Let \(r \ge 1\) be such that \(r\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Z)\). If \(c = 0\) then \(a \neq 0\) (otherwise \(\a\) is not invertible) and so \((a,c) \ge 1\). Set \(a' = \frac{a}{(a,c)}\) and \(c' = \frac{c}{(a,c)}\) so that \(a',c' \in \Z\) with \((a',c') = 1\). Then there exists \(\g \in \SL_{2}(\Z)\) with \(\g^{-1} = \begin{psmallmatrix} \ast & \ast \\ -c' & a' \end{psmallmatrix}\). Moreover, \(\g^{-1}r\a = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix} \in \GL_{2}^{+}(\Z)\). The claim is complete upon setting \(\eta = \g^{-1}\a\).
+        Let \(r\) be a positive integer such that \(r\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Z)\). As \(r\a\) has nonzero determinant, we cannot have \(a = c = 0\). Whence we may set \(a' = \frac{a}{(a,c)}\) and \(c' = \frac{c}{(a,c)}\) so that \(a'\) and \(c'\) are relatively prime integers. Then there exists \(\g \in \SL_{2}(\Z)\) with \(\g^{-1} = \begin{psmallmatrix} \ast & \ast \\ -c' & a' \end{psmallmatrix}\). Moreover, a short computation shows
+        \[
+          \g^{-1}r\a = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix}.
+        \]
+        The claim is complete upon setting \(\eta = \g^{-1}\a\).
       \end{proof}
 
-      This lemma implies that we may write \(\a = \g\eta\) for some \(\g \in \SL_{2}(\Z)\) and \(\eta \in \GL_{2}^{+}(\Q)\) with \(\eta = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix}\). This decomposition together with the cocycle condition gives
+      For the equivalence, use this lemma to write \(\a = \g\eta\) for some \(\g \in \SL_{2}(\Z)\) and \(\eta \in \GL_{2}^{+}(\Q)\) with \(\eta = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix}\). The cocycle condition gives
       \[
-        j(\a,z) = j(\g,\eta z)j(\eta,z).
+        (f|_{k}\a)(z) = \det(\eta)^{\frac{k}{2}}j(\eta,z)(f|_{k}\g)(\eta z),
       \]
-      As \(j(\eta,z)\) is a constant, it follows that \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\) which proves the forward implication. The reverse implication is trivial since \(\SL_{2}(\Z) \subset \GL_{2}^{+}(\Q)\). Now let \(\s_{\mf{a}}\) be a scaling matrix for the \(\mf{a}\) cusp and recall that \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\) is a congruence subgroup of the same level as \(\G\). Let \(\g \in \s_{\mf{a}}^{-1}\G\s_{\mf{a}}\) so that \(\g = \s_{\mf{a}}^{-1}\g'\s_{\mf{a}}\) for some \(\g' \in \G\). Then modularity gives
+      and as \(j(\eta,z)\) is a constant, we have \((f|_{k}\a)(z) = O(1)\) proving the forward implication. The reverse implication is clear since \(\SL_{2}(\Z) \subset \GL_{2}^{+}(\Q)\).
+      
+      Now let \(\s_{\mf{a}}\) be a scaling matrix for the \(\mf{a}\) cusp so that \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\) is a congruence subgroup of the same level as \(\G\). Let \(\g \in \s_{\mf{a}}^{-1}\G\s_{\mf{a}}\) and write \(\g = \s_{\mf{a}}^{-1}\g'\s_{\mf{a}}\) for some \(\g' \in \G\). Using modularity, a short computation shows
       \[
-        ((f|_{k}\s_{\mf{a}})|_{k}\g)(z) = (f|_{k}\s_{\mf{a}}\g)(z) = (f|_{k}\g'\s_{\mf{a}})(z) = \nu(\g')(f|_{k}\s_{\mf{a}})(z) =  \nu_{\s_{\mf{a}}}(\g)(f|_{k}\s_{\mf{a}})(z),
+        ((f|_{k}\s_{\mf{a}})|_{k}\g)(z) = \nu_{\s_{\mf{a}}}(\g)(f|_{k}\s_{\mf{a}})(z),
       \]
       where we have set
       \[
-        \nu_{\s_{\mf{a}}}(\g) = \nu(\s_{\mf{a}}\g\s_{\mf{a}}^{-1}),
+        \nu_{\s_{\mf{a}}}(\g) = \nu(\s_{\mf{a}}\g\s_{\mf{a}}^{-1}).
       \]
-      for all \(\g \in \s_{\mf{a}}^{-1}\G\s_{\mf{a}}\). From this it follows that \(f|_{k}\s_{\mf{a}}\) is a modular form on \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\backslash\H\) of the same weight and level as \(f\) but with nebentypus \(\nu_{\s_{\mf{a}}}\) and is a cusp form if \(f\) is.
+      It follows that \(f|_{k}\s_{\mf{a}}\) is a modular form on \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\backslash\H\) of the same weight and level as \(f\) but with nebentypus \(\nu_{\s_{\mf{a}}}\) and is a cusp form if \(f\) is.
 
       \begin{remark}\label{rem:odd_weight_modular_forms}
         If \(f\) is a weight \(k\) modular form with nebentypus \(\nu\) on \(\GH\) and \(-I \in \G\) then modularity implies
         \[
           f(z) = \nu(-I)(-1)^{k}f(z).
         \]
-        Therefore \(\nu(-I) = (-1)^{k}\). Therefore \(\nu\) cannot be trivial if \(k\) is odd. In particular, there are no nonzero modular forms of odd weight with trivial nebentypus on \(\SL_{2}(\Z)\).  
+        Therefore \(\nu(-I) = (-1)^{k}\). This means \(\nu\) cannot be the identity if \(k\) is odd. In particular, there are no nonzero modular forms of odd weight with trivial nebentypus on \(\SL_{2}(\Z)\).  
       \end{remark}
       
-      Modular forms also admit Fourier series. First note that modularity and the definition of the nebentypus together imply
+      Modular forms also admit Fourier series. First observe that modularity implies
       \[
-        (f|_{k}\s_{\mf{a}})(z+h_{\mf{a}}) = (f|_{k}\s_{\mf{a}})(\g_{\mf{a}}z) = (f|_{k}\s_{\mf{a}})(z).
+        (f|_{k}\s_{\mf{a}})(z+h_{\mf{a}}) = \nu(\g_{\mf{a}})(f|_{k}\s_{\mf{a}})(z),
       \]
-      So \(f|_{k}\s_{\mf{a}}\) is \(h_{\mf{a}}\)-periodic. This implies that we only need to verify the growth condition for \(f\) as \(y \to \infty\). In any case, as \(f|_{k}\s_{\mf{a}}\) is also smooth, \cref{thm:existance_of_Fourier_series} (after scaling) shows that it admits a Fourier series given by
+      which is to say \(f|_{k}\s_{\mf{a}}\) is \(h_{\mf{a}}\)-periodic up to the constant factor \(\nu(\g_{\mf{a}})\). This means we only need to verify the growth condition as \(y \to \infty\). In any case, as \(f|_{k}\s_{\mf{a}}\) is also smooth, it admits an absolutely and uniformly convergent Fourier series. So we may write
       \[
-        (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 0}a_{\mf{a}}(y,n)e^{\frac{2\pi inx}{h_{\mf{a}}}},
+        (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 0}a_{\mf{a}}(y,n)e\left(\frac{nx}{h_{\mf{a}}}\right),
       \]
-      where the sum is only over \(n \ge 0\) because holomorphy at the cusps forces \(f|_{k}\s_{\mf{a}}\) to be bounded. Moreover, this Fourier series converges uniformly everywhere to \(f|_{k}\s_{\mf{a}}\). We can also simplify the Fourier coefficients \(a_{\mf{a}}(y,n)\). To see this, since \(f|_{k}\s_{\mf{a}}\) is holomorphic it satisfies the Cauchy-Riemann equations so that
+      where the sum is only over nonnegative \(n\) because holomorphy at the cusps forces \(f|_{k}\s_{\mf{a}}\) to be bounded. We can also simplify the Fourier coefficients \(a_{\mf{a}}(y,n)\). Indeed, as \(f|_{k}\s_{\mf{a}}\) is holomorphic it satisfies the Cauchy-Riemann equations so that
       \[
         \frac{1}{2}\left(\frac{\del f|_{k}\s_{\mf{a}}}{\del x}+i\frac{\del f|_{k}\s_{\mf{a}}}{\del y}\right) = 0.
       \]
       Substituting in the Fourier series and equating coefficients we obtain the ODE
       \[
-        \frac{2\pi n}{h_{\mf{a}}}a_{\mf{a}}(y,n)+a_{\mf{a}}'(y,n) = 0,
+        \frac{2\pi n}{h_{\mf{a}}}a_{\mf{a}}(y,n)+a_{\mf{a}}'(y,n) = 0.
       \]
-      Solving this ODE by separation of variables, we see that there exists an \(a_{\mf{a}}(n)\) such that
+      Solving this ODE by separation of variables, there exist coefficients \(a_{\mf{a}}(n)\) such that
       \[
-        a_{\mf{a}}(y,n) = a_{\mf{a}}(n)e^{-\frac{2\pi ny}{h_{\mf{a}}}}.
+        a_{\mf{a}}(y,n) = a_{\mf{a}}(n)e\left(\frac{n(iy)}{h_{\mf{a}}}\right).
       \]
       The coefficients \(a_{\mf{a}}(n)\) are the only part of the Fourier series depending on the cusp \(\mf{a}\) and scaling matrix \(\s_{\mf{a}}\). Using these coefficients instead, \(f\) admits a \textbf{Fourier series}\index{Fourier series} at the \(\mf{a}\) cusp given by
       \[
-        (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 0}a_{\mf{a}}(n)e^{\frac{2\pi inz}{h_{\mf{a}}}},
+        (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 0}a_{\mf{a}}(n)e\left(\frac{nz}{h_{\mf{a}}}\right),
       \]
-      with \textbf{Fourier coefficients}\index{Fourier coefficients} \(a_{\mf{a}}(n)\). If \(\mf{a} = \infty\) and \(\s_{\mf{a}} = I\), we will drop this dependence and in this case \(f|_{k}\s_{\mf{a}} = f\) with \(a_{\mf{a}}(n) = a(n)\). As we have already noted, this Fourier series converges uniformly everywhere to \(f|_{k}\s_{\mf{a}}\). Moreover, property (iv) implies that \(f\) is a cusp form if and only if \(a_{\mf{a}}(n) = 0\) for every cusp \(\mf{a}\). This does not depend upon the choice of scaling matrix used for \(f|_{k}\s_{\mf{a}}\) because
+      with \textbf{Fourier coefficients}\index{Fourier coefficients} \(a_{\mf{a}}(n)\). In the case \(\mf{a} = \infty\) and \(\s_{\mf{a}} = I\), we will drop these dependences by writing \(f|_{k}\s_{\mf{a}} = f\) and \(a_{\mf{a}}(n) = a(n)\). From property (iv), \(f\) is a cusp form if and only if \(a_{\mf{a}}(0) = 0\) for every cusp \(\mf{a}\). This does not depend upon the choice of scaling matrix used for \(f|_{k}\s_{\mf{a}}\) because
       \begin{equation}\label{equ:cusp_form_independence_of_scaling_matrix_modular}
-        (f|_{k}\s_{\mf{a}}\g_{\mf{\infty}})(z) = (f|_{k}\s_{\mf{a}})(z+h_{\mf{\infty}}).
+        (f|_{k}\s_{\mf{a}}\g_{\mf{\infty}})(z) = (f|_{k}\s_{\mf{a}})(z+h_{\mf{\infty}}),
       \end{equation}
+      and so the constant term in the Fourier series are identical. However, the nonconstant Fourier coefficients may very well change. Strictly speaking, if \(\s_{\mf{a}}' = \s_{\mf{a}}\g_{\infty}^{h}\) for some positive integer \(h\) then
+      \[
+        (f|_{k}\s_{\mf{a}}')(z) = \sum_{n \ge 0}a_{\mf{a}}(n)e\left(\frac{nh}{h_{\mf{a}}}\right)e\left(\frac{nz}{h_{\mf{a}}}\right),
+      \]
+      so that the Fourier coefficients change by a global root of unity \(e\left(\frac{nh}{h_{\mf{a}}}\right)\).
+      
+      \iffalse
       We can also easily derive a bound for the Fourier coefficients of cusp forms. To see this, note that \(\left|(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}\right|\) is \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\)-invariant by modularity of \(f|_{k}\s_{\mf{a}}\), the cocycle condition, \cref{equ:Mobius_transformation_imaginary_part_j}, and that \(|\chi(\g)| = 1\). Moreover, this function is bounded on \(\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}\) because \(f\) is a cusp form. The \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\)-invariance implies that \(\left|(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}\right|\) is bounded on \(\H\). From the definition of Fourier series, we then have
       \[
         a_{\mf{a}}(n)\Im(z)^{\frac{k}{2}} = \int_{0}^{h_{\mf{a}}}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}e^{-\frac{2\pi inz}{h_{\mf{a}}}}\,dx \ll \int_{0}^{h_{\mf{a}}}e^{\frac{2\pi ny}{h_{\mf{a}}}}\,dx \ll e^{\frac{2\pi ny}{h_{\mf{a}}}}.

@@ -13,7 +13,9 @@
   \indexspace
 
   \item folding, \hyperpage{15}
-  \item Fuchsian group, \hyperpage{5}
+  \item Fourier coefficients, \hyperpage{18}
+  \item Fourier series, \hyperpage{18}
+  \item Fuchsian group, \hyperpage{6}
 
   \indexspace
 
@@ -56,12 +58,12 @@
   \indexspace
 
   \item reduced, \hyperpage{11}
+  \item regular, \hyperpage{17}
 
   \indexspace
 
   \item Sali\'e sum, \hyperpage{13}
   \item scaling matrix, \hyperpage{10}
-  \item singular, \hyperpage{17}
   \item slash operator, \hyperpage{16}
   \item standard fundamental domain, \hyperpage{7}
 
