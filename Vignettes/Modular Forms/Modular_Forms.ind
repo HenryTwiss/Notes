@@ -4,11 +4,16 @@
 
   \indexspace
 
+  \item character, \hyperpage{20}
   \item cocycle condition, \hyperpage{16}
   \item congruence subgroup, \hyperpage{2}
   \item cusp, \hyperpage{10}
   \item cusp class, \hyperpage{10}
   \item cusp form, \hyperpage{16}
+
+  \indexspace
+
+  \item exponential decay at the cusps, \hyperpage{19}
 
   \indexspace
 
@@ -23,6 +28,7 @@
 
   \indexspace
 
+  \item Hecke bound, \hyperpage{19}
   \item Hecke congruence subgroup, \hyperpage{3}
   \item holomorphic at the cusps, \hyperpage{17}
   \item hyperbolic measure, \hyperpage{14}

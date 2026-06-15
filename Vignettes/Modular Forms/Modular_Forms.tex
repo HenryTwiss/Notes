@@ -645,44 +645,47 @@
       \[
         (f|_{k}\s_{\mf{a}}')(z) = \sum_{n \ge 0}a_{\mf{a}}(n)e\left(\frac{nh}{h_{\mf{a}}}\right)e\left(\frac{nz}{h_{\mf{a}}}\right),
       \]
-      so that the Fourier coefficients change by a global root of unity \(e\left(\frac{nh}{h_{\mf{a}}}\right)\).
-      
-      \iffalse
-      We can also easily derive a bound for the Fourier coefficients of cusp forms. To see this, note that \(\left|(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}\right|\) is \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\)-invariant by modularity of \(f|_{k}\s_{\mf{a}}\), the cocycle condition, \cref{equ:Mobius_transformation_imaginary_part_j}, and that \(|\chi(\g)| = 1\). Moreover, this function is bounded on \(\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}\) because \(f\) is a cusp form. The \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\)-invariance implies that \(\left|(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}\right|\) is bounded on \(\H\). From the definition of Fourier series, we then have
+      so that the \(n\)-th Fourier coefficient is multiplied by the root of unity \(e\left(\frac{h}{h_{\mf{a}}}\right)\). Of course, if \(\G\) is reduced at \(\mf{a}\) then this root of unity is \(1\) and the Fourier coefficients are genuinely independent of the choice of scaling matrix.
+
+      We can also derive a bound for the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp provided \(f\) is a cusp form. This bound is quite straightforward to deduce and turns out to almost be optimal. To this end, consider the function
       \[
-        a_{\mf{a}}(n)\Im(z)^{\frac{k}{2}} = \int_{0}^{h_{\mf{a}}}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}e^{-\frac{2\pi inz}{h_{\mf{a}}}}\,dx \ll \int_{0}^{h_{\mf{a}}}e^{\frac{2\pi ny}{h_{\mf{a}}}}\,dx \ll e^{\frac{2\pi ny}{h_{\mf{a}}}}.
+        \left|(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}\right|,
       \]
-      Upon setting \(y = \frac{h_{\mf{a}}}{n}\), we obtain
+      which is \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\)-invariant. It is also bounded on \(\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}\) because \(f\) is a cusp form and the \(\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\)-invariance forces boundedness on \(\H\). Now consider the integral
+      \[
+        \int_{0}^{h_{\mf{a}}}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}e\left(-\frac{nz}{h_{\mf{a}}}\right)\,dx.
+      \]
+      On the one hand, substituting the Fourier series and using absolute convergence to interchange the sum and the integral, every term integrates to zero except the \(n\)-th term which is \(a_{\mf{a}}(n)h_{\mf{a}}\Im(z)^{\frac{k}{2}}\). On the other hand, the integral is \(O\left(e^{-\frac{2\pi ny}{h_{\mf{a}}}}\right)\) via our previous remarks. This shows
+      \[
+        a_{\mf{a}}(n)\Im(z)^{\frac{k}{2}} \ll e^{-\frac{2\pi ny}{h_{\mf{a}}}}.
+      \]
+      Upon setting \(y = \frac{1}{n}\), the right-hand side is uniformly bounded and we obtain
       \[
         a_{\mf{a}}(n) \ll n^{\frac{k}{2}}.
       \]
-      This bound is known as the \textbf{Hecke bound}\index{Hecke bound} for modular forms. It follows from the Hecke bound that
+      This estimate is known as the \textbf{Hecke bound}\index{Hecke bound} for modular forms. It follows from the Hecke bound that
       \[
-        (f|_{k}\s_{\mf{a}})(z) = O\left(\sum_{n \ge 1}n^{\frac{k}{2}}e^{-\frac{2\pi ny}{h_{\mf{a}}}}\right) = O\left(e^{-\frac{2\pi y}{h_{\mf{a}}}}\right),
+        (f|_{k}\s_{\mf{a}})(z) = O\left(e^{-\frac{2\pi y}{h_{\mf{a}}}}\right),
       \]
-      where the second equality holds because each term is of smaller order than the next so that the series is bounded by a constant times its first term. This implies that \((f|_{k}\s_{\mf{a}})(z)\) exhibits exponential decay. Accordingly, we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(z \to \infty\) (which follows because \(f|_{k}\s_{\mf{a}}\) is a cusp form and is \(h_{\mf{a}}\)-periodic).
+      upon summing the resulting geometric series. This implies \(f|_{k}\s_{\mf{a}}\) exhibits exponential decay and we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(y \to \infty\) which is provided by the fact that \(f\) is a cusp form.
 
-      \begin{remark}
-        Note that the Hecke bound only holds for the Fourier coefficients of cusp forms. In fact, as we will see it is not even an optimal bound.
-      \end{remark}
-
-      Many of the modular forms we will study will be over the congruence subgroups \(\G(N)\), \(\G_{1}(N)\), and \(\G_{0}(N)\). To collect all of these cases, we will let \(\G\) be any of these congruence subgroups. There are a few important simplifications when working with \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) because \(ad-bc = 1\) and moreover \((d,N) = 1\). Thus \((d,q) = 1\) and we can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
+      Many of the modular forms we will study will be over the congruence subgroups \(\G(N)\), \(\G_{1}(N)\), and \(\G_{0}(N)\). To collect all of these cases, let \(\G\) denote any of these congruence subgroups. There are a few important simplifications when working over \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
       \[
         \nu_{\chi}(\g) = \chi(d).
       \]
-      If \(\g' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \G_{0}(N)\) then the relations
+      If \(\g' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \G\), then the relations
       \[
-        \g\g' \equiv \begin{pmatrix} a & \ast \\ 0 & d \end{pmatrix}\begin{pmatrix} a' & \ast \\ 0 & d' \end{pmatrix} = \begin{pmatrix} \ast & \ast \\ 0 & d'd \end{pmatrix} \tmod{N} \quad \text{and} \quad \g^{-1} = \begin{pmatrix} d & \ast \\ 0 & a \end{pmatrix} \tmod{N},
+        \g\g' \equiv \begin{pmatrix} \ast & \ast \\ 0 & d'd \end{pmatrix} \tmod{N} \quad \text{and} \quad \g^{-1} = \begin{pmatrix} d & \ast \\ 0 & a \end{pmatrix} \tmod{N},
       \]
-      together show that
+      show
       \[
         \nu_{\chi}(\g\g') = \nu_{\chi}(\g)\nu_{\chi}(\g') \quad \text{and} \quad \nu_{\chi}(\g^{-1}) = \nu_{\chi}(\g)^{-1}.
       \]
-      In other words, \(\nu_{\chi}\) is a homomorphism. It is necessarily of finite order because \(\chi\) is and clearly \(\nu_{\chi}(\g_{\infty}) = 1\). Therefore \(\nu_{\chi}\) satisfies the assumptions of a nebentypus. In the case \(f\) has nebentypus \(\nu_{\chi}\), we simply say that \(f\) has \textbf{character}\index{character} \(\chi\) and write
+      respectively. In other words, \(\nu_{\chi}\) is a homomorphism and it is necessarily of finite order because \(\chi\) is. Therefore \(\nu_{\chi}\) satisfies the assumptions of a nebentypus. It is also regular at infinity. In the case \(f\) has nebentypus \(\nu_{\chi}\), we simply say that \(f\) has \textbf{character}\index{character} \(\chi\) and write
       \[
         \chi(\g) = \nu_{\chi}(\g).
       \]
-    \subsection{\todo{Poincar\'e and Eisenstein Series}}
+    \iffalse\subsection{\todo{Poincar\'e and Eisenstein Series}}
       We will introduce two important classes of modular forms on \(\G(N)\backslash\H\), \(\G_{1}(N)\backslash\H\), and \(\G_{0}(N)\backslash\H\). These are the Poincar\'e and Eisenstein series. The latter of which will be a special case of the former. As we will only work with these congruence subgroups, let \(\G\) denote such a subgroup. Let \(m \ge 0\), \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor \(q \mid N\), and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is singular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
       \[
         P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
