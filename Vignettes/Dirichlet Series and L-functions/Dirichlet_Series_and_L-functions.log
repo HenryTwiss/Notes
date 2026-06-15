@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  3 JUN 2026 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  15 JUN 2026 09:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -741,10 +741,10 @@ Package rerunfilecheck Info: File `Dirichlet_Series_and_L-functions.out' has not
 (rerunfilecheck)             Checksum: 72A5AE7B99E2CA110B2FE4958C512DE4;2605.
  ) 
 Here is how much of TeX's memory you used:
- 25799 strings out of 478268
- 512998 string characters out of 5846347
- 764549 words of memory out of 5000000
- 43427 multiletter control sequences out of 15000+600000
+ 25800 strings out of 478268
+ 513005 string characters out of 5846347
+ 764580 words of memory out of 5000000
+ 43428 multiletter control sequences out of 15000+600000
  484391 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,14n,107p,1645b,1218s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -2,10 +2,14 @@
 \usepackage{import}
 \input{/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex}
 
+
+\externaldocument[DSLF-]{"/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions"}
+\newcommand{\DSLFcref}[1]{DSLF \cref{#1}}
+
 %=================%
 %  Title & Index  %
 %=================%
-\title{Arithmetic Functions and Sums}
+\title{The Riemann Zeta Function}
 \author{Henry Twiss}
 \makeindex
 
@@ -14,7 +18,9 @@
   \maketitle
   \tableofcontents
   \section{The Riemann Zeta Function}
-    Throughout, \(s = \s+it\) will stand for complex variables with \(\s\) and \(t\) real. We will also make use of the gamma function developed in \cref{sec:the_gamma_function}. Also, all sums and products over zeros of a function will be counted with multiplicity and ordered symmetrically with respect to the size of the ordinate if they are not absolutely convergent.
+    This vignette assumes the standard knowledge and language of the Dirichlet Series and \(L\)-functions (DSLF) vignette. All of the language and notation will be inherited. As such, this vignette can be considered as an appendix.
+
+    Throughout, \(s = \s+it\) will stand for complex variables with \(\s\) and \(t\) real. All sums and products over zeros of a function will be counted with multiplicity and ordered symmetrically with respect to the size of the ordinate if they are not absolutely convergent.
     \subsection{Analytic Properties}
       The \textbf{Riemann zeta function}\index{Riemann zeta function} \(\z(s)\) is defined by the Dirichlet series
       \[
@@ -22,11 +28,9 @@
       \]
       As the coefficients are uniformly bounded and completely multiplicative, \(\z(s)\) is absolutely convergent for \(\s > 1\) and admits the following degree \(1\) Euler product
       \[
-        \z(s) = \prod_{p}(1-p^{-s})^{-1},
+        \z(s) = \prod_{p}(1-p^{-s})^{-1}.
       \]
-      by \cref{prop:Dirichlet_series_Euler_product}.
-
-      Our primary aim is to show that the Riemann zeta function is a Selberg class \(L\)-function. In order to do this, we need to establish meromorphic continuation to the entire complex plane and prove a functional equation. These will be accomplished in tandem by developing and analyzing an integral representation for the Riemann zeta function that evolves from a Mellin transform. The function which we will take the Mellin transform of is closely related to the \textbf{Jacobi theta function}\index{Jacobi theta function} \(\vt(z)\) defined by
+      Our primary aim is to show that the Riemann zeta function is a Selberg class \(L\)-function. It remains to establish meromorphic continuation to the entire complex plane and prove a functional equation. These will be accomplished in tandem by developing and analyzing an integral representation for the Riemann zeta function that evolves from a Mellin transform. The function which we will take the Mellin transform of is closely related to the \textbf{Jacobi theta function}\index{Jacobi theta function} \(\vt(z)\) defined by
       \[
         \vt(z) = \sum_{n \in \Z}e^{2\pi in^{2}z},
       \]
@@ -47,7 +51,7 @@
         \[
           f(x) = e^{-2\pi x^{2}y}.
         \]
-        Then \(f(x)\) is Schwartz class. By \cref{prop:Fourier_transform_of_exponential_single_variable}, we have
+        Then \(f(x)\) is Schwartz class. A short computation shows
         \[
           (\mc{F}f)(t) = \frac{e^{-\frac{\pi t^{2}}{2y}}}{\sqrt{2y}}.
         \]
@@ -58,7 +62,7 @@
       \[
         \w(z) = \sum_{n \ge 1}e^{\pi in^{2}z},
       \]
-      for \(z \in \H\). It is related to the Jacobi theta function via
+      for \(z \in \H\). It is related to the Jacobi theta function via the identity
       \[
         \w(z) = \frac{\vt\left(\frac{z}{2}\right)-1}{2},
       \]
@@ -66,7 +70,7 @@
       \[
         \w(iy) = \begin{cases} O\left(y^{-\frac{1}{2}}\right) & \text{if \(y \ll 1\)}, \\ O(e^{-\pi y}) & \text{if \(y \gg 1\)}, \end{cases}
       \]
-      where the second estimate follows from the exponential decay of the Jacobi theta function and the first estimate from \cref{thm:functional_equation_Jacobi_theta}. Now consider the Mellin transform
+      where the second follows from exponential decay of the Jacobi theta function and the first from \cref{thm:functional_equation_Jacobi_theta}. Now consider the Mellin transform
       \[
         \int_{0}^{\infty}\w(iy)y^{\frac{s}{2}}\,\frac{dy}{y}.
       \]
@@ -142,7 +146,7 @@
       \begin{equation}\label{equ:approximation_for_harmonic_sums}
         \sum_{n \ll N}\frac{1}{n} = \log(N)+O(1),
       \end{equation}
-      for any \(N \ge 1\), which follows from the definition of the Euler-Mascheroni constant. The aforementioned result of Hardy and Littlewood is an asymptotic equivalence for \(M_{2}(T,\z)\). Actually, we prove something slightly stronger:
+      for any positive integer \(N\), which follows from the definition of the Euler-Mascheroni constant. The aforementioned result of Hardy and Littlewood is an asymptotic equivalence for \(M_{2}(T,\z)\). Actually, we prove something slightly stronger.
 
       \begin{theorem}\label{thm:second_moment_of_Riemann_zeta_asymptotic_equivalence}
         For \(T > 2\),
@@ -160,9 +164,9 @@
           \z\left(\frac{1}{2}+it\right) &= \sum_{n \ge 1}\frac{n^{-it}}{n^{\frac{1}{2}}}V_{\frac{1}{2}+it}\left(n\sqrt{\frac{\log(t)}{t}},\z\right) \\
           &+ \e\left(\frac{1}{2}+it,\z\right)\sum_{n \ge 1}\frac{n^{it}}{n^{\frac{1}{2}}}V_{\frac{1}{2}-it}\left(n\sqrt{\frac{t}{\log(t)}},\z\right)+\frac{R\left(\frac{1}{2}+it,\sqrt{\frac{t}{\log(t)}},\z\right)}{\g\left(\frac{1}{2}+it,\z\right)}.
         \end{align*}
-        First observe \(\e\left(\frac{1}{2}+it,\z\right) \ll 1\) by \cref{equ:gamma_factor_analytic_conductor_estimate} while \cref{equ:vertical_strip_gamma_estimates,equ:choice_for_V_decay_estimate} together show that the residue term exhibits exponential decay. By our choice of \(\Phi(u)\), the estimates in \cref{prop:V_function_decay} are valid. Whence the summands are bounded for \(n \ll \frac{t}{\sqrt{\log(t)}}\) and \(n \ll \sqrt{\log(t)}\) respectively and then exhibit rapid decay thereafter. Altogether, this means
+        First observe \(\e\left(\frac{1}{2}+it,\z\right) \ll 1\) by \DSLFcref{DSLF-equ:gamma_factor_analytic_conductor_estimate} while \DSLFcref{DSLF-equ:vertical_strip_gamma_estimates,DSLF-equ:choice_for_V_decay_estimate} together show that the residue term exhibits exponential decay. By our choice of \(\Phi(u)\), the estimates in \DSLFcref{DSLF-prop:V_function_decay} are valid. Whence the summands are bounded for \(n \ll \frac{t}{\sqrt{\log(t)}}\) and \(n \ll \sqrt{\log(t)}\) respectively and then exhibit rapid decay thereafter. Altogether, this means
         \[
-          \z\left(\frac{1}{2}+it\right) = \sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}+O\left(\sum_{n \ll \sqrt{\log(t)}}\frac{1}{\sqrt{n}}\right),
+          \z\left(\frac{1}{2}+it\right) = \sum_{n \ll \frac{t}{\sqrt{\log(t)}}}\frac{1}{n^{\frac{1}{2}+it}}+O\left(\sum_{n \ll \sqrt{\log(t)}}\frac{1}{\sqrt{n}}\right).
         \]
         The estimate
         \[
@@ -256,7 +260,7 @@
         which is the desired asymptotic formula. The asymptotic equivalence follows at once as it is a strictly weaker asymptotic.
       \end{proof}
       
-      A few comments about the proof of this second moment result. The error term in the asymptotic formula is not power saving as it is smaller by only a factor of \(\log^{\frac{1}{4}}(T)\) from the main term which is not much. In fact, much better error terms can be obtained using more refined analytic techniques. Nevertheless, as \(\log(T) \ll_{\e} T^{\e}\), the asymptotic equivalence implies that the necessary bound for the Riemann zeta function is satisfied for \cref{prop:equivalence_Lindelof_hypothesis_and_moments} in the case of the second moment.
+      A few comments about the proof of this second moment result. The error term in the asymptotic formula is not power saving as it is smaller by only a factor of \(\log^{\frac{1}{4}}(T)\) from the main term which is not much. In fact, much better error terms can be obtained using more refined analytic techniques. Nevertheless, as \(\log(T) \ll_{\e} T^{\e}\), the asymptotic equivalence implies that the necessary bound for the Riemann zeta function is satisfied for \DSLFcref{DSLF-prop:equivalence_Lindelof_hypothesis_and_moments} in the case of the second moment.
 
       The main analytic data being fed into \cref{thm:second_moment_of_Riemann_zeta_asymptotic_equivalence} is the approximate functional equation for the Riemann zeta function. The main contribution from the resulting asymptotic, namely \cref{equ:second_moment_zeta_asymptotic_equivalence_1}, in \(M_{2}(T,\z)\) is \(T\log(T)\) which comes from the diagonal contribution in
       \[

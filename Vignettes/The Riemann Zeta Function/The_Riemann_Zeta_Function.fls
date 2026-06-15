@@ -797,6 +797,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/p
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.aux
 OUTPUT The_Riemann_Zeta_Function.idx
 INPUT ./The_Riemann_Zeta_Function.aux
 INPUT The_Riemann_Zeta_Function.aux
