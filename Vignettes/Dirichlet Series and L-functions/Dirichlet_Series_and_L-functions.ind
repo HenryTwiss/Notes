@@ -1,33 +1,33 @@
 \begin{theindex}
 
-  \item \(L\)-function, \hyperpage{17}
+  \item \(L\)-function, \hyperpage{16}
 
   \indexspace
 
   \item abscissa of absolute convergence, \hyperpage{3}
   \item abscissa of convergence, \hyperpage{3}
-  \item analytic conductor, \hyperpage{20}
+  \item analytic conductor, \hyperpage{19}
   \item approximate function equation, \hyperpage{22}
 
   \indexspace
 
-  \item Burgess bound, \hyperpage{28}
+  \item Burgess bound, \hyperpage{27}
 
   \indexspace
 
-  \item central point, \hyperpage{21}
+  \item central point, \hyperpage{20}
   \item central value, \hyperpage{32}
   \item central value estimate, \hyperpage{32}
-  \item completion, \hyperpage{17}
-  \item conductor, \hyperpage{17}
-  \item convexity bound, \hyperpage{27, 28}
+  \item completion, \hyperpage{16}
+  \item conductor, \hyperpage{16}
+  \item convexity bound, \hyperpage{26, 27}
   \item convexity breaking bound, \hyperpage{27}
-  \item critical line, \hyperpage{21}
+  \item critical line, \hyperpage{20}
   \item critical strip, \hyperpage{20}
 
   \indexspace
 
-  \item degree, \hyperpage{8}, \hyperpage{17}
+  \item degree, \hyperpage{8}, \hyperpage{16}
   \item Dirichlet series, \hyperpage{1}
   \item dual, \hyperpage{18}
 
@@ -40,18 +40,18 @@
 
   \indexspace
 
-  \item functional equation, \hyperpage{17}, \hyperpage{33}
-  \item functional equation data, \hyperpage{17}
+  \item functional equation, \hyperpage{16}, \hyperpage{33}
+  \item functional equation data, \hyperpage{16}
 
   \indexspace
 
-  \item gamma factor, \hyperpage{17}
-  \item gamma parameters, \hyperpage{17}
+  \item gamma factor, \hyperpage{16}
+  \item gamma parameters, \hyperpage{16}
 
   \indexspace
 
   \item Landau's theorem, \hyperpage{6}
-  \item Lindel\"of hypothesis, \hyperpage{27}
+  \item Lindel\"of hypothesis, \hyperpage{26}
 
   \indexspace
 
@@ -63,26 +63,25 @@
 
   \indexspace
 
-  \item Perron's formula, \hyperpage{10}, \hyperpage{14}, 
-		\hyperpage{16}
-  \item primitive, \hyperpage{19}
+  \item Perron's formula, \hyperpage{9}, \hyperpage{13}, \hyperpage{15}
+  \item primitive, \hyperpage{18}
 
   \indexspace
 
   \item ramified, \hyperpage{17}
-  \item Riemann hypothesis, \hyperpage{26}
-  \item root number, \hyperpage{17}
+  \item Riemann hypothesis, \hyperpage{25}
+  \item root number, \hyperpage{16}
 
   \indexspace
 
   \item Selberg class, \hyperpage{17}
   \item Selberg class Lindel\"of hypothesis, \hyperpage{27}
-  \item Selberg class Riemann hypothesis, \hyperpage{26}
-  \item Selberg's orthogonality conjecture, \hyperpage{19}
-  \item self-dual, \hyperpage{19}
+  \item Selberg class Riemann hypothesis, \hyperpage{25}
+  \item Selberg's orthogonality conjecture, \hyperpage{18}
+  \item self-dual, \hyperpage{18}
   \item Siegel zero, \hyperpage{41}
   \item smooth dyadic weight, \hyperpage{29}
-  \item smooth weight, \hyperpage{15}
+  \item smooth weight, \hyperpage{14}
   \item subconvexity estimate, \hyperpage{27}
 
   \indexspace
@@ -91,9 +90,9 @@
 
   \indexspace
 
-  \item unfolded nontrivial zero, \hyperpage{39}
+  \item unfolded nontrivial zero, \hyperpage{38}
   \item unramified, \hyperpage{17}
-  \item unweighted, \hyperpage{15}
+  \item unweighted, \hyperpage{14}
 
   \indexspace
 
@@ -101,8 +100,8 @@
 
   \indexspace
 
-  \item weighted, \hyperpage{15}
-  \item Weyl bound, \hyperpage{28}
+  \item weighted, \hyperpage{14}
+  \item Weyl bound, \hyperpage{27}
 
   \indexspace
 
