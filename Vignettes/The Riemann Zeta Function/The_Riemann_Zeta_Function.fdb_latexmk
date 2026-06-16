@@ -1,13 +1,13 @@
 # Fdb version 3
-["makeindex The_Riemann_Zeta_Function.idx"] 1781528908 "The_Riemann_Zeta_Function.idx" "The_Riemann_Zeta_Function.ind" "The_Riemann_Zeta_Function" 1781631730
-  "The_Riemann_Zeta_Function.idx" 1781631730 96 c06e7c1281976096729997cbdc48f511 "pdflatex"
+["makeindex The_Riemann_Zeta_Function.idx"] 1781528908 "The_Riemann_Zeta_Function.idx" "The_Riemann_Zeta_Function.ind" "The_Riemann_Zeta_Function" 1781632838
+  "The_Riemann_Zeta_Function.idx" 1781632838 96 c06e7c1281976096729997cbdc48f511 "pdflatex"
   (generated)
   "The_Riemann_Zeta_Function.ilg"
   "The_Riemann_Zeta_Function.ind"
-["pdflatex"] 1781631729 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex" "The_Riemann_Zeta_Function.pdf" "The_Riemann_Zeta_Function" 1781631730
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.aux" 1781529143 19660 e8f3732c93acd9835176f6a08264ba66 ""
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex" 1781631729 22828 cf49eec912362d59cd5e20006a6ce57f ""
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1781529137 5480 1c1089c4f68d35449bb71f726253e7ea ""
+["pdflatex"] 1781632838 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex" "The_Riemann_Zeta_Function.pdf" "The_Riemann_Zeta_Function" 1781632838
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.aux" 1781632793 19507 86614fbf97eb93ec7511d3b5bb5e0ff2 ""
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex" 1781631732 22828 cf49eec912362d59cd5e20006a6ce57f ""
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1781632838 5480 1c1089c4f68d35449bb71f726253e7ea ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -187,11 +187,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "The_Riemann_Zeta_Function.aux" 1781631730 4640 391f2efbc652f86199878f29dd5c1c2b "pdflatex"
+  "The_Riemann_Zeta_Function.aux" 1781632838 4640 391f2efbc652f86199878f29dd5c1c2b "pdflatex"
   "The_Riemann_Zeta_Function.ind" 1781528908 140 0c8fd8a27f4c05f7fadefd4401a80d8f "makeindex The_Riemann_Zeta_Function.idx"
-  "The_Riemann_Zeta_Function.out" 1781631730 747 4f13e6ff97d933b14ffb5b09ca1f4240 "pdflatex"
-  "The_Riemann_Zeta_Function.tex" 1781631729 22828 cf49eec912362d59cd5e20006a6ce57f ""
-  "The_Riemann_Zeta_Function.toc" 1781631730 384 e2c9021d0ab970a76d21a0836fdd5c33 "pdflatex"
+  "The_Riemann_Zeta_Function.out" 1781632838 747 4f13e6ff97d933b14ffb5b09ca1f4240 "pdflatex"
+  "The_Riemann_Zeta_Function.tex" 1781631732 22828 cf49eec912362d59cd5e20006a6ce57f ""
+  "The_Riemann_Zeta_Function.toc" 1781632838 384 e2c9021d0ab970a76d21a0836fdd5c33 "pdflatex"
   (generated)
   "The_Riemann_Zeta_Function.aux"
   "The_Riemann_Zeta_Function.idx"

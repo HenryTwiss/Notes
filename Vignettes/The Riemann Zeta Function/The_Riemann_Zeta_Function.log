@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  16 JUN 2026 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  16 JUN 2026 14:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -707,10 +707,10 @@ Package rerunfilecheck Info: File `The_Riemann_Zeta_Function.out' has not change
 (rerunfilecheck)             Checksum: 4F13E6FF97D933B14FFB5B09CA1F4240;747.
  ) 
 Here is how much of TeX's memory you used:
- 25386 strings out of 478268
- 506312 string characters out of 5846347
- 772352 words of memory out of 5000000
- 43155 multiletter control sequences out of 15000+600000
+ 25385 strings out of 478268
+ 506300 string characters out of 5846347
+ 772345 words of memory out of 5000000
+ 43154 multiletter control sequences out of 15000+600000
  479628 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,16n,107p,891b,493s stack positions out of 10000i,1000n,20000p,200000b,200000s
