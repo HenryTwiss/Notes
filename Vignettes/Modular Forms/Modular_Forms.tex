@@ -370,7 +370,7 @@
       
        If \(\G\) is of level \(N\) then \(N\) is the smallest positive integer such that \(\G(N) \subseteq \G\). This means \(\begin{psmallmatrix} 1 & N \\ 0 & 1 \end{psmallmatrix}\) is the minimal translation guaranteed to belong to \(\G\). Since principal congruence subgroups are normal in the modular group, we have \(\G(N) \subseteq \G_{\infty}^{(h_{\mf{a}})}\) and so the aforementioned translation must be a power of \(\g_{\mf{a}}\) which means \(h_{\mf{a}} \mid N\).
        
-       We say \(\G\) is \textbf{reduced}\index{reduced} at \(\mf{a}\) if \(h_{\mf{a}} = 1\). For example, the congruence subgroups \(\G(N)\), \(\G_{1}(N)\), and \(\G_{0}(N)\) are all reduced at \(\infty\). The width of the cusps are also related to the index \(d_{\G}\) in a simple manner.
+       We say \(\G\) is \textbf{reduced}\index{reduced} at \(\mf{a}\) if \(h_{\mf{a}} = 1\). For example, the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), and \(\G(N)\) are all reduced at \(\infty\). The width of the cusps are also related to the index \(d_{\G}\) in a simple manner.
 
       \begin{proposition}\label{prop:sum_of_widths_equals_index}
         For any congruence subgroup \(\G\) and any cusp \(\mf{a}\) of \(\GH\), there are \(h_{\mf{a}}\) many cosets of \(\G\backslash\SL_{2}(\Z)\) whose elements are scaling matrices for cusps in the cusp class of \(\mf{a}\). In particular,
@@ -666,7 +666,7 @@
       \]
       upon summing the resulting geometric series. This implies \(f|_{k}\s_{\mf{a}}\) exhibits exponential decay and we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(y \to \infty\) which is provided by the fact that \(f\) is a cusp form.
 
-      Many of the modular forms we will study will be over the congruence subgroups \(\G(N)\), \(\G_{1}(N)\), and \(\G_{0}(N)\). To collect all of these cases, let \(\G\) denote any of these congruence subgroups. There are a few important simplifications when working over \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
+      Many of the modular forms we will study will be over the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), and \(\G(N)\). To collect all of these cases, let \(\G\) denote any of these congruence subgroups. There are a few important simplifications when working over \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
       \[
         \nu_{\chi}(\g) = \chi(d).
       \]
@@ -678,61 +678,47 @@
       \[
         \nu_{\chi}(\g\g') = \nu_{\chi}(\g)\nu_{\chi}(\g') \quad \text{and} \quad \nu_{\chi}(\g^{-1}) = \nu_{\chi}(\g)^{-1}.
       \]
-      respectively. In other words, \(\nu_{\chi}\) is a homomorphism and it is necessarily of finite order because \(\chi\) is. Therefore \(\nu_{\chi}\) satisfies the assumptions of a nebentypus. It is also regular at infinity. In the case \(f\) has nebentypus \(\nu_{\chi}\), we simply say that \(f\) has \textbf{character}\index{character} \(\chi\) and write
+      respectively. In other words, \(\nu_{\chi}\) is a homomorphism and it is necessarily of finite order because \(\chi\) is. Therefore \(\nu_{\chi}\) satisfies the assumptions of a nebentypus. It is also regular at \(\infty\). In the case \(f\) has nebentypus \(\nu_{\chi}\), we simply say that \(f\) has \textbf{character}\index{character} \(\chi\) and write
       \[
         \chi(\g) = \nu_{\chi}(\g).
       \]
-    \iffalse\subsection{\todo{Poincar\'e and Eisenstein Series}}
-      We will introduce two important classes of modular forms on \(\G(N)\backslash\H\), \(\G_{1}(N)\backslash\H\), and \(\G_{0}(N)\backslash\H\). These are the Poincar\'e and Eisenstein series. The latter of which will be a special case of the former. As we will only work with these congruence subgroups, let \(\G\) denote such a subgroup. Let \(m \ge 0\), \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor \(q \mid N\), and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is singular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
+    \subsection{\todo{Poincar\'e and Eisenstein Series}}
+      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), and \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor \(q \mid N\), and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
       \[
-        P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+        P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
-      We call \(m\) the \textbf{index}\index{index} of \(P_{m,k,\chi,\mf{a}}(z)\). If \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. 
+      We call \(m\) the \textbf{index}\index{index} of \(P_{m,k,\chi,\mf{a}}(z)\). If \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. In this case, note that \(\chi\) is automatically regular at \(\infty\).
 
       \begin{remark}
-        The reason why we restrict to \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge (see \cref{prop:general_lattice_sum_convergence_for_two_variables}).
+        The reason why we restrict to \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
       \end{remark}
 
-      We first verify that \(P_{m,k,\chi,\mf{a}}(z)\) is well-defined. It suffices to show that the summands are independent of the representatives \(\g\) and \(\s_{\mf{a}}\). To see that \(\cchi(\g)\) is independent of \(\g\), it suffices to verify independence by multiplication on the left by the generator \(\g_{\mf{a}}\) of \(\G_{\mf{a}}\). Indeed,
+      The Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the character, this is easily checked by direct computation using the fact that \(\chi\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\). So by multiplicativity of the slash operator, it suffices to show 
       \[
-        \cchi(\g_{\mf{a}}\g) = \cchi(\g_{\mf{a}})\cchi(\g) = \cchi(\g),
+        \left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\g_{\infty}^{(h_{\mf{a}})}\right)(z) = e\left(\frac{mz}{h_{\mf{a}}}\right).
       \]
-      since \(\chi\) is singular at \(\mf{a}\). This verifies that \(\cchi(\g)\) is independent of the representative \(\g\). As the set of representatives for the scaling matrix \(\s_{\mf{a}}\) is \(\s_{\mf{a}}\G_{\infty}\) and the set of representatives for \(\g\) is \(\G_{\mf{a}}\g\), we see that the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{\infty}\s_{\mf{a}}^{-1}\G_{\mf{a}}\g\). But as \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\) and \(h_{\infty} = 1\), this set of representatives is \(\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\g\) and therefore it suffices to verify independence of \(\s_{\mf{a}}^{-1}\g\) by multiplication on the left by the generator \(\g_{\infty}^{(h_{\mf{a}})}\) of \(\G_{\infty}^{(h_{\mf{a}})}\). Since the slash operator is multiplicative, it suffices to show
-      \[
-        \left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\g_{\infty}^{(h_{\mf{a}})}\right)(z) = e^{\frac{2\pi imz}{h_{\mf{a}}}}.
-      \]
-      Indeed,
-      \[
-        \left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\g_{\infty}^{(h_{\mf{a}})}\right)(z) = j(\g_{\infty}^{(h_{\mf{a}})},z)^{-k}e^{\frac{2\pi im\g_{\infty}^{(h_{\mf{a}})}z}{h_{\mf{a}}}} = e^{\frac{2\pi im(z+h_{\mf{a}})}{h_{\mf{a}}}} = e^{2\pi imz}.
-      \]
-      Therefore \(P_{m,k,\chi,\mf{a}}(z)\) is well-defined. To see that \(P_{m,k,\chi,\mf{a}}(z)\) is holomorphic on \(\H\), first note that
-      \begin{equation}\label{equ:Poincare_exponential_bound}
-        \left|e^{\frac{2\pi im\s_{\mf{a}}^{-1}\g z}{h_{\mf{a}}}}\right| = e^{-\frac{2\pi m\Im(\mf{a}^{-1}\g z)}{h_{\mf{a}}}} < 1.
-      \end{equation}
-      Then the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\) gives
+      This is easily verified by direct computation. Whence \(P_{m,k,\chi,\mf{a}}(z)\) is well-defined. To see that \(P_{m,k,\chi,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\) and bounding term by term gives
       \[
         P_{m,k,\chi,\mf{a}}(z) \ll \sum_{(c,d) \in \Z^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
-      As \(k \ge 3\), this latter series is locally absolutely uniformly convergent for \(z \in \H\) by \cref{prop:general_lattice_sum_convergence_for_two_variables}. Hence \(P_{m,k,\chi,\mf{a}}(z)\) does too and so it is holomorphic on \(\H\). We now verify modularity for \(P_{m,k,\chi,\mf{a}}(z)\). This is just a computation:
-      \begin{align*}
-        (P_{m,k,\chi,\mf{a}}|_{k}\g)(z) &= \sum_{\g' \in \G_{\mf{a}}\backslash\G}\cchi(\g')\left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\s_{\mf{a}}^{-1}\g'\g\right)(z) \\
-        &= \sum_{\g' \in \G_{\mf{a}}\backslash\G}\cchi(\g'\g^{-1})\left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\s_{\mf{a}}^{-1}\g'\right)(z) && \text{\(\g' \mapsto \g'\g^{-1}\)} \\
-        &= \chi(\g)\sum_{\g' \in \G_{\mf{a}}\backslash\G}\cchi(\g')\left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\s_{\mf{a}}^{-1}\g'\right)(z) \\
-        &= \chi(\g)P_{m,k,\chi,\mf{a}}(z).
-      \end{align*}
+      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,k,\chi,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
+      \[
+        (P_{m,k,\chi,\mf{a}}|_{k}\eta)(z) = \chi(\eta)P_{m,k,\chi,\mf{a}}(z).
+      \]
       To verify the growth condition, we will need a technical lemma:
 
-      \begin{lemma}\label{lem:technical_Eisenstein_convergence_lemma}
-        Let \(a,b > 0\) be reals and consider the half-strip
+      \begin{lemma}\label{lem:technical_Poincare_convergence_lemma}
+        Let \(a,b > 0\) and consider set
         \[
-          S_{a,b} = \{z \in \H:|x| \le a \text{ and } y \ge b\}.
+          S_{a,b} = \{z \in \H:|\Re(z)| \le a \text{ and } \Im(z) \ge b\}.
         \]
-        Then there is a \(\d \in (0,1)\) such that
+        Then there exists a \(\d \in (0,1)\) such that
         \[
           |nz+m| \ge \d|ni+m|,
         \]
-        for all \(n,m \in \Z\) and all \(z \in S_{a,b}\).
+        for all pairs of integers \((n,m)\) and all \(z \in S_{a,b}\).
       \end{lemma}
+      \iffalse
       \begin{proof}
         If \(n = 0\) then any \(\d\) is sufficient. If \(n \neq 0\) then the desired inequality is equivalent to
         \[
@@ -765,7 +751,7 @@
       \[
         \sum_{(c,d) \in \Z^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}} = \sum_{d \neq 0}\frac{1}{d^{k}}+\sum_{c \neq 0}\sum_{d \in \Z}\frac{1}{|cz+d|^{k}} = 2\sum_{d \ge 1}\frac{1}{d^{k}}+2\sum_{c \ge 1}\sum_{d \in \Z}\frac{1}{|cz+d|^{k}}.
       \]
-      Since the first sum is bounded, it suffices to show that the double sum is too as \(z \to \infty\). To see this, let \(y \ge 1\) and \(\d\) be as in \cref{lem:technical_Eisenstein_convergence_lemma}. Then for any integer \(N \ge 1\) we can write
+      Since the first sum is bounded, it suffices to show that the double sum is too as \(z \to \infty\). To see this, let \(y \ge 1\) and \(\d\) be as in \cref{lem:technical_Poincare_convergence_lemma}. Then for any integer \(N \ge 1\) we can write
       \begin{align*}
         \sum_{c \ge 1}\sum_{d \in \Z}\frac{1}{|cz+d|^{k}} &= \sum_{c+|d| \le N}\frac{1}{|cz+d|^{k}}+\sum_{c+|d| > N}\frac{1}{|cz+d|^{k}} \\
         &\le \sum_{c+|d| \le N}\frac{1}{|cz+d|^{k}}+\sum_{c+|d| > N}\frac{1}{(\d|ci+d|)^{k}} \\
@@ -774,7 +760,7 @@
       As \(\sum_{c \ge 1}\sum_{d \in \Z}\frac{1}{|ci+d|^{k}}\) converges by \cref{prop:general_lattice_sum_convergence_for_two_variables}, the second sum tends to zero as \(N \to \infty\). As for the first sum, it is finite and each term is bounded. Thus the double sum is bounded. This verifies the growth condition. We collect this work as a theorem:
 
       \begin{theorem}\label{thm:Poincare_series_modular}
-        Let \(m \ge 0\), \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing the level, and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is singular at \(\mf{a}\). The Poincar\'e series
+        Let \(m \ge 0\), \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing the level, and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is regular at \(\mf{a}\). The Poincar\'e series
         \[
           P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
@@ -788,7 +774,7 @@
       If \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. In particular, we have already verified the following theorem:
 
       \begin{theorem}\label{thm:Eisenstein_series_modular}
-        Let \(k \ge 3\), \(\chi\) be Dirichlet character with conductor dividing the level, and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is singular at \(\mf{a}\). The Eisenstein series
+        Let \(k \ge 3\), \(\chi\) be Dirichlet character with conductor dividing the level, and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is regular at \(\mf{a}\). The Eisenstein series
         \[
           E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
         \]
@@ -1019,7 +1005,7 @@
         \[
           F(z) = \sum_{n \ge 0}a_{n}e^{2\pi inz}.
         \]
-        Since \(F\) is holomorphic at infinity it is bounded as \(z \to \infty\). As \(e^{2\pi inz} \to 0\) as \(z \to \infty\), this means that the function
+        Since \(F\) is holomorphic at \(\infty\) it is bounded as \(z \to \infty\). As \(e^{2\pi inz} \to 0\) as \(z \to \infty\), this means that the function
         \[
           G(q) = \sum_{n \ge 0}a_{n}q^{n},
         \]
@@ -1039,7 +1025,7 @@
         \begin{equation}\label{equ:valence_formula_2}
           \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \sum_{1 \le i \le 8}I_{i}(\e).
         \end{equation}
-        We will compute the integral on the right-hand side of \cref{equ:valence_formula_2}. Since \(\SL_{2}(\Z)\) is reduced at infinity, \(F(z+1) = F(z)\). Taking the logarithmic derivative, we also see that \(\frac{F'}{F}(z+1) = \frac{F'}{F}(z)\). Whence
+        We will compute the integral on the right-hand side of \cref{equ:valence_formula_2}. Since \(\SL_{2}(\Z)\) is reduced at \(\infty\), \(F(z+1) = F(z)\). Taking the logarithmic derivative, we also see that \(\frac{F'}{F}(z+1) = \frac{F'}{F}(z)\). Whence
         \begin{equation}\label{equ:valence_formula_3}
           I_{2}(\e)+I_{8}(\e) = 0.
         \end{equation}
