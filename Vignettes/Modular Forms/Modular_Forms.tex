@@ -718,31 +718,31 @@
         \]
         for all pairs of integers \((n,m)\) and all \(z \in S_{a,b}\).
       \end{lemma}
-      \iffalse
       \begin{proof}
-        If \(n = 0\) then any \(\d\) is sufficient. If \(n \neq 0\) then the desired inequality is equivalent to
+        If \(n = 0\) then the claim is obvious as any \(\d\) is sufficient. If \(n \neq 0\) then it is equivalent to prove
         \[
-          \left|\frac{z+\frac{m}{n}}{i+\frac{n}{m}}\right| \ge \d.
+          \left|\frac{z+\frac{m}{n}}{i+\frac{m}{n}}\right| \ge \d.
         \]
-        So consider the function
+        To this end, consider the function
         \[
           f(z,r) = \left|\frac{z+r}{i+r}\right|,
         \]
-        for \(z \in S_{a,b}\) and \(r \in \R\). It suffices to show \(f(z,r) \ge \d\). As \(z \in \H\), \(z-r \neq 0\) so that \(f(z,r)\) is continuous and positive on \(S_{a,b} \x \R\). Now let \(Y > b\) and consider the region
+        for \(z \in S_{a,b}\) and real \(r\). We will prove the stronger statement \(f(z,r) \ge \d\). Clearly \(f(z,r)\) is continuous on \(S_{a,b} \x \R\) and it is also positive there since \(z-r \neq 0\). A short computation shows
         \[
-          S_{a,b}^{Y} = \{z \in \H:|x| \le a \text{ and } b \le y \le Y\}.
+          f(z,r)^{2} \ge \frac{|z|^{2}+r^{2}}{1+r^{2}}.
         \]
-        We claim that there exists a \(Y\) such that if \(y > Y\) and \(|x| > Y\) then \(f(z,r)^{2} > \frac{1}{4}\). Indeed, we compute
+        Since \(\frac{r^{2}}{1+r^{2}} \to 1\) as \(r \to \pm\infty\), choose \(Y > b\) such that \(\frac{r^{2}}{1+r^{2}} \ge \frac{1}{4}\) for \(|r| > Y\). Now let
         \[
-          f(z,r)^{2} = \frac{(z+r)(\conj{z}+r)}{(i+r)(-i+r)} = \frac{|z|^{2}+2xr+r^{2}}{1+r^{2}} \ge \frac{y+r^{2}}{1+r^{2}},
+          S_{a,b}^{Y} = \{z \in \H:|\Re(z)| \le a \text{ and } b \le \Im(z) \le Y\},
         \]
-        where in the inequality we have used the bound \(|z|^{2} \ge y\) and that \(x\) is bounded. Now \(\frac{r^{2}}{1+r^{2}} \to 1\) as \(r \to \pm\infty\) so there exists a \(Y\) such that \(|r| > Y\) implies \(\frac{r^{2}}{1+r^{2}} \ge \frac{1}{4}\). Then
+        so that
         \[
-          \frac{y+r^{2}}{1+r^{2}} \ge \frac{y}{1+r^{2}}+\frac{r^{2}}{1+r^{2}} \ge \frac{y}{1+r^{2}}+\frac{1}{4} > \frac{1}{4}.
+          f(z,r) \ge \frac{1}{2},
         \]
-        It follows that \(f(z,r) > \frac{1}{2}\) outside of \(S_{a,b}^{Y} \x [-Y,Y]\). But this latter region is compact and so \(f(z,r)\) attains a minimum \(\d'\) on it. Setting \(\d = \min\left(\frac{1}{2},\d'\right)\) completes the proof.
+        outside of \(S_{a,b}^{Y} \x [-Y,Y]\). But this latter region is compact and so \(f(z,r)\) attains a minimum \(\d' > 0\) on it. Setting \(\d = \min\left(\frac{1}{2},\d'\right)\) completes the proof.
       \end{proof}
 
+      \iffalse
       We can now verify the growth condition for \(P_{m,k,\chi,\mf{a}}(z)\). Let \(\s_{\mf{b}}\) be a scaling matrix for a cusp \(\mf{b}\). Then \cref{equ:Poincare_exponential_bound}, the cocycle condition, and Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) together give
       \[
         (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
