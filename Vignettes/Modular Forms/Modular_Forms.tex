@@ -683,7 +683,7 @@
         \chi(\g) = \nu_{\chi}(\g).
       \]
     \subsection{\todo{Poincar\'e and Eisenstein Series}}
-      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), and \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor \(q \mid N\), and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
+      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), and \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
       \[
         P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
@@ -695,11 +695,11 @@
 
       The Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the character, this is easily checked by direct computation using the fact that \(\chi\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\). So by multiplicativity of the slash operator, it suffices to show 
       \[
-        \left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\g_{\infty}^{(h_{\mf{a}})}\right)(z) = e\left(\frac{mz}{h_{\mf{a}}}\right).
+        \left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\g_{\infty}^{(h_{\mf{a}})}\right)(z) = e\left(\frac{mz}{h_{\mf{a}}}\right).
       \]
       This is easily verified by direct computation. Whence \(P_{m,k,\chi,\mf{a}}(z)\) is well-defined. To see that \(P_{m,k,\chi,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\) and bounding term by term gives
       \[
-        P_{m,k,\chi,\mf{a}}(z) \ll \sum_{(c,d) \in \Z^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+        P_{m,k,\chi,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
       This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,k,\chi,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
       \[
@@ -742,27 +742,24 @@
         outside of \(S_{a,b}^{Y} \x [-Y,Y]\). But this latter region is compact and so \(f(z,r)\) attains a minimum \(\d' > 0\) on it. Setting \(\d = \min\left(\frac{1}{2},\d'\right)\) completes the proof.
       \end{proof}
 
-      \iffalse
-      We can now verify the growth condition for \(P_{m,k,\chi,\mf{a}}(z)\). Let \(\s_{\mf{b}}\) be a scaling matrix for a cusp \(\mf{b}\). Then \cref{equ:Poincare_exponential_bound}, the cocycle condition, and Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) together give
+      We can now verify the growth condition for \(P_{m,k,\chi,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
       \[
-        (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+        (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
       Now decompose this last sum as
       \[
-        \sum_{(c,d) \in \Z^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}} = \sum_{d \neq 0}\frac{1}{d^{k}}+\sum_{c \neq 0}\sum_{d \in \Z}\frac{1}{|cz+d|^{k}} = 2\sum_{d \ge 1}\frac{1}{d^{k}}+2\sum_{c \ge 1}\sum_{d \in \Z}\frac{1}{|cz+d|^{k}}.
+        \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}} = \sum_{d \ge 1}\frac{1}{d^{k}}+\sum_{c \ge 1}\sum_{d \ge 0}\frac{1}{|cz+d|^{k}}.
       \]
-      Since the first sum is bounded, it suffices to show that the double sum is too as \(z \to \infty\). To see this, let \(y \ge 1\) and \(\d\) be as in \cref{lem:technical_Poincare_convergence_lemma}. Then for any integer \(N \ge 1\) we can write
-      \begin{align*}
-        \sum_{c \ge 1}\sum_{d \in \Z}\frac{1}{|cz+d|^{k}} &= \sum_{c+|d| \le N}\frac{1}{|cz+d|^{k}}+\sum_{c+|d| > N}\frac{1}{|cz+d|^{k}} \\
-        &\le \sum_{c+|d| \le N}\frac{1}{|cz+d|^{k}}+\sum_{c+|d| > N}\frac{1}{(\d|ci+d|)^{k}} \\
-        &\le \sum_{c+|d| \le N}\frac{1}{|cz+d|^{k}}+\frac{1}{\d^{k}}\sum_{c+|d| > N}\frac{1}{|ci+d|^{k}}.
-      \end{align*}
-      As \(\sum_{c \ge 1}\sum_{d \in \Z}\frac{1}{|ci+d|^{k}}\) converges by \cref{prop:general_lattice_sum_convergence_for_two_variables}, the second sum tends to zero as \(N \to \infty\). As for the first sum, it is finite and each term is bounded. Thus the double sum is bounded. This verifies the growth condition. We collect this work as a theorem:
+      Since the first sum on the right-hand side is bounded, it suffices to show that the double sum is too as \(z \to \infty\). So let \(\Im(z) \ge 1\) and \(\d\) be as in \cref{lem:technical_Poincare_convergence_lemma}. Then for any positive integer \(N\), we may write
+      \[
+        \sum_{c \ge 1}\sum_{d \ge 0}\frac{1}{|cz+d|^{k}} \le \sum_{c+d \le N}\frac{1}{|cz+d|^{k}}+\frac{1}{\d^{k}}\sum_{c+d > N}\frac{1}{|ci+d|^{k}}.
+      \]
+      As \(k \ge 3\), the second sum on the right-hand side is the tail of an absolute convergent series. Whence it tends to zero as \(N \to \infty\). As for the first sum, it is finite and each term is bounded. Together this shows that the double sum is bounded as \(z \to \infty\) verifying the growth condition. We collect this work in the following theorem:
 
       \begin{theorem}\label{thm:Poincare_series_modular}
-        Let \(m \ge 0\), \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing the level, and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is regular at \(\mf{a}\). The Poincar\'e series
+        Let \(\G\) be of level \(N\), \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is regular at \(\mf{a}\). The Poincar\'e series
         \[
-          P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+          P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
         is a weight \(k\) modular form with character \(\chi\) on \(\GH\).
       \end{theorem}
@@ -774,14 +771,14 @@
       If \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. In particular, we have already verified the following theorem:
 
       \begin{theorem}\label{thm:Eisenstein_series_modular}
-        Let \(k \ge 3\), \(\chi\) be Dirichlet character with conductor dividing the level, and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is regular at \(\mf{a}\). The Eisenstein series
+        Let \(\G\) be of level \(N\), \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is regular at \(\mf{a}\). The Eisenstein series
         \[
           E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
         \]
         is a weight \(k\) modular form with character \(\chi\) on \(\GH\).
       \end{theorem}
 
-      We will now compute the Fourier series of the Poincar\'e series with positive index:
+      \iffalse We will now compute the Fourier series of the Poincar\'e series with positive index:
 
       \begin{proposition}\label{prop:Fourier_series_Poincare_modular}
         Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,k,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
