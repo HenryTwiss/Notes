@@ -933,6 +933,8 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.t
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 OUTPUT Modular_Forms.thm
 INPUT Modular_Forms.aux
 INPUT ./Modular_Forms.out
@@ -940,6 +942,7 @@ INPUT ./Modular_Forms.out
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb

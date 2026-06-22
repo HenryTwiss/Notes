@@ -1,16 +1,17 @@
 # Fdb version 3
-["makeindex Modular_Forms.idx"] 1781887052 "Modular_Forms.idx" "Modular_Forms.ind" "Modular_Forms" 1781888766
-  "Modular_Forms.idx" 1781888766 1742 8ab82d66638dcaa4687b3329125b7f0e "pdflatex"
+["makeindex Modular_Forms.idx"] 1782095352 "Modular_Forms.idx" "Modular_Forms.ind" "Modular_Forms" 1782095695
+  "Modular_Forms.idx" 1782095694 1742 8ab82d66638dcaa4687b3329125b7f0e "pdflatex"
   (generated)
   "Modular_Forms.ilg"
   "Modular_Forms.ind"
-["pdflatex"] 1781888765 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Modular Forms/Modular_Forms.tex" "Modular_Forms.pdf" "Modular_Forms" 1781888766
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Modular Forms/Modular_Forms.tex" 1781888765 217347 3232fb49bb51ad848580282b40eb3afa ""
+["pdflatex"] 1782095694 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Modular Forms/Modular_Forms.tex" "Modular_Forms.pdf" "Modular_Forms" 1782095695
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Modular Forms/Modular_Forms.tex" 1782095694 215523 063eb3220d905d5de7dc0b6dfc78a8da ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1781632838 5480 1c1089c4f68d35449bb71f726253e7ea ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1246382020 1040 b84415f97d114011685943ade933dc71 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm" 1246382020 1040 a9d2074f3fa062d4d9046b92e2334d8c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm" 1246382020 1040 82eb6630b094bff824fccca83ff507f9 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -19,6 +20,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1136768653 1344 8a0be4fe4d376203000810ad4dc81558 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1136768653 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -53,6 +55,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1336858727 21098 d4aee7c0aac232caac5688b586b9363c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb" 1336858727 21251 56705123063d7b34002d6b6e7142345e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -198,11 +201,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Modular_Forms.aux" 1781888766 10300 e4bf3a3fab7961c00c9a871c5676af26 "pdflatex"
-  "Modular_Forms.ind" 1781887052 1892 0c32fe78c39c660a627acae5aa0b09db "makeindex Modular_Forms.idx"
-  "Modular_Forms.out" 1781888766 1597 f427d38313f62073589cdee209671bea "pdflatex"
-  "Modular_Forms.tex" 1781888765 217347 3232fb49bb51ad848580282b40eb3afa ""
-  "Modular_Forms.toc" 1781888766 823 bc3194b57eae95e43104d7a3e6f6e461 "pdflatex"
+  "Modular_Forms.aux" 1782095694 10722 a35e1ce215bf1615b1d499e8bb269d90 "pdflatex"
+  "Modular_Forms.ind" 1782095352 1892 0c32fe78c39c660a627acae5aa0b09db "makeindex Modular_Forms.idx"
+  "Modular_Forms.out" 1782095694 1597 f427d38313f62073589cdee209671bea "pdflatex"
+  "Modular_Forms.tex" 1782095694 215523 063eb3220d905d5de7dc0b6dfc78a8da ""
+  "Modular_Forms.toc" 1782095694 823 bc3194b57eae95e43104d7a3e6f6e461 "pdflatex"
   (generated)
   "Modular_Forms.aux"
   "Modular_Forms.idx"

@@ -687,7 +687,7 @@
       \[
         P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
-      We call \(m\) the \textbf{index}\index{index} of \(P_{m,k,\chi,\mf{a}}(z)\). If \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. In this case, note that \(\chi\) is automatically regular at \(\infty\).
+      We call \(m\) the \textbf{index}\index{index} of \(P_{m,k,\chi,\mf{a}}(z)\). If \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. Note that \(\chi\) is always regular at \(\infty\). 
 
       \begin{remark}
         The reason why we restrict to \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
@@ -757,104 +757,97 @@
       As \(k \ge 3\), the second sum on the right-hand side is the tail of an absolute convergent series. Whence it tends to zero as \(N \to \infty\). As for the first sum, it is finite and each term is bounded. Together this shows that the double sum is bounded as \(z \to \infty\) verifying the growth condition. We collect this work in the following theorem:
 
       \begin{theorem}\label{thm:Poincare_series_modular}
-        Let \(\G\) be of level \(N\), \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is regular at \(\mf{a}\). The Poincar\'e series
+        The Poincar\'e series
         \[
           P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
-        is a weight \(k\) modular form with character \(\chi\) on \(\GH\).
+        is a weight \(k\) modular forms with character \(\chi\) on \(\GH\).
       \end{theorem}
-      
-      For \(m = 0\), we write \(E_{k,\chi,\mf{a}}(z) = P_{0,k,\chi,\mf{a}}(z)\) and call \(E_{k,\chi,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
+
+      In the case of index zero Poincar\'e series, we write \(E_{k,\chi,\mf{a}}(z) = P_{0,k,\chi,\mf{a}}(z)\) and call \(E_{k,\chi,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
       \[
         E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z).
       \]
-      If \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. In particular, we have already verified the following theorem:
+      Just as for the Poincar\'e series, if \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. Note that \(\chi\) is always regular at \(\infty\). In fact, we obtain the following theorem as a special case of the former one:
 
       \begin{theorem}\label{thm:Eisenstein_series_modular}
-        Let \(\G\) be of level \(N\), \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\). Also assume \(\chi\) is regular at \(\mf{a}\). The Eisenstein series
+        The Eisenstein series
         \[
           E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
         \]
-        is a weight \(k\) modular form with character \(\chi\) on \(\GH\).
+        is a weight \(k\) modular forms with character \(\chi\) on \(\GH\).
       \end{theorem}
-
-      \iffalse We will now compute the Fourier series of the Poincar\'e series with positive index:
+      
+      We will now compute the Fourier series of the Poincar\'e series and Eisenstein series. This will essentially follow from a careful application of Poisson summation. Unlike verifying that these series are modular forms, the arguments are slightly different to compute their Fourier series. We first deduce the Fourier series of the Poincar\'e series.
 
       \begin{proposition}\label{prop:Fourier_series_Poincare_modular}
         Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,k,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
-        \[
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{t \ge 1}\left(\d_{\G\mf{a},\G\mf{b}}\d_{m,t}+2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,t,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mt}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e^{\frac{2\pi itz}{h_{\mf{b}}}}.
-        \]
+        \begin{align*}
+          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right) \\
+          &+ \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{nh_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,n,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e\left(\frac{nz}{h_{\mf{b}}}\right),
+        \end{align*}
+        provided the index \(m\) is positive.
       \end{proposition}
       \begin{proof}
-        We have
+        By multiplicativity of the slash operator, write
         \[
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}e^{\frac{2\pi im\s_{\mf{a}}^{-1}\g\s_{\mf{b}}z}{h_{\mf{a}}}}.
+          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}e\left(\frac{m\s_{\mf{a}}^{-1}\g\s_{\mf{b}}z}{h_{\mf{a}}}\right).
         \]
-        Using the Bruhat decomposition (in particular \cref{rem:Bruhat_modulo_infity_exact}), this becomes
-        \[
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e^{\frac{2\pi imz}{h_{\mf{b}}}}+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}} \\ \ell \in \Z}}\cchi(ch_{\mf{b}}\ell+d)\frac{e^{\frac{2\pi im}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}\right)}}{(cz+ch_{\mf{b}}\ell+d)^{k}},
-        \]
-        where we have used the fact that
+        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{\mf{a}}\backslash\G\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell h_{\mf{b}}+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
         \[
           \frac{az+b}{cz+(ch_{\mf{b}}\ell+d)} = \frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}.
         \]
-        As \(\chi\) has conductor dividing \(N\) and \(c \equiv 0 \tmod{N}\), we further have
+        Using these facts together with the periodicity of \(\chi\), we further have
         \[
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e^{\frac{2\pi imz}{h_{\mf{b}}}}+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{e^{\frac{2\pi im}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}\right)}}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
+          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right)+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{e\left(\frac{m}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}\right)\right)}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
         \]
         Now let
         \[
-          I_{c,d}(z) = \sum_{\ell \in \Z}\frac{e^{\frac{2\pi im}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell +cd}\right)}}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
+          I_{c,d}(z) = \sum_{\ell \in \Z}\frac{e\left(\frac{m}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}\right)\right)}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
         \]
-        We will apply the Poisson summation formula to \(I_{c,d}(z)\). By the identity theorem it suffices to apply the Poisson summation formula for \(z = iy\) with \(y > 0\). Accordingly, let \(f(x)\) be given by
+        We will apply the Poisson summation formula to \(I_{c,d}(z)\). By the identity theorem it suffices to verify the claim for \(z = iy\) with \(y\) positive. Accordingly, let \(f(x)\) be given by
         \[
-          f(x) = \frac{e^{\frac{2\pi im}{h_{\mf{a}}}\left(\frac{a}{d}-\frac{1}{c^{2}h_{\mf{b}}x+cd+ic^{2}y}\right)}}{(ch_{\mf{b}}x+d+icy)^{k}}.
+          f(x) = \frac{e\left(\frac{m}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}(iy)+c^{2}h_{\mf{b}}x+cd}\right)\right)}{(c(iy)+ch_{\mf{b}}x+d)^{k}}.
         \]
-        Then \(f(x)\) is absolutely integrable on \(\R\) because it exhibits polynomial decay of order \(k > 1\). We compute its Fourier transform
+        Then \(f(x)\) is Schwartz class. We will compute its Fourier transform
         \[
-          (\mc{F}f)(t) = \int_{-\infty}^{\infty}f(x)e^{-2\pi itx}\,dx = \int_{-\infty}^{\infty}\frac{e^{\frac{2\pi im}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}h_{\mf{b}}x+cd+ic^{2}y}\right)}}{(ch_{\mf{b}}x+d+icy)^{k}}e^{-2\pi itx}\,dx.
+          (\mc{F}f)(n) = \int_{-\infty}^{\infty}\frac{e\left(\frac{m}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}(iy)+c^{2}h_{\mf{b}}x+cd}\right)\right)}{(c(iy)+ch_{\mf{b}}x+d)^{k}}e(-nx)\,dx.
         \]
         Complexify the integral to get
         \[
-          \int_{\Im(w) = 0}\frac{e^{\frac{2\pi im}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}h_{\mf{b}}w+cd+ic^{2}y}\right)}}{(ch_{\mf{b}}w+d+icy)^{k}}e^{-2\pi itw}\,dw.
+          \int_{\Im(w) = 0}\frac{e\left(\frac{m}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}(iy)+c^{2}h_{\mf{b}}w+cd}\right)\right)}{(c(iy)+ch_{\mf{b}}w+d)^{k}}e(-nw)\,dw,
         \]
-        Now make the change of variables \(w \mapsto w-\frac{d}{ch_{\mf{b}}}-i\frac{y}{h_{\mf{b}}}\) to obtain
+        and make the change of variables \(w \mapsto w-\frac{d}{ch_{\mf{b}}}-\frac{(iy)}{h_{\mf{b}}}\) to obtain
         \[
-          e^{2\pi i\left(\frac{ma}{ch_{\mf{a}}}+\frac{td}{ch_{\mf{b}}}\right)-\frac{2\pi ty}{h_{\mf{b}}}}\int_{\Im(w) = \frac{y}{h_{\mf{b}}}}\frac{e^{-\frac{2\pi im}{c^{2}h_{\mf{a}}h_{\mf{b}}w}}}{(ch_{\mf{b}}w)^{k}}e^{-2\pi itw}\,dw.
+          e\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}+\frac{n(iy)}{h_{\mf{b}}}\right)\int_{\Im(w) = \frac{y}{h_{\mf{b}}}}\frac{e\left(-\frac{m}{c^{2}h_{\mf{a}}h_{\mf{b}}w}\right)}{(ch_{\mf{b}}w)^{k}}e(-nw)\,dw.
         \]
-        The integrand is meromorphic with a pole at \(w = 0\). Moreover, we have
+        The integrand is meromorphic with a pole at \(w = 0\) and has polynomial decay of order \(k\) provided \(n\) is nonpositive. So for these \(n\), we conclude that the integral vanishes upon shifting the line of integration to \(\Im(w) = T\) for positive \(T\) and taking the limit as \(T \to \infty\). It remains to compute the integral for positive \(n\). To do this, make the change of variables \(w \mapsto -\frac{w}{2\pi it}\) to the last integral to rewrite it as
         \[
-          \frac{1}{(ch_{\mf{b}}w)^{k}} \ll \frac{1}{|w|^{k}}, \quad e^{-\frac{2\pi im}{c^{2}h_{\mf{a}}h_{\mf{b}}w}} \ll e^{-\frac{2\pi m\Im(w)}{h_{\mf{a}}h_{\mf{b}}|cw|^{2}}}, \quad \text{and} \quad e^{-2\pi itw} \ll e^{2\pi ty}.
+          \frac{(-1)^{k}(2\pi it)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{w-\frac{4\pi^{2}mn}{c^{2}h_{\mf{a}}h_{\mf{b}}w}}}{w^{k}}\,dw.
         \]
-        The first expression has polynomial decay, the second expression is bounded, and the third expression exhibits exponential decay if and only if \(t < 0\) and is bounded if \(t = 0\). So when \(t \le 0\) we may take the limit as \(\Im(w) \to \infty\) by shifting the line of integration and conclude that the integral vanishes. It remains to compute the integral for \(t \ge 1\). To do this, make the change of variables \(w \mapsto -\frac{w}{2\pi it}\) to the last integral to rewrite it as
+        Homotoping the line of integration to the Hankel contour about the negative real axis, we recognize the integral as the Schl\"aflin integral representation for the \(J\)-Bessel function since \(m\) is positive. This gives
+        \[
+          2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{1}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right).
+        \]
+        So in total we obtain
+        \[
+          (\mc{F}f)(n) = \begin{cases} \left(2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{e\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}\right)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e\left(\frac{n(iy)}{h_{\mf{b}}}\right) & \text{if \(n \ge 1\)}, \\ 0 & \text{if \(n \le 0\)}. \end{cases}
+        \]
+        Then by Poisson summation, we have
+        \[
+          I_{c,r}(z) = \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{nh_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{e\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}\right)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
+        \]
+        Plugging this back into the Poincar\'e series, interchanging the sums over \(n\) and \(c\) by absolute convergence, and collecting the exponential sum over \(a\) and \(d\), we at last obtain
         \begin{align*}
-          \frac{1}{2\pi it}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{-\frac{4\pi^{2}mt}{c^{2}h_{\mf{a}}h_{\mf{b}}w}}}{\left(-\frac{ch_{\mf{b}}w}{2\pi it}\right)^{k}}e^{w}\,dw &= \frac{1}{2\pi it}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{w-\frac{4\pi^{2}mt}{c^{2}h_{\mf{a}}h_{\mf{b}}w}}}{\left(-\frac{ch_{\mf{b}}w}{2\pi it}\right)^{k}}\,dw \\
-          &= \frac{(-1)^{k}(2\pi it)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{w-\frac{4\pi^{2}mt}{c^{2}h_{\mf{a}}h_{\mf{b}}w}}}{w^{k}}\,dw \\
-          &= \frac{(-1)^{k}(2\pi it)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{-\infty}^{(0^{+})}\frac{e^{w-\frac{4\pi^{2}mt}{c^{2}h_{\mf{a}}h_{\mf{b}}w}}}{w^{k}}\,dw \\
-          &= 2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{1}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mt}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right),
+          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right) \\
+          &+ \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{nh_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,n,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
         \end{align*}
-        where in the second to last line we have homotoped the line of integration to a Hankel contour about the negative real axis and in the last line we have used the Schl\"aflin integral representation for the \(J\)-Bessel function (see \cref{append:Bessel_Functions}). So in total we obtain
-        \[
-          (\mc{F}f)(t) = \begin{cases} \left(2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{e^{2\pi i\left(\frac{ma}{ch_{\mf{a}}}+\frac{td}{ch_{\mf{b}}}\right)}}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mt}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e^{-2\pi ty} & \text{if \(t \ge 1\)}, \\ 0 & \text{if \(t \le 0\)}. \end{cases}
-        \]
-        The Poisson summation formula and the identity theorem together give
-        \[
-          I_{c,r}(z) = \sum_{t \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{e^{2\pi i\left(\frac{ma}{ch_{\mf{a}}}+\frac{td}{ch_{\mf{b}}}\right)}}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mt}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e^{\frac{2\pi itz}{h_{\mf{b}}}}.
-        \]
-        Plugging this back into the Poincar\'e series gives
-        \begin{align*}
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e^{\frac{2\pi imz}{h_{\mf{b}}}} \\
-          &+ \sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{t \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{e^{2\pi i\left(\frac{ma}{ch_{\mf{a}}}+\frac{td}{ch_{\mf{b}}}\right)}}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mt}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e^{\frac{2\pi itz}{h_{\mf{b}}}}.
-        \end{align*}
-        By the Fubini-Tonelli theorem we may interchange the sums over \(t\) and \(c\). Doing this and collecting the sums over \(a\) and \(d\), we at last obtain
-        \[
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{t \ge 1}\left(\d_{\G\mf{a},\G\mf{b}}\d_{m,t}+2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,t,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mt}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e^{\frac{2\pi itz}{h_{\mf{b}}}},
-        \]
         which is our desired Fourier series.
       \end{proof}
-
-      An immediate consequence of \cref{prop:Fourier_series_Poincare_modular} is that the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) with positive index are cusp forms. In a similar manner, we can obtain the Fourier series of the Eisenstein series too:
+      
+      An immediate consequence of this result, upon inspection of the Fourier series, is that the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index are cusp forms.
+      
+      \iffalse In a similar manner, we can obtain the Fourier series of the Eisenstein series too:
       
       \begin{proposition}\label{prop:Fourier_series_Eisenstein_modular}
         Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(E_{k,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
