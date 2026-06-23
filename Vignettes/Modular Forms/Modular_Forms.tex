@@ -682,7 +682,7 @@
       \[
         \chi(\g) = \nu_{\chi}(\g).
       \]
-    \subsection{\todo{Poincar\'e and Eisenstein Series}}
+    \subsection{Poincar\'e and Eisenstein Series}
       Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), and \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
       \[
         P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
@@ -797,7 +797,7 @@
         \[
           \frac{az+b}{cz+(ch_{\mf{b}}\ell+d)} = \frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}.
         \]
-        Using these facts together with the periodicity of \(\chi\), we further have
+        Using these facts together with the periodicity of \(\chi\), we have
         \[
           (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right)+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{e\left(\frac{m}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}\right)\right)}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
         \]
@@ -821,17 +821,17 @@
         \[
           e\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}+\frac{n(iy)}{h_{\mf{b}}}\right)\int_{\Im(w) = \frac{y}{h_{\mf{b}}}}\frac{e\left(-\frac{m}{c^{2}h_{\mf{a}}h_{\mf{b}}w}\right)}{(ch_{\mf{b}}w)^{k}}e(-nw)\,dw.
         \]
-        The integrand is meromorphic with a pole at \(w = 0\) and has polynomial decay of order \(k\) provided \(n\) is nonpositive. So for these \(n\), we conclude that the integral vanishes upon shifting the line of integration to \(\Im(w) = T\) for positive \(T\) and taking the limit as \(T \to \infty\). It remains to compute the integral for positive \(n\). To do this, make the change of variables \(w \mapsto -\frac{w}{2\pi it}\) to the last integral to rewrite it as
+        The integrand is meromorphic with a pole at \(w = 0\) and has polynomial decay of order \(k\) provided \(n\) is nonpositive. So for these \(n\), we conclude that the integral vanishes upon shifting the line of integration to \(\Im(w) = T\) for positive \(T\) and taking the limit as \(T \to \infty\). It remains to compute the integral for positive \(n\). To do this, make the change of variables \(w \mapsto -\frac{w}{2\pi in}\) to the last integral to rewrite it as
         \[
-          \frac{(-1)^{k}(2\pi it)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{w-\frac{4\pi^{2}mn}{c^{2}h_{\mf{a}}h_{\mf{b}}w}}}{w^{k}}\,dw.
+          \frac{(-1)^{k}(2\pi in)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{w-\frac{4\pi^{2}mn}{c^{2}h_{\mf{a}}h_{\mf{b}}w}}}{w^{k}}\,dw.
         \]
         Homotoping the line of integration to the Hankel contour about the negative real axis, we recognize the integral as the Schl\"aflin integral representation for the \(J\)-Bessel function since \(m\) is positive. This gives
         \[
-          2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{1}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right).
+          2\pi i^{-k}\left(\frac{\sqrt{nh_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{1}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right).
         \]
         So in total we obtain
         \[
-          (\mc{F}f)(n) = \begin{cases} \left(2\pi i^{-k}\left(\frac{\sqrt{th_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{e\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}\right)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e\left(\frac{n(iy)}{h_{\mf{b}}}\right) & \text{if \(n \ge 1\)}, \\ 0 & \text{if \(n \le 0\)}. \end{cases}
+          (\mc{F}f)(n) = \begin{cases} \left(2\pi i^{-k}\left(\frac{\sqrt{nh_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\frac{e\left(\frac{ma}{ch_{\mf{a}}}+\frac{nd}{ch_{\mf{b}}}\right)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e\left(\frac{n(iy)}{h_{\mf{b}}}\right) & \text{if \(n \ge 1\)}, \\ 0 & \text{if \(n \le 0\)}. \end{cases}
         \]
         Then by Poisson summation, we have
         \[
@@ -845,90 +845,74 @@
         which is our desired Fourier series.
       \end{proof}
       
-      An immediate consequence of this result, upon inspection of the Fourier series, is that the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index are cusp forms.
+      An immediate consequence of this result, upon inspection of the Fourier series, is that the Poincar\'e series \((P_{m,k,\chi,\mf{a}}|\s_{\mf{b}})(z)\) of positive index are cusp forms.
       
-      \iffalse In a similar manner, we can obtain the Fourier series of the Eisenstein series too:
+      In a similar manner to the Poincar\'e series, we can obtain the Fourier series of the Eisenstein series too. The proof is only slightly different in that we will pass by the pole of the integrand instead of deforming to the Hankel contour about the negative real axis.
       
       \begin{proposition}\label{prop:Fourier_series_Eisenstein_modular}
         Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(E_{k,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
         \[
-          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{t \ge 1}\left(\frac{(2\pi)^{k}i^{-k}t^{k-1}}{(k-1)!}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,t,c)}{(ch_{\mf{b}})^{k}}\right)e^{\frac{2\pi itz}{h_{\mf{b}}}}.
+          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{(k-1)!}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
         \]
       \end{proposition}
       \begin{proof}
-        We have
+        By multiplicativity of the slash operator, write
         \[
           (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}.
         \]
-        Using the Bruhat decomposition (in particular \cref{rem:Bruhat_modulo_infity_exact}), this becomes
+        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{\mf{a}}\backslash\G\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell h_{\mf{b}}+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
         \[
-          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e^{\frac{2\pi imz}{h_{\mf{b}}}}+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}} \\ \ell \in \Z}}\cchi(ch_{\mf{b}}\ell+d)\frac{1}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
+          \frac{az+b}{cz+(ch_{\mf{b}}\ell+d)} = \frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}.
         \]
-        As \(\chi\) has conductor dividing \(N\) and \(c \equiv 0 \tmod{N}\), we further have
+        Using these facts together with the periodicity of \(\chi\), we have
         \[
-          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e^{\frac{2\pi imz}{h_{\mf{b}}}}+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{1}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
+          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{1}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
         \]
         Now let
         \[
           I_{c,d}(z) = \sum_{\ell \in \Z}\frac{1}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
         \]
-        We will apply the Poisson summation formula to \(I_{c,d}(z)\). By the identity theorem it suffices to apply the Poisson summation formula for \(z = iy\) with \(y > 0\). Accordingly, let \(f(x)\) be given by
+        We will apply the Poisson summation formula to \(I_{c,d}(z)\). By the identity theorem it suffices to verify the claim for \(z = iy\) with \(y\) positive. Accordingly, let \(f(x)\) be given by
         \[
-          f(x) = \frac{1}{(ch_{\mf{b}}x+d+icy)^{k}}.
+          f(x) = \frac{1}{(c(iy)+ch_{\mf{b}}x+d)^{k}}.
         \]
-        Then \(f(x)\) is absolutely integrable on \(\R\) because it exhibits polynomial decay of order \(k > 1\). We compute its Fourier transform
+        Then \(f(x)\) is Schwartz class. We will compute its Fourier transform
         \[
-          (\mc{F}f)(t) = \int_{-\infty}^{\infty}f(x)e^{-2\pi itx}\,dx = \int_{-\infty}^{\infty}\frac{e^{-2\pi itx}}{(ch_{\mf{b}}x+d+icy)^{k}}\,dx.
+          (\mc{F}f)(n) = \int_{-\infty}^{\infty}\frac{1}{(c(iy)+ch_{\mf{b}}x+d)^{k}}e(-nx)\,dx.
         \]
         Complexify the integral to get
         \[
-          \int_{\Im(w) = 0}\frac{e^{-2\pi itw}}{(ch_{\mf{b}}w+d+icy)^{k}}\,dw.
+          \int_{\Im(w) = 0}\frac{1}{(c(iy)+ch_{\mf{b}}w+d)^{k}}e(-nw)\,dw,
         \]
-        Now make the change of variables \(w \mapsto w-\frac{d}{ch_{\mf{b}}}-i\frac{y}{h_{\mf{b}}}\) to obtain
+        and make the change of variables \(w \mapsto w-\frac{d}{ch_{\mf{b}}}-\frac{(iy)}{h_{\mf{b}}}\) to obtain
         \[
-          e^{2\pi i\left(\frac{td}{ch_{\mf{b}}}\right)-\frac{2\pi ty}{h_{\mf{b}}}}\int_{\Im(w) = \frac{y}{h_{\mf{b}}}}\frac{e^{-2\pi itw}}{(ch_{\mf{b}}w)^{k}}\,dw.
+          e\left(\frac{nd}{ch_{\mf{b}}}+\frac{n(iy)}{h_{\mf{b}}}\right)\int_{\Im(w) = \frac{y}{h_{\mf{b}}}}\frac{1}{(ch_{\mf{b}}w)^{k}}e(-nw)\,dw.
         \]
-        The integrand is meromorphic with a pole at \(w = 0\). Moreover, we have
+        The integrand is meromorphic with a pole at \(w = 0\) and has polynomial decay of order \(k\) provided \(n\) is nonpositive. So for these \(n\), we conclude that the integral vanishes upon shifting the line of integration to \(\Im(w) = T\) for positive \(T\) and taking the limit as \(T \to \infty\). It remains to compute the integral for positive \(n\). To do this, make the change of variables \(w \mapsto -\frac{w}{2\pi in}\) to the last integral to rewrite it as
         \[
-          \frac{1}{(ch_{\mf{b}}w)^{k}} \ll \frac{1}{|w|^{k}} \quad \text{and} \quad e^{-2\pi itw} \ll e^{2\pi ty}.
+          \frac{(-1)^{k}(2\pi in)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{w}}{w^{k}}\,dw.
         \]
-        The first expression has polynomial decay, the second expression is bounded, and the third expression exhibits exponential decay if and only if \(t < 0\) and is bounded if \(t = 0\). So when \(t \le 0\) we may take the limit as \(\Im(w) \to \infty\) by shifting the line of integration and conclude that the integral vanishes. It remains to compute the integral for \(t \ge 1\). To do this, make the change of variables \(w \mapsto -\frac{w}{2\pi it}\) to the last integral to rewrite it as
+        The integrand of the remaining integral is meromorphic with a pole of order \(k\) at \(w = 0\). From the Laurent series of \(\frac{e^{w}}{w^{k}}\), the residue is easily seen to be \(\G(k)\). So upon shifting the line of integration to \((-\e)\), we pass by this pole and obtain
         \[
-          \frac{1}{2\pi it}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{w}}{\left(-\frac{ch_{\mf{b}}w}{2\pi it}\right)^{k}}\,dw = \frac{(-1)^{k}(2\pi it)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{\left(\frac{2\pi ty}{h_{\mf{b}}}\right)}\frac{e^{w}}{w^{k}}\,dw.
+          \frac{(-2\pi i)^{k}n^{k-1}}{\G(k)(ch_{\mf{b}})^{k}}+\frac{(-1)^{k}(2\pi in)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{(-\e)}\frac{e^{w}}{w^{k}}\,dw.
         \]
-        The integrand of the last integral has a pole of order \(k\) at \(w = 0\). To find the residue, the Laurent series of \(\frac{e^{w}}{w^{k}}\) is
+        This last integrand has polynomial decay of order $k$. Whence we may again conclude that the integral vanishes upon shifting the line of integration to \(\Im(w) = -T\) for positive \(T\) and taking the limit as \(T \to \infty\). So in total we obtain
         \[
-          \frac{e^{w}}{w^{k}} = \sum_{n \ge -k}\frac{w^{n}}{(k+n)!},
+          (\mc{F}f)(n) = \begin{cases} \left(\frac{(-2\pi i)^{k}t^{k-1}}{\G(k)}\frac{e\left(\frac{nd}{ch_{\mf{b}}}\right)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{n(iy)}{h_{\mf{b}}}\right) & \text{if \(n \ge 1\)}, \\ 0 & \text{if \(n \le 0\)}. \end{cases}
         \]
-        and thus the residue of the integrand is \(\frac{1}{(k-1)!}\). It follows that if we shift the line of integration to \((-a)\) in our last integral, for some \(a > 0\), we pass by this pole and obtain
+        Then by Poisson summation, we have
         \[
-          \frac{(2\pi)^{k}i^{-k}t^{k-1}}{(k-1)!(ch_{\mf{b}})^{k}}+\frac{(-1)^{k}(2\pi it)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{(-a)}\frac{e^{w}}{w^{k}}\,dw.
+          I_{c,r}(z) = \sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\frac{e\left(\frac{nd}{ch_{\mf{b}}}\right)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
         \]
-        Moreover, we have
+        Plugging this back into the Poincar\'e series, interchanging the sums over \(n\) and \(c\) by absolute convergence, and collecting the exponential sum over \(d\), we at last obtain
         \[
-          \frac{1}{w^{k}} \ll \frac{1}{|w|^{k}} \quad \text{and} \quad e^{w} \ll e^{\Re(w)}.
-        \]
-        The first expression has polynomial decay while the second expression exhibits exponential decay provided \(\Re(w) < 0\). Therefore we make take the limit as \(\Re(w) \to \infty\) by shifting the line of integration again and conclude that the remaining integral vanishes. Altogether, we have show that
-        \[
-          (\mc{F}f)(t) = \begin{cases} \left(\frac{(2\pi)^{k}i^{-k}t^{k-1}}{(k-1)!(ch_{\mf{b}})^{k}}\frac{e^{2\pi i\left(\frac{dt}{ch_{\mf{b}}}\right)}}{(ch_{\mf{b}})^{k}}\right)e^{-\frac{2\pi ty}{h_{\mf{b}}}} & \text{if \(t \ge 1\)}, \\ 0 & \text{if \(t \le 0\)}. \end{cases}
-        \]
-        The Poisson summation formula and the identity theorem together give
-        \[
-          I_{c,r}(z) = \sum_{t \ge 1}\left(\frac{(2\pi)^{k}i^{-k}t^{k-1}}{(k-1)!(ch_{\mf{b}})^{k}}\frac{e^{2\pi i\left(\frac{dt}{ch_{\mf{b}}}\right)}}{(ch_{\mf{b}})^{k}}\right)e^{\frac{2\pi itz}{h_{\mf{b}}}}.
-        \]
-        Substituting this back into the Eisenstein series gives a form of the Fourier series:
-        \[
-          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{t \ge 1}\left(\frac{(2\pi)^{k}i^{-k}t^{k-1}}{(k-1)!(ch_{\mf{b}})^{k}}\frac{e^{2\pi i\left(\frac{dt}{ch_{\mf{b}}}\right)}}{(ch_{\mf{b}})^{k}}\right)e^{\frac{2\pi itz}{h_{\mf{b}}}}.
-        \]
-        By the Fubini-Tonelli theorem we may interchange the sums over \(t\) and \(c\). Doing this and collecting the sums over \(a\) and \(d\), we at last obtain
-        \[
-          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{t \ge 1}\left(\frac{(2\pi)^{k}i^{-k}t^{k-1}}{(k-1)!}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,t,c)}{(ch_{\mf{b}})^{k}}\right)e^{\frac{2\pi itz}{h_{\mf{b}}}},
+          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{(k-1)!}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
         \]
         which is our desired Fourier series.
       \end{proof}
 
-      An interesting observation from \cref{prop:Fourier_series_Eisenstein_modular} is that \(E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}}\) is necessarily a cusp form unless \(\mf{a}\) is equivalent to \(\mf{b}\). Also, as \(\G\) was one of the congruence subgroups \(\G(N)\), \(\G_{1}(N)\), or \(\G_{0}(N)\), \cref{prop:Fourier_series_Poincare_modular,prop:Fourier_series_Eisenstein_modular} together show that there exist cusp and non-cusp modular forms on these congruence subgroups. In particular, there exist modular forms on the Hecke and principal congruence subgroups for every level \(N \ge 1\).
-    \subsection{\todo{Inner Product Spaces of Modular Forms}}
+      An interesting observation, upon direct inspection of the Fourier series, is that the Eisenstein series \((E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z)\) are cusp forms unless \(\mf{a}\) is in the same cusp class as \(\mf{b}\). Also, as \(\G\) was one of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\), these Fourier series computations show that there exist cusp and non-cusp modular forms on these congruence subgroups. In particular, there exist modular forms on the Hecke congruence subgroups for every level.
+    \iffalse\subsection{\todo{Inner Product Spaces of Modular Forms}}
       Let \(\mc{M}_{k}(\G,\nu)\) denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\) and \(\mc{S}_{k}(\G,\nu)\) denote the associated subspace of cusp forms. Moreover, if \(\nu\) is trivial, we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusion
       \[
         \mc{M}_{k}(\G_{2},\nu) \subseteq \mc{M}_{k}(\G_{1},\nu),
