@@ -852,7 +852,7 @@
       \begin{proposition}\label{prop:Fourier_series_Eisenstein_modular}
         Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(E_{k,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
         \[
-          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{(k-1)!}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
+          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
         \]
       \end{proposition}
       \begin{proof}
@@ -906,7 +906,7 @@
         \]
         Plugging this back into the Poincar\'e series, interchanging the sums over \(n\) and \(c\) by absolute convergence, and collecting the exponential sum over \(d\), we at last obtain
         \[
-          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{(k-1)!}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
+          (E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
         \]
         which is our desired Fourier series.
       \end{proof}
