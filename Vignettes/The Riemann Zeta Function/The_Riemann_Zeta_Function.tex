@@ -47,11 +47,31 @@
         \[
           f(x) = e^{-2\pi x^{2}y}.
         \]
-        Then \(f(x)\) is Schwartz class. A short computation shows
+        Then \(f(x)\) is Schwartz class. We will compute its Fourier transform
+        \[
+          (\mc{F}f)(t) = \int_{-\infty}^{\infty}e^{-2\pi x^{2}y}e^{-2\pi itx}\,dx.
+        \]
+        Complexify the integral to get
+        \[
+          \int_{\Im(w) = 0}e^{-2\pi w^{2}y}e^{-2\pi itw}\,dw,
+        \]
+        and make the change of variables \(w \mapsto \frac{w}{\sqrt{y}}\) to obtain
+        \[
+          \frac{1}{\sqrt{y}}\int_{\Im(w) = 0}e^{-2\pi\left(w^{2}-\frac{itw}{\sqrt{y}}\right)}\,dw.
+        \]
+        Completing the square in the exponent yields
+        \[
+          \frac{e^{-\frac{\pi t^{2}}{2y}}}{\sqrt{y}}\int_{\Im(w) = 0}e^{-2\pi\left(w+\frac{it}{2\sqrt{y}}\right)^{2}}\,dw.
+        \]
+        As the integrand is entire, we may shift the line of integration to \(\Im(w) = \frac{t}{2\sqrt{y}}\) and then make the change of variables \(w \mapsto w-\frac{it}{2\sqrt{y}}\) to obtain
+        \[
+          \frac{e^{-\frac{\pi t^{2}}{2y}}}{\sqrt{y}}\int_{\Im(w) = 0}e^{-2\pi w^{2}}\,dw.
+        \]
+        This latter integral is a Gaussian integral and is \(\frac{1}{\sqrt{2}}\). Whence
         \[
           (\mc{F}f)(t) = \frac{e^{-\frac{\pi t^{2}}{2y}}}{\sqrt{2y}}.
         \]
-        Poisson summation together with this identity gives the result.
+        Poisson summation then gives the result.
       \end{proof}
 
       We can now introduce the function whose Mellin transform will essentially give the Riemann zeta function. This function \(\w(z)\) is defined by
