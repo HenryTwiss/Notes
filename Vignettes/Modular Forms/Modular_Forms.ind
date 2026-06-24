@@ -9,18 +9,18 @@
   \item congruence subgroup, \hyperpage{2}
   \item cusp, \hyperpage{10}
   \item cusp class, \hyperpage{10}
-  \item cusp form, \hyperpage{16}
+  \item cusp form, \hyperpage{17}
 
   \indexspace
 
-  \item Eisenstein series, \hyperpage{22}
-  \item exponential decay at the cusps, \hyperpage{19}
+  \item Eisenstein series, \hyperpage{23}
+  \item exponential decay at the cusps, \hyperpage{20}
 
   \indexspace
 
-  \item folding, \hyperpage{15}
-  \item Fourier coefficients, \hyperpage{18}
-  \item Fourier series, \hyperpage{18}
+  \item folding, \hyperpage{16}
+  \item Fourier coefficients, \hyperpage{19}
+  \item Fourier series, \hyperpage{19}
   \item Fuchsian group, \hyperpage{6}
 
   \indexspace
@@ -29,15 +29,15 @@
 
   \indexspace
 
-  \item Hecke bound, \hyperpage{19}
-  \item Hecke congruence subgroup, \hyperpage{3}
+  \item Hecke bound, \hyperpage{20}
+  \item Hecke congruence subgroup, \hyperpage{4}
   \item holomorphic at the cusps, \hyperpage{17}
   \item hyperbolic measure, \hyperpage{14}
 
   \indexspace
 
-  \item index, \hyperpage{20}
-  \item invariant, \hyperpage{16}
+  \item index, \hyperpage{21}
+  \item invariant, \hyperpage{17}
 
   \indexspace
 
@@ -45,23 +45,23 @@
 
   \indexspace
 
-  \item level, \hyperpage{2}, \hyperpage{16}
+  \item level, \hyperpage{2}, \hyperpage{17}
 
   \indexspace
 
   \item modular, \hyperpage{17}
   \item modular curve, \hyperpage{6}
-  \item modular form, \hyperpage{16}
+  \item modular form, \hyperpage{17}
   \item modular group, \hyperpage{1}
   \item modularity condition, \hyperpage{17}
 
   \indexspace
 
-  \item nebentypus, \hyperpage{16}
+  \item nebentypus, \hyperpage{17}
 
   \indexspace
 
-  \item Poincar\'e series, \hyperpage{20}
+  \item Poincar\'e series, \hyperpage{21}
   \item principal congruence subgroup, \hyperpage{2}
 
   \indexspace
@@ -78,16 +78,17 @@
 
   \indexspace
 
-  \item unfolding, \hyperpage{15}
+  \item unfolding, \hyperpage{16}
   \item unfolding/folding method, \hyperpage{15}
 
   \indexspace
 
-  \item volume, \hyperpage{14}
+  \item valence formula, \hyperpage{28}
+  \item volume, \hyperpage{15}
 
   \indexspace
 
-  \item weight, \hyperpage{16}
-  \item width, \hyperpage{10}
+  \item weight, \hyperpage{17}
+  \item width, \hyperpage{11}
 
 \end{theindex}

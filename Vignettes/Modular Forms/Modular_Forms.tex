@@ -666,7 +666,7 @@
       \]
       upon summing the resulting geometric series. This implies \(f|_{k}\s_{\mf{a}}\) exhibits exponential decay and we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(y \to \infty\) which is provided by the fact that \(f\) is a cusp form.
 
-      Many of the modular forms we will study will be over the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), and \(\G(N)\). To collect all of these cases, let \(\G\) denote any of these congruence subgroups. There are a few important simplifications when working over \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
+      Many of the modular forms we will study will be over the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). To collect all of these cases, let \(\G\) denote any of these congruence subgroups. There are a few important simplifications when working over \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
       \[
         \nu_{\chi}(\g) = \chi(d).
       \]
@@ -683,7 +683,7 @@
         \chi(\g) = \nu_{\chi}(\g).
       \]
     \subsection{Poincar\'e and Eisenstein Series}
-      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), and \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
+      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
       \[
         P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
@@ -912,76 +912,71 @@
       \end{proof}
 
       An interesting observation, upon direct inspection of the Fourier series, is that the Eisenstein series \((E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z)\) are cusp forms unless \(\mf{a}\) is in the same cusp class as \(\mf{b}\). Also, as \(\G\) was one of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\), these Fourier series computations show that there exist cusp and non-cusp modular forms on these congruence subgroups. In particular, there exist modular forms on the Hecke congruence subgroups for every level.
-    \iffalse\subsection{\todo{Inner Product Spaces of Modular Forms}}
-      Let \(\mc{M}_{k}(\G,\nu)\) denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\) and \(\mc{S}_{k}(\G,\nu)\) denote the associated subspace of cusp forms. Moreover, if \(\nu\) is trivial, we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusion
+    \subsection{\todo{Inner Product Spaces of Modular Forms}}
+      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). Let \(\mc{M}_{k}(\G,\nu)\) and denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\). We write \(\mc{S}_{k}(\G,\nu)\) for the associated subspace of cusp forms. In either case, if \(\nu\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusion
       \[
         \mc{M}_{k}(\G_{2},\nu) \subseteq \mc{M}_{k}(\G_{1},\nu),
       \]
-      and this respects the subspace of cusp forms. So in general, the smaller the congruence subgroup the more modular forms there are. We can also multiply modular forms as the following proposition shows:
+      which respects the subspace of cusp forms. So in general, the smaller the congruence subgroup the larger the associated vector space will be. These vector spaces also respect multiplication.
 
       \begin{proposition}\label{prop:products_of_modular_forms}
         If \(f \in \mc{M}_{k}(\G,\nu)\) and \(g \in \mc{M}_{\ell}(\G,\xi)\) then \(fg \in \mc{M}_{k+\ell}(\G,\nu\xi)\). Moreover, \(fg\) is a cusp form if either \(f\) or \(g\) is.
       \end{proposition}
       \begin{proof}
-        Holomorphy of \(fg\) is clear. For modularity, let \(\g \in \G\). We compute
+        Holomorphy of \(fg\) is clear. For modularity, if \(\g \in \G\) then modularity and multiplicativity of the slash operator together imply
         \[
-          ((fg)|_{k+\ell}\g)(z) = (f|_{k}\g)(z)(g|_{\ell}\g)(z) = \nu(\g)\xi(\g)f(z)g(z) = (\nu\xi)(\g)(fg)(z),
+          ((fg)|_{k+\ell}\g)(z) = (\nu\xi)(\g)(fg)(z).
         \]
-        which proves modularity. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix a the cusp \(\mf{a}\) of \(\G\backslash\H\). Then
+        This proves modularity. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for the cusp \(\mf{a}\) of \(\G\backslash\H\). Then
         \[
           ((fg)|_{k+\ell}\s_{\mf{a}})(z) = (f|_{k}\s_{\mf{a}})(z)(g|_{\ell}\s_{\mf{a}})(z),
         \]
-        and the growth condition follows from that of \(f\) and \(g\). In particular, \(fg\) is a cusp form if either \(f\) or \(g\) is.
+        and the growth condition follows from that of \(f\) and \(g\). This proves the first statement and shows that \(fg\) is a cusp form if either \(f\) or \(g\) is.
       \end{proof}
-      
-      Our goal is to turn \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space. To this end, for \(f,g \in \mc{S}_{k}(\G,\nu)\) define their \textbf{Petersson inner product}\index{Petersson inner product} by
-      \[
-        \<f,g\>_{\G} = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
-      \]
-      If the congruence subgroup is clear from context we will suppress the dependence upon \(\G\). Since \(f\) and \(g\) have exponential decay at the cusps, the integrand is bounded and thus is locally absolutely uniformly convergent because we are integrating over a region of finite volume. The integrand is also \(\G\)-invariant so that the integral is independent of the choice of fundamental domain. These two facts together imply that the Petersson inner product is well-defined. We will continue to use this notation even if \(f\) and \(g\) do not belong to \(\mc{S}_{k}(\G,\nu)\) provided the integral is locally absolutely uniformly convergent. A basic property of the Petersson inner product is that it is invariant with respect to the slash operator:
 
-      \begin{proposition}\label{prop:Petersson_slash_invariance_modular}
-        For any \(f,g \in \mc{S}_{k}(\G,\nu)\) and \(\g \in \SL_{2}(\Z)\), we have
-        \[
-          \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} = \<f,g\>_{\G}.
-        \]
-      \end{proposition}
-      \begin{proof}
-        This is just a computation:
-        \begin{align*}
-          \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} &= \frac{1}{V_{\g^{-1}\G\g}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu && \text{\cref{lem:invariance_of_volume}} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}|j(\g,z)|^{-2k}f(\g z)\conj{g(\g z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}f(\g z)\conj{g(\g z)}\Im(\g z)^{k}\,d\mu && \text{\cref{equ:Mobius_transformation_imaginary_part_j}} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu && \text{\(z \mapsto \g^{-1}z\)} \\
-          &= \<f,g\>_{\G}.
-        \end{align*}
-      \end{proof}
-      
-      To show that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space, we will need to first show that this space is finite dimensional. In fact, we will show that \(\mc{M}_{k}(\G,\nu)\) is finite dimensional. To do this, we will require an important formula relating the weight \(k\), the index of \(\G\) in \(\SL_{2}(\Z)\), and the zeros of any \(f \in \mc{M}_{k}(\G,\nu)\). We require some notation to state this formula. For any \(z \in \mc{F}_{\G}\), let \(v_{z}(f)\) be the index of the first nonzero term in the Taylor series of \(f\) at \(z\). Equivalently, \(v_{z}(f)\) is the order of vanishing of \(f\) at \(z\). Since \(f\) is holomorphic, \(v_{z}(f) \ge 0\). Also, modularity implies
+      The vector space \(\mc{M}_{k}(\G,\nu)\), and therefore \(\mc{S}_{k}(\G,\nu)\) as well, turns out to be finite dimensional. This will be accomplished by showing that any \(f \in \mc{M}_{k}(\G,\nu)\) is determined by finitely many of its Fourier coefficients. In fact, this will follow from an exact formula relating the weight \(k\), the index \(d_{\G}\), and the zeros of \(f\). This is known as the valence formula and we require some notation to state it. For any \(z \in \H\), let \(v_{z}(f)\) be the index of the first nonzero term in the Taylor series of \(f\) at \(z\). Equivalently, \(v_{z}(f)\) is the order of vanishing of \(f\) at \(z\). Note that \(v_{z}(f)\) is necessarily nonnegative as \(f\) is holomorphic and
       \[
         v_{\g z}(f) = v_{z}(f),
       \]
-      for any \(\g \in \G\). This means \(v_{z}(f)\) is well-defined for \(z \in \mc{F}_{\G}\). For a cusp \(\mf{a}\) of \(\GH\), we let \(v_{\mf{a}}(f)\) be the index of the first nonzero term in the Fourier series of \(f\) at the \(\mf{a}\) cusp. That is, \(v_{\mf{a}}(f)\) is the index of the first nonzero term in the Fourier series of \(f|_{k}\s_{\mf{a}}\). To show \(v_{\mf{a}}(f)\) is well-defined, we need to verify that it is independent of the choice of scaling matrix \(\s_{\mf{a}}\). Since scaling matrices are determined up to composition on the right by an element of \(\G_{\infty}\), it suffices to verify independence of \(\s_{\mf{a}}\) by multiplication on the right by the generator \(\g_{\infty}\) of \(\G_{\infty}\). Independence then follows from \cref{equ:cusp_form_independence_of_scaling_matrix_modular}. Also, modularity implies
+      for any \(\g \in \G\) by modularity. For a cusp \(\mf{a}\) of \(\GH\), we let \(v_{\mf{a}}(f)\) be the index of the first nonzero term in the Fourier series of \(f\) at the \(\mf{a}\) cusp. That is, \(v_{\mf{a}}(f)\) is the order of vanishing of \(f|_{k}\s_{\mf{a}}\) at \(\infty\). To show \(v_{\mf{a}}(f)\) is well-defined, we need to verify that it is independent of the choice of scaling matrix \(\s_{\mf{a}}\). This follows from \cref{equ:cusp_form_independence_of_scaling_matrix_modular} since scaling matrices are determined up to composition on the right by an element of \(\G_{\infty}\). Also, \(v_{\mf{a}}(f)\) is again nonnegative by the holomorphy of \(f\) and
       \[
         v_{\mf{a}'}(f) = v_{\mf{a}}(f),
       \]
-      for any cusp \(\mf{a}'\) in the same cusp class as \(\mf{a}\) since then \(\mf{a}' = \g\mf{a}\) for some \(\g \in \G\). We can now state and prove the \textbf{valence formula}\index{valence formula}:
+      for any cusp \(\mf{a}'\) in the same cusp class as \(\mf{a}\) by modularity. For any \(z \in \H\) we will also let \(\eta_{\G}(z) = \frac{|\G_{z}|}{2}\).
+
+      Our method for proving the valance formula will be to prove it for the modular group via an application of the argument principle and then extend it to the congruence subgroup \(\G\). In order to do this, we will need to show how to construct a modular form on \(\SL_{2}(\Z)\backslash\H\) given one on \(\GH\). The following lemma provides the answer:
+
+      \begin{lemma}\label{lem:lifting_lemma}
+        Let \(f \in \mc{M}_{k}(\G,\nu)\) and set
+        \[
+          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{n_{\nu}}.
+        \]
+        Then \(F \in \mc{M}_{kn_{\nu}d_{\G}}(\SL_{2}(\Z))\).
+      \end{lemma}
+      \begin{proof}
+        If \(f\) is zero then so is \(F\) and the claim is obvious. So assume \(f\) is nonzero. First we must show that \(F\) is well-defined which is to say that it is independent of the representatives \(\b\). Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b'\b^{-1} \in \G\). Modularity and multiplicativity of the slash operator together with the fact that \(\nu\) is of order \(n_{\nu}\) show
+        \[
+          ((f|_{k}\b')(z))^{n_{\nu}} = ((f|_{k}\b)(z))^{n_{\nu}},
+        \]
+        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Modularity then follows from a short computation. The growth condition, follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\nu}d_{\G}}(\SL_{2}(\Z))\). 
+      \end{proof}  
+      
+      We can now state and prove the \textbf{valence formula}\index{valence formula}.
 
       \begin{theorem*}[Valence formula]
-        Suppose \(f \in \mc{M}_{k}(\G,\nu)\) is nonzero. For \(z \in \mc{F}_{\G}\), let \(\eta_{\G}(z) = \frac{|\G_{z}|}{2}\). Then
+        Suppose \(f \in \mc{M}_{k}(\G,\nu)\) is nonzero. Then
         \[
           \sum_{\mf{a} \in \G\backslash\hat{\Q}}v_{\mf{a}}(f)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{v_{z}(f)}{\eta_{\G}(z)} = \frac{kd_{\G}}{24}.
         \]
       \end{theorem*}
-      \begin{proof}
-        Suppose \(F \in \mc{M}_{k}(\SL_{2}(\Z))\) is nonzero. We will first prove the formula for \(F\) and then extend the result to \(f\). As \(F\) is nonzero, its zeros are isolated. We claim that all of the zeros of \(F\) satisfy \(\Im(z) < T\) for some \(T > 0\). To see this, let the Fourier series of \(F\) be given by
+      \iffalse\begin{proof}
+        Let \(F \in \mc{M}_{k}(\SL_{2}(\Z))\) be nonzero. We will first prove the formula for \(F\) and then extend the result to \(f\). As \(F\) is nonzero its zeros are isolated. We claim that all of the zeros of \(F\) satisfy \(\Im(z) < T\) for some positive \(T\). To see this, let the Fourier series of \(F\) be given by
         \[
-          F(z) = \sum_{n \ge 0}a_{n}e^{2\pi inz}.
+          F(z) = \sum_{n \ge 0}a(n)(nz).
         \]
-        Since \(F\) is holomorphic at \(\infty\) it is bounded as \(z \to \infty\). As \(e^{2\pi inz} \to 0\) as \(z \to \infty\), this means that the function
+        Since \(F\) is holomorphic at \(\infty\) it is bounded as \(z \to \infty\). As \(e(nz) \to 0\) as \(z \to \infty\), this means that the function
         \[
-          G(q) = \sum_{n \ge 0}a_{n}q^{n},
+          G(q) = \sum_{n \ge 0}a(n)q^{n},
         \]
         converges provided \(0 \le |q| < R\) for some \(0 < R < 1\) and where \(G(0) = \lim_{z \to \infty}F(z)\). Notice from this that the order of vanishing of \(G\) at \(0\) is exactly \(v_{\infty}(F)\). In any case, \(G(z)\) is defined on a compact subset within the unit disk and so its zeros there are finite and necessarily isolated. In particular, there exists an \(r\) with \(0 < r \le R\) such that \(G(q)\) is nonzero for \(0 < |q| < r\). But then \(F(z)\) is nonzero for \(e^{-2\pi ny} < r\) which is to say \(y > -\frac{\log(r)}{2\pi y}\). Taking \(T > -\frac{\log(r)}{2\pi y}\) proves the claim. It follows that every zero of \(F\) has at least one \(\SL_{2}(\Z)\)-equivalent zero \(\rho\) in \(\mc{F} \cap \{z \in \C:\Im(z) < T\}\). Let \(\w = e^{\frac{2\pi i}{3}}\) and suppose \(\rho \neq i,\w,1+\w\). If this zero lies in the interior of \(\mc{F}\) then there is one such representative (as \(\mc{F}\) is a fundamental domain). If this zero lies on the boundary of \(\mc{F}\) then there are two such representatives \(\rho\) and \(\rho\pm1\) if \(\Re(\rho) = \mp\frac{1}{2}\) or \(\rho\) and \(-\frac{1}{\rho}\) if \(|\rho| = 1\). For our choice of \(T\), let \(\eta = \sum_{1 \le i \le 6}\eta_{i}\) be the contour in \cref{fig:valence_formula_contour}. In this contour, \(\eta_{2}\), \(\eta_{4}\), \(\eta_{5}\), and \(\eta_{6}\) contain indentations of radius \(\e\) around the pairs of possible zeros of \(F\) as well as the points \(i\), \(\w\), and \(1+\w\). We choose \(\e\) sufficiently small and the paths symmetrically so that each zero \(\rho\) occurs exactly once inside \(\eta\) while the points \(i\), \(\w\), and \(1+\w\) are excluded. As every point \(z \in \mc{F}-\{i,\w,1+\w\}\) that is not a zero has \(v_{z}(F) = 0\), the argument principle gives
         \[
@@ -1133,26 +1128,11 @@
         \[
           v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{v_{z}(F)}{\eta_{\SL_{2}(\Z)}(z)} = \frac{k}{12},
         \]
-        which is precisely the valence formula for \(F\). It remains to prove the formula for \(f\). So let \(f \in \mc{M}_{k}(\G,\nu)\) be nonzero, let \(m\) be the order of \(\nu\), and define
+        which is precisely the valence formula for \(F\). It remains to prove the formula for \(f\). By \cref{lem:lifting_lemma} we may take
         \[
-          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{m}.
+          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{n_{\nu}}.
         \]
-        We claim that \(F \in \mc{M}_{kmd_{\G}}(\SL_{2}(\Z))\). First we must show that \(F\) is well-defined and therefore independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b'\b^{-1} \in \G\). Modularity and that \(\nu\) is of order \(m\) together imply
-        \[
-          ((f|_{k}\b')(z))^{m} = (((f|_{k}\b'\b^{-1})|_{k}\b)(z))^{m} = ((f|_{k}\b)(z))^{m},
-        \]
-        which proves that the \(F\) is well-defined. Sine the product is finite (because \(\G\) has finite index in \(\SL_{2}(\Z)\)) holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). So each \(\b\g \) is of the form \(\b\g = \g_{\b'}\b'\) for some unique \(\g_{\b'} \in \G\) and representative \(\b'\) of \(\G\backslash\SL_{2}(\Z)\). Using this fact and that \(\nu\) is of order \(m\), we compute
-        \begin{align*}
-          (F|_{kmd_{\G}}\g)(z) &= \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b\g)(z))^{m} \\
-          &= \prod_{\b' \in \G\backslash\SL_{2}(\Z)}((f|_{k}\g_{\b'}\b')(z))^{m} \\
-          &= \prod_{\b' \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b')(z))^{m} && \text{modularity} \\
-          &= F(z).
-        \end{align*}
-        This proves modularity of \(F\). For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), \(\b\s_{\mf{a}}\) takes \(\infty\) to an element of \(\hat{\Q}\) since \(\b \in \GL_{2}^{+}(\Q)\). In other words, \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
-        \[
-          (F|_{k,d_{\G}})(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b\s_{\mf{a}})(z))^{m},
-        \]
-        and so the growth condition follows from that of \(f\). This proves \(F \in \mc{M}_{kmd_{\G}}(\SL_{2}(\Z))\). Then the valence formula for \(F\) gives
+        Then the valence formula gives
         \begin{equation}\label{equ:valence_formula_10}
           v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{v_{z}(F)}{\eta_{\SL_{2}(\Z)}(z)} = \frac{kmd_{\G}}{12}.
         \end{equation}
@@ -1161,9 +1141,9 @@
           v_{\infty}(F) = \sum_{\mf{a} \in \G\backslash\hat{\Q}}\frac{mv_{\mf{a}}(f)}{h_{\mf{a}}}.
         \end{equation}
         Lastly, by the orbit-stabilizer theorem \todo{xxx}
-      \end{proof}
+      \end{proof}\fi
       
-      We can now prove that \(\mc{M}_{k}(\G,\nu)\) and \(\mc{S}_{k}(\G,\nu)\) are finite dimensional:
+      \iffalse We can now prove that \(\mc{M}_{k}(\G,\nu)\) and \(\mc{S}_{k}(\G,\nu)\) are finite dimensional.
 
       \begin{theorem}\label{thm:modular_forms_finite_dimensional}
         \(\mc{M}_{k}(\G,\nu)\) is finite dimensional. In particular, \(\mc{S}_{k}(\G,\nu)\) is finite dimensional too.
@@ -1172,7 +1152,31 @@
         As \(\mc{S}_{k}(\G,\nu)\) is a subspace of \(\mc{M}_{k}(\G,\nu)\), we only need to prove the first statement. Let \(f \in \mc{M}_{k}(\G,\nu)\). Recall that \(v_{\infty}(f)\), \(v_{\mf{a}}(f)\) for \(\mf{a}\) a cusp of \(\GH\), and \(v_{z}(f)\) for \(z \in \mc{F}_{\G}\), are all nonnegative. In particular, \(v_{\infty}(f) \ge 0\) and the valence formula implies that \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\). Let \(n \ge \frac{kd_{\G}}{12}\) and consider the linear map \(F:\mc{M}_{k}(\G,\nu) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) \le n\) and hence \(\mc{M}_{k}(\G,\nu)\) is finite dimensional.
       \end{proof}
 
-      We can now show that the Petersson inner product turns \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space:
+      It turns out that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space. To this end, for \(f,g \in \mc{S}_{k}(\G,\nu)\) define their \textbf{Petersson inner product}\index{Petersson inner product} by
+      \[
+        \<f,g\>_{\G} = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
+      \]
+      If the congruence subgroup is clear from context we will suppress the dependence upon \(\G\). Since \(f\) and \(g\) have exponential decay at the cusps, the integrand is bounded and thus is locally absolutely uniformly convergent because we are integrating over a region of finite volume. The integrand is also \(\G\)-invariant so that the integral is independent of the choice of fundamental domain. These two facts together imply that the Petersson inner product is well-defined. We will continue to use this notation even if \(f\) and \(g\) do not belong to \(\mc{S}_{k}(\G,\nu)\) provided the integral is locally absolutely uniformly convergent. A basic property of the Petersson inner product is that it is invariant with respect to the slash operator.
+
+      \begin{proposition}\label{prop:Petersson_slash_invariance_modular}
+        For any \(f,g \in \mc{S}_{k}(\G,\nu)\) and \(\g \in \SL_{2}(\Z)\), we have
+        \[
+          \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} = \<f,g\>_{\G}.
+        \]
+      \end{proposition}
+      \begin{proof}
+        This is just a computation:
+        \begin{align*}
+          \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} &= \frac{1}{V_{\g^{-1}\G\g}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu \\
+          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu && \text{\cref{lem:invariance_of_volume}} \\
+          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}|j(\g,z)|^{-2k}f(\g z)\conj{g(\g z)}\Im(z)^{k}\,d\mu \\
+          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}f(\g z)\conj{g(\g z)}\Im(\g z)^{k}\,d\mu && \text{\cref{equ:Mobius_transformation_imaginary_part_j}} \\
+          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu && \text{\(z \mapsto \g^{-1}z\)} \\
+          &= \<f,g\>_{\G}.
+        \end{align*}
+      \end{proof}
+
+      We can now show that the Petersson inner product turns \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space.
 
       \begin{proposition}\label{prop:Petersson_inner_product_hermitian_modular}
         \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space with respect to the Petersson inner product.
@@ -1258,7 +1262,7 @@
       \begin{proof}
         Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a(n)\). Since \(\G(k-1) \neq 0\), \cref{thm:Petersson_inner_product_with_Poincare_series} implies \(\<f,P_{m,k,\chi,\mf{a}}\> = 0\) if and only if \(a(m) = 0\). So \(f\) is orthogonal to all the Poincar\'e series \(P_{m,k,\chi}\) of positive index if and only if every Fourier coefficient \(a(m)\) is zero. But this happens if and only if \(f\) is identically zero.
       \end{proof}
-    \subsection{\todo{Double Coset Operators}}
+    \fi\iffalse\subsection{\todo{Double Coset Operators}}
       We are ready to introduce a class of general operators depending upon double cosets. We will use these operators to define the diamond and Hecke operators. First, we define an operator closely related to the slash operator. For any integer \(k \ge 1\) and any \(\a \in \GL_{2}^{+}(\Q)\) we define the \textbf{double slash operator}\index{double slash operator} \(\|_{k}\a:C(\H) \to C(\H)\) to be the linear operator given by
       \[
         (f\|_{k}\a)(z) = \det(\a)^{k-1}j(\a,z)^{-k}f(\a z).
