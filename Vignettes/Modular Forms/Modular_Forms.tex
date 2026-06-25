@@ -982,29 +982,20 @@
         \[
           G(q) = q^{v_{\infty}(F)}H(q),
         \]
-        where \(H\) is holomorphic on the interior of the unit disk and \(H(0) \neq 0\). Whence there exists a positive \(r\) such that \(G(q)\) is nonzero for \(0 < |q| < r\). But then \(F(z)\) is nonzero for \(e^{-2\pi ny} < r\) which is to say \(y > -\frac{\log(r)}{2\pi y}\). Taking \(T > -\frac{\log(r)}{2\pi y}\) proves the claim. \todo{xxx}
+        where \(H\) is holomorphic on the interior of the unit disk and \(H(0) \neq 0\). Whence there exists a positive \(r\) such that \(G(q)\) is nonzero for \(0 < |q| < r\). But then \(F(z)\) is nonzero for \(e^{-2\pi ny} < r\) which is to say \(y > -\frac{\log(r)}{2\pi y}\). Taking \(T > -\frac{\log(r)}{2\pi y}\) proves the claim.
         
-        \iffalse
-        It follows that every zero of \(F\) has at least one \(\SL_{2}(\Z)\)-equivalent zero \(\rho\) in \(\mc{F} \cap \{z \in \C:\Im(z) < T\}\). Let \(\w = e^{\frac{2\pi i}{3}}\) and suppose \(\rho \neq i,\w,1+\w\). If this zero lies in the interior of \(\mc{F}\) then there is one such representative (as \(\mc{F}\) is a fundamental domain). If this zero lies on the boundary of \(\mc{F}\) then there are two such representatives \(\rho\) and \(\rho\pm1\) if \(\Re(\rho) = \mp\frac{1}{2}\) or \(\rho\) and \(-\frac{1}{\rho}\) if \(|\rho| = 1\). For our choice of \(T\), let \(\eta = \sum_{1 \le i \le 6}\eta_{i}\) be the contour in \cref{fig:valence_formula_contour}. In this contour, \(\eta_{2}\), \(\eta_{4}\), \(\eta_{5}\), and \(\eta_{6}\) contain indentations of radius \(\e\) around the pairs of possible zeros of \(F\) as well as the points \(i\), \(\w\), and \(1+\w\). We choose \(\e\) sufficiently small and the paths symmetrically so that each zero \(\rho\) occurs exactly once inside \(\eta\) while the points \(i\), \(\w\), and \(1+\w\) are excluded. As every point \(z \in \mc{F}-\{i,\w,1+\w\}\) that is not a zero has \(v_{z}(F) = 0\), the argument principle gives
+        It follows that every zero \(\rho\) of \(F\) has ordinate less than \(T\). Moreover, \(\g\rho\) is a zero for every \(\g \in \SL_{2}(\Z)\) by modularity. For our choice of \(T\), let \(\eta = \sum_{1 \le i \le 6}\eta_{i}\) be the contour in \cref{fig:valence_formula_contour} where the horizontal line is along \(t = T\) and the remaining contour is along the boundary of \(\mc{F}\) except for indentations of radius \(\e\) around possible zeros of \(F\) along this boundary as well as the points \(i\), \(\w\), and \(1+\w\). Moreover, the paths are chosen to be symmetric with respect to the actions of \(S\) and \(T\) so that each zero \(\rho\) belonging to \(\mc{F}\) has exactly one representative of its orbit occurring inside \(\eta\) except for when \(\rho = i,\w,1+\w\) which are excluded. As \(v_{z}(F) = 0\) for every \(z \in \mc{F}-\{i,\w,1+\w\}\) that is not a zero of \(F\), the argument principle gives
         \[
-          \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \asum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}v_{z}(F),
+          \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \asum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{v_{z}(F)}{\eta_{\SL_{2}(\Z)}(z)},
         \]
-        where the \(\ast\) indicates that we are excluding the orbits of \(i\) and \(\w\). As each term in the right-hand side is zero, we can further write
-        \begin{equation}\label{equ:valence_formula_1}
-          \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \asum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{v_{z}(F)}{\eta_{\SL_{2}(\Z)}(z)}.
-        \end{equation}
-        Now define integrals
+        where the \(\ast\) indicates that we are excluding the orbits of \(i\) and \(\w\). Now define integrals
         \[
           I_{i}(\e) = \int_{\eta_{i}}\frac{F'}{F}(z)dz,
         \]
-        for \(1 \le i \le 8\), so that
-        \begin{equation}\label{equ:valence_formula_2}
-          \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \sum_{1 \le i \le 8}I_{i}(\e).
-        \end{equation}
-        We will compute the integral on the right-hand side of \cref{equ:valence_formula_2}. Since \(\SL_{2}(\Z)\) is reduced at \(\infty\), \(F(z+1) = F(z)\). Taking the logarithmic derivative, we also see that \(\frac{F'}{F}(z+1) = \frac{F'}{F}(z)\). Whence
-        \begin{equation}\label{equ:valence_formula_3}
-          I_{2}(\e)+I_{8}(\e) = 0.
-        \end{equation}
+        so that
+        \[
+          \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \sum_{i}I_{i}(\e).
+        \]
 
         \begin{figure}[ht]
           \centering
@@ -1047,26 +1038,19 @@
             \draw ({70-acos(799/800)}:2) arc ({70-acos(799/800)}:{60+acos(799/800)}:2);
 
             \node at (120:2) [circle,fill,inner sep=1pt]{};
-            \node at (120:2) [below] {\tiny{\(\w\)}};
             \node at (110:2) [circle,fill,inner sep=1pt]{};
             \node at (90:2) [circle,fill,inner sep=1pt]{};
-            \node at (90:2) [below right] {\tiny{\(i\)}};
             \node at (70:2) [circle,fill,inner sep=1pt]{};
             \node at (60:2) [circle,fill,inner sep=1pt]{};
-            \node at (60:2) [below] {\tiny{\(1+\w\)}};
             \node at (1,4) [circle,fill,inner sep=1pt]{};
-            \node at (1,4) [above] {\tiny{\(\frac{1}{2}+iT\)}};
-            \node at (0,4) [circle,fill,inner sep=1pt]{};
-            \node at (0,4) [above right] {\tiny{\(iT\)}};
             \node at (-1,4) [circle,fill,inner sep=1pt]{};
-            \node at (-1,4) [above] {\tiny{\(-\frac{1}{2}+iT\)}};
 
             \node at (1,2.5) [circle,fill,inner sep=1pt]{};
             \node at (1,3.5) [circle,fill,inner sep=1pt]{};
             \node at (-1,2.5) [circle,fill,inner sep=1pt]{};
             \node at (-1,3.5) [circle,fill,inner sep=1pt]{};
 
-            \node at (0,4) [above left] {\tiny{\(\eta_{1}\)}};
+            \node at (0,4) [above right] {\tiny{\(\eta_{1}\)}};
 
             \node at (-1,3) [left] {\tiny{\(\eta_{2}\)}};
             \node at (1,3) [right] {\tiny{\(\eta_{8}\)}};
@@ -1080,6 +1064,13 @@
           \end{tikzpicture}
           \caption{An indented standard fundamental domain contour.} \label{fig:valence_formula_contour}
         \end{figure}
+
+        \iffalse
+
+        We will compute the integral on the right-hand side of \cref{equ:valence_formula_2}. Since \(\SL_{2}(\Z)\) is reduced at \(\infty\), \(F(z+1) = F(z)\). Taking the logarithmic derivative, we also see that \(\frac{F'}{F}(z+1) = \frac{F'}{F}(z)\). Whence
+        \begin{equation}\label{equ:valence_formula_3}
+          I_{2}(\e)+I_{8}(\e) = 0.
+        \end{equation}
 
         In other words, the integrals along \(\eta_{2}\) and \(\eta_{8}\) cancel. For the integral along \(\eta_{1}\), the change of variables \(e^{2\pi iz} \mapsto q\) takes \(\eta_{1}\) to the circle \(|q| = e^{-2\pi T}\) transversed once negative orientation. Thus
         \begin{equation}\label{equ:valence_formula_4}
