@@ -291,14 +291,14 @@
         Whence every point in \(\H\) is \(\G\)-equivalent to a point in \(\mc{F}_{\G}\). We will now show that no two distinct interior points of \(\mc{F}_{\G}\) are \(\G\)-equivalent. Suppose to the contrary that there are distinct \(z_{1},z_{2} \in \mc{F}_{\G}^{\circ}\) and a \(\g \in \G\) such that \(\g z_{1} = z_{2}\). In particular, \(z_{1} \in \g_{1}\mc{F}^{\circ}\) and \(z_{2} \in \g_{2}\mc{F}^{\circ}\) for some \(\g_{1},\g_{2} \in \G\backslash\SL_{2}(\Z)\). As no two distinct interior points of \(\mc{F}\) are \(\SL_{2}(\Z)\)-equivalent, this forces \(\g_{1}\) and \(\g_{2}\) to belong to the same coset of \(\G\backslash\SL_{2}(\Z)\). Whence \(\g_{1} = \g_{2}\) and implying \(z_{1},z_{2} \in \g_{1}\mc{F}^{\circ} \cap \g_{2}\mc{F}^{\circ}\). This gives a contradiction since no two distinct interior points of \(\mc{F}\) are \(\SL_{2}(\Z)\)-equivalent. Hence no two distinct interior points of \(\mc{F}_{\G}\) are \(\G\)-equivalent.
       \end{proof}
 
-      It is also possible to say something about the stabilizer subgroups of points in \(\H\) with respect to the action of a congruence subgroup \(\G\). Let \(\G_{z}\) denote the stabilizer subgroup of \(z \in \H\). Then \(\G_{\g z} = \g\G_{z}\g^{-1}\) for any \(\g \in \G\) and it follows that all of the stabilizer subgroups are determined by those for \(z \in \mc{F}_{\G}\). Moreover, since \(\mc{F}_{\G}\) is a fundamental domain, \(\G_{z}\) is trivial if \(z \in \mc{F}_{\G}^{\circ}\). So any point with a nontrivial stabilizer subgroups must lie on the boundary of \(\mc{F}_{\G}\). As \(\G\) is a subgroup of \(\SL_{2}(\Z)\), \(\G_{z}\) is a subgroup of \((\SL_{2}(\Z))_{z}\). This leads us to determining the stabilizer subgroups in the case of the modular group.
+      It is also possible to say something about the stabilizer subgroups of points in \(\H\) with respect to the action of a congruence subgroup \(\G\). Let \(\G_{z}\) denote the stabilizer subgroup of \(z \in \H\). Then \(\G_{\g z} = \g\G_{z}\g^{-1}\) for any \(\g \in \G\) and it follows that all of the stabilizer subgroups are determined by those for \(z \in \mc{F}_{\G}\). Moreover, since \(\mc{F}_{\G}\) is a fundamental domain, \(\G_{z}\) is trivial if \(z \in \mc{F}_{\G}^{\circ}\). So any point with a nontrivial stabilizer subgroups must lie on the boundary of \(\mc{F}_{\G}\). As \(\G\) is a subgroup of \(\SL_{2}(\Z)\), \(\G_{z}\) is a subgroup of \(\SL_{2}(\Z)_{z}\). This leads us to determining the stabilizer subgroups in the case of the modular group.
 
       \begin{proposition}\label{prop:stabilizer_subgroup}
         Let \(z \in \mc{F}\). Then
         \[
-          (\SL_{2}(\Z))_{z} = \begin{cases} \<S\> & \text{if \(z = i\)}, \\ \<ST\> & \text{if \(z = \w\)}, \\ \<TS\> & \text{if \(z = 1+\w\)}, \\ \<-I\> & \text{if \(z \neq i,\w,1+\w\)}. \end{cases}
+          \SL_{2}(\Z)_{z} = \begin{cases} \<S\> & \text{if \(z = i\)}, \\ \<ST\> & \text{if \(z = \w\)}, \\ \<TS\> & \text{if \(z = 1+\w\)}, \\ \<-I\> & \text{if \(z \neq i,\w,1+\w\)}. \end{cases}
         \]
-        Moreover, \((\SL_{2}(\Z))_{i}\) is of order \(4\) while \((\SL_{2}(\Z))_{\w}\) and \((\SL_{2}(\Z))_{1+\w}\) are of order \(6\).
+        Moreover, \(\SL_{2}(\Z)_{i}\) is of order \(4\) while \(\SL_{2}(\Z)_{\w}\) and \(\SL_{2}(\Z)_{1+\w}\) are of order \(6\).
       \end{proposition}
       \begin{proof}
         Let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z)\). Then \(\g z = z\) implies
@@ -311,7 +311,7 @@
         \[
           -c+(d-a)i-b = 0.
         \]
-        Equating the real and imaginary parts shows that \(b = -c\) and \(d = a\). Then \(\g = \begin{psmallmatrix} a & -c \\ c & a \end{psmallmatrix}\) and \(a^{2}+c^{2} = 1\). Therefore we have \(a = 1\) and \(c = 0\), \(a = -1\) and \(c = 0\), \(a = 0\) and \(c = 1\), or \(a = 0\) and \(c = -1\). These four cases correspond to the matrices \(I\), \(-I\), \(S\), and \(-S\) respectively. Since \(S^{2} = -I\), it follows that \((\SL_{2}(\Z))_{i} = \<S\>\) and is of order \(4\).
+        Equating the real and imaginary parts shows that \(b = -c\) and \(d = a\). Then \(\g = \begin{psmallmatrix} a & -c \\ c & a \end{psmallmatrix}\) and \(a^{2}+c^{2} = 1\). Therefore we have \(a = 1\) and \(c = 0\), \(a = -1\) and \(c = 0\), \(a = 0\) and \(c = 1\), or \(a = 0\) and \(c = -1\). These four cases correspond to the matrices \(I\), \(-I\), \(S\), and \(-S\) respectively. Since \(S^{2} = -I\), it follows that \(\SL_{2}(\Z)_{i} = \<S\>\) and is of order \(4\).
         
         Taking \(z = \w\) in the identity instead gives
         \[
@@ -321,9 +321,9 @@
         \[
         (d-a-c)\w-(b+c) = 0.
         \]
-        By minimality of \(m_{\w}(x)\), \(\w\) and \(1\) are linearly independent over \(\Q\) so we may equate coefficients to see that \(d = a+c\) and \(b = -c\). Then \(\g = \begin{psmallmatrix} a & -c \\ c & a+c \end{psmallmatrix}\) and \(a^{2}+ac+c^{2} = 1\). Completing the square shows \((a+c)^{2}-ac = 1\). Therefore we have \(a = 1\) and \(c = 0\), \(a = -1\) and \(c = 0\), \(a = 0\) and \(c = 1\), \(a = 0\) and \(c = -1\), \(a = -1\) and \(c = 1\), or \(a = 1\) and \(c = -1\). These six cases correspond to the matrices \(I\), \(-I\), \(ST\), \((ST)^{4}\), \((ST)^{2}\), and \((ST)^{5}\) respectively. As \((ST)^{3} = -I\), it follows that \((\SL_{2}(\Z))_{\w} = \<ST\>\) and is of order \(6\). Moreover, if \(z = 1+\w\) then \(z = T\w\). Whence \((\SL_{2}(\Z))_{1+\w} = T(\SL_{2}(\Z))_{\w}T^{-1} = \<TS\>\) and is of order \(6\).
+        By minimality of \(m_{\w}(x)\), \(\w\) and \(1\) are linearly independent over \(\Q\) so we may equate coefficients to see that \(d = a+c\) and \(b = -c\). Then \(\g = \begin{psmallmatrix} a & -c \\ c & a+c \end{psmallmatrix}\) and \(a^{2}+ac+c^{2} = 1\). Completing the square shows \((a+c)^{2}-ac = 1\). Therefore we have \(a = 1\) and \(c = 0\), \(a = -1\) and \(c = 0\), \(a = 0\) and \(c = 1\), \(a = 0\) and \(c = -1\), \(a = -1\) and \(c = 1\), or \(a = 1\) and \(c = -1\). These six cases correspond to the matrices \(I\), \(-I\), \(ST\), \((ST)^{4}\), \((ST)^{2}\), and \((ST)^{5}\) respectively. As \((ST)^{3} = -I\), it follows that \(\SL_{2}(\Z)_{\w} = \<ST\>\) and is of order \(6\). Moreover, if \(z = 1+\w\) then \(z = T\w\). Whence \(\SL_{2}(\Z)_{1+\w} = T\SL_{2}(\Z)_{\w}T^{-1} = \<TS\>\) and is of order \(6\).
         
-        It remains to show that if \(z \neq i,\w,1+\w\) then \((\SL_{2}(\Z))_{z} = \<I\>\). Equivalently, will show the contrapositive which is to say that if \((\SL_{2}(\Z))_{z} \neq \<-I\>\) then \(z = i,\w,1+\w\). Since the stabilizer subgroup of \(z\) is trivial if \(z \in \mc{F}^{\circ}\), we may additionally assume \(z\) lies on the boundary of \(\mc{F}\). Now suppose for such \(z\) that \(\g \neq \pm I\). We first claim \(c > 0\). For if \(c = 0\), \(\det(\g) = 1\) implies \(a = d = \pm1\). This further forces \(b = 0\) implying \(\g = \pm I\) which is a contradiction. Hence \(c \neq 0\) and so \(z\) satisfies the aforementioned identity which is a quadratic. A short computation shows that the discriminant is \((a+d)^{2}-4\). Since this quadratic has integer coefficients and \(z\) is complex, the discriminant must be negative. So
+        It remains to show that if \(z \neq i,\w,1+\w\) then \(\SL_{2}(\Z)_{z} = \<I\>\). Equivalently, will show the contrapositive which is to say that if \(\SL_{2}(\Z)_{z} \neq \<-I\>\) then \(z = i,\w,1+\w\). Since the stabilizer subgroup of \(z\) is trivial if \(z \in \mc{F}^{\circ}\), we may additionally assume \(z\) lies on the boundary of \(\mc{F}\). Now suppose for such \(z\) that \(\g \neq \pm I\). We first claim \(c > 0\). For if \(c = 0\), \(\det(\g) = 1\) implies \(a = d = \pm1\). This further forces \(b = 0\) implying \(\g = \pm I\) which is a contradiction. Hence \(c \neq 0\) and so \(z\) satisfies the aforementioned identity which is a quadratic. A short computation shows that the discriminant is \((a+d)^{2}-4\). Since this quadratic has integer coefficients and \(z\) is complex, the discriminant must be negative. So
         \[
           (a+d)^{2}-4 < 0,
         \]
@@ -334,7 +334,7 @@
         respectively. In any case, the bound \(\Im(z) \ge \frac{\sqrt{3}}{2}\) by \cref{rem:vertices_of_standard_fundamental_domain} implies \(c = \pm 1\). This forces \(a = 0\) in the first case, \(a = 0,1\) in the second, and \(a = 0,-1\) in the third. Whence \(z = i\) in the first case and \(z = \w,1+\w\) in the second and third cases. This completes the proof.
       \end{proof}
 
-      Returning to the case of a congruence subgroup \(\G\), it follows from this result and our previous remarks that \(\G_{z}\) is necessarily trivial if \(z\) is not \(\SL_{2}(\Z)\)-equivalent to \(i\), \(\w\), or \(1+\w\). Moreover, if \(z\) is \(\SL_{2}(\Z)\)-equivalent to one of these points then \(\G_{z}\) is trivial unless at least one of the matrices \(\pm S\), \(\pm ST\), or \(\pm TS\) belongs to \(\G\) respectively. In the the first case \(\G_{z}\) is of order dividing \(4\) while in the second and third cases it is of order dividing \(6\). In particular, \(\G_{z}\) is always finite.
+      Returning to the case of a congruence subgroup \(\G\), it follows from this result and our previous remarks that \(\G_{z}\) is necessarily trivial if \(z\) is not \(\SL_{2}(\Z)\)-equivalent to \(i\), \(\w\), or \(1+\w\). Moreover, if \(z\) is \(\SL_{2}(\Z)\)-equivalent to one of these points then \(\G_{z}\) is trivial unless at least one of the matrices \(\pm S\), \(\pm ST\), or \(\pm TS\) belongs to \(\G\) respectively. In particular, \(\G_{z}\) is always finite.
     \subsection{Cusps}
       Let \(\G\) be a congruence subgroup. Notice that \(\mc{F}_{\G}\) is not compact as it doesn't contain any points of \(\hat{\Q}\). However, if we consider \(\mc{F}_{\G} \cup \hat{\Q}\) as a subset of \(\hat{\C}\) then it would appear that this space is compact. The elements of \(\hat{\Q}\) correspond to cusps which we now define. Really that any \(\g \in \G\) acts on \(\hat{\Q}\). A \textbf{cusp class}\index{cusp class} of \(\GH\) is a coset of \(\G\backslash\hat{\Q}\). There is only one cusp class for the modular group since its action is transitive. Indeed, \(\hat{\Q}\) is exactly the orbit of \(\infty\). This is clear for \(\infty\) and if \(\frac{a}{c} \in \Q\) with \((a,c) = 1\) then B\'ezout's identity provides the existence of integers \(b\) and \(d\) such that \(ad-bc = 1\) whence \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z)\) satisfies \(\g\infty = \frac{a}{c}\). Therefore the action is transitive. As \(\G\) has finite index in the modular group and \(\hat{\Q} = \SL_{2}(\Z)\infty\), there can only be finitely many cosets of \(\G\backslash\hat{\Q}\) and the number of such is at most \(d_{\G}\). In other words, \(\GH\) has at most \(d_{\G}\) cusp classes. Also, the orbit of \(\infty\) is a cusp class of \(\GH\). A \textbf{cusp}\index{cusp} is a representative of a cusp class. We denote cusps by gothic characters \(\mf{a}\), \(\mf{b}\), etc.
 
@@ -896,7 +896,7 @@
         \[
           \frac{(-2\pi i)^{k}n^{k-1}}{\G(k)(ch_{\mf{b}})^{k}}+\frac{(-1)^{k}(2\pi in)^{k-1}}{(ch_{\mf{b}})^{k}}\int_{(-\e)}\frac{e^{w}}{w^{k}}\,dw.
         \]
-        This last integrand has polynomial decay of order $k$. Whence we may again conclude that the integral vanishes upon shifting the line of integration to \(\Im(w) = -T\) for positive \(T\) and taking the limit as \(T \to \infty\). So in total we obtain
+        This last integrand has polynomial decay of order \(k\). Whence we may again conclude that the integral vanishes upon shifting the line of integration to \(\Im(w) = -T\) for positive \(T\) and taking the limit as \(T \to \infty\). So in total we obtain
         \[
           (\mc{F}f)(n) = \begin{cases} \left(\frac{(-2\pi i)^{k}t^{k-1}}{\G(k)}\frac{e\left(\frac{nd}{ch_{\mf{b}}}\right)}{(ch_{\mf{b}})^{k}}\right)e\left(\frac{n(iy)}{h_{\mf{b}}}\right) & \text{if \(n \ge 1\)}, \\ 0 & \text{if \(n \le 0\)}. \end{cases}
         \]
@@ -942,7 +942,7 @@
       \[
         v_{\mf{a}'}(f) = v_{\mf{a}}(f),
       \]
-      for any cusp \(\mf{a}'\) in the same cusp class as \(\mf{a}\) by modularity. For any \(z \in \H\) we will also let \(\eta_{\G}(z) = \frac{|\G_{z}|}{2}\).
+      for any cusp \(\mf{a}'\) in the same cusp class as \(\mf{a}\) by modularity.
 
       Our method for proving the valance formula will be to prove it for the modular group via an application of the argument principle and then extend it to the congruence subgroup \(\G\). In order to do this, we will need to show how to construct a modular form on \(\SL_{2}(\Z)\backslash\H\) given one on \(\GH\). The following lemma provides the answer:
 
@@ -966,7 +966,7 @@
       \begin{theorem*}[Valence formula]
         Suppose \(f \in \mc{M}_{k}(\G,\nu)\) is nonzero. Then
         \[
-          \sum_{\mf{a} \in \G\backslash\hat{\Q}}v_{\mf{a}}(f)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{v_{z}(f)}{\eta_{\G}(z)} = \frac{kd_{\G}}{24}.
+          \sum_{\mf{a} \in \G\backslash\hat{\Q}}v_{\mf{a}}(f)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{2v_{z}(f)}{|\G_{z}|} = \frac{kd_{\G}}{12}.
         \]
       \end{theorem*}
       \begin{proof}
@@ -974,7 +974,7 @@
         \[
           F(z) = \sum_{n \ge 0}a(n)e(nz).
         \]
-        Note that \(F\) is bounded as \(z \to \infty\) since it is holomorphic at \(\infty\). Therefore, under the change of variables $e(z) \mapsto q$ this means
+        Note that \(F\) is bounded as \(z \to \infty\) since it is holomorphic at \(\infty\). Therefore, under the change of variables \(e(z) \mapsto q\) this means
         \[
           G(q) = \sum_{n \ge 0}a(n)q^{n},
         \]
@@ -984,9 +984,9 @@
         \]
         where \(H\) is holomorphic on the interior of the unit disk and \(H(0) \neq 0\). Whence there exists a positive \(r\) such that \(G(q)\) is nonzero for \(0 < |q| < r\). But then \(F(z)\) is nonzero for \(e^{-2\pi ny} < r\) which is to say \(y > -\frac{\log(r)}{2\pi y}\). Taking \(T > -\frac{\log(r)}{2\pi y}\) proves the claim.
         
-        It follows that every zero \(\rho\) of \(F\) has ordinate less than \(T\). Moreover, \(\g\rho\) is a zero for every \(\g \in \SL_{2}(\Z)\) by modularity. For our choice of \(T\), let \(\eta = \sum_{1 \le i \le 6}\eta_{i}\) be the contour in \cref{fig:valence_formula_contour} where the horizontal line is along \(t = T\) and the remaining contour is along the boundary of \(\mc{F}\) except for indentations of radius \(\e\) around possible zeros of \(F\) along this boundary as well as the points \(i\), \(\w\), and \(1+\w\). Moreover, the paths are chosen to be symmetric with respect to the actions of \(S\) and \(T\) so that each zero \(\rho\) belonging to \(\mc{F}\) has exactly one representative of its orbit occurring inside \(\eta\) except for when \(\rho = i,\w,1+\w\) which are excluded. As \(v_{z}(F) = 0\) for every \(z \in \mc{F}-\{i,\w,1+\w\}\) that is not a zero of \(F\), the argument principle gives
+        It follows that every zero \(\rho\) of \(F\) has ordinate less than \(T\). Moreover, \(\g\rho\) is a zero for every \(\g \in \SL_{2}(\Z)\) by modularity. For our choice of \(T\), let \(\eta = \sum_{i}\eta_{i}\) be the contour in \cref{fig:valence_formula_contour} where the horizontal line is along \(t = T\) and the remaining contour is along the boundary of \(\mc{F}\) except for indentations of radius \(\e\) around possible zeros of \(F\) along this boundary as well as the points \(i\), \(\w\), and \(1+\w\). Moreover, the paths are chosen to be symmetric with respect to the actions of \(S\) and \(T\) so that each zero \(\rho\) belonging to \(\mc{F}\) has exactly one representative of its orbit occurring inside \(\eta\) except for when \(\rho = i,\w,1+\w\) which are excluded. As \(v_{z}(F) = 0\) for every \(z \in \mc{F}-\{i,\w,1+\w\}\) that is not a zero of \(F\), the argument principle gives
         \[
-          \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \asum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{v_{z}(F)}{\eta_{\SL_{2}(\Z)}(z)},
+          \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \asum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|},
         \]
         where the \(\ast\) indicates that we are excluding the orbits of \(i\) and \(\w\). Now define integrals
         \[
@@ -1065,92 +1065,107 @@
           \caption{An indented standard fundamental domain contour.} \label{fig:valence_formula_contour}
         \end{figure}
 
-        \iffalse
-
-        We will compute the integral on the right-hand side of \cref{equ:valence_formula_2}. Since \(\SL_{2}(\Z)\) is reduced at \(\infty\), \(F(z+1) = F(z)\). Taking the logarithmic derivative, we also see that \(\frac{F'}{F}(z+1) = \frac{F'}{F}(z)\). Whence
-        \begin{equation}\label{equ:valence_formula_3}
-          I_{2}(\e)+I_{8}(\e) = 0.
-        \end{equation}
-
-        In other words, the integrals along \(\eta_{2}\) and \(\eta_{8}\) cancel. For the integral along \(\eta_{1}\), the change of variables \(e^{2\pi iz} \mapsto q\) takes \(\eta_{1}\) to the circle \(|q| = e^{-2\pi T}\) transversed once negative orientation. Thus
-        \begin{equation}\label{equ:valence_formula_4}
-          I_{1}(\e) = -\frac{1}{2\pi i}\int_{|q| = e^{-2\pi T}}\frac{G'}{G}(q)\,dq = -v_{\infty}(F),
-        \end{equation}
-        where the last equality follows by the argument principle since \(G(q)\) is holomorphic and nonzero for \(0 < |q| \le e^{-2\pi T}\) and the order of vanishing of \(G\) at \(0\) is \(v_{\infty}(F)\). The integrals along \(\eta_{3}\) and \(\eta_{7}\) are computed in a similar manner. Let \(\t_{\e} > 0\) be the angle such that \(\eta_{3}\) and \(\eta_{7}\) end and begin at angles \(\frac{\pi}{6}+\t_{\e}\) and \(\frac{5\pi}{6}-\t_{\e}\) relative to \(\w\) and \(1+\w\) respectively. For \(\eta_{3}\), write \(F(z) = (z-\w)^{v_{\w}(F)}F_{\w}(z)\) where \(F_{\w}(z)\) holomorphic and nonzero at \(\w\). Then \(\frac{F'}{F}(z) = \frac{v_{\w}(F)}{z-\w}+\frac{F_{\w}'}{F_{\w}}(z)\) and making the change of variables \(z \mapsto \w+\e e^{i\t}\) yields
-        \begin{align*}
-          I_{3}(\e) &= \frac{1}{2\pi i}\int_{\eta_{4}}\left(\frac{v_{\w}(F)}{z-\w}+\frac{F_{\w}'}{F_{\w}}(z)\right)\,dz \\
-          &= -\frac{1}{2\pi }\int_{\frac{\pi}{6}+\t_{\e}}^{\frac{\pi}{2}}v_{\w}(F)\,d\t-\frac{1}{2\pi}\int_{\frac{\pi}{6}+\t_{\e}}^{\frac{\pi}{2}}\frac{F_{\w}'}{F_{\w}}(\w+\e e^{i\t})\e e^{i\t}\,d\t \\
-          &= -\frac{\frac{\pi}{3}-\t_{\e}}{2\pi}v_{\w}(F)-\frac{1}{2\pi}\int_{\frac{\pi}{6}+\t_{\e}}^{\frac{\pi}{2}}\frac{F_{\w}'}{F_{\w}}(\w+\e e^{i\t})\e e^{i\t}\,d\t.
-        \end{align*}
-        Taking the limit as \(\e \to 0\), we see that the second integral vanishes while the first tends to \(-\frac{v_{\w}(F)}{6}\) because \(\t_{\e} \to 0\). By \cref{prop:stabilizer_subgroup}, this is \(-\frac{v_{\w}(F)}{2\eta_{\SL_{2}(\Z)}(\w)}\). In short,
-        \begin{equation}\label{equ:valence_formula_5}
-          \lim_{\e \to 0}I_{3}(\e) = -\frac{v_{\w}(F)}{2\eta_{\SL_{2}(\Z)}(\w)}.
-        \end{equation}
-        We argue similarly for \(\eta_{7}\). Write \(F(z) = (z-(1+\w))^{v_{1+\w}(F)}F_{1+\w}(z)\) where \(F_{1+\w}(z)\) holomorphic and nonzero at \(1+\w\). Then \(\frac{F'}{F}(z) = \frac{v_{1+\w}(F)}{z-(1+\w)}+\frac{F_{1+\w}'}{F_{1+\w}}(z)\) and making the change of variables \(z \mapsto 1+\w+\e e^{i\t}\) yields
-        \begin{align*}
-          I_{7}(\e) &= \frac{1}{2\pi i}\int_{\eta_{7}}\left(\frac{v_{1+\w}(F)}{z-(1+\w)}+\frac{F_{1+\w}'}{F_{1+\w}}(z)\right)\,dz \\
-          &= -\frac{1}{2\pi }\int_{\frac{\pi}{2}}^{\frac{5\pi}{6}-\t_{\e}}v_{1+\w}(F)\,d\t-\frac{1}{2\pi}\int_{\frac{\pi}{2}}^{\frac{5\pi}{6}-\t_{\e}}\frac{F_{1+\w}'}{F_{1+\w}}(1+\w+\e e^{i\t})\e e^{i\t}\,d\t \\
-          &= \frac{\frac{\pi}{3}-\t_{\e}}{2\pi}v_{1+\w}(F)-\frac{1}{2\pi}\int_{\frac{\pi}{2}}^{\frac{5\pi}{6}-\t_{\e}}\frac{F_{1+\w}'}{F_{1+\w}}(1+\w+\e e^{i\t})\e e^{i\t}\,d\t.
-        \end{align*}
-        Taking the limit as \(\e \to 0\), the second integral vanishes while the first tends to \(-\frac{v_{1+\w}(F)}{6}\) because \(\t_{\e} \to 0\). By \cref{prop:stabilizer_subgroup}, this is \(-\frac{v_{1+\w}(F)}{2\eta_{\SL_{2}(\Z)}(1+\w)}\). Thus
-        \begin{equation}\label{equ:valence_formula_6}
-          \lim_{\e \to 0}I_{7}(\e) = -\frac{v_{1+\w}(F)}{\eta_{2\SL_{2}(\Z)}(1+\w)}.
-        \end{equation}
-        For the integral along \(\eta_{4}\), write \(F(z) = (z-i)^{v_{i}(F)}F_{i}(z)\) where \(F_{i}(z)\) is holomorphic and nonzero at \(i\). Then \(\frac{F'}{F}(z) = \frac{v_{i}(F)}{z-i}+\frac{F_{i}'}{F_{i}}(z)\) and making the change of variables \(z \mapsto i+\e e^{i\t}\) yields
-        \begin{align*}
-          I_{5}(\e) &= \frac{1}{2\pi i}\int_{\eta_{5}}\left(\frac{v_{i}(F)}{z-(i)}+\frac{F_{i}'}{F_{i}}(z)\right)\,dz \\
-          &= -\frac{1}{2\pi }\int_{0}^{\pi}v_{i}(F)\,d\t-\frac{1}{2\pi}\int_{0}^{\pi}\frac{F_{i}'}{F_{i}}(i+\e e^{i\t})\e e^{i\t}\,d\t \\
-          &= -\frac{v_{i}(F)}{2}-\frac{1}{2\pi}\int_{0}^{\pi}\frac{F_{i}'}{F_{i}}(i+\e e^{i\t})\e e^{i\t}\,d\t.
-        \end{align*}
-        Taking the limit as \(\e \to 0\), the remaining integral vanishes. By \cref{prop:stabilizer_subgroup}, the first term is \(-\frac{v_{i}(F)}{\eta_{\SL_{2}(\Z)}(i)}\). Thus
-        \begin{equation}\label{equ:valence_formula_7}
-          \lim_{\e \to 0}I_{5}(\e) = -\frac{v_{i}(F)}{\eta_{\SL_{2}(\Z)}(i)}.
-        \end{equation}
-        For the integrals along \(\eta_{4}\) and \(\eta_{6}\), let \(C_{\e}\) be the finite union of segments of \(\eta_{4}\) that lie on the unit circle. Modularity implies \(F\left(-\frac{1}{z}\right) = z^{k}F(z)\) because \(S \in \SL_{2}(\Z)\). Taking the logarithmic derivative shows that \(\frac{F'}{F}\left(-\frac{1}{z}\right) = \frac{k}{z}+\frac{F'}{F}(z)\). Whence
+        \noindent We will compute the integrals \(I_{i}(\e)\) and then take the limit as \(\e \to 0\). For the integrals along \(\eta_{2}\) and \(\eta_{8}\), modularity implies \(F(z+1) = F(z)\) and observe that \(T^{-1}\eta_{8} = -\eta_{2}\). Whence
+        \[
+          I_{2}(\e)+I_{8}(\e) = 0,
+        \]
+        so that these integrals cancel. For the integral along \(\eta_{1}\), the change of variables \(e(z) \mapsto q\) takes \(\eta_{1}\) to the circle \(|q| = e^{-2\pi T}\) transversed once with negative orientation and \(F(z)\) is taken to \(G(q)\). Then from our previous discussion of \(G(q)\), we have
+        \[
+          I_{1}(\e) = -v_{\infty}(F).
+        \]
+        The integrals along \(\eta_{3}\) and \(\eta_{7}\), as well as \(\eta_{5}\), are computed in a similar manner. Let \(\t_{\e}\) be the angle such that \(\eta_{3}\) and \(\eta_{7}\) end and begin at angles \(\frac{\pi}{6}+\t_{\e}\) and \(\frac{5\pi}{6}-\t_{\e}\) relative to \(\w\) and \(1+\w\) respectively. For \(\eta_{3}\), write \(F(z) = (z-\w)^{v_{\w}(F)}F_{\w}(z)\) where \(F_{\w}(z)\) holomorphic and nonzero at \(\w\). Then 
+        \[
+          I_{3}(\e) = \frac{1}{2\pi i}\int_{\eta_{4}}\left(\frac{v_{\w}(F)}{z-\w}+\frac{F_{\w}'}{F_{\w}}(z)\right)\,dz,
+        \]
+        and the change of variables \(z \mapsto \w+\e e^{i\t}\) shows
+        \[
+          I_{3}(\e) = -\frac{\frac{\pi}{3}-\t_{\e}}{2\pi}v_{\w}(F)+O(\e).
+        \]
+        Since \(\t_{\e} \to 0\) as \(\e \to 0\), it follows that
+        \[
+          \lim_{\e \to 0}I_{3}(\e) = -\frac{v_{\w}(F)}{|\SL_{2}(\Z)_{\w}|},
+        \]
+        as \(|\SL_{2}(\Z)_{\w}| = 6\) by \cref{prop:stabilizer_subgroup}. We argue similarly for \(\eta_{7}\). Write \(F(z) = (z-(1+\w))^{v_{1+\w}(F)}F_{1+\w}(z)\) where \(F_{1+\w}(z)\) holomorphic and nonzero at \(1+\w\). Then
+        \[
+          I_{7}(\e) = \frac{1}{2\pi i}\int_{\eta_{7}}\left(\frac{v_{1+\w}(F)}{z-(1+\w)}+\frac{F_{1+\w}'}{F_{1+\w}}(z)\right)\,dz,
+        \]
+        and the change of variables \(z \mapsto (1+\w)+\e e^{i\t}\) shows
+        \[
+          I_{7}(\e) = \frac{\frac{\pi}{3}-\t_{\e}}{2\pi}v_{1+\w}(F)+O(\e).
+        \]
+        Whence
+        \[
+          \lim_{\e \to 0}I_{7}(\e) = -\frac{v_{1+\w}(F)}{|\SL_{2}(\Z)_{1+\w}|},
+        \]
+        where \(|\SL_{2}(\Z)_{1+\w}| = 6\) by \cref{prop:stabilizer_subgroup}. For the integral along \(\eta_{5}\), write \(F(z) = (z-i)^{v_{i}(F)}F_{i}(z)\) where \(F_{i}(z)\) is holomorphic and nonzero at \(i\). Then
+        \[
+          I_{5}(\e) = \frac{1}{2\pi i}\int_{\eta_{5}}\left(\frac{v_{i}(F)}{z-(i)}+\frac{F_{i}'}{F_{i}}(z)\right)\,dz,
+        \]
+        and the change of variables \(z \mapsto i+\e e^{i\t}\) gives
+        \[
+          I_{5}(\e) = -\frac{v_{i}(F)}{2}+O(\e).
+        \]
+        Therefore
+        \[
+          \lim_{\e \to 0}I_{5}(\e) = -\frac{2v_{i}(F)}{|\SL_{2}(\Z)_{i}|},
+        \]
+        as \(|\SL_{2}(\Z)_{i}| = 4\) by \cref{prop:stabilizer_subgroup}. For the integrals along \(\eta_{4}\) and \(\eta_{6}\), let \(C_{\e}\) be the finite union of segments along \(\eta_{4}\) that lie on the boundary of \(\mc{F}\). Modularity implies \(F\left(-\frac{1}{z}\right) = z^{k}F(z)\) and notice that \(S^{-1}\eta_{6} = -\eta_{4}\). Hence
         \[
           I_{4}(\e)+I_{6}(\e) = -\frac{1}{2\pi i}\int_{C_{\e}}\frac{k}{z}\,dz.
         \]
-        As \(\e \to 0\), \(C_{\e}\) tends to the arc on the unit circle between radii \(\frac{\pi}{2}\) and \(\frac{2\pi}{3}\) with negative orientation. Upon making the change of variables \(z \mapsto e^{i\t}\), we find that
-        \begin{equation}\label{equ:valence_formula_8}
-          \lim_{\e \to 0}\left(I_{4}(\e)+I_{6}(\e)\right) = \frac{1}{2\pi}\int_{\frac{\pi}{2}}^{\frac{2\pi}{3}}k\,d\t = \frac{k}{12}.
-        \end{equation}
-        Taking the limit as \(\e \to 0\) in \cref{equ:valence_formula_2} and using \cref{equ:valence_formula_3,equ:valence_formula_4,equ:valence_formula_5,equ:valence_formula_6,equ:valence_formula_7,equ:valence_formula_8}, we obtain
+        As \(\e \to 0\), \(C_{\e}\) tends to the arc on the unit circle between radii \(\frac{\pi}{2}\) and \(\frac{2\pi}{3}\) with negative orientation. From the change of variables \(z \mapsto e^{i\t}\), we find that
+        \[
+          \lim_{\e \to 0}\left(I_{4}(\e)+I_{6}(\e)\right) = \frac{k}{12}.
+        \]
+        Altogether, this means
         \begin{equation}\label{equ:valence_formula_9}
-          \lim_{\e \to 0}\frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \frac{k}{12}-v_{\infty}(F)-\frac{v_{\w}(F)}{2\eta_{\SL_{2}(\Z)}(\w)}-\frac{v_{1+\w}(F)}{2\eta_{\SL_{2}(\Z)}(1+\w)}-\frac{v_{i}(F)}{\eta_{\SL_{2}(\Z)}(i)}.
+          \lim_{\e \to 0}\frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \frac{k}{12}-v_{\infty}(F)-\frac{v_{\w}(F)}{|\SL_{2}(\Z)_{\w}|}-\frac{v_{1+\w}(F)}{|\SL_{2}(\Z)_{1+\w}|}-\frac{2v_{i}(F)}{|\SL_{2}(\Z)_{i}|},
         \end{equation}
-        Taking the limit as \(\e \to 0\) in \cref{equ:valence_formula_1} and using \cref{equ:valence_formula_9} gives
+        whence
         \[
-          v_{\infty}(F)+\frac{v_{\w}(F)}{2\eta_{\SL_{2}(\Z)}(\w)}+\frac{v_{1+\w}(F)}{2\eta_{\SL_{2}(\Z)}(1+\w)}+\frac{v_{i}(F)}{\eta_{\SL_{2}(\Z)}(i)}+\asum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{v_{z}(F)}{\eta_{\SL_{2}(\Z)}(z)} = \frac{k}{12}.
+          v_{\infty}(F)+\frac{v_{\w}(F)}{|\SL_{2}(\Z)_{\w}|}+\frac{v_{1+\w}(F)}{|\SL_{2}(\Z)_{1+\w}|}+\frac{2v_{i}(F)}{|\SL_{2}(\Z)_{i}|}+\asum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|} = \frac{k}{12}.
         \]
-        Since \(\w\) and \(1+\w\) are \(\SL_{2}(\Z)\)-equivalent, \(v_{\w}(F) = v_{1+\w}(F)\) and \(\eta_{\SL_{2}(\Z)}(\w) = \eta_{\SL_{2}(\Z)}(1+\w)\) by \cref{prop:stabilizer_subgroup}. Then our formula takes the form
+        Since \(\w\) and \(1+\w\) are \(\SL_{2}(\Z)\)-equivalent, \(v_{\w}(F) = v_{1+\w}(F)\) and \(|\SL_{2}(\Z)_{\w}| = |\SL_{2}(\Z)_{1+\w}|\) by \cref{prop:stabilizer_subgroup}. So the previous identity becomes
         \[
-          v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{v_{z}(F)}{\eta_{\SL_{2}(\Z)}(z)} = \frac{k}{12},
+          v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|} = \frac{k}{12},
         \]
-        which is precisely the valence formula for \(F\). It remains to prove the formula for \(f\). By \cref{lem:lifting_lemma} we may take
+        which is precisely the claim for the modular group. It remains to prove the claim for \(\G\). So let \(f \in \mc{M}_{k}(\G,\nu)\) be nonzero. By \cref{lem:lifting_lemma} we may take
         \[
-          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{n_{\nu}}.
+          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{n_{\nu}},
         \]
-        Then the valence formula gives
-        \begin{equation}\label{equ:valence_formula_10}
-          v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{v_{z}(F)}{\eta_{\SL_{2}(\Z)}(z)} = \frac{kmd_{\G}}{12}.
-        \end{equation}
-        By \cref{prop:sum_of_widths_equals_index}, the Fourier series of \(F\) is the product of the Fourier series of \(f\) at the \(\mf{a}\) cusp as \(\mf{a}\) runs over a complete set of cusps for \(\GH\) each with multiplicity \(m\). Since the Fourier series at the \(\mf{a}\) cusp is \(h_{\mf{a}}\)-periodic, the index of the first nonzero term in the Fourier series of \(F\) is
-        \begin{equation}\label{equ:valence_formula_11}
+        and obtain
+        \[
+          v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|} = \frac{kmd_{\G}}{12}.
+        \]
+        Observe that the Fourier series of the factors of \(F\) run over the Fourier series for \(f\) for a complete set of representatives of cusp classes each with multiplicity \(m\). Since the Fourier series of \(f\) at the \(\mf{a}\) cusp is \(h_{\mf{a}}\)-periodic, the index of the first nonzero term in the Fourier series of \(F\) is
+        \[
           v_{\infty}(F) = \sum_{\mf{a} \in \G\backslash\hat{\Q}}\frac{mv_{\mf{a}}(f)}{h_{\mf{a}}}.
-        \end{equation}
-        Lastly, by the orbit-stabilizer theorem \todo{xxx}\fi
+        \]
+        Lastly, modularity implies \(F(z) = 0\) if and only if \(f(\b z) = 0\) for some \(\b\) in which case the zero is of multiplicity \(m\). From this and the orbit-stabilizer theorem, we find that
+        \[
+          \frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|} = \sum_{\b \in \G\backslash\SL_{2}(\Z)}\frac{2mv_{\b z}(f)}{|\G_{\b z}|}.
+        \]
+        But then \cref{prop:fundamental_domain_congruence_subgroup} further implies
+        \[
+          \sum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|} = \sum_{z \in \G\backslash\mc{F}_{\G}}\frac{2mv_{z}(f)}{|\G_{z}|}.
+        \]
+        Substituting these identities into the formula for the modular group gives
+        \[
+          \sum_{\mf{a} \in \G\backslash\hat{\Q}}v_{\mf{a}}(f)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{2v_{z}(f)}{|\G_{z}|} = \frac{kd_{\G}}{12},
+        \]
+        as desired.
       \end{proof}
       
-      \iffalse We can now prove that \(\mc{M}_{k}(\G,\nu)\) and \(\mc{S}_{k}(\G,\nu)\) are finite dimensional.
+      We can now prove that \(\mc{M}_{k}(\G,\nu)\) and \(\mc{S}_{k}(\G,\nu)\) are finite dimensional.
 
       \begin{theorem}\label{thm:modular_forms_finite_dimensional}
         \(\mc{M}_{k}(\G,\nu)\) is finite dimensional. In particular, \(\mc{S}_{k}(\G,\nu)\) is finite dimensional too.
       \end{theorem}
       \begin{proof}
-        As \(\mc{S}_{k}(\G,\nu)\) is a subspace of \(\mc{M}_{k}(\G,\nu)\), we only need to prove the first statement. Let \(f \in \mc{M}_{k}(\G,\nu)\). Recall that \(v_{\infty}(f)\), \(v_{\mf{a}}(f)\) for \(\mf{a}\) a cusp of \(\GH\), and \(v_{z}(f)\) for \(z \in \mc{F}_{\G}\), are all nonnegative. In particular, \(v_{\infty}(f) \ge 0\) and the valence formula implies that \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\). Let \(n \ge \frac{kd_{\G}}{12}\) and consider the linear map \(F:\mc{M}_{k}(\G,\nu) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) \le n\) and hence \(\mc{M}_{k}(\G,\nu)\) is finite dimensional.
+        As \(\mc{S}_{k}(\G,\nu)\) is a subspace of \(\mc{M}_{k}(\G,\nu)\), we only need to prove the first statement. Let \(f \in \mc{M}_{k}(\G,\nu)\). Recall that \(v_{\mf{a}}(f)\) and \(v_{z}(f)\) are nonnegative. In particular, \(v_{\infty}(f)\) is nonnegative and the valence formula implies \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\) whenever \(f\) is nonzero. Let \(n\) be a positive integer such that \(n \ge \frac{kd_{\G}}{12}+1\) and consider the linear map \(F:\mc{M}_{k}(\G,\nu) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) < n\) and hence \(\mc{M}_{k}(\G,\nu)\) is finite dimensional.
       \end{proof}
 
-      It turns out that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space. To this end, for \(f,g \in \mc{S}_{k}(\G,\nu)\) define their \textbf{Petersson inner product}\index{Petersson inner product} by
+      \iffalse It turns out that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space. To this end, for \(f,g \in \mc{S}_{k}(\G,\nu)\) define their \textbf{Petersson inner product}\index{Petersson inner product} by
       \[
         \<f,g\>_{\G} = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
       \]
