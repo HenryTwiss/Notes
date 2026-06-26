@@ -493,9 +493,9 @@
         V_{\G} = d_{\G}V,
       \end{equation}
       which follows immediately from \cref{prop:fundamental_domain_congruence_subgroup}. Therefore the volume of any modular curve is finite. A particularly nice application of this fact is that the former type of integrals over \(\GH\) are absolutely convergent provided their integrands are bounded. As for another fact, the volume is invariant under conjugation. Indeed, let \(\a \in \GL_{2}^{+}(\Q)\) and suppose \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\) so that it is a congruence subgroup by \cref{lem:coset_lemma_1}. A short computation using the change of variables \(z \mapsto \a^{-1}z\) shows
-      \[
+      \begin{equation}\label{equ:volume_conjugation_invariance}
         V_{\a^{-1}\G\a} = V_{\G}.
-      \]
+      \end{equation}
       It turns out that the integrals
       \[
         \int_{\GH}f(z)\,d\mu \quad \text{and} \quad \int_{\G_{\infty}\backslash\H}f(z)\,d\mu,
@@ -1165,11 +1165,11 @@
         As \(\mc{S}_{k}(\G,\nu)\) is a subspace of \(\mc{M}_{k}(\G,\nu)\), we only need to prove the first statement. Let \(f \in \mc{M}_{k}(\G,\nu)\). Recall that \(v_{\mf{a}}(f)\) and \(v_{z}(f)\) are nonnegative. In particular, \(v_{\infty}(f)\) is nonnegative and the valence formula implies \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\) whenever \(f\) is nonzero. Let \(n\) be a positive integer such that \(n \ge \frac{kd_{\G}}{12}+1\) and consider the linear map \(F:\mc{M}_{k}(\G,\nu) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) < n\) and hence \(\mc{M}_{k}(\G,\nu)\) is finite dimensional.
       \end{proof}
 
-      \iffalse It turns out that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space. To this end, for \(f,g \in \mc{S}_{k}(\G,\nu)\) define their \textbf{Petersson inner product}\index{Petersson inner product} by
+      It turns out that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space. For \(f,g \in \mc{S}_{k}(\G,\nu)\) we define their \textbf{Petersson inner product}\index{Petersson inner product} \(\<f,g\>_{\G}\) by
       \[
-        \<f,g\>_{\G} = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
+        \<f,g\>_{\G} = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
       \]
-      If the congruence subgroup is clear from context we will suppress the dependence upon \(\G\). Since \(f\) and \(g\) have exponential decay at the cusps, the integrand is bounded and thus is locally absolutely uniformly convergent because we are integrating over a region of finite volume. The integrand is also \(\G\)-invariant so that the integral is independent of the choice of fundamental domain. These two facts together imply that the Petersson inner product is well-defined. We will continue to use this notation even if \(f\) and \(g\) do not belong to \(\mc{S}_{k}(\G,\nu)\) provided the integral is locally absolutely uniformly convergent. A basic property of the Petersson inner product is that it is invariant with respect to the slash operator.
+      If the congruence subgroup \(\G\) is clear from context we will suppress the dependence. The integral is well-defined because the integrand is \(\G\)-invariant. Moreover, as \(f\) and \(g\) have exponential decay at the cusps, the integral is also locally absolutely uniformly convergent. We also extend the Petersson inner product to any \(f\) or \(g\) provided the integrand is \(\G\)-invariant and the integral is locally absolutely uniformly convergent. A basic property of the Petersson inner product is that it is invariant with respect to the slash operator.
 
       \begin{proposition}\label{prop:Petersson_slash_invariance_modular}
         For any \(f,g \in \mc{S}_{k}(\G,\nu)\) and \(\g \in \SL_{2}(\Z)\), we have
@@ -1178,47 +1178,46 @@
         \]
       \end{proposition}
       \begin{proof}
-        This is just a computation:
-        \begin{align*}
-          \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} &= \frac{1}{V_{\g^{-1}\G\g}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu && \text{\cref{lem:invariance_of_volume}} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}|j(\g,z)|^{-2k}f(\g z)\conj{g(\g z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}f(\g z)\conj{g(\g z)}\Im(\g z)^{k}\,d\mu && \text{\cref{equ:Mobius_transformation_imaginary_part_j}} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu && \text{\(z \mapsto \g^{-1}z\)} \\
-          &= \<f,g\>_{\G}.
-        \end{align*}
+        This is just a computation. By \cref{equ:volume_conjugation_invariance}, we have
+        \[
+          \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} = \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu.
+        \]
+        A short computation using modularity and \cref{equ:Mobius_transformation_imaginary_part_simplified} shows that this integral is
+        \[
+          \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}f(\g z)\conj{g(\g z)}\Im(\g z)^{k}\,d\mu.
+        \]
+        The change of variables \(z \mapsto \g^{-1}z\) completes the proof.
       \end{proof}
 
-      We can now show that the Petersson inner product turns \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space.
+      Let us now show that the Petersson inner product turns \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space.
 
       \begin{proposition}\label{prop:Petersson_inner_product_hermitian_modular}
         \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space with respect to the Petersson inner product.
       \end{proposition}
       \begin{proof}
-        Let \(f,g \in \mc{S}_{k}(\G,\nu)\). Linearity of the integral immediately implies that the Petersson inner product is linear on \(\mc{S}_{k}(\G,\nu)\). It is also positive definite since
+        Let \(f,g \in \mc{S}_{k}(\G,\nu)\). The Petersson inner product is clearly linear on \(\mc{S}_{k}(\G,\nu)\). It is also positive definite since
         \[
-          \<f,f\> = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{f(z)}\Im(z)^{k}\,d\mu = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}|f(z)|^{2}\Im(z)^{k}\,d\mu \ge 0,
+          \<f,f\> = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}|f(z)|^{2}\Im(z)^{k}\,d\mu,
         \]
-        with equality if and only if \(f\) is identically zero. To see that it is conjugate symmetric, observe
-        \begin{align*}
-          \conj{\<g,f\>} &= \conj{\frac{1}{V_{\G}}\int_{\mc{F}_{\G}}g(z)\conj{f(z)}\Im(z)^{k}\,d\mu} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\conj{g(z)}f(z)\Im(z)^{k}\,\conj{d\mu} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\conj{g(z)}f(z)\Im(z)^{k}\,d\mu && \text{\(d\mu = \frac{dx\,dy}{y^{2}}\)} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
-          &= \<f,g\>.
-        \end{align*}
-        So the Petersson inner product turns \(\mc{S}_{k}(\G,\nu)\) into a complex inner product space. Since \(\mc{S}_{k}(\G,\nu)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows immediately that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space.
+        which is clearly nonnegative and zero if and only if \(f\) is identically zero. A short computation together with the fact that \(\conj{d\mu} = d\mu\), which holds since \(d\mu = \frac{dx\,dy}{y^{2}}\), proves conjugate symmetry. Whence \(\mc{S}_{k}(\G,\nu)\) is a complex inner product space with respect to the Petersson inner product. Since \(\mc{S}_{k}(\G,\nu)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows immediately that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space.
       \end{proof}
 
-      We will now take \(\G = \G_{0}(N)\) and \(\nu = \chi\) for \(\chi\) a Dirichlet character of conductor dividing \(N\). Let \(f \in \mc{S}_{k}(\G,\nu)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. We define linear functionals \(\phi_{m,k,\chi,\mf{a}}:\mc{S}_{k}(\G,\chi) \to \C\) by 
+      We will now take \(\G = \G_{0}(N)\) and \(\nu = \chi\) for \(\chi\) a Dirichlet character with conductor dividing \(N\). Let \(\mf{a}\) be a cusp of \(\GH\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\nu)\) and let its Fourier series at the \(\mf{a}\) cusp be
+      \[
+        (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 1}a_{\mf{a}}(n)e\left(\frac{nz}{h_{\mf{a}}}\right).
+      \]
+      For any positive integer \(m\), define linear functionals \(\phi_{m,k,\chi,\mf{a}}:\mc{S}_{k}(\G,\chi) \to \C\) by 
       \[
         \phi_{m,k,\chi,\mf{a}}(f) = a_{\mf{a}}(m).
       \]
       Since \(\mc{S}_{k}(\G,\chi)\) is a finite dimensional complex Hilbert space, the Riesz representation theorem implies that there exists unique \(v_{m,k,\chi,\mf{a}} \in \mc{S}_{k}(\G,\chi)\) such that
       \[
-        \<f,v_{m,k,\chi,\mf{a}}\> = \phi_{m,k,\chi,\mf{a}}(f) = a_{\mf{a}}(m).
+        \<f,v_{m,k,\chi,\mf{a}}\> = a_{\mf{a}}(m).
       \]
-      We would like to know what these cusp forms are. It turns out that \(v_{m,k,\chi,\mf{a}}(z)\) will be the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index up to a constant. To deduce this, recall the identity
+      We would like to know what these cusp forms are. It turns out that \(v_{m,k,\chi,\mf{a}}(z)\) will be the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) up to a constant.
+      
+      
+      \iffalse To deduce this, recall the identity
 
       \begin{equation}\label{equ:Dirac_integral_representation}
         \int_{0}^{h}e^{\frac{2\pi i(n-m)x}{h}}\,dx = h\d_{n-m,0},
