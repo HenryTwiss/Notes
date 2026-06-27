@@ -670,7 +670,7 @@
       \]
       upon summing the resulting geometric series. This implies \(f|_{k}\s_{\mf{a}}\) exhibits exponential decay and we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(y \to \infty\) which is provided by the fact that \(f\) is a cusp form.
 
-      Many of the modular forms we will study will be over the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). To collect all of these cases, let \(\G\) denote any of these congruence subgroups. There are a few important simplifications when working over \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) with conductor \(q\) dividing \(N\). In particular, for any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\). Therefore \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
+      Many of the modular forms we will study will be over the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). To collect all of these cases, let \(\G\) denote any of these congruence subgroups. There are a few important simplifications when working over \(\G\). The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore all of our modular forms will be \(1\)-periodic. Second is that the nebentypus can be induced by a Dirichlet character \(\chi\) modulo \(N\). Let \(q\) be the conductor of \(\chi\) so that \(q \mid N\). For any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\) whence \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
       \[
         \nu_{\chi}(\g) = \chi(d).
       \]
@@ -687,27 +687,27 @@
         \chi(\g) = \nu_{\chi}(\g).
       \]
     \subsection{Poincar\'e and Eisenstein Series}
-      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\chi\) be a Dirichlet character with conductor dividing \(N\), and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
+      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\nu:\G \to \C^{\ast}\) be a finite order homomorphism, and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\nu\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\nu,\mf{a}}(z)\) of weight \(k\) with nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp by
       \[
-        P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+        P_{m,k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
-      We call \(m\) the \textbf{index}\index{index} of \(P_{m,k,\chi,\mf{a}}(z)\). If \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. Note that \(\chi\) is always regular at \(\infty\). 
+      We call \(m\) the \textbf{index}\index{index} of \(P_{m,k,\nu,\mf{a}}(z)\). If \(\nu\) is trivial or \(\mf{a} = \infty\), we will drop these dependencies accordingly.
 
       \begin{remark}
         The reason why we restrict to \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
       \end{remark}
 
-      The Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the character, this is easily checked by direct computation using the fact that \(\chi\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\). So by multiplicativity of the slash operator, it suffices to show 
+      The Poincar\'e series \(P_{m,k,\nu,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the nebentypus, this is easily checked by direct computation using the fact that \(\nu\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\). So by multiplicativity of the slash operator, it suffices to show 
       \[
         \left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\g_{\infty}^{(h_{\mf{a}})}\right)(z) = e\left(\frac{mz}{h_{\mf{a}}}\right).
       \]
-      This is easily verified by direct computation. Whence \(P_{m,k,\chi,\mf{a}}(z)\) is well-defined. To see that \(P_{m,k,\chi,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\) and bounding term by term gives
+      This is easily verified by direct computation. Whence \(P_{m,k,\nu,\mf{a}}(z)\) is well-defined. To see that \(P_{m,k,\nu,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\) and bounding term by term gives
       \[
-        P_{m,k,\chi,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+        P_{m,k,\nu,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
-      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,k,\chi,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
+      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,k,\nu,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
       \[
-        (P_{m,k,\chi,\mf{a}}|_{k}\eta)(z) = \chi(\eta)P_{m,k,\chi,\mf{a}}(z).
+        (P_{m,k,\nu,\mf{a}}|_{k}\eta)(z) = \nu(\eta)P_{m,k,\nu,\mf{a}}(z).
       \]
       To verify the growth condition, we will need a technical lemma.
 
@@ -746,9 +746,9 @@
         outside of \(S_{a,b}^{Y} \x [-Y,Y]\). But this latter region is compact and so \(f(z,r)\) attains a minimum \(\d' > 0\) on it. Setting \(\d = \min\left(\frac{1}{2},\d'\right)\) completes the proof.
       \end{proof}
 
-      We can now verify the growth condition for \(P_{m,k,\chi,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
+      We can now verify the growth condition for \(P_{m,k,\nu,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
       \[
-        (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+        (P_{m,k,\nu,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
       Now decompose this last sum as
       \[
@@ -763,26 +763,26 @@
       \begin{theorem}\label{thm:Poincare_series_modular}
         The Poincar\'e series
         \[
-          P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+          P_{m,k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
-        is a weight \(k\) modular forms with character \(\chi\) on \(\GH\).
+        is a weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\).
       \end{theorem}
 
-      In the case of index zero Poincar\'e series, we write \(E_{k,\chi,\mf{a}}(z) = P_{0,k,\chi,\mf{a}}(z)\) and call \(E_{k,\chi,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
+      In the case of index zero Poincar\'e series, we write \(E_{k,\nu,\mf{a}}(z) = P_{0,k,\nu,\mf{a}}(z)\) and call \(E_{k,\nu,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
       \[
-        E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z).
+        E_{k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z).
       \]
-      Just as for the Poincar\'e series, if \(\chi\) is the trivial character or \(\mf{a} = \infty\), we will drop these dependencies accordingly. Note that \(\chi\) is always regular at \(\infty\). In fact, we obtain the following theorem as a special case of the former one:
+      Just as for the Poincar\'e series, if \(\nu\) is trivial or \(\mf{a} = \infty\), we will drop these dependencies accordingly. In fact, we obtain the following theorem as a special case of the former one:
 
       \begin{theorem}\label{thm:Eisenstein_series_modular}
         The Eisenstein series
         \[
-          E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
+          E_{k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
         \]
-        is a weight \(k\) modular forms with character \(\chi\) on \(\GH\).
+        is a weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\).
       \end{theorem}
       
-      We will now compute the Fourier series of the Poincar\'e series and Eisenstein series. This will essentially follow from a careful application of Poisson summation. Unlike verifying that these series are modular forms, the arguments are slightly different to compute their Fourier series. We first deduce the Fourier series of the Poincar\'e series.
+      We will now take \(\nu = \chi\) for \(\chi\) a Dirichlet character modulo \(N\). Note that \(\chi\) is always regular at \(\infty\). In this simplified case, we can explicitly compute the Fourier series of the Poincar\'e series and Eisenstein series whose Fourier coefficients involve Sali\'e sums, or Kloosterman sums when \(\chi\) is trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. Unlike verifying that these series are modular forms, the arguments are slightly different to compute their Fourier series. We first deduce the Fourier series of the Poincar\'e series.
 
       \begin{proposition}\label{prop:Fourier_series_Poincare_modular}
         Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,k,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
@@ -917,28 +917,11 @@
 
       An interesting observation, upon direct inspection of the Fourier series, is that the Eisenstein series \((E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z)\) are cusp forms unless \(\mf{a}\) is in the same cusp class as \(\mf{b}\). Also, as \(\G\) was one of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\), these Fourier series computations show that there exist cusp and non-cusp modular forms on these congruence subgroups. In particular, there exist modular forms on the Hecke congruence subgroups for every level.
     \subsection{Inner Product Spaces of Modular Forms}
-      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). Let \(\mc{M}_{k}(\G,\nu)\) and denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\). We write \(\mc{S}_{k}(\G,\nu)\) for the associated subspace of cusp forms. In either case, if \(\nu\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusion
+      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). Let \(\mc{M}_{k}(\G,\nu)\) denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\), write \(\mc{S}_{k}(\G,\nu)\) for the subspace of cusp forms, and write \(\mc{E}_{k}(\G,\nu)\) for the subspace spanned by the Eisenstein series. If \(\nu\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusions
       \[
-        \mc{M}_{k}(\G_{2},\nu) \subseteq \mc{M}_{k}(\G_{1},\nu),
+        \mc{M}_{k}(\G_{2},\nu) \subseteq \mc{M}_{k}(\G_{1},\nu), \quad \mc{S}_{k}(\G_{2},\nu) \subseteq \mc{S}_{k}(\G_{1},\nu), \quad \text{and} \quad \mc{E}_{k}(\G_{2},\nu) \subseteq \mc{E}_{k}(\G_{1},\nu).
       \]
-      which respects the subspace of cusp forms. So in general, the smaller the congruence subgroup the larger the associated vector space will be. These vector spaces also respect multiplication.
-
-      \begin{proposition}\label{prop:products_of_modular_forms}
-        If \(f \in \mc{M}_{k}(\G,\nu)\) and \(g \in \mc{M}_{\ell}(\G,\xi)\) then \(fg \in \mc{M}_{k+\ell}(\G,\nu\xi)\). Moreover, \(fg\) is a cusp form if either \(f\) or \(g\) is.
-      \end{proposition}
-      \begin{proof}
-        Holomorphy of \(fg\) is clear. For modularity, if \(\g \in \G\) then modularity and multiplicativity of the slash operator together imply
-        \[
-          ((fg)|_{k+\ell}\g)(z) = (\nu\xi)(\g)(fg)(z).
-        \]
-        This proves modularity. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for the cusp \(\mf{a}\) of \(\G\backslash\H\). Then
-        \[
-          ((fg)|_{k+\ell}\s_{\mf{a}})(z) = (f|_{k}\s_{\mf{a}})(z)(g|_{\ell}\s_{\mf{a}})(z),
-        \]
-        and the growth condition follows from that of \(f\) and \(g\). This proves the first statement and shows that \(fg\) is a cusp form if either \(f\) or \(g\) is.
-      \end{proof}
-
-      The vector space \(\mc{M}_{k}(\G,\nu)\), and therefore \(\mc{S}_{k}(\G,\nu)\) as well, turns out to be finite dimensional. This will be accomplished by showing that any \(f \in \mc{M}_{k}(\G,\nu)\) is determined by finitely many of its Fourier coefficients. In fact, this will follow from an exact formula relating the weight \(k\), the index \(d_{\G}\), and the zeros of \(f\). This is known as the valence formula and we require some notation to state it. For any \(z \in \H\), let \(v_{z}(f)\) be the index of the first nonzero term in the Taylor series of \(f\) at \(z\). Equivalently, \(v_{z}(f)\) is the order of vanishing of \(f\) at \(z\). Note that \(v_{z}(f)\) is necessarily nonnegative as \(f\) is holomorphic and
+      The vector space \(\mc{M}_{k}(\G,\nu)\) turns out to be finite dimensional. This will be accomplished by showing that any \(f \in \mc{M}_{k}(\G,\nu)\) is determined by finitely many of its Fourier coefficients. In fact, this will follow from an exact formula relating the weight \(k\), the index \(d_{\G}\), and the zeros of \(f\). This is known as the valence formula and we require some notation to state it. For any \(z \in \H\), let \(v_{z}(f)\) be the index of the first nonzero term in the Taylor series of \(f\) at \(z\). Equivalently, \(v_{z}(f)\) is the order of vanishing of \(f\) at \(z\). Note that \(v_{z}(f)\) is necessarily nonnegative as \(f\) is holomorphic and
       \[
         v_{\g z}(f) = v_{z}(f),
       \]
@@ -962,7 +945,7 @@
         \[
           ((f|_{k}\b')(z))^{n_{\nu}} = ((f|_{k}\b)(z))^{n_{\nu}},
         \]
-        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Modularity then follows from a short computation. The growth condition, follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\nu}d_{\G}}(\SL_{2}(\Z))\). 
+        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Modularity then follows from a short computation again using multiplicativity of the slash operator. The growth condition, follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\nu}d_{\G}}(\SL_{2}(\Z))\). 
       \end{proof}  
       
       We can now state and prove the \textbf{valence formula}\index{valence formula}.
@@ -1163,50 +1146,29 @@
       We can now prove that \(\mc{M}_{k}(\G,\nu)\) and \(\mc{S}_{k}(\G,\nu)\) are finite dimensional.
 
       \begin{theorem}\label{thm:modular_forms_finite_dimensional}
-        \(\mc{M}_{k}(\G,\nu)\) is finite dimensional. In particular, \(\mc{S}_{k}(\G,\nu)\) is finite dimensional too.
+        \(\mc{M}_{k}(\G,\nu)\) is finite dimensional.
       \end{theorem}
       \begin{proof}
-        As \(\mc{S}_{k}(\G,\nu)\) is a subspace of \(\mc{M}_{k}(\G,\nu)\), we only need to prove the first statement. Let \(f \in \mc{M}_{k}(\G,\nu)\). Recall that \(v_{\mf{a}}(f)\) and \(v_{z}(f)\) are nonnegative. In particular, \(v_{\infty}(f)\) is nonnegative and the valence formula implies \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\) whenever \(f\) is nonzero. Let \(n\) be a positive integer such that \(n \ge \frac{kd_{\G}}{12}+1\) and consider the linear map \(F:\mc{M}_{k}(\G,\nu) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) < n\) and hence \(\mc{M}_{k}(\G,\nu)\) is finite dimensional.
+        Let \(f \in \mc{M}_{k}(\G,\nu)\). Recall that \(v_{\mf{a}}(f)\) and \(v_{z}(f)\) are nonnegative. In particular, \(v_{\infty}(f)\) is nonnegative and the valence formula implies \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\) whenever \(f\) is nonzero. Let \(n\) be a positive integer such that \(n \ge \frac{kd_{\G}}{12}+1\) and consider the linear map \(F:\mc{M}_{k}(\G,\nu) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) < n\) and hence \(\mc{M}_{k}(\G,\nu)\) is finite dimensional.
       \end{proof}
 
-      It turns out that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space. For \(f,g \in \mc{S}_{k}(\G,\nu)\) we define their \textbf{Petersson inner product}\index{Petersson inner product} \(\<f,g\>_{\G}\) by
+      For further developments, we will require the Petersson inner product. For \(f,g \in \mc{S}_{k}(\G,\nu)\) we define their \textbf{Petersson inner product}\index{Petersson inner product} \(\<f,g\>_{\G}\) by
       \[
         \<f,g\>_{\G} = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
       \]
-      If the congruence subgroup \(\G\) is clear from context we will suppress the dependence. The integral is well-defined because the integrand is \(\G\)-invariant. Moreover, as \(f\) and \(g\) have exponential decay at the cusps, the integral is also locally absolutely uniformly convergent. We also extend the Petersson inner product to any \(f\) or \(g\) provided the integrand is \(\G\)-invariant and the integral is locally absolutely uniformly convergent. A basic property of the Petersson inner product is that it is invariant with respect to the slash operator.
+      If the congruence subgroup \(\G\) is clear from context we will suppress the dependence. The integral is well-defined because the integrand is \(\G\)-invariant. Moreover, as \(f\) and \(g\) have exponential decay at the cusps, the integral is also locally absolutely uniformly convergent. We also extend the Petersson inner product to any \(f\) or \(g\) provided the integrand is \(\G\)-invariant and the integral is locally absolutely uniformly convergent.
 
-      \begin{proposition}\label{prop:Petersson_slash_invariance_modular}
-        For any \(f,g \in \mc{S}_{k}(\G,\nu)\) and \(\g \in \SL_{2}(\Z)\), we have
-        \[
-          \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} = \<f,g\>_{\G}.
-        \]
-      \end{proposition}
-      \begin{proof}
-        By \cref{equ:volume_conjugation_invariance}, we have
-        \[
-          \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} = \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu.
-        \]
-        A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified} and modularity shows that this integral is
-        \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}f(\g z)\conj{g(\g z)}\Im(\g z)^{k}\,d\mu.
-        \]
-        The change of variables \(z \mapsto \g^{-1}z\) completes the proof.
-      \end{proof}
+      The Petersson inner product makes \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space. Indeed, the Petersson inner product is clearly linear on \(\mc{S}_{k}(\G,\nu)\). It is also positive definite since
+      \[
+        \<f,f\> = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}|f(z)|^{2}\Im(z)^{k}\,d\mu,
+      \]
+      which is clearly nonnegative and zero if and only if \(f\) is identically zero. A short computation together using the fact that \(\conj{d\mu} = d\mu\), which holds since \(d\mu = \frac{dx\,dy}{y^{2}}\), proves conjugate symmetry. Whence \(\mc{S}_{k}(\G,\nu)\) is a complex inner product space with respect to the Petersson inner product. Since \(\mc{S}_{k}(\G,\nu)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows immediately that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space.
 
-      Let us now show that the Petersson inner product turns \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space.
-
-      \begin{proposition}\label{prop:Petersson_inner_product_hermitian_modular}
-        \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space with respect to the Petersson inner product.
-      \end{proposition}
-      \begin{proof}
-        Let \(f,g \in \mc{S}_{k}(\G,\nu)\). The Petersson inner product is clearly linear on \(\mc{S}_{k}(\G,\nu)\). It is also positive definite since
-        \[
-          \<f,f\> = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}|f(z)|^{2}\Im(z)^{k}\,d\mu,
-        \]
-        which is clearly nonnegative and zero if and only if \(f\) is identically zero. A short computation together with the fact that \(\conj{d\mu} = d\mu\), which holds since \(d\mu = \frac{dx\,dy}{y^{2}}\), proves conjugate symmetry. Whence \(\mc{S}_{k}(\G,\nu)\) is a complex inner product space with respect to the Petersson inner product. Since \(\mc{S}_{k}(\G,\nu)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows immediately that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space.
-      \end{proof}
-
-      We will now take \(\nu = \chi\) for \(\chi\) a Dirichlet character with conductor dividing \(N\). Let \(\mf{a}\) be a cusp of \(\GH\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\nu)\) and let its Fourier series at the \(\mf{a}\) cusp be
+      We will now take \(\nu = \chi\) for \(\chi\) a Dirichlet character modulo \(N\). Our goal will be to show that \(\mc{M}_{k}(\G,\chi)\) decomposes as
+      \[
+        \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
+      \]
+      where \(\mc{S}_{k}(\G,\chi)\) is spanned by the Poincar\'e series of positive index. Let \(\mf{a}\) be a cusp of \(\GH\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\nu)\) and let its Fourier series at the \(\mf{a}\) cusp be
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 1}a_{\mf{a}}(n)e\left(\frac{nz}{h_{\mf{a}}}\right).
       \]
@@ -1263,7 +1225,7 @@
       \[
         v_{m,k,\chi,\mf{a}}(z) = \frac{V_{\G}(4\pi m)^{k-1}}{\G(k-1)h_{\mf{a}}^{k}}P_{m,k,\chi,\mf{a}}(z).
       \]
-      Thus the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to constants. With this result in hand we can prove that these series span the space of cusp forms.
+      Thus the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to constants. With this result in hand we can prove that these series span the space of cusp forms and that the orthogonal complement in the .
 
       \begin{theorem}
         The Poincar\'e series \(P_{m,k,\chi}(z)\) of positive index span \(\mc{S}_{k}(\G,\chi)\).
