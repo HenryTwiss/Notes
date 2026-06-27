@@ -573,7 +573,7 @@
       \[
         f(\g z) = \nu(\g)j(\g,z)^{k}f(z).
       \]
-      We write \(n_{\nu}\) for the order of the nebentypus so that \(\nu\) takes its values in the \(n_{\nu}\)-th roots of unity. Moreover, we say that \(\nu\) is \textbf{regular}\index{regular} at a cusp \(\mf{a}\) if \(\nu(\g_{\mf{a}}) = 1\). Equivalently, \(\nu(\g) = 1\) for every \(\g \in \G_{\mf{a}}\). Property (iii) is called the \textbf{growth condition}\index{growth condition} and we say \(f\) is \textbf{holomorphic at the cusps}\index{holomorphic at the cusps}. By modularity, it suffices to verify the growth condition on a complete set scaling matrices for the cusp classes. Therefore we only have to check this condition for finitely many matrices since the number of cusp classes is finite. Also, the growth condition is equivalent to \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\). To see this, we require a lemma.
+      We write \(n_{\nu}\) for the order of the nebentypus so that \(\nu\) takes its values in the \(n_{\nu}\)-th roots of unity. Moreover, we say that \(\nu\) is \textbf{regular}\index{regular} at a cusp \(\mf{a}\) if \(\nu(\g_{\mf{a}}) = 1\). Equivalently, \(\nu(\g) = 1\) for every \(\g \in \G_{\mf{a}}\). Property (iii) is called the \textbf{growth condition}\index{growth condition} and we say \(f\) is \textbf{holomorphic at the cusps}\index{holomorphic at the cusps}. By modularity, it suffices to verify the growth condition for a set of scaling matrices associated to a complete set of \(\G\)-inequivalent cusps. Therefore we only have to check this condition for finitely many matrices since the number of cusp classes is finite. Also, the growth condition is equivalent to \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\). To see this, we require a lemma.
 
       \begin{lemma}
         Every \(\a \in \GL_{2}^{+}(\Q)\) can be written as \(\a = \g\eta\) for some \(\g \in \SL_{2}(\Z)\) and \(\eta \in \GL_{2}^{+}(\Q)\) with \(\eta = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix}\).
@@ -1141,7 +1141,7 @@
         \[
           v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|} = \frac{kmd_{\G}}{12}.
         \]
-        Observe that the Fourier series of the factors of \(F\) run over the Fourier series for \(f\) for a complete set of representatives of cusp classes each with multiplicity \(m\). Since the Fourier series of \(f\) at the \(\mf{a}\) cusp is \(h_{\mf{a}}\)-periodic, the index of the first nonzero term in the Fourier series of \(F\) is
+        Observe that the Fourier series of \(F\) is a product of the Fourier series for \(f\) over a complete set of \(\G\)-inequivalent cusps each with multiplicity \(m\). Since the Fourier series of \(f\) at the \(\mf{a}\) cusp is \(h_{\mf{a}}\)-periodic, the index of the first nonzero term in the Fourier series of \(F\) is
         \[
           v_{\infty}(F) = \sum_{\mf{a} \in \G\backslash\hat{\Q}}\frac{mv_{\mf{a}}(f)}{h_{\mf{a}}}.
         \]
@@ -1206,7 +1206,7 @@
         which is clearly nonnegative and zero if and only if \(f\) is identically zero. A short computation together with the fact that \(\conj{d\mu} = d\mu\), which holds since \(d\mu = \frac{dx\,dy}{y^{2}}\), proves conjugate symmetry. Whence \(\mc{S}_{k}(\G,\nu)\) is a complex inner product space with respect to the Petersson inner product. Since \(\mc{S}_{k}(\G,\nu)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows immediately that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space.
       \end{proof}
 
-      We will now take \(\G = \G_{0}(N)\) and \(\nu = \chi\) for \(\chi\) a Dirichlet character with conductor dividing \(N\). Let \(\mf{a}\) be a cusp of \(\GH\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\nu)\) and let its Fourier series at the \(\mf{a}\) cusp be
+      We will now take \(\nu = \chi\) for \(\chi\) a Dirichlet character with conductor dividing \(N\). Let \(\mf{a}\) be a cusp of \(\GH\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\nu)\) and let its Fourier series at the \(\mf{a}\) cusp be
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 1}a_{\mf{a}}(n)e\left(\frac{nz}{h_{\mf{a}}}\right).
       \]
