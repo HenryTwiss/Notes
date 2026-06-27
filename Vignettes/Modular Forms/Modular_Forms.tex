@@ -530,9 +530,9 @@
         j(\a,z) = (cz+d).
       \]
       With this notation, \cref{equ:Mobius_transformation_imaginary_part} becomes
-      \begin{equation}\label{equ:Mobius_transformation_imaginary_part_j}
+      \[
         \Im(\a z) = \det(\a)\frac{\Im(z)}{|j(\a,z)|^{2}}.
-      \end{equation}
+      \]
       There is a very useful property that \(j(\a,z)\) satisfies. To state it, let \(\a' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\). Then
       \[
         \a\a' = \begin{pmatrix} a'a+b'c & a'b+b'b \\ c'a+d'c & c'b+d'd \end{pmatrix},
@@ -652,7 +652,11 @@
       \[
         \int_{0}^{h_{\mf{a}}}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}e\left(-\frac{nz}{h_{\mf{a}}}\right)\,dx.
       \]
-      On the one hand, substituting the Fourier series and using absolute convergence to interchange the sum and the integral, every term integrates to zero except the \(n\)-th term which is \(a_{\mf{a}}(n)h_{\mf{a}}\Im(z)^{\frac{k}{2}}\). On the other hand, the integral is \(O\left(e^{-\frac{2\pi ny}{h_{\mf{a}}}}\right)\) via our previous remarks. This shows
+      On the one hand, substitute the Fourier series into this integral and use absolute convergence to interchange the sum and the integral. In view of the identity
+      \begin{equation}\label{equ:Dirac_integral_representation}
+        \int_{0}^{h}e^{\frac{2\pi i(n-m)x}{h}}\,dx = h\d_{n-m,0},
+      \end{equation}
+      for any positive integer \(h\) and integers \(n\) and \(m\), every term integrates to zero except the \(n\)-th term which is \(a_{\mf{a}}(n)h_{\mf{a}}\Im(z)^{\frac{k}{2}}\). On the other hand, the integral is \(O\left(e^{-\frac{2\pi ny}{h_{\mf{a}}}}\right)\) via our previous remarks. This shows
       \[
         a_{\mf{a}}(n)\Im(z)^{\frac{k}{2}} \ll e^{-\frac{2\pi ny}{h_{\mf{a}}}}.
       \]
@@ -912,7 +916,7 @@
       \end{proof}
 
       An interesting observation, upon direct inspection of the Fourier series, is that the Eisenstein series \((E_{k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z)\) are cusp forms unless \(\mf{a}\) is in the same cusp class as \(\mf{b}\). Also, as \(\G\) was one of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\), these Fourier series computations show that there exist cusp and non-cusp modular forms on these congruence subgroups. In particular, there exist modular forms on the Hecke congruence subgroups for every level.
-    \subsection{\todo{Inner Product Spaces of Modular Forms}}
+    \subsection{Inner Product Spaces of Modular Forms}
       Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). Let \(\mc{M}_{k}(\G,\nu)\) and denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\). We write \(\mc{S}_{k}(\G,\nu)\) for the associated subspace of cusp forms. In either case, if \(\nu\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusion
       \[
         \mc{M}_{k}(\G_{2},\nu) \subseteq \mc{M}_{k}(\G_{1},\nu),
@@ -1178,11 +1182,11 @@
         \]
       \end{proposition}
       \begin{proof}
-        This is just a computation. By \cref{equ:volume_conjugation_invariance}, we have
+        By \cref{equ:volume_conjugation_invariance}, we have
         \[
           \<f|_{k}\g,g|_{k}\g\>_{\g^{-1}\G\g} = \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}(f|_{k}\g)(z)\conj{(g|_{k}\g)(z)}\Im(z)^{k}\,d\mu.
         \]
-        A short computation using modularity and \cref{equ:Mobius_transformation_imaginary_part_simplified} shows that this integral is
+        A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified} and modularity shows that this integral is
         \[
           \frac{1}{V_{\G}}\int_{\mc{F}_{\g^{-1}\G\g}}f(\g z)\conj{g(\g z)}\Im(\g z)^{k}\,d\mu.
         \]
@@ -1215,66 +1219,59 @@
         \<f,v_{m,k,\chi,\mf{a}}\> = a_{\mf{a}}(m).
       \]
       We would like to know what these cusp forms are. It turns out that \(v_{m,k,\chi,\mf{a}}(z)\) will be the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) up to a constant.
-      
-      
-      \iffalse To deduce this, recall the identity
-
-      \begin{equation}\label{equ:Dirac_integral_representation}
-        \int_{0}^{h}e^{\frac{2\pi i(n-m)x}{h}}\,dx = h\d_{n-m,0},
-      \end{equation}
-
-      for any \(h \ge 1\) and \(n,m \in \Z\). We will prove the following theorem:
 
       \begin{theorem}\label{thm:Petersson_inner_product_with_Poincare_series}
         Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\GH\). Then 
         \[
           \<f,P_{m,k,\chi,\mf{a}}\> = \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
         \]
-        for all \(m \ge 1\).
+        for all positive integers \(m\).
       \end{theorem}
       \begin{proof}
-        We compute the inner product as follows:
-        \begin{align*}
-          \<f,P_{m,k,\chi,\mf{a}}\> &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{P_{m,k,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\sum_{\g \in \G_{\mf{a}}\backslash\G}\chi(\g)\conj{\left(e^{\frac{2\pi imz}{h_{\mf{a}}}}\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\sum_{\g \in \G_{\mf{a}}\backslash\G}\chi(\g)\conj{j(\s_{\mf{a}}^{-1}\g,z)^{-k}}e^{-\frac{2\pi im\conj{\s_{\mf{a}}^{-1}\g z}}{h_{\mf{a}}}}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\sum_{\g \in \G_{\mf{a}}\backslash\G}\chi(\g)j(\s_{\mf{a}}^{-1}\g,z)^{k}e^{-\frac{2\pi im\conj{\s_{\mf{a}}^{-1}\g z}}{h_{\mf{a}}}}\Im(\s_{\mf{a}}^{-1}\g z)^{k}\,d\mu && \text{\cref{equ:Mobius_transformation_imaginary_part_j}} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\sum_{\g \in \G_{\mf{a}}\backslash\G}\left(\frac{j(\s_{\mf{a}}^{-1}\g,z)}{j(\g,z)}\right)^{k}f(\g z)e^{-\frac{2\pi im\conj{\s_{\mf{a}}^{-1}\g z}}{h_{\mf{a}}}}\Im(\s_{\mf{a}}^{-1}\g z)^{k}\,d\mu && \text{modularity} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g z)^{-k}f(\g z)e^{-\frac{2\pi im\conj{\s_{\mf{a}}^{-1}\g z}}{h_{\mf{a}}}}\Im(\s_{\mf{a}}^{-1}\g z)^{k}\,d\mu && \text{cocycle condition} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{-k}f(\g\s_{\mf{a}}z)e^{-\frac{2\pi im\conj{\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z}}{h_{\mf{a}}}}\Im(\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{k}\,d\mu && \text{\(z \mapsto \s_{\mf{a}}z\)} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}}\sum_{\g \in \G_{\infty}^{(h_{\mf{a}})}\backslash\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}j(\s_{\mf{a}},\g z)^{-k}f(\s_{\mf{a}}\g z)e^{-\frac{2\pi im\conj{\g z}}{h_{\mf{a}}}}\Im(\g z)^{k}\,d\mu && \text{\(\g \mapsto \s_{\mf{a}}\g\s_{\mf{a}}^{-1}\)} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}}\sum_{\g \in \G_{\infty}^{(h_{\mf{a}})}\backslash\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}(f|_{k}\s_{\mf{a}})(\g z)e^{-\frac{2\pi im\conj{\g z}}{h_{\mf{a}}}}\Im(\g z)^{k}\,d\mu && \\
-          &= \frac{1}{V_{\G}}\int_{\G_{\infty}^{(h_{\mf{a}})}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e^{-\frac{2\pi im\conj{z}}{h_{\mf{a}}}}\Im(z)^{k}\,d\mu && \text{unfolding.}
-        \end{align*}
-        Substituting in the Fourier series of \(f\) at the \(\mf{a}\) cusp, we can finish the computation:
-        \begin{align*}
-          \frac{1}{V_{\G}}\int_{\G_{\infty}^{(h_{\mf{a}})}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e^{-\frac{2\pi im\conj{z}}{h_{\mf{a}}}}\Im(z)^{k}\,d\mu &= \frac{1}{V_{\G}}\int_{0}^{\infty}\int_{0}^{h_{\mf{a}}}\sum_{n \ge 1}a_{\mf{a}}(n)e^{\frac{2\pi i(n-m)x}{h_{\mf{a}}}}e^{-\frac{2\pi(n+m)y}{h_{\mf{a}}}}y^{k}\,\frac{dx\,dy}{y^{2}} \\
-          &= \frac{1}{V_{\G}}\int_{0}^{\infty}\sum_{n \ge 1}\int_{0}^{h_{\mf{a}}}a_{\mf{a}}(n)e^{\frac{2\pi i(n-m)x}{h_{\mf{a}}}}e^{-\frac{2\pi(n+m)y}{h_{\mf{a}}}}y^{k}\,\frac{dx\,dy}{y^{2}} && \text{FTT} \\
-          &= \frac{h_{\mf{a}}}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(m)e^{-\frac{4\pi my}{h_{\mf{a}}}}y^{k}\,\frac{dy}{y^{2}},
-        \end{align*}
-        where the last line follows because \cref{equ:Dirac_integral_representation} implies that the inner integral cuts off all the terms except the diagonal \(n = m\). Then
-        \begin{align*}
-          \frac{h_{\mf{a}}}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(m)e^{-\frac{4\pi my}{h_{\mf{a}}}}y^{k}\,\frac{dy}{y^{2}} &= \frac{h_{\mf{a}}}{V_{\G}}a_{\mf{a}}(m)\int_{0}^{\infty}e^{-\frac{4\pi my}{h_{\mf{a}}}}y^{k-1}\,\frac{dy}{y} \\
-          &= \frac{h_{\mf{a}}}{V_{\G}}a_{\mf{a}}(m)\int_{0}^{\infty}e^{-\frac{4\pi my}{h_{\mf{a}}}}y^{k-1}\,\frac{dy}{y} && \text{\(y \mapsto \frac{h_{\mf{a}}y}{4\pi m}\)} \\
-          &=  \frac{h_{\mf{a}}^{k}}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m)\int_{0}^{\infty}e^{-y}y^{k-1}\,\frac{dy}{y} \\
-          &= \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m).
-        \end{align*}
-        This completes the proof.
+        We will compute 
+        \[
+          \<f,P_{m,k,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{P_{m,k,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
+        \]
+        A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified}, modularity, and the cocycle condition, shows that this integral is
+        \[
+          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g z)^{-k}f(\g z)e\left(-\frac{m\conj{\s_{\mf{a}}^{-1}\g z}}{h_{\mf{a}}}\right)\Im(\s_{\mf{a}}^{-1}\g z)^{k}\,d\mu.
+        \]
+        Applying the change of variables \(z \mapsto \s_{\mf{a}}z\) gives
+        \[
+          \frac{1}{V_{\G}}\int_{\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{-k}f(\g\s_{\mf{a}}z)e\left(-\frac{m\conj{\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z}}{h_{\mf{a}}}\right)\Im(\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{k}\,d\mu.
+        \]
+        Making the further change of variables \(\g \mapsto \s_{\mf{a}}\g\s_{\mf{a}}^{-1}\) results in
+        \[
+          \frac{1}{V_{\G}}\int_{\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}}\sum_{\g \in \G_{\infty}^{(h_{\mf{a}})}\backslash\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}(f|_{k}\s_{\mf{a}})(\g z)e\left(-\frac{m\conj{\g z}}{h_{\mf{a}}}\right)\Im(\g z)^{k}.
+        \]
+        Now unfold to obtain
+        \[
+          \frac{1}{V_{\G}}\int_{\G_{\infty}^{(h_{\mf{a}})}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e\left(-\frac{m\conj{z}}{h_{\mf{a}}}\right)\Im(z)^{k}\,d\mu.
+        \]
+        Substituting in the Fourier series of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
+        \[
+          \frac{h_{\mf{a}}}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(m)e^{-\frac{4\pi my}{h_{\mf{a}}}}y^{k}\,\frac{dy}{y^{2}},
+        \]
+        in view of \cref{equ:Dirac_integral_representation} because every term integrates to zero except the \(m\)-th term. Performing the change of variables \(y \mapsto \frac{h_{\mf{a}}y}{4\pi m}\), this latter integral is recognized as the Gamma function and we obtain
+        \[
+          \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
+        \]
+        completing the proof.
       \end{proof}
-
-      It follows immediately from \cref{thm:Petersson_inner_product_with_Poincare_series} that
+ 
+      It follows immediately from this result that
       \[
         v_{m,k,\chi,\mf{a}}(z) = \frac{V_{\G}(4\pi m)^{k-1}}{\G(k-1)h_{\mf{a}}^{k}}P_{m,k,\chi,\mf{a}}(z).
       \]
-      Thus the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to a constant. With \cref{thm:Petersson_inner_product_with_Poincare_series} in hand we can prove the following result:
+      Thus the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to constants. With this result in hand we can prove that these series span the space of cusp forms.
 
       \begin{theorem}
         The Poincar\'e series \(P_{m,k,\chi}(z)\) of positive index span \(\mc{S}_{k}(\G,\chi)\).
       \end{theorem}
       \begin{proof}
-        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a(n)\). Since \(\G(k-1) \neq 0\), \cref{thm:Petersson_inner_product_with_Poincare_series} implies \(\<f,P_{m,k,\chi,\mf{a}}\> = 0\) if and only if \(a(m) = 0\). So \(f\) is orthogonal to all the Poincar\'e series \(P_{m,k,\chi}\) of positive index if and only if every Fourier coefficient \(a(m)\) is zero. But this happens if and only if \(f\) is identically zero.
+        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a(n)\). Since \(\G(k-1)\) is nonzero, \cref{thm:Petersson_inner_product_with_Poincare_series} implies \(\<f,P_{m,k,\chi,\mf{a}}\> = 0\) if and only if \(a(m) = 0\). So \(f\) is orthogonal to all of the Poincar\'e series \(P_{m,k,\chi}\) of positive index if and only if every Fourier coefficient \(a(m)\) is zero. But this happens if and only if \(f\) is identically zero.
       \end{proof}
-    \fi\iffalse\subsection{\todo{Double Coset Operators}}
+    \iffalse\subsection{\todo{Double Coset Operators}}
       We are ready to introduce a class of general operators depending upon double cosets. We will use these operators to define the diamond and Hecke operators. First, we define an operator closely related to the slash operator. For any integer \(k \ge 1\) and any \(\a \in \GL_{2}^{+}(\Q)\) we define the \textbf{double slash operator}\index{double slash operator} \(\|_{k}\a:C(\H) \to C(\H)\) to be the linear operator given by
       \[
         (f\|_{k}\a)(z) = \det(\a)^{k-1}j(\a,z)^{-k}f(\a z).
