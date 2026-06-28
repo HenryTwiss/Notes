@@ -566,7 +566,7 @@
         \setcounter{enumi}{3}
         \item For all cusps \(\mf{a}\) and positive \(y\), we have
         \[
-          \int_{0}^{h_{\mf{a}}}(f|_{k}\s_{\mf{a}})(x+iy)\,dx = 0.
+          \int_{0}^{h_{\mf{a}}}(f|_{k}\s_{\mf{a}})(z)\,dx = 0.
         \]
       \end{enumerate}
       Property (ii) is called the \textbf{modularity condition}\index{modularity condition} and we say \(f\) is \textbf{modular}\index{modular}. The modularity condition can equivalently be expressed as
@@ -765,7 +765,7 @@
         \[
           P_{m,k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
-        is a weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\).
+        is a weight \(k\) modular form with nebentypus \(\nu\) on \(\GH\).
       \end{theorem}
 
       In the case of index zero Poincar\'e series, we write \(E_{k,\nu,\mf{a}}(z) = P_{0,k,\nu,\mf{a}}(z)\) and call \(E_{k,\nu,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
@@ -779,10 +779,14 @@
         \[
           E_{k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
         \]
-        is a weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\).
+        is a weight \(k\) modular form with nebentypus \(\nu\) on \(\GH\).
       \end{theorem}
       
-      We will now take \(\nu = \chi\) for \(\chi\) a Dirichlet character modulo \(N\). Note that \(\chi\) is always regular at \(\infty\). In this simplified case, we can explicitly compute the Fourier series of the Poincar\'e series and Eisenstein series whose Fourier coefficients involve Sali\'e sums, or Kloosterman sums when \(\chi\) is trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. Unlike verifying that these series are modular forms, the arguments are slightly different to compute their Fourier series. We first deduce the Fourier series of the Poincar\'e series.
+      We will now take \(\nu = \chi\) for \(\chi\) a Dirichlet character modulo \(N\). So our Poincar\'e series and Eisenstein series take the forms
+      \[
+        P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z) \quad \text{and} \quad E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
+      \]
+      respectively. Note that \(\chi\) is always regular at \(\infty\). In this simplified case, we can explicitly compute the Fourier series of the Poincar\'e series and Eisenstein series whose Fourier coefficients involve Sali\'e sums, or Kloosterman sums when \(\chi\) is trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. Unlike verifying that these series are modular forms, the arguments are slightly different to compute their Fourier series. We first deduce the Fourier series of the Poincar\'e series.
 
       \begin{proposition}\label{prop:Fourier_series_Poincare_modular}
         Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,k,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
@@ -1160,13 +1164,13 @@
 
       The Petersson inner product makes \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space. Indeed, the Petersson inner product is clearly linear on \(\mc{S}_{k}(\G,\nu)\). It is also positive definite since
       \[
-        \<f,f\> = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}|f(z)|^{2}\Im(z)^{k}\,d\mu,
+        \<f,f\> = \frac{1}{V_{\G}}\int_{\GH}|f(z)|^{2}\Im(z)^{k}\,d\mu,
       \]
       which is clearly nonnegative and zero if and only if \(f\) is identically zero. A short computation together using the fact that \(\conj{d\mu} = d\mu\), which holds since \(d\mu = \frac{dx\,dy}{y^{2}}\), proves conjugate symmetry. Whence \(\mc{S}_{k}(\G,\nu)\) is a complex inner product space with respect to the Petersson inner product. Since \(\mc{S}_{k}(\G,\nu)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows immediately that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space.
 
       We will now take \(\nu = \chi\) for \(\chi\) a Dirichlet character modulo \(N\). Our goal will be to show that \(\mc{M}_{k}(\G,\chi)\) decomposes as
       \[
-        \mc{M}_{k}(\G,\chi) = \mc{E}_{k}(\G,\chi) \op \mc{S}_{k}(\G,\chi),
+        \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
       \]
       where \(\mc{S}_{k}(\G,\chi)\) is spanned by the Poincar\'e series of positive index. Let \(\mf{a}\) be a cusp of \(\GH\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\nu)\) and let its Fourier series at the \(\mf{a}\) cusp be
       \[
@@ -1182,29 +1186,29 @@
       \]
       We would like to know what these cusp forms are. It turns out that \(v_{m,k,\chi,\mf{a}}(z)\) will be the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) up to a constant.
 
-      \begin{theorem}\label{thm:Petersson_inner_product_with_Poincare_series}
+      \begin{proposition}\label{prop:Petersson_inner_product_with_Poincare_series}
         Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\GH\). Then 
         \[
           \<f,P_{m,k,\chi,\mf{a}}\> = \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
         \]
         for all positive integers \(m\).
-      \end{theorem}
+      \end{proposition}
       \begin{proof}
         We will compute 
         \[
-          \<f,P_{m,k,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}f(z)\conj{P_{m,k,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
+          \<f,P_{m,k,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{P_{m,k,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
         \]
         A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified}, modularity, and the cocycle condition, shows that this integral is
         \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g z)^{-k}f(\g z)e\left(-\frac{m\conj{\s_{\mf{a}}^{-1}\g z}}{h_{\mf{a}}}\right)\Im(\s_{\mf{a}}^{-1}\g z)^{k}\,d\mu.
+          \frac{1}{V_{\G}}\int_{\GH}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g z)^{-k}f(\g z)e\left(-\frac{m\conj{\s_{\mf{a}}^{-1}\g z}}{h_{\mf{a}}}\right)\Im(\s_{\mf{a}}^{-1}\g z)^{k}\,d\mu.
         \]
         Applying the change of variables \(z \mapsto \s_{\mf{a}}z\) gives
         \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{-k}f(\g\s_{\mf{a}}z)e\left(-\frac{m\conj{\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z}}{h_{\mf{a}}}\right)\Im(\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{k}\,d\mu.
+          \frac{1}{V_{\G}}\int_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\backslash\H}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{-k}f(\g\s_{\mf{a}}z)e\left(-\frac{m\conj{\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z}}{h_{\mf{a}}}\right)\Im(\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{k}\,d\mu.
         \]
         Making the further change of variables \(\g \mapsto \s_{\mf{a}}\g\s_{\mf{a}}^{-1}\) results in
         \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}}\sum_{\g \in \G_{\infty}^{(h_{\mf{a}})}\backslash\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}(f|_{k}\s_{\mf{a}})(\g z)e\left(-\frac{m\conj{\g z}}{h_{\mf{a}}}\right)\Im(\g z)^{k}.
+          \frac{1}{V_{\G}}\int_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\backslash\H}\sum_{\g \in \G_{\infty}^{(h_{\mf{a}})}\backslash\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}(f|_{k}\s_{\mf{a}})(\g z)e\left(-\frac{m\conj{\g z}}{h_{\mf{a}}}\right)\Im(\g z)^{k}.
         \]
         Now unfold to obtain
         \[
@@ -1214,7 +1218,7 @@
         \[
           \frac{h_{\mf{a}}}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(m)e^{-\frac{4\pi my}{h_{\mf{a}}}}y^{k}\,\frac{dy}{y^{2}},
         \]
-        in view of \cref{equ:Dirac_integral_representation} because every term integrates to zero except the \(m\)-th term. Performing the change of variables \(y \mapsto \frac{h_{\mf{a}}y}{4\pi m}\), this latter integral is recognized as the Gamma function and we obtain
+        in view of \cref{equ:Dirac_integral_representation}, because every term integrates to zero except the \(m\)-th term. Performing the change of variables \(y \mapsto \frac{h_{\mf{a}}y}{4\pi m}\), this latter integral is recognized as the Gamma function and we obtain
         \[
           \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
         \]
@@ -1225,16 +1229,58 @@
       \[
         v_{m,k,\chi,\mf{a}}(z) = \frac{V_{\G}(4\pi m)^{k-1}}{\G(k-1)h_{\mf{a}}^{k}}P_{m,k,\chi,\mf{a}}(z).
       \]
-      Thus the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to constants. With this result in hand we can prove that these Poincar\'e series span the space of cusp forms and our desired decomposition.
+      Thus the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to constants.
+
+      An analogous argument with Eisenstein series shows that they are orthogonal to cusp forms.
+      
+      \begin{proposition}\label{prop:Petersson_inner_product_with_Eisenstein_series}
+        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\GH\). Then 
+        \[
+          \<f,E_{k,\chi,\mf{a}}\> = 0.
+        \]
+      \end{proposition}
+      \begin{proof}
+        We will compute 
+        \[
+          \<f,E_{k,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{E_{k,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
+        \]
+        A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified}, modularity, and the cocycle condition, shows that this integral is
+        \[
+          \frac{1}{V_{\G}}\int_{\GH}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g z)^{-k}f(\g z)\Im(\s_{\mf{a}}^{-1}\g z)^{k}\,d\mu.
+        \]
+        Applying the change of variables \(z \mapsto \s_{\mf{a}}z\) gives
+        \[
+          \frac{1}{V_{\G}}\int_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\backslash\H}\sum_{\g \in \G_{\mf{a}}\backslash\G}j(\s_{\mf{a}},\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{-k}f(\g\s_{\mf{a}}z)\Im(\s_{\mf{a}}^{-1}\g\s_{\mf{a}}z)^{k}\,d\mu.
+        \]
+        Making the further change of variables \(\g \mapsto \s_{\mf{a}}\g\s_{\mf{a}}^{-1}\) results in
+        \[
+          \frac{1}{V_{\G}}\int_{\s_{\mf{a}}^{-1}\G\s_{\mf{a}}\backslash\H}\sum_{\g \in \G_{\infty}^{(h_{\mf{a}})}\backslash\s_{\mf{a}}^{-1}\G\s_{\mf{a}}}(f|_{k}\s_{\mf{a}})(\g z)\Im(\g z)^{k}.
+        \]
+        Now unfold to obtain
+        \[
+          \frac{1}{V_{\G}}\int_{\G_{\infty}^{(h_{\mf{a}})}\backslash\H}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{k}\,d\mu.
+        \]
+        Substituting in the Fourier series of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
+        \[
+          \frac{h_{\mf{a}}}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(0)y^{k}\,\frac{dy}{y^{2}},
+        \]
+        in view of \cref{equ:Dirac_integral_representation}, because every term integrates to zero except the constant term. This integral is zero because \(f\) is a cusp form which completes the proof. 
+      \end{proof}
+
+      With these results in hand we can prove that the Poincar\'e series of positive index span the space of cusp forms and our desired decomposition.
 
       \begin{theorem}
         The Poincar\'e series \(P_{m,k,\chi}(z)\) of positive index span \(\mc{S}_{k}(\G,\chi)\). Moreover, we have the direct sum decomposition
         \[
-          \mc{M}_{k}(\G,\chi) = \mc{E}_{k}(\G,\chi) \op \mc{S}_{k}(\G,\chi).
+          \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
+        \]
+        which is orthogonal in the sense that
+        \[
+          \<P_{m,k,\chi,\mf{b}},E_{k,\chi,\mf{a}}\> = 0.
         \]
       \end{theorem}
       \begin{proof}
-        Let \(f \in \mc{S}_{k}(\G,\chi)\). \cref{thm:Petersson_inner_product_with_Poincare_series} shows that \(\<f,P_{m,k,\chi,\mf{a}}\> = 0\) if and only if the \(m\)-th Fourier coefficient of \(f\) is zero. So \(f\) is orthogonal to all of the Poincar\'e series \(P_{m,k,\chi}\) of positive index if and only if every Fourier coefficient is zero. But this happens if and only if \(f\) is identically zero. This proves the first statement.
+        Let \(f \in \mc{S}_{k}(\G,\chi)\). \cref{prop:Petersson_inner_product_with_Poincare_series} shows that \(\<f,P_{m,k,\chi,\mf{a}}\> = 0\) if and only if the \(m\)-th Fourier coefficient of \(f\) is zero. So \(f\) is orthogonal to all of the Poincar\'e series \(P_{m,k,\chi}\) of positive index if and only if every Fourier coefficient is zero. But this happens if and only if \(f\) is identically zero. This proves the first statement.
 
         To prove the direct sum decomposition, we first show that \(\mc{E}_{k}(\G,\chi)\) is disjoint from \(\mc{S}_{k}(\G,\chi)\). Indeed, suppose there are constants \(a_{\mf{a}}\) such that
         \[
@@ -1244,7 +1290,7 @@
         \[
           f(z)-\sum_{\mf{a} \in \G\backslash\hat{\Q}}a_{\mf{a}}(n)E_{k,\chi,\mf{a}}(z),
         \]
-        is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The second statement follows at once.
+        is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
     \iffalse\subsection{\todo{Double Coset Operators}}
       We are ready to introduce a class of general operators depending upon double cosets. We will use these operators to define the diamond and Hecke operators. First, we define an operator closely related to the slash operator. For any integer \(k \ge 1\) and any \(\a \in \GL_{2}^{+}(\Q)\) we define the \textbf{double slash operator}\index{double slash operator} \(\|_{k}\a:C(\H) \to C(\H)\) to be the linear operator given by
