@@ -687,27 +687,27 @@
         \chi(\g) = \nu_{\chi}(\g).
       \]
     \subsection{Poincar\'e and Eisenstein Series}
-      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Let \(m\) be a nonnegative integer, \(k \ge 3\), \(\nu:\G \to \C^{\ast}\) be a finite order homomorphism, and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\nu\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,k,\nu,\mf{a}}(z)\) of weight \(k\) with nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp by
+      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). We will introduce two important classes of modular forms on \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. Throughout we fix an integer \(k \ge 3\). Let \(m\) be a nonnegative integer, \(\nu:\G \to \C^{\ast}\) be a finite order homomorphism, and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\nu\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{k,m,\nu,\mf{a}}(z)\) of weight \(k\) with nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp by
       \[
-        P_{m,k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+        P_{k,m,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
-      We call \(m\) the \textbf{index}\index{index} of \(P_{m,k,\nu,\mf{a}}(z)\). If \(\nu\) is trivial or \(\mf{a} = \infty\), we will drop these dependencies accordingly.
+      We call \(m\) the \textbf{index}\index{index} of \(P_{k,m,\nu,\mf{a}}(z)\). If \(\nu\) is trivial or \(\mf{a} = \infty\), we will drop these dependencies accordingly.
 
       \begin{remark}
         The reason why we restrict to \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
       \end{remark}
 
-      The Poincar\'e series \(P_{m,k,\nu,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the nebentypus, this is easily checked by direct computation using the fact that \(\nu\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\). So by multiplicativity of the slash operator, it suffices to show 
+      The Poincar\'e series \(P_{k,m,\nu,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the nebentypus, this is easily checked by direct computation using the fact that \(\nu\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}^{(h_{\mf{a}})}\s_{\mf{a}}^{-1}\). So by multiplicativity of the slash operator, it suffices to show 
       \[
         \left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\g_{\infty}^{(h_{\mf{a}})}\right)(z) = e\left(\frac{mz}{h_{\mf{a}}}\right).
       \]
-      This is easily verified by direct computation. Whence \(P_{m,k,\nu,\mf{a}}(z)\) is well-defined. To see that \(P_{m,k,\nu,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\) and bounding term by term gives
+      This is easily verified by direct computation. Whence \(P_{k,m,\nu,\mf{a}}(z)\) is well-defined. To see that \(P_{k,m,\nu,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\) and bounding term by term gives
       \[
-        P_{m,k,\nu,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+        P_{k,m,\nu,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
-      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,k,\nu,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
+      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{k,m,\nu,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
       \[
-        (P_{m,k,\nu,\mf{a}}|_{k}\eta)(z) = \nu(\eta)P_{m,k,\nu,\mf{a}}(z).
+        (P_{k,m,\nu,\mf{a}}|_{k}\eta)(z) = \nu(\eta)P_{k,m,\nu,\mf{a}}(z).
       \]
       To verify the growth condition, we will need a technical lemma.
 
@@ -746,9 +746,9 @@
         outside of \(S_{a,b}^{Y} \x [-Y,Y]\). But this latter region is compact and so \(f(z,r)\) attains a minimum \(\d' > 0\) on it. Setting \(\d = \min\left(\frac{1}{2},\d'\right)\) completes the proof.
       \end{proof}
 
-      We can now verify the growth condition for \(P_{m,k,\nu,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
+      We can now verify the growth condition for \(P_{k,m,\nu,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
       \[
-        (P_{m,k,\nu,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+        (P_{k,m,\nu,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
       Now decompose this last sum as
       \[
@@ -763,12 +763,12 @@
       \begin{theorem}\label{thm:Poincare_series_modular}
         The Poincar\'e series
         \[
-          P_{m,k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+          P_{k,m,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
         is a weight \(k\) modular form with nebentypus \(\nu\) on \(\GH\).
       \end{theorem}
 
-      In the case of index zero Poincar\'e series, we write \(E_{k,\nu,\mf{a}}(z) = P_{0,k,\nu,\mf{a}}(z)\) and call \(E_{k,\nu,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
+      In the case of index zero Poincar\'e series, we write \(E_{k,\nu,\mf{a}}(z) = P_{k,0,\nu,\mf{a}}(z)\) and call \(E_{k,\nu,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
       \[
         E_{k,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z).
       \]
@@ -784,14 +784,14 @@
       
       We will now take \(\nu = \chi\) for \(\chi\) a Dirichlet character modulo \(N\). So our Poincar\'e series and Eisenstein series take the forms
       \[
-        P_{m,k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z) \quad \text{and} \quad E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
+        P_{k,m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)\left(e\left(\frac{mz}{h_{\mf{a}}}\right)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z) \quad \text{and} \quad E_{k,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)(1|_{k}\s_{\mf{a}}^{-1}\g)(z),
       \]
       respectively. Note that \(\chi\) is always regular at \(\infty\). In this simplified case, we can explicitly compute the Fourier series of the Poincar\'e series and Eisenstein series whose Fourier coefficients involve Sali\'e sums, or Kloosterman sums when \(\chi\) is trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. Unlike verifying that these series are modular forms, the arguments are slightly different to compute their Fourier series. We first deduce the Fourier series of the Poincar\'e series.
 
       \begin{proposition}\label{prop:Fourier_series_Poincare_modular}
-        Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,k,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
+        Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{k,m,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
         \begin{align*}
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right) \\
+          (P_{k,m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right) \\
           &+ \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{nh_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,n,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e\left(\frac{nz}{h_{\mf{b}}}\right),
         \end{align*}
         provided the index \(m\) is positive.
@@ -799,7 +799,7 @@
       \begin{proof}
         By multiplicativity of the slash operator, write
         \[
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}e\left(\frac{m\s_{\mf{a}}^{-1}\g\s_{\mf{b}}z}{h_{\mf{a}}}\right).
+          (P_{k,m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}e\left(\frac{m\s_{\mf{a}}^{-1}\g\s_{\mf{b}}z}{h_{\mf{a}}}\right).
         \]
         From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{\mf{a}}\backslash\G\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell h_{\mf{b}}+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
         \[
@@ -807,7 +807,7 @@
         \]
         Using these facts together with the periodicity of \(\chi\), we have
         \[
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right)+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{e\left(\frac{m}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}\right)\right)}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
+          (P_{k,m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right)+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{e\left(\frac{m}{h_{\mf{a}}}\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}h_{\mf{b}}\ell+cd}\right)\right)}{(cz+ch_{\mf{b}}\ell+d)^{k}}.
         \]
         Now let
         \[
@@ -847,13 +847,13 @@
         \]
         Plugging this back into the Poincar\'e series, interchanging the sums over \(n\) and \(c\) by absolute convergence, and collecting the exponential sum over \(a\) and \(d\), we at last obtain
         \begin{align*}
-          (P_{m,k,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right) \\
+          (P_{k,m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e\left(\frac{mz}{h_{\mf{b}}}\right) \\
           &+ \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{nh_{\mf{a}}}}{\sqrt{mh_{\mf{b}}}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,n,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right)e\left(\frac{nz}{h_{\mf{b}}}\right).
         \end{align*}
         which is our desired Fourier series.
       \end{proof}
       
-      An immediate consequence of this result, upon inspection of the Fourier series, is that the Poincar\'e series \((P_{m,k,\chi,\mf{a}}|\s_{\mf{b}})(z)\) of positive index are cusp forms.
+      An immediate consequence of this result, upon inspection of the Fourier series, is that the Poincar\'e series \((P_{k,m,\chi,\mf{a}}|\s_{\mf{b}})(z)\) of positive index are cusp forms.
       
       In a similar manner to the Poincar\'e series, we can obtain the Fourier series of the Eisenstein series too. The proof is only slightly different in that we will pass by the pole of the integrand instead of deforming to the Hankel contour about the negative real axis.
       
@@ -1176,27 +1176,27 @@
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 1}a_{\mf{a}}(n)e\left(\frac{nz}{h_{\mf{a}}}\right).
       \]
-      For any positive integer \(m\), define linear functionals \(\phi_{m,k,\chi,\mf{a}}:\mc{S}_{k}(\G,\chi) \to \C\) by 
+      For any positive integer \(m\), define linear functionals \(\phi_{k,m,\chi,\mf{a}}:\mc{S}_{k}(\G,\chi) \to \C\) by 
       \[
-        \phi_{m,k,\chi,\mf{a}}(f) = a_{\mf{a}}(m).
+        \phi_{k,m,\chi,\mf{a}}(f) = a_{\mf{a}}(m).
       \]
-      Since \(\mc{S}_{k}(\G,\chi)\) is a finite dimensional complex Hilbert space, the Riesz representation theorem implies that there exists unique \(v_{m,k,\chi,\mf{a}} \in \mc{S}_{k}(\G,\chi)\) such that
+      Since \(\mc{S}_{k}(\G,\chi)\) is a finite dimensional complex Hilbert space, the Riesz representation theorem implies that there exists unique \(v_{k,m,\chi,\mf{a}} \in \mc{S}_{k}(\G,\chi)\) such that
       \[
-        \<f,v_{m,k,\chi,\mf{a}}\> = a_{\mf{a}}(m).
+        \<f,v_{k,m,\chi,\mf{a}}\> = a_{\mf{a}}(m).
       \]
-      We would like to know what these cusp forms are. It turns out that \(v_{m,k,\chi,\mf{a}}(z)\) will be the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) up to a constant.
+      We would like to know what these cusp forms are. It turns out that \(v_{k,m,\chi,\mf{a}}(z)\) will be the Poincar\'e series \(P_{k,m,\chi,\mf{a}}(z)\) up to a constant.
 
       \begin{proposition}\label{prop:Petersson_inner_product_with_Poincare_series}
         Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\GH\). Then 
         \[
-          \<f,P_{m,k,\chi,\mf{a}}\> = \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
+          \<f,P_{k,m,\chi,\mf{a}}\> = \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
         \]
         for all positive integers \(m\).
       \end{proposition}
       \begin{proof}
         We will compute 
         \[
-          \<f,P_{m,k,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{P_{m,k,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
+          \<f,P_{k,m,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{P_{k,m,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
         \]
         A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified}, modularity, and the cocycle condition, shows that this integral is
         \[
@@ -1227,9 +1227,9 @@
  
       It follows immediately from this result that
       \[
-        v_{m,k,\chi,\mf{a}}(z) = \frac{V_{\G}(4\pi m)^{k-1}}{\G(k-1)h_{\mf{a}}^{k}}P_{m,k,\chi,\mf{a}}(z).
+        v_{k,m,\chi,\mf{a}}(z) = \frac{V_{\G}(4\pi m)^{k-1}}{\G(k-1)h_{\mf{a}}^{k}}P_{k,m,\chi,\mf{a}}(z).
       \]
-      Thus the Poincar\'e series \(P_{m,k,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to constants.
+      Thus the Poincar\'e series \(P_{k,m,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to constants.
 
       An analogous argument with Eisenstein series shows that they are orthogonal to cusp forms.
       
@@ -1270,17 +1270,17 @@
       With these results in hand we can prove that the Poincar\'e series of positive index span the space of cusp forms and our desired decomposition.
 
       \begin{theorem}
-        The Poincar\'e series \(P_{m,k,\chi}(z)\) of positive index span \(\mc{S}_{k}(\G,\chi)\). Moreover, we have the direct sum decomposition
+        The Poincar\'e series \(P_{k,m,\chi}(z)\) of positive index span \(\mc{S}_{k}(\G,\chi)\). Moreover, we have the direct sum decomposition
         \[
           \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
         \]
         which is orthogonal in the sense that
         \[
-          \<P_{m,k,\chi,\mf{b}},E_{k,\chi,\mf{a}}\> = 0.
+          \<P_{k,m,\chi,\mf{b}},E_{k,\chi,\mf{a}}\> = 0.
         \]
       \end{theorem}
       \begin{proof}
-        Let \(f \in \mc{S}_{k}(\G,\chi)\). \cref{prop:Petersson_inner_product_with_Poincare_series} shows that \(\<f,P_{m,k,\chi,\mf{a}}\> = 0\) if and only if the \(m\)-th Fourier coefficient of \(f\) is zero. So \(f\) is orthogonal to all of the Poincar\'e series \(P_{m,k,\chi}\) of positive index if and only if every Fourier coefficient is zero. But this happens if and only if \(f\) is identically zero. This proves the first statement.
+        Let \(f \in \mc{S}_{k}(\G,\chi)\). \cref{prop:Petersson_inner_product_with_Poincare_series} shows that \(\<f,P_{k,m,\chi,\mf{a}}\> = 0\) if and only if the \(m\)-th Fourier coefficient of \(f\) is zero. So \(f\) is orthogonal to all of the Poincar\'e series \(P_{k,m,\chi}\) of positive index if and only if every Fourier coefficient is zero. But this happens if and only if \(f\) is identically zero. This proves the first statement.
 
         To prove the direct sum decomposition, we first show that \(\mc{E}_{k}(\G,\chi)\) is disjoint from \(\mc{S}_{k}(\G,\chi)\). Indeed, suppose there are constants \(a_{\mf{a}}\) such that
         \[
