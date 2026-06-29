@@ -1,53 +1,52 @@
 \contentsline {proposition}{{Proposition}{1.{1}}{}}{2}{theorem.1.1}%
 \contentsline {proof}{{\proofname }{1}{}}{2}{proof.1}%
 \contentsline {proposition}{{Proposition}{1.{2}}{}}{2}{theorem.1.2}%
-\contentsline {proof}{{\proofname }{2}{}}{3}{proof.2}%
-\contentsline {lemma}{{Lemma}{1.{3}}{}}{4}{theorem.1.3}%
-\contentsline {proof}{{\proofname }{3}{}}{4}{proof.3}%
+\contentsline {proof}{{\proofname }{2}{}}{2}{proof.2}%
+\contentsline {proposition}{{Proposition}{1.{3}}{}}{3}{theorem.1.3}%
+\contentsline {proof}{{\proofname }{3}{}}{3}{proof.3}%
 \contentsline {lemma}{{Lemma}{1.{4}}{}}{4}{theorem.1.4}%
 \contentsline {proof}{{\proofname }{4}{}}{5}{proof.4}%
-\contentsline {proposition}{{Proposition}{1.{5}}{}}{5}{theorem.1.5}%
+\contentsline {lemma}{{Lemma}{1.{5}}{}}{5}{theorem.1.5}%
 \contentsline {proof}{{\proofname }{5}{}}{5}{proof.5}%
 \contentsline {proposition}{{Proposition}{1.{6}}{}}{6}{theorem.1.6}%
 \contentsline {proof}{{\proofname }{6}{}}{6}{proof.6}%
 \contentsline {proposition}{{Proposition}{1.{7}}{}}{6}{theorem.1.7}%
 \contentsline {proof}{{\proofname }{7}{}}{6}{proof.7}%
-\contentsline {remark}{{Remark}{1.{8}}{}}{7}{theorem.1.8}%
+\contentsline {proposition}{{Proposition}{1.{8}}{}}{7}{theorem.1.8}%
+\contentsline {proof}{{\proofname }{8}{}}{7}{proof.8}%
 \contentsline {proposition}{{Proposition}{1.{9}}{}}{8}{theorem.1.9}%
-\contentsline {proof}{{\proofname }{8}{}}{8}{proof.8}%
-\contentsline {proposition}{{Proposition}{1.{10}}{}}{8}{theorem.1.10}%
-\contentsline {proof}{{\proofname }{9}{}}{9}{proof.9}%
-\contentsline {remark}{{Remark}{1.{11}}{}}{10}{theorem.1.11}%
-\contentsline {remark}{{Remark}{1.{12}}{}}{11}{theorem.1.12}%
-\contentsline {proposition}{{Proposition}{1.{13}}{}}{11}{theorem.1.13}%
-\contentsline {proof}{{\proofname }{10}{}}{11}{proof.10}%
-\contentsline {theorem*}{{Theorem}{1}{Bruhat decomposition}}{12}{theorem*.1}%
+\contentsline {proof}{{\proofname }{9}{}}{8}{proof.9}%
+\contentsline {proposition}{{Proposition}{1.{10}}{}}{9}{theorem.1.10}%
+\contentsline {proof}{{\proofname }{10}{}}{10}{proof.10}%
+\contentsline {remark}{{Remark}{1.{11}}{}}{11}{theorem.1.11}%
+\contentsline {remark}{{Remark}{1.{12}}{}}{12}{theorem.1.12}%
+\contentsline {proposition}{{Proposition}{1.{13}}{}}{12}{theorem.1.13}%
 \contentsline {proof}{{\proofname }{11}{}}{12}{proof.11}%
-\contentsline {proposition}{{Proposition}{1.{14}}{}}{14}{theorem.1.14}%
-\contentsline {proof}{{\proofname }{12}{}}{14}{proof.12}%
-\contentsline {theorem*}{{Theorem}{2}{Unfolding/folding method}}{15}{theorem*.2}%
-\contentsline {proof}{{\proofname }{13}{}}{16}{proof.13}%
+\contentsline {theorem*}{{Theorem}{1}{Unfolding/folding method}}{13}{theorem*.1}%
+\contentsline {proof}{{\proofname }{12}{}}{13}{proof.12}%
+\contentsline {theorem*}{{Theorem}{2}{Bruhat decomposition}}{14}{theorem*.2}%
+\contentsline {proof}{{\proofname }{13}{}}{14}{proof.13}%
 \contentsline {lemma}{{Lemma}{2.{1}}{}}{17}{theorem.2.1}%
 \contentsline {proof}{{\proofname }{14}{}}{18}{proof.14}%
 \contentsline {remark}{{Remark}{2.{2}}{}}{18}{theorem.2.2}%
-\contentsline {remark}{{Remark}{2.{3}}{}}{21}{theorem.2.3}%
+\contentsline {remark}{{Remark}{2.{3}}{}}{20}{theorem.2.3}%
 \contentsline {lemma}{{Lemma}{2.{4}}{}}{21}{theorem.2.4}%
-\contentsline {proof}{{\proofname }{15}{}}{22}{proof.15}%
-\contentsline {theorem}{{Theorem}{2.{5}}{}}{23}{theorem.2.5}%
+\contentsline {proof}{{\proofname }{15}{}}{21}{proof.15}%
+\contentsline {theorem}{{Theorem}{2.{5}}{}}{22}{theorem.2.5}%
 \contentsline {theorem}{{Theorem}{2.{6}}{}}{23}{theorem.2.6}%
 \contentsline {proposition}{{Proposition}{2.{7}}{}}{23}{theorem.2.7}%
-\contentsline {proof}{{\proofname }{16}{}}{24}{proof.16}%
+\contentsline {proof}{{\proofname }{16}{}}{23}{proof.16}%
 \contentsline {proposition}{{Proposition}{2.{8}}{}}{25}{theorem.2.8}%
-\contentsline {proof}{{\proofname }{17}{}}{26}{proof.17}%
+\contentsline {proof}{{\proofname }{17}{}}{25}{proof.17}%
 \contentsline {lemma}{{Lemma}{2.{9}}{}}{28}{theorem.2.9}%
 \contentsline {proof}{{\proofname }{18}{}}{28}{proof.18}%
-\contentsline {theorem*}{{Theorem}{3}{Valence formula}}{29}{theorem*.3}%
-\contentsline {proof}{{\proofname }{19}{}}{29}{proof.19}%
-\contentsline {theorem}{{Theorem}{2.{10}}{}}{33}{theorem.2.10}%
-\contentsline {proof}{{\proofname }{20}{}}{33}{proof.20}%
-\contentsline {proposition}{{Proposition}{2.{11}}{}}{34}{theorem.2.11}%
-\contentsline {proof}{{\proofname }{21}{}}{34}{proof.21}%
-\contentsline {proposition}{{Proposition}{2.{12}}{}}{35}{theorem.2.12}%
-\contentsline {proof}{{\proofname }{22}{}}{35}{proof.22}%
-\contentsline {theorem}{{Theorem}{2.{13}}{}}{36}{theorem.2.13}%
-\contentsline {proof}{{\proofname }{23}{}}{36}{proof.23}%
+\contentsline {theorem*}{{Theorem}{3}{Valence formula}}{28}{theorem*.3}%
+\contentsline {proof}{{\proofname }{19}{}}{28}{proof.19}%
+\contentsline {theorem}{{Theorem}{2.{10}}{}}{32}{theorem.2.10}%
+\contentsline {proof}{{\proofname }{20}{}}{32}{proof.20}%
+\contentsline {proposition}{{Proposition}{2.{11}}{}}{33}{theorem.2.11}%
+\contentsline {proof}{{\proofname }{21}{}}{33}{proof.21}%
+\contentsline {proposition}{{Proposition}{2.{12}}{}}{34}{theorem.2.12}%
+\contentsline {proof}{{\proofname }{22}{}}{34}{proof.22}%
+\contentsline {theorem}{{Theorem}{2.{13}}{}}{35}{theorem.2.13}%
+\contentsline {proof}{{\proofname }{23}{}}{35}{proof.23}%

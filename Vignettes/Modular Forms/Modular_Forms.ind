@@ -1,27 +1,29 @@
 \begin{theindex}
 
-  \item Bruhat decomposition, \hyperpage{12}
+  \item Bruhat decomposition, \hyperpage{14}
 
   \indexspace
 
   \item character, \hyperpage{20}
   \item cocycle condition, \hyperpage{16}
-  \item congruence subgroup, \hyperpage{2}
-  \item cusp, \hyperpage{10}
-  \item cusp class, \hyperpage{10}
+  \item congruence subgroup, \hyperpage{3}
+  \item convolume, \hyperpage{7}
+  \item cusp, \hyperpage{11}
+  \item cusp class, \hyperpage{11}
   \item cusp form, \hyperpage{17}
 
   \indexspace
 
-  \item Eisenstein series, \hyperpage{23}
+  \item Eisenstein series, \hyperpage{22}
   \item exponential decay at the cusps, \hyperpage{20}
 
   \indexspace
 
-  \item folding, \hyperpage{16}
+  \item first kind, \hyperpage{7}
+  \item folding, \hyperpage{14}
   \item Fourier coefficients, \hyperpage{19}
   \item Fourier series, \hyperpage{19}
-  \item Fuchsian group, \hyperpage{6}
+  \item Fuchsian, \hyperpage{6}
 
   \indexspace
 
@@ -29,30 +31,30 @@
 
   \indexspace
 
-  \item Hecke bound, \hyperpage{20}
+  \item Hecke bound, \hyperpage{19}
   \item Hecke congruence subgroup, \hyperpage{4}
   \item holomorphic at the cusps, \hyperpage{17}
-  \item hyperbolic measure, \hyperpage{14}
+  \item hyperbolic measure, \hyperpage{2}
 
   \indexspace
 
-  \item index, \hyperpage{21}
+  \item index, \hyperpage{20}
   \item invariant, \hyperpage{17}
 
   \indexspace
 
-  \item Kloosterman sum, \hyperpage{13}
+  \item Kloosterman sum, \hyperpage{15}
 
   \indexspace
 
-  \item level, \hyperpage{2}, \hyperpage{17}
+  \item level, \hyperpage{3}, \hyperpage{17}
 
   \indexspace
 
   \item modular, \hyperpage{17}
-  \item modular curve, \hyperpage{6}
+  \item modular curve, \hyperpage{11}
   \item modular form, \hyperpage{17}
-  \item modular group, \hyperpage{1}
+  \item modular group, \hyperpage{2}
   \item modularity condition, \hyperpage{17}
 
   \indexspace
@@ -61,31 +63,30 @@
 
   \indexspace
 
-  \item Petersson inner product, \hyperpage{33}
-  \item Poincar\'e series, \hyperpage{21}
-  \item principal congruence subgroup, \hyperpage{2}
+  \item Petersson inner product, \hyperpage{32}
+  \item Poincar\'e series, \hyperpage{20}
+  \item principal congruence subgroup, \hyperpage{3}
 
   \indexspace
 
-  \item reduced, \hyperpage{11}
+  \item reduced, \hyperpage{12}
   \item regular, \hyperpage{17}
 
   \indexspace
 
-  \item Sali\'e sum, \hyperpage{13}
-  \item scaling matrix, \hyperpage{10}
+  \item Sali\'e sum, \hyperpage{15}
+  \item scaling matrix, \hyperpage{13}
   \item slash operator, \hyperpage{16}
-  \item standard fundamental domain, \hyperpage{7}
+  \item standard fundamental domain, \hyperpage{8}
 
   \indexspace
 
-  \item unfolding, \hyperpage{16}
-  \item unfolding/folding method, \hyperpage{15}
+  \item unfolding, \hyperpage{14}
+  \item unfolding/folding method, \hyperpage{13}
 
   \indexspace
 
   \item valence formula, \hyperpage{28}
-  \item volume, \hyperpage{15}
 
   \indexspace
 

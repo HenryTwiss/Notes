@@ -1,24 +1,25 @@
-\indexentry{modular group|hyperpage}{1}
-\indexentry{principal congruence subgroup|hyperpage}{2}
-\indexentry{congruence subgroup|hyperpage}{2}
-\indexentry{level|hyperpage}{2}
+\indexentry{hyperbolic measure|hyperpage}{2}
+\indexentry{modular group|hyperpage}{2}
+\indexentry{principal congruence subgroup|hyperpage}{3}
+\indexentry{congruence subgroup|hyperpage}{3}
+\indexentry{level|hyperpage}{3}
 \indexentry{Hecke congruence subgroup|hyperpage}{4}
-\indexentry{Fuchsian group|hyperpage}{6}
-\indexentry{modular curve|hyperpage}{6}
-\indexentry{standard fundamental domain|hyperpage}{7}
-\indexentry{cusp class|hyperpage}{10}
-\indexentry{cusp|hyperpage}{10}
-\indexentry{scaling matrix|hyperpage}{10}
+\indexentry{Fuchsian|hyperpage}{6}
+\indexentry{convolume|hyperpage}{7}
+\indexentry{first kind|hyperpage}{7}
+\indexentry{standard fundamental domain|hyperpage}{8}
+\indexentry{modular curve|hyperpage}{11}
+\indexentry{cusp class|hyperpage}{11}
+\indexentry{cusp|hyperpage}{11}
 \indexentry{width|hyperpage}{11}
-\indexentry{reduced|hyperpage}{11}
-\indexentry{Bruhat decomposition|hyperpage}{12}
-\indexentry{Kloosterman sum|hyperpage}{13}
-\indexentry{Sali\'e sum|hyperpage}{13}
-\indexentry{hyperbolic measure|hyperpage}{14}
-\indexentry{volume|hyperpage}{15}
-\indexentry{unfolding/folding method|hyperpage}{15}
-\indexentry{unfolding|hyperpage}{16}
-\indexentry{folding|hyperpage}{16}
+\indexentry{reduced|hyperpage}{12}
+\indexentry{scaling matrix|hyperpage}{13}
+\indexentry{unfolding/folding method|hyperpage}{13}
+\indexentry{unfolding|hyperpage}{14}
+\indexentry{folding|hyperpage}{14}
+\indexentry{Bruhat decomposition|hyperpage}{14}
+\indexentry{Kloosterman sum|hyperpage}{15}
+\indexentry{Sali\'e sum|hyperpage}{15}
 \indexentry{cocycle condition|hyperpage}{16}
 \indexentry{slash operator|hyperpage}{16}
 \indexentry{invariant|hyperpage}{17}
@@ -34,11 +35,11 @@
 \indexentry{holomorphic at the cusps|hyperpage}{17}
 \indexentry{Fourier series|hyperpage}{19}
 \indexentry{Fourier coefficients|hyperpage}{19}
-\indexentry{Hecke bound|hyperpage}{20}
+\indexentry{Hecke bound|hyperpage}{19}
 \indexentry{exponential decay at the cusps|hyperpage}{20}
 \indexentry{character|hyperpage}{20}
-\indexentry{Poincar\'e series|hyperpage}{21}
-\indexentry{index|hyperpage}{21}
-\indexentry{Eisenstein series|hyperpage}{23}
+\indexentry{Poincar\'e series|hyperpage}{20}
+\indexentry{index|hyperpage}{20}
+\indexentry{Eisenstein series|hyperpage}{22}
 \indexentry{valence formula|hyperpage}{28}
-\indexentry{Petersson inner product|hyperpage}{33}
+\indexentry{Petersson inner product|hyperpage}{32}
