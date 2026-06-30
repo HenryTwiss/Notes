@@ -4,6 +4,7 @@
 \contentsline {subsection}{\numberline {1.3}Fuchsian Groups and Modular Curves}{6}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Double Coset Decompositions and Exponential Sums}{14}{subsection.1.4}%
 \contentsline {section}{\numberline {2}Modular Forms}{16}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Modularity}{16}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Poincar\'e and Eisenstein Series}{20}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Inner Product Spaces of Modular Forms}{27}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.1}Modular Forms}{16}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}The Valence Formula and Petersson Inner Product}{20}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Arithmetic of Modular Forms on Hecke Congruence Subgroups}{26}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Poincar\'e and Eisenstein Series}{26}{subsection.3.1}%

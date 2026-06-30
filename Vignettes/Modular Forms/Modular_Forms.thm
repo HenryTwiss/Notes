@@ -29,24 +29,24 @@
 \contentsline {lemma}{{Lemma}{2.{1}}{}}{17}{theorem.2.1}%
 \contentsline {proof}{{\proofname }{14}{}}{18}{proof.14}%
 \contentsline {remark}{{Remark}{2.{2}}{}}{18}{theorem.2.2}%
-\contentsline {remark}{{Remark}{2.{3}}{}}{20}{theorem.2.3}%
-\contentsline {lemma}{{Lemma}{2.{4}}{}}{21}{theorem.2.4}%
+\contentsline {lemma}{{Lemma}{2.{3}}{}}{21}{theorem.2.3}%
 \contentsline {proof}{{\proofname }{15}{}}{21}{proof.15}%
-\contentsline {theorem}{{Theorem}{2.{5}}{}}{22}{theorem.2.5}%
-\contentsline {theorem}{{Theorem}{2.{6}}{}}{23}{theorem.2.6}%
-\contentsline {proposition}{{Proposition}{2.{7}}{}}{23}{theorem.2.7}%
-\contentsline {proof}{{\proofname }{16}{}}{23}{proof.16}%
-\contentsline {proposition}{{Proposition}{2.{8}}{}}{25}{theorem.2.8}%
+\contentsline {theorem*}{{Theorem}{3}{Valence formula}}{21}{theorem*.3}%
+\contentsline {proof}{{\proofname }{16}{}}{21}{proof.16}%
+\contentsline {theorem}{{Theorem}{2.{4}}{}}{25}{theorem.2.4}%
 \contentsline {proof}{{\proofname }{17}{}}{25}{proof.17}%
-\contentsline {lemma}{{Lemma}{2.{9}}{}}{28}{theorem.2.9}%
-\contentsline {proof}{{\proofname }{18}{}}{28}{proof.18}%
-\contentsline {theorem*}{{Theorem}{3}{Valence formula}}{28}{theorem*.3}%
-\contentsline {proof}{{\proofname }{19}{}}{28}{proof.19}%
-\contentsline {theorem}{{Theorem}{2.{10}}{}}{32}{theorem.2.10}%
-\contentsline {proof}{{\proofname }{20}{}}{32}{proof.20}%
-\contentsline {proposition}{{Proposition}{2.{11}}{}}{33}{theorem.2.11}%
+\contentsline {remark}{{Remark}{3.{1}}{}}{26}{theorem.3.1}%
+\contentsline {lemma}{{Lemma}{3.{2}}{}}{27}{theorem.3.2}%
+\contentsline {proof}{{\proofname }{18}{}}{27}{proof.18}%
+\contentsline {theorem}{{Theorem}{3.{3}}{}}{28}{theorem.3.3}%
+\contentsline {theorem}{{Theorem}{3.{4}}{}}{29}{theorem.3.4}%
+\contentsline {proposition}{{Proposition}{3.{5}}{}}{29}{theorem.3.5}%
+\contentsline {proof}{{\proofname }{19}{}}{29}{proof.19}%
+\contentsline {proposition}{{Proposition}{3.{6}}{}}{31}{theorem.3.6}%
+\contentsline {proof}{{\proofname }{20}{}}{31}{proof.20}%
+\contentsline {proposition}{{Proposition}{3.{7}}{}}{33}{theorem.3.7}%
 \contentsline {proof}{{\proofname }{21}{}}{33}{proof.21}%
-\contentsline {proposition}{{Proposition}{2.{12}}{}}{34}{theorem.2.12}%
+\contentsline {proposition}{{Proposition}{3.{8}}{}}{34}{theorem.3.8}%
 \contentsline {proof}{{\proofname }{22}{}}{34}{proof.22}%
-\contentsline {theorem}{{Theorem}{2.{13}}{}}{35}{theorem.2.13}%
+\contentsline {theorem}{{Theorem}{3.{9}}{}}{35}{theorem.3.9}%
 \contentsline {proof}{{\proofname }{23}{}}{35}{proof.23}%

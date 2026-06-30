@@ -1,11 +1,11 @@
 # Fdb version 3
-["makeindex Dirichlet_Series_and_L-functions.idx"] 1781632420 "Dirichlet_Series_and_L-functions.idx" "Dirichlet_Series_and_L-functions.ind" "Dirichlet_Series_and_L-functions" 1782176434
-  "Dirichlet_Series_and_L-functions.idx" 1782176434 2500 f3c0e15c3f7b23f004c31d257ac15ea9 "pdflatex"
+["makeindex Dirichlet_Series_and_L-functions.idx"] 1781632420 "Dirichlet_Series_and_L-functions.idx" "Dirichlet_Series_and_L-functions.ind" "Dirichlet_Series_and_L-functions" 1782856072
+  "Dirichlet_Series_and_L-functions.idx" 1782856072 2500 f3c0e15c3f7b23f004c31d257ac15ea9 "pdflatex"
   (generated)
   "Dirichlet_Series_and_L-functions.ilg"
   "Dirichlet_Series_and_L-functions.ind"
-["pdflatex"] 1782176434 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.tex" "Dirichlet_Series_and_L-functions.pdf" "Dirichlet_Series_and_L-functions" 1782176434
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.tex" 1782176433 132440 b4c45a2759a8b62e420fc12c358f366b ""
+["pdflatex"] 1782856071 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.tex" "Dirichlet_Series_and_L-functions.pdf" "Dirichlet_Series_and_L-functions" 1782856072
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.tex" 1782856070 132456 419e07f1533b3886a0c132dcee29bcbd ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1781632838 5480 1c1089c4f68d35449bb71f726253e7ea ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -194,11 +194,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Dirichlet_Series_and_L-functions.aux" 1782176434 19507 86614fbf97eb93ec7511d3b5bb5e0ff2 "pdflatex"
+  "Dirichlet_Series_and_L-functions.aux" 1782856072 19524 48b477248da445f5e993eef7a10a1849 "pdflatex"
   "Dirichlet_Series_and_L-functions.ind" 1781632420 2522 10cb1e27d78f377c84b32df792c56f50 "makeindex Dirichlet_Series_and_L-functions.idx"
-  "Dirichlet_Series_and_L-functions.out" 1782176434 2439 257e9a7b12d244a1c60283e93cca9816 "pdflatex"
-  "Dirichlet_Series_and_L-functions.tex" 1782176433 132440 b4c45a2759a8b62e420fc12c358f366b ""
-  "Dirichlet_Series_and_L-functions.toc" 1782176434 1236 d5e555dc2557cd50e3e309af69bda5fd "pdflatex"
+  "Dirichlet_Series_and_L-functions.out" 1782856072 2396 d8dc755aafb5479527a9393699eaa18d "pdflatex"
+  "Dirichlet_Series_and_L-functions.tex" 1782856070 132456 419e07f1533b3886a0c132dcee29bcbd ""
+  "Dirichlet_Series_and_L-functions.toc" 1782856072 1232 416f8ae8766590b0608a81d3cf9c366a "pdflatex"
   (generated)
   "Dirichlet_Series_and_L-functions.aux"
   "Dirichlet_Series_and_L-functions.idx"
