@@ -11,11 +11,11 @@
   \maketitle
   \tableofcontents
   \section{The Upper-half Plane and Congruence Subgroups}
-    For any complex \(z\) let
+    If \(a\) is an integer modulo \(m\) with \((a,m) = 1\) we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\). For any complex \(z\) let
     \[
       e(z) = e^{2\pi iz}.
     \]
-    Also, we will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\).
+    We will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). Also, all sums and products over a quotient group will be consider to be over a complete set of representatives.
     \subsection{The Upper-half Plane}
       The group \(\GL_{2}^{+}(\R)\) acts on the Riemann sphere \(\what{\C}\) by M\"obius transformations. Explicitly, any \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\R)\) acts on \(z \in \what{\C}\) by
       \[
@@ -93,7 +93,7 @@
         \[
           U(n) = \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix} \quad \text{and} \quad L(n) = \begin{pmatrix} 1 & 0 \\ n & 1 \end{pmatrix},
         \]
-        for \(n\) modulo \(N\). So it suffices to show that this collection of unipotent matrices generates \(\SL_{2}(\Z/N\Z)\).  If \(c = 0\) then \(\det(\g) = 1\) implies that \(d = a^{-1}\) so that \(\g = \begin{psmallmatrix} a & b \\ 0 & a^{-1} \end{psmallmatrix}\). Short computations show
+        for \(n\) modulo \(N\). So it suffices to show that this collection of unipotent matrices generates \(\SL_{2}(\Z/N\Z)\).  If \(c = 0\) then \(\det(\g) = 1\) implies \(d\) is the inverse of \(a\) modulo \(N\) so that \(\g = \begin{psmallmatrix} a & b \\ 0 & a^{-1} \end{psmallmatrix}\). Short computations show
         \[
           U(-ab)\g= \begin{pmatrix} a & 0 \\ 0 & a^{-1} \end{pmatrix},
         \]
@@ -500,17 +500,17 @@
       \]
       Similar as before, this sum is well-defined since \(a\) and \(d\) are determined modulo \(c\) by the Bruhat decomposition and that the \(\chi\) is a character modulo \(c\). 
       \subsubsection*{Hecke Congruence Subgroups}
-        In the case of the Hecke congruence subgroup \(\G_{0}(N)\), the Bruhat decomposition simplifies and we recover the usual Kloosterman and Sali\'e sums. As the entries \(a\) and \(d\) in \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix}\) are determined modulo \(c\), we may take \(d = a^{-1}\) because \(\det(\w_{c/d}) = 1\). Also, \(\mc{C}_{\infty,\infty} = N\Z_{+}\) and \(\mc{D}_{\infty,\infty}(c) = (\Z/c\Z)^{\ast}\) because if \(\g = \begin{psmallmatrix} \ast & \ast \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) then \(c \equiv 0 \tmod{N}\) and we must have \((c,d) = 1\) as \(\det(\g) = 1\). Moreover, every such pair gives rise to a matrix in \(\G_{0}(N)\). Whence
+        In the case of the Hecke congruence subgroup \(\G_{0}(N)\), the Bruhat decomposition simplifies and we recover the usual Kloosterman and Sali\'e sums. As the entries \(a\) and \(d\) in \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix}\) are determined modulo \(c\), we find that \(d\) is the inverse of \(a\) modulo \(c\) because \(\det(\w_{c/d}) = 1\). Also, \(\mc{C}_{\infty,\infty} = N\Z_{+}\) and \(\mc{D}_{\infty,\infty}(c) = (\Z/c\Z)^{\ast}\) because if \(\g = \begin{psmallmatrix} \ast & \ast \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) then \(c \equiv 0 \tmod{N}\) and we must have \((c,d) = 1\) as \(\det(\g) = 1\). Moreover, every such pair gives rise to a matrix in \(\G_{0}(N)\). Whence
       \[
         K_{\infty,\infty}(n,m,c) = K(n,m,c) \quad \text{and} \quad S_{\chi,\infty,\infty}(n,m,c) = S_{\chi}(n,m,c),
       \]
       which are the usual Kloosterman and Sali\'e sums respectively. In these cases, we will suppress the dependencies upon the cusps.
   \section{Modular Forms}
-    For any complex \(z\) let
+    If \(a\) is an integer modulo \(m\) with \((a,m) = 1\) we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\). For any complex \(z\) let
     \[
       e(z) = e^{2\pi iz}.
     \]
-    Also, we will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\).
+    We will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). Also, all sums and products over a quotient group will be consider to be over a complete set of representatives.
     \subsection{Modular Forms}
       For all all \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\R)\) and \(z \in \H\), define \(j(\a,z)\) by
       \[
@@ -650,7 +650,7 @@
         \]
         If \(\g' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \G_{0}(N)\), then the relations
         \[
-          \g\g' \equiv \begin{pmatrix} \ast & \ast \\ 0 & d'd \end{pmatrix} \tmod{N} \quad \text{and} \quad \g^{-1} = \begin{pmatrix} d & \ast \\ 0 & a \end{pmatrix} \tmod{N},
+          \g\g' \equiv \begin{pmatrix} \ast & \ast \\ 0 & d'd \end{pmatrix} \pmod{N} \quad \text{and} \quad \g^{-1} = \begin{pmatrix} d & \ast \\ 0 & a \end{pmatrix} \pmod{N},
         \]
         show that
         \[
@@ -993,11 +993,11 @@
         and so the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form if \(f\) is.
       \end{proof}
   \section{Arithmetic of Modular Forms on Hecke Congruence Subgroups}
-    For any complex \(z\) let
+    If \(a\) is an integer modulo \(m\) with \((a,m) = 1\) we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\). For any complex \(z\) let
     \[
       e(z) = e^{2\pi iz}.
     \]
-    All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\).
+    Also, all sums and products over a quotient group will be consider to be over a complete set of representatives.
     \subsection{Poincar\'e and Eisenstein Series}
       We will now introduce specific modular forms over \(\G_{0}(N)\backslash\H\). These will be constructed by averaging the slash operator over \(\G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) for a cusp \(\mf{a}\) of \(\G_{0}(N)\backslash\H\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. As \(\G\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\).
       
@@ -1346,7 +1346,7 @@
         is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
     \subsection{\todo{Diamond and Hecke Operators}}
-      The diamond and Hecke operators are special cases of double coset operators which will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. We will discuss the diamond operator first and the Hecke operators second. 
+      The diamond and Hecke operators are special cases of double coset operators which will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. We will discuss the diamond operators first and the Hecke operators second. 
       
       To define the diamond operators, we need to consider the congruence subgroups \(\G_{1}(N)\) and \(\G_{0}(N)\). Recall that \(\G_{1}(N) \subseteq \G_{0}(N)\) and consider the surjective homomorphism
       \[
@@ -1356,45 +1356,48 @@
       \[
         \G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast},
       \]
-      by the first isomorphism theorem. 
+      by the first isomorphism theorem. Now let \(d\) be modulo \(N\) with \((d,N) = 1\). The \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
+      \[
+        (\<d\>f)(z) = \left(f[\G_{1}(N)\a\G_{1}(N)]_{k}\right)(z),
+      \]
+      for any \(\a = \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix} \in \G_{0}(N)\). Such a matrix exists since the lower-left entry of \(\a\) is necessarily a multiple of \(N\) and so the upper row is determined by B\'ezout's identity as \(\det(\a) = 1\). To prove the diamond operators are well-defined, we must show that they only depends upon \(d\). If \(\a' = \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix} \in \G_{0}(N)\), then a short computation shows
+      \[
+        \a'\a^{-1} \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \pmod{N}.
+      \]
+      So \(\a' = \g\a\) for some \(\g \in \G_{1}(N)\) and therefore \([\G_{1}(N)\a'\G_{1}(N)]_{k} = [\G_{1}(N)\a\G_{1}(N)]_{k}\) proving that the diamond operators are well-defined. Moreover, there is only orbit representative in the sum. Indeed, normality of \(\G_{1}(N)\) in \(\G_{0}(N)\) implies \(\G_{1}(N)\a\G_{1}(N) = \G_{1}(N)\a\) and so
+      \[
+        (\<d\>f)(z) = (f\|_{k}\a)(z).
+      \]
+      Also, we find from the observation
+      \[
+        \begin{pmatrix} \ast & \ast \\ 0 & a \end{pmatrix}\begin{pmatrix} \ast & \ast \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} \ast & \ast \\ 0 & ad \end{pmatrix} \tmod{N},
+      \]
+      that the diamond operators are multiplicative and invertible with \(\<a\>\) being the inverse of \(\<d\>\) if \(a\) is the inverse of \(d\) modulo \(N\). Therefore the diamond operators induce an action of \(\G_{0}(N)\) on \(\mc{M}_{k}(\G_{1}(N))\), and since \(\G_{1}(N)\) acts trivially and is normal in \(\G_{0}(N)\), there is a further induced action of \((\Z/N\Z)^{\ast}\) in view of the previous isomorphism.
       
-      \iffalse Letting \(\a = \begin{psmallmatrix} \ast & \ast \\ \ast & d \end{psmallmatrix} \in \G_{0}(N)\) and \(f \in \mc{S}_{k}(\G_{1}(N))\), consider \(\left(f\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}\right)(z)\). This is only dependent upon the lower-right entry \(d\) of \(\a\) taken modulo \(N\). To see this, since \(\G_{1}(N)\) is normal in \(\G_{0}(N)\), we have \(\a\G_{1}(N) = \G_{1}(N)\a\) so that \(\G_{1}(N)\a\G_{1}(N) = \G_{1}(N)\a\). This means there is only one orbit in \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\). Therefore
+      One reason the diamond operators are useful is that they decompose \(\mc{M}_{k}(\G_{1}(N))\) into eigenspaces. For any Dirichlet character \(\chi\) modulo \(N\), we let
       \[
-        \left(f\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}\right)(z) = (f\|_{k}\a)(z).
+        \mc{M}_{k}(N,\chi) = \{f \in \mc{M}_{k}(\G_{1}(N)):\<d\>f = \chi(d)f \text{ for all } d \in (\Z/N\Z)^{\ast}\},
       \]
-      This induces an action of \(\G_{0}(N)\) on \(\mc{S}_{k}(\G_{1})\), and since \(\G_{1}(N)\) acts trivially, this is really an action of \(\G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast}\). In other words, we have an induced action that depends only upon the lower-right entry \(d\) of \(\a\) taken modulo \(N\). So for any \(d\) modulo \(N\), we define the \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by
-      \[
-        (\<d\>f)(z) = (f\|_{k}\a)(z),
-      \]
-      for any \(\a = \begin{psmallmatrix} \ast & \ast \\ \ast & d \end{psmallmatrix} \in \G_{0}(N)\). Our discussion above has already shown that the diamond operators \(\<d\>\) are well-defined. Moreover, the diamond operators are also invertible with \(\<\conj{d}\>\) serving as the inverse and \(\a^{-1}\) as a representative for the definition. Since
-      \[
-        \begin{pmatrix} \ast & \ast \\ 0 & d \end{pmatrix}\begin{pmatrix} \ast & \ast \\ 0 & e \end{pmatrix} \equiv \begin{pmatrix} \ast & \ast \\ 0 & de \end{pmatrix} \tmod{N},
-      \]
-      and the double slash operator is multiplicative, so are the diamond operators. One reason the diamond operators are useful is that they decompose \(\mc{S}_{k}(\G_{1}(N))\) into eigenspaces. For any Dirichlet character \(\chi\) modulo \(N\), we let
-      \[
-        \mc{S}_{k}(N,\chi) = \{f \in \mc{S}_{k}(\G_{1}(N)):\<d\>f = \chi(d)f \text{ for all } d \in (\Z/N\Z)^{\ast}\},
-      \]
-      be the \(\chi\)-eigenspace. Also let \(\mc{S}_{k}(N,\chi)\) be the corresponding subspace of cusp forms. Then \(\mc{S}_{k}(\G_{1}(N))\) admits a decomposition into these eigenspaces:
+      be the \(\chi\)-eigenspace. Also let \(\mc{S}_{k}(N,\chi)\) be the corresponding subspace of cusp forms. Then \(\mc{M}_{k}(\G_{1}(N))\) admits a decomposition into these eigenspaces.
 
       \begin{proposition}\label{thm:diamond_operator_decomposition_modular}
-        We have a direct sum decomposition
+        \(\mc{M}_{k}(\G_{1}(N))\) admits the direct sum decomposition
         \[
-          \mc{S}_{k}(\G_{1}(N)) = \bigop_{\chi \tmod{N}}\mc{S}_{k}(N,\chi).
+          \mc{M}_{k}(\G_{1}(N)) = \bigop_{\chi \tmod{N}}\mc{M}_{k}(N,\chi).
         \]
+        Moreover, this decomposition respects the subspace of cusp forms.
       \end{proposition}
       \begin{proof}
-        The diamond operators give a representation of \(\G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast}\) over \(\mc{S}_{k}(\G_{1}(N))\). Explicitly,
+        The diamond operators induce a representation \(\Phi\) of \((\Z/N\Z)^{\ast}\) over \(\mc{M}_{k}(\G_{1}(N))\). Explicitly, this representation is
         \[
-          \Phi:(\Z/N\Z)^{\ast} \x \mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N)) \qquad (d,f) \mapsto \<d\>f.
+          \Phi:(\Z/N\Z)^{\ast} \x \mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N)) \qquad (d,f) \mapsto \<d\>f.
         \]
-        But any representation of a finite abelian group over \(\C\) is completely reducible with respect to the characters of the group and every irreducible subrepresentation is \(1\)-dimensional (see \cref{thm:finite_abelian_representation_is_completely_reducible}). Since the characters of \((\Z/N\Z)^{\ast}\) are given by Dirichlet characters, the decomposition as a direct sum follows.
+        Since \((\Z/N\Z)^{\ast}\) is a finite abelian group, every complex representation is completely reducible and every irreducible representation is one-dimensional. Since the characters of \((\Z/N\Z)^{\ast}\) are the Dirichlet characters modulo \(N\), the decomposition as a direct sum follows. Moreover, it preserves the subspace of cusp forms since \(\Phi\) restricts to a representation of \((\Z/N\Z)^{\ast}\) over \(\mc{S}_{k}(\G_{1}(N))\).
       \end{proof}
       
-      \cref{thm:diamond_operator_decomposition_modular} shows that the diamond operators sieve modular forms on \(\G_{1}(N)\backslash\H\) with trivial character in terms of modular forms on \(\G_{0}(N)\backslash\H\) with nontrivial characters. In particular, \(\mc{S}_{k}(N,\chi) = \mc{S}_{k}(\G_{0}(N),\chi)\). So by \cref{thm:diamond_operator_decomposition_modular}, we have
-      \[
-        \mc{S}_{k}(\G_{1}(N)) = \bigop_{\chi \tmod{N}}\mc{S}_{k}(\G_{0}(N),\chi).
-      \]
-      This fact clarifies why it is necessary to consider modular forms with nontrivial characters. In light of \cref{rem:odd_weight_modular_forms}, note that \(\mc{S}_{k}(N,\chi)\) is necessarily empty if \(k\) is odd and \(\chi(-1) \neq -1\). So in the case of odd \(k\), the decomposition in \cref{thm:diamond_operator_decomposition_modular} restricts to that of odd characters. Now it is time to define the Hecke operators. For a prime \(p\), we define the \(p\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{p}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by
+      \iffalse This result shows that the diamond operators sieve modular forms on \(\G_{1}(N)\backslash\H\) with trivial character in terms of modular forms on \(\G_{0}(N)\backslash\H\) with nontrivial characters. In particular, we have \(\mc{M}_{k}(N,\chi) = \mc{M}_{k}(\G_{0}(N),\chi)\) and \(\mc{S}_{k}(N,\chi) = \mc{S}_{k}(\G_{0}(N),\chi)\).
+      
+      In light of \cref{rem:odd_weight_modular_forms}, note that \(\mc{S}_{k}(N,\chi)\) is necessarily empty if \(k\) is odd and \(\chi(-1) \neq -1\). So in the case of odd \(k\), the decomposition in \cref{thm:diamond_operator_decomposition_modular} restricts to that of odd characters. Now it is time to define the Hecke operators. For a prime \(p\), we define the \(p\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{p}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by
       \[
         (T_{p}f)(z) = \left(\left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k}f\right)(z).
       \]
@@ -1502,7 +1505,7 @@
         \[
           \b_{j} = \begin{pmatrix} 1 & j \\ 0 & p \end{pmatrix} \quad \text{and} \quad \b_{\infty} = \begin{pmatrix} m & n \\ N & p \end{pmatrix}\begin{pmatrix} p & 0 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} pm & n \\ Np & p \end{pmatrix},
         \]
-        for \(j\) taken modulo \(p\) and where \(m\) and \(n\) are chosen such that \(\det\left(\begin{psmallmatrix} m & n \\ N & p \end{psmallmatrix}\right) = 1\). It will suffice to show that \(\b_{1},\ldots,\b_{p-1}\) and \(\b_{1},\ldots,\b_{p-1},\b_{\infty}\) run over complete sets of representatives for \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\) depending on if \(p \mid N\) or not. To accomplish this, we will find a complete set of representatives for \((\a^{-1}\G_{1}(N)\a \cap \G_{1}(N))\backslash\G_{1}(N)\) and then use \cref{lem:coset_lemma_2}. First we require an explicit description of \(\a^{-1}\G_{1}(N)\a \cap \G_{1}(N)\). Let
+        for \(j\) modulo \(p\) and where \(m\) and \(n\) are chosen such that \(\det\left(\begin{psmallmatrix} m & n \\ N & p \end{psmallmatrix}\right) = 1\). It will suffice to show that \(\b_{1},\ldots,\b_{p-1}\) and \(\b_{1},\ldots,\b_{p-1},\b_{\infty}\) run over complete sets of representatives for \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\) depending on if \(p \mid N\) or not. To accomplish this, we will find a complete set of representatives for \((\a^{-1}\G_{1}(N)\a \cap \G_{1}(N))\backslash\G_{1}(N)\) and then use \cref{lem:coset_lemma_2}. First we require an explicit description of \(\a^{-1}\G_{1}(N)\a \cap \G_{1}(N)\). Let
         \[
           \G^{0}(p) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & 0 \\ \ast & \ast \end{pmatrix} \tmod{p}\right\},
         \]
