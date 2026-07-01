@@ -38,7 +38,7 @@
 \indexentry{principal|hyperpage}{15}
 \indexentry{inverse|hyperpage}{15}
 \indexentry{invertible|hyperpage}{15}
-\indexentry{Dedekind domain|hyperpage}{16}
+\indexentry{Dedekind domain|hyperpage}{15}
 \indexentry{prime factorization|hyperpage}{19}
 \indexentry{prime factors|hyperpage}{19}
 \indexentry{divides|hyperpage}{19}
@@ -83,7 +83,7 @@
 \indexentry{exponential valuation|hyperpage}{32}
 \indexentry{ring of \(S\)-integers|hyperpage}{33}
 \indexentry{algebraic \(S\)-integer|hyperpage}{33}
-\indexentry{\(S\)-class group|hyperpage}{34}
+\indexentry{\(S\)-class group|hyperpage}{33}
 \indexentry{\(S\)-class number|hyperpage}{34}
 \indexentry{\(S\)-unit group|hyperpage}{34}
 \indexentry{\(S\)-unit|hyperpage}{34}
@@ -122,10 +122,10 @@
 \indexentry{ramified|hyperpage}{51}
 \indexentry{totally ramified|hyperpage}{51}
 \indexentry{ideal norm|hyperpage}{51}
-\indexentry{inert|hyperpage}{52}
-\indexentry{nonsplit|hyperpage}{52}
-\indexentry{split|hyperpage}{52}
-\indexentry{totally split|hyperpage}{52}
+\indexentry{inert|hyperpage}{51}
+\indexentry{nonsplit|hyperpage}{51}
+\indexentry{split|hyperpage}{51}
+\indexentry{totally split|hyperpage}{51}
 \indexentry{unramified|hyperpage}{52}
 \indexentry{ramified|hyperpage}{52}
 \indexentry{totally ramified|hyperpage}{52}

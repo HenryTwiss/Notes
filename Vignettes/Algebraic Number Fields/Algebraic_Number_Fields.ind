@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item \(S\)-class group, \hyperpage{34}
+  \item \(S\)-class group, \hyperpage{33}
   \item \(S\)-class number, \hyperpage{34}
   \item \(S\)-unit, \hyperpage{34}
   \item \(S\)-unit group, \hyperpage{34}
@@ -32,7 +32,7 @@
 
   \item decomposition field, \hyperpage{54}
   \item decomposition group, \hyperpage{54}
-  \item Dedekind domain, \hyperpage{16}
+  \item Dedekind domain, \hyperpage{15}
   \item Dedekind extension, \hyperpage{24}
   \item Dedekind-Kummer theorem, \hyperpage{46}
   \item degree, \hyperpage{4}
@@ -67,7 +67,7 @@
   \item ideal class, \hyperpage{20}
   \item ideal class group, \hyperpage{20}, \hyperpage{26}
   \item ideal norm, \hyperpage{50--52}
-  \item inert, \hyperpage{45}, \hyperpage{51, 52}
+  \item inert, \hyperpage{45}, \hyperpage{51}
   \item inertia degree, \hyperpage{43}, \hyperpage{54}, \hyperpage{59}
   \item inertia field, \hyperpage{56}
   \item inertia group, \hyperpage{56}
@@ -103,7 +103,7 @@
 
   \indexspace
 
-  \item nonsplit, \hyperpage{45}, \hyperpage{51, 52}
+  \item nonsplit, \hyperpage{45}, \hyperpage{51}
   \item norm, \hyperpage{5}, \hyperpage{50}, \hyperpage{52}
   \item norm-one hypersurface, \hyperpage{79}
   \item normalization, \hyperpage{3}
@@ -144,14 +144,14 @@
 
   \item self-dual, \hyperpage{59}
   \item signature, \hyperpage{70}
-  \item split, \hyperpage{45}, \hyperpage{51, 52}
+  \item split, \hyperpage{45}, \hyperpage{51}
   \item system of fundamental units, \hyperpage{82}
 
   \indexspace
 
   \item tamely ramified, \hyperpage{63}
   \item totally ramified, \hyperpage{46}, \hyperpage{51, 52}
-  \item totally split, \hyperpage{45}, \hyperpage{51, 52}
+  \item totally split, \hyperpage{45}, \hyperpage{51}
   \item trace, \hyperpage{5}
   \item trace form, \hyperpage{9}, \hyperpage{15}
   \item trace matrix, \hyperpage{8}

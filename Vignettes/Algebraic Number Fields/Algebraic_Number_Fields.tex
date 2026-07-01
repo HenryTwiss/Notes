@@ -111,8 +111,7 @@
       \begin{proof}
         The first statement follows from two applications of \cref{prop:field_of_fractions_AKBL}. To prove the second statement, we must show \(\wtilde{\mc{O}} = \conj{\mc{O}}\). The forward inclusion is obvious as \(\smc{O}\) is a subset of \(\mc{O}\). For the reverse inclusion, \cref{prop:integrality_is_transitive} implies that \(\conj{\mc{O}}\) is integral over \(\smc{O}\). As \(\wtilde{\mc{O}}\) is the integral closure of \(\smc{O}\) in \(M\), the reverse inclusion follows.
       \end{proof}
-
-      \subsection*{Number Fields}
+      \subsubsection*{Number Fields}
         Number fields are a particular instance of the aforementioned setting. A \textbf{number field}\index{number field} \(K\) is a field extension of \(\Q\) of finite degree. That is, \(K\) is a finite dimensional \(\Q\)-vector space. In particular, \(K/\Q\) is a finite separable extension since \(\Q\) is perfect whence the primitive element theorem applies. Moreover, \(K/\Q\) is Galois if and only if it is normal. We say that the \textbf{degree}\index{degree} of \(K\) is \([K:\Q]\) which is simply the degree of \(K\) as a \(\Q\)-vector space. In the cases of small degrees we will often use the latin derived names \textbf{quadratic}\index{quadratic}, \textbf{cubic}\index{cubic}, etc. Any \(\k \in K\) is called an \textbf{algebraic number}\index{algebraic number}. We define the \textbf{ring of integers}\index{ring of integers} \(\mc{O}_{K}\) of \(K\) to be the integral closure of \(\Z\) in \(K\). In other words,
         \[
           \mc{O}_{K} = \{\k \in K:\k \text{ is integral over } \Z\}.
@@ -487,8 +486,7 @@
           \Trace_{L/K}(\b) = \Trace_{\mc{O}/\smc{O}}(\b) \quad \text{and} \quad \Norm_{L/K}(\b) = \Norm_{\mc{O}/\smc{O}}(\b).
         \]
       \end{proof}
-
-      \subsection*{Number Fields}
+      \subsubsection*{Number Fields}
         We now turn to the case of a number field \(K\) of degree \(n\). We write \(\Trace_{K} = \Trace_{K/\Q}\) and \(\Norm_{K} = \Norm_{K/\Q}\) and call these the \textbf{field trace}\index{field trace} and \textbf{field norm}\index{field norm} of \(K\). Moreover, for any \(\k \in K\) we call \(\Trace_{K}(\k)\) and \(\Norm_{K}(\k)\) the \textbf{field trace}\index{field trace} and \textbf{field norm}\index{field norm} of \(\k\). Observe from \cref{prop:trace_and_norm_AKBL,prop:unit_if_and_only_if_AKBL} that the field trace and field norm of algebraic integers are themselves integers and any \(\k \in \mc{O}_{K}\) is a unit if and only if \(\Norm_{K}(\k) = \pm 1\). We also call the nondegenerate symmetric bilinear form
         \[
           \Trace_{K/\Q}:K \x K \to \Q \qquad (\k,\l) \mapsto \Trace_{K/\Q}(\k\l),
@@ -892,8 +890,7 @@
         \mf{f}\mc{O} \cap \smc{O} = \mf{f}.
       \]
       This is called \textbf{contraction}\index{contraction} of the fractional ideal \(\mf{f}\mc{O}\) to \(\smc{O}\). In practice, it is useful for relating information about the fractional ideal \(\mf{f}\mc{O}\) of \(\mc{O}\) to the fraction ideal \(\mf{f}\) of \(\smc{O}\).
-
-      \subsection*{Number Fields}
+      \subsubsection*{Number Fields}
         We now turn to the case of a number field \(K\) for which our developments so far can be refined. By \cref{prop:integral_closure_of_Dedekind_is_Dedekind}, the ring of integers \(\mc{O}_{K}\) is a Dedekind domain as \(\Z\) is a principal ideal domain. Whence \(\mc{O}_{K}/\Z\) is a Dedekind extension. In view of this fact, we simplify some terminology. An \textbf{integral ideal}\index{integral ideal} of \(K\) is simply an integral ideal of \(\mc{O}_{K}\), a \textbf{prime}\index{prime} of \(K\) is a prime of \(\mc{O}_{K}\), and a \textbf{fractional ideal}\index{fractional ideal} of \(K\) is a fractional ideal of \(\mc{O}_{K}\). In particular, every fractional ideal \(\mf{f}\) is of the form
         \[
           \mf{f} = \frac{1}{d}\mf{a},
@@ -1160,8 +1157,7 @@
         
         The last statement follows from the first isomorphism theorem since the valuation \(v_{\mf{p}}\) restricted to \(K^{\ast}\) is a surjective homomorphism and the kernel is exactly \(\smc{O}_{\mf{p}}^{\ast}\). This completes the proof.
       \end{proof}
-
-      \subsection*{Number Fields}
+      \subsubsection*{Number Fields}
         We now turn to the setting of a number field \(K\). Let \(S\) denote a finite set of primes of \(\mc{O}_{K}\) and let \(X\) denote the set of all primes that do not belong to \(S\). The \textbf{ring of \(S\)-integers}\index{ring of \(S\)-integers} \(\mc{O}_{K,S}\) of \(K\) is defined by
         \[
           \mc{O}_{K,S} = \mc{O}_{K}(X).
@@ -1464,8 +1460,7 @@
         \]
         provided \(\mf{p}\) is irregular. If \(\mf{p}\) is regular, then \(\smc{O}_{\mf{p}}\) is an integrally closed domain and \cref{prop:regular_primes_relative_to_conductor} implies \((\mf{q}_{\smc{O}})_{\mf{p}} = \smc{O}_{\mf{p}}\). Therefore the isomorphism holds as well because all quotients are trivial. This completes the proof.
       \end{proof}
-
-      \subsection*{Number Fields}
+      \subsubsection*{Number Fields}
         We now turn to the setting of a number field \(K\) of degree \(n\). An \textbf{order}\index{order} \(\smc{O}\) of \(K\) is an order satisfying
         \[
           \Z \subseteq \smc{O} \subseteq \mc{O}_{K},
@@ -1794,8 +1789,7 @@
         \mf{N}_{\mc{O}/\smc{O}}:\Cl(\mc{O}) \to \Cl(\smc{O}) \qquad \mf{a}P(\mc{O}) \mapsto \mf{N}_{\mc{O}/\smc{O}}(\mf{a})P(\smc{O}),
       \]
       between ideal class groups.
-      
-      \subsection*{Number Fields}
+      \subsubsection*{Number Fields}
         We now turn to the setting where \(L/K\) is an extension of number fields. Recall that the underlying Dedekind extension is \(\mc{O}_{L}/\mc{O}_{K}\). A prime \(\mf{p}\) of \(K\) is said to be \textbf{inert}\index{inert}, \textbf{nonsplit}\index{nonsplit}, \textbf{split}\index{split}, or \textbf{totally split}\index{totally split} in \(L/K\) if it is in \(\mc{O}_{L}/\mc{O}_{K}\). Primes \(\mf{P}\) and \(\mf{p}\) of \(L\) and \(K\) are said to be \textbf{unramified}\index{unramified}, \textbf{ramified}\index{ramified}, or \textbf{totally ramified}\index{totally ramified} in \(L/K\) if they are in \(\mc{O}_{L}/\mc{O}_{K}\). Lastly, the \textbf{ideal norm}\index{ideal norm} \(\mf{N}_{L/K}\) of \(L/K\) is the ideal norm \(\mf{N}_{\mc{O}_{L}/\mc{O}_{K}}\).
 
         In the case of a number field \(K\), we can say more as \(\mc{O}_{K}/\Z\) admits an integral basis and the reside class extensions are separable extensions of finite fields. A prime \(p\) of \(\Q\) is said to be \textbf{inert}\index{inert}, \textbf{nonsplit}\index{nonsplit}, \textbf{split}\index{split}, or \textbf{totally split}\index{totally split} in \(K\) if it is in \(\mc{O}_{K}/\Z\). Primes \(\mf{p}\) and \(p\) of \(K\) and \(\Q\) are said to be \textbf{unramified}\index{unramified}, \textbf{ramified}\index{ramified}, or \textbf{totally ramified}\index{totally ramified} in \(K\) if they are in \(\mc{O}_{K}/\Z\). In particular, if \(\mf{p}\) is above \(p\) then \(\mf{p}\) is unramified in \(K\) if and only if \(e_{p}(\mf{p}) = 1\). The \textbf{ideal norm}\index{ideal norm} \(\mf{N}_{K}\) of \(K\) is the ideal norm \(\mf{N}_{\mc{O}_{K}/\Z}\). As \(\Z\) is a principal ideal domain, every fractional ideal is principal. Therefore \(\mf{N}_{K}(\mf{f})\) is generated by some \(r_{\mf{f}} \in \Q_{+}\) for every fractional ideal \(\mf{f}\) of \(\mc{O}_{K}\). As the ideal norm is completely multiplicative, this induces a homomorphism
@@ -2050,8 +2044,7 @@
         \end{tikzcd}
       \end{center}
       The labels on left and right of the extensions represent the corresponding ramification indices and inertia degrees respectively which come from \cref{prop:decomposition_field_e_and_f,prop:inertia_field_e_and_f}. So the extension \(L^{D_{\mf{p}}(\mf{P})}/K\) contains all of the information about the splitting, the extension \(L^{I_{\mf{p}}(\mf{P})}/L^{D_{\mf{p}}(\mf{P})}\) contains all of the information about the inertia degrees, and the extension \(L/L^{I_{\mf{p}}(\mf{P})}\) contains all of the information about the ramification indices. In particular, \(\mf{p}\) is unramified in \(\mc{O}/\smc{O}\) if and only if \(L^{I_{\mf{p}}(\mf{P})} = L\) which is equivalent to \(I_{\mf{p}}(\mf{P}) = \{1\}\).
-
-      \subsection*{Number Fields}
+      \subsubsection*{Number Fields}
         In the case of a Galois extension of number fields \(L/K\) and a prime \(\mf{p}\) of \(K\), the \textbf{ramification index}\index{ramification index} \(e\) and \textbf{inertia degree}\index{inertia degree} \(f\) of \(\mf{p}\) in \(L/K\) is that of \(\mc{O}_{L}/\mc{O}_{K}\). Recall that all of the residue class extensions are separable. This means that the above diagram applies to \(L/K\).
     \subsection{Differents and Discriminants}
       Let \(\mc{O}/\smc{O}\) be a Dedekind extension of a degree \(n\) separable extension \(L/K\). We being by introducing the notion of lattices in this setting. We say that \(\mf{L}\) is an \textbf{\(\smc{O}\)-lattice}\index{\(\smc{O}\)-lattice} of \(L\) if it is a finitely generated \(\smc{O}\)-submodule of \(L\). Moreover, we say that \(\mf{L}\) is \textbf{complete}\index{complete} if it spans \(L/K\). That is, \(\mf{L}\) contains a basis of \(L/K\). It is also possible to construct duals to complete \(\smc{O}\)-lattices. For this, we need a nondegenerate symmetric bilinear form. The natural choice is the trace form

@@ -15,7 +15,7 @@
     \[
       e(z) = e^{2\pi iz}.
     \]
-    Also, we will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\).
+    Also, we will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\).
     \subsection{The Upper-half Plane}
       The group \(\GL_{2}^{+}(\R)\) acts on the Riemann sphere \(\what{\C}\) by M\"obius transformations. Explicitly, any \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\R)\) acts on \(z \in \what{\C}\) by
       \[
@@ -498,7 +498,9 @@
       \[
         S_{\chi,\mf{a},\mf{b}}(m,n,c) = \sum_{\substack{d \in \mc{D}_{\mf{a},\mf{b}}(c) \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\chi(d)e\left(\frac{ma+nd}{c}\right).
       \]
-      Similar as before, this sum is well-defined since \(a\) and \(d\) are determined modulo \(c\) by the Bruhat decomposition and that the \(\chi\) is a character modulo \(c\). The usual Kloosterman and Sali\'e sums can be obtained from those relative to cusps. Indeed, consider the case where \(\G = \SL_{2}(\Z)\) and \(\mf{a} = \mf{b} = \infty\). As the entries \(a\) and \(d\) in \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix}\) are determined modulo \(c\), we may take \(d = a^{-1}\) because \(\det(\w_{c/d}) = 1\). Also, \(\mc{C}_{\infty,\infty} = \Z_{+}\) and \(\mc{D}_{\infty,\infty}(c) = (\Z/c\Z)^{\ast}\) because if \(\g = \begin{psmallmatrix} \ast & \ast \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z)\) we must have \((c,d) = 1\) as \(\det(\g) = 1\) and every such pair gives rise to a matrix in \(\SL_{2}(\Z)\). Whence
+      Similar as before, this sum is well-defined since \(a\) and \(d\) are determined modulo \(c\) by the Bruhat decomposition and that the \(\chi\) is a character modulo \(c\). 
+      \subsubsection*{Hecke Congruence Subgroups}
+        In the case of the Hecke congruence subgroup \(\G_{0}(N)\), the Bruhat decomposition simplifies and we recover the usual Kloosterman and Sali\'e sums. As the entries \(a\) and \(d\) in \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix}\) are determined modulo \(c\), we may take \(d = a^{-1}\) because \(\det(\w_{c/d}) = 1\). Also, \(\mc{C}_{\infty,\infty} = N\Z_{+}\) and \(\mc{D}_{\infty,\infty}(c) = (\Z/c\Z)^{\ast}\) because if \(\g = \begin{psmallmatrix} \ast & \ast \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) then \(c \equiv 0 \tmod{N}\) and we must have \((c,d) = 1\) as \(\det(\g) = 1\). Moreover, every such pair gives rise to a matrix in \(\G_{0}(N)\). Whence
       \[
         K_{\infty,\infty}(n,m,c) = K(n,m,c) \quad \text{and} \quad S_{\chi,\infty,\infty}(n,m,c) = S_{\chi}(n,m,c),
       \]
@@ -508,7 +510,7 @@
     \[
       e(z) = e^{2\pi iz}.
     \]
-    Also, we will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\).
+    Also, we will distinguish the primitive third root of unity \(\w = e\left(\frac{1}{3}\right)\). All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\).
     \subsection{Modular Forms}
       For all all \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\R)\) and \(z \in \H\), define \(j(\a,z)\) by
       \[
@@ -641,24 +643,25 @@
       \]
       upon summing the resulting geometric series. This implies \(f|_{k}\s_{\mf{a}}\) exhibits exponential decay and we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(y \to \infty\) which is provided by the fact that \(f\) is a cusp form.
 
-      In practice, we will take \(\G = \G_{0}(N)\) and study modular forms on \(\GH\). There are a few important simplifications when \(\G\) is a Hecke congruence subgroup. The first, which we have already noted, is that \(\G\) is reduced \(\infty\). Therefore \(\G_{\infty} = B_{\G}\) and we may take \(\s_{\infty} = I\). The second is that the nebentypus can be induced by a Dirichlet character \(\chi\) modulo \(N\). Let \(q\) be the conductor of \(\chi\) so that \(q \mid N\). For any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G\) we know that \(c \equiv 0 \tmod{N}\) whence \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G \to \C^{\ast}\) by
-      \[
-        \nu_{\chi}(\g) = \chi(d).
-      \]
-      If \(\g' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \G\), then the relations
-      \[
-        \g\g' \equiv \begin{pmatrix} \ast & \ast \\ 0 & d'd \end{pmatrix} \tmod{N} \quad \text{and} \quad \g^{-1} = \begin{pmatrix} d & \ast \\ 0 & a \end{pmatrix} \tmod{N},
-      \]
-      show
-      \[
-        \nu_{\chi}(\g\g') = \nu_{\chi}(\g)\nu_{\chi}(\g') \quad \text{and} \quad \nu_{\chi}(\g^{-1}) = \nu_{\chi}(\g)^{-1}.
-      \]
-      respectively. In other words, \(\nu_{\chi}\) is a homomorphism and it is necessarily of finite order because \(\chi\) is. Therefore \(\nu_{\chi}\) satisfies the assumptions of a nebentypus. It is also regular at \(\infty\). In the case \(f\) has nebentypus \(\nu_{\chi}\), we simply say that \(f\) has \textbf{character}\index{character} \(\chi\) and write
-      \[
-        \chi(\g) = \nu_{\chi}(\g).
-      \]
+      \subsubsection*{Hecke Congruence Subgroups}
+        In the case of the Hecke congruence subgroup \(\G_{0}(N)\), there are a few important simplifications when dealing with modular forms on  \(\G_{0}(N)\backslash\H\). The first, which we have already noted, is that \(\G_{0}(N)\) is reduced \(\infty\). Therefore \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\) for the scaling matrix at \(\infty\). The second is that the nebentypus can be induced by a Dirichlet character \(\chi\) modulo \(N\). Let \(q\) be the conductor of \(\chi\) so that \(q \mid N\). For any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) we know that \(c \equiv 0 \tmod{N}\) whence \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\nu_{\chi}:\G_{0}(N) \to \C^{\ast}\) by
+        \[
+          \nu_{\chi}(\g) = \chi(d).
+        \]
+        If \(\g' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \G_{0}(N)\), then the relations
+        \[
+          \g\g' \equiv \begin{pmatrix} \ast & \ast \\ 0 & d'd \end{pmatrix} \tmod{N} \quad \text{and} \quad \g^{-1} = \begin{pmatrix} d & \ast \\ 0 & a \end{pmatrix} \tmod{N},
+        \]
+        show that
+        \[
+          \nu_{\chi}(\g\g') = \nu_{\chi}(\g)\nu_{\chi}(\g') \quad \text{and} \quad \nu_{\chi}(\g^{-1}) = \nu_{\chi}(\g)^{-1}.
+        \]
+        respectively. In other words, \(\nu_{\chi}\) is a homomorphism and it is necessarily of finite order because \(\chi\) is. Therefore \(\nu_{\chi}\) satisfies the assumptions of a nebentypus. It is also regular at \(\infty\). In the case \(f\) has nebentypus \(\nu_{\chi}\), we simply say that \(f\) has \textbf{character}\index{character} \(\chi\) and write
+        \[
+          \chi(\g) = \nu_{\chi}(\g).
+        \]
     \subsection{The Valence Formula and Petersson Inner Product}
-      Fix a positive integer \(N\) and let \(\G\) denote any of the congruence subgroups \(\G_{0}(N)\), \(\G_{1}(N)\), or \(\G(N)\). Let \(\mc{M}_{k}(\G,\nu)\) denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\) and write \(\mc{S}_{k}(\G,\nu)\) for the subspace of cusp forms. In either case, if \(\nu\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusions
+      Let \(\mc{M}_{k}(\G,\nu)\) denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\) and write \(\mc{S}_{k}(\G,\nu)\) for the corresponding subspace of cusp forms. In either case, if \(\nu\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusions
       \[
         \mc{M}_{k}(\G_{2},\nu) \subseteq \mc{M}_{k}(\G_{1},\nu) \quad \text{and} \quad \mc{S}_{k}(\G_{2},\nu) \subseteq \mc{S}_{k}(\G_{1},\nu).
       \]
@@ -887,7 +890,7 @@
       With the valence formula in hand, it is not hard to show that \(\mc{M}_{k}(\G,\nu)\) is finite dimensional.
 
       \begin{theorem}\label{thm:modular_forms_finite_dimensional}
-        \(\mc{M}_{k}(\G,\nu)\) is finite dimensional. In particular, so is \(\mc{S}_{k}(\G,\nu)\).
+        \(\mc{M}_{k}(\G,\nu)\) is finite dimensional. In particular, \(\mc{S}_{k}(\G,\nu)\) is too.
       \end{theorem}
       \begin{proof}
         Let \(f \in \mc{M}_{k}(\G,\nu)\). Recall that \(v_{\mf{a}}(f)\) and \(v_{z}(f)\) are nonnegative. In particular, \(v_{\infty}(f)\) is nonnegative and the valence formula implies \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\) whenever \(f\) is nonzero. Let \(n\) be a positive integer such that \(n \ge \frac{kd_{\G}}{12}+1\) and consider the linear map \(F:\mc{M}_{k}(\G,\nu) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) < n\) and hence \(\mc{M}_{k}(\G,\nu)\) is finite dimensional. The second statement follows immediately.
@@ -990,17 +993,17 @@
         and so the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form if \(f\) is.
       \end{proof}
   \section{Arithmetic of Modular Forms on Hecke Congruence Subgroups}
-    Fix a positive integer \(N\) and set \(\G = \G_{0}(N)\). For any complex \(z\) let
+    For any complex \(z\) let
     \[
       e(z) = e^{2\pi iz}.
     \]
-    All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(\conj{a}\) for the inverse of \(a\).
+    All sums and products over a quotient group will be consider to be over a complete set of representatives. If an integer \(a\) is taken modulo \(m\), for any positive integer \(m\), we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\).
     \subsection{Poincar\'e and Eisenstein Series}
-      We will now introduce specific modular forms over \(\GH\). These will be constructed by averaging the slash operator over \(\G_{\mf{a}}\backslash\G\) for a cusp \(\mf{a}\) of \(\GH\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. As \(\G\) is a Hecke congruence subgroup, \(\G_{\infty} = B_{\G}\) and we may take \(\s_{\infty} = I\).
+      We will now introduce specific modular forms over \(\G_{0}(N)\backslash\H\). These will be constructed by averaging the slash operator over \(\G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) for a cusp \(\mf{a}\) of \(\G_{0}(N)\backslash\H\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. As \(\G\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\).
       
-      Fix an integer \(k \ge 3\). Let \(m\) be a nonnegative integer, \(\chi\) be a Dirichlet character modulo \(N\), and \(\mf{a}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp by
+      Fix an integer \(k \ge 3\). Let \(m\) be a nonnegative integer, \(\chi\) be a Dirichlet character modulo \(N\), and \(\mf{a}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{a}\) cusp by
       \[
-        P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\chi}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+        P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{\chi}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
       We call \(m\) the \textbf{index}\index{index} of \(P_{m,\chi,\mf{a}}(z)\). If \(\chi\) is trivial or \(\mf{a} = \infty\), we will drop these dependencies accordingly. Recall that \(\chi\) is regular at \(\infty\).
 
@@ -1008,7 +1011,7 @@
         The reason why we restrict to \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
       \end{remark}
 
-      The Poincar\'e series \(P_{m,\chi,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the character, this is easily checked by direct computation using the fact that \(\chi\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{\infty}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}\s_{\mf{a}}^{-1}\). So it suffices to show 
+      The Poincar\'e series \(P_{m,\chi,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the character, this is easily checked by direct computation using the fact that \(\chi\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\). So it suffices to show 
       \[
         \left(e(m\,\cdot\,)\bigg|_{k}T\right)(z) = e(mz),
       \]
@@ -1074,31 +1077,31 @@
       \begin{theorem}\label{thm:Poincare_series_modular}
         The Poincar\'e series
         \[
-          P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\chi}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+          P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{\chi}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
-        is a weight \(k\) modular form with character \(\chi\) on \(\GH\).
+        is a weight \(k\) modular form with character \(\chi\) on \(\G_{0}(N)\backslash\H\).
       \end{theorem}
 
-      In the case of index zero Poincar\'e series, we write \(E_{\chi,\mf{a}}(z) = P_{0,\chi,\mf{a}}(z)\) and call \(E_{\chi,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and character \(\chi\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
+      In the case of index zero Poincar\'e series, we write \(E_{\chi,\mf{a}}(z) = P_{0,\chi,\mf{a}}(z)\) and call \(E_{\chi,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and character \(\chi\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{a}\) cusp. It is defined by
       \[
-        E_{\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\chi}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+        E_{\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{\chi}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
       Just as for the Poincar\'e series, if \(\chi\) is trivial or \(\mf{a} = \infty\), we will drop these dependencies accordingly. In fact, we obtain the following theorem as a special case of the former one:
 
       \begin{theorem}\label{thm:Eisenstein_series_modular}
         The Eisenstein series
         \[
-          E_{\chi,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\chi}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+          E_{\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{\chi}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
-        is a weight \(k\) modular form with character \(\chi\) on \(\GH\).
+        is a weight \(k\) modular form with character \(\chi\) on \(\G_{0}(N)\backslash\H\).
       \end{theorem}
       
       We can also explicitly compute the Fourier series of the Poincar\'e series and Eisenstein series whose Fourier coefficients involve Sali\'e sums, or Kloosterman sums when \(\chi\) is trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. Unlike verifying that these series are modular forms, the arguments are slightly different to compute their Fourier series. We first deduce the Fourier series of the Poincar\'e series.
 
       \begin{proposition}\label{prop:Fourier_series_Poincare_modular}
-        Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
+        Let \(\mf{b}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,\chi,\mf{a}}(z)\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{b}\) cusp is given by
         \begin{align*}
-          (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e(mz) \\
+          (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\mf{a},\mf{b}}e(mz) \\
           &+ \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{n}}{\sqrt{m}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,n,c)}{c}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c}\right)\right)e(nz),
         \end{align*}
         provided the index \(m\) is positive.
@@ -1106,15 +1109,15 @@
       \begin{proof}
         Write
         \[
-          (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}e(m\s_{\mf{a}}^{-1}\g\s_{\mf{b}}z).
+          (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}e(m\s_{\mf{a}}^{-1}\g\s_{\mf{b}}z).
         \]
-        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{\mf{a}}\backslash\G\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
+        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
         \[
           \frac{az+b}{cz+(c\ell+d)} = \frac{a}{c}-\frac{1}{c^{2}z+c^{2}\ell+cd}.
         \]
         Using these facts together with the periodicity of \(\chi\), we have
         \[
-          (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}e(mz)+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{e\left(m\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}\ell+cd}\right)\right)}{(cz+c\ell+d)^{k}}.
+          (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\mf{a},\mf{b}}e(mz)+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{e\left(m\left(\frac{a}{c}-\frac{1}{c^{2}z+c^{2}\ell+cd}\right)\right)}{(cz+c\ell+d)^{k}}.
         \]
         Now let
         \[
@@ -1154,7 +1157,7 @@
         \]
         Plugging this back into the Poincar\'e series, interchanging the sums over \(n\) and \(c\) by absolute convergence, and collecting the exponential sum over \(a\) and \(d\), we at last obtain
         \begin{align*}
-          (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\G\mf{a},\G\mf{b}}e(mz) \\
+          (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\mf{a},\mf{b}}e(mz) \\
           &+ \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{n}}{\sqrt{m}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,n,c)}{c}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c}\right)\right)e(nz).
         \end{align*}
         which is our desired Fourier series.
@@ -1165,23 +1168,23 @@
       In a similar manner to the Poincar\'e series, we can obtain the Fourier series of the Eisenstein series too. The proof is only slightly different in that we will pass by the pole of the integrand instead of deforming to the Hankel contour about the negative real axis.
       
       \begin{proposition}\label{prop:Fourier_series_Eisenstein_modular}
-        Let \(\mf{b}\) be a cusp of \(\GH\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(E_{\chi,\mf{a}}(z)\) on \(\GH\) at the \(\mf{b}\) cusp is given by
+        Let \(\mf{b}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(E_{\chi,\mf{a}}(z)\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{b}\) cusp is given by
         \[
-          (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{c^{k}}\right)e(nz).
+          (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\mf{a},\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{c^{k}}\right)e(nz).
         \]
       \end{proposition}
       \begin{proof}
         Write
         \[
-          (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}.
+          (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}.
         \]
-        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{\mf{a}}\backslash\G\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
+        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
         \[
           \frac{az+b}{cz+(c\ell+d)} = \frac{a}{c}-\frac{1}{c^{2}z+c^{2}\ell+cd}.
         \]
         Using these facts together with the periodicity of \(\chi\), we have
         \[
-          (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{1}{(cz+c\ell+d)^{k}}.
+          (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\mf{a},\mf{b}}+\sum_{\substack{\substack{c \in \mc{C}_{\mf{a},\mf{b}} \\ d \in \mc{D}_{\mf{a},\mf{b}}(c)} \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\cchi(d)\sum_{\ell \in \Z}\frac{1}{(cz+c\ell+d)^{k}}.
         \]
         Now let
         \[
@@ -1221,7 +1224,7 @@
         \]
         Plugging this back into the Poincar\'e series, interchanging the sums over \(n\) and \(c\) by absolute convergence, and collecting the exponential sum over \(d\), we at last obtain
         \[
-          (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\G\mf{a},\G\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{c^{k}}\right)e(nz).
+          (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\mf{a},\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{c^{k}}\right)e(nz).
         \]
         which is our desired Fourier series.
       \end{proof}
@@ -1230,7 +1233,7 @@
       \[
         \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
       \]
-      where \(\mc{S}_{k}(\G,\chi)\) is spanned by the Poincar\'e series of positive index. Moreover, this decomposition is orthogonal in the sense that the Petersson inner product between elements of \(\mc{S}_{k}(\G,\chi)\) and \(\mc{E}_{k}(\G,\chi)\) is zero. To show all of this, let \(\mf{a}\) be a cusp of \(\GH\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\chi)\) and let its Fourier series at the \(\mf{a}\) cusp be
+      where \(\mc{S}_{k}(\G,\chi)\) is spanned by the Poincar\'e series of positive index. Moreover, this decomposition is orthogonal in the sense that the Petersson inner product between elements of \(\mc{S}_{k}(\G,\chi)\) and \(\mc{E}_{k}(\G,\chi)\) is zero. To show all of this, let \(\mf{a}\) be a cusp of \(\G_{0}(N)\backslash\H\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\chi)\) and let its Fourier series at the \(\mf{a}\) cusp be
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 1}a_{\mf{a}}(n)e(nz).
       \]
@@ -1245,7 +1248,7 @@
       We would like to know what these cusp forms are. It turns out that \(v_{m,\chi,\mf{a}}(z)\) will be the Poincar\'e series \(P_{m,\chi,\mf{a}}(z)\) up to a constant.
 
       \begin{proposition}\label{prop:Petersson_inner_product_with_Poincare_series}
-        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\GH\). Then 
+        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\G_{0}(N)\backslash\H\). Then 
         \[
           \<f,P_{m,\chi,\mf{a}}\> = \frac{\G(k-1)}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
         \]
@@ -1254,19 +1257,19 @@
       \begin{proof}
         We will compute 
         \[
-          \<f,P_{m,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{P_{m,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
+          \<f,P_{m,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}f(z)\conj{P_{m,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
         \]
         A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified} along with modularity and the cocycle condition shows this integral may be expressed as
         \[
-          \frac{1}{V_{\G}}\int_{\GH}\sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)e\left(-m\conj{\s_{\mf{a}}^{-1}\g z}\right)\Im(\g z)^{k}\,d\mu.
+          \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}\sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)e\left(-m\conj{\s_{\mf{a}}^{-1}\g z}\right)\Im(\g z)^{k}\,d\mu.
         \]
         Now unfold to obtain
         \[
           \frac{1}{V_{\G}}\int_{\G_{\mf{a}}\backslash\H}\conj{j(\s_{\mf{a}}^{-1},z)^{-k}}f(z)e\left(-m\conj{\s_{\mf{a}}^{-1}z}\right)\Im(z)^{k}\,d\mu.
         \]
-        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_simplified} and the cocycle condition shows that this integral becomes
+        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_simplified} and the cocycle condition shows that this integral becomes
         \[
-          \frac{1}{V_{\G}}\int_{\G_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e(-m\conj{z})\Im(z)^{k}\,d\mu.
+          \frac{1}{V_{\G}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e(-m\conj{z})\Im(z)^{k}\,d\mu.
         \]
         Substituting in the Fourier series of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
         \[
@@ -1288,7 +1291,7 @@
       An analogous argument with Eisenstein series shows that they are orthogonal to cusp forms.
       
       \begin{proposition}\label{prop:Petersson_inner_product_with_Eisenstein_series}
-        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\GH\). Then 
+        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\G_{0}(N)\backslash\H\). Then 
         \[
           \<f,E_{\chi,\mf{a}}\> = 0.
         \]
@@ -1296,19 +1299,19 @@
       \begin{proof}
         We will compute 
         \[
-          \<f,E_{\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{E_{\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
+          \<f,E_{\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}f(z)\conj{E_{\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
         \]
         A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified} along with modularity and the cocycle condition shows this integral may be expressed as
         \[
-          \frac{1}{V_{\G}}\int_{\GH}\sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)\Im(\g z)^{k}\,d\mu.
+          \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}\sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)\Im(\g z)^{k}\,d\mu.
         \]
         Now unfold to obtain
         \[
           \frac{1}{V_{\G}}\int_{\G_{\mf{a}}\backslash\H}\conj{j(\s_{\mf{a}}^{-1},z)^{-k}}f(z)\Im(z)^{k}\,d\mu.
         \]
-        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using \(\G_{\mf{a}} = \s_{\mf{a}}\G_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_simplified} and the cocycle condition shows that this integral becomes
+        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_simplified} and the cocycle condition shows that this integral becomes
         \[
-          \frac{1}{V_{\G}}\int_{\G_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{k}\,d\mu.
+          \frac{1}{V_{\G}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{k}\,d\mu.
         \]
         Substituting in the Fourier series of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
         \[
@@ -1336,18 +1339,26 @@
         \[
           \sum_{\mf{a} \in \G\backslash\what{\Q}}a_{\mf{a}}E_{\chi,\mf{a}}(z),
         \]
-        is a cusp form. Recall from \cref{prop:Fourier_series_Eisenstein_modular} that the constant term in the Fourier series of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is \(\d_{\G\mf{a},\G\mf{b}}\). Therefore \(a_{\mf{a}} = 0\) which proves that these spaces are disjoint. Moreover, this fact also implies that
+        is a cusp form. Recall from \cref{prop:Fourier_series_Eisenstein_modular} that the constant term in the Fourier series of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is \(\d_{\mf{a},\mf{b}}\). Therefore \(a_{\mf{a}} = 0\) which proves that these spaces are disjoint. Moreover, this fact also implies that
         \[
           f(z)-\sum_{\mf{a} \in \G\backslash\what{\Q}}a_{\mf{a}}(n)E_{\chi,\mf{a}}(z),
         \]
         is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
-    \iffalse\subsection{\todo{Diamond and Hecke Operators}}
-      The diamond and Hecke operators are special linear operators that are used to construct a linear theory of modular forms. They will also help us understand the Fourier coefficients. Throughout this discussion, we will obtain corresponding results for modular forms with nontrivial characters. We will discuss the diamond operator first. To define them, we need to consider both the congruence subgroups \(\G_{1}(N)\) and \(\G_{0}(N)\). Recall that \(\G_{1}(N) \subseteq \G_{0}(N)\) and consider the map
+    \subsection{\todo{Diamond and Hecke Operators}}
+      The diamond and Hecke operators are special cases of double coset operators which will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. We will discuss the diamond operator first and the Hecke operators second. 
+      
+      To define the diamond operators, we need to consider the congruence subgroups \(\G_{1}(N)\) and \(\G_{0}(N)\). Recall that \(\G_{1}(N) \subseteq \G_{0}(N)\) and consider the surjective homomorphism
       \[
-        \G_{0}(N) \to (\Z/N\Z)^{\ast} \qquad \begin{pmatrix} a & b \\ c & d\end{pmatrix} \mapsto d \tmod{N},
+        \G_{0}(N) \to (\Z/N\Z)^{\ast} \qquad \begin{pmatrix} a & b \\ c & d\end{pmatrix} \mapsto d \tmod{N}.
       \]
-      (\(d\) is invertible modulo \(N\) since \(c \equiv 0 \tmod{N}\) and \(ad-bc = 1\)). This is a surjective homomorphism and its kernel is exactly \(\G_{1}(N)\) so that \(\G_{1}(N)\) is a normal subgroup of \(\G_{0}(N)\) and \(\G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast}\). Letting \(\a = \begin{psmallmatrix} \ast & \ast \\ \ast & d \end{psmallmatrix} \in \G_{0}(N)\) and \(f \in \mc{S}_{k}(\G_{1})\), consider \(\left(f\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}\right)(z)\). This is only dependent upon the lower-right entry \(d\) of \(\a\) taken modulo \(N\). To see this, since \(\G_{1}(N)\) is normal in \(\G_{0}(N)\), we have \(\a\G_{1}(N) = \G_{1}(N)\a\) so that \(\G_{1}(N)\a\G_{1}(N) = \G_{1}(N)\a\). This means there is only one orbit in \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\). Therefore
+      Its kernel is exactly \(\G_{1}(N)\) so that \(\G_{1}(N)\) is a normal subgroup of \(\G_{0}(N)\) whence
+      \[
+        \G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast},
+      \]
+      by the first isomorphism theorem. 
+      
+      \iffalse Letting \(\a = \begin{psmallmatrix} \ast & \ast \\ \ast & d \end{psmallmatrix} \in \G_{0}(N)\) and \(f \in \mc{S}_{k}(\G_{1}(N))\), consider \(\left(f\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}\right)(z)\). This is only dependent upon the lower-right entry \(d\) of \(\a\) taken modulo \(N\). To see this, since \(\G_{1}(N)\) is normal in \(\G_{0}(N)\), we have \(\a\G_{1}(N) = \G_{1}(N)\a\) so that \(\G_{1}(N)\a\G_{1}(N) = \G_{1}(N)\a\). This means there is only one orbit in \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\). Therefore
       \[
         \left(f\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}\right)(z) = (f\|_{k}\a)(z).
       \]
@@ -1519,7 +1530,7 @@
         \[
           b \equiv aj \tmod{p}.
         \]
-        First suppose \(p \nmid a\). Then \(a\) is invertible modulo \(p\) so we may take \(j = \conj{a}b \tmod{p}\). Now suppose \(p \mid a\). If there is some \(j\) satisfying \(b \equiv aj \tmod{p}\) then we also have \(p \mid b\). But as \(ad-bc = 1\), this is impossible and so no such \(j\) exists. As \(a \equiv 1 \tmod{N}\), we have \(p \mid a\) if and only if \(p \nmid N\). In this case consider instead
+        First suppose \(p \nmid a\). Then \(a\) is invertible modulo \(p\) so we may take \(j = a^{-1}b \tmod{p}\). Now suppose \(p \mid a\). If there is some \(j\) satisfying \(b \equiv aj \tmod{p}\) then we also have \(p \mid b\). But as \(ad-bc = 1\), this is impossible and so no such \(j\) exists. As \(a \equiv 1 \tmod{N}\), we have \(p \mid a\) if and only if \(p \nmid N\). In this case consider instead
         \[
           \g{\b'_{\infty}}^{-1} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} 1 & -n \\ -N & pm \end{pmatrix} = \begin{pmatrix} a-Nb & pmb-na \\ c-Nd & pmd-nc \end{pmatrix}.
         \]
@@ -1834,8 +1845,8 @@
         This is immediate from \cref{thm:eigenforms_forms_spectral_theory_modular} and the Hecke relations.
       \end{proof}
 
-      The identities in \cref{cor:Hecke_relations_operator_modular} can also be established directly. Moreover, the first identity is symmetric in \(n\) and \(m\) so it can be used to show that the Hecke operators commute. 
-    \subsection{\todo{Atkin-Lehner Theory}}
+      The identities in \cref{cor:Hecke_relations_operator_modular} can also be established directly. Moreover, the first identity is symmetric in \(n\) and \(m\) so it can be used to show that the Hecke operators commute.\fi
+    \iffalse\subsection{\todo{Atkin-Lehner Theory}}
       So far, our entire theory of modular forms has started with a fixed congruence subgroup of some level. Atkin-Lehner theory, or the theory of oldforms and newforms, allows us to discuss modular forms in the context of moving between levels. In this setting, we will only deal with congruence subgroups of the form \(\G_{1}(N)\) and \(\G_{0}(N)\). The easiest way lift a modular form from a smaller level to a larger level is to observe that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) so there is a natural inclusion \(\mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N))\). There is a less trivial way of lifting from \(\mc{S}_{k}(\G_{1}(M))\) to \(\mc{S}_{k}(\G_{1}(N))\). For any \(d \mid \frac{N}{M}\), let
       \[
         \a_{d} = \begin{pmatrix} d & 0 \\ 0 & 1 \end{pmatrix}.

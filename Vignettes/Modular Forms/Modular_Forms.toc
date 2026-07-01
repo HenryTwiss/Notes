@@ -9,3 +9,4 @@
 \contentsline {subsection}{\numberline {2.3}Double Coset Operators}{25}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Arithmetic of Modular Forms on Hecke Congruence Subgroups}{27}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Poincar\'e and Eisenstein Series}{27}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}\leavevmode {\color {red}\sf Todo: [Diamond and Hecke Operators]}}{37}{subsection.3.2}%
