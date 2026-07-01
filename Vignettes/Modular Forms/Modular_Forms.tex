@@ -140,46 +140,6 @@
       \end{proof}
 
       Note that in the case \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\), normality of principal congruence subgroups force \(\G\) and \(\a^{-1}\G\a\) to be of the same level. In particular, this will always happen whenever we conjugate by elements of the modular group.
-      
-      Also, since congruence subgroups are preserved under intersection, the previous lemma further implies that \(\a^{-1}\G_{1}\a \cap \G_{2}\) is a congruence subgroup for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\). In this setting, consider the double coset
-      \[
-        \G_{1}\a\G_{2} = \{\g_{1}\a\g_{2}:\g_{1} \in \G_{1} \text{ and } \g_{2} \in \G_{2}\}.
-      \]
-      Note that \(\G_{1}\) acts on \(\G_{1}\a\G_{2}\) by left multiplication so that it decomposes into a disjoint union of orbits. That is,
-      \[
-        \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b.
-      \]
-      It turns out that this union is finite. To see this, we need to relate the orbit space \(\G_{1}\backslash\G_{1}\a\G_{2}\) to a quotient of \(\G_{2}\) with respect to the action of some subgroup. Consider the congruence subgroup \(\a^{-1}\G_{1}\a \cap \G_{2}\) which is a subgroup of \(\G_{2}\). As this subgroup acts on \(\G_{2}\) by left multiplication, we again have an orbit space \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\). We first show how these orbit spaces are related.
-
-      \begin{lemma}\label{lem:coset_lemma_2}
-        Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the right multiplication map
-        \[
-          \G_{2} \to \G_{1}\backslash\G_{1}\a\G_{2} \qquad \g_{2} \mapsto \G_{1}\a\g_{2},
-        \]
-        induces a bijection from \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) to \(\G_{1}\backslash\G_{1}\a\G_{2}\).
-      \end{lemma}
-      \begin{proof}
-        We first show that this map is \((\a^{-1}\G_{1}\a \cap \G_{2})\)-invariant so that it induces a map on the quotient. Indeed, if \(\g \in \a^{-1}\G_{1}\a \cap \G_{2}\) then \(\g = \a^{-1}\g_{1}\a\) for some \(\g_{1} \in \G_{1}\). Thus \(\G_{1}\a\g\g_{2} = \G_{1}\a\g_{2}\) as claimed. We now show that the induced map is a bijection. 
-
-        We will prove injectivity and then surjectivity. For the former, let \(\g_{2}\) and \(\g'_{2}\) be representatives of orbits of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) such that \(\G_{1}\a\g_{2} = \G_{1}\a\g'_{2}\). This implies \(\a\g_{2}(\g'_{2})^{-1} \in \G_{1}\a\) and so \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a\). But we also have \(\g_{2}(\g'_{2})^{-1} \in \G_{2}\) and these two facts together imply that \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a \cap \G_{2}\). Hence
-        \[
-          (\a^{-1}\G_{1}\a \cap \G_{2})\g_{2} = (\a^{-1}\G_{1}\a \cap \G_{2})\g'_{2},
-        \]
-        from which injectivity follows. For the latter, any representative \(\b\) of an orbit in \(\G_{1}\backslash\G_{1}\a\G_{2}\) is of the form \(\b = \g_{1}\a\g_{2}\) for some \(\g_{1} \in \G_{1}\) and \(\g_{2} \in \G_{2}\). But then \(\g_{2}\) represents an orbit of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) mapping to the orbit represented by \(\b\) as \(\G_{1}\b = \G_{1}\a\g_{2}\). This shows surjectivity.
-      \end{proof}
-
-      With this lemma in hand, we can prove that the aforementioned disjoint union is finite.
-
-      \begin{proposition}\label{prop:double_congruence_subgroup_coset_decomposition_is_finite}
-        Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the disjoint union
-        \[
-          \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b,
-        \]
-        is finite.
-      \end{proposition}
-      \begin{proof}
-        By \cref{lem:coset_lemma_2}, the number of orbits of \(\G_{1}\backslash\G_{1}\a\G_{2}\) is in bijection with those of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) which is \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}]\). By \cref{lem:coset_lemma_1}, \(\a^{-1}\G_{1}\a \cap \SL_{2}(\Z)\) is a congruence subgroup and thus \(\a^{-1}\G_{1}\a \cap \G_{2}\) is as well. It follows that \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}] \le d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) where \(d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) is finite which completes the proof.
-      \end{proof}
     \subsection{Fuchsian Groups and Modular Curves}
       We first restrict our group action on the upper-half plane to \(\SL_{2}(\R)\). Note that for any \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\R)\), \cref{equ:Mobius_transformation_imaginary_part} simplifies to
       \begin{equation}\label{equ:Mobius_transformation_imaginary_part_simplified}
@@ -726,7 +686,7 @@
         \[
           ((f|_{k}\b')(z))^{n_{\nu}} = ((f|_{k}\b)(z))^{n_{\nu}},
         \]
-        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Modularity then follows from a short computation. The growth condition, follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\nu}d_{\G}}(\SL_{2}(\Z))\). 
+        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Modularity then follows from a short computation because this permutes the choice of coset representatives. The growth condition, follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\nu}d_{\G}}(\SL_{2}(\Z))\). 
       \end{proof}  
       
       We can now state and prove the \textbf{valence formula}\index{valence formula}.
@@ -944,6 +904,91 @@
         \<f,f\> = \frac{1}{V_{\G}}\int_{\GH}|f(z)|^{2}\Im(z)^{k}\,d\mu,
       \]
       which is nonnegative and zero if and only if \(f\) is identically zero. A short computation together using the fact that \(\conj{d\mu} = d\mu\), which holds since \(d\mu = \frac{dx\,dy}{y^{2}}\), proves conjugate symmetry. Whence \(\mc{S}_{k}(\G,\nu)\) is a complex inner product space with respect to the Petersson inner product. Since \(\mc{S}_{k}(\G,\nu)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows that \(\mc{S}_{k}(\G,\nu)\) is a complex Hilbert space.
+    \subsection{Double Coset Operators}
+      There are also linear operators that act on the space of modular forms. In fact, these operators allow us to transfer between modular forms on different congruence subgroups. They are defined via double cosets which we now study.
+
+      Let \(\G_{1}\) and \(\G_{2}\) be two congruence subgroups. Since congruence subgroups are preserved under intersection, it follows from \cref{lem:coset_lemma_1} that \(\a^{-1}\G_{1}\a \cap \G_{2}\) is also a congruence subgroup for any \(\a \in \GL_{2}^{+}(\Q)\). In this setting, consider the double coset
+      \[
+        \G_{1}\a\G_{2} = \{\g_{1}\a\g_{2}:\g_{1} \in \G_{1} \text{ and } \g_{2} \in \G_{2}\}.
+      \]
+      Note that \(\G_{1}\) acts on \(\G_{1}\a\G_{2}\) by left multiplication so that it decomposes into a disjoint union of orbits. In other words, we have
+      \[
+        \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b.
+      \]
+      It turns out that this union is finite. To see this, we need to relate the orbit space \(\G_{1}\backslash\G_{1}\a\G_{2}\) to a quotient of \(\G_{2}\) with respect to the action of some subgroup. This will be the congruence subgroup \(\a^{-1}\G_{1}\a \cap \G_{2}\). As this subgroup acts on \(\G_{2}\) by left multiplication, we again have an orbit space \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\). These orbit spaces are related.
+
+      \begin{lemma}\label{lem:coset_lemma_2}
+        Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the right multiplication map
+        \[
+          \G_{2} \to \G_{1}\backslash\G_{1}\a\G_{2} \qquad \g_{2} \mapsto \G_{1}\a\g_{2},
+        \]
+        induces a bijection from \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) to \(\G_{1}\backslash\G_{1}\a\G_{2}\).
+      \end{lemma}
+      \begin{proof}
+        This map is \((\a^{-1}\G_{1}\a \cap \G_{2})\)-invariant so that it induces a map on the quotient. Indeed, if \(\g \in \a^{-1}\G_{1}\a \cap \G_{2}\) then \(\g = \a^{-1}\g_{1}\a\) for some \(\g_{1} \in \G_{1}\). Thus \(\G_{1}\a\g\g_{2} = \G_{1}\a\g_{2}\) as claimed.
+
+        We now show that the induced map is a bijection. For injectivity, let \(\g_{2}\) and \(\g'_{2}\) be representatives of orbits of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) such that \(\G_{1}\a\g_{2} = \G_{1}\a\g'_{2}\). This implies \(\a\g_{2}(\g'_{2})^{-1} \in \G_{1}\a\) and so \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a\). But we also have \(\g_{2}(\g'_{2})^{-1} \in \G_{2}\) and these two facts together imply that \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a \cap \G_{2}\). Hence
+        \[
+          (\a^{-1}\G_{1}\a \cap \G_{2})\g_{2} = (\a^{-1}\G_{1}\a \cap \G_{2})\g'_{2},
+        \]
+        from which injectivity follows. For surjectivity, any representative \(\b\) of an orbit in \(\G_{1}\backslash\G_{1}\a\G_{2}\) is of the form \(\b = \g_{1}\a\g_{2}\) for some \(\g_{1} \in \G_{1}\) and \(\g_{2} \in \G_{2}\). But then \(\g_{2}\) represents an orbit of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) mapping to the orbit represented by \(\b\) as \(\G_{1}\b = \G_{1}\a\g_{2}\). This shows surjectivity.
+      \end{proof}
+
+      With this lemma in hand, we can prove that the aforementioned disjoint union is finite.
+
+      \begin{proposition}\label{prop:double_congruence_subgroup_coset_decomposition_is_finite}
+        Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the disjoint union
+        \[
+          \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b,
+        \]
+        is finite.
+      \end{proposition}
+      \begin{proof}
+        By \cref{lem:coset_lemma_2}, the number of orbits of \(\G_{1}\backslash\G_{1}\a\G_{2}\) is in bijection with those of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) which is \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}]\). By \cref{lem:coset_lemma_1}, \(\a^{-1}\G_{1}\a \cap \SL_{2}(\Z)\) is a congruence subgroup and thus \(\a^{-1}\G_{1}\a \cap \G_{2}\) is as well. It follows that \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}] \le d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) where \(d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) is finite which completes the proof.
+      \end{proof}
+
+      We are ready to introduce a class of general operators depending upon double cosets. First, we define an operator closely related to the slash operator. For any nonnegative integer \(k\) and any \(\a \in \GL_{2}^{+}(\Q)\) we define the \textbf{double slash operator}\index{double slash operator} \(\|_{k}\a:C(\H) \to C(\H)\) to be the linear operator given by
+      \[
+        (f\|_{k}\a)(z) = \det(\a)^{k-1}j(\a,z)^{-k}f(\a z).
+      \]
+      In the case of \(\a \in \SL_{2}(\R)\), the double slash operator takes the simplified form
+      \[
+        (f\|_{k}\a)(z) = j(\a,z)^{-k}f(\a z).
+      \]
+      The relationship to the slash operator is
+      \begin{equation}\label{equ:relationship_between_slash_operators}
+        (f\|_{k}\a)(z) = \det(\a)^{\frac{k}{2}-1}(f|_{k}\a)(z).
+      \end{equation}
+      It follows that the double slash operator is multiplicative as we have
+      \[
+        (f\|_{k}\a'\a)(z) = ((f\|_{k}\a')|_{k}\a)(z) \quad \text{and} \quad ((fg)\|_{k+\ell}\a)(z) = (f\|_{k}\a)(z)(g\|_{\ell}\a)(z),
+      \]
+      for \(f,g \in C(\H)\), positive integers \(k\) and \(\ell\), and any \(\a,\a' \in \GL_{2}^{+}(\Q)\). Also, if \(f \in \mc{M}_{k}(\G,\nu)\) then modularity may be expressed as
+      \[
+        (f\|_{k}\g)(z) = \nu(\g)f(z),
+      \]
+      for all \(\g \in \G\). The reason for introducing the double slash operator is that it will be easier to work with when discussing Fourier coefficients of modular forms.
+      
+      Now for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\), we define the \textbf{double coset operator}\index{double coset operator} \([\G_{1}\a\G_{2}]_{k}\) to be the linear operator on \(\mc{M}_{k}(\G_{1})\) given by
+      \[
+        (f[\G_{1}\a\G_{2}]_{k})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}(f\|_{k}\b)(z).
+      \]
+      This sum is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. It remains to check that \(f[\G_{1}\a\G_{2}]_{k}\) is well-defined which amounts to showing that the sum is independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b' = \g\b\) for some \(\g \in \G_{1}\). Modularity implies
+      \[
+        (f\|_{k}\b')(z) = (f\|_{k}\b)(z),
+      \]
+      which proves that the \([\G_{1}\a\G_{2}]_{k}\) operator is well-defined. In fact, the double coset operator takes \(\mc{M}_{k}(\G_{1})\) to \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
+
+      \begin{proposition}\label{prop:double_coset_operator_preserves_subspaces_modular}
+        For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\), \([\G_{1}\a\G_{2}]_{k}\) maps \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\). It also preserves the subspaces of cusp forms.
+      \end{proposition}
+      \begin{proof}
+        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]_{k}\) is finite. For modularity, let \(\g \in \G_{2}\). As \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Modularity then follows from a short computation because this permutes the choice of coset representatives. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
+        \[
+          ((f[\G_{1}\a\G_{2}]_{k})|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
+        \]
+        and so the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form if \(f\) is.
+      \end{proof}
   \section{Arithmetic of Modular Forms on Hecke Congruence Subgroups}
     Fix a positive integer \(N\) and set \(\G = \G_{0}(N)\). For any complex \(z\) let
     \[
@@ -1297,46 +1342,7 @@
         \]
         is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
-    \iffalse\subsection{\todo{Double Coset Operators}}
-      We are ready to introduce a class of general operators depending upon double cosets. We will use these operators to define the diamond and Hecke operators. First, we define an operator closely related to the slash operator. For any integer \(k \ge 1\) and any \(\a \in \GL_{2}^{+}(\Q)\) we define the \textbf{double slash operator}\index{double slash operator} \(\|_{k}\a:C(\H) \to C(\H)\) to be the linear operator given by
-      \[
-        (f\|_{k}\a)(z) = \det(\a)^{k-1}j(\a,z)^{-k}f(\a z).
-      \]
-      If \(j\) is clear from context we will suppress this dependence accordingly. The relationship to the slash operator is clearly
-      \begin{equation}\label{equ:relationship_between_slash_operators}
-        (f\|_{k}\a) = \det(\a)^{\frac{k}{2}-1}(f|_{k}\a)(z).
-      \end{equation}
-      The reason for the double slash operator is that it will be more easy to work with when discussing Fourier coefficients of modular forms. Note that the double slash operator is multiplicative because the determinant and the slash operator are. Now for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\), we define the \textbf{double coset operator}\index{double coset operator} \([\G_{1}\a\G_{2}]_{k}\) on \(\mc{S}_{k}(\G_{1})\) to be the linear operator given by
-      \[
-        (f[\G_{1}\a\G_{2}]_{k})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}(f\|_{k}\b)(z).
-      \]
-      This sum is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. It remains to check that \(f[\G_{1}\a\G_{2}]_{k}\) is well-defined which amounts to showing that the sum is independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b'\b^{-1} \in \G_{1}\). Modularity then implies
-      \[
-        (f\|_{k}\b')(z) = ((f\|_{k}\b'\b^{-1})\|_{k}\b)(z) = (f\|_{k}\b)(z),
-      \]
-      which proves that the \([\G_{1}\a\G_{2}]_{k}\) operator is well-defined. In fact, it also preserves modular forms:
-
-      \begin{proposition}\label{prop:double_coset_operator_preserves_subspaces_modular}
-        For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\), \([\G_{1}\a\G_{2}]_{k}\) maps \(\mc{S}_{k}(\G_{1})\) into \(\mc{S}_{k}(\G_{2})\).
-      \end{proposition}
-      \begin{proof}
-        Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]_{k}\) is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. For modularity, let \(\g \in \G_{2}\). Because \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). So each \(\b\g \) is of the form \(\b\g = \g_{\b'}\b'\) for some unique \(\g_{\b'} \in \G_{1}\) and representative \(\b'\) of \(\G_{1}\backslash\G_{1}\a\G_{2}\). In particular, \(\det(\b)  = \det(\b')\). Using these facts, we compute
-        \begin{align*}
-          (f[\G_{1}\a\G_{2}]_{k}|_{k}\g)(z) &= \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\g)(z) && \text{\cref{equ:relationship_between_slash_operators}} \\
-          &= \sum_{\b' \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b')^{\frac{k}{2}-1}(f|_{k}\g_{\b'}\b')(z) \\
-          &= \sum_{\b' \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b')^{\frac{k}{2}-1}(f|_{k}\b')(z) && \text{modularity} \\
-          &= \sum_{\b' \in \G_{1}\backslash\G_{1}\a\G_{2}}(f\|_{k}\b')(z) \\
-          &= (f[\G_{1}\a\G_{2}]_{k})(z)
-        \end{align*}
-        This proves modularity of \(f[\G_{1}\a\G_{2}]_{k}\). For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), \(\b\s_{\mf{a}}\) takes \(\infty\) to an element of \(\what{\Q}\) since \(\b \in \GL_{2}^{+}(\Q)\). In other words, \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then \cref{equ:relationship_between_slash_operators} give
-        \[
-          ((f[\G_{1}\a\G_{2}]_{k})|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
-        \]
-        and so the growth condition follows from that of \(f\). In particular, \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form since \(f\) is.
-      \end{proof}
-
-      The double coset operators are the most basic types of operators on modular forms. They are the building blocks needed to define the more important diamond and Hecke operators.
-    \subsection{\todo{Diamond and Hecke Operators}}
+    \iffalse\subsection{\todo{Diamond and Hecke Operators}}
       The diamond and Hecke operators are special linear operators that are used to construct a linear theory of modular forms. They will also help us understand the Fourier coefficients. Throughout this discussion, we will obtain corresponding results for modular forms with nontrivial characters. We will discuss the diamond operator first. To define them, we need to consider both the congruence subgroups \(\G_{1}(N)\) and \(\G_{0}(N)\). Recall that \(\G_{1}(N) \subseteq \G_{0}(N)\) and consider the map
       \[
         \G_{0}(N) \to (\Z/N\Z)^{\ast} \qquad \begin{pmatrix} a & b \\ c & d\end{pmatrix} \mapsto d \tmod{N},
