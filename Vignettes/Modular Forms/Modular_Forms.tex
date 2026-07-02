@@ -900,7 +900,7 @@
       \[
         \<f,g\>_{\G} = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
       \]
-      If the congruence subgroup \(\G\) is clear from context we will suppress the dependence. The integral is well-defined because the integrand is \(\G\)-invariant. Moreover, as \(f\) and \(g\) have exponential decay at the cusps, the integral is also locally absolutely uniformly convergent. We also extend the Petersson inner product to any complex functions \(f\) and \(g\) on \(\H\) provided the integrand is \(\G\)-invariant and the integral is locally absolutely uniformly convergent.
+      If the congruence subgroup \(\G\) is clear from context we will suppress the dependence upon it. The integral is well-defined because the integrand is \(\G\)-invariant. Moreover, as \(f\) and \(g\) have exponential decay at the cusps, the integral is also locally absolutely uniformly convergent. We also extend the Petersson inner product to any complex functions \(f\) and \(g\) on \(\H\) provided the integrand is \(\G\)-invariant and the integral is locally absolutely uniformly convergent.
 
       The Petersson inner product makes \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space. Indeed, it is clearly linear on \(\mc{S}_{k}(\G,\nu)\). It is also positive definite since
       \[
@@ -1346,7 +1346,7 @@
         is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
     \subsection{\todo{Diamond and Hecke Operators}}
-      The diamond and Hecke operators are special cases of double coset operators which will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. We will discuss the diamond operators first and the Hecke operators second. 
+      The diamond and Hecke operators are special cases of double coset operators which will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. Actually, these operators will be defined for modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. However, it turns out that such modular forms arise from those on \(\G_{0}(N)\backslash\H\) with character via the diamond operators. So we will discuss the diamond operators first and the Hecke operators second. 
       
       To define the diamond operators, we need to consider the congruence subgroups \(\G_{1}(N)\) and \(\G_{0}(N)\). Recall that \(\G_{1}(N) \subseteq \G_{0}(N)\) and consider the surjective homomorphism
       \[
@@ -1395,20 +1395,23 @@
         Since \((\Z/N\Z)^{\ast}\) is a finite abelian group, every complex representation is completely reducible and every irreducible representation is one-dimensional. Since the characters of \((\Z/N\Z)^{\ast}\) are the Dirichlet characters modulo \(N\), the decomposition as a direct sum follows. Moreover, it preserves the subspace of cusp forms since \(\Phi\) restricts to a representation of \((\Z/N\Z)^{\ast}\) over \(\mc{S}_{k}(\G_{1}(N))\).
       \end{proof}
       
-      \iffalse This result shows that the diamond operators sieve modular forms on \(\G_{1}(N)\backslash\H\) with trivial character in terms of modular forms on \(\G_{0}(N)\backslash\H\) with nontrivial characters. In particular, we have \(\mc{M}_{k}(N,\chi) = \mc{M}_{k}(\G_{0}(N),\chi)\) and \(\mc{S}_{k}(N,\chi) = \mc{S}_{k}(\G_{0}(N),\chi)\).
-      
-      In light of \cref{rem:odd_weight_modular_forms}, note that \(\mc{S}_{k}(N,\chi)\) is necessarily empty if \(k\) is odd and \(\chi(-1) \neq -1\). So in the case of odd \(k\), the decomposition in \cref{thm:diamond_operator_decomposition_modular} restricts to that of odd characters. Now it is time to define the Hecke operators. For a prime \(p\), we define the \(p\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{p}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by
+      As every matrix in \(\g \in \G_{0}(N)\) is of the form \(\g \equiv \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix}\) for some \(d\) modulo \(N\) with \((d,N) = 1\), this result shows that the diamond operators sieve modular forms on \(\G_{1}(N)\backslash\H\) with trivial character in terms of modular forms on \(\G_{0}(N)\backslash\H\) with nontrivial characters. In particular, we have
       \[
-        (T_{p}f)(z) = \left(\left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k}f\right)(z).
+        \mc{M}_{k}(N,\chi) = \mc{M}_{k}(\G_{0}(N),\chi) \quad \text{and} \quad \mc{S}_{k}(N,\chi) = \mc{S}_{k}(\G_{0}(N),\chi).
       \]
-      We will start discussing properties of the diamond and Hecke operators, but first we prove an important lemma classifying the double coset \(\G_{1}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\G_{1}(N)\):
 
+      We are now ready to discuss the Hecke operators. For a positive integer \(m\), we define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by
+      \[
+        (T_{m}f)(z) = \left(\left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{1}(N)\right]_{k}f\right)(z).
+      \]
+      In order to compute the action of the Hecke operators explicitly, we will need to classify the matrices belonging to the double coset \(\G_{1}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix}\G_{1}(N)\).
       \begin{lemma}\label{lem:cosets_for_Hecke_operators}
-        Let \(p\) be a prime. Then
+        Let \(m\) be a positive integer. Then
         \[
-          \G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N) = \left\{\g \in \GL_{2}^{+}(\Z):\g \equiv \begin{pmatrix} 1 & \ast \\ 0 & p \end{pmatrix} \tmod{N} \text{ and } \det(\g) = p\right\}.
+          \G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N) = \left\{\g \in \GL_{2}^{+}(\Z):\g \equiv \begin{pmatrix} 1 & \ast \\ 0 & m \end{pmatrix} \tmod{N} \text{ and } \det(\g) = m\right\}.
         \]
       \end{lemma}
+      \iffalse 
       \begin{proof}
         For the forward containment, it is clear that any element of \(\G_{1}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\G_{1}(N)\) has determinant \(p\) and that
         \[
