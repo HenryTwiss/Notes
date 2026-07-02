@@ -350,7 +350,7 @@
       \begin{lemma}\label{lem:lemma_for_integral_basis_AKBL}
         Let \(\smc{O}\) be an integrally closed domain with field of fractions \(K\), \(L/K\) be a degree \(n\) separable extension, and \(\mc{O}\) be the integral closure of \(\smc{O}\) in \(L\). If \(\l_{1},\ldots,\l_{n}\) is a basis for \(L/K\) that is contained in \(\mc{O}\) then
         \[
-          d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
+          d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \l_{1}\smc{O}+\cdots+\l_{n}\smc{O}.
         \]
         In particular, \(\mc{O}\) is a finitely generated \(\smc{O}\)-module of rank at most \(n\).
       \end{lemma}
@@ -369,14 +369,14 @@
         \]
         By \cref{prop:trace_and_norm_AKBL}, the column vector on the left-hand side and the trace matrix have entries in \(\smc{O}\). Cramer's rule implies \(d_{L/K}(\l_{1},\ldots,\l_{n})\k_{i} \in \smc{O}\). As \(\b\) was arbitrary, this means
         \[
-          d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n},
+          d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \l_{1}\smc{O}+\cdots+\l_{n}\smc{O},
         \]
         proving the first statement. The second statement is immediate.
       \end{proof}
 
       In this situation, we say that \(\b_{1},\ldots,\b_{n}\) is an \textbf{integral basis}\index{integral basis} for \(\mc{O}/\smc{O}\) if
       \[
-        \mc{O} = \smc{O}\b_{1}+\cdots+\smc{O}\b_{n}.
+        \mc{O} = \b_{1}\smc{O}+\cdots+\b_{n}\smc{O}.
       \]
       Equivalently, \(\mc{O}\) is a free \(\smc{O}\)-module of rank \(n\). An integral basis is necessarily a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. However, an integral basis need not always exist. For if \(\l_{1},\ldots,\l_{n}\) is a basis of \(L/K\), \cref{prop:field_of_fractions_AKBL} implies that we can multiply by a nonzero element of \(\smc{O}\) to ensure that this basis is contained in \(\mc{O}\). However, \(\l_{1},\ldots,\l_{n}\) need not also be a basis of \(\mc{O}/\smc{O}\). Nevertheless, if \(\smc{O}\) is a principal ideal domain then we can ensure the existence of an integral basis.
       
@@ -386,13 +386,13 @@
       \begin{proof}
         Let \(\l_{1},\ldots,\l_{n}\) be a basis for \(L/K\) contained in \(\mc{O}\). Then \cref{lem:lemma_for_integral_basis_AKBL} implies
         \[
-          d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
+          d_{L/K}(\l_{1},\ldots,\l_{n})\mc{O} \subseteq \l_{1}\smc{O}+\cdots+\l_{n}\smc{O}.
         \]
         It follows from the structure theorem for finitely generated modules over principal ideal domains that \(\mc{O}\) is also a free \(\smc{O}\)-module of rank at most \(n\). But any basis for \(\mc{O}/\smc{O}\) must also be a basis for \(L/K\) by \cref{prop:field_of_fractions_AKBL}. Hence the rank is exactly \(n\) and \(\mc{O}\) admits an integral basis over \(\smc{O}\) which proves the first statement.
         
         Now let \(M\) is a finitely generated nonzero \(\mc{O}\)-submodule of \(L\) with generators \(\w_{1},\ldots,\w_{r}\). By \cref{prop:field_of_fractions_AKBL}, there exists a nonzero \(\a \in \smc{O}\) such that \(\a\w_{i} \in \mc{O}\). Whence \(\a M \subseteq \mc{O}\). But then from our previous work, we have
         \[
-          \a d_{L/K}(\l_{1},\ldots,\l_{n})M \subseteq \smc{O}\l_{1}+\cdots+\smc{O}\l_{n}.
+          \a d_{L/K}(\l_{1},\ldots,\l_{n})M \subseteq \l_{1}\smc{O}+\cdots+\l_{n}\smc{O}.
         \]
         By the structure theorem for finitely generated modules over principal ideal domains again, \(M\) is a free \(\smc{O}\)-module of rank at most \(n\). To see that the rank is at least \(n\), let \(\l \in M\) be nonzero. Then \(\l\l_{1},\ldots,\l\l_{n}\) is a basis for \(L/K\) contained in \(M\). Thus the rank of \(M\) is at least \(n\), and in particular it must be \(n\). This proves the second statement.
       \end{proof}

@@ -1399,65 +1399,81 @@
       \[
         \mc{M}_{k}(N,\chi) = \mc{M}_{k}(\G_{0}(N),\chi) \quad \text{and} \quad \mc{S}_{k}(N,\chi) = \mc{S}_{k}(\G_{0}(N),\chi).
       \]
-
       We are now ready to discuss the Hecke operators. For a positive integer \(m\), we define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by
+      \iffalse 
       \[
-        (T_{m}f)(z) = \left(\left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{1}(N)\right]_{k}f\right)(z).
+        (T_{m}f)(z) = \sum_{\substack{d_{1}d_{2} = m \\ d_{1} \mid d_{2}}}\left(\left[\G_{1}(N)\begin{pmatrix} d_{1} & 0 \\ 0 & d_{2} \end{pmatrix}\G_{1}(N)\right]_{k}f\right)(z).
       \]
       In order to compute the action of the Hecke operators explicitly, we will need to classify the matrices belonging to the double coset \(\G_{1}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix}\G_{1}(N)\).
       \begin{lemma}\label{lem:cosets_for_Hecke_operators}
         Let \(m\) be a positive integer. Then
         \[
-          \G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N) = \left\{\g \in \GL_{2}^{+}(\Z):\g \equiv \begin{pmatrix} 1 & \ast \\ 0 & m \end{pmatrix} \tmod{N} \text{ and } \det(\g) = m\right\}.
+          \G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{1}(N) = \left\{\a \in \GL_{2}^{+}(\Z):\a \equiv \begin{pmatrix} 1 & \ast \\ 0 & m \end{pmatrix} \tmod{N} \text{ and } \det(\a) = m\right\}.
         \]
       \end{lemma}
-      \iffalse 
       \begin{proof}
-        For the forward containment, it is clear that any element of \(\G_{1}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\G_{1}(N)\) has determinant \(p\) and that
+        For the forward containment, a short computation shows
         \[
-          \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \equiv \begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix} \tmod{N},
+          \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \equiv \begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix} \tmod{N}.
         \]
-        so the forward containment holds. For the reverse containment, let \(L\) be the set of \(2 \x 1\) column vectors with entries in \(\Z\), in particular \(L \cong \Z^{2}\), and set
+        Moreover, any element of \(\G_{1}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix}\G_{1}(N)\) clearly has determinant \(m\). So the forward containment holds. For the reverse containment, let
         \[
-          L_{0} = \left\{\begin{pmatrix} x \\ y \end{pmatrix} \in L:y \equiv 0 \tmod{N} \right\}.
+          L = \begin{pmatrix} 1 \\ 0 \end{pmatrix}\Z+\begin{pmatrix} 0 \\ 1 \end{pmatrix}\Z,
         \]
-        Then \(\GL_{2}^{+}(\Z)\) acts on \(L_{0}\) on the left by matrix multiplication. Now suppose \(\g \in \GL_{2}^{+}(\Z)\) is such that \(\g \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & p \end{psmallmatrix} \tmod{N}\) and \(\det(\g) = p\). Clearly \(L_{0}\) has index \(N\) in \(L\). As the action of \(\g\) on \(L_{0}\) multiplies the lower entry by \(p\), \(\g L_{0}\) has index \(p\) in \(L_{0}\). These two facts together imply
+        and set
         \[
-          [L:\g L_{0}] = [L:L_{0}][L_{0};\g L_{0}] = Np.
+          L_{0} = \left\{\begin{pmatrix} a \\ b \end{pmatrix} \in L:b \equiv 0 \tmod{N} \right\}.
         \]
-        As \(\g L_{0}\) is a finitely generated abelian group (\(L\) is a rank \(2\) free module over \(\Z\) and \(\g L_{0}\) is a subgroup), the structure theorem for finitely generated abelian groups implies that there exists a basis \(u,v\) of \(L\) with \(\det(u,v) = 1\), so \(L = u\Z \oplus v\Z\), and positive integers \(m\) and \(n\) with \(m \mid n\), \(mn = Np\), and such that \(\g L_{0} = mu\Z \oplus nv\Z\). Moreover, as \(m \mid n\) any element of \(\g L_{0}\) is zero modulo \(m\). Now \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in L_{0}\) and by our choice of \(\g\), we have \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in \g L_{0}\) as well. Thus \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \equiv \begin{psmallmatrix} 0 \\ 0 \end{psmallmatrix} \tmod{m}\). This forces \(m = 1\) and \(n = Np\) so that \(\g L_{0} = u\Z \oplus Npv\Z\). As there are unique subgroups of index \(N\) and \(p\) between \(\Z\) and \(Np\Z\), namely \(N\Z\) and \(p\Z\) respectively, we have
+        Then \(\GL_{2}^{+}(\Z)\) acts on \(L_{0}\) by left multiplication. Now suppose \(\a \in \GL_{2}^{+}(\Z)\) is such that \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & m \end{psmallmatrix} \tmod{N}\) and \(\det(\a) = m\). Clearly \(L_{0}\) has index \(N\) in \(L\). As the action of \(\a\) on \(L_{0}\) multiplies the lower entry by \(m\), \(\a L_{0}\) has index \(m\) in \(L_{0}\). Whence \(\a L_{0}\) has index \(Nm\) in \(L\). The structure theorem for finitely generated abelian groups now implies the existence of a basis \(u,v\) of \(L\) with \(\det(u,v) = 1\) and positive integers \(k\) and \(\ell\) with \(k \mid \ell\) and \(k\ell = Nm\) such that
         \[
-          L_{0} = u\Z \oplus Nv\Z, \quad \g L = u\Z \oplus pv\Z, \quad \text{and} \quad \g L_{0} = u\Z \oplus Npv\Z.
+          \a L_{0} = ku\Z+\ell v\Z.
         \]
-        Now let \(\g_{1} = (u,v)\). Since \(u \in L_{0}\), we have that \(\g_{1} \in \G_{0}(N)\). Now set \(\g_{2} = \left(\g_{1}\begin{psmallmatrix} 1 & 0 \\ 0 & p\end{psmallmatrix}\right)^{-1}\g\). Then \(\g \in \GL_{2}^{+}(\Q)\) with \(\det(\g_{2}) = 1\). It follows that
+        Moreover, any element of \(\a L_{0}\) is zero modulo \(k\) since \(k \mid \ell\) . Now \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in L_{0}\) and by our choice of \(\a\), we have \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in \a L_{0}\) as well. Thus \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \equiv \begin{psmallmatrix} 0 \\ 0 \end{psmallmatrix} \tmod{k}\) forcing \(k = 1\) so that \(\ell = Nm\) and
         \[
-          \g = \g_{1}\begin{pmatrix} 1 & 0 \\ 0 & p\end{pmatrix}\g_{2}.
+          \a L_{0} = u\Z+Nmv\Z.
         \]
-        Let \(e_{1}\) and \(e_{2}\) be the standard basis vectors of \(L\). Then \(\g e_{1} \in \g L_{0}\) implies that \(\g e_{1} = au+pcv\) with \(a,c \in \Z\) and \(N \mid c\). Similarly, \(\g e_{2} \in \g L\) implies that \(\g e_{2} = bu+pdv\) with \(b,d \in \Z\). Letting \(u = \begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix}\) and \(v = \begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\), these facts together imply that \(\g_{2} = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix}\) and the above identity can be written in the form
+        As there are unique subgroups of index \(N\) and \(m\) between \(\Z\) and \(Nm\Z\), namely \(N\Z\) and \(m\Z\) respectively, we have
         \[
-          \g = \begin{pmatrix} au_{1}+pcv_{1} & bu_{1}+pdv_{1} \\ au_{2}+pcv_{2} & bu_{2}+pdv_{2} \end{pmatrix} = \begin{pmatrix} u_{1} & v_{1} \\ u_{2} & v_{2}\end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & p\end{pmatrix}\begin{pmatrix} a & b \\ c & d\end{pmatrix}.
+          L_{0} = u\Z+Nv\Z \quad \text{and} \quad \a L = u\Z+mv\Z.
         \]
-        As \(\det(\g_{2}) = 1\) and \(N \mid c\), we conclude that \(\g_{2} \in \G_{0}(N)\). Hence \(\g \in \G_{0}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\G_{0}(N)\). Moreover, as \(\g_{1},\g_{2} \in \G_{0}(N)\) it follows that they belong to \(\G_{1}(N)\) if \(u_{1}\) or \(a\) is equivalent to \(1\) modulo \(N\) respectively. But as \(\g \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & p \end{psmallmatrix} \tmod{N}\) and \(N \mid c\), we have \(au_{1} \equiv 1 \tmod{N}\). Thus if \(\g_{1}\) or \(\g_{2}\) belongs to \(\G_{1}(N)\) then they both do. So to complete the reverse containment it suffices to show
+        Let \(\g_{1} = (u,v)\). Since \(u \in L_{0}\) and \(\det(u,v) = 1\), it must be that \(\g_{1} \in \G_{0}(N)\). Now set \(\g_{2} = \left(\g_{1}\begin{psmallmatrix} 1 & 0 \\ 0 & p\end{psmallmatrix}\right)^{-1}\a\) so that \(\g_{2} \in \GL_{2}^{+}(\Q)\) with \(\det(\g_{2}) = 1\) and
         \[
-          \G_{0}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{0}(N) = \G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{0}(N).
+          \a = \g_{1}\begin{pmatrix} 1 & 0 \\ 0 & m\end{pmatrix}\g_{2}.
         \]
-        The reverse containment in this double coset equality is clear since \(\G_{1}(N) \subseteq \G_{0}(N)\). For the forward containment, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\). Then we need to show that there exists a matrix \(\d \in \G_{1}(N)\) such that
+        We claim \(\g_{2} \in \G_{0}(N)\). To see this, let \(e_{1} = \begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix}\) and \(e_{2} = \begin{psmallmatrix} 0 \\ 1 \end{psmallmatrix}\). As \(\a e_{1} \in \a L_{0}\), write \(\a e_{1} = au+mcv\) for integers \(a\) and \(c\) with \(c \equiv 0 \tmod{N}\). As \(\a e_{2} \in \a L\), write \(\a e_{2} = bu+mdv\) for integers \(b\) and \(d\). Letting \(u = \begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix}\) and \(v = \begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\), we may then write
         \[
-          \g\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{0}(N) = \d\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{0}(N).
+          \a = \begin{pmatrix} au_{1}+mcv_{1} & bu_{1}+mdv_{1} \\ au_{2}+mcv_{2} & bu_{2}+mdv_{2} \end{pmatrix}.
         \]
-        Equivalently, there exists a matrix \(\d' \in \G_{1}(N)\) (that is the inverse of \(\d\)) such that
+        which can also be expressed as
         \[
-          \begin{pmatrix} 1 & 0 \\ 0 & p^{-1} \end{pmatrix}\d'\g\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix} \in \G_{0}(N).
+          \a =  \begin{pmatrix} u_{1} & v_{1} \\ u_{2} & v_{2}\end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & m\end{pmatrix}\begin{pmatrix} a & b \\ c & d\end{pmatrix}.
         \]
-        If \(p \mid N\), taking \(\d' = \begin{psmallmatrix} cd+1 & -1 \\ -cd & 1 \end{psmallmatrix} \in \G_{1}(N)\) gives
+        Whence \(\g_{2} = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix}\). 
+        As \(\det(\g_{2}) = 1\) and \(c \equiv 0 \tmod{N}\), we conclude \(\g_{2} \in \G_{0}(N)\). Whence \(\a \in \G_{0}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix}\G_{0}(N)\). As \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & m \end{psmallmatrix} \tmod{N}\), these computations also show \(\g_{1},\g_{2} \in \G_{1}(N)\) if at least one of them is for any \(\g_{1}\g_{2} \in \G_{0}(N)\) satisfying \(\a = \g_{1}\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix}\g_{2}\). So to complete the reverse containment, it suffice to show
         \[
-          \begin{pmatrix} 1 & 0 \\ 0 & p^{-1} \end{pmatrix}\d'\g\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & p^{-1} \end{pmatrix}\begin{pmatrix} cd+1 & -1 \\ -cd & 1 \end{pmatrix}\begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix} = \begin{pmatrix} \ast & \ast \\ p^{-1}c(1-ad) & \ast \end{pmatrix},
+          \G_{0}(N)\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{0}(N) = \G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{0}(N).
         \]
-        which belongs to \(\G_{0}(N)\) because \(p \mid N\), \(N \mid c\), and \(N \mid 1-ad\) (as \(ad-bc = 1\)). If \(p \nmid N\) then the Chinese remainder theorem implies that there exists a \(d' \in \Z\) with \(d' \equiv 1 \tmod{N}\) and \(d' \equiv -a \tmod{p}\). Necessarily \((c,d') = 1\) because \(N \mid c\). Thus there exists \(\d'\) of the form \(\d' = \begin{psmallmatrix} a' & b' \\ c & d' \end{psmallmatrix} \in \G_{1}(N)\), and we have
+        The reverse containment in this double coset equality is clear since \(\G_{1}(N) \subseteq \G_{0}(N)\). For the forward containment, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\). Then we need to show that there exists a matrix \(\eta \in \G_{1}(N)\) such that
         \[
-          \begin{pmatrix} 1 & 0 \\ 0 & p^{-1} \end{pmatrix}\d'\g\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & p^{-1} \end{pmatrix}\begin{pmatrix} a' & b' \\ c & d' \end{pmatrix}\begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix} = \begin{pmatrix} \ast & \ast \\ p^{-1}c(a+d') & \ast \end{pmatrix},
+          \g\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{0}(N) = \eta\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{0}(N).
         \]
-        which again belongs to \(\G_{0}(N)\) because \(p \mid d'+a\) and \(N \mid c\). This prove the forward containment, and hence the original reverse containment, thus completing the proof.
+        Equivalently, \(\begin{psmallmatrix} 1 & 0 \\ 0 & \frac{1}{m} \end{psmallmatrix}\g^{-1}\eta\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix} \in \G_{0}(N)\). Our choice of \(\eta\) will depend on if \(m \mid N\) or not. If \(m \mid N\), take \(\eta = \begin{psmallmatrix} 1 & 1 \\ cd & cd+1 \end{psmallmatrix} \in \G_{1}(N)\) so that a short computation gives
+        \[
+          \begin{pmatrix} 1 & 0 \\ 0 & \frac{1}{m} \end{pmatrix}\g^{-1}\eta\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix} = \begin{pmatrix} \ast & \ast \\ \frac{bc^{2}}{m}& \ast \end{pmatrix},
+        \]
+        which belongs to \(\G_{0}(N)\) because \(c \equiv 0 \tmod{N}\) and the determinant is clearly \(1\). 
+        
+        
+        
+        Now suppose \(m \nmid N\). By the Chinese remainder theorem, there exists an integer \(d'\) such that
+        \[
+          d' \equiv 1 \tmod{N}, \quad d' \equiv -a \tmod{m} \quad \text{and} \quad d' \equiv 1 \tmod{p},
+        \]
+        for every prime \(p\) with \(p \mid c\) and \(p \nmid m\). This also forces \((c,d') = 1\). B\'ezout's identity then provides the existence of integers \(a'\) and \(b'\) such that \(a'd'-b'c = 1\). Taking \(\eta = \begin{psmallmatrix} a' & b' \\ c & d' \end{psmallmatrix} \in \G_{1}(N)\), a short computation gives
+        \[
+          \begin{pmatrix} 1 & 0 \\ 0 & \frac{1}{m} \end{pmatrix}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}\begin{pmatrix} d' & -b' \\ -c & a' \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix} = \begin{pmatrix} \ast & \ast \\ -\frac{c(a+d')}{m} & \ast \end{pmatrix},
+        \]
+        which again belongs to \(\G_{0}(N)\) because \(m \mid a+d'\) and \(c \equiv 0 \tmod{N}\). This prove the forward containment, and hence the original reverse containment, thus completing the proof.
       \end{proof}
       
       With \cref{lem:cosets_for_Hecke_operators}, it is not too hard to see that the diamond and Hecke operators commute:
