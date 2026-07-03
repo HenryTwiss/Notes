@@ -1401,82 +1401,26 @@
       \]
       We are now ready to discuss the Hecke operators. For a positive integer \(m\), we define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by 
       \[
-        (T_{m}f)(z) = \sum_{\substack{ad = m \\ a \mid d}}\<a\>\left[\G_{1}(N)\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
+        (T_{m}f)(z) = \sum_{\substack{ad = m}}\<a\>\left[\G_{1}(N)\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
       \]
       Notice that this sum restricts to those \(a\) with \((a,N) = 1\) for otherwise the diamond operator is zero on that term. So, in order to compute the action of the Hecke operators explicitly, we need to find a complete set of representatives for the action of the double coset operator \([\G_{1}(N)\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\G_{1}(N)]_{k}\) when \((a,N) = 1\).
 
       \begin{lemma}\label{lem:cosets_for_Hecke_operators}
-        Let \(m\) be a positive integer and fix positive integers \(a\) and \(d\) such that \(ad = m\), \(a \mid d\), and \((a,N) = 1\). Then we have a disjoint union
+        Let \(a\) and \(d\) be positive integers such that \((a,N) = 1\). Then we have a disjoint union
         \[
           \G_{1}(N)\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N) = \bigcup_{b \tmod{d}}\G_{1}(N)\begin{pmatrix} a & b \\ 0 & d \end{pmatrix}.
         \]
       \end{lemma}
-      \iffalse
       \begin{proof}
-        For the forward containment, a short computation shows
-        \[
-          \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \equiv \begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix} \tmod{N}.
-        \]
-        Moreover, any element of \(\G_{1}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix}\G_{1}(N)\) clearly has determinant \(m\). So the forward containment holds. For the reverse containment, let
-        \[
-          L = \begin{pmatrix} 1 \\ 0 \end{pmatrix}\Z+\begin{pmatrix} 0 \\ 1 \end{pmatrix}\Z,
-        \]
-        and set
-        \[
-          L_{0} = \left\{\begin{pmatrix} a \\ b \end{pmatrix} \in L:b \equiv 0 \tmod{N} \right\}.
-        \]
-        Then \(\GL_{2}^{+}(\Z)\) acts on \(L_{0}\) by left multiplication. Now suppose \(\a \in \GL_{2}^{+}(\Z)\) is such that \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & m \end{psmallmatrix} \tmod{N}\) and \(\det(\a) = m\). Clearly \(L_{0}\) has index \(N\) in \(L\). As the action of \(\a\) on \(L_{0}\) multiplies the lower entry by \(m\), \(\a L_{0}\) has index \(m\) in \(L_{0}\). Whence \(\a L_{0}\) has index \(Nm\) in \(L\). The structure theorem for finitely generated abelian groups now implies the existence of a basis \(u,v\) of \(L\) with \(\det(u,v) = 1\) and positive integers \(k\) and \(\ell\) with \(k \mid \ell\) and \(k\ell = Nm\) such that
-        \[
-          \a L_{0} = ku\Z+\ell v\Z.
-        \]
-        Moreover, any element of \(\a L_{0}\) is zero modulo \(k\) since \(k \mid \ell\) . Now \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in L_{0}\) and by our choice of \(\a\), we have \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in \a L_{0}\) as well. Thus \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \equiv \begin{psmallmatrix} 0 \\ 0 \end{psmallmatrix} \tmod{k}\) forcing \(k = 1\) so that \(\ell = Nm\) and
-        \[
-          \a L_{0} = u\Z+Nmv\Z.
-        \]
-        As there are unique subgroups of index \(N\) and \(m\) between \(\Z\) and \(Nm\Z\), namely \(N\Z\) and \(m\Z\) respectively, we have
-        \[
-          L_{0} = u\Z+Nv\Z \quad \text{and} \quad \a L = u\Z+mv\Z.
-        \]
-        Let \(\g_{1} = (u,v)\). Since \(u \in L_{0}\) and \(\det(u,v) = 1\), it must be that \(\g_{1} \in \G_{0}(N)\). Now set \(\g_{2} = \left(\g_{1}\begin{psmallmatrix} 1 & 0 \\ 0 & p\end{psmallmatrix}\right)^{-1}\a\) so that \(\g_{2} \in \GL_{2}^{+}(\Q)\) with \(\det(\g_{2}) = 1\) and
-        \[
-          \a = \g_{1}\begin{pmatrix} 1 & 0 \\ 0 & m\end{pmatrix}\g_{2}.
-        \]
-        We claim \(\g_{2} \in \G_{0}(N)\). To see this, let \(e_{1} = \begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix}\) and \(e_{2} = \begin{psmallmatrix} 0 \\ 1 \end{psmallmatrix}\). As \(\a e_{1} \in \a L_{0}\), write \(\a e_{1} = au+mcv\) for integers \(a\) and \(c\) with \(c \equiv 0 \tmod{N}\). As \(\a e_{2} \in \a L\), write \(\a e_{2} = bu+mdv\) for integers \(b\) and \(d\). Letting \(u = \begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix}\) and \(v = \begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\), we may then write
-        \[
-          \a = \begin{pmatrix} au_{1}+mcv_{1} & bu_{1}+mdv_{1} \\ au_{2}+mcv_{2} & bu_{2}+mdv_{2} \end{pmatrix}.
-        \]
-        which can also be expressed as
-        \[
-          \a =  \begin{pmatrix} u_{1} & v_{1} \\ u_{2} & v_{2}\end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & m\end{pmatrix}\begin{pmatrix} a & b \\ c & d\end{pmatrix}.
-        \]
-        Whence \(\g_{2} = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix}\). 
-        As \(\det(\g_{2}) = 1\) and \(c \equiv 0 \tmod{N}\), we conclude \(\g_{2} \in \G_{0}(N)\). Whence \(\a \in \G_{0}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix}\G_{0}(N)\). As \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & m \end{psmallmatrix} \tmod{N}\), these computations also show \(\g_{1},\g_{2} \in \G_{1}(N)\) if at least one of them is for any \(\g_{1}\g_{2} \in \G_{0}(N)\) satisfying \(\a = \g_{1}\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix}\g_{2}\). So to complete the reverse containment, it suffice to show
-        \[
-          \G_{0}(N)\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{0}(N) = \G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{0}(N).
-        \]
-        The reverse containment in this double coset equality is clear since \(\G_{1}(N) \subseteq \G_{0}(N)\). For the forward containment, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\). Then we need to show that there exists a matrix \(\eta \in \G_{1}(N)\) such that
-        \[
-          \g\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{0}(N) = \eta\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix}\G_{0}(N).
-        \]
-        Equivalently, \(\begin{psmallmatrix} 1 & 0 \\ 0 & \frac{1}{m} \end{psmallmatrix}\g^{-1}\eta\begin{psmallmatrix} 1 & 0 \\ 0 & m \end{psmallmatrix} \in \G_{0}(N)\). Our choice of \(\eta\) will depend on if \(m \mid N\) or not. If \(m \mid N\), take \(\eta = \begin{psmallmatrix} 1 & 1 \\ cd & cd+1 \end{psmallmatrix} \in \G_{1}(N)\) so that a short computation gives
-        \[
-          \begin{pmatrix} 1 & 0 \\ 0 & \frac{1}{m} \end{pmatrix}\g^{-1}\eta\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix} = \begin{pmatrix} \ast & \ast \\ \frac{bc^{2}}{m}& \ast \end{pmatrix},
-        \]
-        which belongs to \(\G_{0}(N)\) because \(c \equiv 0 \tmod{N}\) and the determinant is clearly \(1\). 
-        
-        
-        
-        Now suppose \(m \nmid N\). By the Chinese remainder theorem, there exists an integer \(d'\) such that
-        \[
-          d' \equiv 1 \tmod{N}, \quad d' \equiv -a \tmod{m} \quad \text{and} \quad d' \equiv 1 \tmod{p},
-        \]
-        for every prime \(p\) with \(p \mid c\) and \(p \nmid m\). This also forces \((c,d') = 1\). B\'ezout's identity then provides the existence of integers \(a'\) and \(b'\) such that \(a'd'-b'c = 1\). Taking \(\eta = \begin{psmallmatrix} a' & b' \\ c & d' \end{psmallmatrix} \in \G_{1}(N)\), a short computation gives
-        \[
-          \begin{pmatrix} 1 & 0 \\ 0 & \frac{1}{m} \end{pmatrix}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}\begin{pmatrix} d' & -b' \\ -c & a' \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & m \end{pmatrix} = \begin{pmatrix} \ast & \ast \\ -\frac{c(a+d')}{m} & \ast \end{pmatrix},
-        \]
-        which again belongs to \(\G_{0}(N)\) because \(m \mid a+d'\) and \(c \equiv 0 \tmod{N}\). This prove the forward containment, and hence the original reverse containment, thus completing the proof.
+        \todo{xxx}
       \end{proof}
+
+      With this lemma, the Hecke operators may be expressed in the form
+      \[
+        (T_{m}f)(z) = m^{k-1}\sum_{\substack{ad = m}}\frac{1}{d^{k}}\sum_{b \tmod{d}}\<a\>f\left(\frac{az+b}{d}\right).
+      \]
       
+      \iffalse
       With \cref{lem:cosets_for_Hecke_operators}, it is not too hard to see that the diamond and Hecke operators commute:
 
       \begin{proposition}\label{prop:diamond_Hecke_operators_commute_modular}
