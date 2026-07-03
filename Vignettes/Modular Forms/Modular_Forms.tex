@@ -1401,7 +1401,7 @@
       \]
       We are now ready to discuss the Hecke operators. For a positive integer \(m\), we define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by 
       \[
-        (T_{m}f)(z) = \sum_{\substack{ad = m}}\<a\>\left[\G_{1}(N)\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
+        (T_{m}f)(z) = \sum_{\substack{ad = m \\ a,d \ge 1}}\<a\>\left[\G_{1}(N)\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
       \]
       Notice that this sum restricts to those \(a\) with \((a,N) = 1\) for otherwise the diamond operator is zero on that term. So, in order to compute the action of the Hecke operators explicitly, we need to find a complete set of representatives for the action of the double coset operator \([\G_{1}(N)\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\G_{1}(N)]_{k}\) when \((a,N) = 1\).
 
@@ -1417,7 +1417,7 @@
 
       With this lemma, the Hecke operators may be expressed in the form
       \[
-        (T_{m}f)(z) = m^{k-1}\sum_{\substack{ad = m}}\frac{1}{d^{k}}\sum_{b \tmod{d}}\<a\>f\left(\frac{az+b}{d}\right).
+        (T_{m}f)(z) = m^{k-1}\sum_{\substack{ad = m \\ a,d \ge 1}}\frac{1}{d^{k}}\sum_{b \tmod{d}}\<a\>f\left(\frac{az+b}{d}\right).
       \]
       
       \iffalse
