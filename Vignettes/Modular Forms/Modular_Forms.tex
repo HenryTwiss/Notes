@@ -972,25 +972,25 @@
       \]
       for all \(\g \in \G\). The reason for introducing the double slash operator is that it will be easier to work with when discussing Fourier coefficients of modular forms.
       
-      Now for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\), we define the \textbf{double coset operator}\index{double coset operator} \([\G_{1}\a\G_{2}]\) to be the linear operator on \(\mc{M}_{k}(\G_{1})\) given by
+      Now for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\), we define the \textbf{double coset operator}\index{double coset operator} \([\G_{1}\a\G_{2}]_{k}\) to be the linear operator on \(\mc{M}_{k}(\G_{1})\) given by
       \[
-        (f[\G_{1}\a\G_{2}])(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}(f\|_{k}\b)(z).
+        (f[\G_{1}\a\G_{2}]_{k})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}(f\|_{k}\b)(z).
       \]
-      This sum is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. It remains to check that \(f[\G_{1}\a\G_{2}]\) is well-defined which amounts to showing that the sum is independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b' = \g\b\) for some \(\g \in \G_{1}\). Modularity implies
+      This sum is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. It remains to check that \(f[\G_{1}\a\G_{2}]_{k}\) is well-defined which amounts to showing that the sum is independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b' = \g\b\) for some \(\g \in \G_{1}\). Modularity implies
       \[
         (f\|_{k}\b')(z) = (f\|_{k}\b)(z),
       \]
-      which proves that \([\G_{1}\a\G_{2}]\) is well-defined. In fact, the double coset operator takes \(\mc{M}_{k}(\G_{1})\) to \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
+      which proves that \([\G_{1}\a\G_{2}]_{k}\) is well-defined. In fact, the double coset operator takes \(\mc{M}_{k}(\G_{1})\) to \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
 
       \begin{proposition}\label{prop:double_coset_operator_preserves_subspaces_modular}
-        For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\), \([\G_{1}\a\G_{2}]\) maps \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\). It also preserves the subspaces of cusp forms.
+        For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\), \([\G_{1}\a\G_{2}]_{k}\) maps \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\). It also preserves the subspaces of cusp forms.
       \end{proposition}
       \begin{proof}
-        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]\) is finite. For modularity, let \(\g \in \G_{2}\). As \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Modularity then follows from a short computation because this permutes the choice of coset representatives. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
+        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]_{k}\) is finite. For modularity, let \(\g \in \G_{2}\). As \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Modularity then follows from a short computation because this permutes the choice of coset representatives. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
         \[
-          ((f[\G_{1}\a\G_{2}])|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
+          ((f[\G_{1}\a\G_{2}]_{k})|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
         \]
-        and so the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f[\G_{1}\a\G_{2}]\) is a cusp form if \(f\) is.
+        and so the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form if \(f\) is.
       \end{proof}
   \section{Arithmetic of Modular Forms on Hecke Congruence Subgroups}
     If \(a\) is an integer modulo \(m\) with \((a,m) = 1\) we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\). For any complex \(z\) let
@@ -1358,13 +1358,13 @@
       \]
       by the first isomorphism theorem. Now let \(d\) be a positive integer. The \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
       \[
-        (\<d\>f)(z) = \begin{cases} \left(f[\G_{1}(N)\a\G_{1}(N)]\right)(z) & \text{if \((d,N) = 1\)}, \\ 0 & \text{if \((d,N) > 1\)}, \end{cases}
+        (\<d\>f)(z) = \begin{cases} \left(f[\G_{1}(N)\a\G_{1}(N)]_{k}\right)(z) & \text{if \((d,N) = 1\)}, \\ 0 & \text{if \((d,N) > 1\)}, \end{cases}
       \]
       where in the first case we choose any \(\a \in \G_{0}(N)\) with \(\a \equiv \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix} \tmod{N}\). To prove the diamond operators are well-defined, we must show that they only depend upon \(d\) when the operator is not zero. So suppose \(\a' \in \G_{0}(N)\) with \(\a' \equiv \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix} \tmod{N}\). Then a short computation shows
       \[
         \a'\a^{-1} \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \pmod{N}.
       \]
-      So \(\a' = \g\a\) for some \(\g \in \G_{1}(N)\) and therefore \([\G_{1}(N)\a'\G_{1}(N)] = [\G_{1}(N)\a\G_{1}(N)]\) proving that the diamond operators are well-defined. Moreover, there is only orbit representative in double coset when \((d,N) = 1\). Indeed, normality of \(\G_{1}(N)\) in \(\G_{0}(N)\) implies \(\G_{1}(N)\a\G_{1}(N) = \G_{1}(N)\a\) and so
+      So \(\a' = \g\a\) for some \(\g \in \G_{1}(N)\) and therefore \([\G_{1}(N)\a'\G_{1}(N)]_{k} = [\G_{1}(N)\a\G_{1}(N)]_{k}\) proving that the diamond operators are well-defined. Moreover, there is only orbit representative in double coset when \((d,N) = 1\). Indeed, normality of \(\G_{1}(N)\) in \(\G_{0}(N)\) implies \(\G_{1}(N)\a\G_{1}(N) = \G_{1}(N)\a\) and so
       \[
         (\<d\>f)(z) = (f\|_{k}\a)(z).
       \]
@@ -1401,7 +1401,7 @@
       \]
       We are now ready to discuss the Hecke operators. For a positive integer \(m\), we define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by 
       \[
-        (T_{m}f)(z) = \sum_{\substack{ad = m \\ a \mid d}}\<a\>\left[\G_{1}(N)\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]f(z).
+        (T_{m}f)(z) = \sum_{\substack{ad = m \\ a \mid d}}\<a\>\left[\G_{1}(N)\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
       \]
       Notice that this sum restricts to those \(a\) with \((a,N) = 1\) for otherwise the diamond operator is zero on that term.
       \iffalse
@@ -1761,10 +1761,10 @@
           \]
           \item For all \(f,g \in \mc{S}_{k}(\G)\), we have
           \[
-            \<f[\G\a\G],g\> = \<f,g[\G\a'\G]\>.
+            \<f[\G\a\G]_{k},g\> = \<f,g[\G\a'\G]_{k}\>.
           \]
         \end{enumerate}
-        In particular, if \(\a^{-1}\G\a = \G\) then \(|_{k}\a^{\ast} = |_{k}\a'\), \(\|_{k}\a^{\ast} = \|_{k}\a'\), and \([\G\a\G]^{\ast} = [\G\a'\G]\).   
+        In particular, if \(\a^{-1}\G\a = \G\) then \(|_{k}\a^{\ast} = |_{k}\a'\), \(\|_{k}\a^{\ast} = \|_{k}\a'\), and \([\G\a\G]_{k}^{\ast} = [\G\a'\G]_{k}\).   
       \end{proposition}
       \begin{proof}
         To prove (i) we first compute
@@ -1786,7 +1786,7 @@
         \[
           \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{k}{2}}\conj{j(\a',z)^{-k}}f(z)\conj{g(\a'z)}\Im(z)^{k}\,d\mu = \<f,g|_{k}\a'\>_{\G},
         \]
-        which completes the proof of (i). To prove (ii), \cref{lem:adjoint_lemma} implies the coset decomposition \(\G\a\G = \bigcup_{1 \le j \le n}\G\b_{j}\), with \(n = [\G:\a^{-1}\G\a \cap \G] = [\G:\a\G\a^{-1} \cap \G]\), so that we can use the \(\b_{j}\) as representatives for the \([\G\a\G]\) operator. As the \(\b_{j}\) also satisfy \(\G\a\G = \bigcup_{1 \le j \le n}\b_{j}\G\), upon inverting \(\b_{j}\) and noting that \(\b_{j} \in \G\a\), we obtain \(\G\a^{-1}\G = \bigcup_{1 \le j \le n}\G\b_{j}^{-1}\). Since scalar multiplication commutes with matrices and the matrices in \(\G\) have determinant \(1\), we conclude that \(\G\a'\G = \bigcup_{1 \le j \le n}\G\b_{j}'\) where \(\b_{j}' = \det(\b_{j})\b_{j}^{-1}\) (also \(\det(\b_{j}) = \det(\a)\)). So we can use the \(\b_{j}'\) as representatives in the \([\G\a'\G]\) operator. The statement now follows from (i) and \cref{equ:relationship_between_slash_operators}. The last statement is obvious (again using \cref{equ:relationship_between_slash_operators}).
+        which completes the proof of (i). To prove (ii), \cref{lem:adjoint_lemma} implies the coset decomposition \(\G\a\G = \bigcup_{1 \le j \le n}\G\b_{j}\), with \(n = [\G:\a^{-1}\G\a \cap \G] = [\G:\a\G\a^{-1} \cap \G]\), so that we can use the \(\b_{j}\) as representatives for the \([\G\a\G]_{k}\) operator. As the \(\b_{j}\) also satisfy \(\G\a\G = \bigcup_{1 \le j \le n}\b_{j}\G\), upon inverting \(\b_{j}\) and noting that \(\b_{j} \in \G\a\), we obtain \(\G\a^{-1}\G = \bigcup_{1 \le j \le n}\G\b_{j}^{-1}\). Since scalar multiplication commutes with matrices and the matrices in \(\G\) have determinant \(1\), we conclude that \(\G\a'\G = \bigcup_{1 \le j \le n}\G\b_{j}'\) where \(\b_{j}' = \det(\b_{j})\b_{j}^{-1}\) (also \(\det(\b_{j}) = \det(\a)\)). So we can use the \(\b_{j}'\) as representatives in the \([\G\a'\G]_{k}\) operator. The statement now follows from (i) and \cref{equ:relationship_between_slash_operators}. The last statement is obvious (again using \cref{equ:relationship_between_slash_operators}).
       \end{proof}
 
       We can now prove that the diamond and Hecke operators are normal:
