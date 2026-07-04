@@ -269,7 +269,7 @@
       is a fundamental domain for \(\GH\) which is obtained from the standard fundamental domain using representatives of orbits of \(\G\backslash\SL_{2}(\Z)\).
 
       \begin{proposition}\label{prop:fundamental_domain_congruence_subgroup}
-        \(\mc{F}_{\G}\) is a fundamental domain for \(\G\backslash\H\).
+        \(\mc{F}_{\G}\) is a fundamental domain for \(\GH\).
       \end{proposition}
       \begin{proof}
         We first show that every point in \(\H\) is \(\G\)-equivalent to a point in \(\mc{F}_{\G}\). From the definition of \(\mc{F}_{\G}\), it is straightforward to check that
@@ -660,6 +660,99 @@
         \[
           \chi(\g) = \nu_{\chi}(\g).
         \]
+    \subsection{Poincar\'e Series and Eisenstein Series}
+      We will now introduce specific modular forms over \(\GH\). These modular forms will be constructed by averaging the slash operator over \(\G_{\mf{a}}\backslash\G\) for a cusp \(\mf{a}\) of \(\GH\) and are called Poincar\'e series and Eisenstein series where the latter is a special case of the former. 
+      
+      Fix an integer \(k \ge 3\) and a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\). Let \(m\) be a nonnegative integer, \(\nu:\G \to \C^{\ast}\) be a finite order homomorphism that is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,\nu,\mf{a}}(z)\) of \textbf{index}\index{index} \(m\) and weight \(k\) with nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp by
+      \[
+        P_{m,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+      \]
+      We call \(m\) the \textbf{index}\index{index} of \(P_{m,\nu,\mf{a}}(z)\). Also, we must assume \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
+
+      The Poincar\'e series \(P_{m,\nu,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the nebentypus, this is easily checked by direct computation using the fact that \(\nu\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(B_{\G}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}B_{\G}\s_{\mf{a}}^{-1}\). So it suffices to show 
+      \[
+        \left(e(m\,\cdot\,)\bigg|_{k}T\right)(z) = e(mz),
+      \]
+      which is obvious. Whence \(P_{m,\nu,\mf{a}}(z)\) is well-defined. To see that \(P_{m,\nu,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\infty}\) and bounding term by term gives
+      \[
+        P_{m,\nu,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+      \]
+      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,\nu,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
+      \[
+        (P_{m,\nu,\mf{a}}|_{k}\eta)(z) = \nu(\eta)P_{m,\nu,\mf{a}}(z).
+      \]
+      To verify the growth condition, we will need a technical lemma.
+
+      \begin{lemma}\label{lem:technical_Poincare_convergence_lemma}
+        Let \(a,b > 0\) and consider set
+        \[
+          S_{a,b} = \{z \in \H:|\Re(z)| \le a \text{ and } \Im(z) \ge b\}.
+        \]
+        Then there exists a \(\d \in (0,1)\) such that
+        \[
+          |nz+m| \ge \d|ni+m|,
+        \]
+        for all pairs of integers \((n,m)\) and all \(z \in S_{a,b}\).
+      \end{lemma}
+      \begin{proof}
+        If \(n = 0\) then the claim is obvious as any \(\d\) is sufficient. If \(n \neq 0\) then it is equivalent to prove
+        \[
+          \left|\frac{z+\frac{m}{n}}{i+\frac{m}{n}}\right| \ge \d.
+        \]
+        To this end, consider the function
+        \[
+          f(z,r) = \left|\frac{z+r}{i+r}\right|,
+        \]
+        for \(z \in S_{a,b}\) and real \(r\). We will prove the stronger statement \(f(z,r) \ge \d\). Clearly \(f(z,r)\) is continuous on \(S_{a,b} \x \R\) and it is also positive there since \(z-r \neq 0\). A short computation shows
+        \[
+          f(z,r)^{2} \ge \frac{|z|^{2}+r^{2}}{1+r^{2}}.
+        \]
+        Since \(\frac{r^{2}}{1+r^{2}} \to 1\) as \(r \to \pm\infty\), choose \(Y > b\) such that \(\frac{r^{2}}{1+r^{2}} \ge \frac{1}{4}\) for \(|r| > Y\). Now let
+        \[
+          S_{a,b}^{Y} = \{z \in \H:|\Re(z)| \le a \text{ and } b \le \Im(z) \le Y\},
+        \]
+        so that
+        \[
+          f(z,r) \ge \frac{1}{2},
+        \]
+        outside of \(S_{a,b}^{Y} \x [-Y,Y]\). But this latter region is compact and so \(f(z,r)\) attains a minimum \(\d' > 0\) on it. Setting \(\d = \min\left(\frac{1}{2},\d'\right)\) completes the proof.
+      \end{proof}
+
+      We can now verify the growth condition for \(P_{m,\nu,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
+      \[
+        (P_{m,\nu,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+      \]
+      Now decompose this last sum as
+      \[
+        \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}} = \sum_{d \ge 1}\frac{1}{d^{k}}+\sum_{c \ge 1}\sum_{d \ge 0}\frac{1}{|cz+d|^{k}}.
+      \]
+      Since the first sum on the right-hand side is bounded, it suffices to show that the double sum is too as \(z \to \infty\). So let \(\Im(z) \ge 1\) and \(\d\) be as in \cref{lem:technical_Poincare_convergence_lemma}. Then for any positive integer \(N\), we may write
+      \[
+        \sum_{c \ge 1}\sum_{d \ge 0}\frac{1}{|cz+d|^{k}} \le \sum_{c+d \le N}\frac{1}{|cz+d|^{k}}+\frac{1}{\d^{k}}\sum_{c+d > N}\frac{1}{|ci+d|^{k}}.
+      \]
+      As \(k \ge 3\), the second sum on the right-hand side is the tail of an absolute convergent series. Whence it tends to zero as \(N \to \infty\). As for the first sum, it is finite and each term is bounded. Together this shows that the double sum is bounded as \(z \to \infty\) verifying the growth condition. We collect this work in the following theorem:
+
+      \begin{theorem}\label{thm:Poincare_series_modular}
+        The Poincar\'e series
+        \[
+          P_{m,\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+        \]
+        is a weight \(k\) modular form with nebentypus \(\nu\) on \(\GH\).
+      \end{theorem}
+
+      In the case of index zero Poincar\'e series, we write \(E_{\nu,\mf{a}}(z) = P_{0,\nu,\mf{a}}(z)\) and call \(E_{\nu,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and nebentypus \(\nu\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
+      \[
+        E_{\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+      \]
+      Then we obtain the following theorem as a special case of the former one:
+
+      \begin{theorem}\label{thm:Eisenstein_series_modular}
+        The Eisenstein series
+        \[
+          E_{\nu,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\nu}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+        \]
+        is a weight \(k\) modular form with nebentypus \(\nu\) on \(\GH\).
+      \end{theorem}
     \subsection{The Valence Formula and Petersson Inner Product}
       Let \(\mc{M}_{k}(\G,\nu)\) denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\nu\) on \(\GH\) and write \(\mc{S}_{k}(\G,\nu)\) for the corresponding subspace of cusp forms. In either case, if \(\nu\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusions
       \[
@@ -998,105 +1091,18 @@
       e(z) = e^{2\pi iz}.
     \]
     Also, all sums and products over a quotient group will be consider to be over a complete set of representatives.
-    \subsection{Poincar\'e and Eisenstein Series}
-      We will now introduce specific modular forms over \(\G_{0}(N)\backslash\H\). These will be constructed by averaging the slash operator over \(\G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) for a cusp \(\mf{a}\) of \(\G_{0}(N)\backslash\H\). These are the Poincar\'e series and Eisenstein series where the latter is a special case of the former. As \(\G\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\).
+    \subsection{Poincar\'e Series and Eisenstein Series}
+      We will now study the Poincar\'e series and Eisenstein Series on \(\G_{0}(N)\backslash\H\). As \(\G\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\). We will also take \(\nu = \chi\) to be a Dirichlet character modulo \(N\). Then for a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\), our series take the forms
+      \[
+        P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+      \]
+      and
+      \[
+        E_{\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+      \]
+      In either case, if \(\chi\) is trivial or \(\mf{a} = \infty\) then we will suppress these dependencies accordingly. Also, recall that \(\chi\) is always regular at \(\infty\).
       
-      Fix an integer \(k \ge 3\). Let \(m\) be a nonnegative integer, \(\chi\) be a Dirichlet character modulo \(N\), and \(\mf{a}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{a}}\). Also assume \(\chi\) is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,\chi,\mf{a}}(z)\) of weight \(k\) with character \(\chi\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{a}\) cusp by
-      \[
-        P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{\chi}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
-      \]
-      We call \(m\) the \textbf{index}\index{index} of \(P_{m,\chi,\mf{a}}(z)\). If \(\chi\) is trivial or \(\mf{a} = \infty\), we will drop these dependencies accordingly. Recall that \(\chi\) is regular at \(\infty\).
-
-      \begin{remark}
-        The reason why we restrict to \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
-      \end{remark}
-
-      The Poincar\'e series \(P_{m,\chi,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the character, this is easily checked by direct computation using the fact that \(\chi\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\). So it suffices to show 
-      \[
-        \left(e(m\,\cdot\,)\bigg|_{k}T\right)(z) = e(mz),
-      \]
-      which is obvious. Whence \(P_{m,\chi,\mf{a}}(z)\) is well-defined. To see that \(P_{m,\chi,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\infty}\) and bounding term by term gives
-      \[
-        P_{m,\chi,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
-      \]
-      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,\chi,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
-      \[
-        (P_{m,\chi,\mf{a}}|_{k}\eta)(z) = \chi(\eta)P_{m,\chi,\mf{a}}(z).
-      \]
-      To verify the growth condition, we will need a technical lemma.
-
-      \begin{lemma}\label{lem:technical_Poincare_convergence_lemma}
-        Let \(a,b > 0\) and consider set
-        \[
-          S_{a,b} = \{z \in \H:|\Re(z)| \le a \text{ and } \Im(z) \ge b\}.
-        \]
-        Then there exists a \(\d \in (0,1)\) such that
-        \[
-          |nz+m| \ge \d|ni+m|,
-        \]
-        for all pairs of integers \((n,m)\) and all \(z \in S_{a,b}\).
-      \end{lemma}
-      \begin{proof}
-        If \(n = 0\) then the claim is obvious as any \(\d\) is sufficient. If \(n \neq 0\) then it is equivalent to prove
-        \[
-          \left|\frac{z+\frac{m}{n}}{i+\frac{m}{n}}\right| \ge \d.
-        \]
-        To this end, consider the function
-        \[
-          f(z,r) = \left|\frac{z+r}{i+r}\right|,
-        \]
-        for \(z \in S_{a,b}\) and real \(r\). We will prove the stronger statement \(f(z,r) \ge \d\). Clearly \(f(z,r)\) is continuous on \(S_{a,b} \x \R\) and it is also positive there since \(z-r \neq 0\). A short computation shows
-        \[
-          f(z,r)^{2} \ge \frac{|z|^{2}+r^{2}}{1+r^{2}}.
-        \]
-        Since \(\frac{r^{2}}{1+r^{2}} \to 1\) as \(r \to \pm\infty\), choose \(Y > b\) such that \(\frac{r^{2}}{1+r^{2}} \ge \frac{1}{4}\) for \(|r| > Y\). Now let
-        \[
-          S_{a,b}^{Y} = \{z \in \H:|\Re(z)| \le a \text{ and } b \le \Im(z) \le Y\},
-        \]
-        so that
-        \[
-          f(z,r) \ge \frac{1}{2},
-        \]
-        outside of \(S_{a,b}^{Y} \x [-Y,Y]\). But this latter region is compact and so \(f(z,r)\) attains a minimum \(\d' > 0\) on it. Setting \(\d = \min\left(\frac{1}{2},\d'\right)\) completes the proof.
-      \end{proof}
-
-      We can now verify the growth condition for \(P_{m,\chi,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
-      \[
-        (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
-      \]
-      Now decompose this last sum as
-      \[
-        \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}} = \sum_{d \ge 1}\frac{1}{d^{k}}+\sum_{c \ge 1}\sum_{d \ge 0}\frac{1}{|cz+d|^{k}}.
-      \]
-      Since the first sum on the right-hand side is bounded, it suffices to show that the double sum is too as \(z \to \infty\). So let \(\Im(z) \ge 1\) and \(\d\) be as in \cref{lem:technical_Poincare_convergence_lemma}. Then for any positive integer \(N\), we may write
-      \[
-        \sum_{c \ge 1}\sum_{d \ge 0}\frac{1}{|cz+d|^{k}} \le \sum_{c+d \le N}\frac{1}{|cz+d|^{k}}+\frac{1}{\d^{k}}\sum_{c+d > N}\frac{1}{|ci+d|^{k}}.
-      \]
-      As \(k \ge 3\), the second sum on the right-hand side is the tail of an absolute convergent series. Whence it tends to zero as \(N \to \infty\). As for the first sum, it is finite and each term is bounded. Together this shows that the double sum is bounded as \(z \to \infty\) verifying the growth condition. We collect this work in the following theorem:
-
-      \begin{theorem}\label{thm:Poincare_series_modular}
-        The Poincar\'e series
-        \[
-          P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{\chi}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
-        \]
-        is a weight \(k\) modular form with character \(\chi\) on \(\G_{0}(N)\backslash\H\).
-      \end{theorem}
-
-      In the case of index zero Poincar\'e series, we write \(E_{\chi,\mf{a}}(z) = P_{0,\chi,\mf{a}}(z)\) and call \(E_{\chi,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and character \(\chi\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{a}\) cusp. It is defined by
-      \[
-        E_{\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{\chi}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
-      \]
-      Just as for the Poincar\'e series, if \(\chi\) is trivial or \(\mf{a} = \infty\), we will drop these dependencies accordingly. In fact, we obtain the following theorem as a special case of the former one:
-
-      \begin{theorem}\label{thm:Eisenstein_series_modular}
-        The Eisenstein series
-        \[
-          E_{\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{\chi}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
-        \]
-        is a weight \(k\) modular form with character \(\chi\) on \(\G_{0}(N)\backslash\H\).
-      \end{theorem}
-      
-      We can also explicitly compute the Fourier series of the Poincar\'e series and Eisenstein series whose Fourier coefficients involve Sali\'e sums, or Kloosterman sums when \(\chi\) is trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. Unlike verifying that these series are modular forms, the arguments are slightly different to compute their Fourier series. We first deduce the Fourier series of the Poincar\'e series.
+      It turns out that we can explicitly compute the Fourier series of the Poincar\'e series and Eisenstein series. Their Fourier coefficients involve Kloosterman sums, or more generally Sali\'e sums when \(\chi\) is not trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. The arguments involved are only slightly different. We first deduce the Fourier series of the Poincar\'e series.
 
       \begin{proposition}\label{prop:Fourier_series_Poincare_modular}
         Let \(\mf{b}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,\chi,\mf{a}}(z)\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{b}\) cusp is given by
@@ -1165,7 +1171,7 @@
       
       An immediate consequence of this result is that the Poincar\'e series \(P_{m,\chi,\mf{a}}\) of positive index are cusp forms.
       
-      In a similar manner to the Poincar\'e series, we can obtain the Fourier series of the Eisenstein series too. The proof is only slightly different in that we will pass by the pole of the integrand instead of deforming to the Hankel contour about the negative real axis.
+      The argument to obtain the Fourier series of the Eisenstein series is much the same. The only slight difference is that we will pass by the pole of the integrand instead of deforming to the Hankel contour about the negative real axis.
       
       \begin{proposition}\label{prop:Fourier_series_Eisenstein_modular}
         Let \(\mf{b}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(E_{\chi,\mf{a}}(z)\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{b}\) cusp is given by
@@ -1229,7 +1235,7 @@
         which is our desired Fourier series.
       \end{proof}
 
-      An interesting consequence is that the constant term in the Fourier series of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is zero unless \(\mf{a}\) is \(\G\)-equivalent to \(\mf{b}\). Therefore the Eisenstein series \(E_{\chi,\mf{a}}\) are never cusp forms. Accordingly, write \(\mc{E}_{k}(\G,\chi)\) for the subspace spanned by the Eisenstein series associated to a complete set of \(\G\)-inequivalent cusps. It turns out that \(\mc{M}_{k}(\G,\chi)\) decomposes as
+      An interesting consequence is that the constant term in the Fourier series of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is zero unless \(\mf{a}\) is \(\G\)-equivalent to \(\mf{b}\). Therefore the Eisenstein series \(E_{\chi,\mf{a}}\) are actually never cusp forms. Accordingly, write \(\mc{E}_{k}(\G,\chi)\) for the subspace spanned by the Eisenstein series associated to a complete set of \(\G\)-inequivalent cusps. It turns out that \(\mc{M}_{k}(\G,\chi)\) decomposes as
       \[
         \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
       \]
@@ -1346,7 +1352,7 @@
         is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
     \subsection{\todo{Diamond and Hecke Operators}}
-      The diamond and Hecke operators are special cases of double coset operators which will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. Actually, these operators will be defined for modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. However, it turns out that such modular forms arise from those on \(\G_{0}(N)\backslash\H\) with character via the diamond operators. So we will discuss the diamond operators first and the Hecke operators second. 
+      The diamond and Hecke operators are sums of double coset operators. They will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. Actually, these operators will be defined for modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. However, it turns out that such modular forms arise from those on \(\G_{0}(N)\backslash\H\) with character via the diamond operators. So we will discuss the diamond operators first and the Hecke operators second. 
       
       To define the diamond operators, we need to consider the congruence subgroups \(\G_{1}(N)\) and \(\G_{0}(N)\). Recall that \(\G_{1}(N) \subseteq \G_{0}(N)\) and consider the surjective homomorphism
       \[
@@ -1356,7 +1362,7 @@
       \[
         \G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast},
       \]
-      by the first isomorphism theorem. Now let \(d\) be a positive integer. The \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
+      by the first isomorphism theorem. Now let \(d\) be a positive integer. Then the \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
       \[
         (\<d\>f)(z) = \begin{cases} \left(f[\G_{1}(N)\a\G_{1}(N)]_{k}\right)(z) & \text{if \((d,N) = 1\)}, \\ 0 & \text{if \((d,N) > 1\)}, \end{cases}
       \]
@@ -1399,27 +1405,77 @@
       \[
         \mc{M}_{k}(N,\chi) = \mc{M}_{k}(\G_{0}(N),\chi) \quad \text{and} \quad \mc{S}_{k}(N,\chi) = \mc{S}_{k}(\G_{0}(N),\chi).
       \]
-      We are now ready to discuss the Hecke operators. For a positive integer \(n\), we define the \(n\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{n}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by 
+      We are now ready to discuss the Hecke operators. First, for any positive integer \(m\), set
       \[
-        (T_{n}f)(z) = \sum_{\substack{\todo{XXX}}}\todo{XXX}\left[\G_{1}(N)\begin{pmatrix} \ell & 0 \\ 0 & m \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
+        \D_{m} = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Mat_{2}^{m}(\Z): \begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \tmod{N} \right\}.
       \]
-      In order to compute the action of the Hecke operators explicitly, we need to find a complete set of representatives for the action of the double coset operator \([\G_{1}(N)\begin{psmallmatrix} \ell & 0 \\ 0 & m \end{psmallmatrix}\G_{1}(N)]_{k}\).
+      In other words, \(\D_{m}\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices \(\a\) with integer coefficients such that \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). From the equivalence
+      \[
+        \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N},
+      \]
+      it follows that \(\G_{1}(N)\) acts on \(\D_{m}\) by both left and right multiplication. Whence \(\D_{m}\) decomposes into a disjoint union of orbits
+      \[
+        \D_{m} = \bigcup_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}\G_{1}(N)\a\G_{1}(N).
+      \]
+      To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = U\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}V\) for some \(U,V \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(Z)\) and there are finitely many choices for \(a\) and \(d\) we conclude that this disjoint union is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{S}_{k}(\G_{1}(N)) \to \mc{S}_{k}(\G_{1}(N))\) to be the linear operator given by 
+      \[
+        (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}f(z).
+      \]
+      In order to compute the Hecke operators explicitly, we need to find a complete set of representatives for the action. Instead of finding a complete set of coset representatives for \(\G_{1}(N)\a\G_{1}(N)\), we will find one for \(\G_{1}(N)\D_{m}\G_{1}(N)\) as this is much easier to accomplish.
 
       \begin{lemma}\label{lem:cosets_for_Hecke_operators}
-        Let \(\ell\) and \(m\) be positive integers \todo{XXX}. Then we have a disjoint union
+        We have a disjoint union
         \[
-          \Gamma_{1}(N)\begin{pmatrix} \ell & 0 \\ 0 & m \end{pmatrix}\Gamma_{1}(N) = \bigcup_{\todo{XXX}} \Gamma_{1}(N)\todo{XXX}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix}
+          \Gamma_{1}(N)\D_{m}\Gamma_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}} \Gamma_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
+        where \(\g_{a} \in \G_{0}(N)\) is some matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\).
       \end{lemma}
       \begin{proof}
-        \todo{XXX}
+        The reverse containment holds in view of 
+        \[
+           \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
+        \]
+        For the forward containment, suppose \(\a = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \Gamma_{1}(N)\D_{m}\Gamma_{1}(N)\). As \(a'\) and \(c'\) are both non zero, we can find relatively prime integers \(u\) and \(v\) such that \(ua'+vc' = 0\). B\'ezout's identity then provides the existence of integers \(s\) and \(s\) with \(sv-ut = 1\). Now set \(\g = \begin{psmallmatrix} s & t \\ u & v \end{psmallmatrix} \in \SL_{2}(\Z)\). It follow that
+        \[
+          \g\a = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix},
+        \]
+        Replaying \(\g\) by \(\pm \g\begin{psmallmatrix} 1 & \ell \\ 0 & 1 \end{psmallmatrix}\) for some integer \(\ell\), if necessary, we may assume that
+        \[
+          \g\a = \begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
+        \]
+        for positive integers \(a\), \(b\), and \(d\) with \(ad = m\) and \(b\) modulo \(d\). As \(\a \in \D_{m}\), it also follows that
+        \[
+          \g \begin{pmatrix} 1 & \ast \\ 0 & m \end{pmatrix} \equiv \begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \pmod{N}.
+        \]
+        Then \((a,N) = 1\) as \(\g\) must satisfy \(\g \equiv \begin{psmallmatrix} a & \ast \\ 0 & a^{-1} \end{psmallmatrix} \tmod{N}\) and so \(\g^{-1} \equiv \begin{psmallmatrix} a^{-1} & \ast \\ 0 & a \end{psmallmatrix} \tmod{N}\). In particular, \(\g \in \G_{0}(N)\). In view of the fact
+        \[
+          \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} a^{-1} & 0 \\ 0 & a \end{pmatrix} \equiv \begin{pmatrix} a^{-1} & \ast \\ 0 & a \end{pmatrix} \pmod{N},
+        \]
+        we may write \(\g^{-1} = \eta\g_{a}\) for some \(\eta \in \G_{1}(N)\). But then
+        \[
+          \a = \eta\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
+        \]
+        and the reverse inclusion follows. It remains to show that the union is disjoint. If not, then there exist matrices \(\eta_{1},\eta_{2} \in \G_{1}(N)\) satisfying
+        \[
+          \eta_{1}\g_{a_{1}}\begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix} = \eta_{2}\g_{a_{2}}\begin{pmatrix} a_{2} & b_{2} \\ 0 & d_{2} \end{pmatrix},
+        \]
+        for distinct matrices \(\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) satisfying \(a_{i}d_{i} = m\), \((a_{i},N) = 1\), and \(b_{i}\) modulo \(d_{i}\) . Then
+        \[
+          \begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix}\begin{pmatrix} \frac{d_{2}}{m} & -\frac{b_{2}}{m} \\ 0 & \frac{a_{2}}{m} \end{pmatrix} = \begin{pmatrix} \frac{a_{1}}{a_{2}} & \ast \\ 0 & \frac{d_{1}}{d_{2}} \end{pmatrix},
+        \]
+        belongs to \(\SL_{2}(\Z)\) which forces \(a_{1} = a_{2}\) and \(d_{1} = d_{2}\). Whence
+        \[
+          \begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix} = \begin{pmatrix} 1 & \ell \\ 0 & 1 \end{pmatrix}\begin{pmatrix} a_{2} & b_{2} \\ 0 & d_{2} \end{pmatrix},
+        \]
+        for some integer \(\ell\). But as \(b_{1}\) and \(b_{2}\) are both modulo \(d_{1} = d_{2}\), we must have \(\ell = 0\). Hence \(b_{1} = b_{2}\). But then the matrices \(\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) are not distinct which is a contradiction. Therefore the union is disjoint completing the proof.
       \end{proof}
 
-      With this lemma, the Hecke operators may be expressed in the form
+      With this lemma, we immediately find that the Hecke operators may be expressed in the form
       \[
-        (T_{n}f)(z) = m^{k-1}\sum_{ad = n}\frac{1}{d^{k}}\sum_{b \tmod{d}}\<a\>f\left(\frac{az+b}{d}\right).
+        (T_{m}f)(z) = m^{k-1}\sum_{\substack{ad = m \\ (a,N) = 1}}\frac{1}{d^{k}}\sum_{b \tmod{d}}\<a\>f\left(\frac{az+b}{d}\right).
       \]
-      
+      Also observe that we may remove the condition \((a,N) = 1\) since the diamond operator acts as the zero operator whenever \((a,N) > 1\).
+
       \iffalse
       With \cref{lem:cosets_for_Hecke_operators}, it is not too hard to see that the diamond and Hecke operators commute:
 
