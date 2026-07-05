@@ -1472,10 +1472,45 @@
       \end{proof}
 
       With this lemma, we immediately find that the Hecke operators may be expressed in the form
-      \[
-        (T_{m}f)(z) = m^{k-1}\sum_{\substack{ad = m \\ (a,N) = 1}}\frac{1}{d^{k}}\sum_{b \tmod{d}}\<a\>f\left(\frac{az+b}{d}\right).
-      \]
-      Also observe that we may remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\).
+      \begin{equation}\label{equ:Hecke_operator_explicit_formula}
+        (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}\<a\>f\left(\frac{az+b}{d}\right),
+      \end{equation}
+      where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). Moreover, we can use this formula to deduce how the Hecke operators act on the Fourier series of modular forms.
+
+      \begin{proposition}
+        Let \(f \in \mc{M}_{k}(N,\chi)\) have Fourier series
+        \[
+          f(z) = \sum_{n \ge 0}a(n)e(nz).
+        \]
+        Then for any positive integer \(m\), the Fourier series of \(T_{m}f\) is
+        \[
+          (T_{m}f)(z) = \sum_{n \ge 0}\left(\sum_{d \mid (n,m)}\chi(d)d^{k-1}a\left(\frac{nm}{d^{2}}\right)\right)e(nz).
+        \]
+      \end{proposition}
+      \begin{proof}
+        By \cref{equ:Hecke_operator_explicit_formula}, write
+        \[
+          (T_{m}f)(z) = m^{k-1}\sum_{ad = m }\frac{\chi(a)}{d^{k}}\sum_{b \tmod{d}}\sum_{n \ge 0}a(n)e\left(\frac{anz+bn}{d}\right).
+        \]
+        For fixed \(d\), the sum over \(b\) is
+        \[
+          \sum_{b \tmod{d}}e\left(\frac{bn}{d}\right) = \begin{cases} d & \text{if \(d \mid n\)}, \\ 0 & \text{if \(d \nmid n\)}, \end{cases}
+        \]
+        because in the first case every term is \(1\) and in the second it is a geometric sum with common ratio \(e\left(\frac{n}{d}\right)\).
+        Whence our expression becomes
+        \[
+          \sum_{ad = m}a^{k-1}\chi(a)\sum_{\substack{n \ge 0 \\ d \mid n}}a(n)e\left(\frac{anz}{d}\right),
+        \]
+        since \(ad = m\). The change of variables \(n \mapsto \frac{nd}{a}\) yields
+        \[
+         \sum_{ad = m}\sum_{\substack{n \ge 0 \\ a \mid n}}a^{k-1}\chi(a)a\left(\frac{nd}{a}\right)e(nz).
+        \]
+        Now write \(d = \frac{m}{a}\) to obtain
+        \[
+        \sum_{n \ge 0}\left(\sum_{a \mid (n,m)}\chi(a)a^{k-1}a\left(\frac{nm}{a^{2}}\right)\right)e(nz).
+        \]
+        This is equivalent to the claim upon making the change of variables \(a \mapsto d\).
+      \end{proof}
 
       \iffalse
       With \cref{lem:cosets_for_Hecke_operators}, it is not too hard to see that the diamond and Hecke operators commute:
