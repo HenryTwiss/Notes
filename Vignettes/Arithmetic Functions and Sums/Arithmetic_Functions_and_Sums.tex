@@ -443,13 +443,25 @@
       \begin{proof}
         We will prove the properties separately.
         \begin{enumerate}[label*=(\roman*)]
-          \item This follows by direct computation.
-          \item This follows by direct computation.
-          \item We may assume \(m > 1\) otherwise the statement is vacuously true. Now let \(c\) be an integer with \((c,m) = 1\) and satisfying \(\chi(c) \neq 1\). Such a \(c\) exists because otherwise \(\chi\) is the principal Dirichlet character modulo \(m\) and thus imprimitive. A short computation shows
+          \item This is equivalent to the identity
           \[
-            \chi(c)G(b,\chi) = G(b,\chi),
+            \sum_{a \tmod{m}}\chi(a)e\left(-\frac{ab}{m}\right) = \chi(-1)\sum_{a \tmod{m}}\chi(a)e\left(\frac{ab}{m}\right),
           \]
-          whence \(G(b,\chi) = 0\).
+          which is clear upon making the change of variables \(a \mapsto -a\).
+          \item This is equivalent to the identity
+          \[
+            \sum_{a \tmod {m}}\chi(a)e\left(\frac{ab}{m}\right) = \cchi(b)\sum_{a \tmod {m}}e\left(\frac{a}{m}\right),
+          \]
+          which is clear under the change of variables \(a \mapsto ab^{-1}\).
+          \item Observe that if \((b,m) > 1\) then \(m > 1\). We will separate the proof into two cases depending on if \(m\) is prime or not. In the first case, \(m = p\) for a prime \(p\). Then \(p \mid b\) whence
+          \[
+            G(b,\chi) = \sum_{a \tmod{m}}\chi(a).
+          \]
+          Therefore \(G(b,\chi) = 0\) by the orthogonality relations because \(\chi\) is primitive. In the second case, we have \(p \mid (b,m)\) for a prime \(p\). Then there exists an integer \(c\) satisfying \(c \equiv 1 \tmod {\frac{m}{p}}\) and \(\chi(c) \neq 1\). Such a \(c\) exists because otherwise \(\chi\) is induced from a Dirichlet character modulo \(\frac{m}{p}\) and thus is imprimitive. A short computation then shows
+          \[
+            G(b,\chi) = \chi(c)G(b,\chi),
+          \]
+          which implies \(G(b,\chi) = 0\).
           \item Since \((m,n) = 1\), the Chinese remainder theorem implies that any \(a\) modulo \(mn\) is of the form \(a = a'n+a''m\) with \(a'\) modulo \(m\) and \(a''\) modulo \(n\). Whence
           \[
             (\chi\psi)(a) = \chi(a'n)\psi(a''m).
