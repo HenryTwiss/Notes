@@ -1,11 +1,11 @@
 # Fdb version 3
-["makeindex Arithmetic_Functions_and_Sums.idx"] 1783606959 "Arithmetic_Functions_and_Sums.idx" "Arithmetic_Functions_and_Sums.ind" "Arithmetic_Functions_and_Sums" 1783613336
-  "Arithmetic_Functions_and_Sums.idx" 1783613336 2272 7295981b7a0d09c4f0536111fbdbace4 "pdflatex"
+["makeindex Arithmetic_Functions_and_Sums.idx"] 1783625751 "Arithmetic_Functions_and_Sums.idx" "Arithmetic_Functions_and_Sums.ind" "Arithmetic_Functions_and_Sums" 1783626174
+  "Arithmetic_Functions_and_Sums.idx" 1783626174 2364 9da98f6f1bfaec21a93aa222da9a028b "pdflatex"
   (generated)
   "Arithmetic_Functions_and_Sums.ilg"
   "Arithmetic_Functions_and_Sums.ind"
-["pdflatex"] 1783613336 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Arithmetic Functions and Sums/Arithmetic_Functions_and_Sums.tex" "Arithmetic_Functions_and_Sums.pdf" "Arithmetic_Functions_and_Sums" 1783613336
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Arithmetic Functions and Sums/Arithmetic_Functions_and_Sums.tex" 1783613335 68709 bfb250821073fa3900f3ee009c60b37c ""
+["pdflatex"] 1783626173 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Arithmetic Functions and Sums/Arithmetic_Functions_and_Sums.tex" "Arithmetic_Functions_and_Sums.pdf" "Arithmetic_Functions_and_Sums" 1783626174
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Arithmetic Functions and Sums/Arithmetic_Functions_and_Sums.tex" 1783626173 70878 5aaa675373ec7a9aaa77b00859ac1f5e ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1781632838 5480 1c1089c4f68d35449bb71f726253e7ea ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -28,7 +28,6 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
@@ -44,7 +43,6 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1248133631 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
@@ -191,11 +189,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Arithmetic_Functions_and_Sums.aux" 1783613336 11198 bf21f9ddd7d506839af9526e674f0807 "pdflatex"
-  "Arithmetic_Functions_and_Sums.ind" 1783606959 2431 ae173ece139b2d637b029da009d66f51 "makeindex Arithmetic_Functions_and_Sums.idx"
-  "Arithmetic_Functions_and_Sums.out" 1783613336 2668 ffae9d46a5ef8d173ab70fb4c3da4bdf "pdflatex"
-  "Arithmetic_Functions_and_Sums.tex" 1783613335 68709 bfb250821073fa3900f3ee009c60b37c ""
-  "Arithmetic_Functions_and_Sums.toc" 1783613336 1347 3bba838256bc4d74c9010f5b58433306 "pdflatex"
+  "Arithmetic_Functions_and_Sums.aux" 1783626174 11164 2ad2a6ddb7d64c90b5083b882db0ee65 "pdflatex"
+  "Arithmetic_Functions_and_Sums.ind" 1783625751 2517 66b8f3f75d4b00977d90ee3d4bd6d238 "makeindex Arithmetic_Functions_and_Sums.idx"
+  "Arithmetic_Functions_and_Sums.out" 1783626174 2625 968a351acbbe2fe825195e881fc8f499 "pdflatex"
+  "Arithmetic_Functions_and_Sums.tex" 1783626173 70878 5aaa675373ec7a9aaa77b00859ac1f5e ""
+  "Arithmetic_Functions_and_Sums.toc" 1783626174 1309 a1de20bb02f9d527bfd362bf935d8e75 "pdflatex"
   (generated)
   "Arithmetic_Functions_and_Sums.aux"
   "Arithmetic_Functions_and_Sums.idx"

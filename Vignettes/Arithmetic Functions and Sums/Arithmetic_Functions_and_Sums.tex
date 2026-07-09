@@ -136,7 +136,37 @@
       \begin{proof}
         As the first statement is equivalent to the second, we will prove the second statement. Convolving \(g = f \ast \mathbf{1}\) with \(\mu\) gives \(f = g \ast \mu\) in view of \cref{prop:Mobius_indicator}. This proves the forward implication. The reverse implication follows by convolving \(f = g \ast \mu\) with \(\mathbf{1}\) and arguing analogously.
       \end{proof}
-    \subsection{\todo{Dirichlet Series}}
+    \subsection{Dirichlet Series}
+      One method of studying arithmetic functions is to package them into generating series. A (formal) \textbf{Dirichlet series}\index{Dirichlet series} \(D(s)\) is an expression of the form
+      \[
+        D(s) = \sum_{n \ge 1}\frac{a(n)}{n^{s}},
+      \]
+      for some complex coefficients \(a(n)\). We view Dirichlet series as elements of \(\C[[n^{-s}]]\) which are formal power series in the variable \(n^{-s}\) with complex coefficients.
+      
+      We may associate a Dirichlet series to any arithmetic function \(f\). This series \(D_{f}(s)\) is defined by
+      \[
+        D_{f}(s) = \sum_{n \ge 1}\frac{f(n)}{n^{s}}.
+      \]
+      Let \(\mc{D}\) denote the subspace of \(\C[[n^{-s}]]\) consisting of all Dirichlet series whose coefficients are given by an arithmetic function. Clearly \(\mc{D}\) is an abelian group. It is also a commutative ring where multiplication of Dirichlet series corresponds to Dirichlet convolution of the corresponding arithmetic functions. Indeed, if \(f\) and \(g\) are two arithmetic functions then a short computation shows
+      \[
+        D_{f}(s)D_{g}(s) = \sum_{n \ge 1}\frac{\sum_{d \mid n}f(d)g\left(\frac{n}{d}\right)}{n^{s}}.
+      \]
+      Therefore the product \(D_{f}(s)D_{g}(s)\) is itself the Dirichlet series whose coefficient are given by the Dirichlet convolution of \(f\) and \(g\). In short,
+      \[
+        D_{f}(s)D_{g}(s) = D_{f \ast g}(s).
+      \]
+      The identity element is \(D_{\e}(s) = 1\) which is just the constant function. The Dirichlet series corresponding to \(\mathbf{1}\) is called the \textbf{Riemann zeta function}\index{Riemann zeta function} \(\z(s)\) and is given by
+      \[
+        \z(s) = \sum_{n \ge 1}\frac{1}{n^{s}}.
+      \]
+      It follows from \cref{prop:Mobius_indicator} that the the inverse of the Riemann zeta function is the Dirichlet series given by the M\"obius function. In other words,
+      \[
+        \frac{1}{\z(s)} = \sum_{n \ge 1}\frac{\mu(n)}{n^{s}}.
+      \]
+      Then M\"obius inversion can be expressed in terms of Dirichlet series as
+      \[
+        D_{g}(s) = D_{f}(s)\z(s) \quad \text{or equivalently} \quad D_{f}(s) = D_{g}(s)\frac{1}{\z(s)}.
+      \]  
   \section{Asymptotics}
     \subsection{Asymptotics of the Divisor Function}
       It is essential to have a bound for the number of divisors \(\s_{0}(n)\) of a positive integer \(n\). A sufficient estimate is that \(\s_{0}(n)\) grows slower than any polynomial.

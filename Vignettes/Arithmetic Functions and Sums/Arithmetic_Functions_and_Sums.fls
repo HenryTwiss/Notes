@@ -913,7 +913,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 OUTPUT Arithmetic_Functions_and_Sums.toc
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -926,7 +925,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 OUTPUT Arithmetic_Functions_and_Sums.thm
 INPUT Arithmetic_Functions_and_Sums.aux
@@ -941,7 +939,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

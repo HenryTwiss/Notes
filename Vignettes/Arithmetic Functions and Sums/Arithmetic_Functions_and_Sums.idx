@@ -19,34 +19,36 @@
 \indexentry{von Mangoldt function|hyperpage}{3}
 \indexentry{Dirichlet convolution|hyperpage}{4}
 \indexentry{M\"obius inversion|hyperpage}{4}
-\indexentry{Dirichlet character|hyperpage}{6}
-\indexentry{modulus|hyperpage}{6}
-\indexentry{principal|hyperpage}{7}
-\indexentry{trivial Dirichlet character|hyperpage}{7}
-\indexentry{zero extension|hyperpage}{7}
-\indexentry{Dirichlet orthogonality relations|hyperpage}{7}
-\indexentry{induced|hyperpage}{8}
-\indexentry{primitive|hyperpage}{8}
-\indexentry{imprimitive|hyperpage}{8}
-\indexentry{conductor|hyperpage}{9}
-\indexentry{real|hyperpage}{10}
-\indexentry{complex|hyperpage}{10}
-\indexentry{order|hyperpage}{10}
-\indexentry{quadratic|hyperpage}{10}
-\indexentry{cubic|hyperpage}{10}
-\indexentry{even|hyperpage}{10}
-\indexentry{odd|hyperpage}{10}
-\indexentry{fundamental discriminant|hyperpage}{10}
-\indexentry{exponential sum|hyperpage}{13}
-\indexentry{complete|hyperpage}{13}
-\indexentry{incomplete|hyperpage}{13}
-\indexentry{Ramanujan sum|hyperpage}{14}
-\indexentry{Gauss sum|hyperpage}{14}
-\indexentry{epsilon factor|hyperpage}{17}
-\indexentry{quadratic Gauss sum|hyperpage}{18}
-\indexentry{epsilon factor|hyperpage}{21}
-\indexentry{Kloosterman sum|hyperpage}{23}
-\indexentry{Weil bound|hyperpage}{23}
-\indexentry{Sali\'e sum|hyperpage}{23}
-\indexentry{character sum|hyperpage}{23}
-\indexentry{P\'olya-Vinogradov inequality|hyperpage}{24}
+\indexentry{Dirichlet series|hyperpage}{5}
+\indexentry{Riemann zeta function|hyperpage}{5}
+\indexentry{Dirichlet character|hyperpage}{7}
+\indexentry{modulus|hyperpage}{7}
+\indexentry{principal|hyperpage}{8}
+\indexentry{trivial Dirichlet character|hyperpage}{8}
+\indexentry{zero extension|hyperpage}{8}
+\indexentry{Dirichlet orthogonality relations|hyperpage}{8}
+\indexentry{induced|hyperpage}{9}
+\indexentry{primitive|hyperpage}{9}
+\indexentry{imprimitive|hyperpage}{9}
+\indexentry{conductor|hyperpage}{10}
+\indexentry{real|hyperpage}{11}
+\indexentry{complex|hyperpage}{11}
+\indexentry{order|hyperpage}{11}
+\indexentry{quadratic|hyperpage}{11}
+\indexentry{cubic|hyperpage}{11}
+\indexentry{even|hyperpage}{11}
+\indexentry{odd|hyperpage}{11}
+\indexentry{fundamental discriminant|hyperpage}{11}
+\indexentry{exponential sum|hyperpage}{14}
+\indexentry{complete|hyperpage}{14}
+\indexentry{incomplete|hyperpage}{14}
+\indexentry{Ramanujan sum|hyperpage}{15}
+\indexentry{Gauss sum|hyperpage}{15}
+\indexentry{epsilon factor|hyperpage}{18}
+\indexentry{quadratic Gauss sum|hyperpage}{19}
+\indexentry{epsilon factor|hyperpage}{22}
+\indexentry{Kloosterman sum|hyperpage}{24}
+\indexentry{Weil bound|hyperpage}{24}
+\indexentry{Sali\'e sum|hyperpage}{24}
+\indexentry{character sum|hyperpage}{24}
+\indexentry{P\'olya-Vinogradov inequality|hyperpage}{25}
