@@ -136,7 +136,7 @@
       \begin{proof}
         As the first statement is equivalent to the second, we will prove the second statement. Convolving \(g = f \ast \mathbf{1}\) with \(\mu\) gives \(f = g \ast \mu\) in view of \cref{prop:Mobius_indicator}. This proves the forward implication. The reverse implication follows by convolving \(f = g \ast \mu\) with \(\mathbf{1}\) and arguing analogously.
       \end{proof}
-    \subsection{\todo{Generating Series}}
+    \subsection{\todo{Dirichlet Series}}
   \section{Asymptotics}
     \subsection{Asymptotics of the Divisor Function}
       It is essential to have a bound for the number of divisors \(\s_{0}(n)\) of a positive integer \(n\). A sufficient estimate is that \(\s_{0}(n)\) grows slower than any polynomial.
@@ -388,24 +388,16 @@
         S_{f}(M,N) = \sum_{M \le n \le M+N}e(f(n)).
       \]
       We will see an example of an incomplete sub exhibiting square-root cancellation, but often this is far from true.
-    \subsection{Gauss Sums}
-      Let \(\chi\) be a Dirichlet character modulo \(m\). For any integer \(b\), the \textbf{Gauss sum}\index{Gauss sum} \(G(b,\chi)\) associated to \(\chi\) is given by
-      \[
-        G(b,\chi) = \sum_{a \tmod{m}}\chi(a)e\left(\frac{ab}{m}\right).
-      \]
-      This is a complete exponential sum. When \(b \mid m\) the summands are all \(1\) and the Dirichlet orthogonality relations imply
-      \[
-        G(b,\chi) = \vphi(m)\d_{\chi,\chi_{m,0}}.
-      \]
-      When \(b = 1\) we simply write \(G(\chi) = G(1,\chi)\). The simplest case of a Gauss sum occurs when \(\chi = \chi_{m,0}\) in which case we write \(R(b,m) = G(b,\chi_{m,0})\) and call this the \textbf{Ramanujan sum}\index{Ramanujan sum} modulo \(m\). It can be expressed as
+    \subsection{Ramanujan Sums}
+      Let \(m\) be a positive integer. For any integer \(b\), the \textbf{Ramanujan sum}\index{Ramanujan sum} \(R(b,m)\) modulo \(m\) is defined by
       \[
         R(b,m) = \sum_{\substack{a \tmod{m} \\ (a,m) = 1}}e\left(\frac{ab}{m}\right).
       \]
-      When \(b \mid m\) the summands are all \(1\) and the Ramanujan sum has the simple evaluation
+      This is a complete exponential sum. When \(b \mid m\) the summands are all \(1\) and the Ramanujan sum has the simple evaluation
       \[
         R(b,m) = \vphi(m).
       \]
-      For a general index the Ramanujan sums can be computed explicitly by means of the M\"obius function.
+      In fact, Ramanujan sums can be computed explicitly by means of the M\"obius function.
 
       \begin{proposition}\label{prop:Ramanujan_sum_evaluation}
         For integers \(b\) and \(m\) with \(m\) positive, we have
@@ -424,8 +416,20 @@
         \]
         Now apply M\"obius inversion.
       \end{proof}
-
-      This explicit evaluation is not typical of a larger reality. Gauss sums, in general, are extremely difficult to compute exactly. Nevertheless, we can develop many useful properties which help to reduce their evaluation.
+    \subsection{Gauss Sums}
+      Let \(\chi\) be a Dirichlet character modulo \(m\). For any integer \(b\), the \textbf{Gauss sum}\index{Gauss sum} \(G(b,\chi)\) associated to \(\chi\) is given by
+      \[
+        G(b,\chi) = \sum_{a \tmod{m}}\chi(a)e\left(\frac{ab}{m}\right).
+      \]
+      This is a complete exponential sum. If \(b = 1\) we simply write \(G(\chi) = G(1,\chi)\). Also, when \(b \mid m\) the summands are all \(1\) and the Dirichlet orthogonality relations imply
+      \[
+        G(b,\chi) = \vphi(m)\d_{\chi,\chi_{m,0}}.
+      \]
+      In the case \(\chi = \chi_{m,0}\), we have
+      \[
+        G(b,\chi_{m,0}) = R(b,m),
+      \]
+      so that the Gauss sum reduces to a Ramanujan sum which can be evaluated via \cref{prop:Ramanujan_sum_evaluation}. This evaluation is not typical of a larger reality. Gauss sums, in general, are extremely difficult to compute. Nevertheless, we can develop many useful properties which help to reduce their evaluation.
 
       \begin{proposition}\label{prop:Gauss_sum_reduction}
         Let \(\chi\) and \(\psi\) be nontrivial Dirichlet characters modulo \(m\) and \(n\) respectively and let \(b\) be an integer. Then the following properties hold:
@@ -547,16 +551,16 @@
         \]
         Combining these identities gives the result.
       \end{proof}
-    \subsection{Quadratic Gauss Sums}
+
       Our primary aim will be to evaluate the epsilon factor of the Gauss sum for quadratic Dirichlet characters defined by Jacobi symbols. To accomplish this we will study and auxiliary exponential sum. For integers \(b\) and \(m\) with \(m\) positive, the \textbf{quadratic Gauss sum}\index{quadratic Gauss sum} \(g(b,m)\) is defined by
       \[
         g(b,m) = \sum_{a \tmod{m}}e\left(\frac{a^{2}b}{m}\right).
       \]
-      This is a complete exponential sum. When \(b \mid m\) the summands are all \(1\) and the quadratic Gauss sum evaluates to
+      This is a complete exponential sum. If \(b = 1\) we write \(g(m) = g(1,m)\). Also, when \(b \mid m\) the summands are all \(1\) and the quadratic Gauss sum evaluates to
       \[
         g(b,m) = m.
       \]
-      If \(b = 1\) we write \(g(m) = g(1,m)\). It turns out that for square-free \(m\) the Gauss sum attached to the quadratic Dirichlet character modulo \(m\) given by the Jacobi symbol is precisely the quadratic Gauss sum. This takes some work to prove. The first step is to reduce to the case when \((b,m) = 1\).
+      It turns out that for square-free \(m\) the Gauss sum attached to the quadratic Dirichlet character modulo \(m\) given by the Jacobi symbol is precisely the quadratic Gauss sum. This takes some work to prove. The first step is to reduce to the case when \((b,m) = 1\).
 
       \begin{proposition}\label{prop:quadratic_Gauss_sum_relatively_prime_reduction}
         Let \(b\) and \(m\) be integers with \(m\) positive. Then
@@ -726,6 +730,35 @@
       \begin{proof}
         The claim follows immediately from \cref{thm:Gauss's_evaluation,prop:Gauss_sum_equivalence_for_primes}.
       \end{proof}
+    \subsection{Kloosterman and Sali\'e Sums}
+      Let \(c\) be a positive integer. For integers \(m\) and \(n\) the \textbf{Kloosterman sum}\index{Kloosterman sum} \(K(m,n,c)\) modulo \(c\) is defined by
+      \[
+        K(m,n,c) = \sum_{\substack{a \tmod{c} \\ (a,c) = 1}}e^{\frac{2\pi i\left(am+a^{-1}n\right)}{c}}.
+      \]
+      Notice that if either \(n = 0\) or \(m = 0\) then
+      \[
+        K(m,0,c) = R(m,c) \quad \text{or} \quad K(0,n,c) = R(n,c),
+      \]
+      respectively. So the Kloosterman sums reduces to a Ramanujan sum. The most important result about Kloosterman sums is an infamous bound known as the \textbf{Weil bound}\index{Weil bound} for Kloosterman sums.
+
+      \begin{theorem*}[Weil bound]
+        Let \(c\) be a positive integer. Then for integers \(m\) and \(n\), we have
+        \[
+          |K(m,n,c)| \le \s_{0}(c)\sqrt{(m,n,c)c}.
+        \]
+      \end{theorem*}
+
+      In the case \((m,n,c) = 1\), the Weil bound shows that the Kloosterman sums exhibit square-root cancellation.
+
+      The associated Sali\'e sums are Kloosterman sums with Dirichlet characters. Let \(c\) be a positive integer and \(\chi\) be a Dirichlet character modulo \(c\). For integers \(m\) and \(n\), the \textbf{Sali\'e sum}\index{Sali\'e sum} \(S_{\chi}(m,n,c)\) modulo \(c\) is defined by
+      \[
+        S_{\chi}(m,n,c) = \sum_{\substack{a \tmod{c} \\ (a,c) = 1}}\chi(a)e^{\frac{2\pi i\left(am+a^{-1}n\right)}{c}}.
+      \]
+      If either \(n = 0\) or \(m = 0\) then
+      \[
+        S_{\chi}(m,0,c) = G(m,\chi) \quad \text{or} \quad S_{\chi}(0,n,c) = G(m,\cchi),
+      \]
+      respectively. So the Sali\'e sum reduces to a Gauss sum.
     \subsection{Character Sums and the P\'olya-Vinogradov Inequality}
       Let \(\chi\) be a non-principal Dirichlet character modulo \(m\). For nonnegative integers \(M\) and \(N\), the \textbf{character sum}\index{character sum} \(S_{\chi}(M,N)\) associated to \(\chi\) is given by
       \[
