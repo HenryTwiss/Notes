@@ -72,7 +72,7 @@
         The first inequality is clear since absolute convergence implies convergence. For the second inequality, the terms \(a(n)n^{-(\s_{c}+\e)}\) tend to zero as \(n \to \infty\) because \(D(s)\) converges at \(s = \s_{c}+\e\). Therefore \(a(n) \ll_{\e} n^{\s_{c}+\e}\) and so \(D(s)\) is absolutely convergent at \(s = \s_{c}+1+2\e\). This means \(\s_{a} \le \s_{c}+1+2\e\). Taking the limit as \(\e \to 0\) gives the second inequality.
       \end{proof}
 
-      We now turn to the question of uniqueness of Dirichlet series. In particular, we would like to show that Dirichlet series are uniquely determined by their coefficient as this would allow us compare coefficient analogous to that of Taylor series. This is indeed possible.
+      We now turn to the question of uniqueness via coefficients. It turns out that Dirichlet series are uniquely determined by their coefficients which allows for coefficient comparison.
 
       \begin{proposition}\label{prop:coefficients_of_Dirichlet_series_are_unique}
         Suppose \(D(s)\) is a Dirichlet series with finite abscissa of convergence \(\s_{c}\) such that
@@ -216,7 +216,7 @@
         \[
           \mc{D} = \{s \in \C:\s_{a} > 0\} \cup \{s \in \C:|s| < \d\},
         \]
-        for some \(\d > 0\). Let \(P(s)\) be the power series expansion of \(D(s)\) at \(s = 1\). Then
+        for some \(\d > 0\). Let \(P(s)\) be the power series expansion of \(D(s)\) about \(s = 1\). Then
         \[
           P(s) = \sum_{k \ge 0}\frac{c_{k}}{k!}(s-1)^{k},
         \]
@@ -375,7 +375,7 @@
         \[
           I(1,T) = \frac{1}{\pi}\tan^{-1}\left(\frac{T}{c}\right).
         \]
-        Truncate the Laurent series of the inverse tangent after the first term to see that \(\tan^{-1}(t) = \frac{\pi}{2}+O\left(\frac{1}{t}\right)\). Then
+        Truncate the Laurent series expansion of \(\tan^{-1}(t)\) about \(t = \infty\) after the first term to see that \(\tan^{-1}(t) = \frac{\pi}{2}+O\left(\frac{1}{t}\right)\). Then
         \[
           I(1,T) = \frac{1}{2}+O\left(\frac{1}{T}\right),
         \] 
@@ -1231,7 +1231,7 @@
       \[
         \log L(s) = -\sum_{p}\sum_{j}\log(1-\a_{j}(p)p^{-s}).
       \]
-      Moreover, the bound \(|\a_{j}(p)| \le p^{\t_{L}}\) ensures that \(|\a_{j}(p)p^{-s}| < 1\) in this half-plane. Therefore the Taylor series of the logarithm is valid in this region and we may further write
+      Moreover, the bound \(|\a_{j}(p)| \le p^{\t_{L}}\) ensures \(|\a_{j}(p)p^{-s}| < 1\) in this half-plane. So using the Taylor series expansion of \(\log(1-s)\) about \(s = 0\), we may further write 
       \[
         \log L(s) = \sum_{p}\sum_{j}\sum_{k \ge 1}\frac{\a_{j}(p)^{k}}{kp^{ks}}.
       \]
@@ -1429,7 +1429,7 @@
         \[
           \xi(s,L) = (s(1-s))^{m_{L}}q_{L}^{\frac{s}{2}}\pi^{-\frac{d_{L}s}{2}}\prod_{j}\G\left(\frac{s+\mu_{j}}{2}\right)L(s).
         \]
-        For the contribution from \((s(1-s))^{m_{L}}\), first recall that \(\arg(s) = \tan^{-1}\left(\frac{t}{\s}\right)\) provided \(\s > 0\). In this case, we have the estimate \(\arg(s) = \frac{\pi}{2}+O\left(\frac{1}{t}\right)\) by truncating the Laurent series of the inverse tangent after the first term. A short computation shows
+        For the contribution from \((s(1-s))^{m_{L}}\), first recall that \(\arg(s) = \tan^{-1}\left(\frac{t}{\s}\right)\) provided \(\s > 0\). In this case, we have the estimate \(\arg(s) = \frac{\pi}{2}+O\left(\frac{1}{t}\right)\) by truncating the Laurent series expansion of \(\tan^{-1}(t)\) about \(t = \infty\) after the first term. A short computation shows
         \[
           \D_{\eta_{R}}\arg((s(1-s))^{m_{L}}) = O\left(\frac{1}{T}\right).
         \]
@@ -1694,7 +1694,7 @@
         \[
           X^{c}\sum_{\substack{n \gg X \\ n \neq X}}\frac{|\L_{L}(n)|}{n^{c}}\min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \frac{X^{c}}{T}.
         \]
-        In the range \(n \asymp X\), the Taylor series of the logarithm gives \(\log\left(\frac{X}{n}\right) \ll \frac{X-n}{X}\) so that
+        In the range \(n \asymp X\), the Taylor series expansion of \(\log(1+x)\) about \(x = 0\) gives \(\log\left(\frac{X}{n}\right) \ll \frac{X-n}{X}\) so that
         \[
           \min\left(1,\frac{1}{T\left|\log\left(\frac{X}{n}\right)\right|}\right) \ll \min\left(1,\frac{X}{T|X-n|}\right).
         \]

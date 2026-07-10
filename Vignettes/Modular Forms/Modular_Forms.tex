@@ -587,11 +587,11 @@
         Therefore \(\nu(-I) = (-1)^{k}\). This means \(\nu\) cannot be the identity if \(k\) is odd. In particular, there are no nonzero modular forms of odd weight with trivial nebentypus on \(\SL_{2}(\Z)\).  
       \end{remark}
       
-      Modular forms also admit Fourier series. First observe that modularity implies
+      Modular forms also admit Fourier series expansions. First observe that modularity implies
       \[
         (f|_{k}\s_{\mf{a}})(z+1) = \nu(\g_{\mf{a}})(f|_{k}\s_{\mf{a}})(z),
       \]
-      which is to say \(f|_{k}\s_{\mf{a}}\) is \(1\)-periodic up to the constant factor \(\nu(\g_{\mf{a}})\). This means we only need to verify the growth condition as \(y \to \infty\). In any case, as \(f|_{k}\s_{\mf{a}}\) is also smooth, it admits an absolutely and uniformly convergent Fourier series. So we may write
+      which is to say \(f|_{k}\s_{\mf{a}}\) is \(1\)-periodic up to the constant factor \(\nu(\g_{\mf{a}})\). This means we only need to verify the growth condition as \(y \to \infty\). In any case, as \(f|_{k}\s_{\mf{a}}\) is also smooth, it admits an absolutely and uniformly convergent Fourier series expansion. So we may write
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 0}a_{\mf{a}}(y,n)e(nx),
       \]
@@ -599,7 +599,7 @@
       \[
         \frac{1}{2}\left(\frac{\del f|_{k}\s_{\mf{a}}}{\del x}+i\frac{\del f|_{k}\s_{\mf{a}}}{\del y}\right) = 0.
       \]
-      Substituting in the Fourier series and equating coefficients we obtain the ODE
+      Substituting in the Fourier series expansion and equating coefficients we obtain the ODE
       \[
         2\pi na_{\mf{a}}(y,n)+a_{\mf{a}}'(y,n) = 0.
       \]
@@ -607,7 +607,7 @@
       \[
         a_{\mf{a}}(y,n) = a_{\mf{a}}(n)e(n(iy)).
       \]
-      The coefficients \(a_{\mf{a}}(n)\) are the only part of the Fourier series depending on the cusp \(\mf{a}\) and scaling matrix \(\s_{\mf{a}}\). Using these coefficients instead, \(f\) admits a \textbf{Fourier series}\index{Fourier series} at the \(\mf{a}\) cusp given by
+      The coefficients \(a_{\mf{a}}(n)\) are the only part of the Fourier series expansion depending on the cusp \(\mf{a}\) and scaling matrix \(\s_{\mf{a}}\). Using these coefficients instead, \(f\) admits a \textbf{Fourier series}\index{Fourier series} expansion at the \(\mf{a}\) cusp given by
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 0}a_{\mf{a}}(n)e(nz),
       \]
@@ -625,7 +625,7 @@
       \[
         \int_{0}^{1}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{\frac{k}{2}}e(-nz)\,dx.
       \]
-      On the one hand, substitute the Fourier series and use absolute convergence to interchange the sum and the integral. In view of the identity
+      On the one hand, substitute the Fourier series expansion and use absolute convergence to interchange the sum and the integral. In view of the identity
       \begin{equation}\label{equ:Dirac_integral_representation}
         \int_{0}^{1}e((n-m)x)\,dx = \d_{n-m,0},
       \end{equation}
@@ -758,11 +758,11 @@
       \[
         \mc{M}_{k}(\G_{2},\nu) \subseteq \mc{M}_{k}(\G_{1},\nu) \quad \text{and} \quad \mc{S}_{k}(\G_{2},\nu) \subseteq \mc{S}_{k}(\G_{1},\nu).
       \]
-      The vector space \(\mc{M}_{k}(\G,\nu)\), and hence \(\mc{S}_{k}(\G,\nu)\) as well, turns out to be finite dimensional. This will be accomplished by showing that any \(f \in \mc{M}_{k}(\G,\nu)\) is determined by finitely many of its Fourier coefficients. In fact, this will follow from an exact formula relating the weight \(k\), the index \(d_{\G}\), and the zeros of \(f\). This is known as the valence formula and we require some notation to state it. For any \(z \in \H\), let \(v_{z}(f)\) be the index of the first nonzero term in the Taylor series of \(f\) at \(z\). Equivalently, \(v_{z}(f)\) is the order of vanishing of \(f\) at \(z\). Note that \(v_{z}(f)\) is necessarily nonnegative as \(f\) is holomorphic and
+      The vector space \(\mc{M}_{k}(\G,\nu)\), and hence \(\mc{S}_{k}(\G,\nu)\) as well, turns out to be finite dimensional. This will be accomplished by showing that any \(f \in \mc{M}_{k}(\G,\nu)\) is determined by finitely many of its Fourier coefficients. In fact, this will follow from an exact formula relating the weight \(k\), the index \(d_{\G}\), and the zeros of \(f\). This is known as the valence formula and we require some notation to state it. For any \(z \in \H\), let \(v_{z}(f)\) be the index of the first nonzero term in the Taylor series expansion of \(f\) about \(z\). Equivalently, \(v_{z}(f)\) is the order of vanishing of \(f\) at \(z\). Note that \(v_{z}(f)\) is necessarily nonnegative as \(f\) is holomorphic and
       \[
         v_{\g z}(f) = v_{z}(f),
       \]
-      for any \(\g \in \G\) by modularity. For a cusp \(\mf{a}\) of \(\GH\), we let \(v_{\mf{a}}(f)\) be the index of the first nonzero term in the Fourier series of \(f\) at the \(\mf{a}\) cusp. That is, \(v_{\mf{a}}(f)\) is the order of vanishing of \(f|_{k}\s_{\mf{a}}\) at \(\infty\). To show \(v_{\mf{a}}(f)\) is well-defined, we need to verify that it is independent of the choice of scaling matrix \(\s_{\mf{a}}\). This follows from \cref{equ:cusp_form_independence_of_scaling_matrix_modular} since scaling matrices are determined up to composition on the right by an element of \(\G_{\infty}\). Also, \(v_{\mf{a}}(f)\) is again nonnegative by the holomorphy of \(f\) and
+      for any \(\g \in \G\) by modularity. For a cusp \(\mf{a}\) of \(\GH\), we let \(v_{\mf{a}}(f)\) be the index of the first nonzero term in the Fourier series expansion of \(f\) at the \(\mf{a}\) cusp. That is, \(v_{\mf{a}}(f)\) is the order of vanishing of \(f|_{k}\s_{\mf{a}}\) at \(\infty\). To show \(v_{\mf{a}}(f)\) is well-defined, we need to verify that it is independent of the choice of scaling matrix \(\s_{\mf{a}}\). This follows from \cref{equ:cusp_form_independence_of_scaling_matrix_modular} since scaling matrices are determined up to composition on the right by an element of \(\G_{\infty}\). Also, \(v_{\mf{a}}(f)\) is again nonnegative by the holomorphy of \(f\) and
       \[
         v_{\mf{a}'}(f) = v_{\mf{a}}(f),
       \]
@@ -794,7 +794,7 @@
         \]
       \end{theorem*}
       \begin{proof}
-        We will first prove the valence formula for the modular group and then extend the result to \(\G\). Let \(F \in \mc{M}_{k}(\SL_{2}(\Z))\) be nonzero so that its zeros are isolated. We claim that all of the zeros of \(F\) satisfy \(\Im(z) < T\) for some positive \(T\). To see this, let the Fourier series of \(F\) be given by
+        We will first prove the valence formula for the modular group and then extend the result to \(\G\). Let \(F \in \mc{M}_{k}(\SL_{2}(\Z))\) be nonzero so that its zeros are isolated. We claim that all of the zeros of \(F\) satisfy \(\Im(z) < T\) for some positive \(T\). To see this, let the Fourier series expansion of \(F\) be given by
         \[
           F(z) = \sum_{n \ge 0}a(n)e(nz).
         \]
@@ -961,7 +961,7 @@
         \[
           v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|} = \frac{kmd_{\G}}{12}.
         \]
-        Observe that the Fourier series of \(F\) is a product of the Fourier series for \(f\) over a complete set of \(\G\)-inequivalent cusps each with multiplicity \(m\). Therefore the index of the first nonzero term in the Fourier series of \(F\) is
+        Observe that the Fourier series expansion of \(F\) is a product of those for \(f\) over a complete set of \(\G\)-inequivalent cusps each with multiplicity \(m\). Therefore the index of the first nonzero term in the Fourier series expansion of \(F\) is
         \[
           v_{\infty}(F) = \sum_{\mf{a} \in \G\backslash\what{\Q}}mv_{\mf{a}}(f).
         \]
@@ -1102,10 +1102,10 @@
       \]
       In either case, if \(\chi\) is trivial or \(\mf{a} = \infty\) then we will suppress these dependencies accordingly. Also, recall that \(\chi\) is always regular at \(\infty\).
       
-      It turns out that we can explicitly compute the Fourier series of the Poincar\'e series and Eisenstein series. Their Fourier coefficients involve Kloosterman sums, or more generally Sali\'e sums when \(\chi\) is not trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. The arguments involved are only slightly different. We first deduce the Fourier series of the Poincar\'e series.
+      It turns out that we can explicitly compute the Fourier series expansions of the Poincar\'e series and Eisenstein series. Their Fourier coefficients involve Kloosterman sums, or more generally Sali\'e sums when \(\chi\) is not trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. The arguments involved are only slightly different. We first deduce the Fourier series expansion of the Poincar\'e series.
 
       \begin{proposition}\label{prop:Fourier_series_Poincare_modular}
-        Let \(\mf{b}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(P_{m,\chi,\mf{a}}(z)\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{b}\) cusp is given by
+        Let \(\mf{b}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series expansion of \(P_{m,\chi,\mf{a}}(z)\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{b}\) cusp is given by
         \begin{align*}
           (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\mf{a},\mf{b}}e(mz) \\
           &+ \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{n}}{\sqrt{m}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,n,c)}{c}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c}\right)\right)e(nz),
@@ -1166,15 +1166,15 @@
           (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) &= \d_{\mf{a},\mf{b}}e(mz) \\
           &+ \sum_{n \ge 1}\left(2\pi i^{-k}\left(\frac{\sqrt{n}}{\sqrt{m}}\right)^{k-1}\sum_{\substack{c \in \mc{C}_{\mf{a},\mf{b}}}}\frac{S_{\chi,\mf{a},\mf{b}}(m,n,c)}{c}J_{k-1}\left(\frac{4\pi\sqrt{mn}}{c}\right)\right)e(nz).
         \end{align*}
-        which is our desired Fourier series.
+        which is our desired Fourier series expansion.
       \end{proof}
       
       An immediate consequence of this result is that the Poincar\'e series \(P_{m,\chi,\mf{a}}\) of positive index are cusp forms.
       
-      The argument to obtain the Fourier series of the Eisenstein series is much the same. The only slight difference is that we will pass by the pole of the integrand instead of deforming to the Hankel contour about the negative real axis.
+      The argument to obtain the Fourier series expansion of the Eisenstein series is much the same. The only slight difference is that we will pass by the pole of the integrand instead of deforming to the Hankel contour about the negative real axis.
       
       \begin{proposition}\label{prop:Fourier_series_Eisenstein_modular}
-        Let \(\mf{b}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series of \(E_{\chi,\mf{a}}(z)\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{b}\) cusp is given by
+        Let \(\mf{b}\) be a cusp of \(\G_{0}(N)\backslash\H\) with scaling matrix \(\s_{\mf{b}}\). The Fourier series expansion of \(E_{\chi,\mf{a}}(z)\) on \(\G_{0}(N)\backslash\H\) at the \(\mf{b}\) cusp is given by
         \[
           (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\mf{a},\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{c^{k}}\right)e(nz).
         \]
@@ -1216,7 +1216,7 @@
         \[
           \frac{(-1)^{k}(2\pi in)^{k-1}}{c^{k}}\int_{(2\pi ty)}\frac{e^{w}}{w^{k}}\,dw.
         \]
-        The integrand of the remaining integral is meromorphic with a pole of order \(k\) at \(w = 0\). From the Laurent series of \(\frac{e^{w}}{w^{k}}\), the residue is easily seen to be \(\G(k)\). So upon shifting the line of integration to \((-\e)\), we pass by this pole and obtain
+        The integrand of the remaining integral is meromorphic with a pole of order \(k\) at \(w = 0\). From the Laurent series expansion of \(\frac{e^{w}}{w^{k}}\) about \(w = 0\), the residue is easily seen to be \(\G(k)\). So upon shifting the line of integration to \((-\e)\), we pass by this pole and obtain
         \[
           \frac{(-2\pi i)^{k}n^{k-1}}{\G(k)c^{k}}+\frac{(-1)^{k}(2\pi in)^{k-1}}{c^{k}}\int_{(-\e)}\frac{e^{w}}{w^{k}}\,dw.
         \]
@@ -1232,14 +1232,14 @@
         \[
           (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \d_{\mf{a},\mf{b}}+\sum_{n \ge 1}\left(\frac{(-2\pi i)^{k}n^{k-1}}{\G(k)}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi}(0,n,c)}{c^{k}}\right)e(nz).
         \]
-        which is our desired Fourier series.
+        which is our desired Fourier series expansion.
       \end{proof}
 
-      An interesting consequence is that the constant term in the Fourier series of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is zero unless \(\mf{a}\) is \(\G\)-equivalent to \(\mf{b}\). Therefore the Eisenstein series \(E_{\chi,\mf{a}}\) are actually never cusp forms. Accordingly, write \(\mc{E}_{k}(\G,\chi)\) for the subspace spanned by the Eisenstein series associated to a complete set of \(\G\)-inequivalent cusps. It turns out that \(\mc{M}_{k}(\G,\chi)\) decomposes as
+      An interesting consequence is that the constant term in the Fourier series expansion of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is zero unless \(\mf{a}\) is \(\G\)-equivalent to \(\mf{b}\). Therefore the Eisenstein series \(E_{\chi,\mf{a}}\) are actually never cusp forms. Accordingly, write \(\mc{E}_{k}(\G,\chi)\) for the subspace spanned by the Eisenstein series associated to a complete set of \(\G\)-inequivalent cusps. It turns out that \(\mc{M}_{k}(\G,\chi)\) decomposes as
       \[
         \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
       \]
-      where \(\mc{S}_{k}(\G,\chi)\) is spanned by the Poincar\'e series of positive index. Moreover, this decomposition is orthogonal in the sense that the Petersson inner product between elements of \(\mc{S}_{k}(\G,\chi)\) and \(\mc{E}_{k}(\G,\chi)\) is zero. To show all of this, let \(\mf{a}\) be a cusp of \(\G_{0}(N)\backslash\H\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\chi)\) and let its Fourier series at the \(\mf{a}\) cusp be
+      where \(\mc{S}_{k}(\G,\chi)\) is spanned by the Poincar\'e series of positive index. Moreover, this decomposition is orthogonal in the sense that the Petersson inner product between elements of \(\mc{S}_{k}(\G,\chi)\) and \(\mc{E}_{k}(\G,\chi)\) is zero. To show all of this, let \(\mf{a}\) be a cusp of \(\G_{0}(N)\backslash\H\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\chi)\) and let its Fourier series expansion at the \(\mf{a}\) cusp be
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 1}a_{\mf{a}}(n)e(nz).
       \]
@@ -1277,7 +1277,7 @@
         \[
           \frac{1}{V_{\G}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e(-m\conj{z})\Im(z)^{k}\,d\mu.
         \]
-        Substituting in the Fourier series of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
+        Substituting in the Fourier series expansion of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
         \[
           \frac{1}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(m)e^{-4\pi my}y^{k}\,\frac{dy}{y^{2}},
         \]
@@ -1319,7 +1319,7 @@
         \[
           \frac{1}{V_{\G}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{k}\,d\mu.
         \]
-        Substituting in the Fourier series of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
+        Substituting in the Fourier series expansion of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
         \[
           \frac{1}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(0)y^{k}\,\frac{dy}{y^{2}},
         \]
@@ -1345,7 +1345,7 @@
         \[
           \sum_{\mf{a} \in \G\backslash\what{\Q}}a_{\mf{a}}E_{\chi,\mf{a}}(z),
         \]
-        is a cusp form. Recall from \cref{prop:Fourier_series_Eisenstein_modular} that the constant term in the Fourier series of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is \(\d_{\mf{a},\mf{b}}\). Therefore \(a_{\mf{a}} = 0\) which proves that these spaces are disjoint. Moreover, this fact also implies that
+        is a cusp form. Recall from \cref{prop:Fourier_series_Eisenstein_modular} that the constant term in the Fourier series expansion of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is \(\d_{\mf{a},\mf{b}}\). Therefore \(a_{\mf{a}} = 0\) which proves that these spaces are disjoint. Moreover, this fact also implies that
         \[
           f(z)-\sum_{\mf{a} \in \G\backslash\what{\Q}}a_{\mf{a}}(n)E_{\chi,\mf{a}}(z),
         \]
@@ -1475,14 +1475,14 @@
       \begin{equation}\label{equ:Hecke_operator_explicit_formula}
         (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}\<a\>f\left(\frac{az+b}{d}\right),
       \end{equation}
-      where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). Moreover, we can use this formula to deduce how the Hecke operators act on the Fourier series of modular forms.
+      where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). Moreover, we can use this formula to deduce how the Hecke operators act on the Fourier series expansion of modular forms.
 
       \begin{proposition}
-        Let \(f \in \mc{M}_{k}(N,\chi)\) have Fourier series
+        Let \(f \in \mc{M}_{k}(N,\chi)\) have Fourier series expansion
         \[
           f(z) = \sum_{n \ge 0}a(n)e(nz).
         \]
-        Then for any positive integer \(m\), the Fourier series of \(T_{m}f\) is
+        Then for any positive integer \(m\), the Fourier series expansion of \(T_{m}f\) is
         \[
           (T_{m}f)(z) = \sum_{n \ge 0}\left(\sum_{d \mid (n,m)}\chi(d)d^{k-1}a\left(\frac{nm}{d^{2}}\right)\right)e(nz).
         \]

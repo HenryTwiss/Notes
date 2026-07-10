@@ -395,7 +395,7 @@
         \[
           \frac{d}{dz}(\log(1+z)-z) = \frac{1}{1+z}-1 \quad \text{and} \quad \frac{d^{2}}{dz^{2}}(\log(z)-z) = -\frac{1}{(1+z)^{2}}.
         \]
-        At \(z = 0\), the first derivative is zero and the second derivative is negative. So taking the Taylor series of \(\log(1+z)-z\) and truncating after the third term gives
+        At \(z = 0\), the first derivative is zero and the second derivative is negative. So taking the Taylor series expansion of \(\log(1+z)-z\) about \(z = 0\) and truncating after the third term gives
         \[
           \log(1+z)-z = -\frac{1}{2}z^{2}+\frac{1}{3}z^{3}+O(z^{4}).
         \]
@@ -403,7 +403,7 @@
         \[
           I_{1}(s) = \int_{-1}^{1}e^{-\frac{s}{2}z^{2}}e^{\frac{1}{3}sz^{3}+O_{\e,\d}(sz^{4})}\,dz.
         \]
-          Considering the Taylor series of \(e^{z}\) and truncating after the second term, we find that
+          Considering the Taylor series expansion of \(e^{z}\) about \(z = 0\) and truncating after the second term, we find that
         \[
           e^{\frac{1}{3}sz^{3}+O_{\e,\d}(sz^{4})} = 1+\frac{1}{3}sz^{3}+O_{\e,\d}(sz^{4})+O_{\e,\d}(s^{2}z^{6}).
         \]
