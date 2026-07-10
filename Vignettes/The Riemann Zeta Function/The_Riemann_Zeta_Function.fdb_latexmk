@@ -1,12 +1,12 @@
 # Fdb version 3
-["makeindex The_Riemann_Zeta_Function.idx"] 1782185231 "The_Riemann_Zeta_Function.idx" "The_Riemann_Zeta_Function.ind" "The_Riemann_Zeta_Function" 1782856233
-  "The_Riemann_Zeta_Function.idx" 1782856233 96 c06e7c1281976096729997cbdc48f511 "pdflatex"
+["makeindex The_Riemann_Zeta_Function.idx"] 1782185231 "The_Riemann_Zeta_Function.idx" "The_Riemann_Zeta_Function.ind" "The_Riemann_Zeta_Function" 1783648055
+  "The_Riemann_Zeta_Function.idx" 1783648055 96 c06e7c1281976096729997cbdc48f511 "pdflatex"
   (generated)
   "The_Riemann_Zeta_Function.ilg"
   "The_Riemann_Zeta_Function.ind"
-["pdflatex"] 1782856232 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex" "The_Riemann_Zeta_Function.pdf" "The_Riemann_Zeta_Function" 1782856233
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.aux" 1782856072 19524 48b477248da445f5e993eef7a10a1849 ""
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex" 1782856232 23833 51d14f03c26bab29ee882dc75f01ae62 ""
+["pdflatex"] 1783648054 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex" "The_Riemann_Zeta_Function.pdf" "The_Riemann_Zeta_Function" 1783648055
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.aux" 1783613638 19524 c6d47f24737758c851c7014b701fd964 ""
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex" 1783648054 23784 295134c2ae5a254a6fb0574e484528fa ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1781632838 5480 1c1089c4f68d35449bb71f726253e7ea ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -26,7 +26,6 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
@@ -40,7 +39,6 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1248133631 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
@@ -188,11 +186,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "The_Riemann_Zeta_Function.aux" 1782856233 4677 046c670200bd320830147ebbc0f54df7 "pdflatex"
+  "The_Riemann_Zeta_Function.aux" 1783648055 4506 09a8028d700a56f8f25a41470d9bffb9 "pdflatex"
   "The_Riemann_Zeta_Function.ind" 1782185231 140 0c8fd8a27f4c05f7fadefd4401a80d8f "makeindex The_Riemann_Zeta_Function.idx"
-  "The_Riemann_Zeta_Function.out" 1782856233 783 5edfbbb1b72e4a5639eb255acc0f564a "pdflatex"
-  "The_Riemann_Zeta_Function.tex" 1782856232 23833 51d14f03c26bab29ee882dc75f01ae62 ""
-  "The_Riemann_Zeta_Function.toc" 1782856233 390 76b856a69b9164b740b2f79aadf25b89 "pdflatex"
+  "The_Riemann_Zeta_Function.out" 1783648055 554 c940ce3359f01354dbb608758a12c2d0 "pdflatex"
+  "The_Riemann_Zeta_Function.tex" 1783648054 23784 295134c2ae5a254a6fb0574e484528fa ""
+  "The_Riemann_Zeta_Function.toc" 1783648055 262 1bfca49f5e86ab28f311baaca62298d3 "pdflatex"
   (generated)
   "The_Riemann_Zeta_Function.aux"
   "The_Riemann_Zeta_Function.idx"
