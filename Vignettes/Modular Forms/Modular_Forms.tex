@@ -2312,4 +2312,50 @@
       \end{proof}
 
       In particular, \cref{prop:twisted_modular_forms} shows that \(f \ox \psi\) is well-defined for any Dirichlet character \(\psi\).
+    \section{The Petersson Trace Formula}
+      From \cref{thm:newforms_characterization_modular}, \(\mc{S}_{k}(N,\chi)\) admits an orthonormal basis of Hecke eigenforms. In particular, \(\mc{S}_{k}(N,\chi)\) admits a merely orthogonal basis. Denote this basis by \(u_{1},\ldots,u_{r}\) where \(r\) is the dimension of \(\mc{S}_{k}(N,\chi)\). Each of these forms admits a Fourier series at the \(\mf{a}\) cusp given by
+      \[
+        (u_{j}|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 1}a_{j,\mf{a}}(n)e^{2\pi inz}.
+      \]
+      The Petersson trace formula is an equation relating the Fourier coefficients \(a_{j,\mf{a}}(n)\) and \(a_{j,\mf{b}}(n)\) for \(1 \le j \le r\) at two cusps \(\mf{a}\) and \(\mf{b}\) of \(\G_{0}(N)\backslash\H\) to a sum of \(J\)-Bessel functions and Sali\'e sums. To prove the Petersson trace formula we compute the inner product of two Poincar\'e series \(P_{n,k,\chi,\mf{a}}(z)\) and \(P_{m,k,\chi,\mf{b}}(z)\) in two different ways. One way is geometric in nature while the other is spectral. Since \cref{thm:Petersson_inner_product_with_Poincare_series} says that \(\<P_{n,k,\chi,\mf{a}},P_{m,k,\chi,\mf{b}}\>\) extracts the \(m\)-th Fourier coefficient of \(P_{n,k,\chi,\mf{a}}\) at the \(\mf{b}\) cusp up to a constant, the Petersson trace formula amounts to computing the \(m\)-th Fourier coefficient of \(P_{n,k,\chi,\mf{a}}\) in two different ways. We will begin with the geometric method first. This is easy as we have already computed the Fourier series of the Poincar\'e series. Applying \cref{thm:Petersson_inner_product_with_Poincare_series} to \(\<P_{n,k,\chi,\mf{a}},P_{m,k,\chi,\mf{b}}\>\) and using \cref{prop:Fourier_series_Poincare_modular} gives
+      \begin{equation}\label{equ:Petersson_trace_1}
+        \begin{aligned}
+          \<P_{n,k,\chi,\mf{a}},P_{m,k,\chi,\mf{b}}\> &= \frac{\G(k-1)h_{\mf{b}}^{k}}{V_{\G_{0}(N)}(4\pi m)^{k-1}} \\
+          &\cdot \left(\d_{\mf{a},\mf{b}}\d_{n,m}+2\pi i^{-k}\left(\frac{\sqrt{mh_{\mf{a}}}}{\sqrt{nh_{\mf{b}}}}\right)^{k-1}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi,\mf{a},\mf{b}}(n,m,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{nm}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right)\right).
+        \end{aligned}
+      \end{equation}
+      This is the first identity we are after. To obtain the second identity, we use the fact that \(u_{1},\ldots,u_{r}\) is an orthogonal basis for \(\mc{S}_{k}(N,\chi)\) and \cref{thm:Petersson_inner_product_with_Poincare_series} to write
+      \[
+        P_{n,k,\chi,\mf{a}}(z) = \sum_{1 \le j \le r}\frac{\<P_{n,k,\chi,\mf{a}},u_{j}\>}{\<u_{j},u_{j}\>}u_{j}(z) = \sum_{1 \le j \le r}\frac{\conj{\<u_{j},P_{n,k,\chi,\mf{a}}\>}}{\<u_{j},u_{j}\>}u_{j}(z) = \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G_{0}(N)}(4\pi n)^{k-1}}\sum_{1 \le j \le r}\frac{\conj{a_{j,\mf{a}}(n)}}{\<u_{j},u_{j}\>}u_{j}(z).
+      \]
+      This last expression is the spectral decomposition of \(P_{n,k,\chi,\mf{a}}(z)\) in terms of the basis \(u_{1},\ldots,u_{r}\). So if we take the inner product of this last expression with \(P_{m,k,\chi,\mf{b}}\) and apply \cref{thm:Petersson_inner_product_with_Poincare_series}, we obtain
+      \begin{equation}\label{equ:Petersson_trace_2}
+        \<P_{n,k,\chi,\mf{a}},P_{m,k,\chi,\mf{b}}\> = \frac{\G(k-1)^{2}(h_{\mf{a}}h_{\mf{b}})^{k}}{V_{\G_{0}(N)}^{2}(16\pi^{2}nm)^{k-1}}\sum_{1 \le j \le r}\frac{\conj{a_{j,\mf{a}}(n)}a_{j,\mf{b}}(m)}{\<u_{j},u_{j}\>}.
+      \end{equation}
+      This is the second identity we are after. Combine \cref{equ:Petersson_trace_1,equ:Petersson_trace_2} and clear the \(\frac{\G(k-1)h_{\mf{b}}^{k}}{V_{\G_{0}(N)}(4\pi m)^{k-1}}\) factor to see that
+      \[
+        \frac{\G(k-1)h_{\mf{a}}^{k}}{V_{\G_{0}(N)}(4\pi n)^{k-1}}\sum_{1 \le j \le r}\frac{\conj{a_{j,\mf{a}}(n)}a_{j,\mf{b}}(m)}{\<u_{j},u_{j}\>} = \d_{\mf{a},\mf{b}}\d_{n,m}+2\pi i^{-k}\left(\frac{\sqrt{mh_{\mf{a}}}}{\sqrt{nh_{\mf{b}}}}\right)^{k-1}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi,\mf{a},\mf{b}}(n,m,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{nm}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right).
+      \]
+      Since \(\left(\frac{\sqrt{mh_{\mf{a}}}}{\sqrt{nh_{\mf{b}}}}\right)^{k-1} = 1\) when \(\d_{\mf{a},\mf{b}}\d_{n,m} = 1\), we can factor this term out of the entire right-hand side and clear it resulting in
+      \[
+        \frac{\G(k-1)h_{\mf{a}}\sqrt{h_{\mf{a}}h_{\mf{b}}}^{k-1}}{V_{\G_{0}(N)}(4\pi\sqrt{nm})^{k-1}}\sum_{1 \le j \le r}\frac{\conj{a_{j,\mf{a}}(n)}a_{j,\mf{b}}(m)}{\<u_{j},u_{j}\>} = \d_{\mf{a},\mf{b}}\d_{n,m}+2\pi i^{-k}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi,\mf{a},\mf{b}}(n,m,c)}{ch_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{nm}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right).
+      \]
+      Finally, divide by \(h_{\mf{a}}\) and note that \(h_{\mf{a}} = \sqrt{h_{\mf{a}}h_{\mf{b}}}\) when \(\d_{\mf{a},\mf{b}} = 1\) to obtain the \textbf{Petersson trace formula}\index{Petersson trace formula} relative to the \(\mf{a}\) and \(\mf{b}\) cusps:
+      \[
+        \frac{\G(k-1)\sqrt{h_{\mf{a}}h_{\mf{b}}}^{k-1}}{V_{\G_{0}(N)}(4\pi\sqrt{nm})^{k-1}}\sum_{1 \le j \le r}\frac{\conj{a_{j,\mf{a}}(n)}a_{j,\mf{b}}(m)}{\<u_{j},u_{j}\>} = \frac{\d_{\mf{a},\mf{b}}\d_{n,m}}{\sqrt{h_{\mf{a}}h_{\mf{b}}}}+2\pi i^{-k}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi,\mf{a},\mf{b}}(n,m,c)}{ch_{\mf{a}}h_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{nm}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right).
+      \]
+      We refer to the left-hand side side as the \textbf{spectral side}\index{spectral side} and the right-hand side as the \textbf{geometric side}\index{geometric side}. We collect our work as a theorem:
+
+      \begin{theorem*}[Petersson trace formula]
+        Let \(u_{1},\ldots,u_{r}\) be an orthogonal basis of Hecke eigenforms for \(\mc{S}_{k}(N,\chi)\) with Fourier coefficients \(a_{j,
+        \mf{a}}(n)\) at the \(\mf{a}\) cusp. Then for any positive integers \(n,m \ge 1\) and any two cusps \(\mf{a}\) and \(\mf{b}\) of \(\G_{0}(N)\backslash\H\), we have
+        \[
+          \frac{\G(k-1)\sqrt{h_{\mf{a}}h_{\mf{b}}}^{k-1}}{V_{\G_{0}(N)}(4\pi\sqrt{nm})^{k-1}}\sum_{1 \le j \le r}\frac{\conj{a_{j,\mf{a}}(n)}a_{j,\mf{b}}(m)}{\<u_{j},u_{j}\>} = \frac{\d_{\mf{a},\mf{b}}\d_{n,m}}{\sqrt{h_{\mf{a}}h_{\mf{b}}}}+2\pi i^{-k}\sum_{c \in \mc{C}_{\mf{a},\mf{b}}}\frac{S_{\chi,\mf{a},\mf{b}}(n,m,c)}{ch_{\mf{a}}h_{\mf{b}}}J_{k-1}\left(\frac{4\pi\sqrt{nm}}{c\sqrt{h_{\mf{a}}h_{\mf{b}}}}\right).
+        \]
+      \end{theorem*}
+      
+      Note that if we take \(u_{1},\ldots,u_{r}\) to be an orthonormal basis, equivalently the basis elements are Hecke normalized, then \(\<u_{j},u_{j}\> = 1\). Regardless, a particularly important case of the Petersson trace formula is when \(\mf{a} = \mf{b} = \infty\) and \(\s_{\mf{a}} = \s_{\mf{b}} = I\). For then \(h_{\mf{a}} = h_{\mf{b}} = 1\), \(\mc{C}_{\infty,\infty} = \{c \ge 1:c \equiv 0 \tmod{N}\}\), the Sali\'e sum reduces to the usual one, and the Petersson trace formula takes the form
+      \[
+        \frac{\G(k-1)}{V_{\G_{0}(N)}(4\pi \sqrt{nm})^{k-1}}\sum_{1 \le j \le r}\frac{\conj{a_{j}(n)}a_{j}(m)}{\<u_{j},u_{j}\>} = \d_{n,m}+2\pi i^{-k}\sum_{\substack{c \ge 1 \\ c \equiv 0 \tmod{N}}}\frac{S_{\chi}(n,m,c)}{c}J_{k-1}\left(\frac{4\pi\sqrt{nm}}{c}\right).
+    \]
 \fi\end{document}
