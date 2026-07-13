@@ -1556,17 +1556,18 @@
         which are identical. Therefore the claim is proved.
       \end{proof}
 
-      With this lemma in hand, we can now prove the composition formula for the Hecke operators.
+      With this lemma in hand, we can now prove the composition formula for the Hecke operators. This result will also show that the Hecke operators commute.
 
       \begin{theorem}
         The Hecke operators \(T_{m}\) and \(T_{n}\) on \(\mc{M}_{k}(N,\chi)\), for any positive integers \(m\) and \(n\), satisfy
         \[
           T_{m}T_{n} = \sum_{d \mid (m,n)}\chi(d)d^{k-1}T_{\frac{mn}{d^{2}}}.
         \]
-        In particular, for \((m,n) = 1\) and all primes \(p\) and positive integers \(r\) we have the relations
+        In particular, the Hecke operators are commutative. Moreover, we have the relations
         \[
-          T_{m}T_{n} = T_{mn} \quad \text{and} \quad T_{p}T_{p^{r}} = T_{p^{r+1}}+\chi(p)p^{k-1}T_{p^{r-1}}.
+          T_{m}T_{n} = T_{mn} \quad \text{and} \quad T_{p}T_{p^{r}} = T_{p^{r+1}}+\chi(p)p^{k-1}T_{p^{r-1}},
         \]
+        whenever \((m,n) = 1\) and for all primes \(p\) and positive integers \(r\).
       \end{theorem}
       \begin{proof}
         To prove the first statement, it suffices to show that left-hand and right-hand sides act the same on the Fourier coefficients of any \(f \in \mc{M}_{k}(N,\chi)\). So let
@@ -1585,7 +1586,7 @@
         \[
           (T_{m}T_{n}f)(z) = \sum_{d_{3} \mid (m,n)}\chi(d_{3})d_{3}^{k-1}\left(T_{\frac{mn}{d_{3}^{2}}}f\right)(z).
         \]
-        The proof of the first statement is complete upon making the change of variables \(d_{3} \mapsto d\). The latter statement is immediate from the first as \(d = 1\) when \((m,n) = 1\) and \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
+        The proof of the first statement is complete upon making the change of variables \(d_{3} \mapsto d\). Commutativity follows because the formula is symmetric in \(m\) and \(n\). The last statement is immediate from the first as \(d = 1\) when \((m,n) = 1\) and \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
       \end{proof}
 
       \iffalse
