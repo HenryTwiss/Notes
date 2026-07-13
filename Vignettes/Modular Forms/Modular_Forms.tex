@@ -502,7 +502,7 @@
       \subsubsection*{Hecke Congruence Subgroups}
         In the case of the Hecke congruence subgroup \(\G_{0}(N)\), the Bruhat decomposition simplifies and we recover the usual Kloosterman and Sali\'e sums. As the entries \(a\) and \(d\) in \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix}\) are determined modulo \(c\), we find that \(d\) is the inverse of \(a\) modulo \(c\) because \(\det(\w_{c/d}) = 1\). Also, \(\mc{C}_{\infty,\infty} = N\Z_{+}\) and \(\mc{D}_{\infty,\infty}(c) = (\Z/c\Z)^{\ast}\) because if \(\g = \begin{psmallmatrix} \ast & \ast \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) then \(c \equiv 0 \tmod{N}\) and we must have \((c,d) = 1\) as \(\det(\g) = 1\). Moreover, every such pair gives rise to a matrix in \(\G_{0}(N)\). Whence
       \[
-        K_{\infty,\infty}(n,m,c) = K(n,m,c) \quad \text{and} \quad S_{\chi,\infty,\infty}(n,m,c) = S_{\chi}(n,m,c),
+        K_{\infty,\infty}(m,n,c) = K(m,n,c) \quad \text{and} \quad S_{\chi,\infty,\infty}(m,n,c) = S_{\chi}(m,n,c),
       \]
       which are the usual Kloosterman and Sali\'e sums respectively. In these cases, we will suppress the dependencies upon the cusps.
   \section{Modular Forms}
@@ -692,7 +692,7 @@
         \[
           |nz+m| \ge \d|ni+m|,
         \]
-        for all pairs of integers \((n,m)\) and all \(z \in S_{a,b}\).
+        for all integers \(n\) and \(m\) and all \(z \in S_{a,b}\).
       \end{lemma}
       \begin{proof}
         If \(n = 0\) then the claim is obvious as any \(\d\) is sufficient. If \(n \neq 0\) then it is equivalent to prove
@@ -1477,7 +1477,7 @@
       \end{equation}
       where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). Moreover, we can use this formula to deduce how the Hecke operators act on the Fourier series expansion of modular forms.
 
-      \begin{proposition}
+      \begin{proposition}\label{prop:Hecke_operators_on_Fourier_coefficients}
         Let \(f \in \mc{M}_{k}(N,\chi)\) have Fourier series expansion
         \[
           f(z) = \sum_{n \ge 0}a(n)e(nz).
@@ -1510,6 +1510,30 @@
         \sum_{n \ge 0}\left(\sum_{a \mid (n,m)}\chi(a)a^{k-1}a\left(\frac{nm}{a^{2}}\right)\right)e(nz).
         \]
         This is equivalent to the claim upon making the change of variables \(a \mapsto d\).
+      \end{proof}
+
+      Now that we know how the Hecke operators act on the Fourier coefficients of modular forms, we can prove composition relations about them.
+
+      \begin{theorem}
+        The Hecke operators \(T_{m}\) and \(T_{n}\) on \(\mc{M}_{k}(N,\chi)\), for any positive integers \(m\) and \(n\), satisfy
+        \[
+          T_{m}T_{n} = \sum_{d \mid (m,n)}d^{k-1}T_{\frac{mn}{d^{2}}}.
+        \]
+        In particular, for \((m,n) = 1\) and all primes \(p\) and positive integers \(r\) we have the relations
+        \[
+          T_{m}T_{n} = T_{mn} \quad \text{and} \quad T_{p}T_{p^{r}} = T_{p^{r+1}}+\chi(p)p^{k-1}T_{p^{r-1}}.
+        \]
+      \end{theorem}
+      \begin{proof}
+        To prove the first statement, it suffices to show that left-hand and right-hand sides act the same on the Fourier coefficients of any \(f \in \mc{M}_{k}(N,\chi)\). So let
+        \[
+          f(z) = \sum_{r \ge 0}a(r)e(r z),
+        \]
+        be the Fourier series expansion of \(f\). From two applications of \cref{prop:Hecke_operators_on_Fourier_coefficients}, we find that
+        \[
+          (T_{m}T_{n}f)(z) = \sum_{r \ge 0}\left(\sum_{d \mid (r,m)}\sum_{e \mid \left(\frac{rm}{d^{2}},n\right)}\chi(de)(de)^{k-1}a\left(\frac{rmn}{d^{2}e^{2}}\right)\right)e(rz).
+        \]
+        We will now prove that these divisor conditions \(d \mid (r,m)\) and \(e \mid \left(\frac{rm}{d^{2}},n\right)\) are equivalent to \(d \mid (m,n)\) and \(e \mid \left(r,\frac{mn}{d^{2}}\right)\). \todo{xxx}
       \end{proof}
 
       \iffalse
