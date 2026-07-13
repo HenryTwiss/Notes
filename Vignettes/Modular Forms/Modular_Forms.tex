@@ -1512,12 +1512,56 @@
         This is equivalent to the claim upon making the change of variables \(a \mapsto d\).
       \end{proof}
 
-      Now that we know how the Hecke operators act on the Fourier coefficients of modular forms, we can prove composition relations about them.
+      Now that we know how the Hecke operators act on the Fourier coefficients of modular forms, we can prove composition relations about them. However, we will require a rather tedious lemma about divisor pairs.
+
+      \begin{lemma}\label{lem:Hecke_composition_lemma}
+        Fix positive integers \(m\) and \(n\) and a nonnegative \(r\). For any positive integer \(d\), set
+        \[
+          M(d) = \left\{d = d_{1}d_{2}:d_{1} \mid (r,m) \text{ and } d_{2} \mid \left(\frac{rm}{d_{1}^{2}},n\right)\right\}.
+        \]
+        Then
+        \[
+          M(d) = \left\{d = d_{3}d_{4}:d_{3} \mid (m,n) \text{ and } d_{4} \mid \left(r,\frac{mn}{d_{3}^{2}}\right)\right\}.
+        \]
+      \end{lemma}
+      \begin{proof}
+        As the greatest common divisor is multiplicative in every entry, it suffice to prove the claim when \(m = p^{\a}\), \(n = p^{\b}\), \(r = p^{\g}\), and \(d = d^{\d}\) are all powers of a prime \(p\). Then \(d_{1} = p^{i_{1}}\) and \(d_{2} = p^{i_{2}}\) with
+        \[
+          0 \le i_{1} \le \min(\a,\g) \quad \text{and} \quad 0 \le i_{2} \le \min(\a+\g-2i_{1},\b),
+        \]
+        while \(d_{3} = p^{i_{3}}\) and \(d_{4} = p^{i_{4}}\) with
+        \[
+          0 \le i_{2} \le \min(\a+\g-2i_{1},\b) \quad \text{and} \quad 0 \le i_{4} \le \min(\a+\b-2i_{3},\g).
+        \]
+        Moreover, \(i_{2} = \d-i_{i}\) and \(i_{4} = \d-i_{3}\). Substituting in this relations, our conditions become
+        \[
+          \max(0,\d-\b) \le i_{1} \le \min(\a,\g,\d,\a+\g-\d),
+        \]
+        and
+        \[
+          \max(0,\d-\g) \le i_{3} \le \min(\a,\b,\d,\a+\b-\d).
+        \]
+        So our claim about \(M(d)\) is proved if these intervals are of the same length. First suppose \(\d \le \a\). Then the upper bounds are \(\min(\g,\d)\) and \(\min(\b,\d)\) respectively. Therefore these intervals are of length
+        \[
+          \min(\g,\d)-\max(0,\d-\b)+1 \quad \text{and} \quad \min(\b,\d)-\max(0,\d-\g)+1,
+        \]
+        upon which a short computation shows are equal in every case. Now suppose \(\d > \a\). Then another short computation shows
+        \[
+          \min(\a,\g,\d,\a+\g-\d) = \a-\max(0,\d-\g) \quad \text{and} \quad \min(\a,\b,\d,\a+\b-\d) = \a-\max(0,\d-\b).
+        \]
+        Whence these intervals are of length
+        \[
+          \a-\max(0,\d-\g)-\max(0,\d-\b)+1 \quad \text{and} \quad \a-\max(0,\d-\b)-\max(0,\d-\g)+1,
+        \]
+        which are identical. Therefore the claim is proved.
+      \end{proof}
+
+      With this lemma in hand, we can now prove the composition formula for the Hecke operators.
 
       \begin{theorem}
         The Hecke operators \(T_{m}\) and \(T_{n}\) on \(\mc{M}_{k}(N,\chi)\), for any positive integers \(m\) and \(n\), satisfy
         \[
-          T_{m}T_{n} = \sum_{d \mid (m,n)}d^{k-1}T_{\frac{mn}{d^{2}}}.
+          T_{m}T_{n} = \sum_{d \mid (m,n)}\chi(d)d^{k-1}T_{\frac{mn}{d^{2}}}.
         \]
         In particular, for \((m,n) = 1\) and all primes \(p\) and positive integers \(r\) we have the relations
         \[
@@ -1531,9 +1575,17 @@
         \]
         be the Fourier series expansion of \(f\). From two applications of \cref{prop:Hecke_operators_on_Fourier_coefficients}, we find that
         \[
-          (T_{m}T_{n}f)(z) = \sum_{r \ge 0}\left(\sum_{d \mid (r,m)}\sum_{e \mid \left(\frac{rm}{d^{2}},n\right)}\chi(de)(de)^{k-1}a\left(\frac{rmn}{d^{2}e^{2}}\right)\right)e(rz).
+          (T_{m}T_{n}f)(z) = \sum_{r \ge 0}\left(\sum_{d = d_{1}d_{2}}\sum_{\substack{d_{1} \mid (r,m) \\ d_{2} \mid \left(\frac{rm}{d_{1}^{2}},n\right)}}\chi(d)(d)^{k-1}a\left(\frac{rmn}{d^{2}}\right)\right)e(rz).
         \]
-        We will now prove that these divisor conditions \(d \mid (r,m)\) and \(e \mid \left(\frac{rm}{d^{2}},n\right)\) are equivalent to \(d \mid (m,n)\) and \(e \mid \left(r,\frac{mn}{d^{2}}\right)\). \todo{xxx}
+        By \cref{lem:Hecke_composition_lemma}, we may further write
+        \[
+          (T_{m}T_{n}f)(z) = \sum_{r \ge 0}\left(\sum_{d = d_{3}d_{4}}\sum_{\substack{d_{3} \mid (m,n) \\ d_{4} \mid \left(r,\frac{mn}{d_{3}^{2}}\right)}}\chi(d)(d)^{k-1}a\left(\frac{rmn}{d^{2}}\right)\right)e(rz).
+        \]
+        Another application of \cref{prop:Hecke_operators_on_Fourier_coefficients} shows that for fixed \(d_{3}\) the sum over \(d_{4}\) is exactly the \(r\)-th Fourier coefficient of \(T_{\frac{mn}{d_{3}^{2}}}f\). Whence
+        \[
+          (T_{m}T_{n}f)(z) = \sum_{d_{3} \mid (m,n)}\chi(d_{3})d_{3}^{k-1}\left(T_{\frac{mn}{d_{3}^{2}}}f\right)(z).
+        \]
+        The proof of the first statement is complete upon making the change of variables \(d_{3} \mapsto d\). The latter statement is immediate from the first as \(d = 1\) when \((m,n) = 1\) and \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
       \end{proof}
 
       \iffalse
