@@ -1418,25 +1418,25 @@
       \[
         \D_{m} = \bigcup_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}\G_{1}(N)\a\G_{1}(N),
       \]
-      who themselves are double cosets. To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = U\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}V\) for some \(U,V \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(Z)\) and there are finitely many choices for \(a\) and \(d\) we conclude that this disjoint union is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
+      who themselves are double cosets. To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = U\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}V\) for some \(U,V \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(\Z)\) and there are finitely many choices for \(a\) and \(d\) we conclude that this disjoint union is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
       \[
         (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}f(z).
       \]
       The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}\). In order to compute the Hecke operators explicitly, we need to find a complete set of representatives for \(\G_{1}(N)\backslash(\G_{1}(N)\a\G_{1}(N))\) and all \(\a\). But this is the same as finding one for \(\G_{1}(N)\backslash(\G_{1}(N)\D_{m}\G_{1}(N))\) which is much easier to accomplish.
 
       \begin{lemma}\label{lem:cosets_for_Hecke_operators}
-        We have a disjoint union
+        There is a disjoint union
         \[
-          \Gamma_{1}(N)\D_{m}\Gamma_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}} \Gamma_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
+          \G_{1}(N)\D_{m}\G_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
-        where \(\g_{a} \in \G_{0}(N)\) is some matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\).
+        where \(\g_{a} \in \G_{0}(N)\) is a matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\).
       \end{lemma}
       \begin{proof}
         The reverse containment holds in view of 
         \[
            \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
         \]
-        For the forward containment, suppose \(\a = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \Gamma_{1}(N)\D_{m}\Gamma_{1}(N)\). As \(a'\) and \(c'\) are both non zero, we can find relatively prime integers \(u\) and \(v\) such that \(ua'+vc' = 0\). B\'ezout's identity then provides the existence of integers \(s\) and \(s\) with \(sv-ut = 1\). Now set \(\g = \begin{psmallmatrix} s & t \\ u & v \end{psmallmatrix} \in \SL_{2}(\Z)\). It follow that
+        For the forward containment, suppose \(\a = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \G_{1}(N)\D_{m}\G_{1}(N)\). As \(a'\) and \(c'\) are both nonzero, we can find relatively prime integers \(u\) and \(v\) such that \(ua'+vc' = 0\). B\'ezout's identity then provides the existence of integers \(s\) and \(s\) with \(sv-ut = 1\). Now set \(\g = \begin{psmallmatrix} s & t \\ u & v \end{psmallmatrix} \in \SL_{2}(\Z)\). It follow that
         \[
           \g\a = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix},
         \]
@@ -1456,11 +1456,11 @@
         \[
           \a = \eta\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
-        and the reverse inclusion follows. It remains to show that the union is disjoint. If not, then there exist matrices \(\eta_{1},\eta_{2} \in \G_{1}(N)\) satisfying
+        and the reverse inclusion follows. It remains to show that the union is disjoint. If not, then there exist \(\eta_{1},\eta_{2} \in \G_{1}(N)\) satisfying
         \[
           \eta_{1}\g_{a_{1}}\begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix} = \eta_{2}\g_{a_{2}}\begin{pmatrix} a_{2} & b_{2} \\ 0 & d_{2} \end{pmatrix},
         \]
-        for distinct matrices \(\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) satisfying \(a_{i}d_{i} = m\), \((a_{i},N) = 1\), and \(b_{i}\) modulo \(d_{i}\) . Then
+        for distinct matrices \(\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) satisfying \(a_{i}d_{i} = m\), \((a_{i},N) = 1\), and \(b_{i}\) modulo \(d_{i}\). Then
         \[
           \begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix}\begin{pmatrix} \frac{d_{2}}{m} & -\frac{b_{2}}{m} \\ 0 & \frac{a_{2}}{m} \end{pmatrix} = \begin{pmatrix} \frac{a_{1}}{a_{2}} & \ast \\ 0 & \frac{d_{1}}{d_{2}} \end{pmatrix},
         \]
@@ -1468,7 +1468,7 @@
         \[
           \begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix} = \begin{pmatrix} 1 & \ell \\ 0 & 1 \end{pmatrix}\begin{pmatrix} a_{2} & b_{2} \\ 0 & d_{2} \end{pmatrix},
         \]
-        for some integer \(\ell\). But as \(b_{1}\) and \(b_{2}\) are both modulo \(d_{1} = d_{2}\), we must have \(\ell = 0\). Hence \(b_{1} = b_{2}\). But then the matrices \(\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) are not distinct which is a contradiction. Therefore the union is disjoint completing the proof.
+        for some integer \(\ell\). But as \(b_{1}\) and \(b_{2}\) are both modulo \(d_{1} = d_{2}\), we must have \(\ell = 0\). Hence \(b_{1} = b_{2}\). But then the matrices \(\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) are not distinct which is a contradiction. Therefore the union is disjoint.
       \end{proof}
 
       With this lemma, we immediately find that the Hecke operators may be expressed in the form
