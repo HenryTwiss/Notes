@@ -1422,21 +1422,25 @@
       \[
         (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}f(z).
       \]
-      The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}\). In order to compute the Hecke operators explicitly, we need to find a complete set of representatives for \(\G_{1}(N)\backslash(\G_{1}(N)\a\G_{1}(N))\) and all \(\a\). But this is the same as finding one for \(\G_{1}(N)\backslash(\G_{1}(N)\D_{m}\G_{1}(N))\) which is much easier to accomplish.
+      The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}\). In order to compute the Hecke operators explicitly we need to find a complete set of representatives for each of the double cosets \(\G_{1}(N)\backslash(\G_{1}(N)\a\G_{1}(N))\) in the sum. But this is the same as finding a complete set of representatives for \(\G_{1}(N)\backslash(\G_{1}(N)\D_{m}\G_{1}(N))\) which is much easier to accomplish.
 
       \begin{lemma}\label{lem:cosets_for_Hecke_operators}
-        There is a disjoint union
+        We have a disjoint union
         \[
-          \Gamma_{1}(N)\D_{m}\Gamma_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\Gamma_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
+          \Gamma_{1}(N)\D_{m}\Gamma_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\Gamma_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix}.
         \]
         where \(\g_{a} \in \G_{0}(N)\) is some matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\).
       \end{lemma}
       \begin{proof}
+        We will first prove the disjoint union
+        \[
+          \Gamma_{1}(N)\D_{m}\Gamma_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\Gamma_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix}.
+        \]
         The reverse containment holds in view of 
         \[
            \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
         \]
-        For the forward containment, suppose \(\a = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \Gamma_{1}(N)\D_{m}\Gamma_{1}(N)\). As \(a'\) and \(c'\) are both nonzero, we can find relatively prime integers \(u\) and \(v\) such that \(ua'+vc' = 0\). B\'ezout's identity then provides the existence of integers \(s\) and \(s\) with \(sv-ut = 1\). Now set \(\g = \begin{psmallmatrix} s & t \\ u & v \end{psmallmatrix} \in \SL_{2}(\Z)\). It follow that
+        For the forward containment, suppose \(\a = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \D_{m}\Gamma_{1}(N)\). As \(a'\) and \(c'\) are both not zero, we can find relatively prime integers \(u\) and \(v\) such that \(ua'+vc' = 0\). B\'ezout's identity then provides the existence of integers \(s\) and \(t\) with \(sv-ut = 1\). Now set \(\g = \begin{psmallmatrix} s & t \\ u & v \end{psmallmatrix} \in \SL_{2}(\Z)\). It follow that
         \[
           \g\a = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix},
         \]
