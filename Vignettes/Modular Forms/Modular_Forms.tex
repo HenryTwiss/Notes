@@ -75,9 +75,9 @@
       \[
         \pi:\SL_{2}(\Z) \to \SL_{2}(\Z/N\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{N},
       \]
-      and is therefore a normal subgroup. A subgroup \(\G\) of the modular group is said to be a \textbf{congruence subgroup}\index{congruence subgroup} if it contains a principal congruence subgroup. The minimal such \(N\) for which \(\G(N) \subseteq \G\) is called the \textbf{level}\index{level} of \(\G\). Note that if \(M \mid N\) then \(\G(N) \subseteq \G(M)\). Thus if \(\G\) is a congruence subgroup of level \(N\) then it contains the principal congruence subgroups \(\G(kN)\) for all positive integers \(k\). This implies that congruence subgroups are preserved under intersection. In fact, if \(\G_{1}\) and \(\G_{2}\) are congruence subgroups of levels \(N_{1}\) and \(N_{2}\) then \(\G_{1} \cap \G_{2}\) is guaranteed to be a congruence subgroup of level at most \([N_{1},N_{2}]\). Also, it turns out that the aforementioned homomorphism is surjective.
+      and is therefore a normal subgroup. A subgroup \(\G\) of the modular group is said to be a \textbf{congruence subgroup}\index{congruence subgroup} if it contains a principal congruence subgroup. The minimal such \(N\) for which \(\G(N) \subseteq \G\) is called the \textbf{level}\index{level} of \(\G\). Note that if \(M \mid N\) then \(\G(N) \subseteq \G(M)\). Thus if \(\G\) is a congruence subgroup of level \(N\) then it contains the principal congruence subgroups \(\G(kN)\) for all positive integers \(k\). This implies that congruence subgroups are preserved under intersection. In fact, if \(\G_{1}\) and \(\G_{2}\) are congruence subgroups of levels \(N_{1}\) and \(N_{2}\) then \(\G_{1} \cap \G_{2}\) is guaranteed to be a congruence subgroup of level at most \([N_{1},N_{2}]\). Also, it turns out that the aforementioned homomorphism is surjective. This is known as \textbf{strong approximation}\index{strong approximation} for the modular group.
 
-      \begin{proposition}\label{prop:surjective_modulo_N_for_modular_group}
+      \begin{proposition}[Strong Approximation for the Modular Group]
         Let \(N\) be a positive integer. Then the homomorphism
         \[
           \pi:\SL_{2}(\Z) \to \SL_{2}(\Z/N\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{N},
@@ -1030,14 +1030,14 @@
         from which injectivity follows. For surjectivity, any representative \(\b\) of an orbit in \(\G_{1}\backslash\G_{1}\a\G_{2}\) is of the form \(\b = \g_{1}\a\g_{2}\) for some \(\g_{1} \in \G_{1}\) and \(\g_{2} \in \G_{2}\). But then \(\g_{2}\) represents an orbit of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) mapping to the orbit represented by \(\b\) as \(\G_{1}\b = \G_{1}\a\g_{2}\). This shows surjectivity.
       \end{proof}
 
-      With this lemma in hand, we can prove that the aforementioned orbit decomposition is finite.
+      With this lemma in hand, we can prove that the aforementioned right coset decomposition is finite.
 
       \begin{proposition}\label{prop:double_congruence_subgroup_coset_decomposition_is_finite}
-        Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the orbit decomposition
+        Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the right coset decomposition
         \[
           \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b,
         \]
-        into right cosets is finite.
+        is finite.
       \end{proposition}
       \begin{proof}
         By \cref{lem:coset_lemma_2}, the number of orbits of \(\G_{1}\backslash\G_{1}\a\G_{2}\) is in bijection with those of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) which is \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}]\). By \cref{lem:coset_lemma_1}, \(\a^{-1}\G_{1}\a \cap \SL_{2}(\Z)\) is a congruence subgroup and thus \(\a^{-1}\G_{1}\a \cap \G_{2}\) is as well. It follows that \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}] \le d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) where \(d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) is finite which completes the proof.
@@ -1425,67 +1425,53 @@
       The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}\). In order to compute the Hecke operators explicitly we need to find a complete set of representatives for each of the double cosets \(\G_{1}(N)\backslash(\G_{1}(N)\a\G_{1}(N))\) in the sum. But this is the same as finding a complete set of representatives for \(\G_{1}(N)\backslash\D_{m}\) which is much easier to accomplish.
 
       \begin{proposition}
-        There is an orbit decomposition
+        There is an right coset decomposition
         \[
           \D_{m} = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
-        into right cosets where \(\g_{a} \in \G_{0}(N)\) is some matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\). Moreover, there is a double coset decomposition
-        \[
-          \D_{m} = \bigcup_{\substack{uv = m \\ u \mid v \\ (u,N) = 1}}\G_{1}(N)\g_{u}\begin{pmatrix} u & 0 \\ 0 & v \end{pmatrix}\G_{1}(N),
-        \]
-        where each double coset admits the orbit decomposition
-        \[
-          \G_{1}(N)\g_{u}\begin{pmatrix} u & 0 \\ 0 & v \end{pmatrix}\G_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{\substack{b \tmod{d} \\ (a,b,d) = u}}\G_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
-        \]
-        into right cosets.
+        where \(\g_{a} \in \G_{0}(N)\) is any matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\).
       \end{proposition}
       \begin{proof}
-        We being by proving the orbit decomposition of \(\D_{m}\) into right cosets. The reverse containment holds in view of 
+       The reverse inclusion holds because the representatives \(\g_{a}\begin{psmallmatrix} a & b \\ 0 & d \end{psmallmatrix}\) are elements of \(\D_{m}\) in view of 
         \[
-           \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
+           \g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
         \]
-        For the forward containment, suppose \(\a = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \D_{m}\G_{1}(N)\). As \(a'\) and \(c'\) are both not zero, we can find relatively prime integers \(r\) and \(s\) such that \(ra'+sc' = 0\). B\'ezout's identity then provides the existence of integers \(p\) and \(q\) with \(ps-qr = 1\) and so we may set \(\g = \begin{psmallmatrix} p & q \\ r & s \end{psmallmatrix} \in \SL_{2}(\Z)\). It follows that
+        For the forward inclusion, let \(\a = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \D_{m}\). As \(a'\) and \(c'\) are both not zero, we can find relatively prime integers \(r\) and \(s\) such that \(ra'+sc' = 0\). B\'ezout's identity then provides the existence of integers \(p\) and \(q\) with \(ps-qr = 1\) and we set \(\g = \begin{psmallmatrix} p & q \\ r & s \end{psmallmatrix} \in \SL_{2}(\Z)\). It follows that
         \[
           \g\a = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix},
         \]
-        Replaying \(\g\) by \(\pm \g\begin{psmallmatrix} 1 & t \\ 0 & 1 \end{psmallmatrix}\) for some integer \(t\), if necessary, we may ensure
+        Replacing \(\g\) by \(\pm \g\begin{psmallmatrix} 1 & t \\ 0 & 1 \end{psmallmatrix}\) for some integer \(t\), if necessary, we may ensure
         \[
           \g\a = \begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
-        for positive integers \(a\), \(b\), and \(d\) with \(ad = m\) and \(b\) modulo \(d\). As \(\a \in \D_{m}\), it also follows that
+        for positive integers \(a\), \(b\), and \(d\) with \(ad = m\) and \(b\) modulo \(d\). As \(\a \in \D_{m}\), this identity implies
         \[
           \g \begin{pmatrix} 1 & \ast \\ 0 & m \end{pmatrix} \equiv \begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \pmod{N}.
         \]
-        Then \((a,N) = 1\) as \(\g\) must satisfy \(\g \equiv \begin{psmallmatrix} a & \ast \\ 0 & a^{-1} \end{psmallmatrix} \tmod{N}\) and so \(\g^{-1} \equiv \begin{psmallmatrix} a^{-1} & \ast \\ 0 & a \end{psmallmatrix} \tmod{N}\). In particular, \(\g \in \G_{0}(N)\). In view of the fact
+        Then \((a,N) = 1\) as \(\g\) necessarily satisfies \(\g \equiv \begin{psmallmatrix} a & \ast \\ 0 & a^{-1} \end{psmallmatrix} \tmod{N}\) and so \(\g \in \G_{0}(N)\). As \(\g^{-1} \equiv \begin{psmallmatrix} a^{-1} & \ast \\ 0 & a \end{psmallmatrix} \tmod{N}\) and
         \[
           \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} a^{-1} & 0 \\ 0 & a \end{pmatrix} \equiv \begin{pmatrix} a^{-1} & \ast \\ 0 & a \end{pmatrix} \pmod{N},
         \]
-        we may write \(\g^{-1} = \eta\g_{a}\) for some \(\eta \in \G_{1}(N)\). But then
+        we may write \(\g^{-1} = \eta\g_{a}\) for some \(\eta \in \G_{1}(N)\). In particular, this computation shows that any other choice for \(\g_{a}\) differs by multiplication on the left by an element of \(\G_{1}(N)\). In any case, we have
         \[
           \a = \eta\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
-        and the reverse inclusion follows. It remains to show that the union is disjoint. If not, then there exist \(\eta_{1},\eta_{2} \in \G_{1}(N)\) satisfying
+        proving the forward inclusion. It remains to show that the union is disjoint. If not, then there exist \(\eta_{1},\eta_{2} \in \G_{1}(N)\) satisfying
         \[
           \eta_{1}\g_{a_{1}}\begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix} = \eta_{2}\g_{a_{2}}\begin{pmatrix} a_{2} & b_{2} \\ 0 & d_{2} \end{pmatrix},
         \]
-        for distinct matrices \(\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) satisfying \(a_{i}d_{i} = m\), \((a_{i},N) = 1\), and \(b_{i}\) modulo \(d_{i}\). Then
+        for matrices \(\g_{a_{i}}\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) representing different right cosets and satisfying \(a_{i}d_{i} = m\), \((a_{i},N) = 1\), and \(b_{i}\) modulo \(d_{i}\). Then
         \[
-          \begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix}\begin{pmatrix} \frac{d_{2}}{m} & -\frac{b_{2}}{m} \\ 0 & \frac{a_{2}}{m} \end{pmatrix} = \begin{pmatrix} \frac{a_{1}}{a_{2}} & \ast \\ 0 & \frac{d_{1}}{d_{2}} \end{pmatrix},
+          \begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix}\begin{pmatrix} a_{2} & b_{2} \\ 0 & d_{2} \end{pmatrix}^{-1} = \begin{pmatrix} \frac{a_{1}}{a_{2}} & \ast \\ 0 & \frac{d_{1}}{d_{2}} \end{pmatrix},
         \]
-        belongs to \(\SL_{2}(\Z)\) which forces \(a_{1} = a_{2}\) and \(d_{1} = d_{2}\). Whence
+        belongs to \(\SL_{2}(\Z)\) which forces \(a_{1} = a_{2}\) and \(d_{1} = d_{2}\). Whence this computation becomes
         \[
           \begin{pmatrix} a_{1} & b_{1} \\ 0 & d_{1} \end{pmatrix} = \begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix}\begin{pmatrix} a_{2} & b_{2} \\ 0 & d_{2} \end{pmatrix},
         \]
-        for some integer \(t\). But as \(b_{1}\) and \(b_{2}\) are both modulo \(d_{1} = d_{2}\), we must have \(t = 0\). Hence \(b_{1} = b_{2}\). But then the matrices \(\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) are not distinct which is a contradiction. Therefore the union is disjoint.
-
-        We now prove the double coset decomposition of \(\D_{m}\). It is clear that the representatives \(\g_{a}\begin{psmallmatrix} a & b \\ 0 & d \end{psmallmatrix}\) can be partitioned according to the greatest common divisor of their nonzero entries upon setting \((a,b,d) = u\) and letting \(u\) run over \(uv = m\) with \(u \mid v\) and \((u,N) = 1\). So the double coset decomposition follows from the orbit decomposition into right cosets provided
-        \[
-          \G_{1}(N)\g_{u}\begin{pmatrix} u & 0 \\ 0 & v \end{pmatrix}\G_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{\substack{b \tmod{d} \\ (a,b,d) = u}}\G_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix}.
-        \]
-        As the right cosets on the right-hand side are disjoint, we only need to show containment in both directions. \todo{xxx}
+        for some integer \(t\). As \(b_{1}\) and \(b_{2}\) are both modulo \(d_{1} = d_{2}\), we must have \(t = 0\) and so \(b_{1} = b_{2}\). But then the matrices \(\g_{a_{i}}\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) represent the same right coset which is a contradiction. Therefore the union is disjoint.
       \end{proof}
 
-      From the orbit decomposition of \(\D_{m}\) into right cosets provided in this proposition, we immediately find that the Hecke operators may be expressed in the form
+      From the right coset decomposition of \(\D_{m}\) provided in this proposition, we immediately find that the Hecke operators may be expressed in the form
       \begin{equation}\label{equ:Hecke_operator_explicit_formula}
         (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}(\<a\>f)\left(\frac{az+b}{d}\right),
       \end{equation}
@@ -1603,65 +1589,17 @@
         The proof of the first statement is complete upon making the change of variables \(d_{3} \mapsto d\). Commutativity follows because the formula is symmetric in \(m\) and \(n\). The last statement is immediate from the first as \(d = 1\) when \((m,n) = 1\) and \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
       \end{proof}
 
-      \iffalse
+      \iffalse 
       The diamond and Hecke operators turn out to be normal on the subspace of cusp forms. To prove this fact, we will require a lemma:
 
-      \begin{lemma}\label{lem:adjoint_lemma}
-        Let \(\G\) be a congruence subgroup and let \(\a \in \GL_{2}^{+}(\Q)\). Then there exist \(\b_{1},\ldots,\b_{n} \in \GL_{2}^{+}(\Q)\), where \(n = [\G:\a^{-1}\G\a \cap \G] = [\G:\a\G\a^{-1} \cap \G]\), and such that
-        \[
-          \G\a\G = \bigcup_{1 \le j \le n}\G\b_{j} = \bigcup_{1 \le j \le n}\b_{j}\G.
-        \]
-      \end{lemma}
-      \begin{proof}
-        By \cref{lem:coset_lemma_1} and that congruence subgroups are preserved under intersection, we see that \(\a\G\a^{-1} \cap \G\) is a congruence subgroup. By \cref{lem:invariance_of_volume}, it follows that \(d_{\a^{-1}\G\a \cap \G} = d_{\a\G\a^{-1} \cap \G}\). Dividing both sides by \(d_{\G}\) gives
-        \[
-          [\G:\a^{-1}\G\a \cap \G] = [\G:\a\G\a^{-1} \cap \G].
-        \]
-        Therefore we can find representatives \(\g_{1},\ldots,\g_{n} \in \G\) and \(\wtilde{\g}_{1},\ldots,\wtilde{\g}_{n} \in \G\) such that
-        \[
-          \G = \bigcup_{1 \le j \le n}(\a^{-1}\G\a \cap \G)\g_{j} = \bigcup_{1 \le j \le n}(\a^{-1}\G\a \cap \G)\wtilde{\g}_{j}^{-1}.
-        \]
-        Upon invoking \cref{lem:coset_lemma_2} twice, we obtain
-        \[
-          \bigcup_{1 \le j \le n}(\a^{-1}\G\a \cap \G)\g_{j} = \bigcup_{1 \le j \le n}\G\a\g_{j} \quad \text{and} \quad \bigcup_{1 \le j \le n}(\a^{-1}\G\a \cap \G)\wtilde{\g}_{j}^{-1} = \bigcup_{1 \le j \le n}\G\a^{-1}\wtilde{\g}_{j}^{-1}.
-        \]
-        It follows that
-        \[
-          \G = \bigcup_{1 \le j \le n}\G\a\g_{j} = \bigcup_{1 \le j \le n}\wtilde{\g}_{j}\a\G.
-        \]
-        For each \(j\), the orbits \(\G\a\g_{j}\) and \(\wtilde{\g}_{j}\a\G\) have nonempty intersection. For if they did we would have
-        \[
-          \G\a\g_{j} \subseteq \bigcup_{\substack{1 \le i \le n \\ i \neq j}}\wtilde{\g}_{i}\a\G,
-        \]
-        and thus
-        \[
-          \G\a\G \subseteq \bigcup_{\substack{1 \le i \le n \\ i \neq j}}\wtilde{\g}_{i}\a\G.
-        \]
-        This contradicts the previous decomposition of \(\G\). Therefore we can find representatives \(\b_{j} \in \G\a\g_{j} \cap \wtilde{\g}_{j}\a\G\) for every \(j\). Then
-        \[
-          \G = \bigcup_{1 \le j \le n}\G\b_{j} = \bigcup_{1 \le j \le n}\b_{j}\G,
-        \]
-        as desired.
-      \end{proof}
-
-      We can use \cref{lem:adjoint_lemma} to compute adjoints:
-
       \begin{proposition}\label{prop:Petersson_adjoint_modular}
-        Let \(\G\) be a congruence subgroup and let \(\a \in \GL_{2}^{+}(\Q)\). Set \(\a' = \det(\a)\a^{-1}\). Then the following are true:
-        \begin{enumerate}[label*=(\roman*)]
-          \item If \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\) then for all \(f \in \mc{S}_{k}(\G)\) and \(g \in \mc{S}_{k}(\a^{-1}\G\a)\), we have
-          \[
-            \<f|_{k}\a,g\>_{\a^{-1}\G\a} = \<f,g|_{k}\a'\>_{\G}.
-          \]
-          \item For all \(f,g \in \mc{S}_{k}(\G)\), we have
-          \[
-            \<f[\G\a\G]_{k},g\> = \<f,g[\G\a'\G]_{k}\>.
-          \]
-        \end{enumerate}
-        In particular, if \(\a^{-1}\G\a = \G\) then \(|_{k}\a^{\ast} = |_{k}\a'\), \(\|_{k}\a^{\ast} = \|_{k}\a'\), and \([\G\a\G]_{k}^{\ast} = [\G\a'\G]_{k}\).   
+        Let \(\G\) be a congruence subgroup. Moreover, suppose \(\a \in \GL_{2}^{+}(\Q)\) is such that \(\a^{-1}\G\a\) is also a congruence subgroup and set \(\a' = \det(\a)\a^{-1}\). Then for any \(f \in \mc{S}_{k}(\G)\) and \(g \in \mc{S}_{k}(\a^{-1}\G\a)\), we have
+        \[
+          \<f|_{k}\a,g\>_{\a^{-1}\G\a} = \<f,g|_{k}\a'\>_{\G} \quad \text{and} \quad \<f\|_{k}\a,g\>_{\a^{-1}\G\a} = \<f,g\|_{k}\a'\>_{\G}.
+        \]
       \end{proposition}
       \begin{proof}
-        To prove (i) we first compute
+        We first compute
         \begin{align*}
           \<f|_{k}\a,g\>_{\a^{-1}\G\a} &= \frac{1}{V_{\a^{-1}\G\a}}\int_{\mc{F}_{\a^{-1}\G\a}}(f|_{k}\a)(z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
           &= \frac{1}{V_{\a^{-1}\G\a}}\int_{\mc{F}_{\a^{-1}\G\a}}\det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
@@ -1680,7 +1618,7 @@
         \[
           \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{k}{2}}\conj{j(\a',z)^{-k}}f(z)\conj{g(\a'z)}\Im(z)^{k}\,d\mu = \<f,g|_{k}\a'\>_{\G},
         \]
-        which completes the proof of (i). To prove (ii), \cref{lem:adjoint_lemma} implies the coset decomposition \(\G\a\G = \bigcup_{1 \le j \le n}\G\b_{j}\), with \(n = [\G:\a^{-1}\G\a \cap \G] = [\G:\a\G\a^{-1} \cap \G]\), so that we can use the \(\b_{j}\) as representatives for the \([\G\a\G]_{k}\) operator. As the \(\b_{j}\) also satisfy \(\G\a\G = \bigcup_{1 \le j \le n}\b_{j}\G\), upon inverting \(\b_{j}\) and noting that \(\b_{j} \in \G\a\), we obtain \(\G\a^{-1}\G = \bigcup_{1 \le j \le n}\G\b_{j}^{-1}\). Since scalar multiplication commutes with matrices and the matrices in \(\G\) have determinant \(1\), we conclude that \(\G\a'\G = \bigcup_{1 \le j \le n}\G\b_{j}'\) where \(\b_{j}' = \det(\b_{j})\b_{j}^{-1}\) (also \(\det(\b_{j}) = \det(\a)\)). So we can use the \(\b_{j}'\) as representatives in the \([\G\a'\G]_{k}\) operator. The statement now follows from (i) and \cref{equ:relationship_between_slash_operators}. The last statement is obvious (again using \cref{equ:relationship_between_slash_operators}).
+        which completes the proof of (i).
       \end{proof}
 
       We can now prove that the diamond and Hecke operators are normal:
