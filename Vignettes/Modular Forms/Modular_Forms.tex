@@ -1424,7 +1424,7 @@
       \]
       The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}\). In order to compute the Hecke operators explicitly we need to find a complete set of representatives for each of the double cosets \(\G_{1}(N)\backslash(\G_{1}(N)\a\G_{1}(N))\) in the sum. But this is the same as finding a complete set of representatives for \(\G_{1}(N)\backslash\D_{m}\) which is much easier to accomplish.
 
-      \begin{lemma}\label{lem:cosets_for_Hecke_operators}
+      \begin{proposition}
         There is an orbit decomposition
         \[
           \D_{m} = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
@@ -1438,7 +1438,7 @@
           \G_{1}(N)\g_{u}\begin{pmatrix} u & 0 \\ 0 & v \end{pmatrix}\G_{1}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{\substack{b \tmod{d} \\ (a,b,d) = u}}\G_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
         into right cosets.
-      \end{lemma}
+      \end{proposition}
       \begin{proof}
         We being by proving the orbit decomposition of \(\D_{m}\) into right cosets. The reverse containment holds in view of 
         \[
@@ -1485,7 +1485,7 @@
         As the right cosets on the right-hand side are disjoint, we only need to show containment in both directions. \todo{xxx}
       \end{proof}
 
-      From the orbit decomposition of \(\D_{m}\) into right cosets provided in this lemma, we immediately find that the Hecke operators may be expressed in the form
+      From the orbit decomposition of \(\D_{m}\) into right cosets provided in this proposition, we immediately find that the Hecke operators may be expressed in the form
       \begin{equation}\label{equ:Hecke_operator_explicit_formula}
         (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}(\<a\>f)\left(\frac{az+b}{d}\right),
       \end{equation}
