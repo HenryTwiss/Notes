@@ -1417,11 +1417,28 @@
       \[
         \D_{m} = \bigcup_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}\G_{1}(N)\a\G_{1}(N),
       \]
-      into double cosets. To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = \g\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\g'\) for some \(\g,\g' \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(\Z)\) and there are finitely many choices for \(a\) and \(d\) we conclude that this double coset decomposition is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
+      into double cosets. To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = \g\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\g'\) for some \(\g,\g' \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(\Z)\), and there are finitely many choices for \(a\) and \(d\), we conclude that this double coset decomposition is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
       \[
-        (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}\left[\G_{1}(N)\a\G_{1}(N)\right]_{k}f(z).
+        (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}[\G_{1}(N)\a\G_{1}(N)]_{k}f(z).
       \]
-      The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}\). In order to compute the Hecke operators explicitly we need to find a complete set of representatives for each of the double cosets \(\G_{1}(N)\backslash(\G_{1}(N)\a\G_{1}(N))\) in the sum. But this is the same as finding a complete set of representatives for \(\G_{1}(N)\backslash\D_{m}\) which is much easier to accomplish.
+      The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}\). In fact, we can find an explicit set of double coset representatives for \(\D_{m}\).
+
+      \begin{proposition}
+        There is a double coset decomposition
+        \[
+          \D_{m} = \bigcup_{\substack{ad = m \\ a \mid d \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N),
+        \]
+        where \(\g_{a} \in \G_{0}(N)\) is any matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\).
+      \end{proposition}
+      \begin{proof}
+        \todo{xxx}
+      \end{proof}
+
+      From this double coset decomposition, the Hecke operators can be expressed as
+      \begin{equation}\label{equ:Hecke_operator_double_coset_explicit_formula}
+        (T_{m}f)(z) = \sum_{\substack{ad = m \\ a \mid d \\ (a,N) = 1}}\left[\G_{1}(N)\g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
+      \end{equation}
+      In order to compute the Hecke operators explicitly we need to find a complete set of representatives for each of the double cosets \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\) in the sum. But this is the same as finding a complete set of representatives for \(\G_{1}(N)\backslash\D_{m}\) which is much easier to accomplish.
 
       \begin{proposition}
         There is an right coset decomposition
@@ -1470,8 +1487,8 @@
         for some integer \(t\). As \(b_{1}\) and \(b_{2}\) are both modulo \(d_{1} = d_{2}\), we must have \(t = 0\) and so \(b_{1} = b_{2}\). But then the matrices \(\g_{a_{i}}\begin{psmallmatrix} a_{i} & b_{i} \\ 0 & d_{i} \end{psmallmatrix}\) represent the same right coset which is a contradiction. Therefore the union is disjoint.
       \end{proof}
 
-      From the right coset decomposition of \(\D_{m}\) provided in this proposition, we immediately find that the Hecke operators may be expressed in the form
-      \begin{equation}\label{equ:Hecke_operator_explicit_formula}
+      From the right coset decomposition, we immediately find that the Hecke operators may be expressed in the form
+      \begin{equation}\label{equ:Hecke_operator_right_coset_explicit_formula}
         (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}(\<a\>f)\left(\frac{az+b}{d}\right),
       \end{equation}
       where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). Since the diamond operators are commutative, this formula also shows that they commute with the Hecke operators. In view of \cref{thm:diamond_operator_decomposition_modular}, it follows that the Hecke operators preserve the \(\chi\)-eigenspaces \(\mc{M}_{k}(N,\chi)\). We can then use this formula to deduce how the Hecke operators act on the Fourier series expansions of modular forms in these subspaces.
@@ -1487,7 +1504,7 @@
         \]
       \end{proposition}
       \begin{proof}
-        By \cref{equ:Hecke_operator_explicit_formula}, write
+        By \cref{equ:Hecke_operator_right_coset_explicit_formula}, write
         \[
           (T_{m}f)(z) = m^{k-1}\sum_{ad = m }\frac{\chi(a)}{d^{k}}\sum_{b \tmod{d}}\sum_{n \ge 0}a(n)e\left(\frac{anz+bn}{d}\right).
         \]
