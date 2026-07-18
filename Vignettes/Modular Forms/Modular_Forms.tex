@@ -352,7 +352,7 @@
       \[
         \G_{\infty} = \<\g_{\infty},(-I)^{\e_{\G}}\>.
       \]
-      By our previous discussion, there exists a matrix \(\eta_{\mf{a}} \in \SL_{2}(\Z)\) such that \(\eta_{\mf{a}}\infty = \mf{a}\). This matrix is determined up to multiplication on the right by an element of \(\G_{\infty}\). In any case, \(\G_{\mf{a}} = \eta_{\mf{a}}\G_{\infty}\eta_{\mf{a}}^{-1} \cap \G\) and so
+      By our previous discussion, there exists a matrix \(\eta_{\mf{a}} \in \SL_{2}(\Z)\) such that \(\eta_{\mf{a}}\infty = \mf{a}\). This matrix is determined up to right multiplication by elements of \(\G_{\infty}\). In any case, \(\G_{\mf{a}} = \eta_{\mf{a}}\G_{\infty}\eta_{\mf{a}}^{-1} \cap \G\) and so
       \[
         \G_{\mf{a}} = \<\eta_{\mf{a}},(-I)^{\e_{\G}}\>,
       \]
@@ -406,7 +406,7 @@
       \[
         \s_{\mf{a}} = \eta_{\mf{a}}\begin{pmatrix} \sqrt{h_{\mf{a}}} & 0 \\ 0 & \frac{1}{\sqrt{h_{\mf{a}}}} \end{pmatrix}.
       \]
-      Observe that scaling matrices are determined up to multiplication on the right by powers of \(T\). Also, if \(\G\) is reduced at \(\mf{a}\) then we may take \(\s_{\mf{a}} = \eta_{\mf{a}}\) so that the scaling matrix can be chosen to lie in \(\SL_{2}(\Z)\). In this case, \(\G_{\mf{a}} = B_{\G}\). For example, this occurs at \(\infty\) for the Hecke congruence subgroups.
+      Observe that scaling matrices are determined up to right multiplication by powers of \(T\). Also, if \(\G\) is reduced at \(\mf{a}\) then we may take \(\s_{\mf{a}} = \eta_{\mf{a}}\) so that the scaling matrix can be chosen to lie in \(\SL_{2}(\Z)\). In this case, \(\G_{\mf{a}} = B_{\G}\). For example, this occurs at \(\infty\) for the Hecke congruence subgroups.
 
       Lastly, let us discuss a useful property of integrals over \(\GH\). Recall that we may use the fundamental domain \(\mc{F}_{\G}\) to integrate over \(\GH\) by writing
       \[
@@ -457,7 +457,7 @@
         with \(\w_{\infty} = \begin{psmallmatrix} 1 & \ast \\ 0 & 1 \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) and \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) if such matrices exists otherwise \(\W_{\infty}\) and \(\W_{c/d}\) are empty respectively. In the former case for \(\W_{\infty}\), \(\w_{\infty}\) exists if and only if \(\mf{a}\) and \(\mf{b}\) are \(\G\)-equivalent. In the former case for \(\W_{c/d}\), \(a\) and \(d\) are determined modulo \(c\) and \(\W_{c/d}\) does not depend on the entry \(a\) of \(\w_{c/d}\).
       \end{theorem*}
       \begin{proof}
-        As \(B_{\G} = \s_{\mf{a}}^{-1}\G_{\mf{a}}\s_{\mf{a}}\) and \(B_{\G} = \s_{\mf{b}}^{-1}\G_{\mf{b}}\s_{\mf{b}}\), short computations show that \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) is invariant under multiplication on the left or right by elements \(B_{\G}\). This proves \(\W_{\infty}\) and \(\W_{c/d}\) are subsets of \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\). Now any \(\w_{\infty} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) satisfies \(\w_{\infty} = \s_{\mf{a}}^{-1}\g\s_{\mf{b}}\) for some \(\g \in \G\). As \(\w_{\infty}\) fixes \(\infty\), a short computation shows
+        As \(B_{\G} = \s_{\mf{a}}^{-1}\G_{\mf{a}}\s_{\mf{a}}\) and \(B_{\G} = \s_{\mf{b}}^{-1}\G_{\mf{b}}\s_{\mf{b}}\), short computations show that \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) is invariant under left and right multiplication by elements \(B_{\G}\). This proves \(\W_{\infty}\) and \(\W_{c/d}\) are subsets of \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\). Now any \(\w_{\infty} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) satisfies \(\w_{\infty} = \s_{\mf{a}}^{-1}\g\s_{\mf{b}}\) for some \(\g \in \G\). As \(\w_{\infty}\) fixes \(\infty\), a short computation shows
         \[
           \g\mf{b} = \mf{a}.
         \]
@@ -762,7 +762,7 @@
       \[
         v_{\g z}(f) = v_{z}(f),
       \]
-      for any \(\g \in \G\) by modularity. For a cusp \(\mf{a}\) of \(\GH\), we let \(v_{\mf{a}}(f)\) be the index of the first nonzero term in the Fourier series expansion of \(f\) at the \(\mf{a}\) cusp. That is, \(v_{\mf{a}}(f)\) is the order of vanishing of \(f|_{k}\s_{\mf{a}}\) at \(\infty\). To show \(v_{\mf{a}}(f)\) is well-defined, we need to verify that it is independent of the choice of scaling matrix \(\s_{\mf{a}}\). This follows from \cref{equ:cusp_form_independence_of_scaling_matrix_modular} since scaling matrices are determined up to composition on the right by an element of \(\G_{\infty}\). Also, \(v_{\mf{a}}(f)\) is again nonnegative by the holomorphy of \(f\) and
+      for any \(\g \in \G\) by modularity. For a cusp \(\mf{a}\) of \(\GH\), we let \(v_{\mf{a}}(f)\) be the index of the first nonzero term in the Fourier series expansion of \(f\) at the \(\mf{a}\) cusp. That is, \(v_{\mf{a}}(f)\) is the order of vanishing of \(f|_{k}\s_{\mf{a}}\) at \(\infty\). To show \(v_{\mf{a}}(f)\) is well-defined, we need to verify that it is independent of the choice of scaling matrix \(\s_{\mf{a}}\). This follows from \cref{equ:cusp_form_independence_of_scaling_matrix_modular} since scaling matrices are determined up to right multiplication by elements of \(\G_{\infty}\). Also, \(v_{\mf{a}}(f)\) is again nonnegative by the holomorphy of \(f\) and
       \[
         v_{\mf{a}'}(f) = v_{\mf{a}}(f),
       \]
@@ -1362,7 +1362,7 @@
       \[
         \G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast},
       \]
-      by the first isomorphism theorem. Now let \(d\) be a positive integer. Then the \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
+      Now let \(d\) be a positive integer. Then the \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
       \[
         (\<d\>f)(z) = \begin{cases} \left(f[\G_{1}(N)\a\G_{1}(N)]_{k}\right)(z) & \text{if \((d,N) = 1\)}, \\ 0 & \text{if \((d,N) > 1\)}, \end{cases}
       \]
@@ -1431,6 +1431,38 @@
         where \(\g_{a} \in \G_{0}(N)\) is any matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\).
       \end{proposition}
       \begin{proof}
+        The reverse inclusion holds because \(\G_{1}(N)\) acts on \(\D_{m}\) by left and right multiplication and the representatives \(\g_{a}\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\) are elements of \(\D_{m}\) in view of 
+        \[
+           \g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
+        \]
+        For the forward inclusion, let \(L\) be the set of \(2 \x 1\) column vectors with entries in \(\Z\) which is a finite generated abelian group. Set
+        \[
+          L_{0} = \left\{\begin{pmatrix} a \\ b \end{pmatrix} \in L: b \equiv 0 \tmod{N} \right\}.
+        \]
+        Observe that \(L\) is a \(\Mat_{2}(\Z)\)-module by left matrix multiplication, and while \(L_{0}\) is not a \(\Mat_{2}(\Z)\)-submodule, \(\a\) preserves \(L_{0}\) in view of
+        \[
+          \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} \ast \\ 0 \end{pmatrix} \equiv \begin{pmatrix} \ast \\ 0 \end{pmatrix} \tmod{N}.
+        \]
+        Since \(\a L\) has index \(m\) in \(L\), and \(L_{0}\) has index \(N\) in \(L\), together we find
+        \[
+          [L:\a L_{0}] = Nm.
+        \]
+        As \(\a L_{0}\) is a finitely generated abelian group, the structure theorem for finitely generated abelian groups implies the existence of a basis \(u,v\) of \(L\) and positive integers \(a\) and \(b\) satisfying \(ab = Nm\) and \(a \mid b\) such that
+        \[
+          \a L_{0} = au\Z+bv\Z.
+        \]
+        We will now show \((a,N)= 1\). If not then \(\a L_{0} \subseteq pL\) and since \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in L_{0}\) this would imply that the first row of \(\a\) is divisible by \(p\) which is impossible as \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \mod{N}\). Whence \((a,N) = 1\) so that \(a \mid m\) and \(b \mid N\). Then \(u\Z+Nv\Z\) is the unique index \(N\) subgroup of \(L\) containing \(\a L_{0}\) and so
+        \[
+          L_{0} = u\Z+Nv\Z.
+        \]
+        Setting \(d = \frac{b}{N}\), we see that \(au\Z+dv\Z\) is the unique index \(m\) subgroup of \(L\) containing \(\a L_{0}\) so that
+        \[
+          \a L = au\Z+dv\Z.
+        \]
+        Now write \(u = \begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix}\) and \(u = \begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\). Define \(\g_{1},\g_{2} \in \SL_{2}(\Z)\) by
+        \[
+          \g_{1} = \begin{pmatrix} u_{1} & v_{1} \\ u_{2} & v_{2} \end{pmatrix} \quad \text{and} \quad \g_{2} = \todo{xxx}
+        \]
         \todo{xxx}
       \end{proof}
 
@@ -1448,27 +1480,23 @@
         where \(\g_{a} \in \G_{0}(N)\) is any matrix satisfying \(\g_{a} \equiv \begin{psmallmatrix} a^{-1} & 0 \\ 0 & a \end{psmallmatrix} \tmod{N}\).
       \end{proposition}
       \begin{proof}
-       The reverse inclusion holds because the representatives \(\g_{a}\begin{psmallmatrix} a & b \\ 0 & d \end{psmallmatrix}\) are elements of \(\D_{m}\) in view of 
+        The reverse inclusion holds because \(\G_{1}(N)\) acts on \(\D_{m}\) by left and right multiplication and the representatives \(\g_{a}\begin{psmallmatrix} a & b \\ 0 & d \end{psmallmatrix}\) are elements of \(\D_{m}\) in view of 
         \[
            \g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
         \]
-        For the forward inclusion, let \(\a = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \D_{m}\). As \(a'\) and \(c'\) are both not zero, we can find relatively prime integers \(r\) and \(s\) such that \(ra'+sc' = 0\). B\'ezout's identity then provides the existence of integers \(p\) and \(q\) with \(ps-qr = 1\) and we set \(\g = \begin{psmallmatrix} p & q \\ r & s \end{psmallmatrix} \in \SL_{2}(\Z)\). It follows that
+        For the forward inclusion, let \(\a \in \D_{m}\). Putting \(\a\) into Hermite normal form, we may write
         \[
-          \g\a = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix},
+          \a = \g\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
-        Replacing \(\g\) by \(\pm \g\begin{psmallmatrix} 1 & t \\ 0 & 1 \end{psmallmatrix}\) for some integer \(t\), if necessary, we may ensure
+        for some \(\g \in \SL_{2}(\Z)\) and positive integers \(a\), \(b\), and \(d\) with \(ad = m\) and \(b\) modulo \(d\). As \(\a \in \D_{m}\), this identity implies
         \[
-          \g\a = \begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
+          \begin{pmatrix} 1 & \ast \\ 0 & m \end{pmatrix} \equiv \g\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \pmod{N}.
         \]
-        for positive integers \(a\), \(b\), and \(d\) with \(ad = m\) and \(b\) modulo \(d\). As \(\a \in \D_{m}\), this identity implies
+        Then \((a,N) = 1\) as \(\g\) necessarily satisfies \(\g \equiv \begin{psmallmatrix} a^{-1} & \ast \\ 0 & a \end{psmallmatrix} \tmod{N}\) and so \(\g \in \G_{0}(N)\). We find from
         \[
-          \g \begin{pmatrix} 1 & \ast \\ 0 & m \end{pmatrix} \equiv \begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \pmod{N}.
+          \begin{pmatrix} a^{-1} & \ast \\ 0 & a \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} a^{-1} & 0 \\ 0 & a \end{pmatrix} \pmod{N},
         \]
-        Then \((a,N) = 1\) as \(\g\) necessarily satisfies \(\g \equiv \begin{psmallmatrix} a & \ast \\ 0 & a^{-1} \end{psmallmatrix} \tmod{N}\) and so \(\g \in \G_{0}(N)\). As \(\g^{-1} \equiv \begin{psmallmatrix} a^{-1} & \ast \\ 0 & a \end{psmallmatrix} \tmod{N}\) and
-        \[
-          \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} a^{-1} & 0 \\ 0 & a \end{pmatrix} \equiv \begin{pmatrix} a^{-1} & \ast \\ 0 & a \end{pmatrix} \pmod{N},
-        \]
-        we may write \(\g^{-1} = \eta\g_{a}\) for some \(\eta \in \G_{1}(N)\). In particular, this computation shows that any other choice for \(\g_{a}\) differs by multiplication on the left by an element of \(\G_{1}(N)\). In any case, we have
+        that \(\g = \eta\g_{a}\) for some \(\eta \in \G_{1}(N)\). This also shows \(\g_{a}\) is determined up to left multiplication by elements of \(\G_{1}(N)\). In any case, we have
         \[
           \a = \eta\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
