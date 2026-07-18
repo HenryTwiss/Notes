@@ -1,11 +1,11 @@
 # Fdb version 3
-["makeindex Modular_Forms.idx"] 1784311225 "Modular_Forms.idx" "Modular_Forms.ind" "Modular_Forms" 1784345200
-  "Modular_Forms.idx" 1784345200 2133 37e461a84555f9dc043ce85be9364894 "pdflatex"
+["makeindex Modular_Forms.idx"] 1784408251 "Modular_Forms.idx" "Modular_Forms.ind" "Modular_Forms" 1784409944
+  "Modular_Forms.idx" 1784409944 2133 3797214f4cd0a10551b2b96318fded4e "pdflatex"
   (generated)
   "Modular_Forms.ilg"
   "Modular_Forms.ind"
-["pdflatex"] 1784345199 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Modular Forms/Modular_Forms.tex" "Modular_Forms.pdf" "Modular_Forms" 1784345200
-  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Modular Forms/Modular_Forms.tex" 1784345199 198132 822716a8e3093e1d12b0c7608e04f402 ""
+["pdflatex"] 1784409944 "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Modular Forms/Modular_Forms.tex" "Modular_Forms.pdf" "Modular_Forms" 1784409944
+  "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Modular Forms/Modular_Forms.tex" 1784409943 200854 31e8f938827707c4232feb0fdda476f9 ""
   "/Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex" 1781632838 5480 1c1089c4f68d35449bb71f726253e7ea ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -201,11 +201,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651053080 2826447 333659af56a38286fbbf3f5177a8ca36 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Modular_Forms.aux" 1784345200 17256 91b34e3243a4f1f3800b0e7dad8ea53d "pdflatex"
-  "Modular_Forms.ind" 1784311225 2242 066655c185a153cbfb31be1d0cea0c99 "makeindex Modular_Forms.idx"
-  "Modular_Forms.out" 1784345200 3065 065f75d80ad48cb9111506ab8b4dad15 "pdflatex"
-  "Modular_Forms.tex" 1784345199 198132 822716a8e3093e1d12b0c7608e04f402 ""
-  "Modular_Forms.toc" 1784345200 1400 693c33e2f71d6ea6fceba6d71e103866 "pdflatex"
+  "Modular_Forms.aux" 1784409944 17502 aadb7f909443918b975227c4c453f48e "pdflatex"
+  "Modular_Forms.ind" 1784408251 2242 0327855a81e11c9dcab788a6a9be4ddd "makeindex Modular_Forms.idx"
+  "Modular_Forms.out" 1784409944 3065 065f75d80ad48cb9111506ab8b4dad15 "pdflatex"
+  "Modular_Forms.tex" 1784409943 200854 31e8f938827707c4232feb0fdda476f9 ""
+  "Modular_Forms.toc" 1784409944 1400 693c33e2f71d6ea6fceba6d71e103866 "pdflatex"
   (generated)
   "Modular_Forms.aux"
   "Modular_Forms.idx"
