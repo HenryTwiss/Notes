@@ -517,9 +517,9 @@
         j(\a,z) = (cz+d).
       \]
       With this notation, \cref{equ:Mobius_transformation_imaginary_part} becomes
-      \[
+      \begin{equation}\label{equ:Mobius_transformation_imaginary_part_j_version}
         \Im(\a z) = \det(\a)\frac{\Im(z)}{|j(\a,z)|^{2}}.
-      \]
+      \end{equation}
       There is a very useful property that \(j(\a,z)\) satisfies. To state it, let \(\a' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \GL_{2}^{+}(\R)\). Then
       \[
         \a\a' = \begin{pmatrix} a'a+b'c & a'b+b'b \\ c'a+d'c & c'b+d'd \end{pmatrix},
@@ -532,7 +532,11 @@
       \[
         (f|_{k}\a)(z) = \det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z).
       \]
-      In the case of \(\a \in \SL_{2}(\R)\), the slash operator takes the simplified form
+      In the case of \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\R)\), \cref{equ:Mobius_transformation_imaginary_part} simplifies to
+      \begin{equation}\label{equ:Mobius_transformation_imaginary_part_j_version_simplified}
+        \Im(\a z) = \frac{\Im(z)}{|j(\a,z)|^{2}}.
+      \end{equation}
+      The slash operator also takes the simplified form
       \[
         (f|_{k}\a)(z) = j(\a,z)^{-k}f(\a z).
       \]
@@ -988,12 +992,30 @@
       \begin{proof}
         Let \(f \in \mc{M}_{k}(\G,\nu)\). Recall that \(v_{\mf{a}}(f)\) and \(v_{z}(f)\) are nonnegative. In particular, \(v_{\infty}(f)\) is nonnegative and the valence formula implies \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\) whenever \(f\) is nonzero. Let \(n\) be a positive integer such that \(n \ge \frac{kd_{\G}}{12}+1\) and consider the linear map \(F:\mc{M}_{k}(\G,\nu) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) < n\) and hence \(\mc{M}_{k}(\G,\nu)\) is finite dimensional. The second statement follows immediately.
       \end{proof}
-    \subsection{\todo{The Petersson Inner Product}}
-      For further developments, we will require the Petersson inner product. Let \(\G\) be a congruence subgroup and fix a nonnegative integer \(k\). For any complex functions \(f\) and \(g\) on \(\H\) such that \(f(z)g(z)\Im(z)^{k}\) is \(\G\)-invariant and bounded on \(\H\), we define their \textbf{Petersson inner product}\index{Petersson inner product} \(\<f,g\>_{\G}\) by
+    \subsection{The Petersson Inner Product}
+      For further developments, we will require the Petersson inner product. Let \(\G\) be a congruence subgroup and fix a nonnegative integer \(k\). For any complex functions \(f\) and \(g\) on \(\H\) such that \(f(z)g(z)\Im(z)^{k}\) is \(\G\)-invariant and bounded on \(\H\), we define their \textbf{Petersson inner product}\index{Petersson inner product} \(\<f,g\>\) by
       \[
-        \<f,g\>_{\G} = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
+        \<f,g\> = \frac{1}{V_{\G}}\int_{\GH}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu.
       \]
-      If the congruence subgroup \(\G\) is clear from context we will suppress the dependence upon it. The integral is well-defined because the integrand is \(\G\)-invariant and is absolutely uniformly convergent because it is bounded on \(\H\) and \(\G\) has finite covolume.
+      The integral is well-defined because the integrand is \(\G\)-invariant and is absolutely uniformly convergent because it is bounded on \(\H\) and \(\G\) has finite covolume. An important property of the Petersson inner product is that it is invariant with respect to the slash operator provided the associated matrix normalizes \(\G\).
+
+      \begin{proposition}\label{prop:Petersson_slash_invariance_modular}
+        Let \(\G\) be a congruence subgroup and suppose \(\a \in \GL_{2}^{+}(\R)\). Then
+        \[
+          \<f|_{k}\a,g|_{k}\a\> = \<f,g\>,
+        \]
+        for any complex functions \(f\) and \(g\) on \(\H\) such that \(f(z)g(z)\Im(z)^{k}\) is \(\G\)-invariant and bounded on \(\H\).
+      \end{proposition}
+      \begin{proof}
+        This is just a computation. By definition, we have
+        \[
+          \<f|_{k}\a,g|_{k}\a\> = \frac{1}{V}\int_{\GH}(f|_{k}\a)(z)\conj{(g|_{k}\a)(z)}\Im(z)^{k}\,d\mu.
+        \]
+        Making the change of variables \(z \mapsto \a^{-1}z\), a short computation using normality, the cocycle condition, and \cref{equ:Mobius_transformation_imaginary_part_j_version}, shows that this integral becomes
+        \[
+          \frac{1}{V}\int_{\GH}f(z)\conj{g(z)}\Im(z)^{k}\,d\mu = \<f,g\>.
+        \]
+      \end{proof}
 
       We will primarily be interested in the case where \(f,g \in \mc{M}_{k}(\GH)\) and at least one of them is a cusp form. In this case, modularity implies \(f(z)g(z)\Im(z)^{k}\) is \(\G\)-invariant and is also bounded on \(\H\) since at least one of \(f\) or \(g\) is a cusp form. The Petersson inner product makes \(\mc{S}_{k}(\G,\nu)\) into a complex Hilbert space. Indeed, it is clearly linear on \(\mc{S}_{k}(\G,\nu)\). Positive definiteness follows because
       \[
@@ -1265,7 +1287,7 @@
         \[
           \<f,P_{m,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}f(z)\conj{P_{m,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
         \]
-        A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified} along with modularity and the cocycle condition shows this integral may be expressed as
+        A short computation using \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} along with modularity and the cocycle condition shows this integral may be expressed as
         \[
           \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}\sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)e\left(-m\conj{\s_{\mf{a}}^{-1}\g z}\right)\Im(\g z)^{k}\,d\mu.
         \]
@@ -1273,7 +1295,7 @@
         \[
           \frac{1}{V_{\G}}\int_{\G_{\mf{a}}\backslash\H}\conj{j(\s_{\mf{a}}^{-1},z)^{-k}}f(z)e\left(-m\conj{\s_{\mf{a}}^{-1}z}\right)\Im(z)^{k}\,d\mu.
         \]
-        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using the fact that \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_simplified} and the cocycle condition shows that this integral becomes
+        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using the fact that \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} and the cocycle condition shows that this integral becomes
         \[
           \frac{1}{V_{\G}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e(-m\conj{z})\Im(z)^{k}\,d\mu.
         \]
@@ -1307,7 +1329,7 @@
         \[
           \<f,E_{\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}f(z)\conj{E_{\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
         \]
-        A short computation using \cref{equ:Mobius_transformation_imaginary_part_simplified} along with modularity and the cocycle condition shows this integral may be expressed as
+        A short computation using \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} along with modularity and the cocycle condition shows this integral may be expressed as
         \[
           \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}\sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)\Im(\g z)^{k}\,d\mu.
         \]
@@ -1315,7 +1337,7 @@
         \[
           \frac{1}{V_{\G}}\int_{\G_{\mf{a}}\backslash\H}\conj{j(\s_{\mf{a}}^{-1},z)^{-k}}f(z)\Im(z)^{k}\,d\mu.
         \]
-        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using the fact that \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_simplified} and the cocycle condition shows that this integral becomes
+        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using the fact that \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} and the cocycle condition shows that this integral becomes
         \[
           \frac{1}{V_{\G}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{k}\,d\mu.
         \]

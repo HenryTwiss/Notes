@@ -7,8 +7,8 @@
 \contentsline {subsection}{\numberline {2.1}Modular Forms}{15}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Poincar\'e Series and Eisenstein Series}{19}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}The Valence Formula}{22}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}\leavevmode {\color {red}\sf Todo: [The Petersson Inner Product]}}{27}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Double Coset Operators}{27}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.4}The Petersson Inner Product}{27}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Double Coset Operators}{28}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Arithmetic of Modular Forms on Hecke Congruence Subgroups}{30}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Poincar\'e Series and Eisenstein Series}{30}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}\leavevmode {\color {red}\sf Todo: [Diamond and Hecke Operators]}}{37}{subsection.3.2}%
