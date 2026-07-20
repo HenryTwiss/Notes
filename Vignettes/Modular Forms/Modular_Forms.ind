@@ -41,9 +41,10 @@
   \item Hecke bound, \hyperpage{19}
   \item Hecke congruence subgroup, \hyperpage{4}
   \item Hecke eigenform, \hyperpage{48}
-  \item Hecke eigenvalues, \hyperpage{48}
-  \item Hecke normalization, \hyperpage{48}
+  \item Hecke eigenvalue, \hyperpage{48}
+  \item Hecke normalization, \hyperpage{49}
   \item Hecke operator, \hyperpage{41}
+  \item Hecke relations, \hyperpage{49}
   \item holomorphic at the cusps, \hyperpage{16}
   \item hyperbolic measure, \hyperpage{2}
 
@@ -75,7 +76,7 @@
   \indexspace
 
   \item Petersson inner product, \hyperpage{27}
-  \item Petersson normalization, \hyperpage{48}
+  \item Petersson normalization, \hyperpage{49}
   \item Poincar\'e series, \hyperpage{19}
   \item principal congruence subgroup, \hyperpage{3}
 

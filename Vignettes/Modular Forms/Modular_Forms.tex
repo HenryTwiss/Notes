@@ -1443,7 +1443,7 @@
         \]
         is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
-    \subsection{\todo{Diamond and Hecke Operators}}
+    \subsection{Diamond and Hecke Operators}
       The diamond and Hecke operators are sums of double coset operators. They will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. Actually, these operators will be defined for modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. However, it turns out that such modular forms arise from those on \(\G_{0}(N)\backslash\H\) with character via the diamond operators. So we will discuss the diamond operators first and the Hecke operators second. 
       
       To define the diamond operators, we need to consider the congruence subgroups \(\G_{1}(N)\) and \(\G_{0}(N)\). Recall that \(\G_{1}(N) \subseteq \G_{0}(N)\) and consider the surjective homomorphism
@@ -1486,7 +1486,7 @@
       \[
         \mc{M}_{k}(N,\chi) = \{f \in \mc{M}_{k}(\G_{1}(N)):\<d\>f = \chi(d)f\},
       \]
-      be the \(\chi\)-eigenspace. Also let \(\mc{S}_{k}(N,\chi)\) be the corresponding subspace of cusp forms. Then \(\mc{M}_{k}(\G_{1}(N))\) admits a decomposition into these eigenspaces.
+      be the \(\chi\)-eigenspace. Also let \(\mc{S}_{k}(N,\chi)\) be the corresponding subspace of cusp forms. In the case \(\chi\) is trivial we will suppress this dependence. Then \(\mc{M}_{k}(\G_{1}(N))\) admits a decomposition into these eigenspaces.
 
       \begin{proposition}\label{thm:diamond_operator_decomposition_modular}
         \(\mc{M}_{k}(\G_{1}(N))\) admits the direct sum decomposition
@@ -1759,13 +1759,13 @@
 
       We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). In fact, we will compute their adjoints explicitly.
 
-      \begin{proposition}
+      \begin{theorem}\label{thm:Hecke_operators_normal}
         Let \(m\) be a positive integer with \((m,N) = 1\) and \(m^{\ast}\) be any positive integer satisfying \(m^{\ast}m \equiv 1 \tmod{N}\). The adjoints of the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) on \(\mc{S}_{k}(N,\chi)\) are given by
         \[
           \<m\>^{\ast} = \<m^{\ast}\> \quad \text{and} \quad T_{m}^{\ast} = \<m^{\ast}\>T_{m}.
         \]
         In particular, they are are normal.
-      \end{proposition}
+      \end{theorem}
       \begin{proof}
         By \cref{thm:Hecke_operators_composition_formula} and induction, it suffices to prove the adjoint formulas when \(m = p\) for a prime \(p\) with \(p \nmid N\). We will prove the adjoint formula for diamond operators first. For any \(\g_{p}\), we have \(\g_{p}^{\ast} \in \G_{0}(N)\) with \(\g_{p}^{\ast} \equiv \begin{psmallmatrix} p & 0 \\ 0 & p^{\ast} \end{psmallmatrix} \tmod{N}\). Therefore \cref{prop:double_coset_adjoint} implies
         \[
@@ -1790,60 +1790,41 @@
         Note that on \(\mc{S}_{k}(\SL_{2}(\Z))\), all of the diamond operators are the identity operator and so they are self-adjoint. Moreover, this implies \(T_{p}^{\ast} = T_{p}\) for all primes \(p\) so that the Hecke operators are self-adjoint as well.
       \end{remark}
       
-      Suppose \(f \in \mc{S}_{k}(N,\chi)\) is non-constant. If \(f\) is an eigenfunction for \(T_{m}\) we will write \(\l_{f}(m)\) for the eigenvalue. The constants \(\l_{f}(m)\) are called the \textbf{Hecke eigenvalues}\index{Hecke eigenvalues} of \(f\). If \(f\) is a simultaneous eigenfunction for all diamond operators \(\<m\>\) and Hecke operators \(T_{m}\) with \((m,N) = 1\), we call \(f\) an \textbf{eigenform}\index{eigenform}. If the condition \((m,N) = 1\) can be dropped, so that \(f\) is a simultaneous eigenfunction for all diamond and Hecke operators, we say \(f\) is a \textbf{Hecke eigenform}\index{Hecke eigenform}. In particular, on \(\SL_{2}(\Z)\backslash\H\) all eigenforms are Hecke eigenforms. If \(f\) is a Hecke eigenform with Fourier coefficients then \cref{prop:Hecke_operators_on_Fourier_coefficients} immediately implies that the first Fourier coefficient of \(T_{m}f\) is \(a_{m}(f)\) and so
+      Suppose \(f \in \mc{S}_{k}(N,\chi)\) is non-constant. Then \(f\) is already an eigenfunction for the diamond operators \(\<d\>\) with eigenvalue \(\chi(d)\). If \(f\) is also an eigenfunction for the Hecke operator \(T_{m}\) with eigenvalue \(\l(m)\), so that
       \[
-        a_{m}(f) = \l_{f}(m)a_{1}(f).
+        (T_{m}f)(z) = \l(m)f(z),
       \]
-      Therefore we cannot have \(a_{1}(f) = 0\) for this would mean \(f\) is constant. So we can normalize \(f\) by dividing by \(a_{1}(f)\) which guarantees that this Fourier coefficient is \(1\). This is called the \textbf{Hecke normalization}\index{Hecke normalization} of \(f\) and it ensures
+      we call \(\l(m)\) the \(m\)-th \textbf{Hecke eigenvalue}\index{Hecke eigenvalue} of \(f\). If \(f\) is a simultaneous eigenfunction for all Hecke operators \(T_{m}\) with \((m,N) = 1\), we call \(f\) an \textbf{eigenform}\index{eigenform}. If the condition \((m,N) = 1\) can be dropped, so that \(f\) is a simultaneous eigenfunction for all the Hecke operators, we say \(f\) is a \textbf{Hecke eigenform}\index{Hecke eigenform}. In particular, on \(\mc{S}_{k}(1)\) all eigenforms are Hecke eigenforms. If \(f\) is a Hecke eigenform with Fourier coefficients \(a(n)\) then \cref{prop:Hecke_operators_on_Fourier_coefficients} immediately implies that the first Fourier coefficient of \(T_{m}f\) is \(a(m)\) and so
       \[
-        a_{m}(f) = \l_{f}(m).
+        a(m) = \l(m)a(1).
+      \]
+      Therefore we cannot have \(a(1) = 0\) for this would mean \(f\) is constant. So we can normalize \(f\) by dividing by \(a(1)\) which guarantees that this Fourier coefficient is \(1\). This is called the \textbf{Hecke normalization}\index{Hecke normalization} of \(f\) and it ensures
+      \[
+        a(m) = \l(m).
       \]
       The \textbf{Petersson normalization}\index{Petersson normalization} of \(f\) is where we normalize so that \(\<f,f\> = 1\). In particular, any orthonormal basis of \(\mc{S}_{k}(\G_{1}(N))\) is Petersson normalized. 
       
-      \iffalse From the spectral theorem we derive an important result about eigenforms.
+      In any case, we now have developed enough about the Hecke operators to show that we can always find a basis of eigenforms.
 
       \begin{theorem}\label{thm:eigenforms_forms_spectral_theory_modular}
-        \(\mc{S}_{k}(\G_{1}(N))\) admits an orthonormal basis of eigenforms.
+        \(\mc{S}_{k}(N,\chi)\) admits an orthonormal basis of eigenforms.
       \end{theorem}
       \begin{proof}
-        By \cref{thm:modular_forms_finite_dimensional}, \(\mc{S}_{k}(\G_{1}(N))\) is finite dimensional. The claim then follows from the spectral theorem along with \cref{prop:Hecke_operators_commute_modular,prop:Hecke_operators_normal_modular}.
+        By \cref{thm:modular_forms_finite_dimensional,thm:Hecke_operators_composition_formula,thm:Hecke_operators_normal}, the Hecke operators \(T_{m}\) with \((m,N) = 1\) are a commuting family of normal operators on the finite dimensional complex Hilbert space \(\mc{S}_{k}(N,\chi)\). Therefore they admit a simultaneous orthonormal eigenbasis by the spectral theorem. This basis is exactly an orthonormal basis of eigenforms.
       \end{proof}
 
-      The Hecke eigenvalues of Hecke eigenforms satisfy certain relations known as the \textbf{Hecke relations}\index{Hecke relations} for modular forms:
+      The Hecke eigenvalues of Hecke eigenforms satisfy certain relations known as the \textbf{Hecke relations}\index{Hecke relations} for modular forms.
 
-      \begin{proposition*}[Hecke relations, modular]
-      Let \(f \in \mc{S}_{k}(N,\chi)\) be a Hecke eigenform with Hecke eigenvalues \(\l_{f}(m)\). Then the Hecke eigenvalues are multiplicative and satisfy
+      \begin{proposition*}[Hecke relations]
+      Let \(f \in \mc{S}_{k}(N,\chi)\) be an eigenform with Hecke eigenvalues \(\l(m)\). Then the Hecke eigenvalues are multiplicative and satisfy
       \[
-        \l_{f}(n)\l_{f}(m) = \sum_{d \mid (n,m)}\chi(d)d^{k-1}\l_{f}\left(\frac{nm}{d^{2}}\right) \quad \text{and} \quad \l_{f}(nm) = \sum_{d \mid (n,m)}\mu(d)\chi(d)d^{k-1}\l_{f}\left(\frac{n}{d}\right)\l_{f}\left(\frac{m}{d}\right),
+        \l(m)\l(n) = \sum_{d \mid (m,n)}\chi(d)d^{k-1}\l\left(\frac{mn}{d^{2}}\right),
       \]
-      for all \(n,m \ge 1\) with \((nm,N) = 1\). Moreover,
-      \[
-        \l_{f}(p^{r}) = \l_{f}(p)^{r},
-      \]
-      for all \(p \mid N\) and \(r \ge 2\).
+      for all positive integers \(m\) and \(n\) with \((mn,N) = 1\). If \(f\) is a Hecke eigenform, these relations hold for all \(m\) and \(n\).
       \end{proposition*}
       \begin{proof}
-        If necessary, Hecke normalize \(f\). The multiplicativity of the Hecke eigenvalues now follows from the multiplicativity of the Hecke operators. The first identity follows from computing the \(n\)-th Fourier coefficient of \(T_{m}f\) in two different ways. On the one hand, use that \(f\) is a Hecke eigenform to get \(\l_{f}(n)\l_{f}(m)\). On the other hand, use \cref{prop:general_Hecke_operators_acting_on_Fourier_coefficients_modular} to obtain \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l_{f}\left(\frac{nm}{d^{2}}\right)\). For the second identity, computing the \(p\)-th Fourier coefficient of \(T_{p}\) in two different ways just as before, we have
-        \[
-          \chi(p)p^{k-1} = \l_{f}(p)^{2}-\l_{f}(p^{2}),
-        \]
-        provided \((p,N) = 1\). As the left-hand sides is completely multiplicative, the first identity implies that \(\l_{f}(n)\) is specially multiplicative. The second identity now follows from \cref{prop:specially_multiplicative_functions}. The third identity follows from inspecting the first Fourier coefficient of \(T_{p^{r}}f\) and noting that \(T_{p^{r}} = T_{p}^{r}\) provided \(p \mid N\).
+        First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
       \end{proof}
-
-      As an immediate consequence of the Hecke relations, the Hecke operators satisfy analogous relations:
-
-      \begin{corollary}\label{cor:Hecke_relations_operator_modular}
-        The Hecke operators are multiplicative and satisfy
-        \[
-          T_{n}T_{m} = \sum_{d \mid (n,m)}\chi(d)d^{k-1}T_{\frac{nm}{d^{2}}} \quad \text{and} \quad T_{nm} = \sum_{d \mid (n,m)}\mu(d)\chi(d)d^{k-1}T_{\frac{n}{d}}T_{\frac{m}{d}},
-        \]
-        for all \(n,m \ge 1\) with \((nm,N) = 1\).
-      \end{corollary}
-      \begin{proof}
-        This is immediate from \cref{thm:eigenforms_forms_spectral_theory_modular} and the Hecke relations.
-      \end{proof}
-
-      The identities in \cref{cor:Hecke_relations_operator_modular} can also be established directly. Moreover, the first identity is symmetric in \(n\) and \(m\) so it can be used to show that the Hecke operators commute.\fi
     \iffalse\subsection{\todo{Atkin-Lehner Theory}}
       So far, our entire theory of modular forms has started with a fixed congruence subgroup of some level. Atkin-Lehner theory, or the theory of oldforms and newforms, allows us to discuss modular forms in the context of moving between levels. In this setting, we will only deal with congruence subgroups of the form \(\G_{1}(N)\) and \(\G_{0}(N)\). The easiest way lift a modular form from a smaller level to a larger level is to observe that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) so there is a natural inclusion \(\mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N))\). There is a less trivial way of lifting from \(\mc{S}_{k}(\G_{1}(M))\) to \(\mc{S}_{k}(\G_{1}(N))\). For any \(d \mid \frac{N}{M}\), let
       \[
