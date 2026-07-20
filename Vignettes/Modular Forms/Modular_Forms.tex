@@ -1033,7 +1033,7 @@
       \[
         \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b,
       \]
-      into right cosets. It turns out that this union is finite. To see this, we need to relate the orbit space \(\G_{1}\backslash\G_{1}\a\G_{2}\) to a quotient of \(\G_{2}\) with respect to the action of some subgroup. This will be the congruence subgroup \(\a^{-1}\G_{1}\a \cap \G_{2}\). As this subgroup acts on \(\G_{2}\) by left multiplication, we again have an orbit space \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\). These orbit spaces are related.
+      into right cosets. It turns out that this union is finite. To see this, we need to relate the orbit space \(\G_{1}\backslash\G_{1}\a\G_{2}\) to a quotient of \(\G_{2}\) with respect to the action of some subgroup. This will be the congruence subgroup \(\a^{-1}\G_{1}\a \cap \G_{2}\). As this subgroup acts on \(\G_{2}\) by left multiplication, we again have an orbit space \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\). These orbit spaces are related. \todo{XXX}
 
       \begin{lemma}\label{lem:coset_lemma_2}
         Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the right multiplication map
@@ -1106,6 +1106,71 @@
           ((f[\G_{1}\a\G_{2}]_{k})|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
         \]
         and so the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form if \(f\) is.
+      \end{proof}
+
+      In the case \(\G_{1} = \G_{2} = \G\) for any congruence subgroup \(\G\), this result shows that the double coset operator \([\G\a\G]_{k}\) is a linear operator on \(\mc{M}_{k}(\G)\) and preserves the subspace \(\mc{S}_{k}(\G)\). Recalling that \(\mc{S}_{k}(\G)\) is a complex Hilbert space with respect to the Petersson inner product, this implies that \([\G\a\G]_{k}\) has an adjoint. We will show that the the adjoint is also a double coset operator whenever \(\a\) normalizes \(\G\). To prove this we first require a lemma.
+
+      \begin{lemma}\label{lem:adjoint_lemma}
+        Suppose \(\G\) is a congruence subgroup and let \(\a \in \GL_{2}^{+}(\Q)\). Then there exists \(\b_{j} \in \GL_{2}^{+}(\Q)\) such that \(\G\a\G\) admits the left and right coset decompositions
+        \[
+          \G\a\G = \bigcup_{j}\b_{j}\G \quad \text{and} \quad \G\a\G = \bigcup_{j}\G\b_{j}.
+        \]
+      \end{lemma}
+      
+      \begin{proof}
+        \todo{XXX} \iffalse By \cref{lem:coset_lemma_1} and that congruence subgroups are preserved under intersection, \(\a\G\a^{-1} \cap \G\) and \(\a^{-1}\G\a \cap \G\) are congruence subgroups. Clearly \([\G:\a^{-1}\G\a \cap \G] = [\G:\a\G\a^{-1} \cap \G]\) and so we can find representatives \(\g_{j} \in \G\) and \(\g_{j}' \in \G\) such that
+        \[
+          \G = \bigcup_{j}(\a^{-1}\G\a \cap \G)\g_{j} \quad \text{and} \quad \G = \bigcup_{j}(\a\G\a^{-1} \cap \G)\g_{j}'^{-1}.
+        \]
+        Invoking \cref{lem:coset_lemma_2} twice, we may then write
+        \[
+          \G\a\G = \bigcup_{j}\G\a\g_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\a^{-1}\g_{j}'^{-1}.
+        \]
+        For each \(j\), the right cosets \(\G\a\g_{j}\) and \(\g_{j}'\a\G\) have nonempty intersection. For if they did we would have
+        \[
+          \G\a\g_{j} \subseteq \bigcup_{\substack{1 \le i \le n \\ i \neq j}}\wtilde{\g}_{i}\a\G,
+        \]
+        and thus
+        \[
+          \G\a\G \subseteq \bigcup_{\substack{1 \le i \le n \\ i \neq j}}\wtilde{\g}_{i}\a\G.
+        \]
+        This contradicts the previous decomposition of \(\G\). Therefore we can find representatives \(\b_{j} \in \G\a\g_{j} \cap \g_{j}'\a\G\) for every \(j\). Then
+        \[
+          \G = \bigcup_{j}\G\b_{j} = \bigcup_{j}\b_{j}\G,
+        \]
+        as desired. \fi
+      \end{proof}
+
+      We can now describe the adjoint of \([\G\a\G]_{k}\) whenever \(\a\) normalizes \(\G\) which, as remarked, is another double coset operator.
+
+      \begin{proposition}\label{prop:Petersson_adjoint_modular}
+        Let \(\G\) be a congruence subgroup and suppose \(\a \in \GL_{2}^{+}(\Q)\) normalizes \(\G\). Set \(\wtilde{\a} = \det(\a)\a^{-1}\). Then
+        \[
+          [\G\a\G]_{k}^{\ast} = [\G\wtilde{\a}\G]_{k}.
+        \]
+        
+      \end{proposition}
+      \begin{proof}
+        \todo{XXX} \iffalse We first compute
+        \begin{align*}
+          \<f|_{k}\a,g\>_{\a^{-1}\G\a} &= \frac{1}{V_{\a^{-1}\G\a}}\int_{\mc{F}_{\a^{-1}\G\a}}(f|_{k}\a)(z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
+          &= \frac{1}{V_{\a^{-1}\G\a}}\int_{\mc{F}_{\a^{-1}\G\a}}\det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
+          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\a^{-1}\G\a}}\det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z)\conj{g(z)}\Im(z)^{k}\,d\mu && \text{\cref{lem:invariance_of_volume}} \\
+          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a)^{\frac{k}{2}}j(\a,\a^{-1}z)^{-k}f(z)\conj{g(\a^{-1}z)}\Im(\a^{-1}z)^{k}\,d\mu && \text{\(z \mapsto \a^{-1}z\).}
+        \end{align*}
+        As \(\a'\) acts as \(\a^{-1}\) on \(\H\) and \(\det(\a') = \det(\a)\), using \cref{equ:Mobius_transformation_imaginary_part_j}, this latter integral is equivalent to
+        \[
+          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{3k}{2}}j(\a,\a'z)^{-k}f(z)\conj{g(\a'z)}\Im(\a'z)^{k}\,d\mu.
+        \]
+        Applying the cocycle condition, \cref{equ:Mobius_transformation_imaginary_part_j}, and the identity \(j(\a\a',z) = \det(\a')\), we can further rewrite the integral as
+        \[
+          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{k}{2}}\conj{j(\a',z)^{-k}}f(z)\conj{g(\a'z)}\Im(z)^{k}\,d\mu.
+        \]
+        Reversing the first computation in the start of the proof but applied to this integral shows that that
+        \[
+          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{k}{2}}\conj{j(\a',z)^{-k}}f(z)\conj{g(\a'z)}\Im(z)^{k}\,d\mu = \<f,g|_{k}\a'\>_{\G},
+        \]
+        which completes the proof. \fi
       \end{proof}
   \section{Arithmetic of Modular Forms on Hecke Congruence Subgroups}
     If \(a\) is an integer modulo \(m\) with \((a,m) = 1\) we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\). For any complex \(z\) let
@@ -1688,37 +1753,6 @@
       \end{proof}
 
       \iffalse
-      We will now restrict to the subspace of cusp forms \(\mc{S}_{k}(N,\chi)\). The diamond and Hecke operators \(\<m\>\) and \(T_{m}\) turn out to be normal on this subspace provided \((m,N) = 1\). To prove this, we first require a short lemma about the Petersson inner product.
-
-      \begin{proposition}\label{prop:Petersson_adjoint_modular}
-        Let \(\G\) be a congruence subgroup. Moreover, suppose \(\a \in \GL_{2}^{+}(\Q)\) is such that \(\a^{-1}\G\a\) is also a congruence subgroup and set \(\a' = \det(\a)\a^{-1}\). Then for any \(f \in \mc{S}_{k}(\G)\) and \(g \in \mc{S}_{k}(\a^{-1}\G\a)\), we have
-        \[
-          \<f|_{k}\a,g\>_{\a^{-1}\G\a} = \<f,g|_{k}\a'\>_{\G} \quad \text{and} \quad \<f\|_{k}\a,g\>_{\a^{-1}\G\a} = \<f,g\|_{k}\a'\>_{\G}.
-        \]
-      \end{proposition}
-      \begin{proof}
-        We first compute
-        \begin{align*}
-          \<f|_{k}\a,g\>_{\a^{-1}\G\a} &= \frac{1}{V_{\a^{-1}\G\a}}\int_{\mc{F}_{\a^{-1}\G\a}}(f|_{k}\a)(z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\a^{-1}\G\a}}\int_{\mc{F}_{\a^{-1}\G\a}}\det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\a^{-1}\G\a}}\det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z)\conj{g(z)}\Im(z)^{k}\,d\mu && \text{\cref{lem:invariance_of_volume}} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a)^{\frac{k}{2}}j(\a,\a^{-1}z)^{-k}f(z)\conj{g(\a^{-1}z)}\Im(\a^{-1}z)^{k}\,d\mu && \text{\(z \mapsto \a^{-1}z\).}
-        \end{align*}
-        As \(\a'\) acts as \(\a^{-1}\) on \(\H\) and \(\det(\a') = \det(\a)\), using \cref{equ:Mobius_transformation_imaginary_part_j}, this latter integral is equivalent to
-        \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{3k}{2}}j(\a,\a'z)^{-k}f(z)\conj{g(\a'z)}\Im(\a'z)^{k}\,d\mu.
-        \]
-        Applying the cocycle condition, \cref{equ:Mobius_transformation_imaginary_part_j}, and the identity \(j(\a\a',z) = \det(\a')\), we can further rewrite the integral as
-        \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{k}{2}}\conj{j(\a',z)^{-k}}f(z)\conj{g(\a'z)}\Im(z)^{k}\,d\mu.
-        \]
-        Reversing the first computation in the start of the proof but applied to this integral shows that that
-        \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{k}{2}}\conj{j(\a',z)^{-k}}f(z)\conj{g(\a'z)}\Im(z)^{k}\,d\mu = \<f,g|_{k}\a'\>_{\G},
-        \]
-        which completes the proof.
-      \end{proof}
-
       We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). In fact, we will compute their adjoints explicitly.
 
       \begin{proposition}
