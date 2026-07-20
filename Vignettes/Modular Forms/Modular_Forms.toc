@@ -9,6 +9,6 @@
 \contentsline {subsection}{\numberline {2.3}The Valence Formula}{22}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}The Petersson Inner Product}{27}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Double Coset Operators}{28}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Arithmetic of Modular Forms on Hecke Congruence Subgroups}{30}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Poincar\'e Series and Eisenstein Series}{31}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}\leavevmode {\color {red}\sf Todo: [Diamond and Hecke Operators]}}{38}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Arithmetic of Modular Forms on Hecke Congruence Subgroups}{32}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Poincar\'e Series and Eisenstein Series}{32}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}\leavevmode {\color {red}\sf Todo: [Diamond and Hecke Operators]}}{39}{subsection.3.2}%

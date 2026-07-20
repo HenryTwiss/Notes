@@ -1000,7 +1000,7 @@
       The integral is well-defined because the integrand is \(\G\)-invariant and is absolutely uniformly convergent because it is bounded on \(\H\) and \(\G\) has finite covolume. An important property of the Petersson inner product is that it is invariant with respect to the slash operator provided the associated matrix normalizes \(\G\).
 
       \begin{proposition}\label{prop:Petersson_slash_invariance_modular}
-        Let \(\G\) be a congruence subgroup and suppose \(\a \in \GL_{2}^{+}(\R)\). Then
+        Let \(\G\) be a congruence subgroup and suppose \(\a \in \GL_{2}^{+}(\R)\) normalizes \(\G\). Then
         \[
           \<f|_{k}\a,g|_{k}\a\> = \<f,g\>,
         \]
@@ -1033,17 +1033,24 @@
       \[
         \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b,
       \]
-      into right cosets. It turns out that this union is finite. To see this, we need to relate the orbit space \(\G_{1}\backslash\G_{1}\a\G_{2}\) to a quotient of \(\G_{2}\) with respect to the action of some subgroup. This will be the congruence subgroup \(\a^{-1}\G_{1}\a \cap \G_{2}\). As this subgroup acts on \(\G_{2}\) by left multiplication, we again have an orbit space \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\). These orbit spaces are related. \todo{XXX}
+      into right cosets. It turns out that this union is finite. To see this, we need to relate the orbit space \(\G_{1}\backslash\G_{1}\a\G_{2}\) to a quotient of \(\G_{2}\) with respect to the action of some subgroup. This will be the congruence subgroup \(\a^{-1}\G_{1}\a \cap \G_{2}\). As this subgroup acts on \(\G_{2}\) by left multiplication, we again have an orbit space \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\). These orbit spaces are related.
 
       \begin{lemma}\label{lem:coset_lemma_2}
         Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the right multiplication map
         \[
           \G_{2} \to \G_{1}\backslash\G_{1}\a\G_{2} \qquad \g_{2} \mapsto \G_{1}\a\g_{2},
         \]
-        induces a bijection from \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) to \(\G_{1}\backslash\G_{1}\a\G_{2}\).
+        induces a bijection from \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) to \(\G_{1}\backslash\G_{1}\a\G_{2}\). In particular, if
+        \[
+          \G_{2} = \bigcup_{j}(\a^{-1}\G_{1}\a \cap \G_{2})\g_{2},
+        \]
+        is a right coset decomposition then so is
+        \[
+          \G_{1}\a\G_{2} = \bigcup_{j}\G_{1}\a\g_{2}.
+        \]
       \end{lemma}
       \begin{proof}
-        This map is \((\a^{-1}\G_{1}\a \cap \G_{2})\)-invariant so that it induces a map on the quotient. Indeed, if \(\g \in \a^{-1}\G_{1}\a \cap \G_{2}\) then \(\g = \a^{-1}\g_{1}\a\) for some \(\g_{1} \in \G_{1}\). Thus \(\G_{1}\a\g\g_{2} = \G_{1}\a\g_{2}\) as claimed.
+        The second statement is immediate from the first, so it suffices to show the first statement. The map is \((\a^{-1}\G_{1}\a \cap \G_{2})\)-invariant so that it induces a map on the quotient. Indeed, if \(\g \in \a^{-1}\G_{1}\a \cap \G_{2}\) then \(\g = \a^{-1}\g_{1}\a\) for some \(\g_{1} \in \G_{1}\). Thus \(\G_{1}\a\g\g_{2} = \G_{1}\a\g_{2}\) as claimed.
 
         We now show that the induced map is a bijection. For injectivity, let \(\g_{2}\) and \(\g'_{2}\) be representatives of orbits of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) such that \(\G_{1}\a\g_{2} = \G_{1}\a\g'_{2}\). This implies \(\a\g_{2}(\g'_{2})^{-1} \in \G_{1}\a\) and so \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a\). But we also have \(\g_{2}(\g'_{2})^{-1} \in \G_{2}\) and these two facts together imply that \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a \cap \G_{2}\). Hence
         \[
@@ -1111,66 +1118,64 @@
       In the case \(\G_{1} = \G_{2} = \G\) for any congruence subgroup \(\G\), this result shows that the double coset operator \([\G\a\G]_{k}\) is a linear operator on \(\mc{M}_{k}(\G)\) and preserves the subspace \(\mc{S}_{k}(\G)\). Recalling that \(\mc{S}_{k}(\G)\) is a complex Hilbert space with respect to the Petersson inner product, this implies that \([\G\a\G]_{k}\) has an adjoint. We will show that the the adjoint is also a double coset operator whenever \(\a\) normalizes \(\G\). To prove this we first require a lemma.
 
       \begin{lemma}\label{lem:adjoint_lemma}
-        Suppose \(\G\) is a congruence subgroup and let \(\a \in \GL_{2}^{+}(\Q)\). Then there exists \(\b_{j} \in \GL_{2}^{+}(\Q)\) such that \(\G\a\G\) admits the left and right coset decompositions
+        Suppose \(\G\) is a congruence subgroup and let \(\a \in \GL_{2}^{+}(\Q)\). Then there exists \(\b_{j} \in \GL_{2}^{+}(\Q)\) such that \(\G\a\G\) and \(\G\a^{-1}\G\) admit right coset decompositions
         \[
-          \G\a\G = \bigcup_{j}\b_{j}\G \quad \text{and} \quad \G\a\G = \bigcup_{j}\G\b_{j}.
+          \G\a\G = \bigcup_{j}\G\b_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\b_{j}^{-1}.
         \]
       \end{lemma}
-      
       \begin{proof}
-        \todo{XXX} \iffalse By \cref{lem:coset_lemma_1} and that congruence subgroups are preserved under intersection, \(\a\G\a^{-1} \cap \G\) and \(\a^{-1}\G\a \cap \G\) are congruence subgroups. Clearly \([\G:\a^{-1}\G\a \cap \G] = [\G:\a\G\a^{-1} \cap \G]\) and so we can find representatives \(\g_{j} \in \G\) and \(\g_{j}' \in \G\) such that
+        By \cref{lem:coset_lemma_1} and that congruence subgroups are preserved under intersection, \(\a\G\a^{-1} \cap \G\) and \(\a^{-1}\G\a \cap \G\) are congruence subgroups. Clearly \([\G:\a^{-1}\G\a \cap \G] = [\G:\a\G\a^{-1} \cap \G]\) and so we can find representatives \(\g_{j} \in \G\) and \(\g_{j}' \in \G\) such that we have right coset decompositions
         \[
-          \G = \bigcup_{j}(\a^{-1}\G\a \cap \G)\g_{j} \quad \text{and} \quad \G = \bigcup_{j}(\a\G\a^{-1} \cap \G)\g_{j}'^{-1}.
+          \G = \bigcup_{j}(\a^{-1}\G\a \cap \G)\g_{j} \quad \text{and} \quad \G = \bigcup_{j}(\a\G\a^{-1} \cap \G)(\g_{j}')^{-1}.
         \]
-        Invoking \cref{lem:coset_lemma_2} twice, we may then write
+        Invoking \cref{lem:coset_lemma_2} twice, we obtain right coset decompositions
         \[
-          \G\a\G = \bigcup_{j}\G\a\g_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\a^{-1}\g_{j}'^{-1}.
+          \G\a\G = \bigcup_{j}\G\a\g_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\a^{-1}(\g_{j}')^{-1}.
         \]
-        For each \(j\), the right cosets \(\G\a\g_{j}\) and \(\g_{j}'\a\G\) have nonempty intersection. For if they did we would have
+        Also note that these right coset decompositions are inverses of each other. For each \(j\), the right and left cosets \(\G\a\g_{j}\) and \(\g_{j}'\a\G\) have nonempty intersection. For if they did, for some \(j\), we would have
         \[
-          \G\a\g_{j} \subseteq \bigcup_{\substack{1 \le i \le n \\ i \neq j}}\wtilde{\g}_{i}\a\G,
+          \G\a\g_{j} \subseteq \bigcup_{i \neq j}\g_{i}'\a\G,
         \]
         and thus
         \[
-          \G\a\G \subseteq \bigcup_{\substack{1 \le i \le n \\ i \neq j}}\wtilde{\g}_{i}\a\G.
+          \G\a\G \subseteq \bigcup_{i \neq j}\g_{i}'\a\G.
         \]
-        This contradicts the previous decomposition of \(\G\). Therefore we can find representatives \(\b_{j} \in \G\a\g_{j} \cap \g_{j}'\a\G\) for every \(j\). Then
+        Upon inverting, this contradicts the previous right coset decomposition of \(\G\a^{-1}\G\). Therefore we can find representatives \(\b_{j} \in \G\a\g_{j} \cap \g_{j}'\a\G\) for every \(j\). Then we obtain right coset decompositions
         \[
-          \G = \bigcup_{j}\G\b_{j} = \bigcup_{j}\b_{j}\G,
+          \G\a\G = \bigcup_{j}\G\b_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\b_{j}^{-1}.
         \]
-        as desired. \fi
       \end{proof}
 
-      We can now describe the adjoint of \([\G\a\G]_{k}\) whenever \(\a\) normalizes \(\G\) which, as remarked, is another double coset operator.
+      In order to describe the adjoint of \([\G\a\G]_{k}\) we will introduce some notation. Let
+      \[
+        a^{\ast} = \det(\a)\a^{-1},
+      \]
+      be the adjugate of \(\a\) for any \(\a \in \GL_{2}^{+}(\Q)\). We will now describe the adjoint of \([\G\a\G]_{k}\) whenever \(\a\) normalizes \(\G\). As remarked, this is another double coset operator.
 
-      \begin{proposition}\label{prop:Petersson_adjoint_modular}
-        Let \(\G\) be a congruence subgroup and suppose \(\a \in \GL_{2}^{+}(\Q)\) normalizes \(\G\). Set \(\wtilde{\a} = \det(\a)\a^{-1}\). Then
+      \begin{proposition}\label{prop:double_coset_adjoint}
+        Let \(\G\) be a congruence subgroup and suppose \(\a \in \GL_{2}^{+}(\Q)\) normalizes \(\G\). Then for any \(f,g \in \mc{S}_{k}(\G)\) we have
         \[
-          [\G\a\G]_{k}^{\ast} = [\G\wtilde{\a}\G]_{k}.
+          \<f|_{k}\a,g\> = \<f,g|_{k}\a^{-1}\> \quad \text{and} \quad  \<f\|_{k}\a,g\> = \<f,g\|_{k}\a^{\ast}\>.
         \]
-        
+        In particular,
+        \[
+          [\G\a\G]_{k}^{\ast} = [\G\a^{\ast}\G]_{k}.
+        \]
       \end{proposition}
       \begin{proof}
-        \todo{XXX} \iffalse We first compute
-        \begin{align*}
-          \<f|_{k}\a,g\>_{\a^{-1}\G\a} &= \frac{1}{V_{\a^{-1}\G\a}}\int_{\mc{F}_{\a^{-1}\G\a}}(f|_{k}\a)(z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\a^{-1}\G\a}}\int_{\mc{F}_{\a^{-1}\G\a}}\det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z)\conj{g(z)}\Im(z)^{k}\,d\mu \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\a^{-1}\G\a}}\det(\a)^{\frac{k}{2}}j(\a,z)^{-k}f(\a z)\conj{g(z)}\Im(z)^{k}\,d\mu && \text{\cref{lem:invariance_of_volume}} \\
-          &= \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a)^{\frac{k}{2}}j(\a,\a^{-1}z)^{-k}f(z)\conj{g(\a^{-1}z)}\Im(\a^{-1}z)^{k}\,d\mu && \text{\(z \mapsto \a^{-1}z\).}
-        \end{align*}
-        As \(\a'\) acts as \(\a^{-1}\) on \(\H\) and \(\det(\a') = \det(\a)\), using \cref{equ:Mobius_transformation_imaginary_part_j}, this latter integral is equivalent to
+        It follows from \cref{prop:Petersson_slash_invariance_modular} that
         \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{3k}{2}}j(\a,\a'z)^{-k}f(z)\conj{g(\a'z)}\Im(\a'z)^{k}\,d\mu.
+          \<f|_{k}\a,g\> = \<f,g|_{k}\a^{-1}\> \quad \text{and} \quad \<f\|_{k}\a,g\> = \<f,g\|_{k}\a^{\ast}\>,
         \]
-        Applying the cocycle condition, \cref{equ:Mobius_transformation_imaginary_part_j}, and the identity \(j(\a\a',z) = \det(\a')\), we can further rewrite the integral as
+        where the second identity follows from the first by definition of the double slash operator. It remains to prove the adjoint formula for \([\G\a\G]_{k}^{\ast}\). By \cref{lem:adjoint_lemma}, we can find \(\b_{j} \in \GL_{2}^{+}(\Q)\) such that
         \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{k}{2}}\conj{j(\a',z)^{-k}}f(z)\conj{g(\a'z)}\Im(z)^{k}\,d\mu.
+          \G\a\G = \bigcup_{j}\G\b_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\b_{j}^{-1}.
         \]
-        Reversing the first computation in the start of the proof but applied to this integral shows that that
+        Whence
         \[
-          \frac{1}{V_{\G}}\int_{\mc{F}_{\G}}\det(\a')^{\frac{k}{2}}\conj{j(\a',z)^{-k}}f(z)\conj{g(\a'z)}\Im(z)^{k}\,d\mu = \<f,g|_{k}\a'\>_{\G},
+          \G\a\G = \bigcup_{j}\G\b_{j} \quad \text{and} \quad \G\a^{\ast}\G = \bigcup_{j}\G\b_{j}^{\ast},
         \]
-        which completes the proof. \fi
+        because \(\det(\a) = \det(\b_{j})\). The adjoint formula follows at once from the first statement.
       \end{proof}
   \section{Arithmetic of Modular Forms on Hecke Congruence Subgroups}
     If \(a\) is an integer modulo \(m\) with \((a,m) = 1\) we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\). For any complex \(z\) let
@@ -1475,7 +1480,7 @@
       \[
         \begin{pmatrix} a^{-1} & 0 \\ 0 & a \end{pmatrix}\begin{pmatrix} d^{-1} & 0 \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} (ad)^{-1} & 0 \\ 0 & ad \end{pmatrix} \pmod{N},
       \]
-      that the diamond operators are multiplicative, commutative, and invertible with \(\<d^{-1}\>\) being the inverse of \(\<d\>\) for \((d,N) = 1\). In particular, the diamond operators induce an action of \(\G_{0}(N)\) on \(\mc{M}_{k}(\G_{1}(N))\), and since \(\G_{1}(N)\) acts trivially and is normal in \(\G_{0}(N)\), there is a further induced action of \((\Z/N\Z)^{\ast}\) in view of the previous isomorphism.
+      that the diamond operators are multiplicative, commutative, and invertible with \(\<d^{\ast}\>\) being the inverse of \(\<d\>\) where \(d^{\ast}\) is any positive integer satisfying \(d^{\ast}d \equiv 1 \tmod{N}\) whenever \((d,N) = 1\). In particular, the diamond operators induce an action of \(\G_{0}(N)\) on \(\mc{M}_{k}(\G_{1}(N))\), and since \(\G_{1}(N)\) acts trivially and is normal in \(\G_{0}(N)\), there is a further induced action of \((\Z/N\Z)^{\ast}\) in view of the previous isomorphism.
       
       One reason the diamond operators are useful is that they decompose \(\mc{M}_{k}(\G_{1}(N))\) into eigenspaces. For any Dirichlet character \(\chi\) modulo \(N\), we let
       \[
@@ -1752,45 +1757,50 @@
         The proof of the first statement is complete upon making the change of variables \(d_{3} \mapsto d\). Commutativity follows because the formula is symmetric in \(m\) and \(n\). The last statement is immediate from the first as \(d = 1\) when \((m,n) = 1\) and \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
       \end{proof}
 
-      \iffalse
       We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). In fact, we will compute their adjoints explicitly.
 
       \begin{proposition}
-        Let \(m\) be a positive integer with \((m,N) = 1\). The adjoints of the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) on \(\mc{S}_{k}(N,\chi)\) are given by
+        Let \(m\) be a positive integer with \((m,N) = 1\) and \(m^{\ast}\) be any positive integer satisfying \(m^{\ast}m \equiv 1 \tmod{N}\). The adjoints of the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) on \(\mc{S}_{k}(N,\chi)\) are given by
         \[
-          \<m\>^{\ast} = \<m^{-1}\> \quad \text{and} \quad T_{m}^{\ast} = \<m^{-1}\>T_{m}.
+          \<m\>^{\ast} = \<m^{\ast}\> \quad \text{and} \quad T_{m}^{\ast} = \<m^{\ast}\>T_{m}.
         \]
         In particular, they are are normal.
       \end{proposition}
       \begin{proof}
-        By \cref{thm:Hecke_operators_composition_formula} and induction, it suffices to prove the adjoint formulas when \(m = p\) for a prime \(p\) with \(p \nmid N\). We will prove the adjoint formula for diamond operators first. Let \(\a = \begin{psmallmatrix} \conj{p} & \ast \\ \ast & p \end{psmallmatrix} \in \G_{0}(N)\) and \(\a' = \det(\a)\a^{-1} = \begin{psmallmatrix} p & \ast \\ \ast & \conj{p} \end{psmallmatrix} \in \G_{0}(N)\). Then \cref{prop:Petersson_adjoint_modular} implies
+        By \cref{thm:Hecke_operators_composition_formula} and induction, it suffices to prove the adjoint formulas when \(m = p\) for a prime \(p\) with \(p \nmid N\). We will prove the adjoint formula for diamond operators first. For any \(\g_{p}\), we have \(\g_{p}^{\ast} \in \G_{0}(N)\) with \(\g_{p}^{\ast} \equiv \begin{psmallmatrix} p & 0 \\ 0 & p^{\ast} \end{psmallmatrix} \tmod{N}\). Therefore \cref{prop:double_coset_adjoint} implies
         \[
-          \<p\>^{\ast} = \<\conj{p}\>.
+          \<p\>^{\ast} = \<p^{\ast}\>.
         \]
-        This proves the adjoint formula for the diamond operators and normality follows from multiplicativity. For the Hecke operators, let \(\a = \begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\) and set \(\a' = \det(\a)\a^{-1} = \begin{psmallmatrix} p & 0 \\ 0 & 1 \end{psmallmatrix}\). Also let \(m\) and \(n\) be such that \(\det\left(\begin{psmallmatrix} m & n \\ N & p \end{psmallmatrix}\right) = 1\) (by B\'ezout's identity). Observe that
+        This proves the adjoint formula for the diamond operators and normality follows from commutativity. For the Hecke operators, \cref{equ:Hecke_operator_double_coset_explicit_formula} implies
         \[
-          \begin{pmatrix} 1 & n \\ N & pm \end{pmatrix}^{-1}\a\begin{pmatrix} p & n \\ N & m \end{pmatrix} = \begin{pmatrix} pm & -n \\ -N & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\begin{pmatrix} p & n \\ N & m \end{pmatrix} = \a'.
+          T_{p} = \left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k}.
         \]
-        Now \(\begin{psmallmatrix} 1 & n \\ N & pm \end{psmallmatrix} \in \G_{1}(N)\) (note that \(pm \equiv 1 \tmod{N}\) since \(pm-Nn = 1\)) and \(\begin{psmallmatrix} p & n \\ N & m \end{psmallmatrix} \in \G_{0}(N)\). These facts and that \(\G_{1}(N)\) is normal in \(\G_{0}(N)\) together imply
+        As \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \begin{psmallmatrix} p & 0 \\ 0 & 1 \end{psmallmatrix}\), we may write \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \g_{p^{\ast}}\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\). So from \cref{prop:double_coset_adjoint} we further find that
         \[
-          \G_{1}(N)\a'\G_{1}(N) = \G_{1}(N)\a\G_{1}(N)\begin{pmatrix} p & n \\ N & m \end{pmatrix}.
+          T_{p} = \left[\G_{1}(N)\g_{p^{\ast}}\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k}.
         \]
-        As \(m \equiv \conj{p} \tmod{N}\), the above identity and \cref{prop:Petersson_adjoint_modular} together give
+        By normality of \(\G_{1}(N)\) in \(\G_{0}(N)\), this may be expressed as
         \[
-          T_{p}^{\ast} = \<\conj{p}\>T_{p}.
+          T_{p} = \<p^{\ast}\>T_{p}.
         \]
-        This proves the adjoint formula for the Hecke operators and normality follows from multiplicativity.
+        This proves the adjoint formula for the Hecke operators and normality follows from commutativity.
       \end{proof}
 
-      Note that on \(\mc{S}_{k}(\SL_{2}(\Z))\), all of the diamond operators are the identity and therefore \(T_{p}^{\ast} = T_{p}\) for all primes \(p\). That is, the Hecke operators are self-adjoint (as are the diamond operators since they are the identity). Now suppose \(f\) is a non-constant cusp form. Let the eigenvalue of \(T_{m}\) for \(f\) be \(\l_{f}(m)\). We say that the \(\l_{f}(m)\) are the \textbf{Hecke eigenvalues}\index{Hecke eigenvalues} of \(f\). If \(f\) is a simultaneous eigenfunction for all diamond operators \(\<m\>\) and Hecke operators \(T_{m}\) with \((m,N) = 1\), we call \(f\) an \textbf{eigenform}\index{eigenform}. If the condition \((m,N) = 1\) can be dropped, so that \(f\) is a simultaneous eigenfunction for all diamond and Hecke operators, we say \(f\) is a \textbf{Hecke eigenform}\index{Hecke eigenform}. In particular, on \(\SL_{2}(\Z)\backslash\H\) all eigenforms are Hecke eigenforms. Now let \(f\) have Fourier coefficients \(a_{n}(f)\). If \(f\) is a Hecke eigenform then \cref{prop:general_Hecke_operators_acting_on_Fourier_coefficients_modular} immediately implies that the first Fourier coefficient of \(T_{m}f\) is \(a_{m}(f)\) and so
+      \begin{remark}
+        Note that on \(\mc{S}_{k}(\SL_{2}(\Z))\), all of the diamond operators are the identity operator and so they are self-adjoint. Moreover, this implies \(T_{p}^{\ast} = T_{p}\) for all primes \(p\) so that the Hecke operators are self-adjoint as well.
+      \end{remark}
+      
+      Suppose \(f \in \mc{S}_{k}(N,\chi)\) is non-constant. If \(f\) is an eigenfunction for \(T_{m}\) we will write \(\l_{f}(m)\) for the eigenvalue. The constants \(\l_{f}(m)\) are called the \textbf{Hecke eigenvalues}\index{Hecke eigenvalues} of \(f\). If \(f\) is a simultaneous eigenfunction for all diamond operators \(\<m\>\) and Hecke operators \(T_{m}\) with \((m,N) = 1\), we call \(f\) an \textbf{eigenform}\index{eigenform}. If the condition \((m,N) = 1\) can be dropped, so that \(f\) is a simultaneous eigenfunction for all diamond and Hecke operators, we say \(f\) is a \textbf{Hecke eigenform}\index{Hecke eigenform}. In particular, on \(\SL_{2}(\Z)\backslash\H\) all eigenforms are Hecke eigenforms. If \(f\) is a Hecke eigenform with Fourier coefficients then \cref{prop:Hecke_operators_on_Fourier_coefficients} immediately implies that the first Fourier coefficient of \(T_{m}f\) is \(a_{m}(f)\) and so
       \[
-        a_{m}(f) = \l_{f}(m)a_{1}(f),
+        a_{m}(f) = \l_{f}(m)a_{1}(f).
       \]
-      for all \(m \ge 1\). Therefore we cannot have \(a_{1}(f) = 0\) for this would mean \(f\) is constant. So we can normalize \(f\) by dividing by \(a_{1}(f)\) which guarantees that this Fourier coefficient is \(1\). It follows that
+      Therefore we cannot have \(a_{1}(f) = 0\) for this would mean \(f\) is constant. So we can normalize \(f\) by dividing by \(a_{1}(f)\) which guarantees that this Fourier coefficient is \(1\). This is called the \textbf{Hecke normalization}\index{Hecke normalization} of \(f\) and it ensures
       \[
-        a_{m}(f) = \l_{f}(m),
+        a_{m}(f) = \l_{f}(m).
       \]
-      for all \(m \ge 1\). This normalization is called the \textbf{Hecke normalization}\index{Hecke normalization} of \(f\). The \textbf{Petersson normalization}\index{Petersson normalization} of \(f\) is where we normalize so that \(\<f,f\> = 1\). In particular, any orthonormal basis of \(\mc{S}_{k}(\G_{1}(N))\) is Petersson normalized. From the spectral theorem we derive an important corollary:
+      The \textbf{Petersson normalization}\index{Petersson normalization} of \(f\) is where we normalize so that \(\<f,f\> = 1\). In particular, any orthonormal basis of \(\mc{S}_{k}(\G_{1}(N))\) is Petersson normalized. 
+      
+      \iffalse From the spectral theorem we derive an important result about eigenforms.
 
       \begin{theorem}\label{thm:eigenforms_forms_spectral_theory_modular}
         \(\mc{S}_{k}(\G_{1}(N))\) admits an orthonormal basis of eigenforms.
