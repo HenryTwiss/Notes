@@ -1729,32 +1729,50 @@
       \begin{theorem}\label{thm:Hecke_operators_composition_formula}
         The Hecke operators \(T_{m}\) and \(T_{n}\) on \(\mc{M}_{k}(N,\chi)\), for any positive integers \(m\) and \(n\), satisfy
         \[
-          T_{m}T_{n} = \sum_{d \mid (m,n)}\chi(d)d^{k-1}T_{\frac{mn}{d^{2}}}.
+          T_{m}T_{n} = \sum_{d \mid (m,n)}\chi(d)d^{k-1}T_{\frac{mn}{d^{2}}} \quad \text{and} \quad T_{mn} = \sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}T_{\frac{m}{d}}T_{\frac{n}{d}}.
         \]
-        In particular, the Hecke operators are commutative. Moreover, we have the relations
+        In particular, the Hecke operators are multiplicative, commutative, and satisfy
         \[
-          T_{m}T_{n} = T_{mn} \quad \text{and} \quad T_{p}T_{p^{r}} = T_{p^{r+1}}+\chi(p)p^{k-1}T_{p^{r-1}},
+          T_{p}T_{p^{r}} = T_{p^{r+1}}+\chi(p)p^{k-1}T_{p^{r-1}},
         \]
-        whenever \((m,n) = 1\) and for all primes \(p\) and positive integers \(r\).
+        for all primes \(p\) and positive integers \(r\).
       \end{theorem}
       \begin{proof}
-        To prove the first statement, it suffices to show that left-hand and right-hand sides act the same on the Fourier coefficients of any \(f \in \mc{M}_{k}(N,\chi)\). So let
+        To prove the first identity, it suffices to show that left-hand and right-hand sides act the same on the Fourier coefficients of any \(f \in \mc{M}_{k}(N,\chi)\). So let
         \[
           f(z) = \sum_{r \ge 0}a(r)e(r z),
         \]
         be the Fourier series expansion of \(f\). From two applications of \cref{prop:Hecke_operators_on_Fourier_coefficients}, we find that
         \[
-          (T_{m}T_{n}f)(z) = \sum_{r \ge 0}\left(\sum_{d = d_{1}d_{2}}\sum_{\substack{d_{1} \mid (r,m) \\ d_{2} \mid \left(\frac{rm}{d_{1}^{2}},n\right)}}\chi(d)(d)^{k-1}a\left(\frac{rmn}{d^{2}}\right)\right)e(rz).
+          (T_{m}T_{n}f)(z) = \sum_{r \ge 0}\left(\sum_{\substack{d' \mid (r,m) \\ e' \mid \left(\frac{rm}{(d')^{2}},n\right)}}\chi(d'e')(d'e')^{k-1}a\left(\frac{rmn}{(d'e')^{2}}\right)\right)e(rz).
         \]
-        By \cref{lem:Hecke_composition_lemma}, we may further write
+        By \cref{lem:Hecke_composition_lemma}, we may write the right-hand side as
         \[
-          (T_{m}T_{n}f)(z) = \sum_{r \ge 0}\left(\sum_{d = d_{3}d_{4}}\sum_{\substack{d_{3} \mid (m,n) \\ d_{4} \mid \left(r,\frac{mn}{d_{3}^{2}}\right)}}\chi(d)(d)^{k-1}a\left(\frac{rmn}{d^{2}}\right)\right)e(rz).
+          \sum_{r \ge 0}\left(\sum_{\substack{d \mid (m,n) \\ e \mid \left(r,\frac{mn}{d^{2}}\right)}}\chi(de)(de)^{k-1}a\left(\frac{rmn}{(de)^{2}}\right)\right)e(rz).
         \]
-        Another application of \cref{prop:Hecke_operators_on_Fourier_coefficients} shows that for fixed \(d_{3}\) the sum over \(d_{4}\) is exactly the \(r\)-th Fourier coefficient of \(T_{\frac{mn}{d_{3}^{2}}}f\). Whence
+        Another application of \cref{prop:Hecke_operators_on_Fourier_coefficients} shows that for fixed \(d\) the sum over \(e\) is exactly the \(r\)-th Fourier coefficient of \(T_{\frac{mn}{d^{2}}}f\). Whence this previous expression is
         \[
-          (T_{m}T_{n}f)(z) = \sum_{d_{3} \mid (m,n)}\chi(d_{3})d_{3}^{k-1}\left(T_{\frac{mn}{d_{3}^{2}}}f\right)(z).
+          \sum_{d \mid (m,n)}\chi(d)d^{k-1}\left(T_{\frac{mn}{d^{2}}}f\right)(z),
         \]
-        The proof of the first statement is complete upon making the change of variables \(d_{3} \mapsto d\). Commutativity follows because the formula is symmetric in \(m\) and \(n\). The last statement is immediate from the first as \(d = 1\) when \((m,n) = 1\) and \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
+        proving the first identity. To prove the second identity, fix a \(d \mid (m,n)\) and write the first identity in the form
+        \[
+          T_{\frac{m}{d}}T_{\frac{n}{d}}\sum_{e \mid \left(\frac{m}{d},\frac{n}{d}\right)}\chi(e)e^{k-1}T_{\frac{mn}{(de)^{2}}}.
+        \]
+        Multiply each term by \(\mu(d)\chi(d)d^{k-1}\) and sum over \(d \mid (m,n)\) to obtain
+        \[
+          \sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}T_{\frac{m}{d}}T_{\frac{n}{d}} = \sum_{d \mid (m,n)}\sum_{e \mid \left(\frac{m}{d},\frac{n}{d}\right)}\mu(d)\chi(de)(de)^{k-1}T_{\frac{mn}{(de)^{2}}}.
+        \]
+        We now must show that the right-hand side is \(T_{mn}\). The change of variables \(e \mapsto \frac{e}{d}\) gives
+        \[
+          \sum_{e \mid (m,n)}\sum_{d \mid e}\mu(d)\chi(e)e^{k-1}T_{\frac{mn}{e^{2}}}.
+        \]
+        But the sum over \(d\) is
+        \[
+          \sum_{d \mid e}\mu(d) = \begin{cases} 1 & \text{if \(e = 1\)}, \\ 0 & \text{if \(e \ge 2\)}. \end{cases}
+        \]
+        Therefore every term vanishes except the \(e = 1\) term which is exactly \(T_{mn}\). This proves the second identity.
+        
+        Multiplicativity follows from either formula since we only have the term \(d = 1\) whenever \((m,n) = 1\). As for commutativity, just observe that either formula is symmetric in \(m\) and \(n\). The formula is immediate from either of the previous ones as \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
       \end{proof}
 
       We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). In fact, we will compute their adjoints explicitly.
@@ -1818,12 +1836,12 @@
       \begin{proposition*}[Hecke relations]
       Let \(f \in \mc{S}_{k}(N,\chi)\) be an eigenform with Hecke eigenvalues \(\l(m)\). Then the Hecke eigenvalues are multiplicative and satisfy
       \[
-        \l(m)\l(n) = \sum_{d \mid (m,n)}\chi(d)d^{k-1}\l\left(\frac{mn}{d^{2}}\right),
+        \l(m)\l(n) = \sum_{d \mid (m,n)}\chi(d)d^{k-1}\l\left(\frac{mn}{d^{2}}\right) \quad \text{and} \quad \l(mn) = \sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right),
       \]
       for all positive integers \(m\) and \(n\) with \((mn,N) = 1\). If \(f\) is a Hecke eigenform, these relations hold for all \(m\) and \(n\).
       \end{proposition*}
       \begin{proof}
-        First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
+        First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the first identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. The second identity is proved analogously by computing the fist Fourier coefficient of \(T_{mn}f\) in two ways. On the one hand it is \(\l(mn)\) since \(f\) is a Hecke normalized eigenform. On the other hand, it is \(\sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
       \end{proof}
     \iffalse\subsection{\todo{Atkin-Lehner Theory}}
       So far, our entire theory of modular forms has started with a fixed congruence subgroup of some level. Atkin-Lehner theory, or the theory of oldforms and newforms, allows us to discuss modular forms in the context of moving between levels. In this setting, we will only deal with congruence subgroups of the form \(\G_{1}(N)\) and \(\G_{0}(N)\). The easiest way lift a modular form from a smaller level to a larger level is to observe that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) so there is a natural inclusion \(\mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N))\). There is a less trivial way of lifting from \(\mc{S}_{k}(\G_{1}(M))\) to \(\mc{S}_{k}(\G_{1}(N))\). For any \(d \mid \frac{N}{M}\), let
