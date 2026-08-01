@@ -1184,7 +1184,7 @@
     \]
     Also, all sums and products over a quotient group will be consider to be over a complete set of representatives.
     \subsection{Poincar\'e Series and Eisenstein Series}
-      We will now study the Poincar\'e series and Eisenstein Series on \(\G_{0}(N)\backslash\H\). As \(\G\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\). We will also take \(\nu = \chi\) to be a Dirichlet character modulo \(N\). Then for a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\), our series take the forms
+      We will now study the Poincar\'e series and Eisenstein Series on \(\G_{0}(N)\backslash\H\). As \(\G_{0}(N)\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\). We will also take \(\nu = \chi\) to be a Dirichlet character modulo \(N\). Then for a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\), our series take the forms
       \[
         P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
       \]
@@ -1327,69 +1327,69 @@
         which is our desired Fourier series expansion.
       \end{proof}
 
-      An interesting consequence is that the constant term in the Fourier series expansion of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is zero unless \(\mf{a}\) is \(\G\)-equivalent to \(\mf{b}\). Therefore the Eisenstein series \(E_{\chi,\mf{a}}\) are actually never cusp forms. Accordingly, write \(\mc{E}_{k}(\G,\chi)\) for the subspace spanned by the Eisenstein series associated to a complete set of \(\G\)-inequivalent cusps. It turns out that \(\mc{M}_{k}(\G,\chi)\) decomposes as
+      An interesting consequence is that the constant term in the Fourier series expansion of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is zero unless \(\mf{a}\) is \(\G\)-equivalent to \(\mf{b}\). Therefore the Eisenstein series \(E_{\chi,\mf{a}}\) are actually never cusp forms. Accordingly, write \(\mc{E}_{k}(\G_{0}(N),\chi)\) for the subspace spanned by the Eisenstein series associated to a complete set of \(\G_{0}(N)\)-inequivalent cusps. It turns out that \(\mc{M}_{k}(\G_{0}(N),\chi)\) decomposes as
       \[
-        \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
+        \mc{M}_{k}(\G_{0}(N),\chi) = \mc{S}_{k}(\G_{0}(N),\chi) \op \mc{E}_{k}(\G_{0}(N),\chi),
       \]
-      where \(\mc{S}_{k}(\G,\chi)\) is spanned by the Poincar\'e series of positive index. Moreover, this decomposition is orthogonal in the sense that the Petersson inner product between elements of \(\mc{S}_{k}(\G,\chi)\) and \(\mc{E}_{k}(\G,\chi)\) is zero. To show all of this, let \(\mf{a}\) be a cusp of \(\G_{0}(N)\backslash\H\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G,\chi)\) and let its Fourier series expansion at the \(\mf{a}\) cusp be
+      where \(\mc{S}_{k}(\G_{0}(N),\chi)\) is spanned by the Poincar\'e series of positive index. Moreover, this decomposition is orthogonal in the sense that the Petersson inner product between elements of \(\mc{S}_{k}(\G_{0}(N),\chi)\) and \(\mc{E}_{k}(\G_{0}(N),\chi)\) is zero. To show all of this, let \(\mf{a}\) be a cusp of \(\G_{0}(N)\backslash\H\) and choose a scaling matrix \(\s_{\mf{a}}\). Suppose \(f \in \mc{S}_{k}(\G_{0}(N),\chi)\) and let its Fourier series expansion at the \(\mf{a}\) cusp be
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 1}a_{\mf{a}}(n)e(nz).
       \]
-      For any positive integer \(m\), define linear functionals \(\phi_{m,\chi,\mf{a}}:\mc{S}_{k}(\G,\chi) \to \C\) by 
+      For any positive integer \(m\), define linear functionals \(\phi_{m,\chi,\mf{a}}:\mc{S}_{k}(\G_{0}(N),\chi) \to \C\) by 
       \[
         \phi_{m,\chi,\mf{a}}(f) = a_{\mf{a}}(m).
       \]
-      Since \(\mc{S}_{k}(\G,\chi)\) is a finite dimensional complex Hilbert space, the Riesz representation theorem implies that there exists unique \(v_{m,\chi,\mf{a}} \in \mc{S}_{k}(\G,\chi)\) such that
+      Since \(\mc{S}_{k}(\G_{0}(N),\chi)\) is a finite dimensional complex Hilbert space, the Riesz representation theorem implies that there exists unique \(v_{m,\chi,\mf{a}} \in \mc{S}_{k}(\G_{0}(N),\chi)\) such that
       \[
         \<f,v_{m,\chi,\mf{a}}\> = a_{\mf{a}}(m).
       \]
       We would like to know what these cusp forms are. It turns out that \(v_{m,\chi,\mf{a}}(z)\) will be the Poincar\'e series \(P_{m,\chi,\mf{a}}(z)\) up to a constant.
 
       \begin{proposition}\label{prop:Petersson_inner_product_with_Poincare_series}
-        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\G_{0}(N)\backslash\H\). Then 
+        Let \(f \in \mc{S}_{k}(\G_{0}(N),\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\G_{0}(N)\backslash\H\). Then 
         \[
-          \<f,P_{m,\chi,\mf{a}}\> = \frac{\G(k-1)}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
+          \<f,P_{m,\chi,\mf{a}}\> = \frac{\G(k-1)}{V_{\G_{0}(N)}(4\pi m)^{k-1}}a_{\mf{a}}(m),
         \]
         for all positive integers \(m\).
       \end{proposition}
       \begin{proof}
         We will compute 
         \[
-          \<f,P_{m,\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}f(z)\conj{P_{m,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
+          \<f,P_{m,\chi,\mf{a}}\> = \frac{1}{V_{\G_{0}(N)}}\int_{\G_{0}(N)\backslash\H}f(z)\conj{P_{m,\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
         \]
         A short computation using \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} along with modularity and the cocycle condition shows this integral may be expressed as
         \[
-          \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}\sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)e\left(-m\conj{\s_{\mf{a}}^{-1}\g z}\right)\Im(\g z)^{k}\,d\mu.
+          \frac{1}{V_{\G_{0}(N)}}\int_{\G_{0}(N)\backslash\H}\sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)e\left(-m\conj{\s_{\mf{a}}^{-1}\g z}\right)\Im(\g z)^{k}\,d\mu.
         \]
         Now unfold to obtain
         \[
-          \frac{1}{V_{\G}}\int_{\G_{\mf{a}}\backslash\H}\conj{j(\s_{\mf{a}}^{-1},z)^{-k}}f(z)e\left(-m\conj{\s_{\mf{a}}^{-1}z}\right)\Im(z)^{k}\,d\mu.
+          \frac{1}{V_{\G_{0}(N)}}\int_{\G_{0}(N)_{\mf{a}}\backslash\H}\conj{j(\s_{\mf{a}}^{-1},z)^{-k}}f(z)e\left(-m\conj{\s_{\mf{a}}^{-1}z}\right)\Im(z)^{k}\,d\mu.
         \]
-        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using the fact that \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} and the cocycle condition shows that this integral becomes
+        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using the fact that \(\G_{0}(N)_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} and the cocycle condition shows that this integral becomes
         \[
-          \frac{1}{V_{\G}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e(-m\conj{z})\Im(z)^{k}\,d\mu.
+          \frac{1}{V_{\G_{0}(N)}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)e(-m\conj{z})\Im(z)^{k}\,d\mu.
         \]
         Substituting in the Fourier series expansion of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
         \[
-          \frac{1}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(m)e^{-4\pi my}y^{k}\,\frac{dy}{y^{2}},
+          \frac{1}{V_{\G_{0}(N)}}\int_{0}^{\infty}a_{\mf{a}}(m)e^{-4\pi my}y^{k}\,\frac{dy}{y^{2}},
         \]
         in view of \cref{equ:Dirac_integral_representation}, because every term integrates to zero except the \(m\)-th term. Performing the change of variables \(y \mapsto \frac{y}{4\pi m}\), this latter integral is recognized as the gamma function and we obtain
         \[
-          \frac{\G(k-1)}{V_{\G}(4\pi m)^{k-1}}a_{\mf{a}}(m),
+          \frac{\G(k-1)}{V_{\G_{0}(N)}(4\pi m)^{k-1}}a_{\mf{a}}(m),
         \]
         completing the proof.
       \end{proof}
  
       It follows immediately from this result that
       \[
-        v_{m,\chi,\mf{a}}(z) = \frac{V_{\G}(4\pi m)^{k-1}}{\G(k-1)}P_{m,\chi,\mf{a}}(z).
+        v_{m,\chi,\mf{a}}(z) = \frac{V_{\G_{0}(N)}(4\pi m)^{k-1}}{\G(k-1)}P_{m,\chi,\mf{a}}(z).
       \]
       Thus the Poincar\'e series \(P_{m,\chi,\mf{a}}(z)\) of positive index extract the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp up to constants.
 
       An analogous argument with Eisenstein series shows that they are orthogonal to cusp forms.
       
       \begin{proposition}\label{prop:Petersson_inner_product_with_Eisenstein_series}
-        Let \(f \in \mc{S}_{k}(\G,\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\G_{0}(N)\backslash\H\). Then 
+        Let \(f \in \mc{S}_{k}(\G_{0}(N),\chi)\) have Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp of \(\G_{0}(N)\backslash\H\). Then 
         \[
           \<f,E_{\chi,\mf{a}}\> = 0.
         \]
@@ -1397,23 +1397,23 @@
       \begin{proof}
         We will compute 
         \[
-          \<f,E_{\chi,\mf{a}}\> = \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}f(z)\conj{E_{\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
+          \<f,E_{\chi,\mf{a}}\> = \frac{1}{V_{\G_{0}(N)}}\int_{\G_{0}(N)\backslash\H}f(z)\conj{E_{\chi,\mf{a}}(z)}\Im(z)^{k}\,d\mu.
         \]
         A short computation using \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} along with modularity and the cocycle condition shows this integral may be expressed as
         \[
-          \frac{1}{V_{\G}}\int_{\G_{0}(N)\backslash\H}\sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)\Im(\g z)^{k}\,d\mu.
+          \frac{1}{V_{\G_{0}(N)}}\int_{\G_{0}(N)\backslash\H}\sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\conj{j(\s_{\mf{a}}^{-1},\g z)^{-k}}f(\g z)\Im(\g z)^{k}\,d\mu.
         \]
         Now unfold to obtain
         \[
-          \frac{1}{V_{\G}}\int_{\G_{\mf{a}}\backslash\H}\conj{j(\s_{\mf{a}}^{-1},z)^{-k}}f(z)\Im(z)^{k}\,d\mu.
+          \frac{1}{V_{\G_{0}(N)}}\int_{\G_{0}(N)_{\mf{a}}\backslash\H}\conj{j(\s_{\mf{a}}^{-1},z)^{-k}}f(z)\Im(z)^{k}\,d\mu.
         \]
-        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using the fact that \(\G_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} and the cocycle condition shows that this integral becomes
+        Making the change of variables \(z \mapsto \s_{\mf{a}}z\), another short computation using the fact that \(\G_{0}(N)_{\mf{a}} = \s_{\mf{a}}\G_{0}(N)_{\infty}\s_{\mf{a}}^{-1}\) together with \cref{equ:Mobius_transformation_imaginary_part_j_version_simplified} and the cocycle condition shows that this integral becomes
         \[
-          \frac{1}{V_{\G}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{k}\,d\mu.
+          \frac{1}{V_{\G_{0}(N)}}\int_{\G_{0}(N)_{\infty}\backslash\H}(f|_{k}\s_{\mf{a}})(z)\Im(z)^{k}\,d\mu.
         \]
         Substituting in the Fourier series expansion of \(f\) at the \(\mf{a}\) cusp and interchanging the inner sum and integral by absolute convergence, a short computation gives
         \[
-          \frac{1}{V_{\G}}\int_{0}^{\infty}a_{\mf{a}}(0)y^{k}\,\frac{dy}{y^{2}},
+          \frac{1}{V_{\G_{0}(N)}}\int_{0}^{\infty}a_{\mf{a}}(0)y^{k}\,\frac{dy}{y^{2}},
         \]
         in view of \cref{equ:Dirac_integral_representation}, because every term integrates to zero except the constant term. This integral is zero because \(f\) is a cusp form which completes the proof. 
       \end{proof}
@@ -1421,9 +1421,9 @@
       With these results in hand we can prove that the Poincar\'e series of positive index span the space of cusp forms and our desired decomposition.
 
       \begin{theorem}
-        The Poincar\'e series \(P_{m,\chi}(z)\) of positive index span \(\mc{S}_{k}(\G,\chi)\). Moreover, we have the direct sum decomposition
+        The Poincar\'e series \(P_{m,\chi}(z)\) of positive index span \(\mc{S}_{k}(\G_{0}(N),\chi)\). Moreover, we have the direct sum decomposition
         \[
-          \mc{M}_{k}(\G,\chi) = \mc{S}_{k}(\G,\chi) \op \mc{E}_{k}(\G,\chi),
+          \mc{M}_{k}(\G_{0}(N),\chi) = \mc{S}_{k}(\G_{0}(N),\chi) \op \mc{E}_{k}(\G_{0}(N),\chi),
         \]
         which is orthogonal in the sense that
         \[
@@ -1431,17 +1431,17 @@
         \]
       \end{theorem}
       \begin{proof}
-        Let \(f \in \mc{S}_{k}(\G,\chi)\). \cref{prop:Petersson_inner_product_with_Poincare_series} shows that \(\<f,P_{m,\chi,\mf{a}}\> = 0\) if and only if the \(m\)-th Fourier coefficient of \(f\) is zero. So \(f\) is orthogonal to all of the Poincar\'e series \(P_{m,\chi}\) of positive index if and only if every Fourier coefficient is zero. But this happens if and only if \(f\) is identically zero. This proves the first statement.
+        Let \(f \in \mc{S}_{k}(\G_{0}(N),\chi)\). \cref{prop:Petersson_inner_product_with_Poincare_series} shows that \(\<f,P_{m,\chi,\mf{a}}\> = 0\) if and only if the \(m\)-th Fourier coefficient of \(f\) is zero. So \(f\) is orthogonal to all of the Poincar\'e series \(P_{m,\chi}\) of positive index if and only if every Fourier coefficient is zero. But this happens if and only if \(f\) is identically zero. This proves the first statement.
 
-        To prove the direct sum decomposition, we first show that \(\mc{E}_{k}(\G,\chi)\) is disjoint from \(\mc{S}_{k}(\G,\chi)\). Indeed, suppose there are constants \(a_{\mf{a}}\) such that
+        To prove the direct sum decomposition, we first show that \(\mc{E}_{k}(\G_{0}(N),\chi)\) is disjoint from \(\mc{S}_{k}(\G_{0}(N),\chi)\). Indeed, suppose there are constants \(a_{\mf{a}}\) such that
         \[
-          \sum_{\mf{a} \in \G\backslash\what{\Q}}a_{\mf{a}}E_{\chi,\mf{a}}(z),
+          \sum_{\mf{a} \in \G_{0}(N)\backslash\what{\Q}}a_{\mf{a}}E_{\chi,\mf{a}}(z),
         \]
         is a cusp form. Recall from \cref{prop:Fourier_series_Eisenstein_modular} that the constant term in the Fourier series expansion of \(E_{\chi,\mf{a}}\) at the \(\mf{b}\) cusp is \(\d_{\mf{a},\mf{b}}\). Therefore \(a_{\mf{a}} = 0\) which proves that these spaces are disjoint. Moreover, this fact also implies that
         \[
-          f(z)-\sum_{\mf{a} \in \G\backslash\what{\Q}}a_{\mf{a}}(n)E_{\chi,\mf{a}}(z),
+          f(z)-\sum_{\mf{a} \in \G_{0}(N)\backslash\what{\Q}}a_{\mf{a}}(n)E_{\chi,\mf{a}}(z),
         \]
-        is a cusp form for any \(f \in \mc{M}_{k}(\G,\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
+        is a cusp form for any \(f \in \mc{M}_{k}(\G_{0}(N),\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
     \subsection{Diamond and Hecke Operators}
       The diamond and Hecke operators are sums of double coset operators. They will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. Actually, these operators will be defined for modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. However, it turns out that such modular forms arise from those on \(\G_{0}(N)\backslash\H\) with character via the diamond operators. So we will discuss the diamond operators first and the Hecke operators second. 
@@ -1841,10 +1841,18 @@
       for all positive integers \(m\) and \(n\) with \((mn,N) = 1\). If \(f\) is a Hecke eigenform, these relations hold for all \(m\) and \(n\).
       \end{proposition*}
       \begin{proof}
-        First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the first identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. The second identity is proved analogously by computing the fist Fourier coefficient of \(T_{mn}f\) in two ways. On the one hand it is \(\l(mn)\) since \(f\) is a Hecke normalized eigenform. On the other hand, it is \(\sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
+        First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the first identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. The second identity is proved analogously by computing the fist Fourier coefficient of \(T_{mn}f\) in two ways. On the one hand it is \(\l(mn)\) since \(f\) is a Hecke normalized eigenform. On the other hand, it is \(\sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second statement is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
       \end{proof}
-    \iffalse\subsection{\todo{Atkin-Lehner Theory}}
-      So far, our entire theory of modular forms has started with a fixed congruence subgroup of some level. Atkin-Lehner theory, or the theory of oldforms and newforms, allows us to discuss modular forms in the context of moving between levels. In this setting, we will only deal with congruence subgroups of the form \(\G_{1}(N)\) and \(\G_{0}(N)\). The easiest way lift a modular form from a smaller level to a larger level is to observe that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) so there is a natural inclusion \(\mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N))\). There is a less trivial way of lifting from \(\mc{S}_{k}(\G_{1}(M))\) to \(\mc{S}_{k}(\G_{1}(N))\). For any \(d \mid \frac{N}{M}\), let
+    \iffalse\subsection{\todo{Oldforms and Newforms}}
+      So far, we have discussed modular forms on \(\G_{0}(N)\backslash\H\) for a fixed level \(N\). However, recall that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) and so every modular form on \(\G_{0}(M)\backslash\H\) is also a modular form on \(\G_{0}(N)\backslash\H\). In particular, there are inclusions
+      \[
+        \mc{M}_{k}(\G_{1}(M)) \subseteq \mc{M}_{k}(\G_{1}(N)) \quad \text{and} \quad \mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N)).
+      \]
+      The purpose of introducing oldforms and newforms will allow us to distinguish which modular forms on \(\G_{0}(N)\backslash\H\) arise from a form on a congruence subgroup of lower level and which do not. The former are referred to as oldforms and the latter newforms. Our primary aim will be to investigate.
+
+      \todo{xxx}
+      
+      In this setting, we will only deal with congruence subgroups of the form \(\G_{1}(N)\) and \(\G_{0}(N)\). The easiest way lift a modular form from a smaller level to a larger level is to observe that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) so there is a natural inclusion \(\mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N))\). There is a less trivial way of lifting from \(\mc{S}_{k}(\G_{1}(M))\) to \(\mc{S}_{k}(\G_{1}(N))\). For any \(d \mid \frac{N}{M}\), let
       \[
         \a_{d} = \begin{pmatrix} d & 0 \\ 0 & 1 \end{pmatrix}.
       \]
