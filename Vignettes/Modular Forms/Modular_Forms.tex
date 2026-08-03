@@ -44,7 +44,7 @@
         This means \(d\mu\) is \(\GL_{2}^{+}(\R)\)-invariant.
       \end{proof}
     \subsection{Congruence Subgroups}
-      To define congruence subgroups, we first need to introduce an associated group. We call \(\SL_{2}(\Z)\) the \textbf{modular group}\index{modular group} which is the group of matrices with integer entries and of determinant \(1\). We will distinguish two matrices
+      To define congruence subgroups, we first need to introduce an associated group. We call \(\SL_{2}(\Z)\) the \textbf{modular group}\index{modular group} which is the group of matrices with integral entries and of determinant \(1\). We will distinguish two matrices
       \[
         S = \begin{pmatrix} 0 &-1 \\ 1 & 0 \end{pmatrix} \quad \text{and} \quad T = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}.
       \]
@@ -128,7 +128,7 @@
         Let \(\G\) be a congruence subgroup and \(\a \in \GL_{2}^{+}(\Q)\). Then \(\a^{-1}\G\a \cap \SL_{2}(\Z)\) is a congruence subgroup. In particular, if \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\) then \(\a^{-1}\G\a\) is a congruence subgroup.
       \end{lemma}
       \begin{proof}
-        Let the level of \(\G\) be \(N\) and choose a positive integer \(r\) such that \(r\a,r\a^{-1} \in \GL_{2}^{+}(\Z)\). Let \(M = r^{2}N\) and notice that any \(\g \in \G(M)\) is of the form
+        Let the level of \(\G\) be \(N\) and choose a positive integer \(r\) such that \(r\a,r\a^{-1} \in \GL_{2}^{+}(\Q)\) have integral entries. Let \(M = r^{2}N\) and notice that any \(\g \in \G(M)\) is of the form
         \[
           \g = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}+M\begin{pmatrix} k_{1} & k_{2} \\ k_{3} & k_{4} \end{pmatrix},
         \]
@@ -329,7 +329,7 @@
         \]
         By minimality of \(m_{\w}(x)\), \(\w\) and \(1\) are linearly independent over \(\Q\) so we may equate coefficients to see that \(d = a+c\) and \(b = -c\). Then \(\g = \begin{psmallmatrix} a & -c \\ c & a+c \end{psmallmatrix}\) and \(a^{2}+ac+c^{2} = 1\). Completing the square shows \((a+c)^{2}-ac = 1\). Therefore we have \(a = 1\) and \(c = 0\), \(a = -1\) and \(c = 0\), \(a = 0\) and \(c = 1\), \(a = 0\) and \(c = -1\), \(a = -1\) and \(c = 1\), or \(a = 1\) and \(c = -1\). These six cases correspond to the matrices \(I\), \(-I\), \(ST\), \((ST)^{4}\), \((ST)^{2}\), and \((ST)^{5}\) respectively. As \((ST)^{3} = -I\), it follows that \(\SL_{2}(\Z)_{\w} = \<ST\>\) and is of order \(6\). Moreover, if \(z = 1+\w\) then \(z = T\w\). Whence \(\SL_{2}(\Z)_{1+\w} = T\SL_{2}(\Z)_{\w}T^{-1} = \<TS\>\) and is of order \(6\).
         
-        It remains to show that if \(z \neq i,\w,1+\w\) then \(\SL_{2}(\Z)_{z} = \<I\>\). Equivalently, will show the contrapositive which is to say that if \(\SL_{2}(\Z)_{z} \neq \<-I\>\) then \(z = i,\w,1+\w\). Since the stabilizer subgroup of \(z\) is trivial if \(z \in \mc{F}^{\circ}\), we may additionally assume \(z\) lies on the boundary of \(\mc{F}\). Now suppose for such \(z\) that \(\g \neq \pm I\). We first claim \(c > 0\). For if \(c = 0\), \(\det(\g) = 1\) implies \(a = d = \pm1\). This further forces \(b = 0\) implying \(\g = \pm I\) which is a contradiction. Hence \(c \neq 0\) and so \(z\) satisfies the aforementioned identity which is a quadratic. A short computation shows that the discriminant is \((a+d)^{2}-4\). Since this quadratic has integer coefficients and \(z\) is complex, the discriminant must be negative. So
+        It remains to show that if \(z \neq i,\w,1+\w\) then \(\SL_{2}(\Z)_{z} = \<I\>\). Equivalently, will show the contrapositive which is to say that if \(\SL_{2}(\Z)_{z} \neq \<-I\>\) then \(z = i,\w,1+\w\). Since the stabilizer subgroup of \(z\) is trivial if \(z \in \mc{F}^{\circ}\), we may additionally assume \(z\) lies on the boundary of \(\mc{F}\). Now suppose for such \(z\) that \(\g \neq \pm I\). We first claim \(c > 0\). For if \(c = 0\), \(\det(\g) = 1\) implies \(a = d = \pm1\). This further forces \(b = 0\) implying \(\g = \pm I\) which is a contradiction. Hence \(c \neq 0\) and so \(z\) satisfies the aforementioned identity which is a quadratic. A short computation shows that the discriminant is \((a+d)^{2}-4\). Since this quadratic has integral coefficients and \(z\) is complex, the discriminant must be negative. So
         \[
           (a+d)^{2}-4 < 0,
         \]
@@ -342,7 +342,7 @@
 
       Returning to the case of a congruence subgroup \(\G\), it follows from this result and our previous remarks that \(\G_{z}\) is necessarily trivial if \(z\) is not \(\SL_{2}(\Z)\)-equivalent to \(i\), \(\w\), or \(1+\w\). Moreover, if \(z\) is \(\SL_{2}(\Z)\)-equivalent to one of these points then \(\G_{z}\) is trivial unless at least one of the matrices \(\pm S\), \(\pm ST\), or \(\pm TS\) belongs to \(\G\) respectively. In particular, \(\G_{z}\) is always finite.
 
-      A \textbf{modular curve}\index{modular curve} is a quotient \(\GH\) of \(\H\) by a congruence subgroup \(\G\). Observe that \(\GH\) is not compact as the fundamental domain \(\mc{F}_{\G}\) need not contain points of \(\what{\Q}\). These points correspond to cusps which we now define. Recall that \(\G\) acts on \(\what{\Q}\). A \textbf{cusp class}\index{cusp class} of \(\GH\) is a coset of \(\G\backslash\what{\Q}\). There is only one cusp class for the modular group since it acts transitively. Indeed, \(\what{\Q}\) is exactly the orbit of \(\infty\). For if \(\frac{a}{c} \in \Q\) with \((a,c) = 1\), B\'ezout's identity provides the existence of integers \(b\) and \(d\) such that \(ad-bc = 1\) whence \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z)\) satisfies \(\g\infty = \frac{a}{c}\). Therefore the action is transitive and there can only be finitely many cosets of \(\G\backslash\what{\Q}\) since \(\G\) has finite index in the modular group. In other words, the number of cusp classes is finite and at most \(d_{\G}\). In particular, the orbit of \(\infty\) is a cusp class of \(\GH\). A \textbf{cusp}\index{cusp} is a representative of a cusp class. We denote cusps by gothic characters \(\mf{a}\), \(\mf{b}\), etc.
+      A \textbf{modular curve}\index{modular curve} is a quotient \(\GH\) of \(\H\) by a congruence subgroup \(\G\). The \textbf{level}\index{level} of \(\GH\) is the level of \(\G\). Observe that \(\GH\) is not compact as the fundamental domain \(\mc{F}_{\G}\) need not contain points of \(\what{\Q}\). These points correspond to cusps which we now define. Recall that \(\G\) acts on \(\what{\Q}\). A \textbf{cusp class}\index{cusp class} of \(\GH\) is a coset of \(\G\backslash\what{\Q}\). There is only one cusp class for the modular group since it acts transitively. Indeed, \(\what{\Q}\) is exactly the orbit of \(\infty\). For if \(\frac{a}{c} \in \Q\) with \((a,c) = 1\), B\'ezout's identity provides the existence of integers \(b\) and \(d\) such that \(ad-bc = 1\) whence \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z)\) satisfies \(\g\infty = \frac{a}{c}\). Therefore the action is transitive and there can only be finitely many cosets of \(\G\backslash\what{\Q}\) since \(\G\) has finite index in the modular group. In other words, the number of cusp classes is finite and at most \(d_{\G}\). In particular, the orbit of \(\infty\) is a cusp class of \(\GH\). A \textbf{cusp}\index{cusp} is a representative of a cusp class. We denote cusps by gothic characters \(\mf{a}\), \(\mf{b}\), etc.
 
       \begin{remark}
         The cusps are exactly the points needed to make a fundamental domain \(\mc{F}_{\G}\) compact as a subset of \(\what{\C}\). To see this, suppose \(\mf{a}\) is a limit point of \(\mc{F}_{\G}\) that does not belong to \(\mc{F}_{\G}\). Then \(\mf{a} \in \what{\R}\). As the unique limit point of \(\mc{F}\) not belonging to \(\mc{F}\) is \(\infty\) and \(\what{\Q} = \SL_{2}(\Z)\infty\), \cref{prop:fundamental_domain_congruence_subgroup} implies \(\mf{a} \in \what{\Q}\) which means \(\mf{a}\) is a cusp. In the case of the standard fundamental domain \(\mc{F}\), the only cusp is \(\infty\).
@@ -570,7 +570,7 @@
         Every \(\a \in \GL_{2}^{+}(\Q)\) can be written as \(\a = \g\eta\) for some \(\g \in \SL_{2}(\Z)\) and \(\eta \in \GL_{2}^{+}(\Q)\) with \(\eta = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix}\).
       \end{lemma}
       \begin{proof}
-        Let \(r\) be a positive integer such that \(r\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Z)\). As \(r\a\) has nonzero determinant, we cannot have \(a = c = 0\). Whence we may set \(a' = \frac{a}{(a,c)}\) and \(c' = \frac{c}{(a,c)}\) so that \(a'\) and \(c'\) are relatively prime integers. Then there exists \(\g \in \SL_{2}(\Z)\) with \(\g^{-1} = \begin{psmallmatrix} \ast & \ast \\ -c' & a' \end{psmallmatrix}\). Moreover, a short computation shows
+        Let \(r\) be a positive integer such that \(r\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\) has integral entries. As \(r\a\) has nonzero determinant, we cannot have \(a = c = 0\). Whence we may set \(a' = \frac{a}{(a,c)}\) and \(c' = \frac{c}{(a,c)}\) so that \(a'\) and \(c'\) are relatively prime integers. Then there exists \(\g \in \SL_{2}(\Z)\) with \(\g^{-1} = \begin{psmallmatrix} \ast & \ast \\ -c' & a' \end{psmallmatrix}\). Moreover, a short computation shows
         \[
           \g^{-1}r\a = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix}.
         \]
@@ -1511,7 +1511,7 @@
       \[
         \D_{m} = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Mat_{2}^{m}(\Z): \begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \tmod{N} \right\}.
       \]
-      In other words, \(\D_{m}\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices \(\a\) with integer coefficients such that \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). From the equivalence
+      In other words, \(\D_{m}\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices \(\a\) with integral entries such that \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). From the equivalence
       \[
         \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N},
       \]
@@ -1844,23 +1844,17 @@
         First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the first identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. The second identity is proved analogously by computing the fist Fourier coefficient of \(T_{mn}f\) in two ways. On the one hand it is \(\l(mn)\) since \(f\) is a Hecke normalized eigenform. On the other hand, it is \(\sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second statement is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
       \end{proof}
     \iffalse\subsection{\todo{Oldforms and Newforms}}
-      So far, we have discussed modular forms on \(\G_{0}(N)\backslash\H\) for a fixed level \(N\). However, recall that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) and so every modular form on \(\G_{0}(M)\backslash\H\) is also a modular form on \(\G_{0}(N)\backslash\H\). In particular, there are inclusions
+      Recall that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) and so every modular form on \(\G_{1}(M)\backslash\H\) is also a modular form on \(\G_{1}(N)\backslash\H\). In particular, there are inclusions
       \[
         \mc{M}_{k}(\G_{1}(M)) \subseteq \mc{M}_{k}(\G_{1}(N)) \quad \text{and} \quad \mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N)).
       \]
-      The purpose of introducing oldforms and newforms will allow us to distinguish which modular forms on \(\G_{0}(N)\backslash\H\) arise from a form on a congruence subgroup of lower level and which do not. The former are referred to as oldforms and the latter newforms. Our primary aim will be to investigate.
+      The purpose of introducing oldforms and newforms will allow us to distinguish which modular forms on a modular curve are induced from those on a modular curve of lower level and which are not. The former are referred to as oldforms and the latter newforms. Our primary goal will be to investigate how the Hecke operators act on the subspace generated by the newforms for which we can say more than the oldforms.
 
-      \todo{xxx}
-      
-      In this setting, we will only deal with congruence subgroups of the form \(\G_{1}(N)\) and \(\G_{0}(N)\). The easiest way lift a modular form from a smaller level to a larger level is to observe that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) so there is a natural inclusion \(\mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N))\). There is a less trivial way of lifting from \(\mc{S}_{k}(\G_{1}(M))\) to \(\mc{S}_{k}(\G_{1}(N))\). For any \(d \mid \frac{N}{M}\), let
-      \[
-        \a_{d} = \begin{pmatrix} d & 0 \\ 0 & 1 \end{pmatrix}.
-      \]
-      If \(f \in \mc{S}_{k}(\G_{1}(M))\), we consider
+      As just remarked, inclusion is the easiest way to lift a modular form from \(\G_{1}(M)\backslash\H\) to \(\G_{1}(N)\backslash\H\). However, there is a less obvious way of lifting. For any \(d \mid \frac{N}{M}\), let \(\a_{d} = \begin{psmallmatrix} d & 0 \\ 0 & 1 \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\) and consider the double slash operator \(\|_{k}\a_{d}:C(\H) \to C(\H)\) given by
       \[
         (f\|_{k}\a_{d})(z) = d^{k-1}f(dz).
       \]
-      It turns out that \(\|_{k}\a_{d}\) maps \(\mc{S}_{k}(\G_{1}(M))\) into \(\mc{S}_{k}(\G_{1}(N))\) and more:
+      It turns out that this operator lifts modular forms from \(\G_{1}(M)\backslash\H\) to \(\G_{1}(N)\backslash\H\). \todo{xxx}
       
       \begin{proposition}\label{equ:lifting_operator_modular}
         Let \(M\) and \(N\) be positive integers such that \(M \mid N\). For any \(d \mid \frac{N}{M}\), \(\|_{k}\a_{d}\) maps \(\mc{S}_{k}(\G_{1}(M))\) into \(\mc{S}_{k}(\G_{1}(N))\). In particular, \(\|_{k}\a_{d}\) takes \(\mc{S}_{k}(M,\chi)\) into \(\mc{S}_{k}(N,\chi)\).
