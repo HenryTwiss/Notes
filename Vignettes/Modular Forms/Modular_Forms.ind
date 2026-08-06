@@ -1,5 +1,9 @@
 \begin{theindex}
 
+  \item Atkin-Lehner operator, \hyperpage{52}
+
+  \indexspace
+
   \item Bruhat decomposition, \hyperpage{13}
 
   \indexspace
@@ -42,9 +46,9 @@
   \item Hecke congruence subgroup, \hyperpage{4}
   \item Hecke eigenform, \hyperpage{49}
   \item Hecke eigenvalue, \hyperpage{49}
-  \item Hecke normalization, \hyperpage{49}
+  \item Hecke normalization, \hyperpage{50}
   \item Hecke operator, \hyperpage{41}
-  \item Hecke relations, \hyperpage{49}
+  \item Hecke relations, \hyperpage{50}
   \item holomorphic at the cusps, \hyperpage{16}
   \item hyperbolic measure, \hyperpage{2}
 
@@ -72,11 +76,18 @@
   \indexspace
 
   \item nebentypus, \hyperpage{16}
+  \item newform, \hyperpage{51}
+  \item newforms, \hyperpage{51}
+
+  \indexspace
+
+  \item oldform, \hyperpage{51}
+  \item oldforms, \hyperpage{51}
 
   \indexspace
 
   \item Petersson inner product, \hyperpage{27}
-  \item Petersson normalization, \hyperpage{49}
+  \item Petersson normalization, \hyperpage{50}
   \item Poincar\'e series, \hyperpage{19}
   \item principal congruence subgroup, \hyperpage{3}
 

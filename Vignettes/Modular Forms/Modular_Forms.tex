@@ -685,7 +685,7 @@
       \[
         (P_{m,\nu,\mf{a}}|_{k}\eta)(z) = \nu(\eta)P_{m,\nu,\mf{a}}(z).
       \]
-      To verify the growth condition, we will need a technical lemma.
+      To verify the growth condition we will need a technical lemma.
 
       \begin{lemma}\label{lem:technical_Poincare_convergence_lemma}
         Let \(a,b > 0\) and consider set
@@ -786,7 +786,7 @@
         \[
           ((f|_{k}\b')(z))^{n_{\nu}} = ((f|_{k}\b)(z))^{n_{\nu}},
         \]
-        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Modularity then follows from a short computation because this permutes the choice of coset representatives. The growth condition, follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\nu}d_{\G}}(\SL_{2}(\Z))\). 
+        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Modularity then follows from a short computation as the choice of coset representatives is permuted. The growth condition follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\nu}d_{\G}}(\SL_{2}(\Z))\). 
       \end{proof}  
       
       We can now state and prove the \textbf{valence formula}\index{valence formula}.
@@ -1094,21 +1094,21 @@
       \]
       for all \(\g \in \G\). The reason for introducing the double slash operator is that it will be easier to work with when discussing Fourier coefficients of modular forms.
       
-      Now for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\), we define the \textbf{double coset operator}\index{double coset operator} \([\G_{1}\a\G_{2}]_{k}\) to be the linear operator on \(\mc{M}_{k}(\G_{1})\) given by
+      Now for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\), we define the \textbf{double coset operator}\index{double coset operator} \([\G_{1}\a\G_{2}]_{k}:\mc{M}_{k}(\G_{1}) \to C(\H)\) to be the linear operator given by
       \[
         (f[\G_{1}\a\G_{2}]_{k})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}(f\|_{k}\b)(z).
       \]
-      This sum is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. It remains to check that \(f[\G_{1}\a\G_{2}]_{k}\) is well-defined which amounts to showing that the sum is independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b' = \g\b\) for some \(\g \in \G_{1}\). Modularity implies
+      This sum is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. To check that \(f[\G_{1}\a\G_{2}]_{k}\) is well-defined amounts to showing that the sum is independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b' = \g\b\) for some \(\g \in \G_{1}\). Modularity implies
       \[
         (f\|_{k}\b')(z) = (f\|_{k}\b)(z),
       \]
-      which proves that \([\G_{1}\a\G_{2}]_{k}\) is well-defined. In fact, the double coset operator takes \(\mc{M}_{k}(\G_{1})\) to \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
+      which proves that \([\G_{1}\a\G_{2}]_{k}\) is well-defined. We will now show that the double coset operator takes \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
 
       \begin{proposition}\label{prop:double_coset_operator_preserves_subspaces_modular}
-        For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\), \([\G_{1}\a\G_{2}]_{k}\) maps \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\). It also preserves the subspaces of cusp forms.
+        For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\), \([\G_{1}\a\G_{2}]_{k}\) maps \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
       \end{proposition}
       \begin{proof}
-        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]_{k}\) is finite. For modularity, let \(\g \in \G_{2}\). As \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Modularity then follows from a short computation because this permutes the choice of coset representatives. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
+        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]_{k}\) is finite. For modularity, let \(\g \in \G_{2}\). As \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Modularity then follows from a short computation as the choice of coset representatives is permuted. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
         \[
           ((f[\G_{1}\a\G_{2}]_{k})|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
         \]
@@ -1643,20 +1643,24 @@
       \begin{equation}\label{equ:Hecke_operator_right_coset_explicit_formula}
         (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}(\<a\>f)\left(\frac{az+b}{d}\right),
       \end{equation}
-      where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). Since the diamond operators are commutative, this formula also shows that they commute with the Hecke operators. In view of \cref{thm:diamond_operator_decomposition_modular}, it follows that the Hecke operators preserve the \(\chi\)-eigenspaces \(\mc{M}_{k}(N,\chi)\). We can then use this formula to deduce how the Hecke operators act on the Fourier series expansions of modular forms in these subspaces.
+      where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). Since the diamond operators are commutative, this formula also shows that they commute with the Hecke operators. In view of \cref{thm:diamond_operator_decomposition_modular}, it follows that the Hecke operators preserve the \(\chi\)-eigenspaces. This is to say that the Hecke operators restrict to linear operators on \(\mc{M}_{k}(N,\chi)\) and \(\mc{S}_{k}(N,\chi)\) respectively. We can also use this formula to deduce how the Hecke operators act on the Fourier series expansions of modular forms in these subspaces.
 
       \begin{proposition}\label{prop:Hecke_operators_on_Fourier_coefficients}
-        Let \(f \in \mc{M}_{k}(N,\chi)\) have Fourier series expansion
+        Let \(f \in \mc{M}_{k}(\G_{1}(N))\) have Fourier series expansion
         \[
-          f(z) = \sum_{n \ge 0}a(n)e(nz).
+          f(z) = \sum_{n \ge 0}a(n)e(nz),
         \]
-        Then for any positive integer \(m\), the Fourier series expansion of \(T_{m}f\) is
+        Then, for any positive integer \(m\), the Fourier series expansion of \(T_{m}f\) is
+        \[
+          (T_{m}f)(z) = \sum_{n \ge 0}\left(\sum_{d \mid (n,m)}\<d\>d^{k-1}a\left(\frac{nm}{d^{2}}\right)\right)e(nz).
+        \]
+        In particular, if \(f \in \mc{M}_{k}(N,\chi)\) then the Fourier series expansion of \(T_{m}f\) is
         \[
           (T_{m}f)(z) = \sum_{n \ge 0}\left(\sum_{d \mid (n,m)}\chi(d)d^{k-1}a\left(\frac{nm}{d^{2}}\right)\right)e(nz).
         \]
       \end{proposition}
       \begin{proof}
-        By \cref{equ:Hecke_operator_right_coset_explicit_formula}, write
+        In view of \cref{thm:diamond_operator_decomposition_modular}, it suffices assume \(f \in \mc{M}_{k}(N,\chi)\) and prove the second formula. By \cref{equ:Hecke_operator_right_coset_explicit_formula}, write
         \[
           (T_{m}f)(z) = m^{k-1}\sum_{ad = m }\frac{\chi(a)}{d^{k}}\sum_{b \tmod{d}}\sum_{n \ge 0}a(n)e\left(\frac{anz+bn}{d}\right).
         \]
@@ -1727,18 +1731,25 @@
       With this lemma in hand, we can now prove the composition formula for the Hecke operators. This result will also show that the Hecke operators commute.
 
       \begin{theorem}\label{thm:Hecke_operators_composition_formula}
-        The Hecke operators \(T_{m}\) and \(T_{n}\) on \(\mc{M}_{k}(N,\chi)\), for any positive integers \(m\) and \(n\), satisfy
+        For any positive integers \(m\) and \(n\), the Hecke operators \(T_{m}\) and \(T_{n}\) on \(\mc{M}_{k}(\G_{1}(N))\) satisfy
         \[
-          T_{m}T_{n} = \sum_{d \mid (m,n)}\chi(d)d^{k-1}T_{\frac{mn}{d^{2}}} \quad \text{and} \quad T_{mn} = \sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}T_{\frac{m}{d}}T_{\frac{n}{d}}.
+          T_{m}T_{n} = \sum_{d \mid (m,n)}\<d\>d^{k-1}T_{\frac{mn}{d^{2}}} \quad \text{and} \quad T_{mn} = \sum_{d \mid (m,n)}\mu(d)\<d\>d^{k-1}T_{\frac{m}{d}}T_{\frac{n}{d}},
         \]
-        In particular, the Hecke operators are multiplicative, commutative, and satisfy
+        are multiplicative, commutative, and also satisfy
         \[
-          T_{p}T_{p^{r}} = T_{p^{r+1}}+\chi(p)p^{k-1}T_{p^{r-1}},
+          T_{p}T_{p^{r}} = T_{p^{r+1}}+\<p\>p^{k-1}T_{p^{r-1}},
         \]
-        for all primes \(p\) and positive integers \(r\).
+        for all primes \(p\) and positive integers \(r\). In particular, on \(\mc{M}_{k}(N,\chi)\) these Hecke operators satisfy
+        \[
+          T_{m}T_{n} = \sum_{d \mid (m,n)}\chi(d)d^{k-1}T_{\frac{mn}{d^{2}}} \quad \text{and} \quad T_{mn} = \sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}T_{\frac{m}{d}}T_{\frac{n}{d}},
+        \]
+        are multiplicative, commutative, and also satisfy
+        \[
+          T_{p}T_{p^{r}} = T_{p^{r+1}}+\chi(p)p^{k-1}T_{p^{r-1}}.
+        \]
       \end{theorem}
       \begin{proof}
-        To prove the first identity, it suffices to show that left-hand and right-hand sides act the same on the Fourier coefficients of any \(f \in \mc{M}_{k}(N,\chi)\). So let
+        In view of \cref{thm:diamond_operator_decomposition_modular}, it suffices to prove the statement for \(\mc{M}_{k}(N,\chi)\). For the first identity, we will show that left-hand and right-hand sides act the same on the Fourier coefficients of any \(f \in \mc{M}_{k}(N,\chi)\). So let
         \[
           f(z) = \sum_{r \ge 0}a(r)e(r z),
         \]
@@ -1778,11 +1789,15 @@
       We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). In fact, we will compute their adjoints explicitly.
 
       \begin{theorem}\label{thm:Hecke_operators_normal}
-        Let \(m\) be a positive integer with \((m,N) = 1\) and \(m^{\ast}\) be any positive integer satisfying \(m^{\ast}m \equiv 1 \tmod{N}\). The adjoints of the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) on \(\mc{S}_{k}(N,\chi)\) are given by
+        Let \(m\) be a positive integer with \((m,N) = 1\) and \(m^{\ast}\) be any positive integer satisfying \(m^{\ast}m \equiv 1 \tmod{N}\). The adjoints of the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) on \(\mc{S}_{k}(\G_{1}(N))\) are given by
         \[
-          \<m\>^{\ast} = \<m^{\ast}\> \quad \text{and} \quad T_{m}^{\ast} = \<m^{\ast}\>T_{m}.
+          \<m\>^{\ast} = \<m^{\ast}\> \quad \text{and} \quad T_{m}^{\ast} = \<m^{\ast}\>T_{m},
         \]
-        In particular, they are are normal.
+        and they are are normal. In particular, on \(\mc{S}_{k}(N,\chi)\) the adjoints of these operators are given by
+        \[
+          \<m\>^{\ast} = \conj{\<m\>} \quad \text{and} \quad T_{m}^{\ast} = \conj{\<m\>}T_{m},
+        \]
+        and they are also normal.
       \end{theorem}
       \begin{proof}
         By \cref{thm:Hecke_operators_composition_formula} and induction, it suffices to prove the adjoint formulas when \(m = p\) for a prime \(p\) with \(p \nmid N\). We will prove the adjoint formula for diamond operators first. For any \(\g_{p}\), we have \(\g_{p}^{\ast} \in \G_{0}(N)\) with \(\g_{p}^{\ast} \equiv \begin{psmallmatrix} p & 0 \\ 0 & p^{\ast} \end{psmallmatrix} \tmod{N}\). Therefore \cref{prop:double_coset_adjoint} implies
@@ -1802,6 +1817,8 @@
           T_{p} = \<p^{\ast}\>T_{p}.
         \]
         This proves the adjoint formula for the Hecke operators and normality follows from commutativity.
+
+        In the case of \(\mc{S}_{k}(N,\chi)\), the formulas follow from the observation that \(\chi(m^{\ast}) = \cchi(m)\) and normality again follows from commutativity.
       \end{proof}
 
       \begin{remark}
@@ -1843,7 +1860,7 @@
       \begin{proof}
         First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the first identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. The second identity is proved analogously by computing the fist Fourier coefficient of \(T_{mn}f\) in two ways. On the one hand it is \(\l(mn)\) since \(f\) is a Hecke normalized eigenform. On the other hand, it is \(\sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second statement is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
       \end{proof}
-    \iffalse\subsection{\todo{Oldforms and Newforms}}
+    \subsection{\todo{Oldforms and Newforms}}
       Recall that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) and so every modular form on \(\G_{1}(M)\backslash\H\) is also a modular form on \(\G_{1}(N)\backslash\H\). In particular, there are inclusions
       \[
         \mc{M}_{k}(\G_{1}(M)) \subseteq \mc{M}_{k}(\G_{1}(N)) \quad \text{and} \quad \mc{S}_{k}(\G_{1}(M)) \subseteq \mc{S}_{k}(\G_{1}(N)).
@@ -1854,67 +1871,56 @@
       \[
         (f\|_{k}\a_{d})(z) = d^{k-1}f(dz).
       \]
-      It turns out that this operator lifts modular forms from \(\G_{1}(M)\backslash\H\) to \(\G_{1}(N)\backslash\H\). \todo{xxx}
+      It turns out that this operator lifts modular forms from \(\G_{1}(M)\backslash\H\) to \(\G_{1}(N)\backslash\H\) and preserves the subspaces of cusp forms.
       
       \begin{proposition}\label{equ:lifting_operator_modular}
-        Let \(M\) and \(N\) be positive integers such that \(M \mid N\). For any \(d \mid \frac{N}{M}\), \(\|_{k}\a_{d}\) maps \(\mc{S}_{k}(\G_{1}(M))\) into \(\mc{S}_{k}(\G_{1}(N))\). In particular, \(\|_{k}\a_{d}\) takes \(\mc{S}_{k}(M,\chi)\) into \(\mc{S}_{k}(N,\chi)\).
+        Let \(M\) and \(N\) be positive integers such that \(M \mid N\). For any \(d \mid \frac{N}{M}\), \(\|_{k}\a_{d}\) maps \(\mc{M}_{k}(\G_{1}(M))\) into \(\mc{M}_{k}(\G_{1}(N))\) and preserves the subspaces of cusp forms.
       \end{proposition}
       \begin{proof}
-        By \cref{thm:diamond_operator_decomposition_modular}, it suffices to verify only the latter statement so we may assume \(f \in \mc{S}_{k}(M,\chi)\). It is clear that holomorphy is satisfied for \(f\|_{k}\a_{d}\). To verify modularity, let \(\g = \begin{psmallmatrix} a & b \\ c & d' \end{psmallmatrix} \in \G_{1}(N)\) and set \(\g' = \begin{psmallmatrix} a & bd \\ d^{-1}c & d' \end{psmallmatrix} \in \G_{1}(M)\) (because \(c \equiv 0 \tmod{N}\) and \(d \mid \frac{N}{M}\)). Then
+        Let \(f \in \mc{M}_{k}(\G_{1}(M))\). It is clear that holomorphy is satisfied for \(f\|_{k}\a_{d}\). To verify modularity, let \(\g = \begin{psmallmatrix} a & b \\ c & d' \end{psmallmatrix} \in \G_{1}(N)\). A short computation shows
         \[
-          \a_{d}\g\a_{d}^{-1} = \begin{pmatrix} d & 0 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} a & b \\ c & d' \end{pmatrix}\begin{pmatrix} d^{-1} & 0 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} a & bd \\ d^{-1}c & d' \end{pmatrix} = \g',
+          \a_{d}\g\a_{d}^{-1} = \begin{pmatrix} a & bd \\ d^{-1}c & d' \end{pmatrix},
         \]
-        and therefore \(\a_{d}\G_{1}(N)\a_{d}^{-1} \subseteq \G_{1}(M)\), or equivalently, \(\G_{1}(N) \subseteq \a_{d}^{-1}\G_{1}(M)\a_{d}\). It is also clear that \(\chi(\g') = \chi(\g)\). Using these facts, we compute
-        \begin{align*}
-          ((f\|_{k}\a_{d})|_{k}\g)(z) &= d^{\frac{k}{2}-1}(f|_{k}\a_{d}\g)(z) && \text{\cref{equ:relationship_between_slash_operators}} \\
-          &= d^{\frac{k}{2}-1}(f|_{k}\g'\a_{d})(z) \\
-          &= \chi(\g')d^{\frac{k}{2}-1}(f|_{k}\a_{d})(z) && \text{modularity} \\
-          &= \chi(\g)d^{\frac{k}{2}-1}(f|_{k}\a_{d})(z) \\
-          &= \chi(\g)(f\|_{k}\a_{d})(z).
-        \end{align*}
-        This verifies modularity of \(f\|_{k}\a_{d}\). For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{1}(M)\backslash\H\). Then \(\a_{d}\s_{\mf{a}}\) takes \(\infty\) to an element of \(\what{\Q}\) since \(\a_{d} \in \GL_{2}^{+}(\Q)\). In other words, \(\a_{d}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\). Then by \cref{equ:relationship_between_slash_operators},
+        whence \(\a_{d}\g\a_{d}^{-1} \in \G_{1}(M)\). But then \(\a_{d}\G_{1}(N)\a_{d}^{-1} \subseteq \G_{1}(M)\) which is to say \(\G_{1}(N) \subseteq \a_{d}^{-1}\G_{1}(M)\a_{d}\). Modularity then follows from a short computation. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{1}(M)\backslash\H\). Then \(\a_{d}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\) and as
         \[
           ((f\|_{k}\a_{d})|_{k}\s_{\mf{a}})(z) = d^{\frac{k}{2}-1}(f|_{k}\a_{d}\s_{\mf{a}})(z),
         \]
-        and so the growth condition follows from that of \(f\). In particular, \(f\|_{k}\a_{d}\) is a cusp form since \(f\) is.
+        the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f\|_{k}\a_{d}\) is a cusp form if \(f\) is.
       \end{proof}
 
-      We can now define oldforms and newforms. For each divisor \(d\) of \(N\), set
+      We can now define oldforms and newforms. For each divisor \(d\) of \(N\), consider the bilinear operator
       \[
         i_{d}:\mc{S}_{k}\left(\G_{1}\left(\frac{N}{d}\right)\right) \op \mc{S}_{k}\left(\G_{1}\left(\frac{N}{d}\right)\right) \to \mc{S}_{k}(\G_{1}(N)) \qquad (f,g) \mapsto f+g\|_{k}\a_{d}.
       \]
-      This map is well-defined by \cref{equ:lifting_operator_modular}. The subspace of \textbf{oldforms}\index{oldforms} of level \(N\) is
+      This map is well-defined by \cref{equ:lifting_operator_modular}. The subspaces of \textbf{oldforms}\index{oldforms} and \textbf{newforms}\index{newforms} of level \(N\) are given by
       \[
-        \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N)) = \bigop_{p \mid N}\Im(i_{p}),
-      \]
-      and the subspace of \textbf{newforms}\index{newforms} of level \(N\) is
-      \[
-        \mc{S}_{k}^{\mathrm{new}}(\G_{1}(N)) = \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))^{\perp}.
+        \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N)) = \bigop_{p \mid N}\Im(i_{p}) \quad \text{and} \quad \mc{S}_{k}^{\mathrm{new}}(\G_{1}(N)) = \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))^{\perp}.
       \]
       An element of these subspaces is called an \textbf{oldform}\index{oldform} or \textbf{newform}\index{newform} respectively. Note that there are no oldforms of level \(1\). We will need a useful operator for the study of oldforms and newforms. Let
       \[
         W_{N} = \begin{pmatrix} 0 & -1 \\ N & 0 \end{pmatrix},
       \]
-      and note that \(\det(W_{N}) = N\). This matrix normalizes \(\G_{0}(N)\). Indeed, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) and set \(g' = \begin{psmallmatrix} d & -N^{-1}c \\ -Nb & a \end{psmallmatrix} \in \G_{0}(N)\). Then
+      and note that \(\det(W_{N}) = N\). This matrix normalizes \(\G_{0}(N)\). Indeed, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\). Then a short computation shows
       \begin{equation}\label{equ:Atkin_Lehner_normalization}
-        W_{N}\g W_{N}^{-1} = \begin{pmatrix} 0 & -1 \\ N & 0 \end{pmatrix}\begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} 0 & N^{-1} \\ -1 & 0 \end{pmatrix} = \begin{pmatrix} d & -N^{-1}c \\ -Nb & a \end{pmatrix} = \g'.
+        W_{N}\g W_{N}^{-1} = \begin{pmatrix} d & -N^{-1}c \\ -Nb & a \end{pmatrix},
       \end{equation}
-      It follows that \(W_{N}\) normalizes \(\G_{0}(N)\) as claimed. We define the \textbf{Atkin-Lehner operator}\index{Atkin-Lehner operator} \(\w_{N}\) to be the linear operator on \(\mc{S}_{k}(\G_{1}(N))\) given by
+      which clearly belongs to \(\G_{0}(N)\). So \(W_{N}\) normalizes \(\G_{0}(N)\) as claimed. We define the \textbf{Atkin-Lehner operator}\index{Atkin-Lehner operator} \(\w_{N}:C(\H) \to C(\H)\) to be the linear operator given by
       \[
         (\w_{N}f)(z) = N^{1-k}(f\|_{k}W_{N})(z).
       \]
-      As \(W_{N}\) is invertible, so is the Atkin-Lehner operator \(\w_{N}\). It is not difficult to see how the Atkin-Lehner operator acts on \(\mc{S}_{k}(\G_{1}(N))\):
+      As \(W_{N}\) is invertible so is the Atkin-Lehner operator \(\w_{N}\). It is not difficult to see how the Atkin-Lehner operator acts on \(\mc{S}_{k}(\G_{1}(N))\).
 
       \begin{proposition}\label{prop:Atkin_Lehner_modular}
         The Atkin-Lehner operator \(\w_{N}\) maps \(\mc{S}_{k}(\G_{1}(N))\) into itself. In particular, \(\w_{N}\) takes \(\mc{S}_{k}(N,\chi)\) into \(\mc{S}_{k}(N,\cchi)\) and preserves the subspaces of oldforms and newforms. Moreover, the adjoint is given by
         \[
-          \w_{N}^{\ast} = (-1)^{k}\w_{N}.
+          \w_{N}^{\ast} = (-1)^{k}\w_{N},
         \]
-        We also have
+        and we also have
         \[
           \w_{N}^{2} = (-1)^{k}.
         \]
       \end{proposition}
+      \iffalse 
       \begin{proof}
         In light of \cref{thm:diamond_operator_decomposition_modular}, the first statement is a consequence of the latter ones. Therefore we may assume \(f \in \mc{S}_{k}(N,\chi)\). Holomorphy is obvious. For modularity, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) and set \(\g' = \begin{psmallmatrix} d & -N^{-1}c \\ -Nb & a \end{psmallmatrix} \in \G_{0}(N)\). Then \(W_{N}\g = \g'W_{N}\) by \cref{equ:Atkin_Lehner_normalization} and we also have \(\chi(\g') = \cchi(\g)\) because \(ad \equiv 1 \tmod{N}\). Using these facts, we compute
         \begin{align*}
