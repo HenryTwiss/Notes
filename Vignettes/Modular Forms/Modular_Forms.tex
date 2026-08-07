@@ -1081,9 +1081,9 @@
         (f\|_{k}\a)(z) = j(\a,z)^{-k}f(\a z).
       \]
       The relationship to the slash operator is
-      \begin{equation}\label{equ:relationship_between_slash_operators}
+      \[
         (f\|_{k}\a)(z) = \det(\a)^{\frac{k}{2}-1}(f|_{k}\a)(z).
-      \end{equation}
+      \]
       It follows that the double slash operator is multiplicative as we have
       \[
         (f\|_{k}\a'\a)(z) = ((f\|_{k}\a')|_{k}\a)(z) \quad \text{and} \quad ((fg)\|_{k+\ell}\a)(z) = (f\|_{k}\a)(z)(g\|_{\ell}\a)(z),
@@ -1148,7 +1148,7 @@
 
       In order to describe the adjoint of \([\G\a\G]_{k}\) we will introduce some notation. Let
       \[
-        a^{\ast} = \det(\a)\a^{-1},
+        \a^{\ast} = \det(\a)\a^{-1},
       \]
       be the adjugate of \(\a\) for any \(\a \in \GL_{2}^{+}(\Q)\). We will now describe the adjoint of \([\G\a\G]_{k}\) whenever \(\a\) normalizes \(\G\). As remarked, this is another double coset operator.
 
@@ -1900,11 +1900,15 @@
       \[
         W_{N} = \begin{pmatrix} 0 & -1 \\ N & 0 \end{pmatrix},
       \]
-      and note that \(\det(W_{N}) = N\). This matrix normalizes \(\G_{0}(N)\). Indeed, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\). Then a short computation shows
-      \begin{equation}\label{equ:Atkin_Lehner_normalization}
+      and note that \(\det(W_{N}) = N\). This matrix normalizes \(\G_{0}(N)\). Indeed, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\). A short computation shows
+      \[
         W_{N}\g W_{N}^{-1} = \begin{pmatrix} d & -N^{-1}c \\ -Nb & a \end{pmatrix},
+      \]
+      which clearly belongs to \(\G_{0}(N)\). So \(W_{N}\) normalizes \(\G_{0}(N)\) as claimed. In particular, we will set \(\g_{W} = W_{N}\g W_{N}^{-1} \in \G_{0}(N)\) so that the previous identity becomes
+      \begin{equation}\label{equ:Atkin_Lehner_normalization}
+        W_{N}\g = \g_{W}W_{N}.
       \end{equation}
-      which clearly belongs to \(\G_{0}(N)\). So \(W_{N}\) normalizes \(\G_{0}(N)\) as claimed. We define the \textbf{Atkin-Lehner operator}\index{Atkin-Lehner operator} \(\w_{N}:C(\H) \to C(\H)\) to be the linear operator given by
+      We define the \textbf{Atkin-Lehner operator}\index{Atkin-Lehner operator} \(\w_{N}:C(\H) \to C(\H)\) to be the linear operator given by
       \[
         (\w_{N}f)(z) = N^{1-k}(f\|_{k}W_{N})(z).
       \]
@@ -1920,29 +1924,24 @@
           \w_{N}^{2} = (-1)^{k}.
         \]
       \end{proposition}
-      \iffalse 
       \begin{proof}
-        In light of \cref{thm:diamond_operator_decomposition_modular}, the first statement is a consequence of the latter ones. Therefore we may assume \(f \in \mc{S}_{k}(N,\chi)\). Holomorphy is obvious. For modularity, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) and set \(\g' = \begin{psmallmatrix} d & -N^{-1}c \\ -Nb & a \end{psmallmatrix} \in \G_{0}(N)\). Then \(W_{N}\g = \g'W_{N}\) by \cref{equ:Atkin_Lehner_normalization} and we also have \(\chi(\g') = \cchi(\g)\) because \(ad \equiv 1 \tmod{N}\). Using these facts, we compute
-        \begin{align*}
-          ((\w_{N}f)|_{k}\g)(z) &= N^{-\frac{k}{2}}(f|_{k}W_{N}\g)(z) && \text{\cref{equ:relationship_between_slash_operators}} \\
-          &= N^{-\frac{k}{2}}(f|_{k}\g'W_{N})(z) \\
-          &= \chi(\g')N^{-\frac{k}{2}}(f|_{k}W_{N})(z) && \text{modularity} \\
-          &= \cchi(\g)N^{1-k}(f\|_{k}W_{N})(z) \\
-          &= \cchi(\g)(\w_{N}f)(z).
-        \end{align*}
-        This verifies modularity of \(\w_{N}f\). As for the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\). Then \(W_{N}\s_{\mf{a}}\) takes \(\infty\) to an element of \(\what{\Q}\) since \(W_{N} \in \GL_{2}^{+}(\Q)\). In other words, \(W_{N}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\). Then
+        In light of \cref{thm:diamond_operator_decomposition_modular}, the first statement is a consequence of the latter ones. So let \(f \in \mc{S}_{k}(N,\chi)\). Holomorphy of \(\w_{N}f\) is obvious. For modularity, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) and recall \(\g_{W} \in \G_{0}(N)\). Then \(\chi(\g_{W}) = \cchi(\g)\) and modularity follows from a short computation using \cref{equ:Atkin_Lehner_normalization}. As for the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\). Then \(W_{N}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\). As
         \[
           ((\w_{N}f)|_{k}\s_{\mf{a}})(z) = N^{-\frac{k}{2}}(f|_{k}W_{N}\s_{\mf{a}})(z),
         \]
-        and so the growth condition follows from that of \(f\). In particular, \(\w_{N}f\) is a cusp form because \(f\) is. It total we have shown that \(\w_{N}f \in \mc{S}_{k}(N,\cchi)\). We now prove the adjoint formula for the Atkin-Lehner operator. Let \(W_{N}' = \det(W_{N})W_{N}^{-1}\). Then \(W_{N}' = -W_{N}\). Since \(W_{N}\) normalizes \(\G_{0}(N)\) so does \(-W_{N}\). As \(-W_{N}\) and \(W_{N}\) act the same on \(\H\), \cref{prop:Petersson_adjoint_modular} implies that
+        the growth condition follows from that of \(f\). In particular, \(\w_{N}f\) is a cusp form because \(f\). This proves \(\w_{N}\) takes \(\mc{S}_{k}(N,\chi)\) into \(\mc{S}_{k}(N,\cchi)\).
+        
+        We now show the adjoint formula for the Atkin-Lehner operator. First observe that the adjugate of \(W_{N}\) satisfies \(W_{N}^{\ast} = -W_{N}\). Therefore \cref{prop:double_coset_adjoint} implies
         \[
-          \w_{N}^{\ast} = (-1)^{k}\w_{N}.
+          \w_{N}^{\ast} = (-1)^{k}\w_{N},
         \]
-        This proves the adjoint formula for the Atkin-Lehner operator. We now show that the Atkin-Lehner operator preserves the subspaces of oldforms and newforms. To show that it preserves \(\mc{S}_{k}^{\text{old}}(\G_{1}(N))\), let \(h = f+g\|_{k}\a_{p}\) be in the image of \(i_{p}\), with \(p \mid N\), so that \(i_{p}(f,g) = h\). Then it suffices to show
+        proving the desired adjoint formula. 
+        
+        With the adjoint formula, we can further show that the Atkin-Lehner operator preserves the subspaces of oldforms and newforms. To show that it preserves the subspace of oldforms, let \(p\) be a prime satisfying \(p \mid N\) and suppose \(i_{p}(f,g) = h\) so that \(h = f+g\|_{k}\a_{p}\). Then it is enough to show
         \[
           \w_{N}i_{p}(f,g) = i_{p}(\w_{\frac{N}{p}}p^{k-2}g,\w_{\frac{N}{p}}p^{1-k}f).
         \]
-        This will follow from the formulas
+        This follows from the formulas
         \[
           \w_{N}f = (\w_{\frac{N}{p}}p^{1-k}f)\|_{k}\a_{p} \quad \text{and} \quad \w_{N}(g\|_{k}\a_{p}) = \w_{\frac{N}{p}}(p^{k-2}g),
         \]
@@ -1950,16 +1949,20 @@
         \[
           W_{N} = W_{\frac{N}{p}}\a_{p} \quad \text{and} \quad \a_{p}W_{N} = I_{p}W_{\frac{N}{p}}.
         \]
-        Thus the Atkin-Lehner operator \(\w_{N}\) preserves the subspace of oldforms. To see that \(\w_{N}\) preserves the subspace of newforms as well, let \(f\) and \(g\) be a newform and an oldform respectively. The adjoint formula for \(\w_{N}\) and that it preserves the subspace of oldforms gives
+        Thus the Atkin-Lehner operator \(\w_{N}\) preserves the subspace of oldforms. To see that \(\w_{N}\) preserves the subspace of newforms as well, let \(f\) and \(g\) be a newform and an oldform respectively. The adjoint formula for \(\w_{N}\) and that it preserves the subspace of oldforms together gives
         \[
-          \<\w_{N}f,g\> = (-1)^{k}\<f,\w_{N}g\> = 0.
+          \<\w_{N}f,g\> = 0.
         \]
-        Hence \(\w_{N}f\) must also be a newform and so \(\w_{N}\) preserves the subspace of newforms. It remains to prove the last formula. For this, observe that \(W_{N}^{2} = -I_{N}\). This fact and \cref{equ:relationship_between_slash_operators} together imply
+        Hence \(\w_{N}f\) must also be a newform and so \(\w_{N}\) preserves the subspace of newforms.
+        
+        It remains to prove the last formula. For this, observe that \(W_{N}^{2} = -I_{N}\). Using this fact, a short computation shows
         \[
-          (\w_{N}^{2}f)(z) = N^{-k}(f|_{k}W_{N}^{2})(z) = N^{-k}(f|_{k}(-I_{N}))(z) = (-1)^{k}f.
+          (\w_{N}^{2}f)(z) = (-1)^{k}f.
         \]
         This completes the proof
       \end{proof}
+
+      \iffalse 
 
       \cref{prop:Atkin_Lehner_modular} shows that the Atkin-Lehner operator \(\w_{N}\) is self-adjoint and an involution if \(k\) is even. In fact, regardless of the parity of \(k\), \(\w_{N}\) is at most of order \(4\). We now need to understand how the Atkin-Lehner operator interacts with the diamond and Hecke operators:
 
