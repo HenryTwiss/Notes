@@ -1786,7 +1786,11 @@
         Multiplicativity follows from either formula since we only have the term \(d = 1\) whenever \((m,n) = 1\). As for commutativity, just observe that either formula is symmetric in \(m\) and \(n\). The formula is immediate from either of the previous ones as \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
       \end{proof}
 
-      We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). In fact, we will compute their adjoints explicitly.
+      We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). We will make use of the important consequence from \cref{equ:Hecke_operator_double_coset_explicit_formula} which is that in the case \(m = p\) for a prime \(p\), we have
+      \begin{equation}\label{equ:Hecke_operator_double_coset_explicit_formula_prime_case}
+        T_{p} = \left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k},
+      \end{equation}
+      so that the Hecke operator reduces to a single double coset operator. In fact, we will compute the aforementioned adjoints explicitly.
 
       \begin{theorem}\label{thm:Hecke_operators_normal}
         Let \(m\) be a positive integer with \((m,N) = 1\) and \(m^{\ast}\) be any positive integer satisfying \(m^{\ast}m \equiv 1 \tmod{N}\). The adjoints of the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) on \(\mc{S}_{k}(\G_{1}(N))\) are given by
@@ -1804,11 +1808,7 @@
         \[
           \<p\>^{\ast} = \<p^{\ast}\>.
         \]
-        This proves the adjoint formula for the diamond operators and normality follows from commutativity. For the Hecke operators, \cref{equ:Hecke_operator_double_coset_explicit_formula} implies
-        \[
-          T_{p} = \left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k}.
-        \]
-        As \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \begin{psmallmatrix} p & 0 \\ 0 & 1 \end{psmallmatrix}\), we may write \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \g_{p^{\ast}}\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\). So from \cref{prop:double_coset_adjoint} we find that
+        This proves the adjoint formula for the diamond operators and normality follows from commutativity. For the Hecke operators, notice that as \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \begin{psmallmatrix} p & 0 \\ 0 & 1 \end{psmallmatrix}\) we may write \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \g_{p^{\ast}}\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\). So from \cref{equ:Hecke_operator_double_coset_explicit_formula_prime_case,prop:double_coset_adjoint} we have
         \[
           T_{p} = \left[\G_{1}(N)\g_{p^{\ast}}\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k}.
         \]
@@ -1962,29 +1962,28 @@
         This completes the proof.
       \end{proof}
 
-      \iffalse 
-
-      \cref{prop:Atkin_Lehner_modular} shows that the Atkin-Lehner operator \(\w_{N}\) is self-adjoint and an involution if \(k\) is even. In fact, regardless of the parity of \(k\), \(\w_{N}\) is at most of order \(4\). We now need to understand how the Atkin-Lehner operator interacts with the diamond and Hecke operators:
+      This result showed that the Atkin-Lehner operator \(\w_{N}\) is self-adjoint and an involution whenever \(k\) is even. In fact, regardless of the parity of \(k\), \(\w_{N}\) is at most of order \(4\). We now need to understand how the Atkin-Lehner operator interacts with the diamond and Hecke operators. It turns out that the adjoints of these operators are given by conjugation via the Atkin-Lehner operator.
 
       \begin{proposition}\label{prop:Atkin_Lehner_adjoint_diamond_Hecke_modular}
         On \(\mc{S}_{k}(\G_{1}(N))\), the diamond operators \(\<m\>\) and Hecke operators \(T_{m}\) satisfy the adjoint formulas
         \[
           \<m\>^{\ast} = \w_{N}\<m\>\w_{N}^{-1} \quad \text{and} \quad T_{m}^{\ast} = \w_{N}T_{m}\w_{N}^{-1},
         \]
-        for all \(m \ge 1\).
+        for all positive integers \(m\).
       \end{proposition}
       \begin{proof}
-        By multiplicativity of the diamond and Hecke operators, it suffices to prove the two adjoint formulas when \(m = p\) for a prime \(p\). For the diamond operators, the formula is obvious when \(p \mid N\) since \(\<p\>\) is the zero operator. So suppose \(p \nmid N\), let \(\a = \begin{psmallmatrix} \conj{p} & \ast \\ \ast & p \end{psmallmatrix} \in \G_{0}(N)\) and set \(\a' = \det(\a)\a^{-1} = \begin{psmallmatrix} p & \ast \\ \ast & \conj{p} \end{psmallmatrix} \in \G_{0}(N)\). \cref{equ:Atkin_Lehner_normalization} shows that \(\a' = W_{N}\begin{psmallmatrix} \conj{p} & \ast \\ \ast & p \end{psmallmatrix}W_{N}^{-1}\) for some \(\begin{psmallmatrix} \conj{p} & \ast \\ \ast & p \end{psmallmatrix} \in \G_{0}(N)\). Then \cref{prop:Petersson_adjoint_modular} gives
+        As the diamond and Hecke operators are multiplicative, it suffices to prove the two adjoint formulas when \(m = p\) for a prime \(p\). For the diamond operators, the formula is obvious when \(p \mid N\) since \(\<p\>\) is the zero operator. So suppose \(p \nmid N\) and observe from \cref{equ:Atkin_Lehner_normalization} that \(\g_{p}^{\ast} = W_{N}\g_{p}W_{n}\). Whence \cref{prop:double_coset_adjoint} gives
         \[
           \<p\>^{\ast} = \w_{N}\<p\>\w_{N}^{-1}.
         \]
-        This is the desired adjoint formula for the diamond operators when \(p \mid N\). Thus the adjoint formula holds for all the diamond operators. For the Hecke operators, let \(\a = \begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}\) and set \(\a' = \det(\a)\a^{-1} = \begin{psmallmatrix} p & 0 \\ 0 & 1\end{psmallmatrix}\). \cref{equ:Atkin_Lehner_normalization} shows that \(\a' = W_{N}\a W_{N}^{-1}\). Then \cref{prop:Petersson_adjoint_modular} gives
+        This is the desired adjoint formula for the diamond operators when \(p \mid N\). Thus the adjoint formula holds for all the diamond operators. For the Hecke operators, \cref{equ:Atkin_Lehner_normalization} shows that \(\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}^{\ast} = W_{N}\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}W_{N}^{-1}\). Then \cref{equ:Hecke_operator_double_coset_explicit_formula_prime_case,prop:double_coset_adjoint} together imply
         \[
           T_{p}^{\ast} = \w_{N}T_{p}\w_{N}^{-1}.
         \]
         This is the desired adjoint formula for the Hecke operators.
       \end{proof}
       
+      \iffalse 
       It turns out that the spaces of oldforms and newforms are invariant under the diamond and Hecke operators:
 
       \begin{proposition}\label{prop:old/new_subspaces_are_invariant_modular}
