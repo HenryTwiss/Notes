@@ -1596,7 +1596,7 @@
       \end{proof}
 
       From this double coset decomposition, the Hecke operators can be expressed as
-      \begin{equation}\label{equ:Hecke_operator_double_coset_explicit_formula}
+      \begin{equation}\label{equ:Hecke_operator_double_coset_formula}
         (T_{m}f)(z) = \sum_{\substack{ad = m \\ a \mid d \\ (a,N) = 1}}\left[\G_{1}(N)\g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
       \end{equation}
       In order to compute the Hecke operators explicitly we need to find a complete set of representatives for each of the double cosets \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\) in the sum. But this is the same as finding a complete set of representatives for \(\G_{1}(N)\backslash\D_{m}\) which is much easier to accomplish.
@@ -1640,10 +1640,14 @@
       \end{proof}
 
       From this right coset decomposition, we immediately find that the Hecke operators may be expressed in the form
-      \begin{equation}\label{equ:Hecke_operator_right_coset_explicit_formula}
-        (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}(\<a\>f)\left(\frac{az+b}{d}\right),
+      \begin{equation}\label{equ:Hecke_operator_right_coset_formula}
+        (T_{m}f)(z) = \sum_{ad = m}\sum_{b \tmod{d}}\left((\<a\>f)\bigg\|_{k}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix}\right)(z),
       \end{equation}
-      where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). Since the diamond operators are commutative, this formula also shows that they commute with the Hecke operators. In view of \cref{thm:diamond_operator_decomposition_modular}, it follows that the Hecke operators preserve the \(\chi\)-eigenspaces. This is to say that the Hecke operators restrict to linear operators on \(\mc{M}_{k}(N,\chi)\) and \(\mc{S}_{k}(N,\chi)\) respectively. We can also use this formula to deduce how the Hecke operators act on the Fourier series expansions of modular forms in these subspaces.
+      where we are permitted to remove the condition \((a,N) = 1\) since the diamond operator \(\<a\>\) acts as the zero operator whenever \((a,N) > 1\). This formula can further be expressed explicitly as
+      \begin{equation}\label{equ:Hecke_operator_explicit_formula}
+        (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}(\<a\>f)\left(\frac{az+b}{d}\right).
+      \end{equation}
+      Since the diamond operators are commutative, this latter formula shows that they commute with the Hecke operators. In view of \cref{thm:diamond_operator_decomposition_modular}, it follows that the Hecke operators preserve the \(\chi\)-eigenspaces. This is to say that the Hecke operators restrict to linear operators on \(\mc{M}_{k}(N,\chi)\) and \(\mc{S}_{k}(N,\chi)\) respectively. We can also use this formula to deduce how the Hecke operators act on the Fourier series expansions of modular forms in these subspaces.
 
       \begin{proposition}\label{prop:Hecke_operators_on_Fourier_coefficients}
         Let \(f \in \mc{M}_{k}(\G_{1}(N))\) have Fourier series expansion
@@ -1660,9 +1664,9 @@
         \]
       \end{proposition}
       \begin{proof}
-        In view of \cref{thm:diamond_operator_decomposition_modular}, it suffices assume \(f \in \mc{M}_{k}(N,\chi)\) and prove the second formula. By \cref{equ:Hecke_operator_right_coset_explicit_formula}, write
+        In view of \cref{thm:diamond_operator_decomposition_modular}, it suffices assume \(f \in \mc{M}_{k}(N,\chi)\) and prove the second formula. By \cref{equ:Hecke_operator_explicit_formula}, write
         \[
-          (T_{m}f)(z) = m^{k-1}\sum_{ad = m }\frac{\chi(a)}{d^{k}}\sum_{b \tmod{d}}\sum_{n \ge 0}a(n)e\left(\frac{anz+bn}{d}\right).
+          (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{\chi(a)}{d^{k}}\sum_{b \tmod{d}}\sum_{n \ge 0}a(n)e\left(\frac{anz+bn}{d}\right).
         \]
         For fixed \(d\), the sum over \(b\) is
         \[
@@ -1786,11 +1790,15 @@
         Multiplicativity follows from either formula since we only have the term \(d = 1\) whenever \((m,n) = 1\). As for commutativity, just observe that either formula is symmetric in \(m\) and \(n\). The formula is immediate from either of the previous ones as \(d = 1,p\) when \(m = p\) and \(n = p^{r}\).
       \end{proof}
 
-      We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). We will make use of the important consequence from \cref{equ:Hecke_operator_double_coset_explicit_formula} which is that in the case \(m = p\) for a prime \(p\), we have
-      \begin{equation}\label{equ:Hecke_operator_double_coset_explicit_formula_prime_case}
-        T_{p} = \left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k},
+      We can now prove that the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) are normal whenever \((m,N) = 1\). We first note two important consequences from \cref{equ:Hecke_operator_double_coset_formula,equ:Hecke_operator_right_coset_formula} which is that in the case \(m = p\) for a prime \(p\), we have
+      \begin{equation}\label{equ:Hecke_operator_double_coset_formula_prime_case}
+        (T_{p}f)(z) = \left(\left[\G_{1}(N)\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k}f\right)(z),
       \end{equation}
-      so that the Hecke operator reduces to a single double coset operator. In fact, we will compute the aforementioned adjoints explicitly.
+      and
+      \begin{equation}\label{equ:Hecke_operator_right_coset_formula_prime_case}
+        (T_{p}f)(z) = \sum_{b \tmod{p}}\left(f\bigg\|_{k}\begin{pmatrix} 1 & b \\ 0 & p \end{pmatrix}\right)(z)+\left((\<p\>f)\bigg\|_{k}\begin{pmatrix} p & 0 \\ 0 & 1 \end{pmatrix}\right)(z).
+      \end{equation}
+      In particular, we find that the Hecke operator \(T_{p}\) reduces to the single double coset operator \(\left[\G_{1}(N)\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\G_{1}(N)\right]_{k}\). Now we will compute the aforementioned adjoints explicitly.
 
       \begin{theorem}\label{thm:Hecke_operators_normal}
         Let \(m\) be a positive integer with \((m,N) = 1\) and \(m^{\ast}\) be any positive integer satisfying \(m^{\ast}m \equiv 1 \tmod{N}\). The adjoints of the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) on \(\mc{S}_{k}(\G_{1}(N))\) are given by
@@ -1808,7 +1816,7 @@
         \[
           \<p\>^{\ast} = \<p^{\ast}\>.
         \]
-        This proves the adjoint formula for the diamond operators and normality follows from commutativity. For the Hecke operators, notice that as \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \begin{psmallmatrix} p & 0 \\ 0 & 1 \end{psmallmatrix}\) we may write \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \g_{p^{\ast}}\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\). So from \cref{equ:Hecke_operator_double_coset_explicit_formula_prime_case,prop:double_coset_adjoint} we have
+        This proves the adjoint formula for the diamond operators and normality follows from commutativity. For the Hecke operators, notice that as \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \begin{psmallmatrix} p & 0 \\ 0 & 1 \end{psmallmatrix}\) we may write \(\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}^{\ast} = \g_{p^{\ast}}\begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix}\). So from \cref{equ:Hecke_operator_double_coset_formula_prime_case,prop:double_coset_adjoint} we have
         \[
           T_{p} = \left[\G_{1}(N)\g_{p^{\ast}}\begin{pmatrix} 1 & 0 \\ 0 & p \end{pmatrix}\G_{1}(N)\right]_{k}.
         \]
@@ -1904,7 +1912,7 @@
       \[
         W_{N}\g W_{N}^{-1} = \begin{pmatrix} d & -N^{-1}c \\ -Nb & a \end{pmatrix},
       \]
-      which clearly belongs to \(\G_{0}(N)\). So \(W_{N}\) normalizes \(\G_{0}(N)\) as claimed. In particular, we will set \(\g_{W} = W_{N}\g W_{N}^{-1} \in \G_{0}(N)\) so that the previous identity becomes
+      which clearly belongs to \(\G_{0}(N)\). So \(W_{N}\) normalizes \(\G_{0}(N)\) as claimed. In particular, we will set \(\g_{W} = W_{N}\g W_{N}^{-1} \in \G_{0}(N)\) so that the previous identity can be expressed as
       \begin{equation}\label{equ:Atkin_Lehner_normalization}
         W_{N}\g = \g_{W}W_{N}.
       \end{equation}
@@ -1939,13 +1947,13 @@
         
         With the adjoint formula, we can further show that the Atkin-Lehner operator preserves the subspaces of oldforms and newforms. To show that it preserves the subspace of oldforms, let \(p\) be a prime satisfying \(p \mid N\) and suppose \(i_{p}(f,g) = h\) so that \(h = f+g\|_{k}\a_{p}\). Then it is enough to show
         \[
-          \w_{N}i_{p}(f,g) = i_{p}(\w_{\frac{N}{p}}p^{k-2}g,\w_{\frac{N}{p}}p^{1-k}f).
+          \w_{N}i_{p}(f,g) = i_{p}(\w_{\frac{N}{p}}p^{k-2}g,\w_{\frac{N}{p}}p^{1-k}f),
         \]
-        This follows from the formulas
+        which will follow from the formulas
         \[
-          \w_{N}f = (\w_{\frac{N}{p}}p^{1-k}f)\|_{k}\a_{p} \quad \text{and} \quad \w_{N}(g\|_{k}\a_{p}) = \w_{\frac{N}{p}}(p^{k-2}g),
+          \w_{N}f = (\w_{\frac{N}{p}}p^{1-k}f)\|_{k}\a_{p} \quad \text{and} \quad \w_{N}(g\|_{k}\a_{p}) = \w_{\frac{N}{p}}(p^{k-2}g).
         \]
-        which are implied by the identities
+        These formulas are implied by the identities
         \[
           W_{N} = W_{\frac{N}{p}}\a_{p} \quad \text{and} \quad \a_{p}W_{N} = I_{p}W_{\frac{N}{p}}.
         \]
@@ -1965,60 +1973,61 @@
       This result showed that the Atkin-Lehner operator \(\w_{N}\) is self-adjoint and an involution whenever \(k\) is even. In fact, regardless of the parity of \(k\), \(\w_{N}\) is at most of order \(4\). We now need to understand how the Atkin-Lehner operator interacts with the diamond and Hecke operators. It turns out that the adjoints of these operators are given by conjugation via the Atkin-Lehner operator.
 
       \begin{proposition}\label{prop:Atkin_Lehner_adjoint_diamond_Hecke_modular}
-        On \(\mc{S}_{k}(\G_{1}(N))\), the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) satisfy the adjoint formulas
+        On \(\mc{S}_{k}(\G_{1}(N))\) and for all positive integers \(m\), the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) satisfy the adjoint formulas
         \[
-          \<m\>^{\ast} = \w_{N}\<m\>\w_{N}^{-1} \quad \text{and} \quad T_{m}^{\ast} = \w_{N}T_{m}\w_{N}^{-1},
+          \<m\>^{\ast} = \w_{N}\<m\>\w_{N}^{-1} \quad \text{and} \quad T_{m}^{\ast} = \w_{N}T_{m}\w_{N}^{-1}.
         \]
-        for all positive integers \(m\).
       \end{proposition}
       \begin{proof}
-        As the diamond and Hecke operators are multiplicative, it suffices to prove the two adjoint formulas when \(m = p\) for a prime \(p\). For the diamond operators, the formula is obvious when \(p \mid N\) since \(\<p\>\) is the zero operator. So suppose \(p \nmid N\) and observe from \cref{equ:Atkin_Lehner_normalization} that \(\g_{p}^{\ast} = W_{N}\g_{p}W_{n}\). Whence \cref{prop:double_coset_adjoint} gives
+        As the diamond and Hecke operators are multiplicative, it suffices to prove the two adjoint formulas when \(m = p\) for a prime \(p\). For the diamond operators, the formula is obvious when \(p \mid N\) since \(\<p\>\) is the zero operator. So suppose \(p \nmid N\) and observe from \cref{equ:Atkin_Lehner_normalization} that \(\g_{p}^{\ast} = W_{N}\g_{p}W_{N}^{-1}\). Whence \cref{prop:double_coset_adjoint} gives
         \[
           \<p\>^{\ast} = \w_{N}\<p\>\w_{N}^{-1}.
         \]
-        This is the desired adjoint formula for the diamond operators when \(p \mid N\). Thus the adjoint formula holds for all the diamond operators. For the Hecke operators, \cref{equ:Atkin_Lehner_normalization} shows that \(\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}^{\ast} = W_{N}\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}W_{N}^{-1}\). Then \cref{equ:Hecke_operator_double_coset_explicit_formula_prime_case,prop:double_coset_adjoint} together imply
+        This is the desired adjoint formula for the diamond operators when \(p \mid N\). Thus the adjoint formula holds for all the diamond operators. For the Hecke operators, \cref{equ:Atkin_Lehner_normalization} shows that \(\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}^{\ast} = W_{N}\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}W_{N}^{-1}\). Then \cref{equ:Hecke_operator_double_coset_formula_prime_case,prop:double_coset_adjoint} together imply
         \[
           T_{p}^{\ast} = \w_{N}T_{p}\w_{N}^{-1}.
         \]
         This is the desired adjoint formula for the Hecke operators.
       \end{proof}
       
-      \iffalse 
-      It turns out that the spaces of oldforms and newforms are invariant under the diamond and Hecke operators:
+      It also turns out that the spaces of oldforms and newforms are invariant under the diamond and Hecke operators.
 
       \begin{proposition}\label{prop:old/new_subspaces_are_invariant_modular}
-        On \(\mc{S}_{k}(\G_{1}(N))\), the diamond operators \(\<m\>\) and Hecke operators \(T_{m}\) preserve the subspaces of oldforms and newforms for all \(m \ge 1\).
+        On \(\mc{S}_{k}(\G_{1}(N))\) and for all positive integers \(m\), the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) preserve the subspaces of oldforms and newforms.
       \end{proposition}
       \begin{proof}
-        By multiplicativity of the diamond and Hecke operators, it suffices to prove this when \(m\) is prime. Moreover, if \(N = 1\) the result is trivial because there are no oldforms. Therefore we may assume \(N > 1\) and hence consider a prime \(p\) with \(p \mid N\). We will first show that the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). Let \(h = f+g\|_{k}\a_{p}\) be in the image of \(i_{p}\) so that \(i_{p}(f,g) = h\) and let \(q\) be a prime. For the diamond operators, it suffices to show
+        By multiplicativity of the diamond and Hecke operators, it suffices to prove this when \(m = p\) for a prime \(p\). Moreover, if \(N = 1\) the result is trivial because there are no oldforms. We will first show that the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). So let \(q\) be a prime satisfying \(q \mid N\) and suppose \(i_{q}(f,g) = h\) which is to say \(h = f+g\|_{k}\a_{q}\). For the diamond operators, the result is trivial if \(p \mid N\) since \(\<p\>i_{q}\) is the zero operator. If \(p \nmid N\), it is enough to show
         \[
-          \<q\>i_{p}(f,g) = i_{p}(\<q\>f,\<q\>g).
+          \<p\>i_{q}(f,g) = i_{q}(\<p\>f,\<p\>g),
         \]
-        This will follow from the formulas
+        which will follow from the formulas
         \[
-          \<q\>f = \<q\>f \quad \text{and} \quad \<q\>(g\|_{k}\a_{p}) = (\<q\>g)\|_{k}\a_{p},
+          \<p\>f = \<p\>f \quad \text{and} \quad \<p\>(g\|_{k}\a_{q}) = (\<p\>g)\|_{k}\a_{q},
         \]
-        where the diamond operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{p}\) respectively. Both formulas are trivial if \(q \mid N\) because then \(\<q\>\) is the zero operator. So suppose \(q \nmid N\). If \(\a = \begin{psmallmatrix} \ast & \ast \\ \ast & q \end{psmallmatrix} \in \G_{0}(N)\) then \(\a \in \G_{0}\left(\frac{N}{p}\right)\) and the first formula follows. The second formula follows from the identity
+        where the diamond operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{q}\) respectively. As \(p \nmid N\), we can choose \(\g_{p} \in \G_{0}(N) \cap \G_{0}\left(\frac{N}{q}\right)\) and the first formula holds. The second formula follows from the identity
         \[
           \begin{pmatrix} \ast & \ast \\ \ast & q \end{pmatrix}\begin{pmatrix} p & 0 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} p & 0 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} \ast & \ast \\ \ast & q \end{pmatrix}.
         \]
-        Therefore the diamond operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). The case for the Hecke operators is slightly more involved. Consider the Hecke operator \(T_{q}\) for a prime \(p\) with \(q \neq p\). For this Hecke operator, it suffices to show
+        Therefore the diamond operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). The case for the Hecke operators is slightly more involved. In the case \(p \neq q\), it is enough to show
         \[
-          T_{q}i_{p}(f,g) = i_{p}(T_{q}f,T_{q}g).
+          T_{p}i_{q}(f,g) = i_{q}(T_{p}f,T_{p}g),
         \]
-        This will follow from the formulas
+        which will follow from the formulas
         \[
-          T_{q}f = T_{q}f \quad \text{and} \quad T_{q}(g\|_{k}\a_{p}) = (T_{q}g)\|_{k}\a_{p},
+          T_{p}f = T_{p}f \quad \text{and} \quad T_{p}(g\|_{k}\a_{q}) = (T_{p}g)\|_{k}\a_{p},
         \]
-        where the Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{p}\) respectively. The first formula follows immediately from \cref{prop:prime_Hecke_operators_acting_on_Fourier_coefficients_modular} since this shows that the action of the Hecke operators on the Fourier coefficients is identical. For the second formula, by \cref{thm:diamond_operator_decomposition_modular} we may assume that \(g \in \mc{S}\left(\frac{N}{p},\chi\right)\). Then \(g\|_{k}\a_{p} \in \mc{S}_{k}(N,\chi)\) (recall \cref{equ:lifting_operator_modular}) and the second formula follows by comparing Fourier coefficients using \cref{prop:prime_Hecke_operators_acting_on_Fourier_coefficients_modular}. Thus the Hecke operators \(T_{q}\), save for \(q = p\), preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). Lastly, we consider the Hecke operator \(T_{p}\). For this Hecke operator, it suffices to show
+        where the Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{q}\) respectively. The first formula follows immediately from \cref{prop:Hecke_operators_on_Fourier_coefficients} as the action of these Hecke operators on Fourier coefficients is identical. For the second formula, we may assume \(g \in \mc{S}\left(\frac{N}{p},\chi\right)\) in view of \cref{thm:diamond_operator_decomposition_modular}. Then \(g\|_{k}\a_{p} \in \mc{S}_{k}(N,\chi)\) from \cref{equ:lifting_operator_modular} and the second formula follows by comparing Fourier coefficients using \cref{prop:Hecke_operators_on_Fourier_coefficients}. In the case \(p = q\), it is enough to show
         \[
-          T_{p}i_{p}(f,g) = i_{p}(T_{p}f+p^{k-1}g,-\<p\>f).
+          T_{q}i_{q}(f,g) = i_{q}(T_{q}f+q^{k-1}g,-\<q\>f).
         \]
-        This will follow from the formulas
+        which will follow from the formulas
         \[
-          T_{p}f = T_{p}f-(\<p\>f)\|_{k}\a_{p} \quad \text{and} \quad T_{p}(g\|_{k}\a_{p}) = p^{k-1}g,
+          T_{q}f = T_{q}f-(\<q\>f)\|_{k}\a_{q} \quad \text{and} \quad T_{q}(g\|_{k}\a_{q}) = q^{k-1}g,
         \]
-        where the diamond and Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{p}\) respectively. Since \(p \mid N\), \cref{prop:explicit_description_of_Hecke_operators_modular} gives
+        where the diamond and Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{q}\) respectively. \todo{XXX}
+        
+        \iffalse 
+        Since \(p \mid N\), \cref{prop:explicit_description_of_Hecke_operators_modular} gives
         \[
           T_{p}f = \sum_{j \tmod{p}}f\bigg\|_{k}\begin{pmatrix} 1 & j \\ 0 & p \end{pmatrix} = T_{p}f-(\<p\>f)\|_{k}\a_{p},
         \]
@@ -2030,10 +2039,10 @@
         \[
           \<\<m\>f,g\> = \<f,\w_{N}\<m\>\w_{N}^{-1}g\> = 0 \quad \text{and} \quad \<T_{m}f,g\> = \<f,\w_{N}T_{m}\w_{N}^{-1}g\> = 0,
         \]
-        where the second equality in either identity holds because the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) and so does the Atkin-Lehner operator \(\w_{N}\) (and hence its inverse as well) by \cref{prop:Atkin_Lehner_modular}. It follows that the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) and this completes the proof.
+        where the second equality in either identity holds because the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) and so does the Atkin-Lehner operator \(\w_{N}\) (and hence its inverse as well) by \cref{prop:Atkin_Lehner_modular}. It follows that the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) and this completes the proof.\fi
       \end{proof}
 
-      As a corollary, we deduce that these subspaces admit orthogonal bases of eigenforms:
+            \iffalse As a corollary, we deduce that these subspaces admit orthogonal bases of eigenforms:
 
       \begin{corollary}\label{cor:old/new_eigenbasis_modular}
         \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) and \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) admit orthonormal bases of eigenforms.
