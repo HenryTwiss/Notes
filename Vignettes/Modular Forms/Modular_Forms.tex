@@ -1833,7 +1833,7 @@
         Note that on \(\mc{S}_{k}(\SL_{2}(\Z))\), all of the diamond operators are the identity operator and so they are self-adjoint. Moreover, this implies \(T_{p}^{\ast} = T_{p}\) for all primes \(p\) so that the Hecke operators are self-adjoint as well.
       \end{remark}
       
-      Suppose \(f \in \mc{S}_{k}(N,\chi)\) is non-constant. Then \(f\) is already an eigenfunction for the diamond operators \(\<d\>\) with eigenvalue \(\chi(d)\). If \(f\) is also an eigenfunction for the Hecke operator \(T_{m}\) with eigenvalue \(\l(m)\), so that
+      Let \(f \in \mc{S}_{k}(N,\chi)\) be non-constant. Then \(f\) is already an eigenfunction for the diamond operators \(\<d\>\) with eigenvalue \(\chi(d)\). If \(f\) is also an eigenfunction for the Hecke operator \(T_{m}\) with eigenvalue \(\l(m)\), so that
       \[
         (T_{m}f)(z) = \l(m)f(z),
       \]
@@ -1850,20 +1850,20 @@
       In any case, we now have developed enough about the Hecke operators to show that we can always find a basis of eigenforms.
 
       \begin{theorem}\label{thm:eigenforms_forms_spectral_theory_modular}
-        \(\mc{S}_{k}(N,\chi)\) admits an orthonormal basis of eigenforms.
+        \(\mc{S}_{k}(\G_{1}(N))\) admits an orthonormal basis of eigenforms. In particular, so does \(\mc{S}_{k}(N,\chi)\).
       \end{theorem}
       \begin{proof}
-        By \cref{thm:modular_forms_finite_dimensional,thm:Hecke_operators_composition_formula,thm:Hecke_operators_normal}, the Hecke operators \(T_{m}\) with \((m,N) = 1\) are a commuting family of normal operators on the finite dimensional complex Hilbert space \(\mc{S}_{k}(N,\chi)\). Therefore they admit a simultaneous orthonormal eigenbasis by the spectral theorem. This basis is exactly an orthonormal basis of eigenforms.
+        In view of \cref{thm:diamond_operator_decomposition_modular}, it suffices to prove the latter statement. By \cref{thm:modular_forms_finite_dimensional,thm:Hecke_operators_composition_formula,thm:Hecke_operators_normal}, the Hecke operators \(T_{m}\) with \((m,N) = 1\) are a commuting family of normal operators on the finite dimensional complex Hilbert space \(\mc{S}_{k}(N,\chi)\). Therefore they admit a simultaneous orthonormal eigenbasis by the spectral theorem. This basis is exactly an orthonormal basis of eigenforms.
       \end{proof}
 
       The Hecke eigenvalues of Hecke eigenforms satisfy certain relations known as the \textbf{Hecke relations}\index{Hecke relations} for modular forms.
 
       \begin{proposition*}[Hecke relations]
-      Let \(f \in \mc{S}_{k}(N,\chi)\) be an eigenform with Hecke eigenvalues \(\l(m)\). Then the Hecke eigenvalues are multiplicative and satisfy
-      \[
-        \l(m)\l(n) = \sum_{d \mid (m,n)}\chi(d)d^{k-1}\l\left(\frac{mn}{d^{2}}\right) \quad \text{and} \quad \l(mn) = \sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right),
-      \]
-      for all positive integers \(m\) and \(n\) with \((mn,N) = 1\). If \(f\) is a Hecke eigenform, these relations hold for all \(m\) and \(n\).
+        Let \(f \in \mc{S}_{k}(N,\chi)\) be an eigenform with Hecke eigenvalues \(\l(m)\). Then the Hecke eigenvalues are multiplicative and satisfy
+        \[
+          \l(m)\l(n) = \sum_{d \mid (m,n)}\chi(d)d^{k-1}\l\left(\frac{mn}{d^{2}}\right) \quad \text{and} \quad \l(mn) = \sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right),
+        \]
+        for all positive integers \(m\) and \(n\) with \((mn,N) = 1\). If \(f\) is a Hecke eigenform, these relations hold for all \(m\) and \(n\).
       \end{proposition*}
       \begin{proof}
         First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the first identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. The second identity is proved analogously by computing the fist Fourier coefficient of \(T_{mn}f\) in two ways. On the one hand it is \(\l(mn)\) since \(f\) is a Hecke normalized eigenform. On the other hand, it is \(\sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second statement is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
@@ -1937,15 +1937,11 @@
         \[
           ((\w_{N}f)|_{k}\s_{\mf{a}})(z) = N^{-\frac{k}{2}}(f|_{k}W_{N}\s_{\mf{a}})(z),
         \]
-        the growth condition follows from that of \(f\). In particular, \(\w_{N}f\) is a cusp form because \(f\). This proves \(\w_{N}\) takes \(\mc{S}_{k}(N,\chi)\) into \(\mc{S}_{k}(N,\cchi)\).
-        
-        We now show the adjoint formula for the Atkin-Lehner operator. First observe that the adjugate of \(W_{N}\) satisfies \(W_{N}^{\ast} = -W_{N}\). Therefore \cref{prop:double_coset_adjoint} implies
+        the growth condition follows from that of \(f\). In particular, \(\w_{N}f\) is a cusp form because \(f\). This proves \(\w_{N}\) takes \(\mc{S}_{k}(N,\chi)\) into \(\mc{S}_{k}(N,\cchi)\). We now show the adjoint formula for the Atkin-Lehner operator. First observe that the adjugate of \(W_{N}\) satisfies \(W_{N}^{\ast} = -W_{N}\). Therefore \cref{prop:double_coset_adjoint} implies
         \[
           \w_{N}^{\ast} = (-1)^{k}\w_{N},
         \]
-        proving the desired adjoint formula. 
-        
-        With the adjoint formula, we can further show that the Atkin-Lehner operator preserves the subspaces of oldforms and newforms. To show that it preserves the subspace of oldforms, let \(p\) be a prime satisfying \(p \mid N\) and suppose \(i_{p}(f,g) = h\) so that \(h = f+g\|_{k}\a_{p}\). Then it is enough to show
+        proving the desired adjoint formula. With the adjoint formula, we can further show that the Atkin-Lehner operator preserves the subspaces of oldforms and newforms. To show that it preserves the subspace of oldforms, let \(p\) be a prime satisfying \(p \mid N\) and suppose \(i_{p}(f,g) = h\) so that \(h = f+g\|_{k}\a_{p}\). Then it is enough to show
         \[
           \w_{N}i_{p}(f,g) = i_{p}(\w_{\frac{N}{p}}p^{k-2}g,\w_{\frac{N}{p}}p^{1-k}f),
         \]
@@ -1957,13 +1953,11 @@
         \[
           W_{N} = W_{\frac{N}{p}}\a_{p} \quad \text{and} \quad \a_{p}W_{N} = I_{p}W_{\frac{N}{p}}.
         \]
-        Thus the Atkin-Lehner operator \(\w_{N}\) preserves the subspace of oldforms. To see that \(\w_{N}\) preserves the subspace of newforms as well, let \(f\) and \(g\) be a newform and an oldform respectively. The adjoint formula for \(\w_{N}\) and that it preserves the subspace of oldforms together gives
+        Thus the Atkin-Lehner operator \(\w_{N}\) preserves the subspace of oldforms. To see that \(\w_{N}\) preserves the subspace of newforms as well, let \(f\) and \(g\) be a newform and an oldform respectively. The adjoint formula for \(\w_{N}\) gives
         \[
-          \<\w_{N}f,g\> = 0.
+          \<\w_{N}f,g\> = \<f,(-1)^{k}\w_{N}g\>.
         \]
-        Hence \(\w_{N}f\) must also be a newform and so \(\w_{N}\) preserves the subspace of newforms.
-        
-        It remains to prove the last formula. For this, observe that \(W_{N}^{2} = -I_{N}\). Using this fact, a short computation shows
+        But the right-hand side is zero because it is an inner product between a newform and an oldform. Hence \(\w_{N}f\) must also be a newform and so \(\w_{N}\) preserves the subspace of newforms. It remains to prove the last formula. For this, observe that \(W_{N}^{2} = -I_{N}\). Using this fact, a short computation shows
         \[
           (\w_{N}^{2}f)(z) = (-1)^{k}f.
         \]
@@ -1996,7 +1990,7 @@
         On \(\mc{S}_{k}(\G_{1}(N))\) and for all positive integers \(m\), the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) preserve the subspaces of oldforms and newforms.
       \end{proposition}
       \begin{proof}
-        By multiplicativity of the diamond and Hecke operators, it suffices to prove this when \(m = p\) for a prime \(p\). Moreover, if \(N = 1\) the result is trivial because there are no oldforms. We will first show that the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). So let \(q\) be a prime satisfying \(q \mid N\) and suppose \(i_{q}(f,g) = h\) which is to say \(h = f+g\|_{k}\a_{q}\). For the diamond operators, the result is trivial if \(p \mid N\) since \(\<p\>i_{q}\) is the zero operator. If \(p \nmid N\), it is enough to show
+        By multiplicativity of the diamond and Hecke operators, it suffices to prove this when \(m = p\) for a prime \(p\). Moreover, if \(N = 1\) the result is trivial because there are no oldforms. We will first show that the diamond and Hecke operators preserve the subspace of oldforms. So let \(q\) be a prime satisfying \(q \mid N\) and suppose \(i_{q}(f,g) = h\) which is to say \(h = f+g\|_{k}\a_{q}\). For the diamond operators, the result is trivial if \(p \mid N\) since \(\<p\>i_{q}\) is the zero operator. If \(p \nmid N\), it is enough to show
         \[
           \<p\>i_{q}(f,g) = i_{q}(\<p\>f,\<p\>g),
         \]
@@ -2008,7 +2002,7 @@
         \[
           \begin{pmatrix} \ast & \ast \\ \ast & q \end{pmatrix}\begin{pmatrix} p & 0 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} p & 0 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} \ast & \ast \\ \ast & q \end{pmatrix}.
         \]
-        Therefore the diamond operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). The case for the Hecke operators is slightly more involved. In the case \(p \neq q\), it is enough to show
+        Therefore the diamond operators preserve the subspace of oldforms. The situation is slightly more involved for the Hecke operators. In the case \(p \neq q\), it is enough to show
         \[
           T_{p}i_{q}(f,g) = i_{q}(T_{p}f,T_{p}g),
         \]
@@ -2018,31 +2012,20 @@
         \]
         where the Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{q}\) respectively. The first formula follows immediately from \cref{prop:Hecke_operators_on_Fourier_coefficients} as the action of these Hecke operators on Fourier coefficients is identical. For the second formula, we may assume \(g \in \mc{S}\left(\frac{N}{p},\chi\right)\) in view of \cref{thm:diamond_operator_decomposition_modular}. Then \(g\|_{k}\a_{p} \in \mc{S}_{k}(N,\chi)\) from \cref{equ:lifting_operator_modular} and the second formula follows by comparing Fourier coefficients using \cref{prop:Hecke_operators_on_Fourier_coefficients}. In the case \(p = q\), it is enough to show
         \[
-          T_{q}i_{q}(f,g) = i_{q}(T_{q}f+q^{k-1}g,-\<q\>f).
+          T_{q}i_{q}(f,g) = i_{q}(T_{q}f+q^{k-1}g,-\<q\>f),
         \]
         which will follow from the formulas
         \[
           T_{q}f = T_{q}f-(\<q\>f)\|_{k}\a_{q} \quad \text{and} \quad T_{q}(g\|_{k}\a_{q}) = q^{k-1}g,
         \]
-        where the diamond and Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{q}\) respectively. \todo{XXX}
-        
-        \iffalse 
-        Since \(p \mid N\), \cref{prop:explicit_description_of_Hecke_operators_modular} gives
+        where the diamond and Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{q}\) respectively. The first formula holds in view of \cref{equ:Hecke_operator_right_coset_formula_prime_case} since \(\<q\>\) is the zero operator if \(q \mid \frac{N}{q}\) or it annihilates the last term in the Hecke operator if \(q \nmid \frac{N}{q}\). Similarly, a short computation using \cref{equ:Hecke_operator_right_coset_formula_prime_case} gives the second identity. This shows that the second formula holds. Therefore the Hecke operators also preserve the subspace of oldforms. We now show that the diamond and Hecke operators also preserve the subspace of newforms. So let \(f\) and \(g\) be a newform and an oldform respectively. Then for any positive integer \(m\), \cref{prop:Atkin_Lehner_adjoint_diamond_Hecke_modular} gives
         \[
-          T_{p}f = \sum_{j \tmod{p}}f\bigg\|_{k}\begin{pmatrix} 1 & j \\ 0 & p \end{pmatrix} = T_{p}f-(\<p\>f)\|_{k}\a_{p},
+          \<\<m\>f,g\> = \<f,\w_{N}\<m\>\w_{N}^{-1}g\> \quad \text{and} \quad \<T_{m}f,g\> = \<f,\w_{N}T_{m}\w_{N}^{-1}g\>.
         \]
-        where the second equality follows regardless of whether \(p \mid \frac{N}{p}\) or not because either \(\<p\>\) is the zero operator on level \(\frac{N}{p}\) (in the case \(p \mid \frac{N}{p}\)) or it annihilates the extra term in the Hecke operator \(T_{p}\) on level \(\frac{N}{p}\) (in the case \(p \nmid \frac{N}{p}\)). Therefore the first formula holds. Similarly, since \(p \mid N\), \cref{prop:explicit_description_of_Hecke_operators_modular} gives
-        \[
-          T_{p}(g\|_{k}\a_{p})(z) = \sum_{j \tmod{p}}g\bigg\|_{k}\begin{pmatrix} p & 0 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & j \\ 0 & p \end{pmatrix} = \sum_{j \tmod{p}}g\bigg\|_{k}\begin{pmatrix} p & pj \\ 0 & p \end{pmatrix} = p^{k-1}g,
-        \]
-        where the last equality follows because \(g\) is \(1\)-periodic (as \(h_{\infty} = 1\)). This shows that the second formula holds. Thus the Hecke operator \(T_{p}\) preserves \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). We have now shown that all of the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). To show that they also preserve \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\), let \(f\) and \(g\) be a newform and an oldform respectively. Then for any \(m \ge 1\), \cref{prop:Atkin_Lehner_adjoint_diamond_Hecke_modular} gives
-        \[
-          \<\<m\>f,g\> = \<f,\w_{N}\<m\>\w_{N}^{-1}g\> = 0 \quad \text{and} \quad \<T_{m}f,g\> = \<f,\w_{N}T_{m}\w_{N}^{-1}g\> = 0,
-        \]
-        where the second equality in either identity holds because the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) and so does the Atkin-Lehner operator \(\w_{N}\) (and hence its inverse as well) by \cref{prop:Atkin_Lehner_modular}. It follows that the diamond and Hecke operators preserve \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) and this completes the proof.\fi
+        In view of \cref{prop:Atkin_Lehner_modular}, the right-hand sides are zero because they are inner products between a newform and an oldform. Therefore \(\<m\>f\) and \(T_{m}f\) are newforms which shows that the diamond and Hecke operators preserve the subspace of newforms.
       \end{proof}
 
-            \iffalse As a corollary, we deduce that these subspaces admit orthogonal bases of eigenforms:
+      As a corollary, the subspaces of oldforms and newforms admit orthonormal bases of eigenforms.
 
       \begin{corollary}\label{cor:old/new_eigenbasis_modular}
         \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) and \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) admit orthonormal bases of eigenforms.
@@ -2051,7 +2034,7 @@
         This follows immediately from \cref{thm:eigenforms_forms_spectral_theory_modular,prop:old/new_subspaces_are_invariant_modular}.
       \end{proof}
 
-      Something quite amazing happens for the subspace in \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\); the eigenforms are eigenfunctions for all of the diamond and Hecke operators so that they are Hecke eigenforms. We require a preliminary result whose proof is quite involved but it is not beyond the scope of this text (see \cite{diamond2005first} for a proof):
+      \iffalse Something quite amazing happens for the subspace in \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\); the eigenforms are eigenfunctions for all of the diamond and Hecke operators so that they are Hecke eigenforms. We require a preliminary result whose proof is quite involved but it is not beyond the scope of this text (see \cite{diamond2005first} for a proof):
 
       \begin{lemma}\label{lem:the_main_lemma_for_newforms_modular}
         If \(f \in \mc{S}_{k}(\G_{1}(N))\) has Fourier coefficients \(a_{n}(f)\) and is such that \(a_{n}(f) = 0\) for all \(n \ge 1\) whenever \((n,N) = 1\) then
