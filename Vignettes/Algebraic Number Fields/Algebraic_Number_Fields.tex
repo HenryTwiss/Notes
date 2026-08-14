@@ -2797,7 +2797,7 @@
       \[
         \mc{O}_{K}^{\ast} = \{\a \in \mc{O}_{K}:\Norm_{K}(\a) = \pm 1\}.
       \]
-      Our main goal will be to describe the group structure of \(\mc{O}_{K}^{\ast}\) completely. Let \(\mu(K)\) be the subgroup of \(K^{\ast}\) consisting of all the roots of unity in \(K\). As any \(m\)-th root of unity is a root of \(x^{m}-1\), it follows that roots of unity are algebraic integers. Whence \(\mu(K)\) is a subgroup of \(\mc{O}_{K}^{\ast}\). Clearly \(\{\pm 1\} \subseteq \mu(K)\). In fact, \(\mu(K)\) always is finite. To see this, let \(\w \in \mu(K)\) and recall that any root of unity is a primitive root of unity of some, potentially smaller, order. So we may assume \(\w\) is a primitive \(m\)-th root of unity. The minimal polynomial of \(\w\) over \(\Q\) is the \(m\)-th cyclotomic polynomial \(\Phi_{m}(x)\) which has degree \(\vphi(m)\). Whence \(\vphi(m) \le n\). Since \(\vphi(m) \to \infty\) as \(m \to \infty\), there can only be finitely many such \(\w\). This means \(\mu(K)\) is finite. Accordingly, set
+      Our main goal will be to describe the group structure of \(\mc{O}_{K}^{\ast}\) completely. Let \(\mu(K)\) be the subgroup of \(K^{\ast}\) consisting of all the roots of unity in \(K\). As any \(m\)-th root of unity is a root of \(x^{m}-1\), it follows that roots of unity are algebraic integers. Whence \(\mu(K)\) is a subgroup of \(\mc{O}_{K}^{\ast}\). Clearly \(\{\pm 1\} \subseteq \mu(K)\). In fact, \(\mu(K)\) always is finite. To see this, let \(\z \in \mu(K)\) and recall that any root of unity is a primitive root of unity of some, potentially smaller, order. So we may assume \(\z\) is a primitive \(m\)-th root of unity. The minimal polynomial of \(\z\) over \(\Q\) is the \(m\)-th cyclotomic polynomial \(\Phi_{m}(x)\) which has degree \(\vphi(m)\). Whence \(\vphi(m) \le n\). Since \(\vphi(m) \to \infty\) as \(m \to \infty\), there can only be finitely many such \(\z\). This means \(\mu(K)\) is finite. Accordingly, set
       \[
         w_{K} = |\mu(K)|.
       \]
@@ -2926,9 +2926,9 @@
         \]
         In particular, if \(\e_{1},\ldots,\e_{r_{K}}\) is a system of fundamental units for \(K\) then any unit \(\e\) of \(K\) is of the form
         \[
-          \e = \w\e_{1}^{\nu_{1}} \cdots \e_{r_{K}}^{\nu_{r_{K}}},
+          \e = \z\e_{1}^{e_{1}} \cdots \e_{r_{K}}^{e_{r_{K}}},
         \]
-        for some \(\w \in \mu(K)\) and integers \(\nu_{i}\).
+        for some \(\z \in \mu(K)\) and integers \(e_{i}\).
       \end{theorem*}
       \begin{proof}
         As \(\L_{K}\) is a free \(\Z\)-module by \cref{thm:unit_group_complete_lattice}, the short exact sequence in \cref{prop:exact_sequence_for_Dirichlets_unit_theorem} splits. Whence
