@@ -1509,30 +1509,30 @@
       \]
       We are now ready to discuss the Hecke operators. First, for any positive integer \(m\), set
       \[
-        \D_{m} = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Mat_{2}^{m}(\Z): \begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \tmod{N} \right\}.
+        \D_{m}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Mat_{2}^{m}(\Z): \begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \tmod{N} \right\}.
       \]
-      In other words, \(\D_{m}\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices \(\a\) with integral entries such that \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). From the equivalence
+      In other words, \(\D_{m}(N)\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices \(\a\) with integral entries such that \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). From the equivalence
       \[
         \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N},
       \]
-      it follows that \(\G_{1}(N)\) acts on \(\D_{m}\) by both left and right multiplication. Whence \(\D_{m}\) admits an orbit decomposition
+      it follows that \(\G_{1}(N)\) acts on \(\D_{m}(N)\) by both left and right multiplication. Whence \(\D_{m}(N)\) admits an orbit decomposition
       \[
-        \D_{m} = \bigcup_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}\G_{1}(N)\a\G_{1}(N),
+        \D_{m}(N) = \bigcup_{\a \in \G_{1}(N)\backslash\D_{m}(N)/\G_{1}(N)}\G_{1}(N)\a\G_{1}(N),
       \]
       into double cosets. To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = \g\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\g'\) for some \(\g,\g' \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(\Z)\), and there are finitely many choices for \(a\) and \(d\), we conclude that this double coset decomposition is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
       \[
-        (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D_{m}/\G_{1}(N)}[\G_{1}(N)\a\G_{1}(N)]_{k}f(z).
+        (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D_{m}(N)/\G_{1}(N)}[\G_{1}(N)\a\G_{1}(N)]_{k}f(z).
       \]
-      The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}\). In fact, we can find an explicit set of double coset representatives for \(\D_{m}\).
+      The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D_{m}(N)\). In fact, we can find an explicit set of double coset representatives for \(\D_{m}(N)\).
 
       \begin{proposition}
         There is a double coset decomposition
         \[
-          \D_{m} = \bigcup_{\substack{ad = m \\ a \mid d \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N).
+          \D_{m}(N) = \bigcup_{\substack{ad = m \\ a \mid d \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N).
         \]
       \end{proposition}
       \begin{proof}
-        The reverse inclusion holds because \(\G_{1}(N)\) acts on \(\D_{m}\) by left and right multiplication and the representatives \(\g_{a}\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\) are elements of \(\D_{m}\) in view of 
+        The reverse inclusion holds because \(\G_{1}(N)\) acts on \(\D_{m}(N)\) by left and right multiplication and the representatives \(\g_{a}\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\) are elements of \(\D_{m}(N)\) in view of 
         \[
            \g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
         \]
@@ -1580,7 +1580,7 @@
         \[
           \a = \eta\g_{st}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \eta',
         \]
-        for some potentially different choices of \(\eta\) and \(\eta'\). As \(\a \in \D_{m}\), this identity implies
+        for some potentially different choices of \(\eta\) and \(\eta'\). As \(\a \in \D_{m}(N)\), this identity implies
         \[
           \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \equiv \begin{pmatrix} a(st)^{-1} & \ast \\ 0 & dst \end{pmatrix} \pmod{N}.
         \]
@@ -1599,24 +1599,24 @@
       \begin{equation}\label{equ:Hecke_operator_double_coset_formula}
         (T_{m}f)(z) = \sum_{\substack{ad = m \\ a \mid d \\ (a,N) = 1}}\left[\G_{1}(N)\g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N)\right]_{k}f(z).
       \end{equation}
-      In order to compute the Hecke operators explicitly we need to find a complete set of representatives for each of the double cosets \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\) in the sum. But this is the same as finding a complete set of representatives for \(\G_{1}(N)\backslash\D_{m}\) which is much easier to accomplish.
+      In order to compute the Hecke operators explicitly we need to find a complete set of representatives for each of the double cosets \(\G_{1}(N)\backslash\G_{1}(N)\a\G_{1}(N)\) in the sum. But this is the same as finding a complete set of representatives for \(\G_{1}(N)\backslash\D_{m}(N)\) which is much easier to accomplish.
 
       \begin{proposition}
         There is an right coset decomposition
         \[
-          \D_{m} = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix}.
+          \D_{m}(N) = \bigcup_{\substack{ad = m \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix}.
         \]
       \end{proposition}
       \begin{proof}
-        The reverse inclusion holds because \(\G_{1}(N)\) acts on \(\D_{m}\) by left and right multiplication and the representatives \(\g_{a}\begin{psmallmatrix} a & b \\ 0 & d \end{psmallmatrix}\) are elements of \(\D_{m}\) in view of 
+        The reverse inclusion holds because \(\G_{1}(N)\) acts on \(\D_{m}(N)\) by left and right multiplication and the representatives \(\g_{a}\begin{psmallmatrix} a & b \\ 0 & d \end{psmallmatrix}\) are elements of \(\D_{m}(N)\) in view of 
         \[
            \g_{a}\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
         \]
-        For the forward inclusion, let \(\a \in \D_{m}\). Putting \(\a\) into Hermite normal form, we may write
+        For the forward inclusion, let \(\a \in \D_{m}(N)\). Putting \(\a\) into Hermite normal form, we may write
         \[
           \a = \g\begin{pmatrix} a & b \\ 0 & d \end{pmatrix},
         \]
-        for some \(\g \in \SL_{2}(\Z)\) and positive integers \(a\), \(b\), and \(d\) with \(ad = m\) and \(b\) modulo \(d\). As \(\a \in \D_{m}\), this identity implies
+        for some \(\g \in \SL_{2}(\Z)\) and positive integers \(a\), \(b\), and \(d\) with \(ad = m\) and \(b\) modulo \(d\). As \(\a \in \D_{m}(N)\), this identity implies
         \[
           \begin{pmatrix} 1 & \ast \\ 0 & m \end{pmatrix} \equiv \g\begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \pmod{N}.
         \]
@@ -1837,7 +1837,7 @@
       \[
         (T_{m}f)(z) = \l(m)f(z),
       \]
-      we call \(\l(m)\) the \(m\)-th \textbf{Hecke eigenvalue}\index{Hecke eigenvalue} of \(f\). If \(f\) is a simultaneous eigenfunction for all Hecke operators \(T_{m}\) with \((m,N) = 1\), we call \(f\) an \textbf{eigenform}\index{eigenform}. If the condition \((m,N) = 1\) can be dropped, so that \(f\) is a simultaneous eigenfunction for all the Hecke operators, we say \(f\) is a \textbf{Hecke eigenform}\index{Hecke eigenform}. In particular, on \(\mc{S}_{k}(1)\) all eigenforms are Hecke eigenforms. If \(f\) is a Hecke eigenform with Fourier coefficients \(a(n)\) then \cref{prop:Hecke_operators_on_Fourier_coefficients} immediately implies that the first Fourier coefficient of \(T_{m}f\) is \(a(m)\) and so
+      we call \(\l(m)\) the \(m\)-th \textbf{Hecke eigenvalue}\index{Hecke eigenvalue} of \(f\). If \(f\) is a simultaneous eigenfunction for all Hecke operators \(T_{m}\) with \((m,N) = 1\), we call \(f\) an \textbf{eigenform}\index{eigenform}. If the condition \((m,N) = 1\) can be dropped, so that \(f\) is a simultaneous eigenfunction for all of the Hecke operators, we say \(f\) is a \textbf{Hecke eigenform}\index{Hecke eigenform}. In particular, on \(\mc{S}_{k}(1)\) all eigenforms are Hecke eigenforms. If \(f\) is a Hecke eigenform with Fourier coefficients \(a(n)\) then \cref{prop:Hecke_operators_on_Fourier_coefficients} immediately implies that the first Fourier coefficient of \(T_{m}f\) is \(a(m)\) and so
       \[
         a(m) = \l(m)a(1).
       \]
@@ -1866,7 +1866,7 @@
         for all positive integers \(m\) and \(n\) with \((mn,N) = 1\). If \(f\) is a Hecke eigenform, these relations hold for all \(m\) and \(n\).
       \end{proposition*}
       \begin{proof}
-        First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the first identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. The second identity is proved analogously by computing the fist Fourier coefficient of \(T_{mn}f\) in two ways. On the one hand it is \(\l(mn)\) since \(f\) is a Hecke normalized eigenform. On the other hand, it is \(\sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second statement is clear since in that case \(f\) is an eigenfunction for all the Hecke operators.
+        First let \(f\) be an eigenform and, if necessary, Hecke normalize \(f\). Multiplicativity of the Hecke eigenvalues now follows from that of the Hecke operators. To prove the first identity, we will compute the first Fourier coefficient of \(T_{m}T_{n}f\) in two ways. On the one hand, since \(f\) is a Hecke normalized eigenform it is \(\l(n)\l(m)\). On the other hand, it is \(\sum_{d \mid (n,m)}\chi(d)d^{k-1}\l\left(\frac{nm}{d^{2}}\right)\) by \cref{thm:Hecke_operators_composition_formula}. The second identity is proved analogously by computing the fist Fourier coefficient of \(T_{mn}f\) in two ways. On the one hand it is \(\l(mn)\) since \(f\) is a Hecke normalized eigenform. On the other hand, it is \(\sum_{d \mid (m,n)}\mu(d)\chi(d)d^{k-1}\l\left(\frac{m}{d}\right)\l\left(\frac{n}{d}\right)\) by \cref{thm:Hecke_operators_composition_formula}. This proves the first statement. The second statement is clear since in that case \(f\) is an eigenfunction for all of the Hecke operators.
       \end{proof}
     \subsection{\todo{Oldforms and Newforms}}
       Recall that if \(M \mid N\) then \(\G_{1}(N) \subseteq \G_{1}(M)\) and so every modular form on \(\G_{1}(M)\backslash\H\) is also a modular form on \(\G_{1}(N)\backslash\H\). In particular, there are inclusions
@@ -1977,7 +1977,7 @@
         \[
           \<p\>^{\ast} = \w_{N}\<p\>\w_{N}^{-1}.
         \]
-        This is the desired adjoint formula for the diamond operators when \(p \mid N\). Thus the adjoint formula holds for all the diamond operators. For the Hecke operators, \cref{equ:Atkin_Lehner_normalization} shows that \(\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}^{\ast} = W_{N}\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}W_{N}^{-1}\). Then \cref{equ:Hecke_operator_double_coset_formula_prime_case,prop:double_coset_adjoint} together imply
+        This is the desired adjoint formula for the diamond operators when \(p \mid N\). Thus the adjoint formula holds for all of the diamond operators. For the Hecke operators, \cref{equ:Atkin_Lehner_normalization} shows that \(\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}^{\ast} = W_{N}\begin{psmallmatrix}1 & 0 \\ 0 & p\end{psmallmatrix}W_{N}^{-1}\). Then \cref{equ:Hecke_operator_double_coset_formula_prime_case,prop:double_coset_adjoint} together imply
         \[
           T_{p}^{\ast} = \w_{N}T_{p}\w_{N}^{-1}.
         \]
@@ -2034,10 +2034,29 @@
         This follows immediately from \cref{thm:eigenforms_forms_spectral_theory_modular,prop:old/new_subspaces_are_invariant_modular}.
       \end{proof}
 
-      \iffalse Something quite amazing happens for the subspace in \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\); the eigenforms are eigenfunctions for all of the diamond and Hecke operators so that they are Hecke eigenforms. We require a preliminary result whose proof is quite involved but it is not beyond the scope of this text (see \cite{diamond2005first} for a proof):
+      \iffalse Something quite amazing happens for the subspace in \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) which is that the eigenforms are eigenfunctions for all of the diamond and Hecke operators so that they are Hecke eigenforms. This will require several preliminary results to prove.
 
-      \begin{lemma}\label{lem:the_main_lemma_for_newforms_modular}
-        If \(f \in \mc{S}_{k}(\G_{1}(N))\) has Fourier coefficients \(a_{n}(f)\) and is such that \(a_{n}(f) = 0\) for all \(n \ge 1\) whenever \((n,N) = 1\) then
+      \begin{lemma} %Miyake Lemma 4.6.3
+        Let \(f \in \mc{S}_{k}(\G_{1}(N))\) and suppose that there exists an \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \D_{m}(N)\), for some positive integer \(m\) with \((m,N) = 1\), such that \((a,b,c,d) = 1\) and \(f|_{k}\a \in \mc{S}_{k}(\G_{1}(N))\). Then \(f\) is identically zero.
+      \end{lemma}
+
+      \begin{theorem} %Miyake Theorem 4.6.4
+        Let \(M\) and \(N\) be positive integers such that \(M \mid N\). Suppose \(f\) is a \(1\)-periodic holomorphic function on \(\H\) such that \(f|_{k}\a_{d} \in \mc{S}_{k}(\G_{1}(N))\) for some \(d \mid \frac{N}{M}\). Then either \(f \in  \mc{S}_{k}\left(\G_{1}\left(\frac{N}{d}\right)\right)\) or \(f\) is identically zero.
+      \end{theorem}
+
+      \begin{lemma} %Miyake Lemma 4.6.5
+        Let \(f \in \mc{S}_{k}(\G_{1}(N))\) have Fourier coefficients \(a(n)\). Let \(L\) be a positive integer and set
+        \[
+          g(z) = \sum_{\substack{n \ge 1 \\ (n,L) = 1}}a(n)e(nz).
+        \]
+        Then \(g \in \mc{S}_{k}(\G_{1}(M))\) where
+        \[
+          M = N\prod_{\substack{p \mid L \\ p \mid N}}p\prod_{\substack{p \mid L \\ p \nmid N}}p^{2}.
+        \]
+      \end{lemma}
+
+      \begin{lemma}\label{lem:the_main_lemma_for_newforms_modular} %Miyake Lemma 4.6.7
+        Suppose \(f \in \mc{S}_{k}(\G_{1}(N))\) has Fourier coefficients \(a(n)\) such that \(a(n) = 0\) for whenever \((n,N) = 1\). Then
         \[
           f = \sum_{p \mid N}p^{k-1}f_{p}\|_{k}\a_{p},
         \]
