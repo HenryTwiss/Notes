@@ -2036,7 +2036,7 @@
 
       Something quite amazing happens for the subspace in \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) which is that the eigenforms are eigenfunctions for all of the diamond and Hecke operators so that they are Hecke eigenforms. This will require several preliminary results to prove. The first of which gives conditions under which a modular form is identically zero.
 
-      \begin{lemma}
+      \begin{lemma}\label{lemma:vanishing_lemma_modular_forms}
         Let \(f \in \mc{S}_{k}(\G_{1}(N))\) and suppose that there exists an \(\a \in \D^{m}(N)\), for some positive integer \(m > 1\) with \((m,N) = 1\), such that the entries of \(\a\) are relatively prime and \(f|_{k}\a \in \mc{S}_{k}(\G_{1}(N))\). Then \(f\) is identically zero.
       \end{lemma}
       \begin{proof}
@@ -2077,19 +2077,15 @@
         Suppose \(f\) is a \(1\)-periodic holomorphic function on \(\H\) and there exists a positive integer \(\ell\) such that \(f|_{k}\a_{\ell} \in \mc{S}_{k}(\G_{1}(N))\). Then \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\) or \(f\) is identically zero according to if \(\ell \mid N\) or not.
       \end{theorem}
       \begin{proof}
-        The claim is trivial if \(\ell = 1\) so we may assume \(\ell > 1\). Moreover, in view of the fact that \(\a_{\ell m} = \a_{\ell}\a_{m}\) for all positive integers \(\ell\) and \(m\), it suffices to prove the claim in the case \(\ell = p\) for a prime \(p\). We first show \(f \in S_{k}(\G_{1}(N))\). Note that \(f\) is holomorphic by assumption. It also satisfies the corresponding growth condition as \(f|_{k}\a_{\ell} \in \mc{S}_{k}(\G_{1}(N))\) and will necessarily be a cusp form. So it remains to prove modularity. To this end, set
+        The claim is trivial if \(\ell = 1\) so we may assume \(\ell > 1\). Moreover, in view of the fact that \(\a_{\ell m} = \a_{\ell}\a_{m}\) for all positive integers \(\ell\) and \(m\), it suffices to prove the claim in the case \(\ell = p\) for a prime \(p\). We first show \(f \in S_{k}(\G_{1}(N))\). Note that \(f\) is holomorphic by assumption. The growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. So it remains to prove modularity. To this end, set
         \[
           \G_{1}(N;p) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \G_{1}(N):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & 0 \\ \ast & \ast \end{pmatrix} \tmod{p}\right\},
         \]
-        and observe that \(\G_{1}(N;p) \subset \G_{1}(N)\). Letting \(\g \in \G_{1}(N;p)\), a short computation shows
+        and observe that \(\G_{1}(N;p) \subset \G_{1}(N)\). Letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N;p)\), a short computation shows
         \[
           \a_{p}^{-1}\g\a_{p} = \begin{pmatrix} a & \frac{b}{p} \\ cp & d \end{pmatrix},
         \]
-        and therefore \(\a_{p}^{-1}\g\a_{p} \in \G_{1}(N)\). Modularity of \(f|_{k}\a_{p}\) then implies \(f|_{k}\g\a_{p} = f|_{k}\a_{p}\). Whence \(f|_{k}\g = f\), for all \(\g \in \G_{1}(N;p)\), upon applying \(|_{k}\a_{p}^{-1}\). We also have \(f|_{k}T = f\) since \(f\) is \(1\)-periodic. Whence
-        \[
-          (f|_{k}\g)(z) = f(z),
-        \]
-        for all \(\g \in \<\G_{1}(N;p),T\>\). Note that \(\<\G_{1}(N;p),T\> \subseteq \G_{1}(N)\) and
+        and so \(\a_{p}^{-1}\g\a_{p} \in \G_{1}(N)\). Modularity of \(f|_{k}\a_{p}\) then implies \(f|_{k}\g\a_{p} = f|_{k}\a_{p}\). Whence \(f|_{k}\g = f\), for all \(\g \in \G_{1}(N;p)\), upon applying \(|_{k}\a_{p}^{-1}\). But we also have \(f|_{k}T = f\) since \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\G_{1}(N;p),T\>\). So modularity we will proved if we can further show \(\<\G_{1}(N;p),T\> = \G_{1}(N)\). To see this, it is clear that
         \[
           [\<\G_{1}(N;p),T\>:\G_{1}(N;p)] \ge p.
         \]
@@ -2117,8 +2113,18 @@
         \[
           [\G_{1}(N):\G_{1}(N;p)] = [\SL_{2}(\Z/p\Z):B_{2}^{-}(\Z/p\Z)].
         \]
-        Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. With this result, the previous index computations show that \(\<\G_{1}(N;p),T\> = \G_{1}(N)\) regardless of if \(p \mid N\) or not. This proves modularity and therefore \(f \in \mc{S}_{k}(\G_{1}(N))\). \todo{XXX}
+        Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. With this result, the previous index computations show \(\<\G_{1}(N;p),T\> = \G_{1}(N)\), regardless of if \(p \mid N\) or not, as desired. This proves modularity and therefore \(f \in \mc{S}_{k}(\G_{1}(N))\). We now show \(f\) is identically zero when \(p \nmid N\). Indeed, this is forced by \cref{lemma:vanishing_lemma_modular_forms} since \(f \in \mc{S}_{k}(\G_{1}(N))\) and \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\). It remains to show \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\) when \(p \mid N\). Holomorphy of \(f\) has been established. The corresponding growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. So it remains to prove modularity. Letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N)\), a short computation shows
+        \[
+          \a_{p}\g\a_{p}^{-1} = \begin{pmatrix} a & bp \\ \frac{c}{p} & d \end{pmatrix},
+        \]
+        and so \(\a_{p}\g\a_{p}^{-1} \in \G_{1}\left(\frac{N}{p}\right)\). Now modularity of \(f|_{k}\a_{p}\) implies \(f|_{k}\a_{p}\g = f|_{k}\a_{p}\). Whence \(f|_{k}\a_{p}\g\a_{p}^{-1} = f\), for all \(\g \in \G_{1}(N)\), upon applying \(|_{k}\a_{p}^{-1}\). We also have \(f|_{k}T = f\) as \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\a_{p}\G_{1}(N)\a_{p}^{-1},T\>\). So modularity will follow if we can further show \(\<\a_{p}\G_{1}(N)\a_{p}^{-1},T\> = \G_{1}\left(\frac{N}{p}\right)\). Indeed, our previous matrix computations show
+        \[
+          \a_{p}\G_{1}(N)\a_{p}^{-1} = \G_{1}\left(\frac{N}{p};p\right),
+        \]
+        and therefore our previous work implies \(\<\a_{p}\G_{1}(N)\a_{p}^{-1},T\> = \G_{1}\left(\frac{N}{p}\right)\). This proves modularity so that \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\).
       \end{proof}
+
+      \todo{XXX}
 
       \begin{lemma} %Miyake Lemma 4.6.5
         Let \(f \in \mc{S}_{k}(\G_{1}(N))\) have Fourier coefficients \(a(n)\). Let \(L\) be a positive integer and set
