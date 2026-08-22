@@ -396,17 +396,17 @@
 
       As it turns out, it will be more useful deal with the width of cusps implicitly. Set
       \[
-        B_{\G} = \<T,(-1)^{\e_{\G}}\>.
+        B_{\G}^{+} = \<T,(-1)^{\e_{\G}}\>.
       \]
       We call \(\s_{\mf{a}} \in \SL_{2}(\R)\)  a \textbf{scaling matrix}\index{scaling matrix} for \(\mf{a}\) if \(\s_{\mf{a}}\infty = \mf{a}\) and \(\s_{\mf{a}}^{-1}\g_{\mf{a}}\s_{\mf{a}} = T\). This forces
       \[
-        \s_{\mf{a}}^{-1}\G_{\mf{a}}\s_{\mf{a}} = B_{\G}.
+        \s_{\mf{a}}^{-1}\G_{\mf{a}}\s_{\mf{a}} = B_{\G}^{+}.
       \]
       The second condition is possible only because we are allowing the entries to be real. For example, a short computation shows that we can choose the scaling matrix to be
       \[
         \s_{\mf{a}} = \eta_{\mf{a}}\begin{pmatrix} \sqrt{h_{\mf{a}}} & 0 \\ 0 & \frac{1}{\sqrt{h_{\mf{a}}}} \end{pmatrix}.
       \]
-      Observe that scaling matrices are determined up to right multiplication by powers of \(T\). Also, if \(\G\) is reduced at \(\mf{a}\) then we may take \(\s_{\mf{a}} = \eta_{\mf{a}}\) so that the scaling matrix can be chosen to lie in \(\SL_{2}(\Z)\). In this case, \(\G_{\mf{a}} = B_{\G}\). For example, this occurs at \(\infty\) for the Hecke congruence subgroups.
+      Observe that scaling matrices are determined up to right multiplication by powers of \(T\). Also, if \(\G\) is reduced at \(\mf{a}\) then we may take \(\s_{\mf{a}} = \eta_{\mf{a}}\) so that the scaling matrix can be chosen to lie in \(\SL_{2}(\Z)\). In this case, \(\G_{\mf{a}} = B_{\G}^{+}\). For example, this occurs at \(\infty\) for the Hecke congruence subgroups.
 
       Lastly, let us discuss a useful property of integrals over \(\GH\). Recall that we may use the fundamental domain \(\mc{F}_{\G}\) to integrate over \(\GH\) by writing
       \[
@@ -452,12 +452,12 @@
         \]
         where
         \[
-          \W_{\infty} = B_{\G}w_{\infty}B_{\G} \quad \text{and} \quad \W_{c/d} = B_{\G}\w_{c/d}B_{\G},
+          \W_{\infty} = B_{\G}^{+}w_{\infty}B_{\G}^{+} \quad \text{and} \quad \W_{c/d} = B_{\G}^{+}\w_{c/d}B_{\G}^{+},
         \]
         with \(\w_{\infty} = \begin{psmallmatrix} 1 & \ast \\ 0 & 1 \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) and \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) if such matrices exists otherwise \(\W_{\infty}\) and \(\W_{c/d}\) are empty respectively. In the former case for \(\W_{\infty}\), \(\w_{\infty}\) exists if and only if \(\mf{a}\) and \(\mf{b}\) are \(\G\)-equivalent. In the former case for \(\W_{c/d}\), \(a\) and \(d\) are determined modulo \(c\) and \(\W_{c/d}\) does not depend on the entry \(a\) of \(\w_{c/d}\).
       \end{theorem*}
       \begin{proof}
-        As \(B_{\G} = \s_{\mf{a}}^{-1}\G_{\mf{a}}\s_{\mf{a}}\) and \(B_{\G} = \s_{\mf{b}}^{-1}\G_{\mf{b}}\s_{\mf{b}}\), short computations show that \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) is invariant under left and right multiplication by elements \(B_{\G}\). This proves \(\W_{\infty}\) and \(\W_{c/d}\) are subsets of \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\). Now any \(\w_{\infty} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) satisfies \(\w_{\infty} = \s_{\mf{a}}^{-1}\g\s_{\mf{b}}\) for some \(\g \in \G\). As \(\w_{\infty}\) fixes \(\infty\), a short computation shows
+        As \(B_{\G}^{+} = \s_{\mf{a}}^{-1}\G_{\mf{a}}\s_{\mf{a}}\) and \(B_{\G}^{+} = \s_{\mf{b}}^{-1}\G_{\mf{b}}\s_{\mf{b}}\), short computations show that \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) is invariant under left and right multiplication by elements \(B_{\G}^{+}\). This proves \(\W_{\infty}\) and \(\W_{c/d}\) are subsets of \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\). Now any \(\w_{\infty} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) satisfies \(\w_{\infty} = \s_{\mf{a}}^{-1}\g\s_{\mf{b}}\) for some \(\g \in \G\). As \(\w_{\infty}\) fixes \(\infty\), a short computation shows
         \[
           \g\mf{b} = \mf{a}.
         \]
@@ -473,7 +473,7 @@
         \[
           \w_{c/d}(\w'_{c/d})^{-1} = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix} \quad \text{and} \quad \g(\g')^{-1} = \s_{\mf{a}}\w_{c/d}(\w'_{c/d})^{-1}\s_{\mf{a}}^{-1},
         \]
-        imply \(\g(\g')^{-1} \in \G_{\mf{a}}\). So \(\w_{c/d}(\w'_{c/d})^{-1} \in B_{\G}\) whence \(B_{\G}\w_{c/d}B_{\G} = B_{\G}\w'_{c/d}B_{\G}\).
+        imply \(\g(\g')^{-1} \in \G_{\mf{a}}\). So \(\w_{c/d}(\w'_{c/d})^{-1} \in B_{\G}^{+}\) whence \(B_{\G}^{+}\w_{c/d}B_{\G}^{+} = B_{\G}^{+}\w'_{c/d}B_{\G}^{+}\).
       \end{proof}
 
       As the double cosets \(\W_{\infty}\) and \(\W_{c/d}\) in the Bruhat decomposition may very well be empty, we would like to track exactly which are not. To do this, let \(\mc{C}_{\mf{a},\mf{b}}\) and \(\mc{D}_{\mf{a},\mf{b}}(c)\) be the sets
@@ -648,7 +648,7 @@
       upon summing the resulting geometric series. This implies \(f|_{k}\s_{\mf{a}}\) exhibits exponential decay and we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(y \to \infty\) which is provided by the fact that \(f\) is a cusp form.
 
       \subsubsection*{Hecke Congruence Subgroups}
-        In the case of the Hecke congruence subgroup \(\G_{0}(N)\), there are a few important simplifications when dealing with modular forms on  \(\G_{0}(N)\backslash\H\). The first, which we have already noted, is that \(\G_{0}(N)\) is reduced \(\infty\). Therefore \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\) for the scaling matrix at \(\infty\). The second is that the nebentypus can be induced by a Dirichlet character \(\chi\) modulo \(N\). Let \(q\) be the conductor of \(\chi\) so that \(q \mid N\). For any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) we know that \(c \equiv 0 \tmod{N}\) whence \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\vt_{\chi}:\G_{0}(N) \to \C^{\ast}\) by
+        In the case of the Hecke congruence subgroup \(\G_{0}(N)\), there are a few important simplifications when dealing with modular forms on  \(\G_{0}(N)\backslash\H\). The first, which we have already noted, is that \(\G_{0}(N)\) is reduced \(\infty\). Therefore \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}^{+}\) and we may take \(\s_{\infty} = I\) for the scaling matrix at \(\infty\). The second is that the nebentypus can be induced by a Dirichlet character \(\chi\) modulo \(N\). Let \(q\) be the conductor of \(\chi\) so that \(q \mid N\). For any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) we know that \(c \equiv 0 \tmod{N}\) whence \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\vt_{\chi}:\G_{0}(N) \to \C^{\ast}\) by
         \[
           \vt_{\chi}(\g) = \chi(d).
         \]
@@ -673,7 +673,7 @@
       \]
       We call \(m\) the \textbf{index}\index{index} of \(P_{m,\vt,\mf{a}}(z)\). Also, we must assume \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
 
-      The Poincar\'e series \(P_{m,\vt,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the nebentypus, this is easily checked by direct computation using the fact that \(\vt\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(B_{\G}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}B_{\G}\s_{\mf{a}}^{-1}\). So it suffices to show 
+      The Poincar\'e series \(P_{m,\vt,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the nebentypus, this is easily checked by direct computation using the fact that \(\vt\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(B_{\G}^{+}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}B_{\G}^{+}\s_{\mf{a}}^{-1}\). So it suffices to show 
       \[
         \left(e(m\,\cdot\,)\bigg|_{k}T\right)(z) = e(mz),
       \]
@@ -1184,7 +1184,7 @@
     \]
     Also, all sums and products over a quotient group will be consider to be over a complete set of representatives.
     \subsection{Poincar\'e Series and Eisenstein Series}
-      We will now study the Poincar\'e series and Eisenstein Series on \(\G_{0}(N)\backslash\H\). As \(\G_{0}(N)\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}\) and we may take \(\s_{\infty} = I\). We will also take \(\vt = \chi\) to be a Dirichlet character modulo \(N\). Then for a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\), our series take the forms
+      We will now study the Poincar\'e series and Eisenstein Series on \(\G_{0}(N)\backslash\H\). As \(\G_{0}(N)\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}^{+}\) and we may take \(\s_{\infty} = I\). We will also take \(\vt = \chi\) to be a Dirichlet character modulo \(N\). Then for a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\), our series take the forms
       \[
         P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
       \]
@@ -2073,11 +2073,11 @@
 
       The second result is a level descent statement. It tells us under what conditions a complex function \(f\) must satisfy in order to know \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\) for some divisor \(\ell\) of \(N\). 
 
-      \begin{theorem} %Miyake Theorem 4.6.4
+      \begin{theorem}
         Suppose \(f\) is a \(1\)-periodic holomorphic function on \(\H\) and there exists a positive integer \(\ell\) such that \(f|_{k}\a_{\ell} \in \mc{S}_{k}(\G_{1}(N))\). Then \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\) or \(f\) is identically zero according to if \(\ell \mid N\) or not.
       \end{theorem}
       \begin{proof}
-        The claim is trivial if \(\ell = 1\) so we may assume \(\ell > 1\). Moreover, in view of the fact that \(\a_{\ell m} = \a_{\ell}\a_{m}\) for all positive integers \(\ell\) and \(m\), it suffices to prove the claim in the case \(\ell = p\) for a prime \(p\). We first show \(f \in S_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\) or \(f \in S_{k}(\G_{1}(N))\) according to if \(p \mid N\) or not. Note that \(f\) is holomorphic by assumption. It also satisfies the corresponding growth condition as \(f|_{k}\a_{\ell} \in \mc{S}_{k}(\G_{1}(N))\) and will necessarily be a cusp form. So it remains to prove modularity. To this end, set
+        The claim is trivial if \(\ell = 1\) so we may assume \(\ell > 1\). Moreover, in view of the fact that \(\a_{\ell m} = \a_{\ell}\a_{m}\) for all positive integers \(\ell\) and \(m\), it suffices to prove the claim in the case \(\ell = p\) for a prime \(p\). We first show \(f \in S_{k}(\G_{1}(N))\). Note that \(f\) is holomorphic by assumption. It also satisfies the corresponding growth condition as \(f|_{k}\a_{\ell} \in \mc{S}_{k}(\G_{1}(N))\) and will necessarily be a cusp form. So it remains to prove modularity. To this end, set
         \[
           \G_{1}(N;p) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \G_{1}(N):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & 0 \\ \ast & \ast \end{pmatrix} \tmod{p}\right\},
         \]
@@ -2089,7 +2089,11 @@
         \[
           (f|_{k}\g)(z) = f(z),
         \]
-        for all \(\g \in \<\G_{1}(N;p),T\>\). Note that \(\<\G_{1}(N;p),T\> \subseteq \G_{1}(N)\). We now claim
+        for all \(\g \in \<\G_{1}(N;p),T\>\). Note that \(\<\G_{1}(N;p),T\> \subseteq \G_{1}(N)\) and
+        \[
+          [\<\G_{1}(N;p),T\>:\G_{1}(N;p)] \ge p.
+        \]
+        We now claim
         \[
           [\G_{1}(N):\G_{1}(N;p)] = \begin{cases} p & \text{if \(p \mid N\)}, \\ p+1 & \text{if \(p \nmid N\)}. \end{cases}
         \]
@@ -2097,11 +2101,23 @@
         \[
           \phi:\G_{1}(N) \to \Z/p\Z \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto b \tmod{p}.
         \]
-        induced by natural projection. This is clearly surjective and the kernel is precisely \(\G_{1}(N;p)\). Whence \([\G_{1}(N):\G_{1}(N;p)] = p\) by the first isomorphism theorem. In the case \(p \nmid N\), consider the homomorphism
+        induced by natural projection. Clearly \(\phi\) is surjective and the kernel is precisely \(\G_{1}(N;p)\). Whence \([\G_{1}(N):\G_{1}(N;p)] = p\) by the first isomorphism theorem. In the case \(p \nmid N\), consider the homomorphism
         \[
           \pi:\G_{1}(N) \to \SL_{2}(\Z/p\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{p},
         \]
-        given by natural projection. \todo{Use Chinese remainder theorem and strong approximation together to prove surjectivitiy...}
+        given by natural projection. This map is a surjection and to see it, consider \(\SL_{2}(\Z/Np\Z)\). As \(p \nmid N\), the Chinese remainder theorem implies that there is an isomorphism
+        \[
+          \SL_{2}(\Z/Np\Z) \cong \SL_{2}(\Z/N\Z) \op \SL_{2}(\Z/p\Z),
+        \]
+        induced by natural projection. In view of strong approximation for the modular group, it follows that for every \(\begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z/pZ)\) there is a matrix \(\g \in \SL_{2}(Z)\) satisfying
+        \[
+          \g \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \pmod{N} \quad \text{and} \quad \g \equiv \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mod{p}.
+        \]
+        The first condition implies \(\g \in \G_{1}(N)\) and therefore \(\pi\) is surjective. Moreover, we also find that \(\G_{1}(N;p)\) is the preimage under \(\pi\) of the lower triangular matrices in \(\SL_{2}(\Z/p\Z)\) which we denote by \(B_{2}^{-}(\Z/p\Z)\). Whence
+        \[
+          [\G_{1}(N):\G_{1}(N;p)] = [\SL_{2}(\Z/p\Z):B_{2}^{-}(\Z/p\Z)].
+        \]
+        Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. With this result, the previous index computations show that \(\<\G_{1}(N;p),T\> = \G_{1}(N)\) regardless of if \(p \mid N\) or not. This proves modularity and therefore \(f \in \mc{S}_{k}(\G_{1}(N))\). \todo{XXX}
       \end{proof}
 
       \begin{lemma} %Miyake Lemma 4.6.5
