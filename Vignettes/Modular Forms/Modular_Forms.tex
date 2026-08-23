@@ -112,34 +112,90 @@
       \[
         d_{\G} = [\SL_{2}(\Z):\G].
       \]
-      We now distinguish two important classes of congruence subgroups other than the principal ones. These are the congruence subgroups
-      \[
-        \G_{1}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \tmod{N}\right\},
-      \]
-      and
-      \[
-        \G_{0}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix} \tmod{N}\right\},
-      \]
-      both of which are of level \(N\). These congruence subgroups consist of the matrices which reduce to unipotent upper triangular and upper triangular modulo \(N\) respectively. The latter subgroup \(\G_{0}(N)\) is called the \textbf{Hecke congruence subgroup}\index{Hecke congruence subgroup} of level \(N\). Note that \(\G(N) \subseteq \G_{1}(N) \subseteq \G_{0}(N)\). 
-      
-      Since the principal congruence subgroups are normal in \(\SL_{2}(\Z)\), if \(\G\) is a congruence subgroup of level \(N\) then so is \(\a^{-1}\G\a\) for any \(\a \in \SL_{2}(\Z)\). In fact, something more general holds. Congruence subgroups are preserved under conjugation by elements of \(\GL_{2}^{+}(\Q)\) provided we restrict to those elements in \(\SL_{2}(\Z)\).
-
-      \begin{lemma}\label{lem:coset_lemma_1}
-        Let \(\G\) be a congruence subgroup and \(\a \in \GL_{2}^{+}(\Q)\). Then \(\a^{-1}\G\a \cap \SL_{2}(\Z)\) is a congruence subgroup. In particular, if \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\) then \(\a^{-1}\G\a\) is a congruence subgroup.
-      \end{lemma}
-      \begin{proof}
-        Let the level of \(\G\) be \(N\) and choose a positive integer \(r\) such that \(r\a,r\a^{-1} \in \GL_{2}^{+}(\Q)\) have integral entries. Let \(M = r^{2}N\) and notice that any \(\g \in \G(M)\) is of the form
+      \subsubsection*{Hecke Congruence Subgroups}
+        We now distinguish some important classes of congruence subgroups other than the principal ones. The most important of which are the congruence subgroups
         \[
-          \g = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}+M\begin{pmatrix} k_{1} & k_{2} \\ k_{3} & k_{4} \end{pmatrix},
+          \G_{1}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \tmod{N}\right\},
         \]
-        for integers \(k_{1},\ldots,k_{4}\). Therefore \(\G(M) \subseteq I+M\Mat_{2}(\Z)\) and so
+        and
         \[
-          \a\G(M)\a^{-1} \subseteq I+N\Mat_{2}(\Z).
+          \G_{0}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix} \tmod{N}\right\},
         \]
-        As \(\G(N) = (I+N\Mat_{2}(\Z)) \cap \SL_{2}(\Z)\), it follows that \(\a\G(M)\a^{-1} \subseteq \G(N)\). Whence \(\G(M) \subseteq \a^{-1}\G\a\) because \(\G\) is of level \(N\). Intersecting with \(\SL_{2}(\Z)\) proves the first statement. The second statement is immediate.
-      \end{proof}
+        both of which are of level \(N\). These congruence subgroups consist of the matrices which reduce to unipotent upper triangular and upper triangular modulo \(N\) respectively. The latter subgroup \(\G_{0}(N)\) is called the \textbf{Hecke congruence subgroup}\index{Hecke congruence subgroup} of level \(N\). Note that we have the chain
+        \[
+          \G(N) \subseteq \G_{1}(N) \subseteq \G_{0}(N).
+        \]
+        The structure of \(\G_{0}(N)\) can be reduced to that of \(\G_{1}(N)\) provided we keep track of the bottom right entry modulo \(N\). This is established through the surjective homomorphism
+        \[
+          \G_{0}(N) \to (\Z/N\Z)^{\ast} \qquad \begin{pmatrix} a & b \\ c & d\end{pmatrix} \mapsto d \tmod{N},
+        \]
+        induced by natural projection. Its kernel is exactly \(\G_{1}(N)\) so that \(\G_{1}(N)\) is a normal subgroup of \(\G_{0}(N)\) whence
+        \[
+          \G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast}.
+        \]
+        In fact, \(\G_{0}(N)\) admits the right coset decomposition
+        \begin{equation}\label{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup}
+          \G_{0}(N) = \bigcup_{\substack{d \tmod{N} \\ (d,N) = 1}}\G_{1}(N)\g_{d},
+        \end{equation}
+        where \(\g_{d} \in \G_{0}(N)\) is any matrix satisfying \(\g_{d} \equiv \begin{psmallmatrix} d^{-1} & 0 \\ 0 & d\end{psmallmatrix} \tmod{N}\). Indeed, a right coset decomposition exists by surjectivity so it only suffices to show that the representatives \(\g_{d}\) have this particular form. Any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) satisfies \(\g \equiv \begin{psmallmatrix} a & b \\ 0 & d \end{psmallmatrix} \tmod{N}\) so that \(d\) is the inverse of \(a\) modulo \(N\). As \((d,N) = 1\), there exists an integer \(n\) such that \(nd \equiv -b \tmod{N}\). Then
+        \[
+          \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix}\g \equiv \begin{pmatrix} d^{-1} & 0 \\ 0 & d \end{pmatrix} \pmod{N},
+        \]
+        and so we can use the representatives \(\g_{d}\). Since \(\G_{1}(N)\) is normal in \(\G_{0}(N)\), this right coset decomposition is also a left coset decomposition. Moreover, every \(\g \in \G_{1}(N)\g_{d}\) is of the form \(\g \equiv \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix} \tmod{N}\) in view of
+        \[
+          \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\g_{d} \equiv \begin{pmatrix} \ast & \ast \\ 0 & d \end{pmatrix} \pmod{N},
+        \]
+        which is to say that they have the same bottom right entry modulo \(N\). It will further be useful to decompose \(\G_{1}(N)\) in terms of the top right entry. For any prime \(p\), set
+        \[
+          \G_{1}(N;p) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \G_{1}(N):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & 0 \\ \ast & \ast \end{pmatrix} \tmod{p}\right\},
+        \]
+        This is a congruence subgroup of level \(N\) satisfying
+        \[
+          \G(N) \subseteq \G_{1}(N;p) \subseteq \G_{1}(N).
+        \]
+        Note that \(\G_{1}(N;p)\) does not contain \(T\). However, this is the only missing matrix needed to generate \(\G_{1}(N)\).
 
-      Note that in the case \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\), normality of principal congruence subgroups force \(\G\) and \(\a^{-1}\G\a\) to be of the same level. In particular, this will always happen whenever we conjugate by elements of the modular group.
+        \begin{proposition}\label{prop:prime_subgroup_generator}
+          Let \(N\) be a positive integer and \(p\) be a prime. Then
+          \[
+            \G_{1}(N) = \<\G_{1}(N;p),T\>.
+          \]
+        \end{proposition}
+        \begin{proof}
+          It is clear that
+          \[
+            [\<\G_{1}(N;p),T\>:\G_{1}(N;p)] \ge p.
+          \]
+          We now claim
+          \[
+            [\G_{1}(N):\G_{1}(N;p)] = \begin{cases} p & \text{if \(p \mid N\)}, \\ p+1 & \text{if \(p \nmid N\)}. \end{cases}
+          \]
+          In the case \(p \mid N\), consider the homomorphism
+          \[
+            \phi:\G_{1}(N) \to \Z/p\Z \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto b \tmod{p}.
+          \]
+          induced by natural projection. Clearly \(\phi\) is surjective and the kernel is precisely \(\G_{1}(N;p)\). Whence \([\G_{1}(N):\G_{1}(N;p)] = p\) by the first isomorphism theorem. In the case \(p \nmid N\), consider the homomorphism
+          \[
+            \pi:\G_{1}(N) \to \SL_{2}(\Z/p\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{p},
+          \]
+          given by natural projection. This map is surjective and to see it consider \(\SL_{2}(\Z/Np\Z)\). As \(p \nmid N\), the Chinese remainder theorem implies that there is an isomorphism
+          \[
+            \SL_{2}(\Z/Np\Z) \cong \SL_{2}(\Z/N\Z) \op \SL_{2}(\Z/p\Z),
+          \]
+          induced by natural projection. In view of strong approximation for the modular group, it follows that for every \(\begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z/p\Z)\) there is a matrix \(\g \in \SL_{2}(\Z)\) satisfying
+          \[
+            \g \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \pmod{N} \quad \text{and} \quad \g \equiv \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mod{p}.
+          \]
+          The first condition implies \(\g \in \G_{1}(N)\) and therefore \(\pi\) is surjective. Moreover, we also find that \(\G_{1}(N;p)\) is the preimage under \(\pi\) of the lower triangular matrices in \(\SL_{2}(\Z/p\Z)\) which we denote by \(B_{2}^{-}(\Z/p\Z)\). Whence
+          \[
+            [\G_{1}(N):\G_{1}(N;p)] = [\SL_{2}(\Z/p\Z):B_{2}^{-}(\Z/p\Z)].
+          \]
+          Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. Since
+          \[
+            [\G_{1}(N):\<\G_{1}(N;p),T\>] = \frac{[\G_{1}(N):\G_{1}(N;p)]}{[\<\G_{1}(N;p),T\>:\G_{1}(N;p)]},
+          \]
+          we find that \([\G_{1}(N):\<\G_{1}(N;p),T\>] \le \frac{p+1}{p}\) in either case. But then \(\G_{1}(N) = \<\G_{1}(N;p),T\>\) as desired.
+        \end{proof}
     \subsection{Fuchsian Groups and Modular Curves}
       We first restrict our group action on the upper-half plane to \(\SL_{2}(\R)\). Note that for any \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\R)\), \cref{equ:Mobius_transformation_imaginary_part} simplifies to
       \begin{equation}\label{equ:Mobius_transformation_imaginary_part_simplified}
@@ -646,7 +702,6 @@
         (f|_{k}\s_{\mf{a}})(z) = O\left(e^{-2\pi y}\right),
       \]
       upon summing the resulting geometric series. This implies \(f|_{k}\s_{\mf{a}}\) exhibits exponential decay and we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(y \to \infty\) which is provided by the fact that \(f\) is a cusp form.
-
       \subsubsection*{Hecke Congruence Subgroups}
         In the case of the Hecke congruence subgroup \(\G_{0}(N)\), there are a few important simplifications when dealing with modular forms on  \(\G_{0}(N)\backslash\H\). The first, which we have already noted, is that \(\G_{0}(N)\) is reduced \(\infty\). Therefore \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}^{+}\) and we may take \(\s_{\infty} = I\) for the scaling matrix at \(\infty\). The second is that the nebentypus can be induced by a Dirichlet character \(\chi\) modulo \(N\). Let \(q\) be the conductor of \(\chi\) so that \(q \mid N\). For any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) we know that \(c \equiv 0 \tmod{N}\) whence \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\vt_{\chi}:\G_{0}(N) \to \C^{\ast}\) by
         \[
@@ -1446,29 +1501,7 @@
     \subsection{Diamond and Hecke Operators}
       The diamond and Hecke operators are sums of double coset operators. They will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. Actually, these operators will be defined for modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. However, it turns out that such modular forms arise from those on \(\G_{0}(N)\backslash\H\) with character via the diamond operators. So we will discuss the diamond operators first and the Hecke operators second. 
       
-      To define the diamond operators, we need to consider the congruence subgroups \(\G_{1}(N)\) and \(\G_{0}(N)\). Recall that \(\G_{1}(N) \subseteq \G_{0}(N)\) and consider the surjective homomorphism
-      \[
-        \G_{0}(N) \to (\Z/N\Z)^{\ast} \qquad \begin{pmatrix} a & b \\ c & d\end{pmatrix} \mapsto d \tmod{N},
-      \]
-      induced by natural projection. Its kernel is exactly \(\G_{1}(N)\) so that \(\G_{1}(N)\) is a normal subgroup of \(\G_{0}(N)\) whence
-      \[
-        \G_{0}(N)/\G_{1}(N) \cong (\Z/N\Z)^{\ast}.
-      \]
-      In fact, \(\G_{0}(N)\) admits the right coset decomposition
-      \begin{equation}\label{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup}
-        \G_{0}(N) = \bigcup_{\substack{d \tmod{N} \\ (d,N) = 1}}\G_{1}(N)\g_{d},
-      \end{equation}
-      where \(\g_{d} \in \G_{0}(N)\) is any matrix satisfying \(\g_{d} \equiv \begin{psmallmatrix} d^{-1} & 0 \\ 0 & d\end{psmallmatrix} \tmod{N}\). By surjectivity, a right coset decomposition exists so it only suffices to show that the representatives \(\g_{d}\) have this particular form. Any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) satisfies \(\g \equiv \begin{psmallmatrix} a & b \\ 0 & d \end{psmallmatrix} \tmod{N}\) so that \(d\) is the inverse of \(a\) modulo \(N\). As \((d,N) = 1\), there exists an integer \(n\) such that \(nd \equiv -b \tmod{N}\). Then
-      \[
-        \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix}\g \equiv \begin{pmatrix} d^{-1} & 0 \\ 0 & d \end{pmatrix} \pmod{N},
-      \]
-      and so we can use the representatives \(\g_{d}\). Since \(\G_{1}(N)\) is norm in \(\G_{0}(N)\), this right coset decomposition is also a left coset decomposition. Moreover, every \(\g \in \G_{1}(N)\g_{d}\) is of the form \(\g \equiv \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix} \tmod{N}\) in view of
-      \[
-        \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\g_{d} \equiv \begin{pmatrix} \ast & \ast \\ 0 & d \end{pmatrix} \pmod{N},
-      \]
-      which is to say that they have the same bottom right entry modulo \(N\).
-    
-      Let \(d\) be a positive integer. We will use the representatives \(\g_{d}\) to define the diamond operators. The \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
+      To define the diamond operators, let \(d\) be a positive integer and recall the right coset decomposition of \(\G_{0}(N)\) given in \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup}. We will use the representatives \(\g_{d}\) to define the diamond operators. The \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
       \[
         (\<d\>f)(z) = \begin{cases} \left(f[\G_{1}(N)\g_{d}\G_{1}(N)]_{k}\right)(z) & \text{if \((d,N) = 1\)}, \\ 0 & \text{if \((d,N) > 1\)}. \end{cases}
       \]
@@ -2036,9 +2069,9 @@
 
       Something quite amazing happens for the subspace in \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) which is that the eigenforms are eigenfunctions for all of the diamond and Hecke operators so that they are Hecke eigenforms. This will require several preliminary results to prove. The first of which gives conditions under which a modular form is identically zero.
 
-      \begin{lemma}\label{lemma:vanishing_lemma_modular_forms}
+      \begin{proposition}\label{prop:vanishing_lemma_modular_forms}
         Let \(f \in \mc{S}_{k}(\G_{1}(N))\) and suppose that there exists an \(\a \in \D^{m}(N)\), for some positive integer \(m > 1\) with \((m,N) = 1\), such that the entries of \(\a\) are relatively prime and \(f|_{k}\a \in \mc{S}_{k}(\G_{1}(N))\). Then \(f\) is identically zero.
-      \end{lemma}
+      \end{proposition}
       \begin{proof}
         By \cref{prop:Delta_double_coset_decomposition}, there exist positive integers \(a\) and \(d\) satisfying \(ad = m\) and \(a \mid d\) as well as matrices \(\g_{1} \in \G_{0}(N)\) and \(\g_{2} \in \G_{1}(N)\) such that
         \[
@@ -2077,53 +2110,25 @@
         Suppose \(f\) is a \(1\)-periodic holomorphic function on \(\H\) and there exists a positive integer \(\ell\) such that \(f|_{k}\a_{\ell} \in \mc{S}_{k}(\G_{1}(N))\). Then \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\) or \(f\) is identically zero according to if \(\ell \mid N\) or not.
       \end{theorem}
       \begin{proof}
-        The claim is trivial if \(\ell = 1\) so we may assume \(\ell > 1\). Moreover, in view of the fact that \(\a_{\ell m} = \a_{\ell}\a_{m}\) for all positive integers \(\ell\) and \(m\), it suffices to prove the claim in the case \(\ell = p\) for a prime \(p\). We first show \(f \in S_{k}(\G_{1}(N))\). Note that \(f\) is holomorphic by assumption. The growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. So it remains to prove modularity. To this end, set
-        \[
-          \G_{1}(N;p) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \G_{1}(N):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & 0 \\ \ast & \ast \end{pmatrix} \tmod{p}\right\},
-        \]
-        and observe that \(\G_{1}(N;p) \subset \G_{1}(N)\). Letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N;p)\), a short computation shows
+        The claim is trivial if \(\ell = 1\) so we may assume \(\ell > 1\). Moreover, in view of the fact that \(\a_{\ell m} = \a_{\ell}\a_{m}\) for all positive integers \(\ell\) and \(m\), it suffices to prove the claim in the case \(\ell = p\) for a prime \(p\). We first show \(f \in S_{k}(\G_{1}(N))\). Note that \(f\) is holomorphic by assumption. The growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. So it remains to prove modularity. Letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N;p)\), a short computation shows
         \[
           \a_{p}^{-1}\g\a_{p} = \begin{pmatrix} a & \frac{b}{p} \\ cp & d \end{pmatrix},
         \]
-        and so \(\a_{p}^{-1}\g\a_{p} \in \G_{1}(N)\). Modularity of \(f|_{k}\a_{p}\) then implies \(f|_{k}\g\a_{p} = f|_{k}\a_{p}\). Whence \(f|_{k}\g = f\) upon applying \(|_{k}\a_{p}^{-1}\). But we also have \(f|_{k}T = f\) since \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\G_{1}(N;p),T\>\). So modularity will follow if we can further show \(\<\G_{1}(N;p),T\> = \G_{1}(N)\). To see this, it is clear that
-        \[
-          [\<\G_{1}(N;p),T\>:\G_{1}(N;p)] \ge p.
-        \]
-        We now claim
-        \[
-          [\G_{1}(N):\G_{1}(N;p)] = \begin{cases} p & \text{if \(p \mid N\)}, \\ p+1 & \text{if \(p \nmid N\)}. \end{cases}
-        \]
-        In the case \(p \mid N\), consider the homomorphism
-        \[
-          \phi:\G_{1}(N) \to \Z/p\Z \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto b \tmod{p}.
-        \]
-        induced by natural projection. Clearly \(\phi\) is surjective and the kernel is precisely \(\G_{1}(N;p)\). Whence \([\G_{1}(N):\G_{1}(N;p)] = p\) by the first isomorphism theorem. In the case \(p \nmid N\), consider the homomorphism
-        \[
-          \pi:\G_{1}(N) \to \SL_{2}(\Z/p\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{p},
-        \]
-        given by natural projection. This map is a surjection and to see it, consider \(\SL_{2}(\Z/Np\Z)\). As \(p \nmid N\), the Chinese remainder theorem implies that there is an isomorphism
-        \[
-          \SL_{2}(\Z/Np\Z) \cong \SL_{2}(\Z/N\Z) \op \SL_{2}(\Z/p\Z),
-        \]
-        induced by natural projection. In view of strong approximation for the modular group, it follows that for every \(\begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z/pZ)\) there is a matrix \(\g \in \SL_{2}(Z)\) satisfying
-        \[
-          \g \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \pmod{N} \quad \text{and} \quad \g \equiv \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mod{p}.
-        \]
-        The first condition implies \(\g \in \G_{1}(N)\) and therefore \(\pi\) is surjective. Moreover, we also find that \(\G_{1}(N;p)\) is the preimage under \(\pi\) of the lower triangular matrices in \(\SL_{2}(\Z/p\Z)\) which we denote by \(B_{2}^{-}(\Z/p\Z)\). Whence
-        \[
-          [\G_{1}(N):\G_{1}(N;p)] = [\SL_{2}(\Z/p\Z):B_{2}^{-}(\Z/p\Z)].
-        \]
-        Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. With this result, the previous index computations show \(\<\G_{1}(N;p),T\> = \G_{1}(N)\), regardless of if \(p \mid N\) or not, as desired. This proves modularity and therefore \(f \in \mc{S}_{k}(\G_{1}(N))\).
+        and so \(\a_{p}^{-1}\g\a_{p} \in \G_{1}(N)\). Modularity of \(f|_{k}\a_{p}\) then implies \(f|_{k}\g\a_{p} = f|_{k}\a_{p}\). Whence \(f|_{k}\g = f\) upon applying \(|_{k}\a_{p}^{-1}\). But we also have \(f|_{k}T = f\) since \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\G_{1}(N;p),T\>\) and modularity follows in view of \cref{prop:prime_subgroup_generator}. So \(f \in \mc{S}_{k}(\G_{1}(N))\).
         
-        We may now show \(f\) is identically zero when \(p \nmid N\). Indeed, this is forced by \cref{lemma:vanishing_lemma_modular_forms} since \(f \in \mc{S}_{k}(\G_{1}(N))\) and \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\). It remains to prove \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\) when \(p \mid N\). Holomorphy of \(f\) has been established. The corresponding growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. As for modularity, letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N)\), a short computation shows
+        We may now show \(f\) is identically zero when \(p \nmid N\). Indeed, this is forced by \cref{prop:vanishing_lemma_modular_forms} since \(f \in \mc{S}_{k}(\G_{1}(N))\) and \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\). It remains to prove \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\) when \(p \mid N\). Holomorphy of \(f\) has been established. The corresponding growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. As for modularity, letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N)\), a short computation shows
         \[
           \a_{p}\g\a_{p}^{-1} = \begin{pmatrix} a & bp \\ \frac{c}{p} & d \end{pmatrix},
         \]
-        and so \(\a_{p}\g\a_{p}^{-1} \in \G_{1}\left(\frac{N}{p}\right)\). Now modularity of \(f|_{k}\a_{p}\) implies \(f|_{k}\a_{p}\g = f|_{k}\a_{p}\). Whence \(f|_{k}\a_{p}\g\a_{p}^{-1} = f\) upon applying \(|_{k}\a_{p}^{-1}\). We also have \(f|_{k}T = f\) as \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\a_{p}\G_{1}(N)\a_{p}^{-1},T\>\). So modularity will follow if we can further show \(\<\a_{p}\G_{1}(N)\a_{p}^{-1},T\> = \G_{1}\left(\frac{N}{p}\right)\). Indeed, our previous matrix computations show
+        and so \(\a_{p}\g\a_{p}^{-1} \in \G_{1}\left(\frac{N}{p}\right)\). \todo{XXX}
+        
+        \iffalse
+        Now modularity of \(f|_{k}\a_{p}\) implies \(f|_{k}\a_{p}\g = f|_{k}\a_{p}\). Whence \(f|_{k}\a_{p}\g\a_{p}^{-1} = f\) upon applying \(|_{k}\a_{p}^{-1}\). We also have \(f|_{k}T = f\) as \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\a_{p}\G_{1}(N)\a_{p}^{-1},T\>\). So modularity will follow if we can further show \(\<\a_{p}\G_{1}(N)\a_{p}^{-1},T\> = \G_{1}\left(\frac{N}{p}\right)\). Indeed, our previous matrix computations show
         \[
           \a_{p}\G_{1}(N)\a_{p}^{-1} = \G_{1}\left(\frac{N}{p};p\right),
         \]
         and therefore our previous work implies \(\<\a_{p}\G_{1}(N)\a_{p}^{-1},T\> = \G_{1}\left(\frac{N}{p}\right)\). This proves modularity so that \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\).
+        \fi
       \end{proof}
 
       \todo{XXX}
