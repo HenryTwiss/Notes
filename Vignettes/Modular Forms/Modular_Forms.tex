@@ -2085,7 +2085,7 @@
         \[
           \a_{p}^{-1}\g\a_{p} = \begin{pmatrix} a & \frac{b}{p} \\ cp & d \end{pmatrix},
         \]
-        and so \(\a_{p}^{-1}\g\a_{p} \in \G_{1}(N)\). Modularity of \(f|_{k}\a_{p}\) then implies \(f|_{k}\g\a_{p} = f|_{k}\a_{p}\). Whence \(f|_{k}\g = f\), for all \(\g \in \G_{1}(N;p)\), upon applying \(|_{k}\a_{p}^{-1}\). But we also have \(f|_{k}T = f\) since \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\G_{1}(N;p),T\>\). So modularity we will proved if we can further show \(\<\G_{1}(N;p),T\> = \G_{1}(N)\). To see this, it is clear that
+        and so \(\a_{p}^{-1}\g\a_{p} \in \G_{1}(N)\). Modularity of \(f|_{k}\a_{p}\) then implies \(f|_{k}\g\a_{p} = f|_{k}\a_{p}\). Whence \(f|_{k}\g = f\) upon applying \(|_{k}\a_{p}^{-1}\). But we also have \(f|_{k}T = f\) since \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\G_{1}(N;p),T\>\). So modularity will follow if we can further show \(\<\G_{1}(N;p),T\> = \G_{1}(N)\). To see this, it is clear that
         \[
           [\<\G_{1}(N;p),T\>:\G_{1}(N;p)] \ge p.
         \]
@@ -2113,11 +2113,13 @@
         \[
           [\G_{1}(N):\G_{1}(N;p)] = [\SL_{2}(\Z/p\Z):B_{2}^{-}(\Z/p\Z)].
         \]
-        Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. With this result, the previous index computations show \(\<\G_{1}(N;p),T\> = \G_{1}(N)\), regardless of if \(p \mid N\) or not, as desired. This proves modularity and therefore \(f \in \mc{S}_{k}(\G_{1}(N))\). We now show \(f\) is identically zero when \(p \nmid N\). Indeed, this is forced by \cref{lemma:vanishing_lemma_modular_forms} since \(f \in \mc{S}_{k}(\G_{1}(N))\) and \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\). It remains to show \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\) when \(p \mid N\). Holomorphy of \(f\) has been established. The corresponding growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. So it remains to prove modularity. Letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N)\), a short computation shows
+        Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. With this result, the previous index computations show \(\<\G_{1}(N;p),T\> = \G_{1}(N)\), regardless of if \(p \mid N\) or not, as desired. This proves modularity and therefore \(f \in \mc{S}_{k}(\G_{1}(N))\).
+        
+        We may now show \(f\) is identically zero when \(p \nmid N\). Indeed, this is forced by \cref{lemma:vanishing_lemma_modular_forms} since \(f \in \mc{S}_{k}(\G_{1}(N))\) and \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\). It remains to prove \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\) when \(p \mid N\). Holomorphy of \(f\) has been established. The corresponding growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. As for modularity, letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N)\), a short computation shows
         \[
           \a_{p}\g\a_{p}^{-1} = \begin{pmatrix} a & bp \\ \frac{c}{p} & d \end{pmatrix},
         \]
-        and so \(\a_{p}\g\a_{p}^{-1} \in \G_{1}\left(\frac{N}{p}\right)\). Now modularity of \(f|_{k}\a_{p}\) implies \(f|_{k}\a_{p}\g = f|_{k}\a_{p}\). Whence \(f|_{k}\a_{p}\g\a_{p}^{-1} = f\), for all \(\g \in \G_{1}(N)\), upon applying \(|_{k}\a_{p}^{-1}\). We also have \(f|_{k}T = f\) as \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\a_{p}\G_{1}(N)\a_{p}^{-1},T\>\). So modularity will follow if we can further show \(\<\a_{p}\G_{1}(N)\a_{p}^{-1},T\> = \G_{1}\left(\frac{N}{p}\right)\). Indeed, our previous matrix computations show
+        and so \(\a_{p}\g\a_{p}^{-1} \in \G_{1}\left(\frac{N}{p}\right)\). Now modularity of \(f|_{k}\a_{p}\) implies \(f|_{k}\a_{p}\g = f|_{k}\a_{p}\). Whence \(f|_{k}\a_{p}\g\a_{p}^{-1} = f\) upon applying \(|_{k}\a_{p}^{-1}\). We also have \(f|_{k}T = f\) as \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\a_{p}\G_{1}(N)\a_{p}^{-1},T\>\). So modularity will follow if we can further show \(\<\a_{p}\G_{1}(N)\a_{p}^{-1},T\> = \G_{1}\left(\frac{N}{p}\right)\). Indeed, our previous matrix computations show
         \[
           \a_{p}\G_{1}(N)\a_{p}^{-1} = \G_{1}\left(\frac{N}{p};p\right),
         \]
