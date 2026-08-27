@@ -1,121 +1,122 @@
 \begin{theindex}
 
-  \item Atkin-Lehner operator, \hyperpage{54}
+  \item Atkin-Lehner operator, \hyperpage{56}
 
   \indexspace
 
-  \item Bruhat decomposition, \hyperpage{16}
+  \item Bruhat decomposition, \hyperpage{17}
 
   \indexspace
 
-  \item character, \hyperpage{22}
-  \item cocycle condition, \hyperpage{18}
+  \item character, \hyperpage{23}
+  \item cocycle condition, \hyperpage{19}
+  \item compatible, \hyperpage{33}
   \item congruence subgroup, \hyperpage{3}
-  \item convolume, \hyperpage{8}
-  \item cusp, \hyperpage{13}
-  \item cusp class, \hyperpage{13}
-  \item cusp form, \hyperpage{19}
+  \item convolume, \hyperpage{9}
+  \item cusp, \hyperpage{14}
+  \item cusp class, \hyperpage{14}
+  \item cusp form, \hyperpage{20}
 
   \indexspace
 
-  \item diamond operator, \hyperpage{42}
-  \item double coset operator, \hyperpage{32}
-  \item double slash operator, \hyperpage{32}
+  \item diamond operator, \hyperpage{44}
+  \item double coset operator, \hyperpage{34}
+  \item double slash operator, \hyperpage{33}
 
   \indexspace
 
-  \item eigenform, \hyperpage{52}
-  \item Eisenstein series, \hyperpage{24}
-  \item exponential decay at the cusps, \hyperpage{21}
+  \item eigenform, \hyperpage{54}
+  \item Eisenstein series, \hyperpage{25}
+  \item exponential decay at the cusps, \hyperpage{22}
 
   \indexspace
 
-  \item first kind, \hyperpage{8}
-  \item folding, \hyperpage{15}
-  \item Fourier coefficients, \hyperpage{20}
-  \item Fourier series, \hyperpage{20}
-  \item Fuchsian, \hyperpage{8}
+  \item first kind, \hyperpage{9}
+  \item folding, \hyperpage{16}
+  \item Fourier coefficients, \hyperpage{21}
+  \item Fourier series, \hyperpage{21}
+  \item Fuchsian, \hyperpage{9}
 
   \indexspace
 
-  \item growth condition, \hyperpage{19}
+  \item growth condition, \hyperpage{20}
 
   \indexspace
 
-  \item Hecke bound, \hyperpage{21}
+  \item Hecke bound, \hyperpage{22}
   \item Hecke congruence subgroup, \hyperpage{5}
-  \item Hecke eigenform, \hyperpage{52}
-  \item Hecke eigenvalue, \hyperpage{52}
-  \item Hecke normalization, \hyperpage{52}
-  \item Hecke operator, \hyperpage{44}
-  \item Hecke relations, \hyperpage{52}
-  \item holomorphic at the cusps, \hyperpage{19}
+  \item Hecke eigenform, \hyperpage{54}
+  \item Hecke eigenvalue, \hyperpage{54}
+  \item Hecke normalization, \hyperpage{54}
+  \item Hecke operator, \hyperpage{46}
+  \item Hecke relations, \hyperpage{54}
+  \item holomorphic at the cusps, \hyperpage{20}
   \item hyperbolic measure, \hyperpage{2}
 
   \indexspace
 
-  \item index, \hyperpage{22}
-  \item invariant, \hyperpage{18}
+  \item index, \hyperpage{23}
+  \item invariant, \hyperpage{19}
 
   \indexspace
 
-  \item Kloosterman sum, \hyperpage{17}
+  \item Kloosterman sum, \hyperpage{18}
 
   \indexspace
 
-  \item level, \hyperpage{3}, \hyperpage{12}, \hyperpage{19}
+  \item level, \hyperpage{3}, \hyperpage{13}, \hyperpage{20}
 
   \indexspace
 
-  \item modular, \hyperpage{19}
-  \item modular curve, \hyperpage{12}
-  \item modular form, \hyperpage{19}
+  \item modular, \hyperpage{20}
+  \item modular curve, \hyperpage{13}
+  \item modular form, \hyperpage{20}
   \item modular group, \hyperpage{2}
-  \item modularity condition, \hyperpage{19}
+  \item modularity condition, \hyperpage{20}
 
   \indexspace
 
-  \item nebentypus, \hyperpage{19}
-  \item newform, \hyperpage{54}
-  \item newforms, \hyperpage{54}
+  \item nebentypus, \hyperpage{20}
+  \item newform, \hyperpage{56}
+  \item newforms, \hyperpage{56}
 
   \indexspace
 
-  \item oldform, \hyperpage{54}
-  \item oldforms, \hyperpage{54}
+  \item oldform, \hyperpage{56}
+  \item oldforms, \hyperpage{56}
 
   \indexspace
 
-  \item Petersson inner product, \hyperpage{30}
-  \item Petersson normalization, \hyperpage{52}
-  \item Poincar\'e series, \hyperpage{22}
+  \item Petersson inner product, \hyperpage{31}
+  \item Petersson normalization, \hyperpage{54}
+  \item Poincar\'e series, \hyperpage{23}
   \item principal congruence subgroup, \hyperpage{3}
 
   \indexspace
 
-  \item reduced, \hyperpage{14}
-  \item regular, \hyperpage{19}
+  \item reduced, \hyperpage{15}
+  \item regular, \hyperpage{20}
 
   \indexspace
 
-  \item Sali\'e sum, \hyperpage{17}
-  \item scaling matrix, \hyperpage{14}
-  \item slash operator, \hyperpage{18}
-  \item standard fundamental domain, \hyperpage{9}
+  \item Sali\'e sum, \hyperpage{18}
+  \item scaling matrix, \hyperpage{15}
+  \item slash operator, \hyperpage{19}
+  \item standard fundamental domain, \hyperpage{10}
   \item strong approximation, \hyperpage{4}
 
   \indexspace
 
-  \item unfolding, \hyperpage{15}
-  \item unfolding/folding method, \hyperpage{15}
+  \item unfolding, \hyperpage{16}
+  \item unfolding/folding method, \hyperpage{16}
 
   \indexspace
 
-  \item valence formula, \hyperpage{25}
+  \item valence formula, \hyperpage{26}
 
   \indexspace
 
-  \item weight, \hyperpage{19}
-  \item width, \hyperpage{13}
+  \item weight, \hyperpage{20}
+  \item width, \hyperpage{14}
 
 \end{theindex}

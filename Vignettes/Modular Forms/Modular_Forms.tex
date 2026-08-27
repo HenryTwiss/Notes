@@ -43,7 +43,7 @@
         \]
         This means \(d\mu\) is \(\GL_{2}^{+}(\R)\)-invariant.
       \end{proof}
-    \subsection{Congruence Subgroups}
+    \subsection{\todo{Congruence Subgroups}}
       To define congruence subgroups, we first need to introduce an associated group. We call \(\SL_{2}(\Z)\) the \textbf{modular group}\index{modular group} which is the group of matrices with integral entries and of determinant \(1\). We will distinguish the matrices
       \[
         S = \begin{pmatrix} 0 &-1 \\ 1 & 0 \end{pmatrix} \quad \text{and} \quad T = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}.,
@@ -104,7 +104,7 @@
         As \(\G(N) = (I+N\Mat_{2}(\Z)) \cap \SL_{2}(\Z)\), it follows that \(\a\G(M)\a^{-1} \subseteq \G(N)\). Whence \(\G(M) \subseteq \a^{-1}\G\a\) because \(\G\) is of level \(N\). Intersecting with \(\SL_{2}(\Z)\) proves the first statement. The second statement is immediate.
       \end{proof}
 
-      Note that in the case \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\), normality of principal congruence subgroups force \(\G\) and \(\a^{-1}\G\a\) to be of the same level. In particular, this will always happen whenever we conjugate by elements of the modular group.
+      Note that in the case \(\a^{-1}\G\a \subseteq \SL_{2}(\Z)\), normality of principal congruence subgroups in the modular group force \(\G\) and \(\a^{-1}\G\a\) to be of the same level. In particular, this will always happen whenever we conjugate by elements of the modular group.
       
       Also, it turns out that the aforementioned homomorphism is surjective. This is known as \textbf{strong approximation}\index{strong approximation} for the modular group.
 
@@ -146,16 +146,56 @@
       \subsubsection*{Hecke Congruence Subgroups}
         We now distinguish some important classes of congruence subgroups other than the principal ones. The most important of which are the congruence subgroups
         \[
-          \G_{1}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \tmod{N}\right\},
+          \G_{0}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix} \tmod{N}\right\},
         \]
         and
         \[
-          \G_{0}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix} \tmod{N}\right\},
+          \G_{1}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \SL_{2}(\Z):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \tmod{N}\right\},
         \]
-        both of which are of level \(N\). These congruence subgroups consist of the matrices which reduce to unipotent upper triangular and upper triangular modulo \(N\) respectively. The latter subgroup \(\G_{0}(N)\) is called the \textbf{Hecke congruence subgroup}\index{Hecke congruence subgroup} of level \(N\). Note that we have the chain
+        both of which are of level \(N\). These congruence subgroups consist of the matrices which reduce upper triangular and unipotent upper triangular matrices modulo \(N\) respectively. The former subgroup \(\G_{0}(N)\) is called the \textbf{Hecke congruence subgroup}\index{Hecke congruence subgroup} of level \(N\). Note that we have the chain
         \[
           \G(N) \subseteq \G_{1}(N) \subseteq \G_{0}(N).
         \]
+        We can also deduce a formula for the indexes of these congruence subgroups.
+
+        \begin{proposition}\label{prop:Hecke_congruence_index_computations}
+          Let \(N\) be a positive integer. Then
+          \[
+            d_{\G_{0}(N)} = N\prod_{p \mid N}\left(1+\frac{1}{p}\right) \quad \text{and} \quad d_{\G_{1}(N)} = N^{2}\prod_{p \mid N}\left(1-\frac{1}{p^{2}}\right).
+          \]
+        \end{proposition}
+        \begin{proof}
+          To prove the formula for \(d_{\G_{0}(N)}\), consider the homomorphism
+          \[
+            \pi:\SL_{2}(\Z) \to \SL_{2}(\Z/N\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{N},
+          \]
+          given by natural projection. Now \(\pi\) is surjective by strong approximation for the modular group and recall that \(\ker\pi = \G(N)\). Let \(B_{2}^{+}(\Z/N\Z)\) be the subgroup of upper triangular matrices in \(\SL_{2}(\Z/N\Z)\). Clearly \(\G_{0}(N)\) is the inverse image of \(B_{2}^{+}(\Z/N\Z)\) under \(\pi\). As \(\G_{0}(N)\) contains \(\G(N)\), the fourth isomorphism theorem implies
+          \[
+            d_{\G_{0}(N)} = [\SL_{2}(\Z/N\Z):B_{2}^{+}(\Z/N\Z)].
+          \]
+          As the Chinese remainder theorem gives isomorphisms
+          \[
+            \SL_{2}(\Z/N\Z) \cong \bigop_{p^{r} \mid\mid N}\SL_{2}(\Z/p^{r}\Z) \quad \text{and} \quad B_{2}^{+}(\Z/N\Z) \cong \bigop_{p^{r} \mid\mid N}B_{2}^{+}(\Z/p^{r}\Z),
+          \]
+          induced by natural projection, we further have
+          \[
+            [\SL_{2}(\Z/N\Z):B_{2}^{+}(\Z/N\Z)] = \prod_{p^{k} \mid\mid N}[\SL_{2}(\Z/p^{k}\Z):B_{2}^{+}(\Z/p^{k}\Z)].
+          \]
+          Therefore we are reduced to computing \([\SL_{2}(\Z/p^{k}\Z):B_{2}^{+}(\Z/p^{k}\Z)]\). Since \(|\SL_{2}(\Z/p^{r}\Z)| = p^{3r-2}(p^{2}-1)\) while \(|B_{2}^{+}(\Z/p^{r}\Z)| = p^{2r-1}(p-1)\), we conclude
+          \[
+            [\SL_{2}(\Z/N\Z):B_{2}^{+}(\Z/N\Z)] = p^{r}\left(1+\frac{1}{p}\right),
+          \]
+          and the formula for \(d_{\G_{0}(N)}\) follows. To prove the formula for \(d_{\G_{1}(N)}\), consider the homomorphism
+          \[
+            \phi:\G_{0}(N) \to (\Z/N\Z)^{\ast} \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto a \tmod{N},
+          \]
+          induced by natural projection. Clearly \(\phi\) is surjective and \(\ker\phi = \G_{1}(N)\). Whence
+          \[
+            [\G_{0}(N):\G_{1}(N)] = \vphi(N).
+          \]
+          As \(\vphi(N) = N\prod_{p \mid N}\left(1-\frac{1}{p}\right)\), the formula for \(d_{\G_{1}(N)}\) follows at once from that of \(d_{\G_{0}(N)}\).
+        \end{proof}
+
         The structure of \(\G_{0}(N)\) can be reduced to that of \(\G_{1}(N)\) provided we keep track of the bottom right entry modulo \(N\). This is established through the surjective homomorphism
         \[
           \G_{0}(N) \to (\Z/N\Z)^{\ast} \qquad \begin{pmatrix} a & b \\ c & d\end{pmatrix} \mapsto d \tmod{N},
@@ -176,38 +216,42 @@
         \[
           \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\g_{d} \equiv \begin{pmatrix} \ast & \ast \\ 0 & d \end{pmatrix} \pmod{N},
         \]
-        which is to say that they have the same bottom right entry modulo \(N\). It will further be useful to decompose \(\G_{1}(N)\) in terms of the top right entry modulo an integer \(\ell\). Consider
+        which is to say that they have the same bottom right entry modulo \(N\). It will further be useful to decompose \(\G_{0}(N)\) in terms of the top right entry modulo an integer \(\ell\). Let
         \[
-          \G_{1}(N;\ell) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \G_{1}(N):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & 0 \\ \ast & \ast \end{pmatrix} \tmod{\ell}\right\},
+          \G_{0}(N;\ell) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \G_{1}(N):\begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} \ast & 0 \\ \ast & \ast \end{pmatrix} \tmod{\ell}\right\},
         \]
         This is a congruence subgroup of level \(N\) satisfying
         \[
-          \G(N) \subseteq \G_{1}(N;\ell) \subseteq \G_{1}(N).
+          \G(N) \subseteq \G_{0}(N;\ell) \subseteq \G_{0}(N).
         \]
-        Note that \(\G_{1}(N;\ell)\) does not contain \(T\). However, this is the only additional matrix outside of \(\G_{1}(N;\ell)\) needed to generate \(\G_{1}(N)\) at least in the case \(\ell = p\) for a prime \(p\).
+        Note that \(\G_{0}(N;\ell)\) does not contain \(T\). However, this is the only additional matrix outside of \(\G_{0}(N;\ell)\) needed to generate \(\G_{0}(N)\) at least in the case \(\ell = p\) for a prime \(p\).
 
         \begin{proposition}\label{prop:prime_subgroup_generator_upper_triangular}
           Let \(N\) be a positive integer and \(p\) be a prime. Then
           \[
-            \G_{1}(N) = \<\G_{1}(N;p),T\>.
+            \G_{0}(N) = \<\G_{0}(N;p),T\>.
           \]
         \end{proposition}
         \begin{proof}
           It is clear that
           \[
-            [\<\G_{1}(N;p),T\>:\G_{1}(N;p)] \ge p.
+            [\<\G_{0}(N;p),T\>:\G_{0}(N;p)] \ge p.
           \]
           We now claim
           \[
-            [\G_{1}(N):\G_{1}(N;p)] = \begin{cases} p & \text{if \(p \mid N\)}, \\ p+1 & \text{if \(p \nmid N\)}. \end{cases}
+            [\G_{0}(N):\G_{0}(N;p)] = \begin{cases} p & \text{if \(p \mid N\)}, \\ p+1 & \text{if \(p \nmid N\)}. \end{cases}
           \]
           In the case \(p \mid N\), consider the homomorphism
           \[
-            \phi:\G_{1}(N) \to \Z/p\Z \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto b \tmod{p}.
+            \phi:\G_{0}(N) \to \Z/p\Z \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto b \tmod{p}.
           \]
-          induced by natural projection. Clearly \(\phi\) is surjective and the kernel is precisely \(\G_{1}(N;p)\). Whence \([\G_{1}(N):\G_{1}(N;p)] = p\) by the first isomorphism theorem. In the case \(p \nmid N\), consider the homomorphism
+          induced by natural projection. Clearly \(\phi\) is surjective and \(\ker\phi = \G_{0}(N;p)\). Whence
           \[
-            \pi:\G_{1}(N) \to \SL_{2}(\Z/p\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{p},
+            [\G_{0}(N):\G_{0}(N;p)] = p,
+          \]
+          by the first isomorphism theorem. In the case \(p \nmid N\), consider the homomorphism
+          \[
+            \pi:\G_{0}(N) \to \SL_{2}(\Z/p\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{p},
           \]
           given by natural projection. This map is surjective and to see it consider \(\SL_{2}(\Z/Np\Z)\). As \(p \nmid N\), the Chinese remainder theorem implies that there is an isomorphism
           \[
@@ -215,59 +259,42 @@
           \]
           induced by natural projection. In view of strong approximation for the modular group, it follows that for every \(\begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z/p\Z)\) there is a matrix \(\g \in \SL_{2}(\Z)\) satisfying
           \[
-            \g \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \pmod{N} \quad \text{and} \quad \g \equiv \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mod{p}.
+            \g \equiv \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix} \pmod{N} \quad \text{and} \quad \g \equiv \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mod{p}.
           \]
-          The first condition implies \(\g \in \G_{1}(N)\) and therefore \(\pi\) is surjective. Moreover, we also find that \(\G_{1}(N;p)\) is the preimage under \(\pi\) of the lower triangular matrices in \(\SL_{2}(\Z/p\Z)\) which we denote by \(B_{2}^{-}(\Z/p\Z)\). Whence
+          The first condition implies \(\g \in \G_{0}(N)\) and therefore \(\pi\) is surjective. Moreover, we also find that \(\G_{0}(N;p)\) is the preimage under \(\pi\) of the lower triangular matrices in \(\SL_{2}(\Z/p\Z)\) which we denote by \(B_{2}^{-}(\Z/p\Z)\). Whence
           \[
-            [\G_{1}(N):\G_{1}(N;p)] = [\SL_{2}(\Z/p\Z):B_{2}^{-}(\Z/p\Z)].
+            [\G_{0}(N):\G_{0}(N;p)] = [\SL_{2}(\Z/p\Z):B_{2}^{-}(\Z/p\Z)].
           \]
-          Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. Since
+          Now \(|\SL_{2}(\Z/p\Z)| = p(p^{2}-1)\) while \(|B_{2}^{-}(\Z/p\Z)| = p(p-1)\). Therefore
           \[
-            [\G_{1}(N):\<\G_{1}(N;p),T\>] = \frac{[\G_{1}(N):\G_{1}(N;p)]}{[\<\G_{1}(N;p),T\>:\G_{1}(N;p)]},
+            [\G_{0}(N):\G_{0}(N;p)] = p+1,
           \]
-          we find that \([\G_{1}(N):\<\G_{1}(N;p),T\>] \le \frac{p+1}{p}\) in either case. But then \(\G_{1}(N) = \<\G_{1}(N;p),T\>\) as desired.
+          completing the claim. But then
+          \[
+            [\G_{0}(N):\<\G_{0}(N;p),T\>] \le \frac{p+1}{p},
+          \]
+          in either case and so \(\G_{0}(N) = \<\G_{0}(N;p),T\>\) as desired.
         \end{proof}
 
-        Our last result concerns congruence subgroups of different levels. For any divisor \(\ell\) of \(N\), set \(\a_{\ell} = \begin{psmallmatrix} \ell & 0 \\ 0 & 1 \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\). Now \(\G_{1}\left(\frac{N}{\ell}\right)\) is a congruence subgroup as well as \(\G_{1}(N)\) and these congruence subgroups contain \(V^{\frac{N}{\ell}}\) and \(V^{N}\) respectively. Moreover, a short computation shows
+        Our last result concerns Hecke congruence subgroups of different levels. For any divisor \(\ell\) of \(N\), set \(\a_{\ell} = \begin{psmallmatrix} \ell & 0 \\ 0 & 1 \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\). Now \(\G_{0}\left(\frac{N}{\ell}\right)\) is a congruence subgroup as well as \(\G_{0}(N)\) and these congruence subgroups contain \(V^{\frac{N}{\ell}}\) and \(V^{N}\) respectively. Moreover, a short computation shows
         \[
           \a_{\ell}V^{N}\a_{\ell} = V^{\frac{N}{\ell}}.
         \]
-        While \(\G_{1}(N)\) does not contain \(V^{\frac{N}{\ell}}\), this is the only additional matrix needed to generate \(\G_{1}\left(\frac{N}{\ell}\right)\) at least when \(\ell = p\) for a prime \(p\).
+        While \(\G_{0}(N)\) does not contain \(V^{\frac{N}{\ell}}\), this is the only additional matrix needed to generate \(\G_{0}\left(\frac{N}{\ell}\right)\) at least when \(\ell = p\) for a prime \(p\).
 
         \begin{proposition}\label{prop:prime_subgroup_generator_lower_triangular}
           Let \(N\) be a positive integer and \(p\) be a prime with \(p \mid N\). Then
           \[
-            \G_{1}\left(\frac{N}{p}\right) = \<\G_{1}(N),\a_{p}V^{N}\a_{p}\>.
+            \G_{0}\left(\frac{N}{p}\right) = \left\<\G_{0}(N),V^{\frac{N}{p}}\right\>.
           \]
         \end{proposition}
         \begin{proof}
-          \iffalse In the case \(p^{2} \mid N\), consider the homomorphism
+          Using \cref{prop:Hecke_congruence_index_computations}, we find that
           \[
-            \phi:\G_{1}\left(\frac{N}{p}\right) \to \Z/p\Z \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \frac{cp}{N} \tmod{p}.
+            \left[\G_{0}\left(\frac{N}{p}\right):\G_{0}(N)\right] = \begin{cases} p & \text{if \(p^{2} \mid N\)}, \\ p-1 & \text{if \(p^{2} \nmid N\)}. \end{cases}
           \]
-          induced by natural projection. Clearly \(\phi\) is surjective and the kernel is precisely \(\G_{1}(N;p)\). Whence \([\G_{1}(N):\G_{1}(N;p)] = p\) by the first isomorphism theorem. In the case \(p \nmid N\), consider the homomorphism
-          \[
-            \pi:\G_{1}(N) \to \SL_{2}(\Z/p\Z) \qquad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tmod{p},
-          \]
-          given by natural projection. This map is surjective and to see it consider \(\SL_{2}(\Z/Np\Z)\). As \(p \nmid N\), the Chinese remainder theorem implies that there is an isomorphism
-          \[
-            \SL_{2}(\Z/Np\Z) \cong \SL_{2}(\Z/N\Z) \op \SL_{2}(\Z/p\Z),
-          \]
-          induced by natural projection. In view of strong approximation for the modular group, it follows that for every \(\begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z/p\Z)\) there is a matrix \(\g \in \SL_{2}(\Z)\) satisfying
-          \[
-            \g \equiv \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \pmod{N} \quad \text{and} \quad \g \equiv \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mod{p}.
-          \]
-          The first condition implies \(\g \in \G_{1}(N)\) and therefore \(\pi\) is surjective. Moreover, we also find that \(\G_{1}(N;p)\) is the preimage under \(\pi\) of the lower triangular matrices in \(\SL_{2}(\Z/p\Z)\) which we denote by \(B_{2}^{-}(\Z/p\Z)\). Whence
-          \[
-            [\G_{1}(N):\G_{1}(N;p)] = [\SL_{2}(\Z/p\Z):B_{2}^{-}(\Z/p\Z)].
-          \]
-          Now \(\SL_{2}(\Z/p\Z)\) has \(p(p^{2}-1)\) many elements while \(B_{2}^{-}(\Z/p\Z)\) has \(p(p-1)\) many. Therefore \([\G_{1}(N):\G_{1}(N;p)] = p+1\) completing the claim. Since
-          \[
-            [\G_{1}(N):\<\G_{1}(N;p),T\>] = \frac{[\G_{1}(N):\G_{1}(N;p)]}{[\<\G_{1}(N;p),T\>:\G_{1}(N;p)]},
-          \]
-          we find that \([\G_{1}(N):\<\G_{1}(N;p),T\>] \le \frac{p+1}{p}\) in either case. But then \(\G_{1}(N) = \<\G_{1}(N;p),T\>\) as desired.\fi
+          \todo{XXX}
         \end{proof}
-        
     \subsection{Fuchsian Groups and Modular Curves}
       We first restrict our group action on the upper-half plane to \(\SL_{2}(\R)\). Note that for any \(\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\R)\), \cref{equ:Mobius_transformation_imaginary_part} simplifies to
       \begin{equation}\label{equ:Mobius_transformation_imaginary_part_simplified}
@@ -394,7 +421,7 @@
       \[
         \mc{F}_{\G} = \bigcup_{\b \in \G\backslash\SL_{2}(\Z)}\b\mc{F},
       \] 
-      is a fundamental domain for \(\GH\) which is obtained from the standard fundamental domain using representatives of orbits of \(\G\backslash\SL_{2}(\Z)\).
+      is a fundamental domain for \(\GH\) which is obtained from the standard fundamental domain using representatives of cosets of \(\G\backslash\SL_{2}(\Z)\).
 
       \begin{proposition}\label{prop:fundamental_domain_congruence_subgroup}
         \(\mc{F}_{\G}\) is a fundamental domain for \(\GH\).
@@ -614,7 +641,7 @@
       \]
       where none of the double cosets \(\W_{c/d}\) are empty.
 
-      We will now introduce two type of exponential sum associated to pairs of cusps. These are types of Kloosterman and Sali\'e sums. We being with the Kloosterman sums. For any \(c \in \mc{C}_{\mf{a},\mf{b}}\) and integers \(m\) and \(n\), the \textbf{Kloosterman sum}\index{Kloosterman sum} \(K_{\mf{a},\mf{b}}(m,n,c)\) relative to \(\mf{a}\) and \(\mf{b}\) is defined by
+      We will now introduce two type of exponential sum associated to pairs of cusps. These are types of Kloosterman and Sali\'e sums. We begin with the Kloosterman sums. For any \(c \in \mc{C}_{\mf{a},\mf{b}}\) and integers \(m\) and \(n\), the \textbf{Kloosterman sum}\index{Kloosterman sum} \(K_{\mf{a},\mf{b}}(m,n,c)\) relative to \(\mf{a}\) and \(\mf{b}\) is defined by
       \[
         K_{\mf{a},\mf{b}}(m,n,c) = \sum_{\substack{d \in \mc{D}_{\mf{a},\mf{b}}(c) \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}e\left(\frac{ma+nd}{c}\right).
       \]
@@ -626,7 +653,7 @@
       \[
         S_{\chi,\mf{a},\mf{b}}(m,n,c) = \sum_{\substack{d \in \mc{D}_{\mf{a},\mf{b}}(c) \\ \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}}}\chi(d)e\left(\frac{ma+nd}{c}\right).
       \]
-      Similar as before, this sum is well-defined since \(a\) and \(d\) are determined modulo \(c\) by the Bruhat decomposition and that the \(\chi\) is a character modulo \(c\). 
+      Similar as before, this sum is well-defined since \(a\) and \(d\) are determined modulo \(c\) by the Bruhat decomposition and that \(\chi\) is a character modulo \(c\). 
       \subsubsection*{Hecke Congruence Subgroups}
         In the case of the Hecke congruence subgroup \(\G_{0}(N)\), the Bruhat decomposition simplifies and we recover the usual Kloosterman and Sali\'e sums. As the entries \(a\) and \(d\) in \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix}\) are determined modulo \(c\), we find that \(d\) is the inverse of \(a\) modulo \(c\) because \(\det(\w_{c/d}) = 1\). Also, \(\mc{C}_{\infty,\infty} = N\Z_{+}\) and \(\mc{D}_{\infty,\infty}(c) = (\Z/c\Z)^{\ast}\) because if \(\g = \begin{psmallmatrix} \ast & \ast \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) then \(c \equiv 0 \tmod{N}\) and we must have \((c,d) = 1\) as \(\det(\g) = 1\). Moreover, every such pair gives rise to a matrix in \(\G_{0}(N)\). Whence
       \[
@@ -674,10 +701,10 @@
       \]
       for \(f,g \in C(\H)\), nonnegative integers \(k\) and \(\ell\), and any \(\a,\a' \in \GL_{2}^{+}(\Q)\). For fixed \(k\), an operator on \(C(\H)\) is said to be \textbf{invariant}\index{invariant} if it commutes with the slash operator \(|_{k}\a\) for every \(\a \in \SL_{2}(\Q)\).
       
-      We can now introduce modular forms. Let \(\G\) be a congruence subgroup of level \(N\) and \(\vt:\G \to \C^{\ast}\) be a finite order homomorphism. We say that a function \(f:\H \to \C\) is \textbf{modular form}\index{modular form} on \(\GH\) of \textbf{weight}\index{weight} \(k\), \textbf{level}\index{level} \(N\), and \textbf{nebentypus}\index{nebentypus} \(\vt\) if the following properties are satisfied:
+      We can now introduce modular forms. Let \(\G\) be a congruence subgroup of level \(N\) and \(\rho:\G \to \C^{\ast}\) be a finite order homomorphism. We say that a function \(f:\H \to \C\) is \textbf{modular form}\index{modular form} on \(\GH\) of \textbf{weight}\index{weight} \(k\), \textbf{level}\index{level} \(N\), and \textbf{nebentypus}\index{nebentypus} \(\rho\) if the following properties are satisfied:
       \begin{enumerate}[label*=(\roman*)]
         \item \(f\) is holomorphic on \(\H\).
-        \item \((f|_{k}\g)(z) = \vt(\g)f(z)\) for all \(\g \in \G\).
+        \item \((f|_{k}\g)(z) = \rho(\g)f(z)\) for all \(\g \in \G\).
         \item \((f|_{k}\g)(z) = O(1)\) for all \(\g \in \SL_{2}(\Z)\).
       \end{enumerate}
       Furthermore, we say \(f\) is a \textbf{cusp form}\index{cusp form} if the additional property is satisfied:
@@ -690,9 +717,9 @@
       \end{enumerate}
       Property (ii) is called the \textbf{modularity condition}\index{modularity condition} and we say \(f\) is \textbf{modular}\index{modular}. The modularity condition can equivalently be expressed as
       \[
-        f(\g z) = \vt(\g)j(\g,z)^{k}f(z).
+        f(\g z) = \rho(\g)j(\g,z)^{k}f(z).
       \]
-      We write \(n_{\vt}\) for the order of the nebentypus so that \(\vt\) takes its values in the \(n_{\vt}\)-th roots of unity. Moreover, we say that \(\vt\) is \textbf{regular}\index{regular} at a cusp \(\mf{a}\) if \(\vt(\g_{\mf{a}}) = 1\). Equivalently, \(\vt(\g) = 1\) for every \(\g \in \G_{\mf{a}}\). Property (iii) is called the \textbf{growth condition}\index{growth condition} and we say \(f\) is \textbf{holomorphic at the cusps}\index{holomorphic at the cusps}. By modularity, it suffices to verify the growth condition for a set of scaling matrices associated to a complete set of \(\G\)-inequivalent cusps. Therefore we only have to check this condition for finitely many matrices since the number of cusp classes is finite. Also, the growth condition is equivalent to \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\). To see this, we require a lemma.
+      We write \(n_{\rho}\) for the order of the nebentypus so that \(\rho\) takes its values in the \(n_{\rho}\)-th roots of unity. Moreover, we say that \(\rho\) is \textbf{regular}\index{regular} at a cusp \(\mf{a}\) if \(\rho(\g_{\mf{a}}) = 1\). Equivalently, \(\rho(\g) = 1\) for every \(\g \in \G_{\mf{a}}\). Property (iii) is called the \textbf{growth condition}\index{growth condition} and we say \(f\) is \textbf{holomorphic at the cusps}\index{holomorphic at the cusps}. By modularity, it suffices to verify the growth condition for a set of scaling matrices associated to a complete set of \(\G\)-inequivalent cusps. Therefore we only have to check this condition for finitely many matrices since the number of cusp classes is finite. Also, the growth condition is equivalent to \((f|_{k}\a)(z) = O(1)\) for all \(\a \in \GL_{2}^{+}(\Q)\). To see this, we require a lemma.
 
       \begin{lemma}
         Every \(\a \in \GL_{2}^{+}(\Q)\) can be written as \(\a = \g\eta\) for some \(\g \in \SL_{2}(\Z)\) and \(\eta \in \GL_{2}^{+}(\Q)\) with \(\eta = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix}\).
@@ -712,18 +739,18 @@
       and as \(j(\eta,z)\) is a constant, we have \((f|_{k}\a)(z) = O(1)\) proving the forward implication. The reverse implication is clear since \(\SL_{2}(\Z) \subset \GL_{2}^{+}(\Q)\).
       
       \begin{remark}\label{rem:odd_weight_modular_forms}
-        If \(f\) is a weight \(k\) modular form with nebentypus \(\vt\) on \(\GH\) and \(-I \in \G\) then modularity implies
+        If \(f\) is a weight \(k\) modular form with nebentypus \(\rho\) on \(\GH\) and \(-I \in \G\) then modularity implies
         \[
-          f(z) = \vt(-I)(-1)^{k}f(z).
+          f(z) = \rho(-I)(-1)^{k}f(z).
         \]
-        Therefore \(\vt(-I) = (-1)^{k}\). This means \(\vt\) cannot be the identity if \(k\) is odd. In particular, there are no nonzero modular forms of odd weight with trivial nebentypus on \(\SL_{2}(\Z)\).  
+        Therefore \(\rho(-I) = (-1)^{k}\). This means \(\rho\) cannot be the identity if \(k\) is odd. In particular, there are no nonzero modular forms of odd weight with trivial nebentypus on \(\SL_{2}(\Z)\).  
       \end{remark}
       
       Modular forms also admit Fourier series expansions. First observe that modularity implies
       \[
-        (f|_{k}\s_{\mf{a}})(z+1) = \vt(\g_{\mf{a}})(f|_{k}\s_{\mf{a}})(z),
+        (f|_{k}\s_{\mf{a}})(z+1) = \rho(\g_{\mf{a}})(f|_{k}\s_{\mf{a}})(z),
       \]
-      which is to say \(f|_{k}\s_{\mf{a}}\) is \(1\)-periodic up to the constant factor \(\vt(\g_{\mf{a}})\). This means we only need to verify the growth condition as \(y \to \infty\). In any case, as \(f|_{k}\s_{\mf{a}}\) is also smooth, it admits an absolutely and uniformly convergent Fourier series expansion. So we may write
+      which is to say \(f|_{k}\s_{\mf{a}}\) is \(1\)-periodic up to the constant factor \(\rho(\g_{\mf{a}})\). This means we only need to verify the growth condition as \(y \to \infty\). In any case, as \(f|_{k}\s_{\mf{a}}\) is also smooth, it admits an absolutely and uniformly convergent Fourier series expansion. So we may write
       \[
         (f|_{k}\s_{\mf{a}})(z) = \sum_{n \ge 0}a_{\mf{a}}(y,n)e(nx),
       \]
@@ -749,9 +776,9 @@
       \end{equation}
       Also, from property (iv) we find that \(f\) is a cusp form if and only if \(a_{\mf{a}}(0) = 0\) for every cusp \(\mf{a}\). Moreover, the Fourier coefficients corresponding to \(\G\)-equivalent cusps have a simple relationship. Suppose \(\mf{b}\) and \(\mf{a}\) are \(\G\)-equivalent cusps so that \(\g\mf{b} = \mf{a}\) for some \(\g \in \G\). Then for associated scaling matrices \(\s_{\mf{a}}\) and \(\s_{\mf{b}}\), we have \(\s_{\mf{b}} = \g\s_{\mf{a}}\). Whence modularity gives
       \[
-        (f|_{k}\s_{\mf{b}})(z) = \vt(\g)(f|_{k}\s_{\mf{a}})(z),
+        (f|_{k}\s_{\mf{b}})(z) = \rho(\g)(f|_{k}\s_{\mf{a}})(z),
       \]
-      so that the \(n\)-th Fourier coefficient is multiplied by the root of unity \(\vt(\g)\). In particular, the condition \(a_{\mf{a}} = 0\) only depends on the cusp class of \(\mf{a}\). So we only need to verify property (iv) on a complete set of \(\G\)-inequivalent cusps. Of course, if \(\vt(\g) = 1\) the Fourier coefficients are equal. For example, this occurs when the nebentypus is trivial.
+      so that the \(n\)-th Fourier coefficient is multiplied by the root of unity \(\rho(\g)\). In particular, the condition \(a_{\mf{a}} = 0\) only depends on the cusp class of \(\mf{a}\). So we only need to verify property (iv) on a complete set of \(\G\)-inequivalent cusps. Of course, if \(\rho(\g) = 1\) the Fourier coefficients are equal. For example, this occurs when the nebentypus is trivial.
 
       We can also derive a bound for the Fourier coefficients of \(f\) at the \(\mf{a}\) cusp provided \(f\) is a cusp form. This bound is quite straightforward to deduce and turns out to almost be optimal. To this end, consider the integral
       \[
@@ -775,9 +802,9 @@
       \]
       upon summing the resulting geometric series. This implies \(f|_{k}\s_{\mf{a}}\) exhibits exponential decay and we say that \(f\) exhibits \textbf{exponential decay at the cusps}\index{exponential decay at the cusps}. This is stronger than simply knowing \(f|_{k}\s_{\mf{a}}\) is bounded on \(\H\) and tends to zero as \(y \to \infty\) which is provided by the fact that \(f\) is a cusp form.
       \subsubsection*{Hecke Congruence Subgroups}
-        In the case of the Hecke congruence subgroup \(\G_{0}(N)\), there are a few important simplifications when dealing with modular forms on  \(\G_{0}(N)\backslash\H\). The first, which we have already noted, is that \(\G_{0}(N)\) is reduced \(\infty\). Therefore \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}^{+}\) and we may take \(\s_{\infty} = I\) for the scaling matrix at \(\infty\). The second is that the nebentypus can be induced by a Dirichlet character \(\chi\) modulo \(N\). Let \(q\) be the conductor of \(\chi\) so that \(q \mid N\). For any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) we know that \(c \equiv 0 \tmod{N}\) whence \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\vt_{\chi}:\G_{0}(N) \to \C^{\ast}\) by
+        In the case of the Hecke congruence subgroup \(\G_{0}(N)\), there are a few important simplifications when dealing with modular forms on  \(\G_{0}(N)\backslash\H\). The first, which we have already noted, is that \(\G_{0}(N)\) is reduced \(\infty\). Therefore \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}^{+}\) and we may take \(\s_{\infty} = I\) for the scaling matrix at \(\infty\). The second is that the nebentypus can be induced by a Dirichlet character \(\chi\) modulo \(N\). Let \(q\) be the conductor of \(\chi\) so that \(q \mid N\). For any \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) we know that \(c \equiv 0 \tmod{N}\) whence \(a\) is the inverse of \(d\) modulo \(N\) and thus \((d,q) = 1\). We can define a function \(\rho_{\chi}:\G_{0}(N) \to \C^{\ast}\) by
         \[
-          \vt_{\chi}(\g) = \chi(d).
+          \rho_{\chi}(\g) = \chi(d).
         \]
         If \(\g' = \begin{psmallmatrix} a' & b' \\ c' & d' \end{psmallmatrix} \in \G_{0}(N)\), then the relations
         \[
@@ -785,32 +812,32 @@
         \]
         show that
         \[
-          \vt_{\chi}(\g\g') = \vt_{\chi}(\g)\vt_{\chi}(\g') \quad \text{and} \quad \vt_{\chi}(\g^{-1}) = \vt_{\chi}(\g)^{-1}.
+          \rho_{\chi}(\g\g') = \rho_{\chi}(\g)\rho_{\chi}(\g') \quad \text{and} \quad \rho_{\chi}(\g^{-1}) = \rho_{\chi}(\g)^{-1}.
         \]
-        respectively. In other words, \(\vt_{\chi}\) is a homomorphism and it is necessarily of finite order because \(\chi\) is. Therefore \(\vt_{\chi}\) satisfies the assumptions of a nebentypus. It is also regular at \(\infty\). In the case \(f\) has nebentypus \(\vt_{\chi}\), we simply say that \(f\) has \textbf{character}\index{character} \(\chi\) and write
+        respectively. In other words, \(\rho_{\chi}\) is a homomorphism and it is necessarily of finite order because \(\chi\) is. Therefore \(\rho_{\chi}\) is a nebentypus. It is also regular at \(\infty\). In the case \(f\) has nebentypus \(\rho_{\chi}\), we simply say that \(f\) has \textbf{character}\index{character} \(\chi\) and write
         \[
-          \chi(\g) = \vt_{\chi}(\g).
+          \chi(\g) = \rho_{\chi}(\g).
         \]
     \subsection{Poincar\'e Series and Eisenstein Series}
       We will now introduce specific modular forms over \(\GH\). These modular forms will be constructed by averaging the slash operator over \(\G_{\mf{a}}\backslash\G\) for a cusp \(\mf{a}\) of \(\GH\) and are called Poincar\'e series and Eisenstein series where the latter is a special case of the former. 
       
-      Fix an integer \(k \ge 3\) and a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\). Let \(m\) be a nonnegative integer, \(\vt:\G \to \C^{\ast}\) be a finite order homomorphism that is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,\vt,\mf{a}}(z)\) of \textbf{index}\index{index} \(m\) and weight \(k\) with nebentypus \(\vt\) on \(\GH\) at the \(\mf{a}\) cusp by
+      Fix an integer \(k \ge 3\) and a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\). Let \(m\) be a nonnegative integer and \(\rho:\G \to \C^{\ast}\) be a nebentypus that is regular at \(\mf{a}\). We define the \(m\)-th (modular) \textbf{Poincar\'e series}\index{Poincar\'e series} \(P_{m,\rho,\mf{a}}(z)\) of \textbf{index}\index{index} \(m\) and weight \(k\) with nebentypus \(\rho\) on \(\GH\) at the \(\mf{a}\) cusp by
       \[
-        P_{m,\vt,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\vt}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+        P_{m,\rho,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\rho}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
-      We call \(m\) the \textbf{index}\index{index} of \(P_{m,\vt,\mf{a}}(z)\). Also, we must assume \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
+      We call \(m\) the \textbf{index}\index{index} of \(P_{m,\rho,\mf{a}}(z)\). Also, we must assume \(k \ge 3\) is because for \(k = 0,1,2\) the Poincar\'e series need not converge for any \(z \in \H\).
 
-      The Poincar\'e series \(P_{m,\vt,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the nebentypus, this is easily checked by direct computation using the fact that \(\vt\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(B_{\G}^{+}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}B_{\G}^{+}\s_{\mf{a}}^{-1}\). So it suffices to show 
+      The Poincar\'e series \(P_{m,\rho,\mf{a}}(z)\) is well-defined as it is independent of the choice of representatives \(\g\) and \(\s_{\mf{a}}\). For the nebentypus, this is easily checked by direct computation using the fact that \(\rho\) is regular at \(\mf{a}\). For the exponential factor, the set of representatives for \(\s_{\mf{a}}^{-1}\g\) is \(B_{\G}^{+}\s_{\mf{a}}^{-1}\g\) in view of \(\G_{\mf{a}} = \s_{\mf{a}}B_{\G}^{+}\s_{\mf{a}}^{-1}\). So it suffices to show 
       \[
         \left(e(m\,\cdot\,)\bigg|_{k}T\right)(z) = e(mz),
       \]
-      which is obvious. Whence \(P_{m,\vt,\mf{a}}(z)\) is well-defined. To see that \(P_{m,\vt,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\infty}\) and bounding term by term gives
+      which is obvious. Whence \(P_{m,\rho,\mf{a}}(z)\) is well-defined. To see that \(P_{m,\rho,\mf{a}}(z)\) is holomorphic on \(\H\), the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\infty}\) and bounding term by term gives
       \[
-        P_{m,\vt,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+        P_{m,\rho,\mf{a}}(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
-      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,\vt,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
+      This latter series is locally absolutely uniformly convergent for \(z \in \H\) as \(k \ge 3\). Hence \(P_{m,\rho,\mf{a}}(z)\) is holomorphic on \(\H\). As for modularity, let \(\eta \in \G\). A short computation using the change of variables \(\eta \mapsto \eta\g^{-1}\) shows
       \[
-        (P_{m,\vt,\mf{a}}|_{k}\eta)(z) = \vt(\eta)P_{m,\vt,\mf{a}}(z).
+        (P_{m,\rho,\mf{a}}|_{k}\eta)(z) = \rho(\eta)P_{m,\rho,\mf{a}}(z).
       \]
       To verify the growth condition we will need a technical lemma.
 
@@ -849,9 +876,9 @@
         outside of \(S_{a,b}^{Y} \x [-Y,Y]\). But this latter region is compact and so \(f(z,r)\) attains a minimum \(\d' > 0\) on it. Setting \(\d = \min\left(\frac{1}{2},\d'\right)\) completes the proof.
       \end{proof}
 
-      We can now verify the growth condition for \(P_{m,\vt,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
+      We can now verify the growth condition for \(P_{m,\rho,\mf{a}}(z)\). Choose a cusp \(\mf{b}\) and an associated scaling matrix \(\s_{\mf{b}}\). Using the cocycle condition, Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), and bounding term by term shows give
       \[
-        (P_{m,\vt,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
+        (P_{m,\rho,\mf{a}}|_{k}\s_{\mf{b}})(z) \ll \sum_{(c,d) \in \Z_{0+}^{2}-\{\mathbf{0}\}}\frac{1}{|cz+d|^{k}}.
       \]
       Now decompose this last sum as
       \[
@@ -866,30 +893,30 @@
       \begin{theorem}\label{thm:Poincare_series_modular}
         The Poincar\'e series
         \[
-          P_{m,\vt,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\vt}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+          P_{m,\rho,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\rho}(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
-        is a weight \(k\) modular form with nebentypus \(\vt\) on \(\GH\).
+        is a weight \(k\) modular form with nebentypus \(\rho\) on \(\GH\).
       \end{theorem}
 
-      In the case of index zero Poincar\'e series, we write \(E_{\vt,\mf{a}}(z) = P_{0,\vt,\mf{a}}(z)\) and call \(E_{\vt,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and nebentypus \(\vt\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
+      In the case of index zero Poincar\'e series, we write \(E_{\rho,\mf{a}}(z) = P_{0,\rho,\mf{a}}(z)\) and call \(E_{\rho,\mf{a}}(z)\) the (modular) \textbf{Eisenstein series}\index{Eisenstein series} of weight \(k\) and nebentypus \(\rho\) on \(\GH\) at the \(\mf{a}\) cusp. It is defined by
       \[
-        E_{\vt,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\vt}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
+        E_{\rho,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\rho}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
       Then we obtain the following theorem as a special case of the former one:
 
       \begin{theorem}\label{thm:Eisenstein_series_modular}
         The Eisenstein series
         \[
-          E_{\vt,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\vt}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
+          E_{\rho,\mf{a}}(z) = \sum_{\g \in \G_{\mf{a}}\backslash\G}\conj{\rho}(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
         \]
-        is a weight \(k\) modular form with nebentypus \(\vt\) on \(\GH\).
+        is a weight \(k\) modular form with nebentypus \(\rho\) on \(\GH\).
       \end{theorem}
     \subsection{The Valence Formula}
-      Let \(\mc{M}_{k}(\G,\vt)\) denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\vt\) on \(\GH\) and write \(\mc{S}_{k}(\G,\vt)\) for the corresponding subspace of cusp forms. In either case, if \(\vt\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusions
+      Let \(\mc{M}_{k}(\G,\rho)\) denote the complex vector space of all weight \(k\) modular forms with nebentypus \(\rho\) on \(\GH\) and write \(\mc{S}_{k}(\G,\rho)\) for the corresponding subspace of cusp forms. In either case, if \(\rho\) is trivial we will suppress this dependence. Note that if \(\G_{1}\) and \(\G_{2}\) are two congruence subgroups such that \(\G_{1} \subseteq \G_{2}\) then we have the inclusions
       \[
-        \mc{M}_{k}(\G_{2},\vt) \subseteq \mc{M}_{k}(\G_{1},\vt) \quad \text{and} \quad \mc{S}_{k}(\G_{2},\vt) \subseteq \mc{S}_{k}(\G_{1},\vt).
+        \mc{M}_{k}(\G_{2},\rho) \subseteq \mc{M}_{k}(\G_{1},\rho) \quad \text{and} \quad \mc{S}_{k}(\G_{2},\rho) \subseteq \mc{S}_{k}(\G_{1},\rho).
       \]
-      The vector space \(\mc{M}_{k}(\G,\vt)\), and hence \(\mc{S}_{k}(\G,\vt)\) as well, turns out to be finite dimensional. This will be accomplished by showing that any \(f \in \mc{M}_{k}(\G,\vt)\) is determined by finitely many of its Fourier coefficients. In fact, this will follow from an exact formula relating the weight \(k\), the index \(d_{\G}\), and the zeros of \(f\). This is known as the valence formula and we require some notation to state it. For any \(z \in \H\), let \(v_{z}(f)\) be the index of the first nonzero term in the Taylor series expansion of \(f\) about \(z\). Equivalently, \(v_{z}(f)\) is the order of vanishing of \(f\) at \(z\). Note that \(v_{z}(f)\) is necessarily nonnegative as \(f\) is holomorphic and
+      The vector space \(\mc{M}_{k}(\G,\rho)\), and hence \(\mc{S}_{k}(\G,\rho)\) as well, turns out to be finite dimensional. This will be accomplished by showing that any \(f \in \mc{M}_{k}(\G,\rho)\) is determined by finitely many of its Fourier coefficients. In fact, this will follow from an exact formula relating the weight \(k\), the index \(d_{\G}\), and the zeros of \(f\). This is known as the valence formula and we require some notation to state it. For any \(z \in \H\), let \(v_{z}(f)\) be the index of the first nonzero term in the Taylor series expansion of \(f\) about \(z\). Equivalently, \(v_{z}(f)\) is the order of vanishing of \(f\) at \(z\). Note that \(v_{z}(f)\) is necessarily nonnegative as \(f\) is holomorphic and
       \[
         v_{\g z}(f) = v_{z}(f),
       \]
@@ -902,24 +929,24 @@
       Our method for proving the valance formula will be to prove it for the modular group via an application of the argument principle and then extend it to the congruence subgroup \(\G\). In order to do this, we will need to show how to construct a modular form on \(\SL_{2}(\Z)\backslash\H\) given one on \(\GH\). The following lemma provides the answer:
 
       \begin{lemma}\label{lem:lifting_lemma}
-        Let \(f \in \mc{M}_{k}(\G,\vt)\) and set
+        Let \(f \in \mc{M}_{k}(\G,\rho)\) and set
         \[
-          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{n_{\vt}}.
+          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{n_{\rho}}.
         \]
-        Then \(F \in \mc{M}_{kn_{\vt}d_{\G}}(\SL_{2}(\Z))\).
+        Then \(F \in \mc{M}_{kn_{\rho}d_{\G}}(\SL_{2}(\Z))\).
       \end{lemma}
       \begin{proof}
-        If \(f\) is zero then so is \(F\) and the claim is obvious. So assume \(f\) is nonzero. First we must show that \(F\) is well-defined which is to say that it is independent of the representatives \(\b\). Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b'\b^{-1} \in \G\). Modularity and that \(\vt\) is of order \(n_{\vt}\) together show
+        If \(f\) is zero then so is \(F\) and the claim is obvious. So assume \(f\) is nonzero. First we must show that \(F\) is well-defined which is to say that it is independent of the representatives \(\b\). Indeed, if \(\b\) and \(\b'\) belong to the same coset then \(\b'\b^{-1} \in \G\). Modularity and that \(\rho\) is of order \(n_{\rho}\) together show
         \[
-          ((f|_{k}\b')(z))^{n_{\vt}} = ((f|_{k}\b)(z))^{n_{\vt}},
+          ((f|_{k}\b')(z))^{n_{\rho}} = ((f|_{k}\b)(z))^{n_{\rho}},
         \]
-        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Modularity then follows from a short computation as the choice of coset representatives is permuted. The growth condition follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\vt}d_{\G}}(\SL_{2}(\Z))\). 
+        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Whence \(\b\g = \g'\b'\) for some other representative \(\b'\) and \(\g' \in \SL_{2}(\Z)\). With this fact, modularity follows from a short computation. The growth condition follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\rho}d_{\G}}(\SL_{2}(\Z))\). 
       \end{proof}  
       
       We can now state and prove the \textbf{valence formula}\index{valence formula}.
 
       \begin{theorem*}[Valence formula]
-        Suppose \(f \in \mc{M}_{k}(\G,\vt)\) is nonzero. Then
+        Suppose \(f \in \mc{M}_{k}(\G,\rho)\) is nonzero. Then
         \[
           \sum_{\mf{a} \in \G\backslash\what{\Q}}v_{\mf{a}}(f)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}_{\G}}\frac{2v_{z}(f)}{|\G_{z}|} = \frac{kd_{\G}}{12}.
         \]
@@ -939,7 +966,7 @@
         \]
         where \(H\) is holomorphic on the interior of the unit disk and \(H(0) \neq 0\). Whence there exists a positive \(r\) such that \(G(q)\) is nonzero for \(0 < |q| < r\). But then \(F(z)\) is nonzero for \(e^{-2\pi ny} < r\) which is to say \(y > -\frac{\log(r)}{2\pi y}\). Taking \(T > -\frac{\log(r)}{2\pi y}\) proves the claim.
         
-        It follows that every zero \(\rho\) of \(F\) has ordinate less than \(T\). Moreover, \(\g\rho\) is a zero for every \(\g \in \SL_{2}(\Z)\) by modularity. For our choice of \(T\), let \(\eta = \sum_{i}\eta_{i}\) be the contour in \cref{fig:valence_formula_contour} where the horizontal line is along \(t = T\) and the remaining contour is along the boundary of \(\mc{F}\) except for indentations of radius \(\e\) around possible zeros of \(F\) along this boundary as well as the points \(i\), \(\w\), and \(1+\w\). Moreover, the paths are chosen to be symmetric with respect to the actions of \(S\) and \(T\) so that each zero \(\rho\) belonging to \(\mc{F}\) has exactly one representative of its orbit occurring inside \(\eta\) except for when \(\rho = i,\w,1+\w\) which are excluded. As \(v_{z}(F) = 0\) for every \(z \in \mc{F}-\{i,\w,1+\w\}\) that is not a zero of \(F\), the argument principle gives
+        It follows that every zero of \(F\) has ordinate less than \(T\). Moreover, the image of a zero under \(\g\) is also a zero for every \(\g \in \SL_{2}(\Z)\) by modularity. For our choice of \(T\), let \(\eta = \sum_{i}\eta_{i}\) be the contour in \cref{fig:valence_formula_contour} where the horizontal line is along \(t = T\) and the remaining contour is along the boundary of \(\mc{F}\) except for indentations of radius \(\e\) around possible zeros of \(F\) along this boundary as well as the points \(i\), \(\w\), and \(1+\w\). Moreover, the paths are chosen to be symmetric with respect to the actions of \(S\) and \(T\) so that each zero belonging to \(\mc{F}\) has exactly one representative of its orbit occurring inside \(\eta\) except for possible zeros at \(i\), \(\w\), or \(1+\w\) which are excluded. As \(v_{z}(F) = 0\) for every \(z \in \mc{F}-\{i,\w,1+\w\}\) that is not a zero of \(F\), the argument principle gives
         \[
           \frac{1}{2\pi i}\int_{\eta}\frac{F'}{F}(z)dz = \asum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|},
         \]
@@ -1084,9 +1111,9 @@
         \[
           v_{\infty}(F)+\sum_{z \in \SL_{2}(\Z)\backslash\mc{F}}\frac{2v_{z}(F)}{|\SL_{2}(\Z)_{z}|} = \frac{k}{12},
         \]
-        which is precisely the claim for the modular group. It remains to prove the claim for \(\G\). So let \(f \in \mc{M}_{k}(\G,\vt)\) be nonzero. By \cref{lem:lifting_lemma} we may take
+        which is precisely the claim for the modular group. It remains to prove the claim for \(\G\). So let \(f \in \mc{M}_{k}(\G,\rho)\) be nonzero. By \cref{lem:lifting_lemma} we may take
         \[
-          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{n_{\vt}},
+          F(z) = \prod_{\b \in \G\backslash\SL_{2}(\Z)}((f|_{k}\b)(z))^{n_{\rho}},
         \]
         and obtain
         \[
@@ -1111,13 +1138,13 @@
         as desired.
       \end{proof}
       
-      With the valence formula in hand, it is not hard to show that \(\mc{M}_{k}(\G,\vt)\) is finite dimensional.
+      With the valence formula in hand, it is not hard to show that \(\mc{M}_{k}(\G,\rho)\) is finite dimensional.
 
       \begin{theorem}\label{thm:modular_forms_finite_dimensional}
-        \(\mc{M}_{k}(\G,\vt)\) is finite dimensional. In particular, \(\mc{S}_{k}(\G,\vt)\) is too.
+        \(\mc{M}_{k}(\G,\rho)\) is finite dimensional. In particular, \(\mc{S}_{k}(\G,\rho)\) is too.
       \end{theorem}
       \begin{proof}
-        Let \(f \in \mc{M}_{k}(\G,\vt)\). Recall that \(v_{\mf{a}}(f)\) and \(v_{z}(f)\) are nonnegative. In particular, \(v_{\infty}(f)\) is nonnegative and the valence formula implies \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\) whenever \(f\) is nonzero. Let \(n\) be a positive integer such that \(n \ge \frac{kd_{\G}}{12}+1\) and consider the linear map \(F:\mc{M}_{k}(\G,\vt) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) < n\) and hence \(\mc{M}_{k}(\G,\vt)\) is finite dimensional. The second statement follows immediately.
+        Let \(f \in \mc{M}_{k}(\G,\rho)\). Recall that \(v_{\mf{a}}(f)\) and \(v_{z}(f)\) are nonnegative. In particular, \(v_{\infty}(f)\) is nonnegative and the valence formula implies \(v_{\infty}(f) \le \frac{kd_{\G}}{12}\) whenever \(f\) is nonzero. Let \(n\) be a positive integer such that \(n \ge \frac{kd_{\G}}{12}+1\) and consider the linear map \(F:\mc{M}_{k}(\G,\rho) \to \C^{n}\) sending \(f\) to its first \(n\) Fourier coefficients. Then \(F\) is injective since \(v_{\infty}(f) < n\) and hence \(\mc{M}_{k}(\G,\rho)\) is finite dimensional. The second statement follows immediately.
       \end{proof}
     \subsection{The Petersson Inner Product}
       For further developments, we will require the Petersson inner product. Let \(\G\) be a congruence subgroup and fix a nonnegative integer \(k\). For any complex functions \(f\) and \(g\) on \(\H\) such that \(f(z)g(z)\Im(z)^{k}\) is \(\G\)-invariant and bounded on \(\H\), we define their \textbf{Petersson inner product}\index{Petersson inner product} \(\<f,g\>\) by
@@ -1144,11 +1171,11 @@
         \]
       \end{proof}
 
-      We will primarily be interested in the case where \(f,g \in \mc{M}_{k}(\GH)\) and at least one of them is a cusp form. In this case, modularity implies \(f(z)g(z)\Im(z)^{k}\) is \(\G\)-invariant and is also bounded on \(\H\) since at least one of \(f\) or \(g\) is a cusp form. The Petersson inner product makes \(\mc{S}_{k}(\G,\vt)\) into a complex Hilbert space. Indeed, it is clearly linear on \(\mc{S}_{k}(\G,\vt)\). Positive definiteness follows because
+      We will primarily be interested in the case where \(f,g \in \mc{M}_{k}(\GH)\) and at least one of them is a cusp form. In this case, modularity implies \(f(z)g(z)\Im(z)^{k}\) is \(\G\)-invariant and is also bounded on \(\H\) since at least one of \(f\) or \(g\) is a cusp form. The Petersson inner product makes \(\mc{S}_{k}(\G,\rho)\) into a complex Hilbert space. Indeed, it is clearly linear on \(\mc{S}_{k}(\G,\rho)\). Positive definiteness follows because
       \[
         \<f,f\> = \frac{1}{V_{\G}}\int_{\GH}|f(z)|^{2}\Im(z)^{k}\,d\mu,
       \]
-      is nonnegative and zero if and only if \(f\) is identically zero. A short computation together using the fact that \(\conj{d\mu} = d\mu\), which holds since \(d\mu = \frac{dx\,dy}{y^{2}}\), proves conjugate symmetry. Whence \(\mc{S}_{k}(\G,\vt)\) is a complex inner product space with respect to the Petersson inner product. Since \(\mc{S}_{k}(\G,\vt)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows that \(\mc{S}_{k}(\G,\vt)\) is a complex Hilbert space.
+      is nonnegative and zero if and only if \(f\) is identically zero. A short computation together using the fact that \(\conj{d\mu} = d\mu\), which holds since \(d\mu = \frac{dx\,dy}{y^{2}}\), proves conjugate symmetry. Whence \(\mc{S}_{k}(\G,\rho)\) is a complex inner product space with respect to the Petersson inner product. Since \(\mc{S}_{k}(\G,\rho)\) is finite dimensional by \cref{thm:modular_forms_finite_dimensional}, it follows that \(\mc{S}_{k}(\G,\rho)\) is a complex Hilbert space.
     \subsection{Double Coset Operators}
       There are also linear operators that act on the space of modular forms. In fact, these operators allow us to transfer between modular forms on different congruence subgroups. They are defined via double cosets which we now study.
 
@@ -1156,11 +1183,11 @@
       \[
         \G_{1}\a\G_{2} = \{\g_{1}\a\g_{2}:\g_{1} \in \G_{1} \text{ and } \g_{2} \in \G_{2}\}.
       \]
-      Note that \(\G_{1}\) acts on \(\G_{1}\a\G_{2}\) by left multiplication. Whence \(\G_{1}\a\G_{2}\) admits an orbit decomposition
+      Note that \(\G_{1}\) acts on \(\G_{1}\a\G_{2}\) by left multiplication. Whence \(\G_{1}\a\G_{2}\) admits an right coset decomposition
       \[
-        \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b,
+        \G_{1}\a\G_{2} = \bigcup_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\G_{1}\b.
       \]
-      into right cosets. It turns out that this union is finite. To see this, we need to relate the orbit space \(\G_{1}\backslash\G_{1}\a\G_{2}\) to a quotient of \(\G_{2}\) with respect to the action of some subgroup. This will be the congruence subgroup \(\a^{-1}\G_{1}\a \cap \G_{2}\). As this subgroup acts on \(\G_{2}\) by left multiplication, we again have an orbit space \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\). These orbit spaces are related.
+      It turns out that this union is finite. To see this, we need to relate the coset space \(\G_{1}\backslash\G_{1}\a\G_{2}\) to a quotient of \(\G_{2}\) with respect to the action of some subgroup. This will be the congruence subgroup \(\a^{-1}\G_{1}\a \cap \G_{2}\). As this subgroup acts on \(\G_{2}\) by left multiplication, we again have a coset space \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\). These coset spaces are related.
 
       \begin{lemma}\label{lem:coset_lemma_2}
         Let \(\G_{1}\) and \(\G_{2}\) be congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Then the right multiplication map
@@ -1179,11 +1206,11 @@
       \begin{proof}
         The second statement is immediate from the first, so it suffices to show the first statement. The map is \((\a^{-1}\G_{1}\a \cap \G_{2})\)-invariant so that it induces a map on the quotient. Indeed, if \(\g \in \a^{-1}\G_{1}\a \cap \G_{2}\) then \(\g = \a^{-1}\g_{1}\a\) for some \(\g_{1} \in \G_{1}\). Thus \(\G_{1}\a\g\g_{2} = \G_{1}\a\g_{2}\) as claimed.
 
-        We now show that the induced map is a bijection. For injectivity, let \(\g_{2}\) and \(\g'_{2}\) be representatives of orbits of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) such that \(\G_{1}\a\g_{2} = \G_{1}\a\g'_{2}\). This implies \(\a\g_{2}(\g'_{2})^{-1} \in \G_{1}\a\) and so \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a\). But we also have \(\g_{2}(\g'_{2})^{-1} \in \G_{2}\) and these two facts together imply that \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a \cap \G_{2}\). Hence
+        We now show that the induced map is a bijection. For injectivity, let \(\g_{2}\) and \(\g'_{2}\) be representatives of cosets of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) such that \(\G_{1}\a\g_{2} = \G_{1}\a\g'_{2}\). This implies \(\a\g_{2}(\g'_{2})^{-1} \in \G_{1}\a\) and so \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a\). But we also have \(\g_{2}(\g'_{2})^{-1} \in \G_{2}\) and these two facts together imply that \(\g_{2}(\g'_{2})^{-1} \in \a^{-1}\G_{1}\a \cap \G_{2}\). Hence
         \[
           (\a^{-1}\G_{1}\a \cap \G_{2})\g_{2} = (\a^{-1}\G_{1}\a \cap \G_{2})\g'_{2},
         \]
-        from which injectivity follows. For surjectivity, any representative \(\b\) of an orbit in \(\G_{1}\backslash\G_{1}\a\G_{2}\) is of the form \(\b = \g_{1}\a\g_{2}\) for some \(\g_{1} \in \G_{1}\) and \(\g_{2} \in \G_{2}\). But then \(\g_{2}\) represents an orbit of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) mapping to the orbit represented by \(\b\) as \(\G_{1}\b = \G_{1}\a\g_{2}\). This shows surjectivity.
+        from which injectivity follows. For surjectivity, any representative \(\b\) of a coset of \(\G_{1}\backslash\G_{1}\a\G_{2}\) is of the form \(\b = \g_{1}\a\g_{2}\) for some \(\g_{1} \in \G_{1}\) and \(\g_{2} \in \G_{2}\). But then \(\g_{2}\) represents a coset of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) mapping to the coset represented by \(\b\) as \(\G_{1}\b = \G_{1}\a\g_{2}\). This shows surjectivity.
       \end{proof}
 
       With this lemma in hand, we can prove that the aforementioned right coset decomposition is finite.
@@ -1196,7 +1223,7 @@
         is finite.
       \end{proposition}
       \begin{proof}
-        By \cref{lem:coset_lemma_2}, the number of orbits of \(\G_{1}\backslash\G_{1}\a\G_{2}\) is in bijection with those of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) which is \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}]\). By \cref{lem:coset_lemma_1}, \(\a^{-1}\G_{1}\a \cap \SL_{2}(\Z)\) is a congruence subgroup and thus \(\a^{-1}\G_{1}\a \cap \G_{2}\) is as well. It follows that \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}] \le d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) where \(d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) is finite which completes the proof.
+        By \cref{lem:coset_lemma_2}, the number of cosets of \(\G_{1}\backslash\G_{1}\a\G_{2}\) is in bijection with those of \((\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}\) which is \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}]\). By \cref{lem:coset_lemma_1}, \(\a^{-1}\G_{1}\a \cap \SL_{2}(\Z)\) is a congruence subgroup and thus \(\a^{-1}\G_{1}\a \cap \G_{2}\) is as well. It follows that \([\G_{2}:\a^{-1}\G_{1}\a \cap \G_{2}] \le d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) where \(d_{\a^{-1}\G_{1}\a \cap \G_{2}}\) is finite which completes the proof.
       \end{proof}
 
       We are ready to introduce a class of general operators depending upon double cosets. First, we define an operator closely related to the slash operator. For any nonnegative integer \(k\) and any \(\a \in \GL_{2}^{+}(\Q)\) we define the \textbf{double slash operator}\index{double slash operator} \(\|_{k}\a:C(\H) \to C(\H)\) to be the linear operator given by
@@ -1215,37 +1242,65 @@
       \[
         (f\|_{k}\a'\a)(z) = ((f\|_{k}\a')|_{k}\a)(z) \quad \text{and} \quad ((fg)\|_{k+\ell}\a)(z) = (f\|_{k}\a)(z)(g\|_{\ell}\a)(z),
       \]
-      for \(f,g \in C(\H)\), positive integers \(k\) and \(\ell\), and any \(\a,\a' \in \GL_{2}^{+}(\Q)\). Also, if \(f \in \mc{M}_{k}(\G,\vt)\) then modularity may be expressed as
+      for \(f,g \in C(\H)\), positive integers \(k\) and \(\ell\), and any \(\a,\a' \in \GL_{2}^{+}(\Q)\). Also, if \(f \in \mc{M}_{k}(\G,\rho)\) then modularity may be expressed as
       \[
-        (f\|_{k}\g)(z) = \vt(\g)f(z),
+        (f\|_{k}\g)(z) = \rho(\g)f(z),
       \]
       for all \(\g \in \G\). The reason for introducing the double slash operator is that it will be easier to work with when discussing Fourier coefficients of modular forms.
       
-      Now for any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) and any \(\a \in \GL_{2}^{+}(\Q)\), we define the \textbf{double coset operator}\index{double coset operator} \([\G_{1}\a\G_{2}]_{k}:\mc{M}_{k}(\G_{1}) \to C(\H)\) to be the linear operator given by
+      Now let \(\G_{1}\) and \(\G_{2}\) be any two congruence subgroups and let \(\a \in \GL_{2}^{+}(\Q)\). Also suppose \(\rho_{1}:\G_{1} \to \C^{\ast}\) and \(\rho_{2}:\G_{2} \to \C^{\ast}\) are nebentypen. We say \(\rho_{1}\) and \(\rho_{2}\) are \textbf{compatible}\index{compatible} with respect to \(\a\) if
       \[
-        (f[\G_{1}\a\G_{2}]_{k})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}(f\|_{k}\b)(z).
+        \rho_{1}(\g) = \rho_{2}(\a^{-1}\g\a),
       \]
-      This sum is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. To check that \(f[\G_{1}\a\G_{2}]_{k}\) is well-defined amounts to showing that the sum is independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same orbit then \(\b' = \g\b\) for some \(\g \in \G_{1}\). Modularity implies
+      for all \(\g \in \G_{1} \cap \a\G_{2}\a^{-1}\). If this happens then the map
       \[
-        (f\|_{k}\b')(z) = (f\|_{k}\b)(z),
+        \rho_{1}|_{\a}\rho_{2}:\G_{1}\a\G_{2} \to \C^{\ast} \qquad \g_{1}\a\g_{2} \mapsto \rho_{1}(\g_{1})\rho_{2}(\g_{2}),
       \]
-      which proves that \([\G_{1}\a\G_{2}]_{k}\) is well-defined. We will now show that the double coset operator takes \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
+      is well-defined. Indeed, suppose \(\g_{1}\a\g_{2} = \g_{1}'\a\g_{2}'\) for \(\g_{1},\g_{1}' \in \G_{1}\) and \(\g_{2},\g_{2}' \in \G_{2}\). Then
+      \[
+        (\g_{1}')^{-1}\g_{1} = \a\g_{2}'\g_{2}^{-1}\a^{-1},
+      \]
+      belongs to \(\G_{1} \cap \a\G_{2}\a^{-1}\). Whence \(\rho_{1}((\g_{1}')^{-1}\g_{1}) = \rho_{2}(g_{2}'\g_{2}^{-1})\) which is to say that
+      \[
+        \rho_{1}(\g_{1})\rho_{2}(\g_{2}) = \rho_{1}(\g_{1}')\rho_{2}(\g_{2}').
+      \]
+      Observe that trivial nebentypen are compatible with respect to any \(\a \in \GL_{2}^{+}(\Q)\). Also, if \(\G_{1} = \G_{2}\) and \(\rho_{1} = \rho_{2}\) then compatibility just means that the nebentypus is conjugate invariant with respect to \(\a\). In any case, for nebentypen that are compatible with respect to \(\a\), we define the \textbf{double coset operator}\index{double coset operator} \([\G_{1}\a\G_{2}]_{k}:\mc{M}_{k}(\G_{1},\rho_{1}) \to C(\H)\) to be the linear operator given by
+      \[
+        (f[\G_{1}\a\G_{2}]_{k})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\conj{\rho_{1}|_{\a}\rho_{2}}(\b)(f\|_{k}\b)(z).
+      \]
+      This sum is finite by \cref{prop:double_congruence_subgroup_coset_decomposition_is_finite}. To check that \(f[\G_{1}\a\G_{2}]_{k}\) is well-defined amounts to showing that the sum is independent of the representatives \(\b\) used. Indeed, if \(\b\) and \(\b'\) belong to the same coset then \(\b' = \g\b\) for some \(\g \in \G_{1}\). Modularity implies
+      \[
+        (f\|_{k}\b')(z) = \rho_{1}(\g)(f\|_{k}\b)(z),
+      \]
+      while compatibility also enforces 
+      \[
+        \conj{\rho_{1}|_{\a}\rho_{2}}(\b') = \conj{\rho_{1}}(\g)\conj{\rho_{1}|_{\a}\rho_{2}}(\b).
+      \]
+      These identities together show
+      \[
+        \conj{\rho_{1}|_{\a}\rho_{2}}(\b')(f\|_{k}\b')(z) = \conj{\rho_{1}|_{\a}\rho_{2}}(\b)(f\|_{k}\b)(z),
+      \]
+      which proves \([\G_{1}\a\G_{2}]_{k}\) is well-defined. Also, in view of \cref{lem:coset_lemma_2} every representative \(\b\) is of the form \(\b = \a\g\) with \(\g \in (\a^{-1}\G_{1}\a) \cap \G_{2}\) and so we may write the double coset operator in the form
+      \[
+        (f[\G_{1}\a\G_{2}]_{k})(z) = \sum_{\g \in (\a^{-1}\G_{1}\a \cap \G_{2})\backslash\G_{2}}\conj{\rho_{2}}(\g)(f\|_{k}\a\g)(z).
+      \]
+      We will now show that the double coset operator takes \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
 
       \begin{proposition}\label{prop:double_coset_operator_preserves_subspaces_modular}
-        For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\), \([\G_{1}\a\G_{2}]_{k}\) maps \(\mc{M}_{k}(\G_{1})\) into \(\mc{M}_{k}(\G_{2})\) and preserves the subspaces of cusp forms.
+        For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) with nebentypen \(\rho_{1}\) and \(\rho_{2}\) that are compatible with respect to \(\a \in \GL_{2}^{+}(\Q)\), \([\G_{1}\a\G_{2}]_{k}\) maps \(\mc{M}_{k}(\G_{1},\rho_{1})\) into \(\mc{M}_{k}(\G_{2},\rho_{2})\) and preserves the subspaces of cusp forms.
       \end{proposition}
       \begin{proof}
-        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]_{k}\) is finite. For modularity, let \(\g \in \G_{2}\). As \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Modularity then follows from a short computation as the choice of coset representatives is permuted. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
+        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]_{k}\) is finite. For modularity, let \(\g \in \G_{2}\). As \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Whence \(\b\g = \g'\b'\) for some other representative \(\b'\) and \(\g' \in \G_{1}\). Using this fact and that the nebentypen are compatible, modularity follows from a short computation. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
         \[
-          ((f[\G_{1}\a\G_{2}]_{k})|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
+          ((f[\G_{1}\a\G_{2}]_{k})|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\conj{\rho_{1}|_{\a}\rho_{2}}(\b)\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
         \]
         and so the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form if \(f\) is.
       \end{proof}
 
-      In the case \(\G_{1} = \G_{2} = \G\) for any congruence subgroup \(\G\), this result shows that the double coset operator \([\G\a\G]_{k}\) is a linear operator on \(\mc{M}_{k}(\G)\) and preserves the subspace \(\mc{S}_{k}(\G)\). Recalling that \(\mc{S}_{k}(\G)\) is a complex Hilbert space with respect to the Petersson inner product, this implies that \([\G\a\G]_{k}\) has an adjoint. We will show that the the adjoint is also a double coset operator whenever \(\a\) normalizes \(\G\). To prove this we first require a lemma.
+      This result shows that the double coset operator \([\G\a\G]_{k}\) is a linear operator on \(\mc{M}_{k}(\G,\rho)\) and preserves the subspace \(\mc{S}_{k}(\G,\rho)\) whenever \(\a\) normalizes \(\G\) and the nebentypus \(\rho\) is conjugate invariant with respect to \(\a\). Recalling that \(\mc{S}_{k}(\G,\rho)\) is a complex Hilbert space with respect to the Petersson inner product, it follows that \([\G\a\G]_{k}\) has an adjoint in this case. We will show that the the adjoint is also a double coset operator whenever \(\a\) normalizes \(\G\). To prove this we first require a lemma.
 
       \begin{lemma}\label{lem:adjoint_lemma}
-        Suppose \(\G\) is a congruence subgroup and let \(\a \in \GL_{2}^{+}(\Q)\). Then there exists \(\b_{j} \in \GL_{2}^{+}(\Q)\) such that \(\G\a\G\) and \(\G\a^{-1}\G\) admit right coset decompositions
+        Suppose \(\G\) is a congruence subgroup and let \(\a \in \GL_{2}^{+}(\Q)\). Then there exists \(\b_{j} \in \G\a\G\) such that \(\G\a\G\) and \(\G\a^{-1}\G\) admit right coset decompositions
         \[
           \G\a\G = \bigcup_{j}\G\b_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\b_{j}^{-1}.
         \]
@@ -1259,11 +1314,11 @@
         \[
           \G\a\G = \bigcup_{j}\G\a\g_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\a^{-1}(\g_{j}')^{-1}.
         \]
-        Also note that these right coset decompositions are inverses of each other. For each \(j\), the right and left cosets \(\G\a\g_{j}\) and \(\g_{j}'\a\G\) have nonempty intersection. For if they did, for some \(j\), we would have
+        For each \(j\), the right and left cosets \(\G\a\g_{j}\) and \(\g_{j}'\a\G\) have nonempty intersection. For if they did, we would have
         \[
           \G\a\g_{j} \subseteq \bigcup_{i \neq j}\g_{i}'\a\G,
         \]
-        and thus
+        for some \(j\), and thus
         \[
           \G\a\G \subseteq \bigcup_{i \neq j}\g_{i}'\a\G.
         \]
@@ -1280,11 +1335,11 @@
       be the adjugate of \(\a\) for any \(\a \in \GL_{2}^{+}(\Q)\). We will now describe the adjoint of \([\G\a\G]_{k}\) whenever \(\a\) normalizes \(\G\). As remarked, this is another double coset operator.
 
       \begin{proposition}\label{prop:double_coset_adjoint}
-        Let \(\G\) be a congruence subgroup and suppose \(\a \in \GL_{2}^{+}(\Q)\) normalizes \(\G\). Then for any \(f,g \in \mc{S}_{k}(\G)\) we have
+        Let \(\G\) be a congruence subgroup and let \(\a \in \GL_{2}^{+}(\Q)\) normalizes \(\G\). Then for any \(f,g \in \mc{S}_{k}(\G)\) we have
         \[
           \<f|_{k}\a,g\> = \<f,g|_{k}\a^{-1}\> \quad \text{and} \quad  \<f\|_{k}\a,g\> = \<f,g\|_{k}\a^{\ast}\>.
         \]
-        In particular,
+        In particular, if \(\rho:\G \to \C^{\ast}\) is a nebentypus that conjugate invariant with respect to \(\a\) then
         \[
           [\G\a\G]_{k}^{\ast} = [\G\a^{\ast}\G]_{k}.
         \]
@@ -1294,7 +1349,7 @@
         \[
           \<f|_{k}\a,g\> = \<f,g|_{k}\a^{-1}\> \quad \text{and} \quad \<f\|_{k}\a,g\> = \<f,g\|_{k}\a^{\ast}\>,
         \]
-        where the second identity follows from the first by definition of the double slash operator. It remains to prove the adjoint formula for \([\G\a\G]_{k}^{\ast}\). By \cref{lem:adjoint_lemma}, we can find \(\b_{j} \in \GL_{2}^{+}(\Q)\) such that
+        where the second identity follows from the first by definition of the double slash operator. It remains to prove the adjoint formula for \([\G\a\G]_{k}^{\ast}\). By \cref{lem:adjoint_lemma}, we can find \(\b_{j} \in \G\a\G\) such that
         \[
           \G\a\G = \bigcup_{j}\G\b_{j} \quad \text{and} \quad \G\a^{-1}\G = \bigcup_{j}\G\b_{j}^{-1}.
         \]
@@ -1302,7 +1357,11 @@
         \[
           \G\a\G = \bigcup_{j}\G\b_{j} \quad \text{and} \quad \G\a^{\ast}\G = \bigcup_{j}\G\b_{j}^{\ast},
         \]
-        because \(\det(\a) = \det(\b_{j})\). The adjoint formula follows at once from the first statement.
+        because \(\det(\a) = \det(\b_{j})\). Moreover, since \(\a\) normalizes \(\G\) we also have that \(\rho\) is conjugate invariant with respect to \(\a^{\ast}\). Then the map \(\rho|_{\a^{\ast}}\rho\) is well-defined and a short computation shows
+        \[
+          \conj{\rho|_{\a^{\ast}}\rho}(\b_{j}^{\ast}) = (\rho|_{\a}\rho)(\b_{j}).
+        \]
+        The adjoint formula follows at once from the first statement, these decompositions, and the previous identity.
       \end{proof}
   \section{Arithmetic of Modular Forms on Hecke Congruence Subgroups}
     If \(a\) is an integer modulo \(m\) with \((a,m) = 1\) we write \(a^{-1}\) for the inverse of \(a\) modulo \(m\). For any complex \(z\) let
@@ -1311,7 +1370,7 @@
     \]
     Also, all sums and products over a quotient group will be consider to be over a complete set of representatives.
     \subsection{Poincar\'e Series and Eisenstein Series}
-      We will now study the Poincar\'e series and Eisenstein Series on \(\G_{0}(N)\backslash\H\). As \(\G_{0}(N)\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}^{+}\) and we may take \(\s_{\infty} = I\). We will also take \(\vt = \chi\) to be a Dirichlet character modulo \(N\). Then for a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\), our series take the forms
+      We will now study the Poincar\'e series and Eisenstein Series on \(\G_{0}(N)\backslash\H\). As \(\G_{0}(N)\) is a Hecke congruence subgroup, \(\G_{0}(N)_{\infty} = B_{\G_{0}(N)}^{+}\) and we may take \(\s_{\infty} = I\). We will also let \(\rho = \rho_{\chi}\) for a Dirichlet character \(\chi\) modulo \(N\) and recall that \(\chi\) is regular at \(\infty\). Then for a cusp \(\mf{a}\) with scaling matrix \(\s_{\mf{a}}\), our series take the forms
       \[
         P_{m,\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)\left(e(m\,\cdot\,)\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z),
       \]
@@ -1319,7 +1378,7 @@
       \[
         E_{\chi,\mf{a}}(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)\left(1\bigg|_{k}\s_{\mf{a}}^{-1}\g\right)(z).
       \]
-      In either case, if \(\chi\) is trivial or \(\mf{a} = \infty\) then we will suppress these dependencies accordingly. Also, recall that \(\chi\) is always regular at \(\infty\).
+      In either case, if \(\chi\) is trivial or \(\mf{a} = \infty\) then we will suppress these dependencies accordingly.
       
       It turns out that we can explicitly compute the Fourier series expansions of the Poincar\'e series and Eisenstein series. Their Fourier coefficients involve Kloosterman sums, or more generally Sali\'e sums when \(\chi\) is not trivial, relative to cusps. This will essentially follow from a careful application of Poisson summation. The arguments involved are only slightly different. We first deduce the Fourier series expansion of the Poincar\'e series.
 
@@ -1571,13 +1630,13 @@
         is a cusp form for any \(f \in \mc{M}_{k}(\G_{0}(N),\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
     \subsection{Diamond and Hecke Operators}
-      The diamond and Hecke operators are sums of double coset operators. They will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) via their Fourier coefficients. Actually, these operators will be defined for modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. However, it turns out that such modular forms arise from those on \(\G_{0}(N)\backslash\H\) with character via the diamond operators. So we will discuss the diamond operators first and the Hecke operators second. 
+      The diamond and Hecke operators are sums of double coset operators. They will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) with character \(\chi\) modulo \(N\) via their Fourier coefficients. To handle all of the Dirichlet characters uniformly, we will show that these modular forms arise from modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. Accordingly, the diamond and Hecke operators will be defined on \(\G_{1}(N)\backslash\H\). The former operators decompose forms on \(\G_{1}(N)\backslash\H\) into those on \(\G_{0}(N)\backslash\H\) with a fixed character while the latter operators will be shown to preserve forms on \(\G_{0}(N)\backslash\H\) with a fixed character. So we will discuss the diamond operators first and the Hecke operators second. 
       
-      To define the diamond operators, let \(d\) be a positive integer and recall the right coset decomposition of \(\G_{0}(N)\) given in \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup}. We will use the representatives \(\g_{d}\) to define the diamond operators. The \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
+      To define the diamond operators, let \(d\) be a positive integer and recall the right coset decomposition of \(\G_{0}(N)\) given in \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup} with representatives \(\g_{d}\). The \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
       \[
         (\<d\>f)(z) = \begin{cases} \left(f[\G_{1}(N)\g_{d}\G_{1}(N)]_{k}\right)(z) & \text{if \((d,N) = 1\)}, \\ 0 & \text{if \((d,N) > 1\)}. \end{cases}
       \]
-      The diamond operators are well-defined in view of \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup}. Moreover, there is only one orbit representative in double coset when \((d,N) = 1\). Indeed, normality of \(\G_{1}(N)\) in \(\G_{0}(N)\) implies \(\G_{1}(N)\g_{d}\G_{1}(N) = \G_{1}(N)\g_{d}\).
+      The diamond operators are well-defined in view of \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup}. Moreover, there is only one representative in the right coset decomposition when \((d,N) = 1\). Indeed, normality of \(\G_{1}(N)\) in \(\G_{0}(N)\) implies \(\G_{1}(N)\g_{d}\G_{1}(N) = \G_{1}(N)\g_{d}\).
       \[
         (\<d\>f)(z) = (f\|_{k}\g_{d})(z).
       \]
@@ -1587,7 +1646,7 @@
       \]
       that the diamond operators are multiplicative, commutative, and invertible with \(\<d^{\ast}\>\) being the inverse of \(\<d\>\) where \(d^{\ast}\) is any positive integer satisfying \(d^{\ast}d \equiv 1 \tmod{N}\) whenever \((d,N) = 1\). In particular, the diamond operators induce an action of \(\G_{0}(N)\) on \(\mc{M}_{k}(\G_{1}(N))\), and since \(\G_{1}(N)\) acts trivially and is normal in \(\G_{0}(N)\), there is a further induced action of \((\Z/N\Z)^{\ast}\) in view of the previous isomorphism.
       
-      One reason the diamond operators are useful is that they decompose \(\mc{M}_{k}(\G_{1}(N))\) into eigenspaces. For any Dirichlet character \(\chi\) modulo \(N\), we let
+      The diamond operators decompose \(\mc{M}_{k}(\G_{1}(N))\) into eigenspaces. For any Dirichlet character \(\chi\) modulo \(N\), we let
       \[
         \mc{M}_{k}(N,\chi) = \{f \in \mc{M}_{k}(\G_{1}(N)):\<d\>f = \chi(d)f\},
       \]
@@ -1608,7 +1667,7 @@
         Since \((\Z/N\Z)^{\ast}\) is a finite abelian group, every complex representation is completely reducible and every irreducible representation is one-dimensional. As the characters of \((\Z/N\Z)^{\ast}\) are the Dirichlet characters modulo \(N\), the decomposition as a direct sum follows. Moreover, it preserves the subspace of cusp forms since \(\Phi\) restricts to a representation of \((\Z/N\Z)^{\ast}\) over \(\mc{S}_{k}(\G_{1}(N))\).
       \end{proof}
       
-      Observe that every matrix in \(\g \in \G_{0}(N)\) is of the form \(\g \equiv \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix} \tmod{N}\) for some integer \(d\) with \((d,N) = 1\). So this result shows that the diamond operators sieve modular forms on \(\G_{1}(N)\backslash\H\) with trivial character in terms of modular forms on \(\G_{0}(N)\backslash\H\) with nontrivial characters. In particular, we have
+      Observe that every matrix in \(\g \in \G_{0}(N)\) is of the form \(\g \equiv \begin{psmallmatrix} \ast & \ast \\ 0 & d \end{psmallmatrix} \tmod{N}\) for some integer \(d\) with \((d,N) = 1\). So this result shows that the diamond operators sieve modular forms on \(\G_{1}(N)\backslash\H\) in terms of modular forms on \(\G_{0}(N)\backslash\H\) with character. In particular, we have
       \[
         \mc{M}_{k}(N,\chi) = \mc{M}_{k}(\G_{0}(N),\chi) \quad \text{and} \quad \mc{S}_{k}(N,\chi) = \mc{S}_{k}(\G_{0}(N),\chi).
       \]
@@ -1616,24 +1675,24 @@
       \[
         \D^{m}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Mat_{2}^{m}(\Z): \begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \tmod{N} \right\}.
       \]
-      In other words, \(\D^{m}(N)\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices \(\a\) with integral entries such that \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). From the equivalence
+      In other words, \(\D^{m}(N)\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices with integral entries that reduce to that \(\begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix}\) modulo \(N\). From the equivalence
       \[
         \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N},
       \]
-      it follows that \(\G_{1}(N)\) acts on \(\D^{m}(N)\) by both left and right multiplication. Whence \(\D^{m}(N)\) admits an orbit decomposition
+      it follows that \(\G_{1}(N)\) acts on \(\D^{m}(N)\) by both left and right multiplication. Whence \(\D^{m}(N)\) admits a double coset decomposition
       \[
-        \D^{m}(N) = \bigcup_{\a \in \G_{1}(N)\backslash\D^{m}(N)/\G_{1}(N)}\G_{1}(N)\a\G_{1}(N),
+        \D^{m}(N) = \bigcup_{\a \in \G_{1}(N)\backslash\D^{m}(N)/\G_{1}(N)}\G_{1}(N)\a\G_{1}(N).
       \]
-      into double cosets. To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = \g\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\g'\) for some \(\g,\g' \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(\Z)\), and there are finitely many choices for \(a\) and \(d\), we conclude that this double coset decomposition is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
+      To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = \g\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\g'\) for some \(\g,\g' \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(\Z)\), and there are finitely many choices for \(a\) and \(d\), we conclude that this double coset decomposition is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
       \[
         (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D^{m}(N)/\G_{1}(N)}[\G_{1}(N)\a\G_{1}(N)]_{k}f(z).
       \]
-      The Hecke operator \(T_{m}\) is well-defined because it only depends the double coset decomposition of \(\D^{m}(N)\). In fact, we can find an explicit set of double coset representatives for \(\D^{m}(N)\).
+      This is well-defined because it only depends upon the double coset decomposition of \(\D^{m}(N)\). In fact, we can find an explicit set of double coset representatives for \(\D^{m}(N)\).
 
       \begin{proposition}\label{prop:Delta_double_coset_decomposition}
         There is a double coset decomposition
         \[
-          \D^{m}(N) = \bigcup_{\substack{ad = m \\ a \mid d \\ (a,N) = 1}}\bigcup_{b \tmod{d}}\G_{1}(N)\g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N).
+          \D^{m}(N) = \bigcup_{\substack{ad = m \\ a \mid d \\ (a,N) = 1}}\G_{1}(N)\g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\G_{1}(N).
         \]
       \end{proposition}
       \begin{proof}
@@ -1641,11 +1700,11 @@
         \[
            \g_{a}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N}.
         \]
-        For the forward inclusion, let \(L\) be the set of \(2 \x 1\) column vectors with entries in \(\Z\) which is a finite generated abelian group. Set
+        For the forward inclusion, suppose \(\a \in \D^{m}(N)\) and let \(L\) be the set of \(2 \x 1\) column vectors with entries in \(\Z\) which is a finite generated abelian group. Set
         \[
           L_{0} = \left\{\begin{pmatrix} a \\ b \end{pmatrix} \in L: b \equiv 0 \tmod{N} \right\}.
         \]
-        Observe that \(L\) is a \(\Mat_{2}(\Z)\)-module by left matrix multiplication, and while \(L_{0}\) is not a \(\Mat_{2}(\Z)\)-submodule, \(\a\) preserves \(L_{0}\) in view of
+        Observe that \(L\) is a \(\Mat_{2}^{m}(\Z)\)-module by left matrix multiplication, and while \(L_{0}\) is not a \(\Mat_{2}^{m}(\Z)\)-submodule, \(\a\) preserves \(L_{0}\) in view of
         \[
           \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} \ast \\ 0 \end{pmatrix} \equiv \begin{pmatrix} \ast \\ 0 \end{pmatrix} \pmod{N}.
         \]
@@ -1657,7 +1716,7 @@
         \[
           \a L_{0} = au\Z+bv\Z.
         \]
-        We will now show \((a,N)= 1\). If not then \(\a L_{0} \subseteq pL\) and since \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in L_{0}\) this would imply that the first row of \(\a\) is divisible by \(p\) which is impossible as \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). Whence \((a,N) = 1\) so that \(a \mid m\) and \(b \mid N\). Then \(u\Z+Nv\Z\) is the unique index \(N\) subgroup of \(L\) containing \(\a L_{0}\) and so
+        We will now show \((a,N)= 1\). If not then there is a prime \(p\) with \(p \mid N\) such that \(\a L_{0} \subseteq pL\). Since \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in L_{0}\) this would imply that the first row of \(\a\) is divisible by \(p\) which is impossible as \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). Whence \((a,N) = 1\) so that \(a \mid m\) and \(N \mid b\). Then \(u\Z+Nv\Z\) is the unique index \(N\) subgroup of \(L\) containing \(\a L_{0}\) and so
         \[
           L_{0} = u\Z+Nv\Z.
         \]
@@ -1673,7 +1732,7 @@
         \[
           \a = \g\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\g'.
         \]
-        As \(u,v\) are a basis for \(L\), replacing \(v\) by \(-v\) if necessary, we may ensure \(\g \in \SL_{2}(\Z)\). Then a short computation shows \(\g' \in \SL_{2}(\Z)\). Also, as \(u \in L_{0}\) and \(au \in \a L_{0}\), we actually have \(\g,\g' \in \G_{0}(N)\). It follows from \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup} and normality of \(\G_{0}(N)\) that we may write
+        As \(u,v\) are a basis for \(L\), replacing \(v\) by \(-v\) if necessary, we may ensure \(\g \in \SL_{2}(\Z)\). Then a short computation shows \(\g' \in \SL_{2}(\Z)\). Also, as \(u \in L_{0}\) and \(au \in \a L_{0}\), we actually have \(\g,\g' \in \G_{0}(N)\). It follows from \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup} and normality of \(\G_{1}(N)\) in \(\G_{0}(N)\) that we may write
         \[
           \a = \eta\g_{s}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\g_{t} \eta',
         \]
@@ -1994,7 +2053,7 @@
         \[
           \a_{\ell}\g\a_{\ell}^{-1} = \begin{pmatrix} a & b\ell \\ \frac{c}{\ell} & d \end{pmatrix},
         \]
-        whence \(\a_{\ell}\g\a_{\ell}^{-1} \in \G_{1}\left(\frac{N}{\ell}\right)\). But then \(\a_{\ell}\G_{1}(N)\a_{\ell}^{-1} \subseteq \G_{1}\left(\frac{N}{\ell}\right)\) which is to say \(\G_{1}(N) \subseteq \a_{\ell}^{-1}\G_{1}\left(\frac{N}{\ell}\right)\a_{\ell}\). Modularity then follows from a short computation. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{1}\left(\frac{N}{\ell}\right)\backslash\H\). Then \(\a_{\ell}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\) and as
+        whence \(\a_{\ell}\g\a_{\ell}^{-1} \in \G_{1}\left(\frac{N}{\ell}\right)\). But then \(\a_{\ell}\G_{1}(N)\a_{\ell}^{-1} \subseteq \G_{1}\left(\frac{N}{\ell}\right)\) which is to say \(\G_{1}(N) \subseteq \a_{\ell}^{-1}\G_{1}\left(\frac{N}{\ell}\right)\a_{\ell}\). \todo{Modularity follows from a short computation}. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{1}\left(\frac{N}{\ell}\right)\backslash\H\). Then \(\a_{\ell}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\) and as
         \[
           ((f\|_{k}\a_{\ell})|_{k}\s_{\mf{a}})(z) = \ell^{\frac{k}{2}-1}(f|_{k}\a_{\ell}\s_{\mf{a}})(z),
         \]
