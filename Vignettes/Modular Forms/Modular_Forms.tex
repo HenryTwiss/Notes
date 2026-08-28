@@ -60,7 +60,7 @@
       \[
         Sz = -\frac{1}{z} \quad \text{and} \quad Tz = z+1,
       \]
-      respectively. Therefore \(S\) acts by a pseudo-inversion while \(T\) acts by unit translation. Short computations show
+      respectively. Therefore \(S\) acts by a pseudo-inversion while \(T\) acts by unit translation. Arguing by induction shows
       \[
         T^{n} = \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix} \quad \text{and} \quad V^{n} =  \begin{pmatrix} 1 & 0 \\ n & 1 \end{pmatrix},
       \]
@@ -72,7 +72,7 @@
           \]
       \end{proposition}
       \begin{proof}
-        Let \(n\) be an integer and \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z)\). We will prove \(\g \in \<S,T\>\) by demonstrating that it can be reduced to the identity matrix. If \(c = 0\) then \(\g\) is the identity matrix since \(\det(\g) = 1\) and we are done. So suppose \(c \neq 0\) and write \(a = qc+r\) for some integers \(q\) and \(r\) with \(|r| < |c|\). A short computation shows
+        Let \(n\) be an integer and \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z)\). We will prove \(\g \in \<S,T\>\) by demonstrating that it can be reduced to the identity matrix. If \(c = 0\) then \(\g\) is the identity matrix since \(\det(\g) = 1\) and we are done. So suppose \(c \neq 0\) and write \(a = qc+r\) for some integers \(q\) and \(r\) with \(|r| < |c|\). Now observe that
         \[
           ST^{-q}\g = \begin{pmatrix} -c & -d \\ r & b-qd \end{pmatrix}.
         \]
@@ -120,11 +120,11 @@
         \[
           U = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \quad \text{and} \quad L = \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix}.
         \]
-        A short computation shows that these are the images of \(T\) and \(TST\) under \(\pi\) respectively. So \cref{prop:PSL_generator} will imply that \(\pi\) is surjective provided \(U\) and \(L\) generate \(\SL_{2}(\Z/N\Z)\). So let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z/N\Z)\). We will prove \(\g \in \<U,L\>\) by demonstrating that it can be reduced to the identity matrix. To show this, observe that \(U^{n} = U(n)\) and \(L^{n} = L(n)\) where \(U(n)\) and \(L(n)\) are the upper and lower unipotent matrices
+        These are the images under \(\pi\) of \(T\) and \(TST\) respectively. So \cref{prop:PSL_generator} will imply that \(\pi\) is surjective provided \(U\) and \(L\) generate \(\SL_{2}(\Z/N\Z)\). So let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_{2}(\Z/N\Z)\). We will prove \(\g \in \<U,L\>\) by demonstrating that it can be reduced to the identity matrix. To show this, observe that \(U^{n} = U(n)\) and \(L^{n} = L(n)\) where \(U(n)\) and \(L(n)\) are the upper and lower unipotent matrices
         \[
           U(n) = \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix} \quad \text{and} \quad L(n) = \begin{pmatrix} 1 & 0 \\ n & 1 \end{pmatrix},
         \]
-        for \(n\) modulo \(N\). So it suffices to show that this collection of unipotent matrices generates \(\SL_{2}(\Z/N\Z)\). If \(c = 0\) then \(\det(\g) = 1\) implies \(d\) is the inverse of \(a\) modulo \(N\) so that \(\g = \begin{psmallmatrix} a & b \\ 0 & a^{-1} \end{psmallmatrix}\). Short computations show
+        for \(n\) modulo \(N\). So it suffices to show that this collection of unipotent matrices generates \(\SL_{2}(\Z/N\Z)\). If \(c = 0\) then \(\det(\g) = 1\) implies \(d\) is the inverse of \(a\) modulo \(N\) so that \(\g = \begin{psmallmatrix} a & b \\ 0 & a^{-1} \end{psmallmatrix}\). We have
         \[
           U(-ab)\g= \begin{pmatrix} a & 0 \\ 0 & a^{-1} \end{pmatrix},
         \]
@@ -132,7 +132,7 @@
         \[
           L(a^{-1}-1)U(1)L(a-1)U(-a^{-1}) = \begin{pmatrix} a & 0 \\ 0 & a^{-1} \end{pmatrix}.
         \]
-        Whence \(\g\) can be reduced to the identity matrix. If \(c \neq 0\) then \(\det(\g) = 1\) and therefore \(c\) is invertible. A short computation shows
+        Whence \(\g\) can be reduced to the identity matrix. If \(c \neq 0\) then \(\det(\g) = 1\) and therefore \(c\) is invertible. Now
         \[
           L(-c)U((1-a)c^{-1})\g = \begin{pmatrix} 1 & (d-1)c^{-1} \\ 0 & 1 \end{pmatrix},
         \]
@@ -276,7 +276,7 @@
           in either case and so \(\G_{0}(N) = \<\G_{0}(N;p),T\>\) as desired.
         \end{proof}
 
-        Our last result concerns Hecke congruence subgroups of different levels. For any divisor \(\ell\) of \(N\), set \(\a_{\ell} = \begin{psmallmatrix} \ell & 0 \\ 0 & 1 \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\). Now \(\G_{0}\left(\frac{N}{\ell}\right)\) is a congruence subgroup as well as \(\G_{0}(N)\) and these congruence subgroups contain \(V^{\frac{N}{\ell}}\) and \(V^{N}\) respectively. Moreover, a short computation shows
+        Our last result concerns Hecke congruence subgroups of different levels. For any divisor \(\ell\) of \(N\), set \(\a_{\ell} = \begin{psmallmatrix} \ell & 0 \\ 0 & 1 \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\). Now \(\G_{0}\left(\frac{N}{\ell}\right)\) is a congruence subgroup as well as \(\G_{0}(N)\) and these congruence subgroups contain \(V^{\frac{N}{\ell}}\) and \(V^{N}\) respectively. Moreover, observe that
         \[
           \a_{\ell}V^{N}\a_{\ell} = V^{\frac{N}{\ell}}.
         \]
@@ -348,7 +348,7 @@
         \[
           \Im(z') = \frac{\Im(z)}{|cz+d|^{2}},
         \]
-        by \cref{equ:Mobius_transformation_imaginary_part_simplified} and so \(|cz+d| \le 1\). As \(|z| > 1\) and \(|\Re(z)| < \frac{1}{2}\), short computations show that this inequality is valid only if \(c = 0\). Then \(\det(\g) = 1\) forces \(a = d = \pm 1\). Finally, \(|\Re(z)| < \frac{1}{2}\) further forces \(b = 0\). But then \(\g = \pm I\) which gives a contradiction since we assumed \(z\) and \(z'\) were distinct.
+        by \cref{equ:Mobius_transformation_imaginary_part_simplified} and so \(|cz+d| \le 1\). As \(|z| > 1\) and \(|\Re(z)| < \frac{1}{2}\), this inequality is valid only if \(c = 0\). Then \(\det(\g) = 1\) forces \(a = d = \pm 1\). Finally, \(|\Re(z)| < \frac{1}{2}\) further forces \(b = 0\). But then \(\g = \pm I\) which gives a contradiction since we assumed \(z\) and \(z'\) were distinct.
       \end{proof}
 
       \begin{figure}[ht]
@@ -484,7 +484,7 @@
         \]
         By minimality of \(m_{\w}(x)\), \(\w\) and \(1\) are linearly independent over \(\Q\) so we may equate coefficients to see that \(d = a+c\) and \(b = -c\). Then \(\g = \begin{psmallmatrix} a & -c \\ c & a+c \end{psmallmatrix}\) and \(a^{2}+ac+c^{2} = 1\). Completing the square shows \((a+c)^{2}-ac = 1\). Therefore we have \(a = 1\) and \(c = 0\), \(a = -1\) and \(c = 0\), \(a = 0\) and \(c = 1\), \(a = 0\) and \(c = -1\), \(a = -1\) and \(c = 1\), or \(a = 1\) and \(c = -1\). These six cases correspond to the matrices \(I\), \(-I\), \(ST\), \((ST)^{4}\), \((ST)^{2}\), and \((ST)^{5}\) respectively. As \((ST)^{3} = -I\), it follows that \(\SL_{2}(\Z)_{\w} = \<ST\>\) and is of order \(6\). Moreover, if \(z = 1+\w\) then \(z = T\w\). Whence \(\SL_{2}(\Z)_{1+\w} = T\SL_{2}(\Z)_{\w}T^{-1} = \<TS\>\) and is of order \(6\).
         
-        It remains to show that if \(z \neq i,\w,1+\w\) then \(\SL_{2}(\Z)_{z} = \<I\>\). Equivalently, will show the contrapositive which is to say that if \(\SL_{2}(\Z)_{z} \neq \<-I\>\) then \(z = i,\w,1+\w\). Since the stabilizer subgroup of \(z\) is trivial if \(z \in \mc{F}^{\circ}\), we may additionally assume \(z\) lies on the boundary of \(\mc{F}\). Now suppose for such \(z\) that \(\g \neq \pm I\). We first claim \(c > 0\). For if \(c = 0\), \(\det(\g) = 1\) implies \(a = d = \pm1\). This further forces \(b = 0\) implying \(\g = \pm I\) which is a contradiction. Hence \(c \neq 0\) and so \(z\) satisfies the aforementioned identity which is a quadratic. A short computation shows that the discriminant is \((a+d)^{2}-4\). Since this quadratic has integral coefficients and \(z\) is complex, the discriminant must be negative. So
+        It remains to show that if \(z \neq i,\w,1+\w\) then \(\SL_{2}(\Z)_{z} = \<I\>\). Equivalently, will show the contrapositive which is to say that if \(\SL_{2}(\Z)_{z} \neq \<-I\>\) then \(z = i,\w,1+\w\). Since the stabilizer subgroup of \(z\) is trivial if \(z \in \mc{F}^{\circ}\), we may additionally assume \(z\) lies on the boundary of \(\mc{F}\). Now suppose for such \(z\) that \(\g \neq \pm I\). We first claim \(c > 0\). For if \(c = 0\), \(\det(\g) = 1\) implies \(a = d = \pm1\). This further forces \(b = 0\) implying \(\g = \pm I\) which is a contradiction. Hence \(c \neq 0\) and so \(z\) satisfies the aforementioned identity which is a quadratic. The discriminant is \((a+d)^{2}-4\), and since this quadratic has integral coefficients and \(z\) is complex, the discriminant must be negative. So
         \[
           (a+d)^{2}-4 < 0,
         \]
@@ -612,7 +612,7 @@
         with \(\w_{\infty} = \begin{psmallmatrix} 1 & \ast \\ 0 & 1 \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) and \(\w_{c/d} = \begin{psmallmatrix} a & \ast \\ c & d \end{psmallmatrix} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) if such matrices exists otherwise \(\W_{\infty}\) and \(\W_{c/d}\) are empty respectively. In the former case for \(\W_{\infty}\), \(\w_{\infty}\) exists if and only if \(\mf{a}\) and \(\mf{b}\) are \(\G\)-equivalent. In the former case for \(\W_{c/d}\), \(a\) and \(d\) are determined modulo \(c\) and \(\W_{c/d}\) does not depend on the entry \(a\) of \(\w_{c/d}\).
       \end{theorem*}
       \begin{proof}
-        As \(B_{\G}^{+} = \s_{\mf{a}}^{-1}\G_{\mf{a}}\s_{\mf{a}}\) and \(B_{\G}^{+} = \s_{\mf{b}}^{-1}\G_{\mf{b}}\s_{\mf{b}}\), short computations show that \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) is invariant under left and right multiplication by elements \(B_{\G}^{+}\). This proves \(\W_{\infty}\) and \(\W_{c/d}\) are subsets of \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\). Now any \(\w_{\infty} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) satisfies \(\w_{\infty} = \s_{\mf{a}}^{-1}\g\s_{\mf{b}}\) for some \(\g \in \G\). As \(\w_{\infty}\) fixes \(\infty\), a short computation shows
+        As \(B_{\G}^{+} = \s_{\mf{a}}^{-1}\G_{\mf{a}}\s_{\mf{a}}\) and \(B_{\G}^{+} = \s_{\mf{b}}^{-1}\G_{\mf{b}}\s_{\mf{b}}\), we see that \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) is invariant under left and right multiplication by elements \(B_{\G}^{+}\). This proves \(\W_{\infty}\) and \(\W_{c/d}\) are subsets of \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\). Now any \(\w_{\infty} \in \s_{\mf{a}}^{-1}\G\s_{\mf{b}}\) satisfies \(\w_{\infty} = \s_{\mf{a}}^{-1}\g\s_{\mf{b}}\) for some \(\g \in \G\). As \(\w_{\infty}\) fixes \(\infty\), we find that
         \[
           \g\mf{b} = \mf{a}.
         \]
@@ -679,7 +679,7 @@
       \[
         \a\a' = \begin{pmatrix} a'a+b'c & a'b+b'b \\ c'a+d'c & c'b+d'd \end{pmatrix},
       \]
-      and from this identity, a short computation shows
+      and from this a short computation shows
       \[
         j(\a'\a,z) =  j(\a',\a z)j(\a,z).
       \]
@@ -725,7 +725,7 @@
         Every \(\a \in \GL_{2}^{+}(\Q)\) can be written as \(\a = \g\eta\) for some \(\g \in \SL_{2}(\Z)\) and \(\eta \in \GL_{2}^{+}(\Q)\) with \(\eta = \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix}\).
       \end{lemma}
       \begin{proof}
-        Let \(r\) be a positive integer such that \(r\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\) has integral entries. As \(r\a\) has nonzero determinant, we cannot have \(a = c = 0\). Whence we may set \(a' = \frac{a}{(a,c)}\) and \(c' = \frac{c}{(a,c)}\) so that \(a'\) and \(c'\) are relatively prime integers. Then there exists \(\g \in \SL_{2}(\Z)\) with \(\g^{-1} = \begin{psmallmatrix} \ast & \ast \\ -c' & a' \end{psmallmatrix}\). Moreover, a short computation shows
+        Let \(r\) be a positive integer such that \(r\a = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \GL_{2}^{+}(\Q)\) has integral entries. As \(r\a\) has nonzero determinant, we cannot have \(a = c = 0\). Whence we may set \(a' = \frac{a}{(a,c)}\) and \(c' = \frac{c}{(a,c)}\) so that \(a'\) and \(c'\) are relatively prime integers. Then there exists \(\g \in \SL_{2}(\Z)\) with \(\g^{-1} = \begin{psmallmatrix} \ast & \ast \\ -c' & a' \end{psmallmatrix}\). Moreover, we have
         \[
           \g^{-1}r\a = \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix}.
         \]
@@ -861,7 +861,7 @@
         \[
           f(z,r) = \left|\frac{z+r}{i+r}\right|,
         \]
-        for \(z \in S_{a,b}\) and real \(r\). We will prove the stronger statement \(f(z,r) \ge \d\). Clearly \(f(z,r)\) is continuous on \(S_{a,b} \x \R\) and it is also positive there since \(z-r \neq 0\). A short computation shows
+        for \(z \in S_{a,b}\) and real \(r\). We will prove the stronger statement \(f(z,r) \ge \d\). Clearly \(f(z,r)\) is continuous on \(S_{a,b} \x \R\) and it is also positive there since \(z-r \neq 0\). Moreover, we have
         \[
           f(z,r)^{2} \ge \frac{|z|^{2}+r^{2}}{1+r^{2}}.
         \]
@@ -936,11 +936,15 @@
         Then \(F \in \mc{M}_{kn_{\rho}d_{\G}}(\SL_{2}(\Z))\).
       \end{lemma}
       \begin{proof}
-        If \(f\) is zero then so is \(F\) and the claim is obvious. So assume \(f\) is nonzero. First we must show that \(F\) is well-defined which is to say that it is independent of the representatives \(\b\). Indeed, if \(\b\) and \(\b'\) belong to the same coset then \(\b'\b^{-1} \in \G\). Modularity and that \(\rho\) is of order \(n_{\rho}\) together show
+        If \(f\) is zero then so is \(F\) and the claim is obvious. So assume \(f\) is nonzero. First we must show that \(F\) is well-defined which is to say that it is independent of the representatives \(\b\). Indeed, if \(\b\) and \(\b'\) belong to the same coset then \(\b'\b^{-1} \in \G\). Modularity of \(f\) and that \(\rho\) is of order \(n_{\rho}\) together show
         \[
           ((f|_{k}\b')(z))^{n_{\rho}} = ((f|_{k}\b)(z))^{n_{\rho}},
         \]
-        which proves \(F\) is well-defined. Since the product is finite, holomorphy of \(F\) is clear. To prove modularity, let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Whence \(\b\g = \g'\b'\) for some other representative \(\b'\) and \(\g' \in \SL_{2}(\Z)\). With this fact, modularity follows from a short computation. The growth condition follows from that of \(f\) and the definition of \(F\). This proves \(F \in \mc{M}_{kn_{\rho}d_{\G}}(\SL_{2}(\Z))\). 
+        which proves \(F\) is well-defined. Holomorphy of \(F\) is clear since the product is finite. To prove modularity of \(F\), let \(\g \in \SL_{2}(\Z)\). Because \(\b\) runs over a complete set of representatives for \(\G\backslash\SL_{2}(\Z)\) so does \(\b\g\). Whence \(\b\g = \g'\b'\) for some other representative \(\b'\) and \(\g' \in \SL_{2}(\Z)\). With this fact and modularity of \(f\), we find that
+        \[
+          ((f|_{k}\b\g)(z))^{n_{\rho}} = ((f|_{k}\b')(z))^{n_{\rho}},
+        \]
+        and so modularity of \(F\) follows. The growth condition for \(F\) is immediate from that of \(f\).
       \end{proof}  
       
       We can now state and prove the \textbf{valence formula}\index{valence formula}.
@@ -1290,11 +1294,11 @@
         For any two congruence subgroups \(\G_{1}\) and \(\G_{2}\) with nebentypen \(\rho_{1}\) and \(\rho_{2}\) that are compatible with respect to \(\a \in \GL_{2}^{+}(\Q)\), \([\G_{1}\a\G_{2}]_{k}\) maps \(\mc{M}_{k}(\G_{1},\rho_{1})\) into \(\mc{M}_{k}(\G_{2},\rho_{2})\) and preserves the subspaces of cusp forms.
       \end{proposition}
       \begin{proof}
-        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy is immediate since the sum in \(f[\G_{1}\a\G_{2}]_{k}\) is finite. For modularity, let \(\g \in \G_{2}\). As \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Whence \(\b\g = \g'\b'\) for some other representative \(\b'\) and \(\g' \in \G_{1}\). Using this fact and that the nebentypen are compatible, modularity follows from a short computation. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then
+        Let \(f \in \mc{M}_{k}(\G_{1})\). Holomorphy of \(f[\G_{1}\a\G_{2}]_{k}\) is immediate since the sum is finite. For modularity of \(f[\G_{1}\a\G_{2}]_{k}\), let \(\g \in \G_{2}\) and observe that as \(\b\) runs over a complete set of representatives for \(\G_{1}\backslash\G_{1}\a\G_{2}\) so does \(\b\g\). Whence \(\b\g = \g'\b'\) for some other representative \(\b'\) and \(\g' \in \G_{1}\). Using this fact, modularity of \(f\), and that the nebentypen are compatible, a short computation shows
         \[
-          ((f[\G_{1}\a\G_{2}]_{k})|_{k}\s_{\mf{a}})(z) = \sum_{\b \in \G_{1}\backslash\G_{1}\a\G_{2}}\conj{\rho_{1}|_{\a}\rho_{2}}(\b)\det(\b)^{\frac{k}{2}-1}(f|_{k}\b\s_{\mf{a}})(z),
+          \conj{\rho_{1}|_{\a}\rho_{2}}(\b)(f\|_{k}\b\g)(z) = \rho_{2}(\g)\conj{\rho_{1}|_{\a}\rho_{2}}(\b')(f\|_{k}\b')(z),
         \]
-        and so the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form if \(f\) is.
+        from which modularity of \(f[\G_{1}\a\G_{2}]_{k}\) follows. As for the growth condition for \(f[\G_{1}\a\G_{2}]_{k}\), let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{2}\backslash\H\). For any representative \(\b\), observe that \(\b\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}\backslash\H\). Then the growth condition for \(f[\G_{1}\a\G_{2}]_{k}\) follows from that of \(f\). It is also clear that \(f[\G_{1}\a\G_{2}]_{k}\) is a cusp form if \(f\) is.
       \end{proof}
 
       This result shows that the double coset operator \([\G\a\G]_{k}\) is a linear operator on \(\mc{M}_{k}(\G,\rho)\) and preserves the subspace \(\mc{S}_{k}(\G,\rho)\) whenever \(\a\) normalizes \(\G\) and the nebentypus \(\rho\) is conjugate invariant with respect to \(\a\). Recalling that \(\mc{S}_{k}(\G,\rho)\) is a complex Hilbert space with respect to the Petersson inner product, it follows that \([\G\a\G]_{k}\) has an adjoint in this case. We will show that the the adjoint is also a double coset operator whenever \(\a\) normalizes \(\G\). To prove this we first require a lemma.
@@ -1395,7 +1399,7 @@
         \[
           (P_{m,\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}e(m\s_{\mf{a}}^{-1}\g\s_{\mf{b}}z).
         \]
-        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
+        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, we may write
         \[
           \frac{az+b}{cz+(c\ell+d)} = \frac{a}{c}-\frac{1}{c^{2}z+c^{2}\ell+cd}.
         \]
@@ -1462,7 +1466,7 @@
         \[
           (E_{\chi,\mf{a}}|_{k}\s_{\mf{b}})(z) = \sum_{\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)}\cchi(\g)j(\s_{\mf{a}}^{-1}\g\s_{\mf{b}},z)^{-k}.
         \]
-        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, a short computation shows
+        From the Bruhat decomposition for \(\s_{\mf{a}}^{-1}\G\s_{\mf{b}}\), any \(\g \in \G_{0}(N)_{\mf{a}}\backslash\G_{0}(N)\) is of the form \(\g = \begin{psmallmatrix} a & b \\ c & c\ell+d \end{psmallmatrix}\) where \(c \in \mc{C}_{\mf{a},\mf{b}}\), \(d \in \mc{D}_{\mf{a},\mf{b}}(c)\), and \(\ell \in \Z\). Furthermore, we may write
         \[
           \frac{az+b}{cz+(c\ell+d)} = \frac{a}{c}-\frac{1}{c^{2}z+c^{2}\ell+cd}.
         \]
@@ -1630,7 +1634,7 @@
         is a cusp form for any \(f \in \mc{M}_{k}(\G_{0}(N),\chi)\) with Fourier coefficients \(a_{\mf{a}}(n)\) at the \(\mf{a}\) cusp. The direct sum decomposition follows at once. Lastly, the orthogonality statement is immediate from \cref{prop:Petersson_inner_product_with_Eisenstein_series} since the Poincar\'e series are cusp forms.
       \end{proof}
     \subsection{Diamond and Hecke Operators}
-      The diamond and Hecke operators are sums of double coset operators. They will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) with character \(\chi\) modulo \(N\) via their Fourier coefficients. To handle all of the Dirichlet characters uniformly, we will show that these modular forms arise from modular forms on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. Accordingly, the diamond and Hecke operators will be defined on \(\G_{1}(N)\backslash\H\). The former operators decompose forms on \(\G_{1}(N)\backslash\H\) into those on \(\G_{0}(N)\backslash\H\) with a fixed character while the latter operators will be shown to preserve forms on \(\G_{0}(N)\backslash\H\) with a fixed character. So we will discuss the diamond operators first and the Hecke operators second. 
+      The diamond and Hecke operators are sums of double coset operators. They will be used to construct a linear theory of modular forms on \(\G_{0}(N)\backslash\H\) with character \(\chi\) modulo \(N\) via Fourier coefficients. To handle all of the Dirichlet characters uniformly, we will show that these modular forms arise from ones on \(\G_{1}(N)\backslash\H\) with trivial nebentypus. Accordingly, the diamond and Hecke operators will be defined on \(\G_{1}(N)\backslash\H\). The diamond operators decompose modular forms on \(\G_{1}(N)\backslash\H\) into those on \(\G_{0}(N)\backslash\H\) with a fixed character while the Hecke operators will drive the linear theory and preserve modular forms on \(\G_{0}(N)\backslash\H\) with a character. So we will discuss the diamond operators first and the Hecke operators second. 
       
       To define the diamond operators, let \(d\) be a positive integer and recall the right coset decomposition of \(\G_{0}(N)\) given in \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup} with representatives \(\g_{d}\). The \textbf{diamond operator}\index{diamond operator} \(\<d\>:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) is defined to be the double coset operator given by
       \[
@@ -1650,14 +1654,18 @@
       \[
         \mc{M}_{k}(N,\chi) = \{f \in \mc{M}_{k}(\G_{1}(N)):\<d\>f = \chi(d)f\},
       \]
-      be the \(\chi\)-eigenspace. Also let \(\mc{S}_{k}(N,\chi)\) be the corresponding subspace of cusp forms. In the case \(\chi\) is trivial we will suppress this dependence. Then \(\mc{M}_{k}(\G_{1}(N))\) admits a decomposition into these eigenspaces.
+      be the \(\chi\)-eigenspace and
+      \[
+        \mc{S}_{k}(N,\chi) = \{f \in \mc{S}_{k}(\G_{1}(N)):\<d\>f = \chi(d)f\},
+      \]
+      be the corresponding subspace of cusp forms. In the case \(\chi\) is trivial we will suppress this dependence. Then \(\mc{M}_{k}(\G_{1}(N))\) admits a decomposition into these eigenspaces.
 
       \begin{proposition}\label{thm:diamond_operator_decomposition_modular}
         \(\mc{M}_{k}(\G_{1}(N))\) admits the direct sum decomposition
         \[
           \mc{M}_{k}(\G_{1}(N)) = \bigop_{\chi \tmod{N}}\mc{M}_{k}(N,\chi).
         \]
-        Moreover, this decomposition respects the subspace of cusp forms.
+        Moreover, this decomposition respects the subspaces of cusp forms.
       \end{proposition}
       \begin{proof}
         The diamond operators induce a representation \(\Phi\) of \((\Z/N\Z)^{\ast}\) over \(\mc{M}_{k}(\G_{1}(N))\). Explicitly, this representation is
@@ -1671,11 +1679,11 @@
       \[
         \mc{M}_{k}(N,\chi) = \mc{M}_{k}(\G_{0}(N),\chi) \quad \text{and} \quad \mc{S}_{k}(N,\chi) = \mc{S}_{k}(\G_{0}(N),\chi).
       \]
-      We are now ready to discuss the Hecke operators. First, for any positive integer \(m\), set
+      We are now ready to discuss the Hecke operators. To define them, let \(m\) be a positive integer and set
       \[
         \D^{m}(N) = \left\{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Mat_{2}^{m}(\Z): \begin{pmatrix} a & b \\ c & d \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \tmod{N} \right\}.
       \]
-      In other words, \(\D^{m}(N)\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices with integral entries that reduce to that \(\begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix}\) modulo \(N\). From the equivalence
+      In other words, \(\D^{m}(N)\) is subset of \(\GL_{2}^{+}(\Q)\) consisting of determinant \(m\) matrices with integral entries that reduce to \(\begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix}\) modulo \(N\). From the equivalence
       \[
         \begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} 1 & \ast \\ 0 & 1 \end{pmatrix} \equiv \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix} \pmod{N},
       \]
@@ -1683,11 +1691,11 @@
       \[
         \D^{m}(N) = \bigcup_{\a \in \G_{1}(N)\backslash\D^{m}(N)/\G_{1}(N)}\G_{1}(N)\a\G_{1}(N).
       \]
-      To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = \g\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\g'\) for some \(\g,\g' \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). As \(\G_{1}(N)\) has finite index in \(\SL_{2}(\Z)\), and there are finitely many choices for \(a\) and \(d\), we conclude that this double coset decomposition is finite. We define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
+      To see that this decomposition is finite, write \(\a\) in smith normal form as \(\a = \g\begin{psmallmatrix} a & 0 \\ 0 & d \end{psmallmatrix}\g'\) for some \(\g,\g' \in \SL_{2}(\Z)\) and positive integers \(a\) and \(d\) with \(ad = m\) and \(a \mid d\). Since \(\G_{1}(N)\) has finite index in \(\SL_{2}(\Z)\) and there are finitely many choices for \(a\) and \(d\), we conclude that this double coset decomposition is finite. Accordingly, we define the \(m\)-th \textbf{Hecke operator}\index{Hecke operator} \(T_{m}:\mc{M}_{k}(\G_{1}(N)) \to \mc{M}_{k}(\G_{1}(N))\) to be the linear operator given by 
       \[
         (T_{m}f)(z) = \sum_{\a \in \G_{1}(N)\backslash\D^{m}(N)/\G_{1}(N)}[\G_{1}(N)\a\G_{1}(N)]_{k}f(z).
       \]
-      This is well-defined because it only depends upon the double coset decomposition of \(\D^{m}(N)\). In fact, we can find an explicit set of double coset representatives for \(\D^{m}(N)\).
+      This is well-defined because it only depends upon the double coset decomposition of \(\D^{m}(N)\). In fact, we can find an explicit set of double coset representatives.
 
       \begin{proposition}\label{prop:Delta_double_coset_decomposition}
         There is a double coset decomposition
@@ -1706,41 +1714,41 @@
         \]
         Observe that \(L\) is a \(\Mat_{2}^{m}(\Z)\)-module by left matrix multiplication, and while \(L_{0}\) is not a \(\Mat_{2}^{m}(\Z)\)-submodule, \(\a\) preserves \(L_{0}\) in view of
         \[
-          \begin{pmatrix} 1 & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} \ast \\ 0 \end{pmatrix} \equiv \begin{pmatrix} \ast \\ 0 \end{pmatrix} \pmod{N}.
+          \begin{pmatrix} \ast & \ast \\ 0 & \ast \end{pmatrix}\begin{pmatrix} \ast \\ 0 \end{pmatrix} \equiv \begin{pmatrix} \ast \\ 0 \end{pmatrix} \pmod{N}.
         \]
         Since \(\a L\) has index \(m\) in \(L\), and \(L_{0}\) has index \(N\) in \(L\), together we find
         \[
           [L:\a L_{0}] = Nm.
         \]
-        As \(\a L_{0}\) is a finitely generated abelian group, the structure theorem for finitely generated abelian groups implies the existence of a basis \(u,v\) of \(L\) and positive integers \(a\) and \(b\) satisfying \(ab = Nm\) and \(a \mid b\) such that
+        As \(\a L_{0}\) is a finitely generated abelian group, the structure theorem for finitely generated abelian groups implies the existence of a basis \(\begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix},\begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\) of \(L\) and positive integers \(a\) and \(b\) satisfying \(ab = Nm\) and \(a \mid b\) such that
         \[
-          \a L_{0} = au\Z+bv\Z.
+          \a L_{0} = a\Z\begin{pmatrix} u_{1} \\ u_{2} \end{pmatrix}+b\Z\begin{pmatrix} v_{1} \\ v_{2} \end{pmatrix}.
         \]
-        We will now show \((a,N)= 1\). If not then there is a prime \(p\) with \(p \mid N\) such that \(\a L_{0} \subseteq pL\). Since \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in L_{0}\) this would imply that the first row of \(\a\) is divisible by \(p\) which is impossible as \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). Whence \((a,N) = 1\) so that \(a \mid m\) and \(N \mid b\). Then \(u\Z+Nv\Z\) is the unique index \(N\) subgroup of \(L\) containing \(\a L_{0}\) and so
+        We will now show \((a,N)= 1\). If not then there is a prime \(p\) with \(p \mid N\) such that \(\a L_{0} \subseteq pL\). Since \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} \in L_{0}\) this would imply that the first row of \(\a\) is divisible by \(p\) which is impossible because \(\a \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & \ast \end{psmallmatrix} \tmod{N}\). Whence \((a,N) = 1\) so that \(a \mid m\) and \(N \mid b\). Then \(\Z\begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix}+ N\Z\begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\) is the unique index \(N\) subgroup of \(L\) containing \(\a L_{0}\) and so
         \[
-          L_{0} = u\Z+Nv\Z.
+          L_{0} = \Z\begin{pmatrix} u_{1} \\ u_{2} \end{pmatrix}+N\Z\begin{pmatrix} v_{1} \\ v_{2} \end{pmatrix}.
         \]
-        Setting \(d = \frac{b}{N}\), we see that \(au\Z+dv\Z\) is the unique index \(m\) subgroup of \(L\) containing \(\a L_{0}\) so that
+        Setting \(d = \frac{b}{N}\), we see that \(a\Z\begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix}+d\Z\begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\) is the unique index \(m\) subgroup of \(L\) containing \(\a L_{0}\) so that
         \[
-          \a L = au\Z+dv\Z.
+          \a L = a\Z\begin{pmatrix} u_{1} \\ u_{2} \end{pmatrix}+d\Z\begin{pmatrix} v_{1} \\ v_{2} \end{pmatrix}.
         \]
-        Now write \(u = \begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix}\) and \(v = \begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\). Define \(\g,\g' \in \Mat_{2}(\Z)\) by
+        Now define \(\g,\g' \in \Mat_{2}(\Z)\) by
         \[
-          \g = \begin{pmatrix} u_{1} & v_{1} \\ u_{2} & v_{2} \end{pmatrix} \quad \text{and} \quad \g' = \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}^{-1}\g^{-1}\a,
+          \g = \begin{pmatrix} u_{1} & v_{1} \\ u_{2} & v_{2} \end{pmatrix} \quad \text{and} \quad \g' = \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}^{-1}\g^{-1}\a.
         \]
-        so that
+        Then
         \[
           \a = \g\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\g'.
         \]
-        As \(u,v\) are a basis for \(L\), replacing \(v\) by \(-v\) if necessary, we may ensure \(\g \in \SL_{2}(\Z)\). Then a short computation shows \(\g' \in \SL_{2}(\Z)\). Also, as \(u \in L_{0}\) and \(au \in \a L_{0}\), we actually have \(\g,\g' \in \G_{0}(N)\). It follows from \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup} and normality of \(\G_{1}(N)\) in \(\G_{0}(N)\) that we may write
+        As \(u,v\) is a basis for \(L\), replacing \(v\) by \(-v\) if necessary, we may ensure \(\g \in \SL_{2}(\Z)\). Now the columns of \(\a\) belong to \(a\Z\begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix}+d\Z\begin{psmallmatrix} v_{1} \\ v_{2} \end{psmallmatrix}\) since \(\begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix},\begin{psmallmatrix} 0 \\ 1 \end{psmallmatrix} \in L\). Therefore \(\g' \in \SL_{2}(\Z)\). In fact, we actually have \(\g,\g' \in \G_{0}(N)\) as \(\begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix} \in L_{0}\) and \(a\begin{psmallmatrix} u_{1} \\ u_{2} \end{psmallmatrix} \in \a L_{0}\). It follows from \cref{equ:right_coset_decomposition_for_Hecke_congreunce_subgroup} and normality of \(\G_{1}(N)\) in \(\G_{0}(N)\) that we may further write
         \[
           \a = \eta\g_{s}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\g_{t} \eta',
         \]
-        for some \(\eta,\eta' \in \G_{1}(N)\) and \(s\) and \(t\) modulo \(N\) with \((st,N) = 1\). Furthermore, as \(\G_{1}(N)\g_{s}\g_{t} = \G_{1}(N)\g_{st}\) and
+        for some \(\eta,\eta' \in \G_{1}(N)\) and \(s\) and \(t\) modulo \(N\) with \((st,N) = 1\). As \(\G_{1}(N)\g_{s}\g_{t} = \G_{1}(N)\g_{st}\) and
         \[
           \g_{t}^{-1}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix}\g_{t}  \equiv \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \tmod{N},
         \]
-        we may further write
+        we may also write
         \[
           \a = \eta\g_{st}\begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \eta',
         \]
@@ -1811,7 +1819,16 @@
       \begin{equation}\label{equ:Hecke_operator_explicit_formula}
         (T_{m}f)(z) = m^{k-1}\sum_{ad = m}\frac{1}{d^{k}}\sum_{b \tmod{d}}(\<a\>f)\left(\frac{az+b}{d}\right).
       \end{equation}
-      Since the diamond operators are commutative, this latter formula shows that they commute with the Hecke operators. In view of \cref{thm:diamond_operator_decomposition_modular}, it follows that the Hecke operators preserve the \(\chi\)-eigenspaces. This is to say that the Hecke operators restrict to linear operators on \(\mc{M}_{k}(N,\chi)\) and \(\mc{S}_{k}(N,\chi)\) respectively. We can also use this formula to deduce how the Hecke operators act on the Fourier series expansions of modular forms in these subspaces.
+      This formula is also enough to show that the diamond and Hecke operators commute and that they preserve \(\mc{M}_{k}(N,\chi)\) as well as the subspace of cusp forms.
+
+      \begin{proposition}
+        On \(\mc{S}_{k}(\G_{1}(N))\), the diamond operators \(\<n\>\) commute with the Hecke operators \(T_{m}\) for all positive integers \(n\) and \(m\). In particular, \(\<n\>\) and \(T_{m}\) preserve \(\mc{M}_{k}(N,\chi)\) as well as the subspace of cusp forms.
+      \end{proposition}
+      \begin{proof}
+        As the diamond operators are themselves commutative, the diamond operators \(\<n\>\) commute with the Hecke operators \(T_{m}\) in view of \cref{equ:Hecke_operator_explicit_formula}. The diamond operators also preserve \(\mc{M}_{k}(N,\chi)\) in view of \cref{thm:diamond_operator_decomposition_modular}. As \(\mc{M}_{k}(N,\chi)\) is the \(\chi\)-eigenspace with respect to the diamond operators, commutativity forces the Hecke operators to preserve this subspace as well. Clearly the diamond and Hecke operators also preserve the subspace of cusp forms.
+      \end{proof}
+      
+      We can also use \cref{equ:Hecke_operator_explicit_formula} to deduce how the Hecke operators act on the Fourier series expansions of modular forms.
 
       \begin{proposition}\label{prop:Hecke_operators_on_Fourier_coefficients}
         Let \(f \in \mc{M}_{k}(\G_{1}(N))\) have Fourier series expansion
@@ -1855,7 +1872,7 @@
       Now that we know how the Hecke operators act on the Fourier coefficients of modular forms, we can prove composition relations about them. However, we will require a rather tedious lemma about divisor pairs.
 
       \begin{lemma}\label{lem:Hecke_composition_lemma}
-        Fix positive integers \(m\) and \(n\) and a nonnegative \(r\). For any positive integer \(d\), set
+        Fix positive integers \(m\) and \(n\) and a nonnegative integer \(r\). For any positive integer \(d\), set
         \[
           M(d) = \left\{d = d_{1}d_{2}:d_{1} \mid (r,m) \text{ and } d_{2} \mid \left(\frac{rm}{d_{1}^{2}},n\right)\right\}.
         \]
@@ -1885,7 +1902,7 @@
         \[
           \min(\g,\d)-\max(0,\d-\b)+1 \quad \text{and} \quad \min(\b,\d)-\max(0,\d-\g)+1,
         \]
-        upon which a short computation shows are equal in every case. Now suppose \(\d > \a\). Then another short computation shows
+        and a short computation shows that they are equal in every case. Now suppose \(\d > \a\). Then another short computation shows
         \[
           \min(\a,\g,\d,\a+\g-\d) = \a-\max(0,\d-\g) \quad \text{and} \quad \min(\a,\b,\d,\a+\b-\d) = \a-\max(0,\d-\b).
         \]
@@ -1896,7 +1913,7 @@
         which are identical. Therefore the claim is proved.
       \end{proof}
 
-      With this lemma in hand, we can now prove the composition formula for the Hecke operators. This result will also show that the Hecke operators commute.
+      With this lemma in hand, we can now prove the composition formula for the Hecke operators. This result will also show that the Hecke operators commute with themselves.
 
       \begin{theorem}\label{thm:Hecke_operators_composition_formula}
         For any positive integers \(m\) and \(n\), the Hecke operators \(T_{m}\) and \(T_{n}\) on \(\mc{M}_{k}(\G_{1}(N))\) satisfy
@@ -2049,92 +2066,100 @@
         Suppose \(N\) and \(\ell\) are positive integers such that \(\ell \mid N\). Then \(\|_{k}\a_{\ell}\) maps \(\mc{M}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\) into \(\mc{M}_{k}(\G_{1}(N))\) and preserves the subspaces of cusp forms.
       \end{proposition}
       \begin{proof}
-        Let \(f \in \mc{M}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\). It is clear that holomorphy is satisfied for \(f\|_{k}\a_{\ell}\). To verify modularity, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N)\). A short computation shows
+        Let \(f \in \mc{M}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\). Holomorphy of \(f\|_{k}\a_{\ell}\) is clear. To verify modularity of \(f\|_{k}\a_{\ell}\), let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N)\) and observe that
         \[
-          \a_{\ell}\g\a_{\ell}^{-1} = \begin{pmatrix} a & b\ell \\ \frac{c}{\ell} & d \end{pmatrix},
+          \a_{\ell}\g\a_{\ell}^{-1} = \begin{pmatrix} a & b\ell \\ \frac{c}{\ell} & d \end{pmatrix}.
         \]
-        whence \(\a_{\ell}\g\a_{\ell}^{-1} \in \G_{1}\left(\frac{N}{\ell}\right)\). But then \(\a_{\ell}\G_{1}(N)\a_{\ell}^{-1} \subseteq \G_{1}\left(\frac{N}{\ell}\right)\) which is to say \(\G_{1}(N) \subseteq \a_{\ell}^{-1}\G_{1}\left(\frac{N}{\ell}\right)\a_{\ell}\). \todo{Modularity follows from a short computation}. For the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{1}\left(\frac{N}{\ell}\right)\backslash\H\). Then \(\a_{\ell}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\) and as
+        Whence \(\a_{\ell}\g\a_{\ell}^{-1} \in \G_{1}\left(\frac{N}{\ell}\right)\) and so \(\g \in \a_{\ell}^{-1}\G_{1}\left(\frac{N}{\ell}\right)\a_{\ell}\). Using this fact and modularity of \(f\), we have
         \[
-          ((f\|_{k}\a_{\ell})|_{k}\s_{\mf{a}})(z) = \ell^{\frac{k}{2}-1}(f|_{k}\a_{\ell}\s_{\mf{a}})(z),
+          (f\|_{k}\a_{\ell}\g)(z) = (f\|_{k}\a_{\ell})(z),
         \]
-        the growth condition follows from that of \(f\). This proves the first statement. The second statement follows from this identity since \(f\|_{k}\a_{\ell}\) is a cusp form if \(f\) is.
+        proving modularity of \(f\|_{k}\a_{\ell}\). As for the growth condition for \(f\|_{k}\a_{\ell}\), let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\) of \(\G_{1}\left(\frac{N}{\ell}\right)\backslash\H\). Then \(\a_{\ell}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\) and the growth condition for \(f\|_{k}\a_{\ell}\) follows from that of \(f\). It is also clear that \(f\|_{k}\a_{\ell}\) is a cusp form if \(f\) is.
       \end{proof}
 
       We can now define oldforms and newforms. Consider the bilinear operator
       \[
-        i_{\ell}:\mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right) \op \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right) \to \mc{S}_{k}(\G_{1}(N)) \qquad (f,g) \mapsto f+g\|_{k}\a_{\ell}.
+        i_{\ell}:\mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right) \op \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right) \to \mc{S}_{k}(\G_{1}(N)) \qquad (f,g) \mapsto f+g\|_{k}\a_{\ell},
       \]
-      This map is well-defined by \cref{equ:lifting_operator_modular}. The subspaces of \textbf{oldforms}\index{oldforms} and \textbf{newforms}\index{newforms} of level \(N\) are given by
+      which is well-defined by \cref{equ:lifting_operator_modular}. The subspaces of \textbf{oldforms}\index{oldforms} and \textbf{newforms}\index{newforms} of level \(N\) are given by
       \[
         \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N)) = \bigop_{p \mid N}\Im(i_{p}) \quad \text{and} \quad \mc{S}_{k}^{\mathrm{new}}(\G_{1}(N)) = \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))^{\perp}.
       \]
-      An element of these subspaces is called an \textbf{oldform}\index{oldform} or \textbf{newform}\index{newform} respectively. Note that there are no oldforms of level \(1\). We will need a useful operator for the study of oldforms and newforms. Let
+      An element of these subspaces is called an \textbf{oldform}\index{oldform} or \textbf{newform}\index{newform} respectively. Note that there are no oldforms of level \(1\). We will require an additional operator for the study of oldforms and newforms. Let
       \[
         W_{N} = \begin{pmatrix} 0 & -1 \\ N & 0 \end{pmatrix},
       \]
-      and note that \(\det(W_{N}) = N\). This matrix normalizes \(\G_{0}(N)\). Indeed, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\). A short computation shows
+      and note that \(\det(W_{N}) = N\). This matrix normalizes \(\G_{0}(N)\). Indeed, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) and observe that
       \[
-        W_{N}\g W_{N}^{-1} = \begin{pmatrix} d & -\frac{c}{N} \\ -Nb & a \end{pmatrix},
+        W_{N}\g W_{N}^{-1} = \begin{pmatrix} d & -\frac{c}{N} \\ -Nb & a \end{pmatrix} \quad \text{and} \quad W_{N}^{-1}\g W_{N} = \begin{pmatrix} d & -\frac{c}{N} \\ -Nb & a \end{pmatrix},
       \]
-      which clearly belongs to \(\G_{0}(N)\). So \(W_{N}\) normalizes \(\G_{0}(N)\) as claimed. In particular, we will set \(\g_{W} = W_{N}\g W_{N}^{-1} \in \G_{0}(N)\) so that the previous identity can be expressed as
+      both of which clearly belong to \(\G_{0}(N)\). So \(W_{N}\) normalizes \(\G_{0}(N)\) as claimed. In particular, we will set \(\g_{W} = \begin{psmallmatrix} d & -\frac{c}{N} \\ -Nb & a \end{psmallmatrix} \in \G_{0}(N)\) so that the previous identities can be expressed as
       \begin{equation}\label{equ:Atkin_Lehner_normalization}
-        W_{N}\g = \g_{W}W_{N}.
+        W_{N}\g = \g_{W}W_{N} \quad \text{and} \quad \g W_{N} = W_{N}\g_{W}.
       \end{equation}
       We define the \textbf{Atkin-Lehner operator}\index{Atkin-Lehner operator} \(\w_{N}:C(\H) \to C(\H)\) to be the linear operator given by
       \[
         (\w_{N}f)(z) = N^{1-k}(f\|_{k}W_{N})(z).
       \]
-      As \(W_{N}\) is invertible so is the Atkin-Lehner operator \(\w_{N}\). It is not difficult to see how the Atkin-Lehner operator acts on \(\mc{S}_{k}(\G_{1}(N))\).
+      As \(W_{N}\) is invertible so is the Atkin-Lehner operator \(\w_{N}\). Also, since \(W_{N}^{2} = -I_{N}\) we must have
+      \[
+        (\w_{N}^{2}f)(z) = (-1)^{k}f.
+      \]
+      Therefore \(\w_{N}\) is an involution whenever \(k\) is even, and regardless of the parity of \(k\), is at most of order \(4\). It is not difficult to see how the Atkin-Lehner operator acts on \(\mc{S}_{k}(\G_{1}(N))\).
 
-      \begin{proposition}\label{prop:Atkin_Lehner_modular}
-        The Atkin-Lehner operator \(\w_{N}\) maps \(\mc{S}_{k}(\G_{1}(N))\) into itself. In particular, \(\w_{N}\) takes \(\mc{S}_{k}(N,\chi)\) into \(\mc{S}_{k}(N,\cchi)\) and preserves the subspaces of oldforms and newforms. Moreover, the adjoint is given by
-        \[
-          \w_{N}^{\ast} = (-1)^{k}\w_{N},
-        \]
-        and we also have
-        \[
-          \w_{N}^{2} = (-1)^{k}.
-        \]
+      \begin{proposition}
+        The Atkin-Lehner operator \(\w_{N}\) maps \(\mc{S}_{k}(\G_{1}(N))\) into itself. In particular, \(\w_{N}\) takes \(\mc{S}_{k}(N,\chi)\) into \(\mc{S}_{k}(N,\cchi)\).
       \end{proposition}
       \begin{proof}
-        In light of \cref{thm:diamond_operator_decomposition_modular}, the first statement is a consequence of the latter ones. So let \(f \in \mc{S}_{k}(N,\chi)\). Holomorphy of \(\w_{N}f\) is obvious. For modularity, let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) and recall \(\g_{W} \in \G_{0}(N)\). Then \(\chi(\g_{W}) = \cchi(\g)\) and modularity follows from a short computation using \cref{equ:Atkin_Lehner_normalization}. As for the growth condition, let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\). Then \(W_{N}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\). As
+        In light of \cref{thm:diamond_operator_decomposition_modular}, the first statement is a consequence of the latter one. So let \(f \in \mc{S}_{k}(N,\chi)\). Holomorphy of \(\w_{N}f\) is obvious. For modularity of \(\w_{N}f\), let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N)\) and recall \(\g_{W} \in \G_{0}(N)\). Then \(\chi(\g_{W}) = \cchi(\g)\) and \cref{equ:Atkin_Lehner_normalization} together with modularity of \(f\) implies
         \[
-          ((\w_{N}f)|_{k}\s_{\mf{a}})(z) = N^{-\frac{k}{2}}(f|_{k}W_{N}\s_{\mf{a}})(z),
+          ((\w_{N}f)|_{k}\g)(z) = \cchi(\g)(\w_{N}f)(z),
         \]
-        the growth condition follows from that of \(f\). In particular, \(\w_{N}f\) is a cusp form because \(f\). This proves \(\w_{N}\) takes \(\mc{S}_{k}(N,\chi)\) into \(\mc{S}_{k}(N,\cchi)\). We now show the adjoint formula for the Atkin-Lehner operator. First observe that the adjugate of \(W_{N}\) satisfies \(W_{N}^{\ast} = -W_{N}\). Therefore \cref{prop:double_coset_adjoint} implies
+        proving modularity of \(\w_{N}f\). As for the growth condition for \(\w_{N}f\), let \(\s_{\mf{a}}\) be a scaling matrix for a cusp \(\mf{a}\). Then \(W_{N}\s_{\mf{a}}\infty = \mf{b}\) for some cusp \(\mf{b}\) of \(\G_{1}(N)\backslash\H\) and the growth condition for \(\w_{N}f\) follows from that of \(f\). In particular, \(\w_{N}f\) is a cusp form because \(f\).
+      \end{proof}
+
+      It is also an easy matter to compute the adjoint of \(\w_{N}\) and with it we can show that the subspaces of oldforms and newforms are preserved.
+
+      \begin{proposition}\label{prop:Atkin_Lehner_adjoint}
+        On \(\mc{S}_{k}(\G_{1}(N))\), the Atkin-Lehner operator \(\w_{N}\) satisfies the adjoint formula
         \[
           \w_{N}^{\ast} = (-1)^{k}\w_{N},
         \]
-        proving the desired adjoint formula. With the adjoint formula, we can further show that the Atkin-Lehner operator preserves the subspaces of oldforms and newforms. To show that it preserves the subspace of oldforms, let \(p\) be a prime satisfying \(p \mid N\) and suppose \(i_{p}(f,g) = h\) so that \(h = f+g\|_{k}\a_{p}\). Then it is enough to show
+        In particular, \(\w_{N}\) preserves the subspaces of oldforms and newforms.
+      \end{proposition}
+      \begin{proof}
+        The adjoint formula follows at once from \cref{prop:double_coset_adjoint} since the adjugate \(W_{N}^{\ast}\) satisfies the relation
         \[
-          \w_{N}i_{p}(f,g) = i_{p}(\w_{\frac{N}{p}}p^{k-2}g,\w_{\frac{N}{p}}p^{1-k}f),
+          W_{N}^{\ast} = -W_{N}.
+        \]
+        
+        We can now show that \(\w_{N}\) preserves the subspaces of oldforms and newforms. If \(N = 1\) the result is trivial because there are no oldforms. So we may assume \(N > 1\). We will first show that the subspace of oldforms is preserved. Let \(q\) be a prime satisfying \(q \mid N\) and suppose \(i_{q}(f,g) = h\) so that \(h = f+g\|_{k}\a_{q}\). Then it is enough to show
+        \[
+          \w_{N}i_{q}(f,g) = i_{q}(\w_{\frac{N}{q}}q^{k-2}g,\w_{\frac{N}{q}}q^{1-k}f),
         \]
         which will follow from the formulas
         \[
-          \w_{N}f = (\w_{\frac{N}{p}}p^{1-k}f)\|_{k}\a_{p} \quad \text{and} \quad \w_{N}(g\|_{k}\a_{p}) = \w_{\frac{N}{p}}(p^{k-2}g).
+          \w_{N}f = (\w_{\frac{N}{q}}q^{1-k}f)\|_{k}\a_{q} \quad \text{and} \quad \w_{N}(g\|_{k}\a_{q}) = \w_{\frac{N}{q}}(q^{k-2}g).
         \]
         These formulas are implied by the identities
         \[
-          W_{N} = W_{\frac{N}{p}}\a_{p} \quad \text{and} \quad \a_{p}W_{N} = I_{p}W_{\frac{N}{p}}.
+          W_{N} = W_{\frac{N}{q}}\a_{q} \quad \text{and} \quad \a_{q}W_{N} = I_{q}W_{\frac{N}{q}}.
         \]
         Thus the Atkin-Lehner operator \(\w_{N}\) preserves the subspace of oldforms. To see that \(\w_{N}\) preserves the subspace of newforms as well, let \(f\) and \(g\) be a newform and an oldform respectively. The adjoint formula for \(\w_{N}\) gives
         \[
           \<\w_{N}f,g\> = \<f,(-1)^{k}\w_{N}g\>.
         \]
-        But the right-hand side is zero because it is an inner product between a newform and an oldform. Hence \(\w_{N}f\) must also be a newform and so \(\w_{N}\) preserves the subspace of newforms. It remains to prove the last formula. For this, observe that \(W_{N}^{2} = -I_{N}\). Using this fact, a short computation shows
-        \[
-          (\w_{N}^{2}f)(z) = (-1)^{k}f.
-        \]
-        This completes the proof.
+        But the right-hand side is zero because it is an inner product between a newform and an oldform. Hence \(\w_{N}f\) must also be a newform and so \(\w_{N}\) preserves the subspace of newforms too.
       \end{proof}
 
-      This result showed that the Atkin-Lehner operator \(\w_{N}\) is self-adjoint and an involution whenever \(k\) is even. In fact, regardless of the parity of \(k\), \(\w_{N}\) is at most of order \(4\). We now need to understand how the Atkin-Lehner operator interacts with the diamond and Hecke operators. It turns out that the adjoints of these operators are given by conjugation via the Atkin-Lehner operator.
+      The adjoint formula shows that the Atkin-Lehner operator \(\w_{N}\) is self-adjoint. We now need to understand how the Atkin-Lehner operator interacts with the diamond and Hecke operators. It turns out that the adjoints of these operators are given by conjugation via the Atkin-Lehner operator and we can use this to show that they also preserve the subspaces of oldforms and newforms.
 
-      \begin{proposition}\label{prop:Atkin_Lehner_adjoint_diamond_Hecke_modular}
-        On \(\mc{S}_{k}(\G_{1}(N))\) and for all positive integers \(m\), the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) satisfy the adjoint formulas
+      \begin{proposition}\label{prop:Atkin_Lehner_adjoint_invariant_diamond_Hecke_modular}
+        On \(\mc{S}_{k}(\G_{1}(N))\), the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) satisfy the adjoint formulas
         \[
-          \<m\>^{\ast} = \w_{N}\<m\>\w_{N}^{-1} \quad \text{and} \quad T_{m}^{\ast} = \w_{N}T_{m}\w_{N}^{-1}.
+          \<m\>^{\ast} = \w_{N}\<m\>\w_{N}^{-1} \quad \text{and} \quad T_{m}^{\ast} = \w_{N}T_{m}\w_{N}^{-1},
         \]
+        for all positive integers \(m\). In particular, \(\<m\>\) and \(T_{m}\) preserve the subspaces of oldforms and newforms.
       \end{proposition}
       \begin{proof}
         As the diamond and Hecke operators are multiplicative, it suffices to prove the two adjoint formulas when \(m = p\) for a prime \(p\). For the diamond operators, the formula is obvious when \(p \mid N\) since \(\<p\>\) is the zero operator. So suppose \(p \nmid N\) and observe from \cref{equ:Atkin_Lehner_normalization} that \(\g_{p}^{\ast} = W_{N}\g_{p}W_{N}^{-1}\). Whence \cref{prop:double_coset_adjoint} gives
@@ -2146,15 +2171,8 @@
           T_{p}^{\ast} = \w_{N}T_{p}\w_{N}^{-1}.
         \]
         This is the desired adjoint formula for the Hecke operators.
-      \end{proof}
-      
-      It also turns out that the spaces of oldforms and newforms are invariant under the diamond and Hecke operators.
 
-      \begin{proposition}\label{prop:old/new_subspaces_are_invariant_modular}
-        On \(\mc{S}_{k}(\G_{1}(N))\) and for all positive integers \(m\), the diamond and Hecke operators \(\<m\>\) and \(T_{m}\) preserve the subspaces of oldforms and newforms.
-      \end{proposition}
-      \begin{proof}
-        By multiplicativity of the diamond and Hecke operators, it suffices to prove this when \(m = p\) for a prime \(p\). Moreover, if \(N = 1\) the result is trivial because there are no oldforms. We will first show that the diamond and Hecke operators preserve the subspace of oldforms. So let \(q\) be a prime satisfying \(q \mid N\) and suppose \(i_{q}(f,g) = h\) which is to say \(h = f+g\|_{k}\a_{q}\). For the diamond operators, the result is trivial if \(p \mid N\) since \(\<p\>i_{q}\) is the zero operator. If \(p \nmid N\), it is enough to show
+        We will now prove that \(\<m\>\) and \(T_{m}\) preserve the subspaces of oldforms and newforms. By multiplicativity of the diamond and Hecke operators, it suffices to prove this when \(m = p\) for a prime \(p\). If \(N = 1\) the result is trivial because there are no oldforms. So we may assume \(N > 1\). We will first show that the subspace of oldforms is preserved. Let \(q\) be a prime satisfying \(q \mid N\) and suppose \(i_{q}(f,g) = h\) which is to say \(h = f+g\|_{k}\a_{q}\). For the diamond operators, the result is trivial if \(p \mid N\) since \(\<p\>i_{q}\) is the zero operator. If \(p \nmid N\), it is enough to show
         \[
           \<p\>i_{q}(f,g) = i_{q}(\<p\>f,\<p\>g),
         \]
@@ -2182,11 +2200,11 @@
         \[
           T_{q}f = T_{q}f-(\<q\>f)\|_{k}\a_{q} \quad \text{and} \quad T_{q}(g\|_{k}\a_{q}) = q^{k-1}g,
         \]
-        where the diamond and Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{q}\) respectively. The first formula holds in view of \cref{equ:Hecke_operator_right_coset_formula_prime_case} since \(\<q\>\) is the zero operator if \(q \mid \frac{N}{q}\) or it annihilates the last term in the Hecke operator if \(q \nmid \frac{N}{q}\). Similarly, a short computation using \cref{equ:Hecke_operator_right_coset_formula_prime_case} gives the second identity. This shows that the second formula holds. Therefore the Hecke operators also preserve the subspace of oldforms. We now show that the diamond and Hecke operators also preserve the subspace of newforms. So let \(f\) and \(g\) be a newform and an oldform respectively. Then for any positive integer \(m\), \cref{prop:Atkin_Lehner_adjoint_diamond_Hecke_modular} gives
+        where the diamond and Hecke operators on the left-hand and right-hand sides are on levels \(N\) and \(\frac{N}{q}\) respectively. The first formula holds in view of \cref{equ:Hecke_operator_right_coset_formula_prime_case} since \(\<q\>\) is the zero operator if \(q \mid \frac{N}{q}\) or it annihilates the last term in the Hecke operator if \(q \nmid \frac{N}{q}\). Similarly, a short computation using \cref{equ:Hecke_operator_right_coset_formula_prime_case} gives the second identity. This shows that the second formula holds. Therefore the Hecke operators also preserve the subspace of oldforms. We now show that the diamond and Hecke operators preserve preserve the subspace of newforms too. So let \(f\) and \(g\) be a newform and an oldform respectively. Then for any positive integer \(m\), the previous adjoint formulas imply
         \[
           \<\<m\>f,g\> = \<f,\w_{N}\<m\>\w_{N}^{-1}g\> \quad \text{and} \quad \<T_{m}f,g\> = \<f,\w_{N}T_{m}\w_{N}^{-1}g\>.
         \]
-        In view of \cref{prop:Atkin_Lehner_modular}, the right-hand sides are zero because they are inner products between a newform and an oldform. Therefore \(\<m\>f\) and \(T_{m}f\) are newforms which shows that the diamond and Hecke operators preserve the subspace of newforms.
+        In view of \cref{prop:Atkin_Lehner_adjoint} the right-hand sides are zero because they are inner products between a newform and an oldform. Therefore \(\<m\>f\) and \(T_{m}f\) are newforms which shows that the diamond and Hecke operators preserve the subspace of newforms too.
       \end{proof}
 
       As a corollary, the subspaces of oldforms and newforms admit orthonormal bases of eigenforms.
@@ -2195,7 +2213,7 @@
         \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) and \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) admit orthonormal bases of eigenforms.
       \end{corollary}
       \begin{proof}
-        This follows immediately from \cref{thm:eigenforms_forms_spectral_theory_modular,prop:old/new_subspaces_are_invariant_modular}.
+        This follows immediately from \cref{thm:eigenforms_forms_spectral_theory_modular,prop:Atkin_Lehner_adjoint_invariant_diamond_Hecke_modular}.
       \end{proof}
 
       Something quite amazing happens for the subspace in \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) which is that the eigenforms are eigenfunctions for all of the diamond and Hecke operators so that they are Hecke eigenforms. This will require several preliminary results to prove. The first of which gives conditions under which a modular form is identically zero.
@@ -2238,20 +2256,28 @@
       The second result is a level descent statement. It tells us under what conditions a complex function \(f\) must satisfy in order to know \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\) for some divisor \(\ell\) of \(N\). 
 
       \begin{proposition}
-        Suppose \(f\) is a \(1\)-periodic holomorphic function on \(\H\) and there exists a positive integer \(\ell\) such that \(f|_{k}\a_{\ell} \in \mc{S}_{k}(\G_{1}(N))\). Then \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\) or \(f\) is identically zero according to if \(\ell \mid N\) or not.
+        Suppose \(f\) is a \(1\)-periodic holomorphic function on \(\H\). If there exists a positive integer \(\ell\) such that \(f|_{k}\a_{\ell} \in \mc{S}_{k}(\G_{1}(N))\) then either \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{\ell}\right)\right)\) or \(f\) is identically zero according to if \(\ell \mid N\) or not. In particular, if \(f|_{k}\a_{\ell} \in \mc{S}_{k}(N,\chi)\) then either \(f \in \mc{S}_{k}\left(\frac{N}{\ell},\chi\right)\) or \(f\) is identically zero according to if \(\ell q \mid N\) or not where \(q\) is the conductor of \(\chi\). 
       \end{proposition}
       \begin{proof}
-        The claim is trivial if \(\ell = 1\) so we may assume \(\ell > 1\). Moreover, in view of the fact that \(\a_{\ell m} = \a_{\ell}\a_{m}\) for all positive integers \(\ell\) and \(m\), it suffices to prove the claim in the case \(\ell = p\) for a prime \(p\). We first show \(f \in S_{k}(\G_{1}(N))\). Note that \(f\) is holomorphic by assumption. The growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. So it remains to prove modularity. Letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N;p)\), a short computation shows
+        In view of \cref{thm:diamond_operator_decomposition_modular}, it suffices assume \(f \in \mc{M}_{k}(N,\chi)\) and prove the second statement. The claim is trivial if \(\ell = 1\) so we may assume \(\ell > 1\). Since \(\a_{\ell m} = \a_{\ell}\a_{m}\) for all positive integers \(\ell\) and \(m\), it further suffices to prove the claim in the case \(\ell = p\) for a prime \(p\). We first show \(f \in S_{k}(N,\chi)\). Note that \(f\) is holomorphic by assumption. As for modularity of \(f\), let \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{0}(N;p)\) and observe that
         \[
-          \a_{p}^{-1}\g\a_{p} = \begin{pmatrix} a & \frac{b}{p} \\ cp & d \end{pmatrix},
+          \a_{p}^{-1}\g\a_{p} = \begin{pmatrix} a & \frac{b}{p} \\ cp & d \end{pmatrix}.
         \]
-        and so \(\a_{p}^{-1}\g\a_{p} \in \G_{1}(N)\). Modularity of \(f|_{k}\a_{p}\) then implies \(f|_{k}\g\a_{p} = f|_{k}\a_{p}\). Whence \(f|_{k}\g = f\) upon applying \(|_{k}\a_{p}^{-1}\). But we also have \(f|_{k}T = f\) since \(f\) is \(1\)-periodic. Therefore \(f|_{k}\g = f\) for all \(\g \in \<\G_{1}(N;p),T\>\) and modularity follows in view of \cref{prop:prime_subgroup_generator_upper_triangular}. So \(f \in \mc{S}_{k}(\G_{1}(N))\).
-        
+        Whence \(\a_{p}^{-1}\g\a_{p} \in \G_{0}(N)\) and \(\chi(\a_{p}^{-1}\g\a_{p}) = \chi(\g)\). Using these facts, modularity of \(f|_{k}\a_{p}\), and that \(f\) is \(1\)-periodic, a short computation shows
+        \[
+          (f|_{k}\g)(z) = \chi(\g)f(z),
+        \]
+        for all \(\g \in \<\G_{0}(N;p),T\>\). Modularity follows from \cref{prop:prime_subgroup_generator_upper_triangular}. The growth condition for \(f\) follows from that of \(f|_{k}\a_{p}\) and \(f\) will necessarily be a cusp form since \(f|_{k}\a_{p}\) is. This proves the claim about \(f\).
+
+        \todo{XXX}
+
+        \iffalse
         We may now show \(f\) is identically zero when \(p \nmid N\). Indeed, this is forced by \cref{prop:vanishing_lemma_modular_forms} since \(f \in \mc{S}_{k}(\G_{1}(N))\) and \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\). It remains to prove \(f \in \mc{S}_{k}\left(\G_{1}\left(\frac{N}{p}\right)\right)\) when \(p \mid N\). Holomorphy of \(f\) has been established. The corresponding growth condition is also satisfied as \(f|_{k}\a_{p} \in \mc{S}_{k}(\G_{1}(N))\) and \(f\) will necessarily be a cusp form. As for modularity, letting \(\g = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \G_{1}(N)\), a short computation shows
         \[
           \a_{p}\begin{pmatrix} a & b \\ c & d \end{pmatrix}\a_{p}^{-1} = \begin{pmatrix} a & bp \\ \frac{c}{p} & d \end{pmatrix},
         \]
-        and so \(\a_{p}\g\a_{p}^{-1} \in \G_{1}\left(\frac{N}{p};p\right)\). Now modularity of \(f|_{k}\a_{p}\) implies \(f|_{k}\a_{p}\g = f|_{k}\a_{p}\). Whence \(f|_{k}\a_{p}\g\a_{p}^{-1} = f\) upon applying \(|_{k}\a_{p}^{-1}\). Taking \(\g = V^{N}\) and recalling \(f \in \mc{S}_{k}(\G_{1}(N))\), it follows that \(f|_{k}\g = f\) for all \(\g \in \left\<\G_{1}(N),V^{\frac{N}{p}}\right\>\). So modularity holds if we can further show \(\G_{1}\left(\frac{N}{p}\right) = \left\<\G_{1}(N),V^{\frac{N}{p}}\right\>\). \todo{xxx}
+        and so \(\a_{p}\g\a_{p}^{-1} \in \G_{1}\left(\frac{N}{p};p\right)\). Now modularity of \(f|_{k}\a_{p}\) implies \(f|_{k}\a_{p}\g = f|_{k}\a_{p}\). Whence \(f|_{k}\a_{p}\g\a_{p}^{-1} = f\) upon applying \(|_{k}\a_{p}^{-1}\). Taking \(\g = V^{N}\) and recalling \(f \in \mc{S}_{k}(\G_{1}(N))\), it follows that \(f|_{k}\g = f\) for all \(\g \in \left\<\G_{1}(N),V^{\frac{N}{p}}\right\>\). So modularity holds if we can further show \(\G_{1}\left(\frac{N}{p}\right) = \left\<\G_{1}(N),V^{\frac{N}{p}}\right\>\).
+        \fi
       \end{proof}
 
       Our last preliminary result shows that we can obtain a modular form on a lower level by considering the Fourier series expansion consisting only of the terms relatively prime to a fixed integer.
@@ -2294,7 +2320,7 @@
       \begin{proof}
         First suppose \(f \in \mc{S}_{k}(\G_{1}(N))\) is an eigenform with Fourier coefficients \(a_{n}(f)\). For \(m \ge 1\) with \((m,N) = 1\), there exists \(\l_{f}(m),\mu_{f}(m) \in \C\) such that \(T_{m}f = \l_{f}(m)f\) and \(\<m\>f = \mu_{f}(m)f\). Actually, \(\<m\>f = \mu_{f}(m)f\) holds for all \(m \ge 1\) because \(\<m\>\) is the zero operator if \((m,N) > 1\) and in this case we can take \(\mu_{f}(m) = 0\). If we set \(\chi(n) = \mu_{f}(m)\) then \(\chi\) is a Dirichlet character modulo \(N\). This follows because multiplicativity of \(\<m\>\) implies the same for \(\chi\) and \(\chi\) is \(N\)-periodic since \(\<m\>\) is \(N\)-periodic (\(\<m\>\) is defined by \(m\) taken modulo \(N\)). But then \(\<m\>f = \chi(m)f\) so that \(f \in \mc{S}_{k}(N,\chi)\). As \(f\) is an eigenform, we also have \(a_{m}(f) = \l_{f}(m)a_{1}(f)\) provided \((m,N) = 1\). So if \(a_{1}(f) = 0\) then \cref{lem:the_main_lemma_for_newforms_modular} implies \(f \in \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\). With this fact in hand, we can prove the statements.
         \begin{enumerate}[label*=(\roman*)]
-          \item The claim is trivial if \(f\) is zero, so assume otherwise. If \(f \in \mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) then \(f \notin \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) and so by what we have shown \(a_{1}(f) \neq 0\). Therefore we may Hecke normalize \(f\) so that \(a_{1}(f) = 1\) and \(a_{m}(f) = \l_{f}(m)\). Now set \(g_{m} = T_{m}f-\l_{f}(m)f\) for any \(m \ge 1\). By \cref{prop:old/new_subspaces_are_invariant_modular}, \(g_{m} \in \mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\). Moreover, \(g_{m}\) is an eigenform and its first Fourier coefficient is zero. But then \(g_{m} \in \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) too and so \(g_{m} = 0\) because \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) and \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) are orthogonal subspaces. This means \(T_{m}f = \l_{f}(m)f\) for any \(m \ge 1\). Therefore \(f\) is a primitive Hecke eigenform and so is a Hecke eigenform before Hecke normalization.
+          \item The claim is trivial if \(f\) is zero, so assume otherwise. If \(f \in \mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) then \(f \notin \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) and so by what we have shown \(a_{1}(f) \neq 0\). Therefore we may Hecke normalize \(f\) so that \(a_{1}(f) = 1\) and \(a_{m}(f) = \l_{f}(m)\). Now set \(g_{m} = T_{m}f-\l_{f}(m)f\) for any \(m \ge 1\). By \cref{prop:Atkin_Lehner_adjoint_invariant_diamond_Hecke_modular}, \(g_{m} \in \mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\). Moreover, \(g_{m}\) is an eigenform and its first Fourier coefficient is zero. But then \(g_{m} \in \mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) too and so \(g_{m} = 0\) because \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) and \(\mc{S}_{k}^{\mathrm{old}}(\G_{1}(N))\) are orthogonal subspaces. This means \(T_{m}f = \l_{f}(m)f\) for any \(m \ge 1\). Therefore \(f\) is a primitive Hecke eigenform and so is a Hecke eigenform before Hecke normalization.
           \item Suppose \(g\) has the same Hecke eigenvalues at all primes. By multiplicativity of the Hecke operators, \(g\) is a Hecke eigenform. After Hecke normalization, \(f\) and \(g\) have the same Fourier coefficients and so are identical. It follows that before Hecke normalization \(f = cg\) for some nonzero \(c \in \C\).
         \end{enumerate}
         Note that our initial remarks together with (i) show that each primitive Hecke eigenform \(f\) belongs to some eigenspace \(\mc{S}_{k}(N,\chi)\). By \cref{cor:old/new_eigenbasis_modular}, \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) admits an orthogonal basis of eigenforms which by (i) are Hecke eigenforms. As \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) is finite dimensional (because \(\mc{S}_{k}(\G_{1}(N))\) is), it follows that all of the primitive Hecke eigenforms form an orthogonal basis for \(\mc{S}_{k}^{\mathrm{new}}(\G_{1}(N))\) if we can show that they are linearly independent. So suppose to the contrary that we have a nontrivial linear relation
@@ -2347,7 +2373,7 @@
         where \(f^{\s} \in \mc{S}_{k}(N,\cchi)\) is a primitive Hecke eigenform and \(\w_{N}(f) \in \C\) is nonzero with \(|\w_{N}(f)| = 1\).
       \end{proposition}
       \begin{proof}
-        Let \(f\) have Hecke eigenvalues \(\l_{f}(m)\). On the one hand, \cref{thm:newforms_characterization_modular,cref:conjugate_cusp_form_modular} together imply that \(f^{\s}\) is a primitive Hecke eigenform with Hecke eigenvalues \(\conj{\l_{f}(m)}\). One the other hand, \cref{prop:Atkin_Lehner_adjoint_diamond_Hecke_modular} implies \(\w_{N}T_{m} = T_{m}^{\ast}\w_{N}\) for all \(m \ge 1\). Then
+        Let \(f\) have Hecke eigenvalues \(\l_{f}(m)\). On the one hand, \cref{thm:newforms_characterization_modular,cref:conjugate_cusp_form_modular} together imply that \(f^{\s}\) is a primitive Hecke eigenform with Hecke eigenvalues \(\conj{\l_{f}(m)}\). One the other hand, \cref{prop:Atkin_Lehner_adjoint_invariant_diamond_Hecke_modular} implies \(\w_{N}T_{m} = T_{m}^{\ast}\w_{N}\) for all \(m \ge 1\). Then
         \[
           \<T_{m}\w_{N}f,\w_{N}f\> = \<\w_{N}f,T_{m}^{\ast}\w_{N}f\> = \<\w_{N}f,\w_{N}T_{m}f\> = \<\w_{N}f,\l_{m}(f)\w_{N}f\> = \conj{\l_{f}(m)}\<\w_{N}f,\w_{N}f\>,
         \]
