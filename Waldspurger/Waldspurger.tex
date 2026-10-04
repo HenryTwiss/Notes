@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+\usepackage{import}
+\input{/Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex}
+
+\title{Modular Forms}
+\author{Henry Twiss}
+\makeindex
+
+\begin{document}
+
+\title{Waldspurger on Average (Alan+Jeff)}
+\author{Henry Twiss}
+\date{May 2026}
+
+\maketitle
+
+\abstract{Fix an integer \(k \ge 3\), let \(f\) be a half-integral weight holomorphic cusp form of weight \(\l = k+\frac{1}{2}\) on \(\G_{0}(4)\) with Fourier coefficients \(a_{f}(n)\), and let \(F\) be its weight \(2k\) Shimura correspondent on \(\G_{0}(1)\). Also let \(D\) be a fundamental discriminant satisfying \((-1)^{k}D > 0\). Then the Kohnen-Zagier formula says
+\[
+  a_{f}(|D|)^{2} = \frac{\G(k)}{\pi^{k}}|D|^{k-\frac{1}{2}}L\left(\frac{1}{2},F \x \chi_{D}\right).
+\]
+We will prove this formula, in an average sense, using various Petersson trace formulas related to integral and half-integral weight holomorphic forms.}
+
+\section{Heuristics}
+    We will prove a formula roughly of shape
+    \[
+      \sum_{f}\sum_{d}\frac{a_{F}(|D|)^{2}}{D^{w}} \approx \sum_{F}\sum_{D}\frac{L\left(\frac{1}{2},F \x \chi_{D}\right)}{D^{w}},
+    \]
+    and then to isolate individual terms, or short averages, via Perron-type integrals. We should expect a formula like this to be true for the following reason (and for heuristic simplicity we ignore constants and the explicit dependencies on sums): there is a rough multiple Dirichlet series of shape
+    \[
+      Z(w,s;F) = \sum_{m,d}\frac{a_{F}(m)\chi_{d}(m)}{m^{s}d^{w}},
+    \]
+    admitting the interchange formula
+    \[
+      Z(w,s;F) = \sum_{m}\frac{a_{F}(m)L(w,\chi_{m})}{m^{s}} = \sum_{d}\frac{L(s,F \x \chi_{d})}{d^{w}}.
+    \]
+    Now consider the two averages
+    \[
+      \frac{\Gamma(2k-1)}{(4\pi)^{2k-1}}\sum_{F}a_{F}(m)\overline{a_{F}(n)} \quad \text{and} \quad \frac{\Gamma(\l-1)}{2(4\pi)^{\l-1}}\sum_{f}a_{f}(m)a_{f}(n).
+    \]
+    these are the spectral sides of the integral and half-integral weight Petersson trace formulas. To the integral weight spectral sum, we set \(n = 1\) and turn it into a Dirichlet series upon multiplying by \(\frac{L^{(2)}(w,\chi_{m})}{m^{s}}\) and summing over \(m\). This gives
+    \[
+      \sum_{F}\sum_{m}\frac{a_{F}(m)L^{(2)}(w,\chi_{m})}{m^{s}}.
+    \]
+    Upon applying the interchange for \(Z(w,s;F)\), this double sum becomes
+    \[
+      \sum_{F}\sum_{d}\frac{L^{(2)}(s,F \x \chi_{d})}{d^{w}}.
+    \]
+    To the half-integral weight spectral sum, we set \(m = n = d\) and turn it into a Dirichlet series upon multiplying by \(\frac{1}{d^{w}}\) and summing over \(d\). We obtain
+    \[
+      \sum_{f}\sum_{d}\frac{|a_{f}(d)|^{2}}{d^{w}}.
+    \]
+    Letting \(s = \frac{1}{2}\) in the integral weight sum (which is not formally allowed since the sum over \(m\) does converge absolutely at this point), we expect these two latter double sums should be equal by the Kohnen-Zagier formula giving 
+    \[
+      \sum_{f}\sum_{d}\frac{|a_{f}(d)|^{2}}{d^{w}} = \sum_{F}\sum_{d}\frac{L\left(\frac{1}{2},F \x \chi_{d}\right)}{d^{w}}.
+    \]
+    Now that we expect this equality to be true, we seek a method of proof that avoids using the Kohnen-Zagier formula directly. The apparent avenue is to equate the corresponding geometric sums of the Petersson trace formulas in order to prove
+    \[
+      \sum_{f}\sum_{d}\frac{|a_{f}(d)|^{2}}{d^{w}} = \sum_{F}\sum_{m}\frac{a_{F}(m)L(w,\chi_{m})}{m^{s}},
+    \]
+    and then apply the interchange for \(Z(w,s;F)\) to the right-hand side to finish the argument.
+\section{Integral weight}
+    Consider weight \(2k\) holomorphic cusp forms on \(\G_{0}(1)\). We may choose a Hecke eigenbasis whose elements \(F\) are the Shimura correspondents of a basis for the Kohen plus space \(\G_{0}(4)\) whose elements \(f\) are eigenfunctions for the square-free Hecke operators. For such an \(F\), we write
+    \[
+      F(z) = \sum_{n}a_{F}(n)n^{\frac{2k-1}{2}}e(nz),
+    \]
+    for its Fourier series expansion. The integral weight Petersson trace formula says
+    \[
+      \frac{\Gamma(2k-1)}{(4\pi)^{2k-1}}\sum_{F}a_{F}(m)\overline{a_{F}(n)}=\delta_{m,n}+(2\pi i)^{-2k}\sum_{c}\frac{K(m,n,c)}{c}J_{2k-1}\left(\frac{4\pi \sqrt{mn}}{c}\right).
+    \]
+    Set \(n = 1\), multiply by \(\frac{L(w,\chi_{m})}{m^s}\) where \(L(w,\chi_{m})\) is understood to be the corresponding \(L\)-function times a correction polynomial when \(m\) is not square-free, and summing over \(m\). The spectral sum becomes
+    \[
+      \frac{\Gamma(2k-1)}{(4\pi)^{2k-1}}\sum_{F}\sum_{m}\frac{a_{F}(m)L(w,\chi_{m})}{m^{s}}.
+    \]
+    As for the geometric sum, the diagonal term only contributes when \(m = 1\) in which case \(L(w,\chi_{m}) = \z(s)\). Thus we obtain
+    \[
+      \zeta(w)+(2\pi i)^{-2k}\sum_{m}\sum_{c}\frac{L(w,\chi_{m})K(m,1,c)J_{2k-1}\left(\frac{4\pi\sqrt{m}}{c}\right)}{cm^s}.
+    \]
+    We will study the off-diagonal contribution by expanding the Kloosterman sum and using the inverse Mellin transform representation of the J-Bessel function. Recall that the Kloosterman sum is
+    \[
+      K(m,1,c)=\psum_{a \tmod{c}}e\left(\frac{am+\overline{a}}{c}\right).
+    \]
+    We will also make use of the representation of the \(J\)-Bessel function as an inverse Mellin transform given by
+    \[
+      J_{2k - 1}\left(\frac{4\pi\sqrt{m}}{c}\right)=\frac{1}{4\pi i}\int_{(\gamma)}\frac{\Gamma\left(k+\frac{t}{2}\right)}{\Gamma\left(k+\frac{1-t}{2}\right)}\left(\frac{2\pi\sqrt{m}}{c}\right)^{-t}\,dt,
+    \]
+    provided \(0 > \g > 1-k\). Applying these formulas and interchanging sums, the off-diagonal term may be expressed as
+    \[
+      (2\pi i)^{-2k}\sum_{c}\frac{1}{c}\psum_{a \tmod{c}}e\left(\frac{\overline{a}}{c}\right)\frac{1}{4\pi i}\int_{(\g)}\frac{\Gamma\left(k+\frac{t}{2}\right)}{\Gamma\left(k+\frac{1-t}{2}\right)}\left(\frac{2\pi}{c}\right)^{-t}Z^{+}\left(w,s;\frac{a}{c}\right),
+    \]
+    where
+    \[
+      Z^{\pm}\left(w,s;\frac{a}{c}\right) = \sum_{\substack{n \\ \sgn(n) = \pm}}\frac{e\left(\frac{an}{c}\right)L(w,\chi_{n})}{|n|^{s+\frac{t}{2}}}\,dt.
+    \]
+    This is an additively twisted double Dirichlet series. It is essentially the Mellin transform of a half-integral weight Eisenstein series and so possesses a natural functional equation. This series was first studied by Hoffstein and Goldfeld in 1985 (see \todo{see H-G in which \(\d = s\) and \(\rho = w\)}). We will only discuss the relevant series and functional equations necessary. First write \(m = nc+r\) with \(r\) taken modulo \(c\) so that
+    \[
+      Z^{\pm}\left(w,s;\frac{a}{c}\right) = \sum_{r \tmod{c}}e\left(\frac{ar}{c}\right)Z_{r}^{\pm}(w,s;c),
+    \]
+    where
+    \[
+      Z_{r}^{\pm}(w,s;c) = \sum_{\substack{n \equiv r \tmod{c} \\ \sgn(n) = \pm}}\frac{L(w,\chi_{n})}{|n|^{s}}.
+    \]
+    The aforementioned functional equation is more easily described for this series. To do so, set
+    \[
+      \Phi_{0}^{\ast}\left(w,s,\frac{a}{c};k\right) = c_{k}(w,s)\left[G_{+k}(w,s)Z^{+}\left(s+1,w,\frac{a}{c}\right)+G_{-k}(w,s)Z^{-}\left(s+1,w,\frac{a}{c}\right)\right],
+    \]
+    where we put
+    \[
+      c_{k}(w,s) = i^{-\frac{k}{2}}\pi^{-s}2^{\frac{k}{2}-2s-2w-1},
+    \]
+    and \(G_{\pm k}(w,s)\) satisfies
+    \[
+      G_{\pm k}(w,s) = 2^{\frac{2w+1+k}{4}+s}\frac{\G\left(\frac{2w+1+k}{4}+s\right)}{\G\left(\frac{2w+1+k}{4}\right)}\left(1+O_{w,k}\left(\frac{1}{|s|}\right)\right).
+    \]
+    Further letting
+    \[
+      \phi_{r}(w,s;k) = \frac{1}{c}\sum_{a \tmod{r}}e\left(-\frac{ar}{c}\right)\Phi_{0}^{\ast}\left(w,s,\frac{a}{c};k\right),
+    \]
+    orthogonality of characters then implies the relation
+    \[
+      \phi_{r}(w,s;k) = c_{k}(w,s)\left[G_{+k}(w,s)Z_{r}^{+}(w,s;c)+G_{-k}(w,s)Z_{r}^{-}(w,s;c)\right],
+    \]
+    This identity can be solved for \(Z_{r}^{\pm}(w,s;c)\) as in \todo{H-G} to obtain
+    \begin{align*}
+        Z_{r}^{\pm}(w,s;c) = \pm D_{k}(w,s)^{-1}&\big[\phi_{r}(w,s;k)G_{\mp(k+4)}(w,s)c_{k}(w,s)^{-1} \\
+        &-\phi_{r}(w,s,k+4)G_{\mp k}(w,s)c_{k+4}(w,s)^{-1}\big],
+    \end{align*}
+    where
+    \[D_{k}(w,s) = G_{k}(w,s)G_{-(k+4)}(w,s)-G_{k+4}(w,s)G_{-k}(w,s).\]
+    The functional equation for \(Z_{r}^{\pm}\) arises from that of \(\Phi_{0}^{\ast}\). First set
+    \[
+      \Phi_{0}^{\ast}\left(w,s,\frac{a}{c};k\right) = \Phi_{0}\left(\frac{2w+1+k}{4}+s,\frac{2w-k+1}{4},\frac{a}{c};k\right).
+    \]
+    There will be three cases depending upon congruence conditions of \(c\) modulo \(4\):
+    \begin{enumerate}
+      \item Suppose \(c \equiv 1,3 \tmod{4}\) and \(d\) modulo \(c\) is chosen so that \(-4ad \equiv 1 \tmod{c}\). Then
+      \[
+        \Phi_{0}^{\ast}\left(w,s,\frac{a}{c};k\right) = (2c)^{-2s-w-\frac{1}{2}}(-2i)^{\frac{k}{2}}\e_{c}^{-k}\legendre{d}{c}\Phi_{\infty}^{\ast}\left(-w,-s-w-\frac{1}{2},\frac{d}{c};k\right),
+      \]
+      where
+      \[
+        \Phi_{\infty}^{\ast}\left(-w,-s-w-\frac{1}{2},\frac{d}{c};k\right) = 
+      \]
+      
+      \item Suppose \(c \equiv 0 \tmod{4}\) and \(d\) modulo \(c\) is chosen so that \(-4ad \equiv 1 \tmod{c}\):
+      \item Suppose \(c \equiv 2 \tmod{4}\) and \(d\) modulo \(c\) is chosen so that \(-4ad \equiv 1 \tmod{c}\):
+    \end{enumerate}
+\section{Half-integral weight}
+    Recall \(\l = k+\frac{1}{2}\) and suppose \((-1)^{k}m,(-1)^{k}n \equiv 0,1 \pmod{4}\) . The Petersson trace formula relative to a basis for the Kohen plus space associated holomorphic cusp forms on \(\G_{0}(4)\) is given by
+    \[\frac{\Gamma(\l-1)}{2(4\pi)^{\l-1}}\sum_{f}a_{f}(m)a_{f}(n) = \frac{2}{3}\left(\d_{m,n}+2\pi e^{-\frac{2\pi i\l}{4}}\sum_{c \ge 1}\frac{K_{\l}^{+}(m,n,c)}{c}J_{\l-1}\left(\frac{4\pi\sqrt{mn}}{c}\right)\right),\]
+    where
+    \[K_{\l}^{+}(m,n,c) = \sum_{\substack{d \pmod{c} \\ (c,d) = 1}}\e_{d}^{2\l}\legendre{c}{d}e^{\frac{2\pi i(md+n\overline{d})}{c}}\cdot\begin{cases} 0 & \text{if \(4 \mid c\)}, \\ 2 & \text{if \(4 \mid c\) and \(8 \nmid c\)}, \\ 1 & \text{if \(8 \mid c\)}, \end{cases}\]
+    and \(\e_{d}\) and \(\legendre{c}{d}\) are as in the theta multiplier. \todo{XXX}
+\end{document}

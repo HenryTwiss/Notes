@@ -1,8 +1,8 @@
-PWD /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function
+PWD /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/The Riemann Zeta Function/The_Riemann_Zeta_Function.tex
 OUTPUT The_Riemann_Zeta_Function.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -32,10 +32,10 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
@@ -797,7 +797,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/p
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.aux
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.aux
 OUTPUT The_Riemann_Zeta_Function.idx
 INPUT ./The_Riemann_Zeta_Function.aux
 INPUT The_Riemann_Zeta_Function.aux

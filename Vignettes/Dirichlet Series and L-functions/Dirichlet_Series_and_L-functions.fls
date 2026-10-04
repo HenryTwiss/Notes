@@ -1,8 +1,8 @@
-PWD /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions
+PWD /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/Dirichlet Series and L-functions/Dirichlet_Series_and_L-functions.tex
 OUTPUT Dirichlet_Series_and_L-functions.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -32,10 +32,10 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex
-INPUT /Users/henrytwiss/Documents/Documents/LaTeX/Notes/Vignettes/preamble.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex
+INPUT /Users/henrytwiss/Documents/LaTeX/Notes/Vignettes/preamble.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
